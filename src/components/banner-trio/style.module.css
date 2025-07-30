@@ -3,20 +3,13 @@
   max-width: 1440px;
   margin: auto;
   margin-top: 50px !important;
-}
-
-.mainTitle {
-  margin: 0;
-  font-size: 24px;
-  color: #222;
-  margin-bottom: 20px !important;
+  font-family: "Akkurat";
 }
 
 /*= Web alanı */
 .desktopContainer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 5px;
   cursor: pointer;
 }
 
@@ -31,13 +24,18 @@
   width: 100%;
   height: auto;
   overflow: hidden;
+  aspect-ratio: 3/4;
 }
 
 .bannerImage {
   width: 100%;
   height: 100%;
-  display: block;
-  transition: transform 0.3s ease;
+  object-fit: cover;
+}
+
+.bannerVideo {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -109,20 +107,18 @@
   margin: 0 0 8px 0;
   font-size: 17px;
   font-weight: normal;
-  color: #fff;
+  color: #34342f;
 }
 
 .bannerContent {
   margin: 0 0 20px 0;
   font-size: 16px;
-  color: #fff;
+  color: #34342f;
 }
 
 .bannerButton {
   background: rgba(255, 255, 255, 0.2);
-  color: #fff;
-  border: 1px solid #fff;
-  padding: 6px 12px;
+  color: #34342f;
   cursor: pointer;
   transition: all 0.3s ease;
   font-size: 14px;
@@ -147,6 +143,72 @@
   align-items: flex-start;
 }
 
+/*+ Orta Yazı Alanı Stilleri */
+.centerTextWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.centerTextLink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  font-weight: 400;
+  font-family: "ChronicleDisplay" !important;
+}
+
+.centerText {
+  padding-bottom: 10px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.2;
+  font-family: "ChronicleDisplay" !important;
+}
+
+.centerContent {
+  padding-bottom: 20px;
+  font-size: 1.25rem;
+  text-align: center;
+  line-height: 1.4;
+  max-width: 300px;
+  font-family: "ChronicleDisplay" !important;
+}
+
+.centerButton {
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  border: none;
+  font-family: "Akkurat" !important;
+}
+
+.centerButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Mobil Orta Yazı Alanı */
+.mobileTextWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 20px;
+  text-align: center;
+}
+
 /*= Responsive */
 @media (max-width: 1024px) {
   .desktopContainer {
@@ -155,11 +217,6 @@
 }
 
 @media (max-width: 768px) {
-  .mainTitle {
-    font-size: 20px;
-    padding-left: 10px;
-  }
-
   .contentOverlay {
     padding: 10px;
   }
@@ -177,6 +234,28 @@
     padding: 4px 8px;
     font-size: 12px;
   }
+
+  /* Orta yazı alanları için responsive */
+  .centerTextWrapper,
+  .mobileTextWrapper {
+    padding: 25px 15px;
+  }
+
+  .centerText {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .centerContent {
+    font-size: 14px;
+    margin-bottom: 20px;
+    max-width: 250px;
+  }
+
+  .centerButton {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -193,6 +272,11 @@
     padding: 0;
   }
 
+  .bannerWrapper,
+  .slide {
+    aspect-ratio: 3/4;
+  }
+
   .slide {
     flex: 0 0 100%;
     margin: 0;
@@ -200,5 +284,26 @@
 
   .slider {
     gap: 0;
+  }
+
+  /* Mobil için orta yazı alanları */
+  .mobileTextWrapper {
+    padding: 20px 15px;
+  }
+
+  .centerText {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .centerContent {
+    font-size: 13px;
+    margin-bottom: 18px;
+    max-width: 200px;
+  }
+
+  .centerButton {
+    padding: 8px 16px;
+    font-size: 12px;
   }
 }

@@ -49,21 +49,9 @@ export type BannerSingleProps = {
 export type BannerTrioProps = {
 	banner_left?: IkasImage;
 	banner_left_link?: IkasNavigationLink;
-	bannerLeftText?: string;
-	bannerLeftTextColor?: string;
-	bannerLeftContent?: string;
-	bannerLeftContentColor?: string;
-	bannerLeftButtonText?: string;
-	bannerLeftButtonTextColor?: string;
-	banner_right?: IkasImage;
+	banner_right?: IkasVideo;
 	banner_right_link?: IkasNavigationLink;
-	bannerRightText?: string;
-	bannerRightTextColor?: string;
-	bannerRightContent?: string;
-	bannerRightContentColor?: string;
-	bannerRightButtonText?: string;
-	bannerRightButtonTextColor?: string;
-	banner_center?: IkasImage;
+	banner_bg_color?: string;
 	banner_center_link?: IkasNavigationLink;
 	bannerCenterText?: string;
 	bannerCenterTextColor?: string;

@@ -11,23 +11,11 @@ const BannerTrio = (props: BannerTrioProps) => {
   const {
     banner_left,
     banner_left_link,
-    bannerLeftText,
-    bannerLeftTextColor,
-    bannerLeftContent,
-    bannerLeftContentColor,
-    bannerLeftButtonText,
-    bannerLeftButtonTextColor,
 
     banner_right,
     banner_right_link,
-    bannerRightText,
-    bannerRightTextColor,
-    bannerRightContent,
-    bannerRightContentColor,
-    bannerRightButtonText,
-    bannerRightButtonTextColor,
 
-    banner_center,
+    banner_bg_color,
     banner_center_link,
     bannerCenterText,
     bannerCenterTextColor,
@@ -39,40 +27,22 @@ const BannerTrio = (props: BannerTrioProps) => {
 
   const sliderRef = useRef<HTMLDivElement>(null);
 
-  if (!banner_left || !banner_right || !banner_center) {
+  // Sol fotoğraf ve sağ video kontrolü
+  if (!banner_left || !banner_right) {
     return null;
   }
 
+  // Sol ve sağ banner'lar için mobil slider (sadece görsel/video)
   const banners = [
     {
       banner: banner_left,
       link: banner_left_link,
-      text: bannerLeftText,
-      content: bannerLeftContent,
-      buttonText: bannerLeftButtonText,
-      textColor: bannerLeftTextColor,
-      contentColor: bannerLeftContentColor,
-      buttonTextColor: bannerLeftButtonTextColor,
-    },
-    {
-      banner: banner_center,
-      link: banner_center_link,
-      text: bannerCenterText,
-      content: bannerCenterContent,
-      buttonText: bannerCenterButtonText,
-      textColor: bannerCenterTextColor,
-      contentColor: bannerCenterContentColor,
-      buttonTextColor: bannerCenterButtonTextColor,
+      type: "image" as const,
     },
     {
       banner: banner_right,
       link: banner_right_link,
-      text: bannerRightText,
-      content: bannerRightContent,
-      buttonText: bannerRightButtonText,
-      textColor: bannerRightTextColor,
-      contentColor: bannerRightContentColor,
-      buttonTextColor: bannerRightButtonTextColor,
+      type: "video" as const,
     },
   ];
 
@@ -93,81 +63,149 @@ const BannerTrio = (props: BannerTrioProps) => {
 
   return (
     <div className={styles.wrapper}>
-      <h2 className={styles.mainTitle}>{props.mainTitle}</h2>
-      {/*//= web alanı */}
+      {/*//= Desktop alanı */}
       <div className={styles.desktopContainer}>
-        {banners.map(
-          (
-            {
-              banner,
-              link,
-              text,
-              buttonText,
-              content,
-              textColor,
-              contentColor,
-              buttonTextColor,
-            },
-            index
-          ) => (
-            <div key={index} className={styles.bannerWrapper}>
-              <Link href={link?.href || ""}>
-                <a>
-                  <Image
-                    width={503}
-                    height={400}
-                    alt={banner?.altText || ""}
-                    image={banner}
-                    useBlur={true}
-                    className={styles.bannerImage}
+        {/* Sol Fotoğraf */}
+        <div className={styles.bannerWrapper}>
+          <Link href={banner_left_link?.href || ""}>
+            <a>
+              <Image
+                width={920}
+                height={1150}
+                alt={banner_left?.altText || ""}
+                image={banner_left}
+                useBlur={true}
+                objectFit="fill"
+                className={styles.bannerImage}
+              />
+            </a>
+          </Link>
+        </div>
+
+        {/* Orta Yazı Alanı */}
+        <div
+          className={styles.centerTextWrapper}
+          style={{ backgroundColor: banner_bg_color || "#f5f5f5" }}
+        >
+          <Link href={banner_center_link?.href || ""}>
+            <a className={styles.centerTextLink}>
+              {/* Başlık */}
+              {bannerCenterText && (
+                <h2
+                  className={styles.centerText}
+                  style={
+                    bannerCenterTextColor
+                      ? { color: bannerCenterTextColor }
+                      : undefined
+                  }
+                >
+                  {bannerCenterText}
+                </h2>
+              )}
+
+              {/* İçerik */}
+              {bannerCenterContent && (
+                <p
+                  className={styles.centerContent}
+                  style={
+                    bannerCenterContentColor
+                      ? { color: bannerCenterContentColor }
+                      : undefined
+                  }
+                >
+                  {bannerCenterContent}
+                </p>
+              )}
+
+              {/* Buton */}
+              {bannerCenterButtonText && (
+                <button
+                  className={styles.centerButton}
+                  style={{
+                    color: bannerCenterButtonTextColor || "#fff",
+                  }}
+                >
+                  {bannerCenterButtonText}
+                  <ArrowRightIcon
+                    color={bannerCenterButtonTextColor || "#fff"}
                   />
-                  {/*//+ Yazılar  */}
-                  <div className={styles.contentOverlay}>
-                    {/* Başlık */}
-                    {text && (
-                      <h2
-                        className={styles.bannerText}
-                        style={textColor ? { color: textColor } : undefined}
-                      >
-                        {text.toLocaleUpperCase("tr-TR")}
-                      </h2>
-                    )}
+                </button>
+              )}
+            </a>
+          </Link>
+        </div>
 
-                    {/* İçerik */}
-                    {content && (
-                      <p
-                        className={styles.bannerContent}
-                        style={
-                          contentColor ? { color: contentColor } : undefined
-                        }
-                      >
-                        {content}
-                      </p>
-                    )}
-
-                    {/* Buton */}
-                    {buttonText && (
-                      <button
-                        className={styles.bannerButton}
-                        style={{
-                          color: buttonTextColor || "#fff",
-                          borderColor: buttonTextColor || "#fff",
-                        }}
-                      >
-                        {buttonText.toLocaleUpperCase("tr-TR")}
-                        <ArrowRightIcon color={buttonTextColor || "#fff"} />
-                      </button>
-                    )}
-                  </div>
-                </a>
-              </Link>
-            </div>
-          )
-        )}
+        {/* Sağ Video */}
+        <div className={styles.bannerWrapper}>
+          <Link href={banner_right_link?.href || ""}>
+            <a>
+              <video
+                width={606}
+                height={1080}
+                autoPlay={banner_right?.autoplay || true}
+                muted={banner_right?.muted || true}
+                loop={banner_right?.loop || true}
+                playsInline
+                className={styles.bannerVideo}
+              >
+                <source src={banner_right?.videoSrc || ""} type="video/mp4" />
+              </video>
+            </a>
+          </Link>
+        </div>
       </div>
 
       {/*//= Mobile/Tablet Alanı */}
       <div className={styles.mobileContainer}>
+        {/* Orta yazı alanı mobilde de göster */}
+        <div
+          className={styles.mobileTextWrapper}
+          style={{ backgroundColor: banner_bg_color || "#f5f5f5" }}
+        >
+          <Link href={banner_center_link?.href || ""}>
+            <a className={styles.centerTextLink}>
+              {bannerCenterText && (
+                <h2
+                  className={styles.centerText}
+                  style={
+                    bannerCenterTextColor
+                      ? { color: bannerCenterTextColor }
+                      : undefined
+                  }
+                >
+                  {bannerCenterText.toLocaleUpperCase("tr-TR")}
+                </h2>
+              )}
+              {bannerCenterContent && (
+                <p
+                  className={styles.centerContent}
+                  style={
+                    bannerCenterContentColor
+                      ? { color: bannerCenterContentColor }
+                      : undefined
+                  }
+                >
+                  {bannerCenterContent}
+                </p>
+              )}
+              {bannerCenterButtonText && (
+                <button
+                  className={styles.centerButton}
+                  style={{
+                    color: bannerCenterButtonTextColor || "#fff",
+                    borderColor: bannerCenterButtonTextColor || "#fff",
+                  }}
+                >
+                  {bannerCenterButtonText.toLocaleUpperCase("tr-TR")}
+                  <ArrowRightIcon
+                    color={bannerCenterButtonTextColor || "#fff"}
+                  />
+                </button>
+              )}
+            </a>
+          </Link>
+        </div>
+
         <div className={styles.sliderWrapper}>
           <button
             className={styles.sliderArrowPrev}
@@ -178,34 +216,34 @@ const BannerTrio = (props: BannerTrioProps) => {
           </button>
 
           <div className={styles.slider} ref={sliderRef}>
-            {banners.map(({ banner, link, text, buttonText }, index) => (
+            {banners.map(({ banner, link, type }, index) => (
               <div key={index} className={styles.slide}>
                 <Link href={link?.href || ""}>
                   <a>
-                    <Image
-                      width={503}
-                      height={400}
-                      alt={banner?.altText || ""}
-                      image={banner}
-                      useBlur={true}
-                      className={styles.bannerImage}
-                    />
+                    {type === "video" ? (
+                      <video
+                        width={503}
+                        height={400}
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        className={styles.bannerVideo}
+                      >
+                        <source src={banner?.videoSrc || ""} type="video/mp4" />
+                      </video>
+                    ) : (
+                      <Image
+                        width={503}
+                        height={400}
+                        alt={banner?.altText || ""}
+                        image={banner}
+                        useBlur={true}
+                        className={styles.bannerImage}
+                      />
+                    )}
                   </a>
                 </Link>
-                <div className={styles.overlayContainer}>
-                  <div className={styles.overlayContent}>
-                    <Link href={link?.href || ""}>
-                      <h2 className={styles.bannerText}>
-                        {text?.toLocaleUpperCase("tr-TR")}
-                      </h2>
-                    </Link>
-                    <Link href={link?.href || ""}>
-                      <button className={styles.bannerButton}>
-                        {buttonText?.toLocaleUpperCase("tr-TR")}
-                      </button>
-                    </Link>
-                  </div>
-                </div>
               </div>
             ))}
           </div>

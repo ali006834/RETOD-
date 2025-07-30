@@ -14,7 +14,7 @@
       "componentJson": null,
       "props": [
         {
-          "id": "3f269ccd-91c0-43d7-a0e8-c8109451c97f",
+          "id": "45ab54e7-f04f-4dcc-9f84-87da52508147",
           "name": "logo",
           "displayName": "",
           "description": "",
@@ -28,7 +28,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "f48371c4-569e-4ee5-aff9-2fa173a0fb94",
+          "id": "20c2f5f4-110a-4307-93db-5ac4686afe80",
           "name": "showTax",
           "displayName": "",
           "description": "",
@@ -42,7 +42,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "59c29b48-194f-4e80-873c-099ab3b3353f",
+          "id": "cac613cd-4386-4a06-9a2c-ff2428080986",
           "name": "showCampaignOffersDesign",
           "displayName": "",
           "description": "",
@@ -56,7 +56,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "2ffedc7a-725e-4dff-b4ce-e42e12ba2f8b",
+          "id": "abbcfab8-c4f0-4d8a-874f-78ddf969b721",
           "name": "campaignOfferIsSmallDesign",
           "displayName": "",
           "description": "",
@@ -70,7 +70,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "765e87b1-6fda-4deb-b753-67f59c1acd45",
+          "id": "9f2d0cdb-b591-4b1f-9dd8-4726b4632ddb",
           "name": "showCampaignIsBiggerImage",
           "displayName": "",
           "description": "",
@@ -84,7 +84,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "7d67ccf8-d787-42d4-bc75-0d58c3402485",
+          "id": "9663155a-a504-4c15-8371-98730312bdf6",
           "name": "campaignOffersTitleColor",
           "displayName": "",
           "description": "",
@@ -98,7 +98,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "71e28417-357d-4be5-8106-fc74a6ba0494",
+          "id": "0d37950f-695c-4639-b38a-61cd61a230cb",
           "name": "campaignOffersDescriptionColor",
           "displayName": "",
           "description": "",
@@ -112,7 +112,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "9f8ae060-1c63-4957-a74a-694b70f6b3e9",
+          "id": "8a003fbb-5c22-4f94-a300-ddd2ad7ff4c5",
           "name": "campaignOffersContainerBgColor",
           "displayName": "",
           "description": "",
@@ -126,7 +126,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "fb2484a9-40be-4154-a996-4a8b46d3d929",
+          "id": "d4a0acd7-83f4-4cc5-b4ad-9b20c99489fa",
           "name": "showCampaignShowDiscountSettings",
           "displayName": "",
           "description": "",
@@ -140,7 +140,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "fe536a12-06c3-43f0-a9a3-12f83b41d57b",
+          "id": "d7b680e3-82ac-46d1-8a91-9142597910bf",
           "name": "showCampaignHideDiscountBadge",
           "displayName": "",
           "description": "",
@@ -154,7 +154,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "e7c3452d-732f-4b4b-a916-3831bfb6fabc",
+          "id": "82dc6e1c-877a-425e-b5f4-561504be8ed4",
           "name": "campaignOffersDiscountPercentageColor",
           "displayName": "",
           "description": "",
@@ -168,7 +168,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "ea08f840-6ab1-487a-b3f2-ef6c1df4759e",
+          "id": "a0a19c7b-94a6-4ddd-8e59-5ab632e9e73e",
           "name": "campaignOffersDiscountPercentageBgColor",
           "displayName": "",
           "description": "",
@@ -182,7 +182,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "be0b555e-cb7a-4d98-8e7d-f787ca7be125",
+          "id": "98d1dd5c-f38a-469b-bb09-bea5d492be83",
           "name": "showCampaignShowCountdownSettings",
           "displayName": "",
           "description": "",
@@ -196,7 +196,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "dcdeaa15-83e5-420d-a760-01155de52881",
+          "id": "82eee992-2c60-495d-98c1-58373a12b736",
           "name": "campaignOfferCountdownStyleIsLine",
           "displayName": "",
           "description": "",
@@ -210,7 +210,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "4b52639e-9e2e-4427-96c3-e9296c7b0182",
+          "id": "22de9265-e85c-4ccb-98ea-59c741ce1930",
           "name": "campaignOffersCountdownTextColor",
           "displayName": "",
           "description": "",
@@ -224,7 +224,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "f6cdc9a3-80d2-4f5a-87e6-639070ffc751",
+          "id": "b58e8428-4a9a-469a-97be-6f5c67e26ad1",
           "name": "campaignOffersCountdownTimeColor",
           "displayName": "",
           "description": "",
@@ -238,7 +238,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "78bce6ef-c0c2-4ab4-aac9-1a1bb2769766",
+          "id": "d3c23bcd-61a1-45c7-a500-fa4f0d7416f6",
           "name": "campaignOffersCountdownBgColor",
           "displayName": "",
           "description": "",
@@ -252,7 +252,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "2c3e85be-4396-4057-af48-a9e8766c8609",
+          "id": "9704beca-98cf-4d46-a250-c2efc6db7845",
           "name": "campaignOffersEnableMiddlePhase",
           "displayName": "",
           "description": "",
@@ -266,7 +266,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "a320b712-01e6-486b-a809-28754c69095c",
+          "id": "6f3279ba-d6a2-41ac-b11a-c93308ad359d",
           "name": "campaignOffersMiddlePhaseOverlayColor",
           "displayName": "",
           "description": "",
@@ -280,7 +280,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "ea86e852-a9f6-4ce3-9e86-c9a9799fc00f",
+          "id": "01cea9a7-ce27-4da6-a8a5-d2261908e5e8",
           "name": "campaignOfferCountdownStyleIsLineSuccessPage",
           "displayName": "",
           "description": "",
@@ -294,7 +294,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "f5fb627d-5dfb-49c1-b707-600756f97874",
+          "id": "175a34f2-8f7e-49ae-b042-9c79426cd822",
           "name": "buttonBgColor",
           "displayName": "",
           "description": "",
@@ -308,7 +308,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "da5c753c-da2f-47d1-b8ae-a5e3fac0b563",
+          "id": "7ca8d43c-d260-498f-8e7c-7a25dddf5aa9",
           "name": "buttonTextColor",
           "displayName": "",
           "description": "",
@@ -322,7 +322,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "b43b57a6-f651-4c38-af97-fff798053835",
+          "id": "3cf7c2b6-0191-44b1-bb44-edc8f1cec53c",
           "name": "buttonDisabledBgColor",
           "displayName": "",
           "description": "",
@@ -336,7 +336,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "520a7e72-41a3-42b8-9491-2a37ae50dd1d",
+          "id": "c39944c8-b32d-4cea-a891-0dec0e9ab94a",
           "name": "buttonDisabledTextColor",
           "displayName": "",
           "description": "",
@@ -350,7 +350,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "28154dc7-8ad1-46a6-a32a-0e6d3c9f51e1",
+          "id": "c816d579-18da-4ab2-b569-ab741a71f624",
           "name": "primaryTextColor",
           "displayName": "",
           "description": "",
@@ -364,7 +364,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "9651df7f-073e-4bfb-be01-880500ef160b",
+          "id": "7c2ca23e-053c-4e30-8b9f-39fe40df7731",
           "name": "secondaryTextColor",
           "displayName": "",
           "description": "",
@@ -378,7 +378,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "25be3443-cdf1-49c7-b491-344b618342ab",
+          "id": "e24d36a4-1681-495b-89d3-2db2a3e5d679",
           "name": "primaryBgColor",
           "displayName": "",
           "description": "",
@@ -392,7 +392,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "676e71f3-8826-479a-90a8-92255660c97e",
+          "id": "358bb494-9e16-416c-9e71-2e241a0f5a0c",
           "name": "secondaryBgColor",
           "displayName": "",
           "description": "",
@@ -406,7 +406,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "1e176e4f-5c81-40c6-bdcc-c8ae583dd7dd",
+          "id": "474c7495-2a62-45a4-92d7-5575796772e6",
           "name": "borderColor",
           "displayName": "",
           "description": "",
@@ -420,7 +420,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "5a1e0495-06f0-47aa-9491-fc455cc70490",
+          "id": "24a989ed-6e04-4e36-8915-5c351b6ffa46",
           "name": "cardBgColor",
           "displayName": "",
           "description": "",
@@ -434,7 +434,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "72e4d48a-c561-48f5-bef3-7ef755b2f72d",
+          "id": "9485db33-9823-4123-9994-8bab4a6ab5bc",
           "name": "errorColor",
           "displayName": "",
           "description": "",
@@ -448,7 +448,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "960163a5-4de3-4af8-907d-90cfe2e313e4",
+          "id": "e78522c6-6f66-4797-8b52-ea77449978cd",
           "name": "errorLightColor",
           "displayName": "",
           "description": "",
@@ -462,7 +462,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "613fcc2b-7987-480d-9754-8689e90c7c4f",
+          "id": "cd8001ab-2aa0-41eb-a987-43d07d9716c9",
           "name": "warningColor",
           "displayName": "",
           "description": "",
@@ -476,7 +476,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "ba66f766-1a38-4676-9621-a7ebe96faa79",
+          "id": "b4f9ab3a-aa01-438f-b5c8-fb210042e1a2",
           "name": "warningLightColor",
           "displayName": "",
           "description": "",
@@ -490,7 +490,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "0773593a-559b-4eb7-a640-044d11f28f91",
+          "id": "d1c0be3a-17c8-4a39-9b7f-113b081ea4d4",
           "name": "successColor",
           "displayName": "",
           "description": "",
@@ -504,7 +504,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "20084cce-6eb7-4d4f-9576-e4978d2dbac6",
+          "id": "bc42cde3-369e-4333-9c2f-26d785c8aa09",
           "name": "successLightColor",
           "displayName": "",
           "description": "",
@@ -518,7 +518,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "32d83a29-4e9b-4cea-b72a-39cde0fe090f",
+          "id": "267cccfd-fc06-41d1-98b8-4901c8df7550",
           "name": "secondaryButtonBgColor",
           "displayName": "",
           "description": "",
@@ -532,7 +532,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "52d62ce6-5036-4de2-bd17-459bcf4c4cef",
+          "id": "73537583-5ff4-4673-b1cd-2b18a9f3e721",
           "name": "secondaryButtonTextColor",
           "displayName": "",
           "description": "",
@@ -546,7 +546,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "4d76093d-1de6-48f7-86dd-8329c8279227",
+          "id": "8e322fb3-8d4f-4bf9-b699-dfb264f491ae",
           "name": "secondaryButtonBorderColor",
           "displayName": "",
           "description": "",
@@ -796,7 +796,7 @@
       "isFooter": false,
       "translations": {},
       "defaultPropValuesTranslations": {},
-      "defaultPropValues": null,
+      "defaultPropValues": {},
       "commonPropValues": null
     },
     {
@@ -896,7 +896,7 @@
       "isFooter": false,
       "translations": {},
       "defaultPropValuesTranslations": {},
-      "defaultPropValues": null,
+      "defaultPropValues": {},
       "commonPropValues": null
     },
     {
@@ -936,95 +936,11 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "8a89a530-5a9f-4b78-9831-9ec3009e98d6",
-          "name": "bannerLeftText",
-          "displayName": "bannerLeftText",
-          "description": "bannerLeftText",
-          "type": "TEXT",
-          "isRequired": false,
-          "sliderData": {},
-          "translations": {},
-          "groupId": "4abfbdd2-47ab-493b-a630-ad8edce08627",
-          "excludedFields": [],
-          "excludedFieldsCategory": [],
-          "isFacetListNotSent": false
-        },
-        {
-          "id": "704d4071-0c8f-4754-9495-6b86b1ecd430",
-          "name": "bannerLeftTextColor",
-          "displayName": "bannerLeftTextColor",
-          "description": "bannerLeftTextColor",
-          "type": "COLOR",
-          "isRequired": false,
-          "sliderData": {},
-          "translations": {},
-          "groupId": "4abfbdd2-47ab-493b-a630-ad8edce08627",
-          "excludedFields": [],
-          "excludedFieldsCategory": [],
-          "isFacetListNotSent": false
-        },
-        {
-          "id": "2bd35ec2-cf24-4fe7-9dbf-94a363bbf5d0",
-          "name": "bannerLeftContent",
-          "displayName": "bannerLeftContent",
-          "description": "bannerLeftContent",
-          "type": "RICH_TEXT",
-          "isRequired": false,
-          "sliderData": {},
-          "translations": {},
-          "groupId": "4abfbdd2-47ab-493b-a630-ad8edce08627",
-          "excludedFields": [],
-          "excludedFieldsCategory": [],
-          "isFacetListNotSent": false
-        },
-        {
-          "id": "6cfe5c9c-969f-487f-864b-6d45174e3a12",
-          "name": "bannerLeftContentColor",
-          "displayName": "bannerLeftContentColor",
-          "description": "bannerLeftContentColor",
-          "type": "COLOR",
-          "isRequired": false,
-          "sliderData": {},
-          "translations": {},
-          "groupId": "4abfbdd2-47ab-493b-a630-ad8edce08627",
-          "excludedFields": [],
-          "excludedFieldsCategory": [],
-          "isFacetListNotSent": false
-        },
-        {
-          "id": "2a8a59a3-24be-4a71-8bc7-5094e25427d4",
-          "name": "bannerLeftButtonText",
-          "displayName": "bannerLeftButtonText",
-          "description": "bannerLeftButtonText",
-          "type": "TEXT",
-          "isRequired": false,
-          "sliderData": {},
-          "translations": {},
-          "groupId": "4abfbdd2-47ab-493b-a630-ad8edce08627",
-          "excludedFields": [],
-          "excludedFieldsCategory": [],
-          "isFacetListNotSent": false
-        },
-        {
-          "id": "f944ce15-962c-44be-b5e3-ecb638a76a75",
-          "name": "bannerLeftButtonTextColor",
-          "displayName": "bannerLeftButtonTextColor",
-          "description": "bannerLeftButtonTextColor",
-          "type": "COLOR",
-          "isRequired": false,
-          "sliderData": {},
-          "translations": {},
-          "groupId": "4abfbdd2-47ab-493b-a630-ad8edce08627",
-          "excludedFields": [],
-          "excludedFieldsCategory": [],
-          "isFacetListNotSent": false
-        },
-        {
           "id": "1884393f-21f8-40c7-83ef-571211ebaa85",
           "name": "banner_right",
           "displayName": "banner_right",
           "description": "banner_right",
-          "type": "IMAGE",
+          "type": "VIDEO",
           "isRequired": false,
           "sliderData": {},
           "translations": {},
@@ -1048,95 +964,11 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "06c87ffa-093c-4a85-846a-a46ef5c55050",
-          "name": "bannerRightText",
-          "displayName": "bannerRightText",
-          "description": "bannerRightText",
-          "type": "TEXT",
-          "isRequired": false,
-          "sliderData": {},
-          "translations": {},
-          "groupId": "e4cee2ed-ac2c-4642-8b84-6d95796ee9c9",
-          "excludedFields": [],
-          "excludedFieldsCategory": [],
-          "isFacetListNotSent": false
-        },
-        {
-          "id": "1005078d-fde7-46a6-8718-d5a592db74a8",
-          "name": "bannerRightTextColor",
-          "displayName": "bannerRightTextColor",
-          "description": "bannerRightTextColor",
+          "id": "d7053b4c-9b60-4f34-890c-e836fc4acefd",
+          "name": "banner_bg_color",
+          "displayName": "banner_bg_color",
+          "description": "banner_bg_color",
           "type": "COLOR",
-          "isRequired": false,
-          "sliderData": {},
-          "translations": {},
-          "groupId": "e4cee2ed-ac2c-4642-8b84-6d95796ee9c9",
-          "excludedFields": [],
-          "excludedFieldsCategory": [],
-          "isFacetListNotSent": false
-        },
-        {
-          "id": "817df17e-d12e-45b1-93ec-a2867959bd47",
-          "name": "bannerRightContent",
-          "displayName": "bannerRightContent",
-          "description": "bannerRightContent",
-          "type": "RICH_TEXT",
-          "isRequired": false,
-          "sliderData": {},
-          "translations": {},
-          "groupId": "e4cee2ed-ac2c-4642-8b84-6d95796ee9c9",
-          "excludedFields": [],
-          "excludedFieldsCategory": [],
-          "isFacetListNotSent": false
-        },
-        {
-          "id": "efb043b5-a02d-470f-a8fb-e4b491bfd7aa",
-          "name": "bannerRightContentColor",
-          "displayName": "bannerRightContentColor",
-          "description": "bannerRightContentColor",
-          "type": "COLOR",
-          "isRequired": false,
-          "sliderData": {},
-          "translations": {},
-          "groupId": "e4cee2ed-ac2c-4642-8b84-6d95796ee9c9",
-          "excludedFields": [],
-          "excludedFieldsCategory": [],
-          "isFacetListNotSent": false
-        },
-        {
-          "id": "154fe500-6cb8-47e8-80b4-b358a56aedd6",
-          "name": "bannerRightButtonText",
-          "displayName": "bannerRightButtonText",
-          "description": "bannerRightButtonText",
-          "type": "TEXT",
-          "isRequired": false,
-          "sliderData": {},
-          "translations": {},
-          "groupId": "e4cee2ed-ac2c-4642-8b84-6d95796ee9c9",
-          "excludedFields": [],
-          "excludedFieldsCategory": [],
-          "isFacetListNotSent": false
-        },
-        {
-          "id": "2ba63534-44f7-488c-a01f-c8760e6e66f4",
-          "name": "bannerRightButtonTextColor",
-          "displayName": "bannerRightButtonTextColor",
-          "description": "bannerRightButtonTextColor",
-          "type": "COLOR",
-          "isRequired": false,
-          "sliderData": {},
-          "translations": {},
-          "groupId": "e4cee2ed-ac2c-4642-8b84-6d95796ee9c9",
-          "excludedFields": [],
-          "excludedFieldsCategory": [],
-          "isFacetListNotSent": false
-        },
-        {
-          "id": "d720b120-583c-4439-995e-67821d90f198",
-          "name": "banner_center",
-          "displayName": "banner_center",
-          "description": "banner_center",
-          "type": "IMAGE",
           "isRequired": false,
           "sliderData": {},
           "translations": {},
@@ -1248,7 +1080,7 @@
       "isFooter": false,
       "translations": {},
       "defaultPropValuesTranslations": {},
-      "defaultPropValues": null,
+      "defaultPropValues": {},
       "commonPropValues": null
     }
   ],
@@ -1295,11 +1127,6 @@
               "subLinks": []
             }
           }
-        },
-        {
-          "id": "9bda7c59-d2e8-4478-87f1-e44eb5ddea01",
-          "componentId": "b6119c6a-04ef-4f91-932a-0bfcc99efc43",
-          "propValues": {}
         },
         {
           "id": "4d531d71-4070-4759-af49-400d98edf899",
@@ -1387,7 +1214,6 @@
                   "id": "theme-images/a443cb4b-d6a4-4e60-8f00-e29ecee3591d",
                   "altText": null
                 },
-                "priorityOrder": "2",
                 "imageLink": {
                   "id": "f11d8582-c6d6-4ca2-ad6a-4196686b398b",
                   "linkType": "PAGE",
@@ -1396,9 +1222,66 @@
                   "pageType": "INDEX",
                   "pageComponentId": null,
                   "subLinks": []
-                }
+                },
+                "priorityOrder": "2"
               }
             ]
+          }
+        },
+        {
+          "id": "60233e75-b420-47b2-8d33-3c97328f4da1",
+          "componentId": "67c7fb03-e524-44be-ab11-5e343570316c",
+          "propValues": {
+            "banner_left": {
+              "id": "theme-images/a6514509-09ea-496f-8b23-b5ee82981d36",
+              "altText": null
+            },
+            "banner_left_link": {
+              "id": "bd8f9276-c9a4-47e6-bba4-3efe6274b4bb",
+              "linkType": "PAGE",
+              "label": "Anasayfa",
+              "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+              "pageType": "INDEX",
+              "pageComponentId": null,
+              "subLinks": []
+            },
+            "banner_right": {
+              "autoplay": true,
+              "video": {
+                "id": "2153133a-437e-4f08-a1b4-a960a7ebca80",
+                "isVideo": true,
+                "altText": null,
+                "_fileUrl": "",
+                "merchantId": null
+              },
+              "loop": true,
+              "muted": true
+            },
+            "banner_right_link": {
+              "id": "d7dbc8f2-98aa-47d8-a318-299e6898d6c4",
+              "linkType": "PAGE",
+              "label": "Anasayfa",
+              "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+              "pageType": "INDEX",
+              "pageComponentId": null,
+              "subLinks": []
+            },
+            "banner_bg_color": "#f0f0f0ff",
+            "banner_center_link": {
+              "id": "d72a8e14-29ae-4721-8b02-a16d2c4ea252",
+              "linkType": "PAGE",
+              "label": "Anasayfa",
+              "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+              "pageType": "INDEX",
+              "pageComponentId": null,
+              "subLinks": []
+            },
+            "bannerCenterText": "Senin İçin Var",
+            "bannerCenterContent": "Ahengin ve Şıklığın Etkisinde",
+            "bannerCenterContentColor": "#34342fff",
+            "bannerCenterTextColor": "#34342fff",
+            "bannerCenterButtonText": "dwadawdawdawdwad",
+            "bannerCenterButtonTextColor": "#34342fff"
           }
         },
         {
@@ -1426,6 +1309,11 @@
               "subLinks": []
             }
           }
+        },
+        {
+          "id": "9bda7c59-d2e8-4478-87f1-e44eb5ddea01",
+          "componentId": "b6119c6a-04ef-4f91-932a-0bfcc99efc43",
+          "propValues": {}
         }
       ],
       "specifications": [],
