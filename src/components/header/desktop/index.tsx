@@ -1,87 +1,40 @@
-import React, { useState, useEffect, useRef, useCallback } from "react";
+import React, { useState, useEffect } from "react";
 import { observer } from "mobx-react-lite";
 import { useRouter } from "next/router";
 import { useStore, useTranslation, Link, Image } from "@ikas/storefront";
 import { HeaderProps } from "src/components/__generated__/types";
+import FavoriteSVG from "src/components/svg/favorite";
+import BellSVG from "src/components/svg/bell";
 import UIStore from "src/store/ui-store";
 import MaxQuantityPerCartModal from "src/components/components/modal-max-quantity-per-cart";
 import styles from "../style.module.css";
-import FavoriteSVG from "src/components/svg/new-favicon";
-import SearchSVG from "src/components/svg/new-search";
-import UserIcon from "../../svg/new-user";
-import CartIcon from "../../svg/new-cart";
+import UserIcon from "../../svg/user";
+import CartIcon from "../../svg/cart";
 import IOCloseSVG from "../../svg/close";
 import ArrowRight from "src/components/svg/arrow-right-white";
+import Close from "src/components/svg/close";
 
 import { NS } from "../";
 
 import CartModal from "./cartModal";
-// import ScrollingText from "../scrolling-text-with-buttons";
-import { useScreen } from "src/utils/hooks/useScreen";
-import Button from "src/components/components/button";
-import ScrollingText from "../scrolling-text-with-buttons";
 
 const DesktopHeader = (props: HeaderProps) => {
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
     <>
-      <ScrollingText {...props} />
-      {isScrolled ? (
-        <div
-          className={`${styles.headerWrapper} ${
-            isScrolled ? styles.headerWrapperScrolled : ""
-          }`}
-        >
-          <header className={styles.header}>
-            <div className={`${styles.desktopContainer}`}>
-              <div
-                className={`${
-                  isScrolled
-                    ? styles.innerContainerScrolled
-                    : styles.innerContainer
-                }`}
-              >
-                <LeftSide {...props} />
-                <Center {...props} />
-                <RightSide {...props} />
-              </div>
-            </div>
-          </header>
-        </div>
-      ) : (
-        <div
-          className={`${styles.headerWrapper} ${
-            isScrolled ? styles.headerWrapperScrolled : ""
-          }`}
-        >
-          <header className={styles.header}>
-            <div className={`${styles.desktopContainer}`}>
-              <div className={styles.innerContainer}>
-                <LeftSide {...props} />
-                <SearchInput {...props} />
-                <RightSide {...props} />
-              </div>
-            </div>
-          </header>
-          <div className={styles.divider} />
+      <header className={styles.header}>
+        <div className={styles.desktopContainer}>
+          <div className={styles.innerContainer}>
+            {/* Arama */}
+            <SearchInput {...props} />
+            {/* Logo */}
+            <LeftSide {...props} />
+            {/* İkonlar */}
+            <RightSide {...props} />
+          </div>
+          {/*//* Kategoriler */}
           <Center {...props} />
         </div>
-      )}
-
+      </header>
       <MaxQuantityPerCartModal />
     </>
   );
@@ -89,25 +42,24 @@ const DesktopHeader = (props: HeaderProps) => {
 
 export default observer(DesktopHeader);
 
-//= Sol Taraf
+{
+  /* Sol Taraf */
+}
 const LeftSide = (props: HeaderProps) => {
-  const { logo, logo_black } = props;
-
-  const { isMobile } = useScreen();
-
-  if (!logo || !logo) {
+  const { logo } = props;
+  if (!logo) {
     return null;
   }
-  //Logo Boyut:320 170
+
   return (
-    <div>
+    <div className={styles.logo}>
       <Link href="/">
         <a>
           <Image
             image={logo}
             alt={logo?.altText || ""}
-            width={isMobile ? 150 : 210}
-            height={isMobile ? 75 : 60}
+            width={275}
+            height={30}
           />
         </a>
       </Link>
@@ -115,13 +67,11 @@ const LeftSide = (props: HeaderProps) => {
   );
 };
 
-//= Merkez
+{
+  /* Merkez */
+}
 const Center = (props: HeaderProps) => {
-  const { categoryMenu } = props;
-
-  const anaKategoriler =
-    categoryMenu?.data.filter((item: any) => item.parentId === null) || [];
-
+  const { categoryMenu, staticCategoryMenu } = props;
   const altCat = categoryMenu?.data.filter(
     (item: any) => item.parentId !== null
   );
@@ -142,13 +92,7 @@ const Center = (props: HeaderProps) => {
   }, [router.events]);
 
   const handleMouseEnter = (categoryId: string) => {
-    // Önce bu kategorinin alt kategorisi var mı kontrol edelim
-    const hasSubCategories = altCat?.some(
-      (item: any) => item.parentId === categoryId
-    );
-    if (hasSubCategories) {
-      setHoveredCategory(categoryId);
-    }
+    setHoveredCategory(categoryId);
   };
 
   const handleMouseLeave = () => {
@@ -159,19 +103,10 @@ const Center = (props: HeaderProps) => {
     <div className={styles.header_menu_link_wrapper}>
       {categoryMenu?.data.map((item: any, index: number) => {
         const isHovered = hoveredCategory === item.id;
-        const isLastAnaKategori =
-          anaKategoriler.length > 0 &&
-          item.id === anaKategoriler[anaKategoriler.length - 1].id;
-        const hasSubCategories = altCat?.some(
-          (altItem: any) => altItem.parentId === item.id
-        );
-
         return (
           <div
             key={index}
-            className={`${styles.header_menu_link_content} ${
-              isLastAnaKategori ? styles.last_category : ""
-            }`}
+            className={styles.header_menu_link_content}
             onMouseEnter={() => handleMouseEnter(item.id)}
             onMouseLeave={handleMouseLeave}
           >
@@ -179,71 +114,47 @@ const Center = (props: HeaderProps) => {
               <div className={styles.top_category}>
                 <div>
                   <Link href={item.href} passHref>
-                    <a
-                      className={
-                        isLastAnaKategori ? styles.last_category_link : ""
-                      }
-                    >
-                      {item?.name.toLocaleUpperCase("tr-TR")}
-                    </a>
+                    <a>{item?.name}</a>
                   </Link>
                 </div>
               </div>
             )}
-            {isHovered && hasSubCategories && (
+            {isHovered && (
               <div className={styles.alt_category_wrapper}>
                 <div className={styles.alt_category_wrapper_botom}>
+                  <div className={styles.alt_static_category}>
+                    <div>
+                      {staticCategoryMenu?.data.map((item, index) => {
+                        return (
+                          <Link href={item.href} key={index}>
+                            <a>
+                              <span>{item?.name?.charAt(0)}</span>
+                              {item.name}
+                            </a>
+                          </Link>
+                        );
+                      })}
+                    </div>
+                  </div>
                   <div className={styles.alt_category_container}>
                     {altCat?.map((altCategory: any, index: number) => {
                       return (
-                        <React.Fragment key={index}>
+                        <>
                           {item.id === altCategory.parentId && (
-                            <div className={styles.alt_category_item}>
-                              <Link href={altCategory.href}>
-                                <a className={styles.alt_category_link}>
-                                  {altCategory?.image && (
-                                    <div
-                                      className={
-                                        styles.alt_category_image_wrapper
-                                      }
-                                    >
-                                      <img
-                                        src={altCategory.image.src}
-                                        alt={
-                                          altCategory.image.altText ||
-                                          altCategory.name
-                                        }
-                                        className={styles.alt_category_image}
-                                      />
-                                    </div>
-                                  )}
-                                  <span className={styles.alt_category_name}>
-                                    {altCategory.name}
-                                  </span>
-                                </a>
-                              </Link>
+                            <div key={index}>
+                              <div className={styles.alt_category_content}>
+                                <Link href={altCategory.href}>
+                                  <a>
+                                    <span>{altCategory.name}</span>
+                                  </a>
+                                </Link>
+                              </div>
                             </div>
                           )}
-                        </React.Fragment>
+                        </>
                       );
                     })}
                   </div>
-
-                  {/* Parent Category Image Section */}
-                  {item.image && (
-                    <div className={styles.parent_category_section}>
-                      <div className={styles.parent_category_image_wrapper}>
-                        <img
-                          src={item.image.src}
-                          alt={item.name}
-                          className={styles.parent_category_image}
-                        />
-                        <div className={styles.parent_category_name}>
-                          {item?.name.toLocaleUpperCase("tr-TR")}
-                        </div>
-                      </div>
-                    </div>
-                  )}
                 </div>
               </div>
             )}
@@ -254,194 +165,128 @@ const Center = (props: HeaderProps) => {
   );
 };
 
-//= Arama
+{
+  /* SearchInput */
+}
 export const SearchInput = observer((props: HeaderProps) => {
+  const { t } = useTranslation();
   const uiStore = UIStore.getInstance();
   const router = useRouter();
-  const { categoryMenu } = props;
 
-  if (!categoryMenu) {
-    return null;
-  }
-  const allCatName = categoryMenu?.data?.map((item) => {
-    return item.name;
-  });
-
-  const [currentMessage, setCurrentMessage] = useState<string>(allCatName[0]);
-  const messageIndexRef = useRef<number>(0);
-  const charIndexRef = useRef<number>(0);
-  const isDeletingRef = useRef<boolean>(false);
-  const messageRef = useRef<number | null>(null);
-
-  const onKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
+  const onKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "Enter") {
       event.preventDefault();
-      router.push(`/search?s=${uiStore.searchKeyword}`);
+      const searchUrl = `/search?s=${encodeURIComponent(
+        uiStore.searchKeyword
+      )}`;
+
+      // Router'da URL'i güncelle ve sayfayı yeniden yükle
+      router.replace(searchUrl).then(() => {
+        window.location.reload(); // Sayfayı yeniden yükle
+      });
     }
   };
 
   const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    // Arama kelimesini store'a kaydet
     uiStore.searchKeyword = event.target.value;
   };
-
-  const handleTyping = useCallback(() => {
-    const currentMessageIndex = messageIndexRef.current;
-    const currentCharIndex = charIndexRef.current;
-    const isDeleting = isDeletingRef.current;
-    const current = allCatName[currentMessageIndex];
-
-    if (!isDeleting && currentCharIndex < current.length) {
-      charIndexRef.current = currentCharIndex + 1;
-      setCurrentMessage(current.slice(0, charIndexRef.current));
-    } else if (isDeleting && currentCharIndex > 0) {
-      charIndexRef.current = currentCharIndex - 1;
-      setCurrentMessage(current.slice(0, charIndexRef.current));
-    } else if (!isDeleting && currentCharIndex === current.length) {
-      isDeletingRef.current = true;
-      messageRef.current = window.setTimeout(handleTyping, 1500);
-      return;
-    } else if (isDeleting && currentCharIndex === 0) {
-      isDeletingRef.current = false;
-      messageIndexRef.current = (currentMessageIndex + 1) % allCatName.length;
-    }
-
-    messageRef.current = window.setTimeout(
-      handleTyping,
-      isDeleting ? 100 : 200
-    );
-  }, []);
-
-  useEffect(() => {
-    messageRef.current = window.setTimeout(handleTyping, 200);
-
-    return () => {
-      if (messageRef.current) {
-        clearTimeout(messageRef.current);
-      }
-    };
-  }, [handleTyping]);
 
   return (
     <div className={styles.searchInputWrapper}>
       <input
         type="search"
         value={uiStore.searchKeyword}
-        placeholder={currentMessage}
-        onKeyPress={onKeyPress}
-        onChange={onChange}
+        placeholder={t(`${NS}:searchInput.placeholder`)}
+        onKeyDown={onKeyDown} // Enter tuşunu dinler
+        onChange={onChange} // Değişiklikleri kaydeder
       />
     </div>
   );
 });
 
-//= Scroll olurken Arama
-export const SearchInputWhenScrolled = observer((props: HeaderProps) => {
-  const { t } = useTranslation();
-  const uiStore = UIStore.getInstance();
-  const router = useRouter();
-  const [ShowSearch, setShowSearch] = useState<boolean>(true);
-  const searchInputRef = useRef<HTMLInputElement>(null);
+{
+  /* Sağ taraf | Bell */
+}
+// export const Bell = observer((props: HeaderProps) => {
+//   const { special_for_your } = props;
 
-  const onKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
-    if (event.key === "Enter") {
-      event.preventDefault();
-      router.push(`/search?s=${uiStore.searchKeyword}`);
-    }
-  };
+//   if (!special_for_your) {
+//     return null;
+//   }
 
-  const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    uiStore.searchKeyword = event.target.value;
-  };
+//   const [openBellModal, setOpenBellModal] = useState(false);
 
-  useEffect(() => {
-    if (searchInputRef.current) {
-      searchInputRef.current.focus();
-      searchInputRef.current.value = "";
-    }
-  }, [ShowSearch]);
+//   const { t } = useTranslation();
+//   const router = useRouter();
 
-  const { logo, logo_black } = props;
-  if (!logo) {
-    return null;
-  }
+//   useEffect(() => {
+//     if (router && router.events) {
+//       const handleRouteChange = () => {
+//         setOpenBellModal(false);
+//       };
 
-  const { isMobile } = useScreen();
+//       router.events.on("routeChangeStart", handleRouteChange);
 
-  return (
-    <div className={styles.searchInputWrapperS}>
-      {/* Search Icon */}
-      <div onClick={() => setShowSearch(!ShowSearch)}>
-        <div className={styles.headerButtonBottomTextSearchS}>
-          <SearchSVG />
-        </div>
-      </div>
+//       return () => {
+//         router.events.off("routeChangeStart", handleRouteChange);
+//       };
+//     }
+//   }, [router]);
 
-      {!ShowSearch && (
-        <div className={styles.searchInputContainerS}>
-          <div className={styles.maxWidthContainer}>
-            <div className={styles.searchInputLayout}>
-              {/* Logo - Left */}
-              <div className={styles.logoContainer}>
-                <Image
-                  image={logo}
-                  alt={logo?.altText || ""}
-                  width={isMobile ? 150 : 210}
-                  height={isMobile ? 75 : 60}
-                />
-              </div>
+//   const onModalClose = () => {
+//     setOpenBellModal(false);
+//   };
 
-              {/* Search - Center */}
-              <div className={styles.searchInputContent}>
-                <div className={styles.searchInput}>
-                  <input
-                    type="search"
-                    value={uiStore.searchKeyword}
-                    placeholder={t(`${NS}:searchInput.placeholder`)}
-                    onKeyPress={onKeyPress}
-                    onChange={onChange}
-                    ref={searchInputRef}
-                  />
-                </div>
-              </div>
+//   const onOpenMyModal = () => {
+//     setOpenBellModal(true);
+//   };
 
-              {/* Close Button - Right */}
-              <div
-                className={styles.closeButtonContainer}
-                onClick={() => setShowSearch(!ShowSearch)}
-              >
-                <Button buttonType="primary">
-                  {t(`${NS}:headerButton_text.close`)}
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-    </div>
-  );
-});
+//   return (
+//     <div className={styles.bell}>
+//       {/* Bell */}
+//       <span onClick={() => onOpenMyModal()}>
+//         <BellSVG />
+//       </span>
 
-//= Sağ Taraf
+//       {openBellModal && (
+//         <div className={styles.special_modal}>
+//           <div className={styles.modal_wrapper}>
+//             {/* close */}
+//             <div className={styles.close_bell}>
+//               <span onClick={onModalClose}>
+//                 <Close />
+//               </span>
+//             </div>
+//             <div className={styles.modal_bell_icon}>
+//               <span>
+//                 <BellSVG />
+//               </span>
+//             </div>
+//             <div className={styles.modal_content}>
+//               <p>{t(`${NS}:specailForYou`)}</p>
+
+//               <Link href={special_for_your?.href}>
+//                 <a>{t(`${NS}:beginShopping`)}</a>
+//               </Link>
+//             </div>
+//           </div>
+//         </div>
+//       )}
+//     </div>
+//   );
+// });
+
+{
+  /* Sağ taraf*/
+}
 const RightSide = observer((props: HeaderProps) => {
   const { t } = useTranslation();
 
   const store = useStore();
   const quantity = store.cartStore.cart?.itemQuantity ?? 0;
   const [userToken, setUserToken] = useState<string | null>("");
-  const [isScrolled, setIsScrolled] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
   useEffect(() => {
     const token: string | null = localStorage.getItem("customerToken");
 
@@ -468,7 +313,8 @@ const RightSide = observer((props: HeaderProps) => {
 
   return (
     <div className={styles.rightSide}>
-      {isScrolled && <SearchInputWhenScrolled {...props} />}
+      {/* <Bell {...props} /> */}
+
       {userToken && (
         <Link href="/account/favorite-products">
           <a className={styles.favoriteWrapper}>
@@ -490,6 +336,7 @@ const RightSide = observer((props: HeaderProps) => {
           </a>
         </Link>
       )}
+      {/* CartIcon */}
       <button className={styles.cartWrapper} onClick={uiStore.toggleCartModal}>
         <span>{quantity}</span>
         <CartIcon />
@@ -506,7 +353,7 @@ const RightSide = observer((props: HeaderProps) => {
           >
             <IOCloseSVG />
           </button>
-          <CartModal {...props} />
+          <CartModal />
         </div>
 
         {cart !== undefined && cart !== null && (

@@ -4,7 +4,7 @@
   color: #000;
   padding: 0;
   font-family: "Helvetica" !important;
-  font-weight: 400;
+  font-weight: 300;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -19,7 +19,7 @@
 .scrolling_text_container {
   flex: 1;
   position: relative;
-  height: 30px;
+  height: 35px;
   overflow: hidden;
   display: flex;
   justify-content: center;

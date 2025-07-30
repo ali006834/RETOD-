@@ -1,42 +1,37 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { observer } from "mobx-react-lite";
 import { Image, Link, useStore, useTranslation } from "@ikas/storefront";
 import UIStore from "src/store/ui-store";
 
 import { HeaderProps } from "src/components/__generated__/types";
-import FavoriteSVG from "src/components/svg/new-favicon";
-import UserIcon from "../../svg/new-user";
-import CartIcon from "../../svg/new-cart";
-import SearchSVG from "../../svg/new-search";
+import FavoriteSVG from "src/components/svg/favorite";
+import UserIcon from "src/components/svg/user";
+import CartIcon from "src/components/svg/cart";
+import { SearchInput } from "src/components/header/desktop";
 import MaxQuantityPerCartModal from "src/components/components/modal-max-quantity-per-cart";
-import Button from "src/components/components/button";
 
 import IOMenuSVG from "./svg/io-menu";
-import IOCloseSVG from "./svg/io-close";
+import IOCloseSVG from "src/components/svg/close";
 import styles from "./style.module.css";
-import CloseIcon from "../../svg/close";
-import Plus from "src/components/svg/plus";
-import Minus from "src/components/svg/minus";
+import ArrowRightBlack from "src/components/svg/arrow-right";
+import LeftArrow from "src/components/svg/left-arrow";
 
 import CartModal from "../desktop/cartModal";
 import { useRouter } from "next/router";
 import ArrowRight from "src/components/svg/arrow-right-white";
 import { LanguageSelect } from "src/components/language";
-import ScrollingText from "../scrolling-text-with-buttons";
-import { useScreen } from "src/utils/hooks/useScreen";
-
-import { NS } from "../";
+// import { Bell } from "src/components/header/desktop";
 
 const MobileHeader = (props: HeaderProps) => {
   return (
     <>
-      <ScrollingText {...props} />
       <header className={styles.header}>
         <div className={styles.row}>
           <LeftSide {...props} />
           <Center {...props} />
           <RightSide {...props} />
         </div>
+        <SearchInput {...props} />
         <Sidenav {...props} />
       </header>
       <MaxQuantityPerCartModal />
@@ -59,7 +54,7 @@ const LeftSide = observer((props: HeaderProps) => {
 });
 
 const Center = observer((props: HeaderProps) => {
-  const { logo, logo_black } = props;
+  const { logo } = props;
   if (!logo) {
     return null;
   }
@@ -71,7 +66,7 @@ const Center = observer((props: HeaderProps) => {
             image={logo}
             alt={logo?.altText || ""}
             width={150}
-            height={45}
+            height={30}
           />
         </a>
       </Link>
@@ -81,7 +76,6 @@ const Center = observer((props: HeaderProps) => {
 
 const Sidenav = observer((props: HeaderProps) => {
   const uiStore = UIStore.getInstance();
-
   const { logo } = props;
   if (!logo) {
     return null;
@@ -109,8 +103,8 @@ const Sidenav = observer((props: HeaderProps) => {
                   <Image
                     image={logo}
                     alt={logo?.altText || ""}
-                    width={150}
-                    height={45}
+                    width={190}
+                    height={35}
                   />
                 </a>
               </Link>
@@ -120,11 +114,10 @@ const Sidenav = observer((props: HeaderProps) => {
               onClick={uiStore.toggleSidenav}
               style={{ width: "20%" }}
             >
-              <CloseIcon />
+              <IOCloseSVG />
             </button>
           </div>
           <Navigation {...props} />
-          <SearchInput {...props} />
         </div>
         <div className={styles.sidenavlang}>
           <LanguageSelect />
@@ -135,23 +128,35 @@ const Sidenav = observer((props: HeaderProps) => {
 });
 
 const Navigation = (props: HeaderProps) => {
-  const { logo, categoryMenu } = props;
-  if (!logo) {
-    return null;
-  }
-
+  const { categoryMenu } = props;
   if (!categoryMenu) {
     return null;
   }
 
   const [expandedCategories, setExpandedCategories] = useState<string[]>([]);
+  const [categoryHistory, setCategoryHistory] = useState<string[]>([]);
 
   const toggleCategory = (categoryId: string) => {
+    setCategoryHistory((prev) => [...prev, categoryId]);
     setExpandedCategories((prev) =>
       prev.includes(categoryId)
         ? prev.filter((id) => id !== categoryId)
         : [...prev, categoryId]
     );
+  };
+
+  const goBack = () => {
+    setCategoryHistory((prev) => {
+      if (prev.length > 0) {
+        const newHistory = [...prev];
+        const lastCategoryId = newHistory.pop();
+        setExpandedCategories((expandedCategories) =>
+          expandedCategories.filter((id) => id !== lastCategoryId)
+        );
+        return newHistory;
+      }
+      return prev;
+    });
   };
 
   const renderCategories = (parentId: string | null) => {
@@ -162,35 +167,38 @@ const Navigation = (props: HeaderProps) => {
     return (
       <ul>
         {childCategories.map((childCategory) => (
-          <li key={childCategory.id} className={styles.childcategory}>
-            <div
-              className={styles.top_category_content}
-              onClick={() => toggleCategory(childCategory.id)}
-            >
+          <li key={childCategory.id} className={styles.top_category_wrapper}>
+            <div className={styles.top_category_content}>
               {categoryMenu.data.some(
                 (item) => item.parentId === childCategory.id
               ) ? (
                 <>
-                  <a>{childCategory.name}</a>
-                  <span>
-                    {expandedCategories.includes(childCategory.id) ? (
-                      <Minus />
-                    ) : (
-                      <Plus />
+                  <Link href={childCategory.href}>
+                    <a>{childCategory.name}</a>
+                  </Link>
+                  <span onClick={() => toggleCategory(childCategory.id)}>
+                    {!expandedCategories.includes(childCategory.id) && (
+                      <ArrowRightBlack />
                     )}
                   </span>
                 </>
               ) : (
                 <Link href={childCategory.href}>
-                  <a>
-                    <span>{childCategory.name}</span>
-                  </a>
+                  <a>{childCategory.name}</a>
                 </Link>
               )}
             </div>
-            <div className={styles.subchild}>
-              {expandedCategories.includes(childCategory.id) &&
-                renderCategories(childCategory.id)}
+            <div>
+              {expandedCategories.includes(childCategory.id) && (
+                <ul className={styles.mobil_fixed_menu}>
+                  <div className={styles.mobil_back}>
+                    <span onClick={goBack}>
+                      <LeftArrow />
+                    </span>
+                  </div>
+                  {renderCategories(childCategory.id)}
+                </ul>
+              )}
             </div>
           </li>
         ))}
@@ -199,7 +207,6 @@ const Navigation = (props: HeaderProps) => {
   };
 
   const router = useRouter();
-
   const uiStore = UIStore.getInstance();
 
   useEffect(() => {
@@ -208,22 +215,7 @@ const Navigation = (props: HeaderProps) => {
 
   return (
     <div className={styles.mobile_category_container}>
-      <ul>
-        {renderCategories(null)}
-
-        {/* statick menu */}
-        {/* {staticCatMenu?.data.map((item) => {
-          return (
-            <li key={item.id} className={styles.childcategory}>
-              <div className={styles.top_category_content}>
-                <Link href={item.href}>
-                  <a>{item.name}</a>
-                </Link>
-              </div>
-            </li>
-          );
-        })} */}
-      </ul>
+      <ul>{renderCategories(null)}</ul>
     </div>
   );
 };
@@ -256,9 +248,11 @@ const RightSide = observer((props: HeaderProps) => {
 
   return (
     <div className={styles.rightSide}>
+      {/* <Bell {...props} /> */}
+
       {userToken && (
         <Link href="/account/favorite-products">
-          <a className={styles.favoriteWrapper}>
+          <a>
             <FavoriteSVG />
           </a>
         </Link>
@@ -266,20 +260,20 @@ const RightSide = observer((props: HeaderProps) => {
 
       {userToken ? (
         <Link href="/account">
-          <a className={styles.accountWrapper}>
+          <a>
             <UserIcon />
           </a>
         </Link>
       ) : (
         <Link href="/account/login">
-          <a className={styles.accountWrapper}>
+          <a>
             <UserIcon />
           </a>
         </Link>
       )}
 
       <button className={styles.cartWrapper} onClick={uiStore.toggleCartModal}>
-        <span>{quantity}</span>
+        <div className={styles.cartQuantity}>{quantity}</div>
         <CartIcon />
       </button>
       <div
@@ -298,7 +292,7 @@ const RightSide = observer((props: HeaderProps) => {
               <IOCloseSVG />
             </button>
           </div>
-          <CartModal {...props} />
+          <CartModal />
         </div>
         {cart !== undefined && cart !== null && (
           <div className={styles.bottomContent}>
@@ -314,56 +308,6 @@ const RightSide = observer((props: HeaderProps) => {
             </div>
           </div>
         )}
-      </div>
-    </div>
-  );
-});
-
-//Arama
-export const SearchInput = observer((props: HeaderProps) => {
-  const { t } = useTranslation();
-  const uiStore = UIStore.getInstance();
-  const router = useRouter();
-  const searchInputRef = useRef<HTMLInputElement>(null);
-
-  const onKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
-    if (event.key === "Enter") {
-      event.preventDefault();
-      router.push(`/search?s=${uiStore.searchKeyword}`);
-    }
-  };
-
-  const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    uiStore.searchKeyword = event.target.value;
-  };
-
-  // Direk focuslanmasını engelle
-  // useEffect(() => {
-  //   if (searchInputRef.current) {
-  //     searchInputRef.current.focus();
-  //   }
-  // }, []);
-
-  const { logo } = props;
-  if (!logo) {
-    return null;
-  }
-
-  return (
-    <div className={styles.mobileSearchContainer}>
-      <div className={styles.mobileSearchInputWrapper}>
-        <div className={styles.mobileSearchIcon}>
-          <SearchSVG />
-        </div>
-        <input
-          type="search"
-          value={uiStore.searchKeyword}
-          placeholder={t(`${NS}:searchInput.placeholder`)}
-          onKeyPress={onKeyPress}
-          onChange={onChange}
-          ref={searchInputRef}
-          className={styles.mobileSearchInput}
-        />
       </div>
     </div>
   );

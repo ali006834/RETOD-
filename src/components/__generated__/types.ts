@@ -10,6 +10,7 @@ export type ScrollingTexts = {
 export type HeaderProps = {
 	logo?: IkasImage;
 	logo_black?: IkasImage;
+	staticCategoryMenu?: IkasCategoryList;
 	categoryMenu?: IkasCategoryList;
 	scrollingTexts?: ScrollingTexts[];
 };
