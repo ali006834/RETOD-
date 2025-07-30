@@ -3,6 +3,7 @@ import {
 	IkasNavigationLink,
 	IkasVideo,
 	IkasCategoryList,
+	IkasProductList,
 } from "@ikas/storefront"
 
 export type ScrollingTexts = { 
@@ -59,5 +60,14 @@ export type BannerTrioProps = {
 	bannerCenterContentColor?: string;
 	bannerCenterButtonText?: string;
 	bannerCenterButtonTextColor?: string;
+};
+
+export type FeaturedProductShowcaseProps = {
+	products?: IkasProductList;
+	headerText?: string;
+	titleText?: string;
+	contentText?: string;
+	btnText?: string;
+	btnLink?: IkasNavigationLink;
 };
 
