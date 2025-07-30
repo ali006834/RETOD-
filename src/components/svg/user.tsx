@@ -1,19 +1,38 @@
 import React from "react";
 
-const svg = () => (
+interface UserProps {
+  width?: string;
+  height?: string;
+  color?: string;
+}
+
+const svg = ({ width, height, color = "#000" }: UserProps) => (
   <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={width}
+    height={height}
     viewBox="0 0 24 24"
     fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    width="1.5em"
-    height="1.5em"
   >
     <path
-      d="M12 12.413a4.358 4.358 0 1 0 0-8.715 4.358 4.358 0 0 0 0 8.715zM3.488 20.857c0-3.085 1.594-5.61 5.26-5.61h6.503c3.667 0 5.261 2.525 5.261 5.61"
-      stroke="black"
-      strokeWidth="1"
-      strokeMiterlimit="10"
-    ></path>
+      d="M19.523 21.99H4.488c-1.503 0-2.663-1.134-2.466-2.624l.114-.869c.207-1.2 1.305-1.955 2.497-2.214L11.928 15h.144l7.295 1.283c1.212.28 2.29.993 2.497 2.214l.114.88c.197 1.49-.963 2.623-2.466 2.623l.01-.01Z"
+      fill="transparent"
+      fill-opacity=".16"
+      stroke={color}
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <circle
+      cx="12"
+      cy="7"
+      r="5"
+      fill="transparent"
+      stroke={color}
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
   </svg>
 );
 

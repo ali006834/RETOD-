@@ -3,30 +3,34 @@ import { observer } from "mobx-react-lite";
 import { useRouter } from "next/router";
 import { useStore, useTranslation, Link, Image } from "@ikas/storefront";
 import { HeaderProps } from "src/components/__generated__/types";
-import FavoriteSVG from "src/components/svg/favorite";
-import BellSVG from "src/components/svg/bell";
 import UIStore from "src/store/ui-store";
 import MaxQuantityPerCartModal from "src/components/components/modal-max-quantity-per-cart";
 import styles from "../style.module.css";
 import UserIcon from "../../svg/user";
+import FavoriteSVG from "src/components/svg/favorite";
 import CartIcon from "../../svg/cart";
 import IOCloseSVG from "../../svg/close";
-import ArrowRight from "src/components/svg/arrow-right-white";
-import Close from "src/components/svg/close";
+import BellSVG from "../../svg/notification";
+import ArrowRight from "../../svg/arrow-right-white";
+import Close from "../../svg/close";
 import SearchSVG from "../../svg/search";
+import ScrollingText from "../scrolling-text";
 
 import { NS } from "../";
 
 import CartModal from "./cartModal";
+import { LanguageSelect } from "src/components/language";
 
 const DesktopHeader = (props: HeaderProps) => {
   return (
     <>
+      <ScrollingText {...props} />
       <header className={styles.header}>
         <div className={styles.desktopContainer}>
           <div className={styles.innerContainer}>
-            {/* Arama */}
-            <SearchInput {...props} />
+            {/* Dil Seçimi */}
+            {/* <LanguageSelect /> */}
+            <div>Dil</div>
             {/* Logo */}
             <LeftSide {...props} />
             {/* İkonlar */}
@@ -43,9 +47,7 @@ const DesktopHeader = (props: HeaderProps) => {
 
 export default observer(DesktopHeader);
 
-{
-  /* Sol Taraf */
-}
+/* Sol Taraf */
 const LeftSide = (props: HeaderProps) => {
   const { logo } = props;
   if (!logo) {
@@ -59,8 +61,8 @@ const LeftSide = (props: HeaderProps) => {
           <Image
             image={logo}
             alt={logo?.altText || ""}
-            width={275}
-            height={30}
+            width={300}
+            height={29}
           />
         </a>
       </Link>
@@ -68,9 +70,7 @@ const LeftSide = (props: HeaderProps) => {
   );
 };
 
-{
-  /* Merkez */
-}
+/* Merkez */
 const Center = (props: HeaderProps) => {
   const { categoryMenu, staticCategoryMenu } = props;
   const altCat = categoryMenu?.data.filter(
@@ -115,7 +115,7 @@ const Center = (props: HeaderProps) => {
               <div className={styles.top_category}>
                 <div>
                   <Link href={item.href} passHref>
-                    <a>{item?.name}</a>
+                    <a>{item?.name.toLocaleUpperCase("tr-TR")}</a>
                   </Link>
                 </div>
               </div>
@@ -166,9 +166,7 @@ const Center = (props: HeaderProps) => {
   );
 };
 
-{
-  /* SearchInput */
-}
+/* SearchInput */
 export const SearchInput = observer((props: HeaderProps) => {
   const { t } = useTranslation();
   const uiStore = UIStore.getInstance();
@@ -198,7 +196,7 @@ export const SearchInput = observer((props: HeaderProps) => {
     <div className={styles.searchInputWrapper}>
       <div onClick={() => setShowSearch(!ShowSearch)}>
         <div className={styles.headerButtonBottomTextSearch}>
-          <SearchSVG />
+          <SearchSVG height="20px" width="20px" color="#000" />
         </div>
       </div>
 
@@ -246,77 +244,75 @@ export const SearchInput = observer((props: HeaderProps) => {
   );
 });
 
-{
-  /* Sağ taraf | Bell */
-}
-// export const Bell = observer((props: HeaderProps) => {
-//   const { special_for_your } = props;
+/* Sağ taraf | Bell */
+export const Bell = observer((props: HeaderProps) => {
+  const { special_for_your } = props;
 
-//   if (!special_for_your) {
-//     return null;
-//   }
+  if (!special_for_your) {
+    return null;
+  }
 
-//   const [openBellModal, setOpenBellModal] = useState(false);
+  const [openBellModal, setOpenBellModal] = useState(false);
 
-//   const { t } = useTranslation();
-//   const router = useRouter();
+  const { t } = useTranslation();
+  const router = useRouter();
 
-//   useEffect(() => {
-//     if (router && router.events) {
-//       const handleRouteChange = () => {
-//         setOpenBellModal(false);
-//       };
+  useEffect(() => {
+    if (router && router.events) {
+      const handleRouteChange = () => {
+        setOpenBellModal(false);
+      };
 
-//       router.events.on("routeChangeStart", handleRouteChange);
+      router.events.on("routeChangeStart", handleRouteChange);
 
-//       return () => {
-//         router.events.off("routeChangeStart", handleRouteChange);
-//       };
-//     }
-//   }, [router]);
+      return () => {
+        router.events.off("routeChangeStart", handleRouteChange);
+      };
+    }
+  }, [router]);
 
-//   const onModalClose = () => {
-//     setOpenBellModal(false);
-//   };
+  const onModalClose = () => {
+    setOpenBellModal(false);
+  };
 
-//   const onOpenMyModal = () => {
-//     setOpenBellModal(true);
-//   };
+  const onOpenMyModal = () => {
+    setOpenBellModal(true);
+  };
 
-//   return (
-//     <div className={styles.bell}>
-//       {/* Bell */}
-//       <span onClick={() => onOpenMyModal()}>
-//         <BellSVG />
-//       </span>
+  return (
+    <div className={styles.bell}>
+      {/* Bell */}
+      <span onClick={() => onOpenMyModal()}>
+        <BellSVG height="20px" width="20px" color="#000" />
+      </span>
 
-//       {openBellModal && (
-//         <div className={styles.special_modal}>
-//           <div className={styles.modal_wrapper}>
-//             {/* close */}
-//             <div className={styles.close_bell}>
-//               <span onClick={onModalClose}>
-//                 <Close />
-//               </span>
-//             </div>
-//             <div className={styles.modal_bell_icon}>
-//               <span>
-//                 <BellSVG />
-//               </span>
-//             </div>
-//             <div className={styles.modal_content}>
-//               <p>{t(`${NS}:specailForYou`)}</p>
+      {openBellModal && (
+        <div className={styles.special_modal}>
+          <div className={styles.modal_wrapper}>
+            {/* close */}
+            <div className={styles.close_bell}>
+              <span onClick={onModalClose}>
+                <Close />
+              </span>
+            </div>
+            <div className={styles.modal_bell_icon}>
+              <span>
+                <BellSVG />
+              </span>
+            </div>
+            <div className={styles.modal_content}>
+              <p>{t(`${NS}:specailForYou`)}</p>
 
-//               <Link href={special_for_your?.href}>
-//                 <a>{t(`${NS}:beginShopping`)}</a>
-//               </Link>
-//             </div>
-//           </div>
-//         </div>
-//       )}
-//     </div>
-//   );
-// });
+              <Link href={special_for_your?.href}>
+                <a>{t(`${NS}:beginShopping`)}</a>
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+});
 
 {
   /* Sağ taraf*/
@@ -354,12 +350,16 @@ const RightSide = observer((props: HeaderProps) => {
 
   return (
     <div className={styles.rightSide}>
-      {/* <Bell {...props} /> */}
+      {/* Arama */}
+      <SearchInput {...props} />
+
+      {/* Zill */}
+      <Bell {...props} />
 
       {userToken && (
         <Link href="/account/favorite-products">
           <a className={styles.favoriteWrapper}>
-            <FavoriteSVG />
+            <FavoriteSVG height="20px" width="20px" color="#000" />
           </a>
         </Link>
       )}
@@ -367,20 +367,20 @@ const RightSide = observer((props: HeaderProps) => {
       {userToken ? (
         <Link href="/account">
           <a className={styles.accountWrapper}>
-            <UserIcon />
+            <UserIcon height="20px" width="20px" color="#000" />
           </a>
         </Link>
       ) : (
         <Link href="/account/login">
           <a className={styles.accountWrapper}>
-            <UserIcon />
+            <UserIcon height="20px" width="20px" color="#000" />
           </a>
         </Link>
       )}
       {/* CartIcon */}
       <button className={styles.cartWrapper} onClick={uiStore.toggleCartModal}>
         <span>{quantity}</span>
-        <CartIcon />
+        <CartIcon height="20px" width="20px" color="#000" />
       </button>
       <div
         className={

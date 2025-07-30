@@ -1,24 +1,31 @@
-const svg = ({ fill }: { fill?: boolean }) => (
+import React from "react";
+
+interface FavoriteProps {
+  width?: string;
+  height?: string;
+  color?: string;
+}
+
+const svg = ({ width, height, color = "#000" }: FavoriteProps) => (
   <svg
-    viewBox="0 0 64 64"
     xmlns="http://www.w3.org/2000/svg"
-    fill={fill ? "currentColor" : "none"}
-    stroke="currentColor"
-    height="1.7em"
-    width="1.7em"
+    width={width}
+    height={height}
+    viewBox="0 0 24 24"
+    fill="none"
   >
-    <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-    <g
-      id="SVGRepo_tracerCarrier"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    ></g>
-    <g id="SVGRepo_iconCarrier">
-      <path
-        d="M35.54 15.44 32 19l-3.54-3.53A11.67 11.67 0 0 0 12 31.94l3.54 3.54 8.25 8.25L32 52l8.25-8.25 8.25-8.25 3.5-3.56a11.67 11.67 0 0 0-16.5-16.5z"
-        strokeWidth="2"
-      ></path>
-    </g>
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M16.55 3.084a5.452 5.452 0 0 1 3.852 9.307l-.648.654-.86.854-6.852 6.852L5.19 13.9l-.86-.854-.648-.654a5.453 5.453 0 1 1 7.706-7.712l.654.654.655-.654a5.452 5.452 0 0 1 3.852-1.595Z"
+      fill="transparent"
+      fill-opacity=".16"
+      stroke={color}
+      stroke-width="1.5"
+      stroke-miterlimit="10"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
   </svg>
 );
 

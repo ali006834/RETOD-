@@ -1,6 +1,7 @@
 import {
 	IkasImage,
 	IkasCategoryList,
+	IkasNavigationLink,
 } from "@ikas/storefront"
 
 export type ScrollingTexts = { 
@@ -12,6 +13,7 @@ export type HeaderProps = {
 	logo_black?: IkasImage;
 	staticCategoryMenu?: IkasCategoryList;
 	categoryMenu?: IkasCategoryList;
+	special_for_your?: IkasNavigationLink;
 	scrollingTexts?: ScrollingTexts[];
 };
 

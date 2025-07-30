@@ -3,7 +3,7 @@ import styles from "./style.module.css";
 import { HeaderProps } from "src/components/__generated__/types";
 import { toJS } from "mobx";
 
-const ScrollingTextWithButtons = (props: HeaderProps) => {
+const ScrollingText = (props: HeaderProps) => {
   const { scrollingTexts } = props;
 
   const scrollingTextsArr = toJS(scrollingTexts);
@@ -47,4 +47,4 @@ const ScrollingTextWithButtons = (props: HeaderProps) => {
   );
 };
 
-export default ScrollingTextWithButtons;
+export default ScrollingText;
