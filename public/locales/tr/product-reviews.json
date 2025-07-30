@@ -1,0 +1,24 @@
+{
+  "title": "Müşteri Yorumları",
+  "writeAReview": "Bir yorum yazın",
+  "closeReviewForm": "Yorum formunu kapat",
+  "emptyReview": "Bu ürün için henüz yorum bulunmuyor",
+  "formTitle": "Bir yorum yazın",
+  "basedOnXReviews": "{{x}} yorum temel alınarak",
+  "xStar": "{{x}} yıldız",
+  "purchased": "Satın Alındı",
+  "noComment": "Yorum Yok",
+  "xReview": "{{x}} Yorum",
+  "form": {
+    "name": "Ad",
+    "email": "E-posta",
+    "rating": "Değerlendirme",
+    "reviewStarts": "Değerlendirme",
+    "reviewTitle": "Yorum Başlığı",
+    "bodyOfReview": "Yorum İçeriği",
+    "requiredRule": "Bu alan zorunludur",
+    "submitReview": "Yorum Gönder",
+    "successText": "Yorumunuz için teşekkür ederiz!",
+    "errorText": "Yorum gönderilirken bir hata oluştu. Lütfen tekrar deneyin"
+  }
+}

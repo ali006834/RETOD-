@@ -1,0 +1,23 @@
+{
+  "searchInput": {
+    "placeholder": "Mağazada ara"
+  },
+  "summary": {
+    "title": "Sepet Özeti",
+    "subTotal": "Ara Toplam: ",
+    "total": "Toplam: ",
+    "info": "Kargo, vergi ve kupon kodları ödeme adımında hesaplanacaktır.",
+    "continueShopping": "ALIŞVERİŞE DEVAM ET",
+    "checkout": "ŞİMDİ SATIN AL",
+    "cart": "Ödemeyi Tamamla"
+  },
+  "headerButton_text": {
+    "close": "Kapat",
+    "search": "Ara",
+    "account": "Hesabım",
+    "login": "Oturum Aç",
+    "favorite": "Favoriler",
+    "cart": "Sepet"
+  },
+  "new_arrivals": "Yeni Eklenenler"
+}

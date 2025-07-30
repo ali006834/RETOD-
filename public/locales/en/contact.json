@@ -1,0 +1,27 @@
+{
+  "communication": "Contact",
+  "formText": "The personal data collected through this form is used to contact you. For detailed information about the processing of personal data,",
+  "fromHere": "click here",
+  "toReach": "to access.",
+  "select": "Select",
+  "subject": "Subject*",
+  "subSubject": "Sub Subject",
+  "subSubSubject": "Sub Subject Detail",
+  "orderNumber": "Order Number",
+  "invoiceNumber": "Invoice Number",
+  "productCode": "Product Code",
+  "firstName": "First Name*",
+  "lastName": "Last Name*",
+  "phone": "Phone*",
+  "email": "Email*",
+  "message": "Message*",
+  "submit": "Submit",
+  "formTitle": "Contact",
+  "photos": "Photos",
+  "uploadPhotos": "Upload Photo(s)",
+  "maxPhotoLimit": "You can upload up to 4 photos",
+
+  "contact-form": {
+    "methodNotAllowed": "Method not allowed"
+  }
+}

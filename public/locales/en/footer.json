@@ -1,0 +1,43 @@
+{
+  "İngilizce": "English",
+  "collections": "Collections",
+  "customer_services": "Customer Services",
+  "social_media": "Social Media",
+  "go_top": "En Üste Git",
+  "copyrightText": "© 2024 Batik. All rights reserved.",
+  "selectYourLanguage": "Select Your Language",
+  "emailSubscription": {
+    "description": "Get information about special promotions, personalized discounts and the latest innovations",
+    "title": "Newsletter",
+    "sloganShoulderStyle": "Sign up for new stories and personal offers",
+    "form": {
+      "email": "E-mail",
+      "button": "REGISTER",
+      "info": "I have read and understood the Nocturne <a href=\"/\" style=\"text-decoration: underline; color: black;\">Website Privacy and Cookie Policy</a> and the <a href=\"/\" style=\"text-decoration: underline; color: black;\">Personal Data Processing and Data Security Policy</a>. In this context, I consent to the processing of my personal data and agree to receive marketing and promotional communications via SMS and email."
+    },
+    "responseStatus": {
+      "success": "You have been registered for the newsletter.",
+      "error": "Something went wrong. Please try again later."
+    }
+  },
+  "captchaText": "This site is protected by reCAPTCHA and the {{ privacyPolicy }} and {{ termsOfService }} apply.",
+  "privacyPolicy": "Privacy Policy",
+  "termsOfService": "Terms of Service",
+  "footerLinks": {
+    "contact": "Contact",
+    "about": "About",
+    "clarification": "Clarification Text",
+    "application": "Contact Person Application Form",
+    "membership": "Membership Agreement",
+    "cookies": "Cookies",
+    "kvkk": "Personal Data Protection and Privacy Policy",
+    "consentText": "Express Consent Text",
+    "distanceSelling": "Distance Sales Preliminary Information Form",
+    "sss": "Frequently Asked Questions"
+  },
+  "socail_media": "Social Media",
+  "popular_cat": "Popular Categories",
+  "services": "Customer Services",
+  "brand": "Batik",
+  "follow_us": "FOLLOW US"
+}

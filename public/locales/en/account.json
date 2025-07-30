@@ -1,0 +1,87 @@
+{
+  "menu": {
+    "title": "MY ACCOUNT",
+    "accountInfo": "Account Information",
+    "orders": "My Orders",
+    "addresses": "My Addresses",
+    "favoriteProducts": "Favorite Products",
+    "raffles": "Raffles",
+    "orderDetail": "Order Detail",
+    "logout": "Logout"
+  },
+  "accountInfo": {
+    "form": {
+      "firstName": "First name",
+      "lastName": "Last name",
+      "phone": "Phone",
+      "email": "Email",
+      "save": "SAVE"
+    },
+    "formMessage": {
+      "requiredRule": "Please fill this field",
+      "phoneRule": "{{ phoneNumber }} is not a valid phone number"
+    },
+    "formAlert": {
+      "successTitle": "Save operation successful",
+      "successText": "Your information has been successfully updated",
+      "unsuccessTitle": "Save operation failed",
+      "unsuccessText": "An unexpected error has occurred."
+    }
+  },
+  "address": {
+    "createAddress": "Create Address",
+    "editAddress": "Edit Address",
+    "myAddresses": "My Addresses",
+    "addNewAddress": "Add new address",
+    "noAddressPlaceholder": "You do not have a registered address. Please create an address below.",
+    "form": {
+      "title": "Address Title",
+      "firstName": "Name",
+      "lastName": "Surname",
+      "addressLine1": "Address",
+      "addressLine2": "Apartment",
+      "postalCode": "Zip code",
+      "country": "Country",
+      "state": "State",
+      "city": "City",
+      "district": "District",
+      "phone": "Phone",
+      "placeholder": {
+        "title": "home, work etc...",
+        "firstName": "Name",
+        "lastName": "Surname",
+        "addressLine1": "Address",
+        "addressLine2": "Apartment",
+        "postalCode": "Zip code",
+        "country": "Country",
+        "state": "State",
+        "city": "City",
+        "district": "District",
+        "phone": "example: +905551112233"
+      }
+    },
+    "email": "Email",
+    "save": "Save",
+    "delete": "Delete",
+    "deleteConfirm": "Do you really want to delete this address?",
+    "requiredRule": "Required",
+    "phoneRule": "{{ phoneNumber }} is not a valid phone number",
+    "invalidRule": "Field is invalid"
+  },
+  "favoriteProducts": {
+    "title": "My Favorites",
+    "noFavoriteProduct": "There is no product you like",
+    "browseProduct": "Browse products"
+  },
+  "orders": {
+    "title": "My Orders",
+    "noOrders": "There are no purchases to show at the moment.",
+    "message": "When you shop from our online store, you’ll see your purchases here.",
+    "startShopping": "START SHOPPING",
+    "orderedAt": "Ordered at {{ orderDate }}",
+    "xNumberedOrder": "Order no {{ orderNumber }}",
+    "xProduct": "{{productQuantity}} product",
+    "showOrderDetail": "Show Order Detail"
+  },
+  "loading": "Loading..."
+}

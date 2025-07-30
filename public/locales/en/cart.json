@@ -1,0 +1,31 @@
+{
+  "title": "My Cart",
+  "header": {
+    "product": "Product",
+    "quantity": "Quantity",
+    "amount": "Amount"
+  },
+  "summary": {
+    "title": "Cart Summary",
+    "subTotal": "Sub Total: ",
+    "total": "Total: ",
+    "info": "Shipping, tax and coupon codes will be calculated at the payment step.",
+    "continueShopping": "Continue Shopping",
+    "checkout": "Checkout"
+  },
+  "emptyCart": {
+    "text": "YOUR CART IS EMPTY",
+    "button": "START SHOPPING NOW"
+  },
+  "coupon": {
+    "form": {
+      "couponCode": "Enter Coupon Code",
+      "submit": "OK",
+      "removeCoupon": "Remove Coupon"
+    },
+    "error": {
+      "couponCodeNotExist": "The coupon code is invalid.",
+      "unknown": "Something went wrong. Try again later"
+    }
+  }
+}

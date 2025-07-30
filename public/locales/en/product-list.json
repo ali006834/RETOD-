@@ -1,0 +1,11 @@
+{
+  "filters": {
+    "sort": {
+      "text": "Filters",
+      "confirm": "Confirm"
+    }
+  },
+  "list": {
+    "noProduct": "Sorry, we have no products in this category right now."
+  }
+}

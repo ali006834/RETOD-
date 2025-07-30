@@ -1,0 +1,87 @@
+{
+  "menu": {
+    "title": "HESABIM",
+    "accountInfo": "Kişisel Bilgilerim",
+    "orders": "Siparişlerim",
+    "addresses": "Adresim",
+    "favoriteProducts": "Favori Ürünler",
+    "raffles": "Çekilişler",
+    "orderDetail": "Sipariş detayı",
+    "logout": "Çıkış Yap"
+  },
+  "accountInfo": {
+    "form": {
+      "firstName": "İsim",
+      "lastName": "Soyisim",
+      "phone": "Telefon",
+      "email": "Email",
+      "save": "KAYDET"
+    },
+    "formMessage": {
+      "requiredRule": "Lütfen bu alanı doldurun",
+      "phoneRule": "{{ phoneNumber }} geçerli bir telefon numarası değil"
+    },
+    "formAlert": {
+      "successTitle": "Kaydetme işlemi başarılı",
+      "successText": "Bilgileriniz başarıyla güncellendi",
+      "unsuccessTitle": "Kaydetme işlemi başarısız oldu",
+      "unsuccessText": "Beklenmeyen bir hata oluştu."
+    }
+  },
+  "address": {
+    "createAddress": "Adres Oluştur",
+    "editAddress": "Adresi düzenle",
+    "myAddresses": "Adreslerim",
+    "addNewAddress": "Yeni Adres Ekleyin",
+    "noAddressPlaceholder": "Kayıtlı bir adresiniz yok. Lütfen aşağıda bir adres oluşturun.",
+    "form": {
+      "title": "Adres Başlığı",
+      "firstName": "Ad",
+      "lastName": "Soyad",
+      "addressLine1": "Adres",
+      "addressLine2": "Apartman",
+      "postalCode": "Posta Kodu",
+      "country": "Ülke",
+      "state": "Eyalet",
+      "city": "Şehir",
+      "district": "İlçe",
+      "phone": "Telefon",
+      "placeholder": {
+        "title": "ev, iş vb...",
+        "firstName": "Ad",
+        "lastName": "Soyad",
+        "addressLine1": "Adres",
+        "addressLine2": "Apartman",
+        "postalCode": "Posta Kodu",
+        "country": "Ülke",
+        "state": "Eyalet",
+        "city": "Şehir",
+        "district": "İlçe",
+        "phone": "örnek: +905551112233"
+      }
+    },
+    "email": "E-posta",
+    "save": "Kaydet",
+    "delete": "Sil",
+    "deleteConfirm": "Bu adresi gerçekten silmek istiyor musunuz?",
+    "requiredRule": "Gerekli",
+    "phoneRule": "{{ phoneNumber }} geçerli bir telefon numarası değil",
+    "invalidRule": "Alan geçersiz"
+  },
+  "favoriteProducts": {
+    "title": "Favorilerim",
+    "noFavoriteProduct": "Beğendiğiniz ürün bulunmamaktadır",
+    "browseProduct": "Ürünlere göz atın"
+  },
+  "orders": {
+    "title": "Siparişlerim",
+    "noOrders": "Şu anda gösterilecek satın almalar yok",
+    "message": "Online mağazamızdan alışveriş yaptığında, ürünleri burada görebilirsin.",
+    "startShopping": "ALIŞVERİŞE BAŞLA",
+    "orderedAt": "Şurada sipariş verildi: {{ orderDate }}",
+    "xNumberedOrder": "{{ orderNumber }} numaralı sipariş",
+    "xProduct": "{{productQuantity}} ürün",
+    "showOrderDetail": "Sipariş Detayını Göster"
+  },
+  "loading": "Yükleniyor..."
+}

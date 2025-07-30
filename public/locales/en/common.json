@@ -1,0 +1,232 @@
+{
+  "discover": "Discover",
+  "location": "Location",
+
+  "languages": {
+    "language_names": {
+      "Arapça": "عربي",
+      "Rusça": "Русский",
+      "İngilizce": "English",
+      "Türkçe": "Türkçe"
+    }
+  },
+
+  "button": {
+    "text": "Explore More"
+  },
+
+  "selectYourLanguage": "Select Your Language",
+  "instagram": {
+    "post": "posts",
+    "follower": "followers",
+    "button": "Follow"
+  },
+
+  "discover_now": "Discover Now",
+  "title": "Shopping Bag",
+  "piece": "Piece",
+
+  "loading": "Loading",
+
+  "wishList": {
+    "title": "Wish List",
+    "empty": "Your wishlist is empty.",
+    "favoriteProducts": {
+      "noFavoriteProduct": "No favorite products.",
+      "browseProduct": "Browse products",
+      "tip": "Add your favorite products to view them later.",
+      "instructions": "Click the heart icon on the product details page to add and view your favorite products here."
+    }
+  },
+
+  "emptyCart": {
+    "text": "SEPETİNİZ BOŞ",
+    "button": "HEMEN ALIŞVERİŞE BAŞLA"
+  },
+
+  "coupon": {
+    "apply": "Apply",
+    "empty": "Empty",
+    "placeholder": "Enter Coupon Code"
+  },
+
+  "summary": {
+    "title": "Cart Summary",
+    "subTotal": "Sub Total: ",
+    "total": "Total: ",
+    "info": "Shipping, tax and coupon codes will be calculated at the payment step.",
+    "continueShopping": "Continue Shopping",
+    "checkout": "Checkout",
+    "cart": "Complete Payment"
+  },
+
+  "buttonLoading": "Loading",
+  "maxQuantityPerCartModal": {
+    "title": "MAX QUANTITY PER CART LIMIT REACHED",
+    "text": "{{ productName }} max quantity can be added to the cart."
+  },
+  "product": {
+    "discountText": "discount",
+    "discountBadgeSoldOut": "Sold out",
+    "discount": "Discount",
+    "addToCart": "Add To Cart"
+  },
+  "bannerVideo": {
+    "men": "Men",
+    "women": "Women"
+  },
+  "list": {
+    "home": "Home Page",
+    "noProduct": "Sorry, we have no products in this category right now.",
+    "loadMoreProducts": "Load More Products",
+    "filters": {
+      "sort": {
+        "text": "Filter",
+        "confirm": "Confirm",
+        "hidden": "Hide Filters",
+        "show": "Show Filters",
+        "filter_product": "Sort"
+      }
+    }
+  },
+  "productList": {
+    "totalProductCount": "{{ count }} Product",
+    "sort": {
+      "label": "Sort",
+      "featured": "Featured",
+      "increasingPrice": "Increasing Price",
+      "decreasingPrice": "Decreasing Price",
+      "increasingDiscount": "Increasing Discount",
+      "decrasingDiscount": "Decreasing Discount",
+      "firstAdded": "First Added",
+      "lastAdded": "Last Added"
+    },
+    "filters": "Filters",
+    "header": {
+      "filter": "FILTERS",
+      "sort": "SORT"
+    },
+    "categories": "Categories",
+    "clearFilters": "Clear",
+    "numberRangeFilters": {
+      "from": "From",
+      "to": "To"
+    },
+    "numberRangeListFilters": {
+      "priceAndMore": "{{ price }} and more"
+    }
+  },
+  "pagination": {
+    "prev": "prev",
+    "previousPage": "Previous page",
+    "next": "next",
+    "nextPage": "Next page"
+  },
+  "orderDetail": {
+    "loading": "Loading...",
+    "orderDetail": "Order Detail",
+    "xNumberedOrder": "Order no {{ orderNumber }}",
+    "orderedAt": "Ordered at {{ orderDate }}",
+    "refundRequest": "Create Refund Request",
+    "refundRequestDisabled": "There is no refundable product",
+    "refundStatus": {
+      "refundApproved": "Refund request approved",
+      "refunded": "Refunded",
+      "cancelRefunded": "Refund canceled",
+      "requestRefunded": "Refund request sent"
+    },
+    "undelivered": "Undelivered",
+    "delivered": "Delivered",
+    "refunds": "Refunds",
+    "cancelled": "Cancelled",
+    "deliveryAddress": "Delivery Address",
+    "billingInfo": "Billing Information",
+    "summary": "Summary",
+    "orderAmount": "Order Amount",
+    "cargo": "Cargo",
+    "estimatedTax": "Estimated Tax",
+    "interest": "Interest",
+    "total": "Total",
+    "payment": "Payment",
+    "orderLineItem": {
+      "quantityTitle": "{{ quantity }} item"
+    },
+    "refund": {
+      "backButton": "Back to detail",
+      "refundSuccess": "İade Talebiniz Oluşturuldu",
+      "refundButtonNoItem": "Select Product for refund",
+      "refundButton": "REFUND {{ quantity }} PRODUCT",
+      "selectRefundItem": "Please select the products you want to refund",
+      "selectRefundQuantity": "The number of products you want to refund"
+    }
+  },
+  "orderPackageStatus": {
+    "status": "Status",
+    "unfulfilled": "Order Created",
+    "readyForShipment": "Order Ready for Shippping",
+    "readyForPickUp": "Order Ready for Pick Up",
+    "fulfilled": "Order Sent",
+    "partiallyFulfilled": "Order Partially Sent",
+    "delivered": "Order Delivered",
+    "partiallyDelivered": "Order Partially Delivered",
+    "unableToDeliver": "Order Not Delivered",
+    "cancelled": "Order Canceled",
+    "partiallyCancelled": "Order Partially Canceled",
+    "cancelRejected": "Order Cancellation Request Denied",
+    "cancelRequested": "Order Cancellation Requested",
+    "refunded": "Refunded",
+    "partiallyRefunded": "Partially refunded",
+    "refundRequestAccepted": "Refund Request Approved",
+    "refundRejected": "Refund Request Refused",
+    "refundRequested": "Refund Requested"
+  },
+  "orderTransactions": {
+    "paymentMethod": {
+      "APP_PAYMENT": "App Payment",
+      "BUY_ONLINE_PAY_AT_STORE": "Buy Online Pay at Store",
+      "CASH": "Cash",
+      "CASH_ON_DELIVERY": "Cash on Delivery",
+      "CREDIT_CARD": "Credit Card",
+      "CREDIT_CARD_ON_DELIVERY": "Credit Card on Delivery",
+      "GIFT_CARD": "Gift Card",
+      "MONEY_ORDER": "Money Order",
+      "OTHER": "Other",
+      "WALLET": "Wallet"
+    }
+  },
+  "pageBlogs": {
+    "blogCard": {
+      "detailLinkText": "Read Now ->"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "reach_us": "Ways to reach us"
+  },
+  "favorite": {
+    "tooltipText": {
+      "add": "Add product to favorite",
+      "remove": "Remove product from favorites"
+    },
+    "loginModal": {
+      "title": "Login Required",
+      "text": "You need to log in to your account for this operation.\nPlease click the button below to log in. (After logging in, you will be redirected to this page)",
+      "loginButtonText": "LOGIN",
+      "noAccountText": "Not have an account?"
+    }
+  },
+  "login": "Login",
+  "register": "Register",
+  "language_title": "Which language do you want to use?",
+  "products": "Product Displayed",
+  "filterResult": "SHOWING ALL {{count}} RESULTS",
+  "completed": "Completed",
+  "active": "Active",
+  "inactive": "Inactive",
+
+  "lastSeenProduct": {
+    "text": "Last Seen Products"
+  },
+  "buy": "Start Shopping",
+  "zoomMessage": "Double tap to zoom in"
+}

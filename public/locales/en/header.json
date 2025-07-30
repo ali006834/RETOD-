@@ -1,0 +1,23 @@
+{
+  "searchInput": {
+    "placeholder": "Search in store"
+  },
+  "summary": {
+    "title": "Cart Summary",
+    "subTotal": "Sub Total: ",
+    "total": "Total: ",
+    "info": "Shipping, tax and coupon codes will be calculated at the payment step.",
+    "continueShopping": "Continue Shopping",
+    "checkout": "Checkout",
+    "cart": "Complete Payment"
+  },
+  "headerButton_text": {
+    "close": "Close",
+    "search": "Search",
+    "account": "Account",
+    "login": "Login",
+    "favorite": "Favorite",
+    "cart": "Cart"
+  },
+  "new_arrivals": "New Arrivals"
+}

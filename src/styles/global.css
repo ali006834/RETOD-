@@ -1,0 +1,387 @@
+@font-face {
+  font-display: swap;
+  font-family: "HelveticaNeueBlack";
+  font-style: normal;
+  font-weight: 900;
+  src: url("./fonts/HelveticaNeueBlack.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "HelveticaNeueBold";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./fonts/HelveticaNeueBold.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "HelveticaNeueHeavy";
+  font-style: normal;
+  font-weight: 800;
+  src: url("./fonts/HelveticaNeueHeavy.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "HelveticaNeueLight";
+  font-style: normal;
+  font-weight: 300;
+  src: url("./fonts/HelveticaNeueLight.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "HelveticaNeueMedium";
+  font-style: normal;
+  font-weight: 500;
+  src: url("./fonts/HelveticaNeueMedium.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "HelveticaNeueRoman";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/HelveticaNeueRoman.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "HelveticaNeueThin";
+  font-style: normal;
+  font-weight: 200;
+  src: url("./fonts/HelveticaNeueThin.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "HelveticaNeueUltraLight";
+  font-style: normal;
+  font-weight: 100;
+  src: url("./fonts/HelveticaNeueUltraLight.woff2") format("woff2");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "HelveticaNeueLight" !important;
+}
+.style-module_CheckoutPage__ZhJkP
+  .style-module_Right__1BcGi
+  .style-module_RightContent__qvFkp
+  .style-module_PoweredBy__3k1Sx {
+  display: none !important;
+}
+.style-module_CheckoutPage__ZhJkP
+  .style-module_Left__Fi9Ka
+  .style-module_Header__V7Pe2
+  .style-module_Logo__y9GGC {
+  width: 100%;
+}
+.wysiwyg {
+  background-color: #efefef;
+  padding: 20px 10px;
+}
+.wysiwyg span,
+.wysiwyg p {
+  font-family: "HelveticaNeueLight" !important;
+}
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 24px !important;
+}
+.product-list-slider .swiper-button-prev:after,
+.product-list-slider .swiper-button-next:after {
+  font-size: 14px !important;
+  font-weight: bolder;
+}
+.swiper-horizontal > .swiper-scrollbar,
+.swiper-scrollbar.swiper-scrollbar-horizontal {
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  height: 3px !important;
+}
+.product-list-slider:hover .swiper-horizontal > .swiper-scrollbar,
+.product-list-slider:hover .swiper-scrollbar.swiper-scrollbar-horizontal {
+  display: block;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  height: 1px !important;
+}
+.swiper,
+.swiper-wrapper {
+  z-index: 0 !important;
+}
+.swiper-scrollbar-drag {
+  background-color: #000 !important;
+}
+.product-list-slider .swiper-scrollbar,
+.product-list-slider .swiper-scrollbar-drag {
+  background-color: transparent !important;
+}
+.product-list-slider:hover .swiper-scrollbar-drag {
+  background-color: #000 !important;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  color: #000 !important;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 10px 20px;
+  box-sizing: border-box !important;
+  user-select: none !important;
+  z-index: 9999 !important;
+  pointer-events: auto !important;
+}
+.product-list-slider .swiper-button-prev,
+.product-list-slider .swiper-button-next {
+  visibility: hidden;
+  opacity: 0;
+  color: #000 !important;
+  background-color: transparent !important;
+  transition: all 0.8s ease;
+}
+.product-list-slider:hover .swiper-button-prev,
+.product-list-slider:hover .swiper-button-next {
+  visibility: visible;
+  opacity: 1;
+  color: #000 !important;
+  background-color: transparent !important;
+}
+
+.product-list-slider:hover .swiper-button-prev:hover,
+.product-list-slider:hover .swiper-button-next:hover {
+  background-color: #dcd7d7 !important;
+}
+
+.product-list-variant {
+  margin-top: 10px !important;
+}
+.product-list-variant .swiper-wrapper {
+  margin-bottom: 0 !important;
+}
+.product-list-variant .swiper-button-prev,
+.product-list-variant .swiper-button-next {
+  padding: 0px !important;
+  background-color: #fff !important;
+}
+.product-list-variant {
+  padding: 0 10px;
+}
+.detail-variant .swiper-button-prev,
+.detail-variant .swiper-button-next {
+  padding: 10px 20px !important;
+  background-color: #fff !important;
+}
+.detail-variant {
+  padding: 0px !important;
+  width: 400px;
+  cursor: pointer;
+}
+.detail-variant button {
+  cursor: pointer;
+  border-radius: 50%;
+}
+.product-list-variant .swiper-button-prev:after,
+.product-list-variant .swiper-button-next:after {
+  font-size: 16px !important;
+}
+.product-list-variant .swiper-button-next,
+.product-list-variant .swiper-rtl .swiper-button-prev {
+  right: 0 !important;
+}
+.product-list-variant .swiper-button-prev,
+.product-list-variant .swiper-rtl .swiper-button-next {
+  left: 0 !important;
+}
+.pop-swiper-container .swiper {
+  max-width: 100% !important;
+  height: 100vh;
+  width: 100%;
+}
+.visually-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.swiper-pagination-fraction {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #333 !important;
+}
+.spinner-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 50px;
+}
+.spinner-list {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 5px solid;
+  border-color: #dbdcef;
+  border-right-color: #000;
+  animation: spinner-d3wgkg 1s infinite linear;
+}
+
+@keyframes spinner-d3wgkg {
+  to {
+    transform: rotate(1turn);
+  }
+}
+.react-tel-input .form-control {
+  line-height: 33px !important;
+  height: 44px !important;
+  width: 100% !important;
+  border: 1px solid #999999;
+  border-radius: 0px !important;
+}
+.react-tel-input input {
+  border: none !important;
+  border-bottom: 1px solid #999999 !important;
+}
+.register-phone .react-tel-input .form-control {
+  border: none;
+  border-bottom: 1px solid #999999 !important;
+}
+.register-phone .react-tel-input .flag-dropdown {
+  background-color: transparent !important;
+  border: none !important;
+}
+.react-tel-input .flag-dropdown {
+  border: none !important;
+  border-bottom: 1px solid #999999 !important;
+  border-radius: 0px !important;
+  background-color: transparent !important;
+}
+.phone-input-container {
+  margin-bottom: 20px;
+}
+
+.phone-input-container label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.phone-input-container input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.phone-input-container .formatted-number {
+  margin-top: 5px;
+  font-size: 14px;
+}
+/* beden tablosu stil */
+.arrow {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #000;
+}
+
+.arrow.open {
+  transform: translateY(-50%) rotate(180deg);
+}
+.contact-line {
+  margin-bottom: 20px !important;
+}
+.swiper-container-wrapper .swiper {
+  direction: rtl;
+}
+
+/*! ScrollBar Özelliştrmesi */
+
+/* WebKit (Chrome, Safari) için özelleştirme */
+::-webkit-scrollbar {
+  width: 6px; /* Daha ince scrollbar */
+  height: 6px; /* Yatay scrollbar için */
+}
+
+/* Scrollbar'ın arka plan rengini ve köşe yuvarlaklığını ayarlar */
+::-webkit-scrollbar-track {
+  background: #dddfe4;
+}
+
+/* Scrollbar'ın tutamacını (kullanıcının sürüklediği kısmı) özelleştirir */
+::-webkit-scrollbar-thumb {
+  background: #999;
+}
+
+/* Scrollbar'ın üzerine gelindiğinde rengini koyulaştırır */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* ! Seçili metnin arka plan rengini ve metin rengini özelleştirir */
+::selection {
+  background: #999;
+  color: #fff;
+}
+
+@media only screen and (max-width: 1300px) {
+  .detail-variant {
+    padding: 0px !important;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .product-list-slider .swiper-button-prev,
+  .product-list-slider .swiper-button-next {
+    visibility: visible;
+    opacity: 1;
+  }
+  .product-list-variant {
+    padding: 0px;
+  }
+  .product-list-slider .swiper-button-prev,
+  .product-list-slider .swiper-button-next {
+    display: block;
+    color: #000 !important;
+    background-color: transparent !important;
+    padding: 10px !important;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .swiper-container-wrapper .swiper {
+    direction: ltr;
+  }
+  .categories-prod .swiper-button-prev,
+  .categories-prod .swiper-button-next {
+    display: none;
+  }
+}
+.swiper-pagination-bullet-active {
+  background: #000 !important;
+}

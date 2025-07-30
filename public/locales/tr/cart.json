@@ -1,0 +1,31 @@
+{
+  "title": "Sepetim",
+  "header": {
+    "product": "Ürün",
+    "quantity": "Miktar",
+    "amount": "Tutar"
+  },
+  "summary": {
+    "title": "Sepet Özeti",
+    "subTotal": "Ara Toplam: ",
+    "total": "Toplam: ",
+    "info": "Kargo, vergi ve kupon kodları ödeme adımında hesaplanacaktır.",
+    "continueShopping": "ALIŞVERİŞE DEVAM ET",
+    "checkout": "ŞİMDİ SATIN AL"
+  },
+  "emptyCart": {
+    "text": "SEPETİNİZ BOŞ",
+    "button": "HEMEN ALIŞVERİŞE BAŞLA"
+  },
+  "coupon": {
+    "form": {
+      "couponCode": "Kupon Kodunu Girin",
+      "submit": "TAMAM",
+      "removeCoupon": "Kuponu Kaldır"
+    },
+    "error": {
+      "couponCodeNotExist": "Kupon kodu geçersiz.",
+      "unknown": "Bir şeyler yanlış gitti. Daha sonra tekrar deneyin"
+    }
+  }
+}

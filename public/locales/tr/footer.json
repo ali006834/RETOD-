@@ -1,0 +1,45 @@
+{
+  "collections": "Koleksiyonlar",
+  "customer_services": "Müşteri Hizmetleri",
+  "social_media": "Sosyal Medya",
+  "go_top": "En Üste Git",
+  "copyrightText": "© 2025 Batik. Tüm Hakları Saklıdır.",
+  "selectYourLanguage": "Dilinizi Seçin",
+
+  "emailSubscription": {
+    "description": "Özel promosyonlar, kişiye özel indirimler ve son yenilikler ile ilgili bilgi alın",
+    "title": "E-Bülten",
+    "sloganShoulderStyle": "Yeni hikayeler ve kişisel teklifler için kaydolun",
+    "form": {
+      "email": "E-posta",
+      "button": "KAYDOL",
+      "info": "Batik <a href=\"/\" style=\"text-decoration: underline; color: black;\">Web Sitesi Gizlilik ve Çerez Politikası</a>’nı okudum ve anladım. Bu kapsamda kişisel verilerimin işlenmesini, pazarlama ve tanıtım faaliyetlerinin tarafıma sms ve e-mail yoluyla yapılmasını kabul ediyor ve onaylıyorum."
+    },
+    "responseStatus": {
+      "success": "Bültenimize kaydoldunuz.",
+      "error": "Bir şeyler yanlış gitti. Lütfen daha sonra tekrar deneyin."
+    }
+  },
+
+  "captchaText": "Bu site reCAPTCHA tarafından korunmaktadır ve {{ privacyPolicy }} ve {{ termsOfService }} geçerlidir.",
+  "privacyPolicy": "Gizlilik Politikası",
+  "termsOfService": "Hizmet Şartları",
+  "footerLinks": {
+    "contact": "İletişim",
+    "about": "Hakkımızda",
+    "clarification": "Aydınlatma Metni",
+    "application": "İlgili Kişi Başvuru Formu",
+    "membership": "Üyelik Sözleşmesi",
+    "cookies": "Çerezler",
+    "kvkk": "Kişisel Verilerin Korunması ve Gizlilik Politikası",
+    "consentText": "Açık Rıza Metni",
+    "distanceSelling": "Mesafeli Satış Ön Bilgilendirme Formu",
+    "sss": "Sıkça Sorulan Sorular"
+  },
+  "socail_media": "Bizi takip edin:",
+  "popular_cat": "Popüler Kategoriler",
+  "services": "Müşteri Hizmetleri",
+  "brand": "Batik",
+  "follow_us": "BİZİ TAKİP EDİN",
+  "otherUsefulLinks": "Faydalı Diğer Linkler"
+}

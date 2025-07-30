@@ -1,0 +1,116 @@
+{
+  "sss": "Sıkça Sorulan Sorular",
+  "refund": "İade ve Teslimat",
+  "shortDetail": "Yıkama Talimatı",
+  "productFeatures": "Ürün Özellikleri",
+  "detail": {
+    "favorite": {
+      "tooltipText": {
+        "add": "Ürünü favorilere ekle",
+        "remove": "Ürünü favorilerden kaldır"
+      },
+      "loginModal": {
+        "title": "Giriş Gerekli",
+        "text": "Bu işlem için hesabınıza giriş yapmanız gerekiyor.\nLütfen aşağıdaki düğmeye tıklayarak giriş yapın. (Giriş yaptıktan sonra bu sayfaya yönlendirileceksiniz)",
+        "loginButtonText": "GİRİŞ",
+        "noAccountText": "Hesabınız yok mu?"
+      }
+    },
+    "relatedProducts": {
+      "text": "Ayrıca Göz Atmak İsteyebileceğiniz Ürünler"
+    },
+    "lastSeenProduct": {
+      "text": "Son Görüntülenen Ürünler"
+    },
+    "addToCart": {
+      "text": "Sepete Ekle",
+      "soldOut": "TÜKENDİ",
+      "remindOnBackInStock": "Stokta olduğunda beni haberdar et",
+      "backInStockReminderSaved": "Stokta olduğunda sizi haberdar edeceğiz",
+      "loginModal": {
+        "title": "Stokta Olduğunda Bildir",
+        "text": "Ürün stokta olduğunda sizi haberdar edebilmemiz için hesabınıza giriş yapmanız gerekiyor.\nLütfen aşağıdaki düğmeye tıklayarak giriş yapın. (Giriş yaptıktan sonra tekrar bu sayfaya yönlendirileceksiniz)",
+        "loginButtonText": "GİRİŞ",
+        "noAccountText": "Hesabınız yok mu?"
+      },
+      "backInStockModal": {
+        "title": "Stokta Olduğunda Bildir",
+        "text": "Ürün stokta olduğunda sizi haberdar edebilmemiz için e-posta adresinize ihtiyacımız var. Lütfen e-posta adresinizi yazın.",
+        "form": {
+          "email": "E-posta",
+          "submit": "Gönder",
+          "validation": {
+            "emailRule": "Lütfen geçerli bir e-posta adresi girin"
+          }
+        },
+        "alert": {
+          "errorTitle": "Hata!",
+          "errorText": "E-posta kaydınız alınamadı. Bilgilerinizi kontrol edin veya daha sonra tekrar deneyin.",
+          "alreadySavedText": "Bu e-posta adresi için zaten bir bildirim oluşturulmuş",
+          "successTitle": "Bildirim başarıyla oluşturuldu.",
+          "successText": "Ürün stokta olduğunda sizi haberdar edeceğiz"
+        }
+      }
+    },
+    "description": {
+      "title": "Açıklama"
+    },
+    "share": {
+      "title": "Paylaş:"
+    },
+    "variantType": {
+      "selectPlaceholder": "Bir seçenek seçin"
+    },
+    "productOptions": {
+      "text": {},
+      "textarea": {},
+      "checbox": {},
+      "choice": {},
+      "colorPicker": {},
+      "datePicker": {},
+      "file": {
+        "selectFile": "Dosya(lar) seç",
+        "incorrectFiles": "Hatalı Dosyalar",
+        "selectedFiles": "Seçilen Dosyalar",
+        "uploadedFiles": "Yüklenen Dosyalar"
+      },
+      "common": {
+        "settings": {
+          "required": "Bu alan zorunludur",
+          "minMax": "En az {{min}} karakter ve en fazla {{max}} karakter olmalıdır",
+          "min": "En az {{min}} karakter olmalıdır",
+          "max": "En fazla {{max}} karakter olmalıdır",
+          "selectMinMax": "En az {{min}}, en fazla {{max}} seçim yapılmalıdır",
+          "selectMin": "En az {{min}} seçim yapılmalıdır",
+          "selectMax": "En fazla {{max}} seçim yapılmalıdır",
+          "maxFileSizeInfoText": "3 MB boyutunda dosyalar yükleyebilirsiniz."
+        }
+      }
+    }
+  },
+  "selected_size": "Seçilmiş Beden",
+  "description": "Ürün Açıklaması",
+  "instalment": "Taksit Seçenekleri",
+  "size": "Beden",
+  "bodyTable": {
+    "size": "Beden",
+    "waist": "Bel",
+    "hip": "Kalça",
+    "chest": "Göğüs",
+    "neck": "Boyun",
+    "size_guide": "Beden Rehberi",
+    "size_table": "Beden Tablosu",
+    "trouser": "Pantalon",
+    "coat": "Palto & Manto",
+    "jacket": "Ceket",
+    "cardigan": "Hırka",
+    "shirt": "Gömlek",
+    "jean": "Jean",
+    "sweatshirt": "Kazak",
+    "tshirt": "Tişört",
+    "dress": "Elbise",
+    "top": "Üst Parça",
+    "arm": "Kol",
+    "bigSize": "Büyük Beden"
+  }
+}

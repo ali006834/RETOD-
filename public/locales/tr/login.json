@@ -1,0 +1,34 @@
+{
+  "title": "Giriş Yap",
+  "form": {
+    "email": "E-posta",
+    "password": "Şifre",
+    "login": "Giriş Yap",
+    "loginWith": "Şununla Giriş Yap"
+  },
+  "formMessage": {
+    "requiredRule": "Lütfen bu alanı doldurun",
+    "emailRule": "Lütfen geçerli bir e-posta girin",
+    "minRule": "En az 6 karakter olmalıdır"
+  },
+  "formAlert": {
+    "successTitle": "Giriş Başarılı",
+    "successText": "Yönlendirme sürecini bekleyin...",
+    "unsuccessTitle": "Giriş Başarısız.",
+    "unsuccessText": "Bilgilerinizi kontrol edip tekrar deneyin",
+    "errorTitle": "Hata!",
+    "errorText": "Beklenmeyen bir hata oluştu."
+  },
+  "captchaText": "Bu site reCAPTCHA tarafından korunmaktadır ve {{ privacyPolicy }} ve {{ termsOfService }} geçerlidir.",
+  "privacyPolicy": "Gizlilik Politikası",
+  "termsOfService": "Hizmet Şartları",
+  "noAccount": "Hesabınız yok mu?",
+  "createNewAccount": "Yeni hesap oluştur",
+  "forgotPassword": "Şifremi unuttum",
+  "registerContent": {
+    "title": "Üye Ol",
+    "content": "Batik’e üye olarak birçok avantajdan faydalanabilirsiniz. Öne çıkan avantajlar:",
+    "list1": "Kampanyalardan öncelikli olarak haberdar olabilirsiniz.",
+    "list2": "Batik sitesi ile alışveriş keyfinize telefonunuzdan devam edebilirsiniz."
+  }
+}

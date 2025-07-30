@@ -1,0 +1,117 @@
+{
+  "sss": "Frequently Asked Questions",
+  "refund": "Exchange / Return Process",
+  "shortDetail": "Washing Instructions",
+  "productFeatures": "Product Features",
+
+  "detail": {
+    "favorite": {
+      "tooltipText": {
+        "add": "Add product to favorite",
+        "remove": "Remove product from favorites"
+      },
+      "loginModal": {
+        "title": "Login Required",
+        "text": "You need to log in to your account for this operation.\nPlease click the button below to log in. (After logging in, you will be redirected to this page)",
+        "loginButtonText": "LOGIN",
+        "noAccountText": "Not have an account?"
+      }
+    },
+    "relatedProducts": {
+      "text": "You May Also Like"
+    },
+    "lastSeenProduct": {
+      "text": "Last Seen Products"
+    },
+    "addToCart": {
+      "text": "ADD TO CART",
+      "soldOut": "SOLD OUT",
+      "remindOnBackInStock": "Notify me when back in stock",
+      "backInStockReminderSaved": "We will notify you when stock in",
+      "loginModal": {
+        "title": "Notify When In Stock",
+        "text": "You need to log in to your account so that we can notify you when it is in stock.\nPlease click the button below to log in. (After logging in, you will be redirected to this page again)",
+        "loginButtonText": "LOGIN",
+        "noAccountText": "Not have an account?"
+      },
+      "backInStockModal": {
+        "title": "Back in stock notify",
+        "text": "We need your e-mail address to let us know when it is in stock. Please write your e-mail address.",
+        "form": {
+          "email": "Email",
+          "submit": "Submit",
+          "validation": {
+            "emailRule": "Please enter a valid email address"
+          }
+        },
+        "alert": {
+          "errorTitle": "Error!",
+          "errorText": "We couldn't retrieve your email record. Check your information or try again later.",
+          "alreadySavedText": "Notify already created for this email address",
+          "successTitle": "Notify successfuly created.",
+          "successText": "We will be notify you when product in stock"
+        }
+      }
+    },
+    "description": {
+      "title": "Description"
+    },
+    "share": {
+      "title": "Share:"
+    },
+    "variantType": {
+      "selectPlaceholder": "Choose an option"
+    },
+    "productOptions": {
+      "text": {},
+      "textarea": {},
+      "checbox": {},
+      "choice": {},
+      "colorPicker": {},
+      "datePicker": {},
+      "file": {
+        "selectFile": "Select file(s)",
+        "incorrectFiles": "Incorrect Files",
+        "selectedFiles": "Selected Files",
+        "uploadedFiles": "Uploaded Files"
+      },
+      "common": {
+        "settings": {
+          "required": "This field is required",
+          "minMax": "Must be a minimum of {{min}} characters and a maximum of {{max}} characters",
+          "min": "Must be a minimum of {{min}} characters",
+          "max": "Must be a minimum of {{max}} characters",
+          "selectMinMax": "Minimum {{min}}, maximum {{max}} selections should be made",
+          "selectMin": "Minimum {{min}} selections should be made",
+          "selectMax": "Maximum {{max}} selections should be made",
+          "maxFileSizeInfoText": "You can upload files up to 3 MB in size."
+        }
+      }
+    }
+  },
+  "selected_size": "Selected Size",
+  "description": "Product Description",
+  "size": "Size",
+  "bodyTable": {
+    "size": "Size",
+    "waist": "Waist",
+    "hip": "Hip",
+    "chest": "Chest",
+    "neck": "Neck",
+    "size_guide": "Size Guide",
+    "size_table": "Size Table",
+    "trouser": "Trousers",
+    "coat": "Coat",
+    "jacket": "Jacket",
+    "cardigan": "Cardigan",
+    "shirt": "Shirt",
+    "jean": "Jeans",
+    "sweatshirt": "Sweatshirt",
+    "tshirt": "T-shirt",
+    "dress": "Dress",
+    "top": "Top",
+    "arm": "Arm",
+    "bigSize": "Big Size"
+  },
+  "instalment": "Installment Options"
+}

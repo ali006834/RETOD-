@@ -1,0 +1,229 @@
+{
+  "discover": "Keşfet",
+  "location": "Konum",
+  "languages": {
+    "language_names": {
+      "Arapça": "عربي",
+      "Rusça": "Русский",
+      "İngilizce": "English",
+      "Türkçe": "Türkçe"
+    }
+  },
+  "button": {
+    "text": "Daha Fazla Keşfet"
+  },
+  "selectYourLanguage": "Dilinizi Seçin",
+
+  "instagram": {
+    "post": "gönderi",
+    "follower": "kullanıcı",
+    "button": "Takip Et"
+  },
+
+  "discover_now": "Hemen Keşfet",
+  "title": "Sepetim",
+  "piece": "Adet",
+
+  "loading": "Yükleniyor",
+
+  "wishList": {
+    "title": "İstek Listesi",
+    "empty": "İstek listeniz boş.",
+    "favoriteProducts": {
+      "noFavoriteProduct": "Favori ürün bulunmuyor.",
+      "browseProduct": "Ürünleri incele",
+      "tip": "Sevdiğiniz ürünlere daha sonra ulaşmak için favorilerinize ekleyin.",
+      "talimatlar": "Ürün detay sayfasında beğendiğiniz ürünlerin üstündeki kalp ikonuna basın ve seçtiğiniz ürünleri burada görüntüleyin."
+    }
+  },
+
+  "emptyCart": {
+    "text": "SEPETİNİZ BOŞ",
+    "button": "HEMEN ALIŞVERİŞE BAŞLA"
+  },
+  "coupon": {
+    "apply": "Uygula",
+    "empty": "Boş",
+    "placeholder": "Kupon Kodunu Girin"
+  },
+
+  "summary": {
+    "title": "Sepet Özeti",
+    "subTotal": "Ara Toplam: ",
+    "total": "Toplam: ",
+    "info": "Kargo, vergi ve kupon kodları ödeme adımında hesaplanacaktır.",
+    "continueShopping": "ALIŞVERİŞE DEVAM ET",
+    "checkout": "ŞİMDİ SATIN AL",
+    "cart": "Ödemeyi Tamamla"
+  },
+  "buttonLoading": "Yükleniyor",
+  "maxQuantityPerCartModal": {
+    "title": "SEPET BAŞINA MİKTAR SINIRI AŞILDI",
+    "text": "{{ productName }} adet ürün maksimum miktarda sepete eklenmiştir."
+  },
+  "product": {
+    "discountText": "İndirim",
+    "discountBadgeSoldOut": "Tükendi",
+    "discount": "İndirim",
+    "addToCart": "Sepete Ekle"
+  },
+  "bannerVideo": {
+    "men": "Erkek",
+    "women": "Kadın"
+  },
+  "list": {
+    "home": "Ana Sayfa",
+    "noProduct": "Üzgünüz, şu anda bu kategoride ürünümüz yok.",
+    "loadMoreProducts": "Daha Fazlasını Gör",
+    "filters": {
+      "sort": {
+        "text": "Filtre",
+        "confirm": "Onayla",
+        "hidden": "Filtreleri Gizle",
+        "show": "Filtreleri Göster",
+        "filter_product": "Sırala"
+      }
+    }
+  },
+  "productList": {
+    "totalProductCount": "{{ count }} Ürün",
+    "sort": {
+      "label": "Sırala",
+      "featured": "Öne Çıkanlar",
+      "increasingPrice": "Artan Fiyat",
+      "decreasingPrice": "Azalan Fiyat",
+      "increasingDiscount": "Artan İndirim",
+      "decrasingDiscount": "Azalan İndirim",
+      "firstAdded": "İlk Eklenen",
+      "lastAdded": "Son Eklenen"
+    },
+    "filters": "Filtreler",
+    "header": {
+      "filter": "FİLTRELER",
+      "sort": "SIRALA"
+    },
+    "categories": "Kategoriler",
+    "clearFilters": "Temizle",
+    "numberRangeFilters": {
+      "from": "Başlangıç",
+      "to": "Bitiş"
+    },
+    "numberRangeListFilters": {
+      "priceAndMore": "{{ price }} ve üzeri"
+    }
+  },
+  "pagination": {
+    "prev": "önceki",
+    "previousPage": "Önceki sayfa",
+    "next": "sonraki",
+    "nextPage": "Sonraki sayfa"
+  },
+  "orderDetail": {
+    "loading": "Yükleniyor...",
+    "orderDetail": "Sipariş Detayı",
+    "xNumberedOrder": "Sipariş no {{ orderNumber }}",
+    "orderedAt": "{{ orderDate }} tarihinde sipariş edildi",
+    "refundRequest": "İade Talebi Oluştur",
+    "refundRequestDisabled": "İade edilebilir ürün bulunmamaktadır",
+    "refundStatus": {
+      "refundApproved": "İade talebi onaylandı",
+      "refunded": "İade edildi",
+      "cancelRefunded": "İade iptal edildi",
+      "requestRefunded": "İade talebi gönderildi"
+    },
+    "undelivered": "Teslim Edilemedi",
+    "delivered": "Teslim Edildi",
+    "refunds": "İadeler",
+    "cancelled": "İptal Edildi",
+    "deliveryAddress": "Teslimat Adresi",
+    "billingInfo": "Fatura Bilgisi",
+    "summary": "Özet",
+    "orderAmount": "Sipariş Tutarı",
+    "cargo": "Kargo",
+    "estimatedTax": "Tahmini Vergi",
+    "interest": "Faiz",
+    "total": "Toplam",
+    "payment": "Ödeme",
+    "orderLineItem": {
+      "quantityTitle": "{{ quantity }} ürün"
+    },
+    "refund": {
+      "backButton": "Detaya Geri Dön",
+      "refundSuccess": "İade Talebiniz Oluşturuldu",
+      "refundButtonNoItem": "İade için ürün seçiniz",
+      "refundButton": "{{ quantity }} ÜRÜNÜ İADE ET",
+      "selectRefundItem": "Lütfen iade etmek istediğiniz ürünleri seçiniz",
+      "selectRefundQuantity": "İade etmek istediğiniz ürün sayısını belirtiniz"
+    }
+  },
+  "orderPackageStatus": {
+    "status": "Durum",
+    "unfulfilled": "Sipariş Oluşturuldu",
+    "readyForShipment": "Sipariş Nakliye İçin Hazır",
+    "readyForPickUp": "Sipariş Alınmaya Hazır",
+    "fulfilled": "Sipariş Gönderildi",
+    "partiallyFulfilled": "Kısmen Gönderildi",
+    "delivered": "Sipariş Teslim Edildi",
+    "partiallyDelivered": "Kısmen Teslim Edildi",
+    "unableToDeliver": "Sipariş Teslim Edilemedi",
+    "cancelled": "Sipariş İptal Edildi",
+    "partiallyCancelled": "Kısmen İptal Edildi",
+    "cancelRejected": "Sipariş İptal İsteği Reddedildi",
+    "cancelRequested": "Sipariş İptal İsteği Gönderildi",
+    "refunded": "İade Edildi",
+    "partiallyRefunded": "Kısmen İade Edildi",
+    "refundRequestAccepted": "İade Talebi Onaylandı",
+    "refundRejected": "İade Talebi Reddedildi",
+    "refundRequested": "İade Talebi Gönderildi"
+  },
+  "orderTransactions": {
+    "paymentMethod": {
+      "APP_PAYMENT": "Uygulama Ödemesi",
+      "BUY_ONLINE_PAY_AT_STORE": "Online Satın Al, Mağazada Öde",
+      "CASH": "Nakit",
+      "CASH_ON_DELIVERY": "Kapıda Nakit",
+      "CREDIT_CARD": "Kredi Kartı",
+      "CREDIT_CARD_ON_DELIVERY": "Kapıda Kredi Kartı",
+      "GIFT_CARD": "Hediye Kartı",
+      "MONEY_ORDER": "Havale / EFT",
+      "OTHER": "Diğer",
+      "WALLET": "Cüzdan"
+    }
+  },
+  "pageBlogs": {
+    "blogCard": {
+      "detailLinkText": "Şimdi Oku ->"
+    }
+  },
+  "contact": {
+    "title": "İletişim",
+    "reach_us": "Bize ulaşmanın yolları"
+  },
+  "favorite": {
+    "tooltipText": {
+      "add": "Ürünü favorilere ekle",
+      "remove": "Ürünü favorilerden kaldır"
+    },
+    "loginModal": {
+      "title": "Giriş Gerekli",
+      "text": "Bu işlem için hesabınıza giriş yapmanız gerekiyor.\nLütfen aşağıdaki düğmeye tıklayarak giriş yapın. (Giriş yaptıktan sonra bu sayfaya yönlendirileceksiniz)",
+      "loginButtonText": "GİRİŞ",
+      "noAccountText": "Hesabınız yok mu?"
+    }
+  },
+
+  "login": "Giriş yap",
+  "register": "Kayıt ol",
+  "language_title": "Hangi dili kullanmak istiyorsun?",
+  "products": "Ürün Gösteriliyor",
+  "filterResult": "{{count}} SONUCUN TÜMÜ GÖSTERİLİYOR",
+  "completed": "Tamamlandı",
+  "active": "Aktif",
+  "inactive": "Pasif",
+
+  "lastSeenProduct": {
+    "text": "Son Görüntülenen Ürünler"
+  },
+  "buy": "Alışverişe Başla",
+  "zoomMessage": "Yaklaştırmak için iki kez tıkla"
+}

@@ -1,0 +1,11 @@
+{
+  "filters": {
+    "sort": {
+      "text": "Filtreler",
+      "confirm": "Onayla"
+    }
+  },
+  "list": {
+    "noProduct": "Üzgünüz, şu anda bu kategoride ürünümüz yok."
+  }
+}

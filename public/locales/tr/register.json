@@ -1,0 +1,35 @@
+{
+  "title": "Kayıt Ol",
+  "form": {
+    "firstName": "Ad",
+    "lastName": "Soyad",
+    "email": "E-posta",
+    "password": "Şifre",
+    "register": "HESAP OLUŞTUR",
+    "registerWith": "Şununla Kayıt Ol",
+    "phone": "Telefon"
+  },
+  "formMessage": {
+    "requiredRule": "Lütfen bu alanı doldurun",
+    "emailRule": "Lütfen geçerli bir e-posta adresi girin",
+    "minRule": "En az 6 karakter olmalıdır",
+    "phoneRule": "{{ phoneNumber }} geçerli bir telefon numarası değil"
+  },
+  "formAlert": {
+    "successTitle": "Kayıt başarılı",
+    "successText": "Yönlendirme sürecini bekleyin...",
+    "emailExistTitle": "E-posta zaten mevcut.",
+    "emailExistText": "E-posta zaten mevcut. Farklı bir e-posta adresi girin",
+    "unsuccessTitle": "Kayıt başarısız oldu.",
+    "unsuccessText": "Bilgilerinizi kontrol edip tekrar deneyin",
+    "errorTitle": "Hata!",
+    "errorText": "Beklenmeyen bir hata oluştu."
+  },
+  "captchaText": "Bu site reCAPTCHA tarafından korunmaktadır ve {{ privacyPolicy }} ve {{ termsOfService }} geçerlidir.",
+  "privacyPolicy": "Gizlilik Politikası",
+  "termsOfService": "Hizmet Şartları",
+  "alreadyHaveAccount": "Zaten bir hesabınız var mı?",
+  "login": "Giriş yap",
+  "forgotPassword": "Şifremi unuttum",
+  "continueAsGuest": "Misafir olarak devam et"
+}
