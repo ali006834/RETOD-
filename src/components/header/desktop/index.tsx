@@ -19,6 +19,7 @@ import CartModal from "./cartModal";
 // import ScrollingText from "../scrolling-text-with-buttons";
 import { useScreen } from "src/utils/hooks/useScreen";
 import Button from "src/components/components/button";
+import ScrollingText from "../scrolling-text-with-buttons";
 
 const DesktopHeader = (props: HeaderProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -38,7 +39,7 @@ const DesktopHeader = (props: HeaderProps) => {
 
   return (
     <>
-      {/* <ScrollingText {...props} /> */}
+      <ScrollingText {...props} />
       {isScrolled ? (
         <div
           className={`${styles.headerWrapper} ${

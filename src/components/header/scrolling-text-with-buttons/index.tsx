@@ -1,13 +1,17 @@
 import React, { useState, useEffect } from "react";
 import styles from "./style.module.css";
 import { HeaderProps } from "src/components/__generated__/types";
+import { toJS } from "mobx";
 
-const ScrollingTextWithButtons = (props: HeaderProps) => {
-  const { scrolling_text1, scrolling_text2, scrolling_text3 } = props;
+const ScrollingText = (props: HeaderProps) => {
+  const { scrollingTexts } = props;
 
-  const texts = [scrolling_text1, scrolling_text2, scrolling_text3].filter(
-    Boolean
-  );
+  const scrollingTextsArr = toJS(scrollingTexts);
+
+  // scrollingTexts array'inden content property'lerini al ve boş olmayanları filtrele
+  const texts =
+    scrollingTextsArr?.map((item: any) => item?.content).filter(Boolean) || [];
+
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
@@ -43,4 +47,4 @@ const ScrollingTextWithButtons = (props: HeaderProps) => {
   );
 };
 
-export default ScrollingTextWithButtons;
+export default ScrollingText;
