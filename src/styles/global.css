@@ -1,65 +1,105 @@
+/* Helvetica Fontları */
 @font-face {
   font-display: swap;
-  font-family: "HelveticaNeueBlack";
+  font-family: "Helvetica";
   font-style: normal;
   font-weight: 900;
-  src: url("./fonts/HelveticaNeueBlack.woff2") format("woff2");
+  src: url("./fonts/helvetica/HelveticaNeueBlack.woff2") format("woff2");
 }
-
 @font-face {
   font-display: swap;
-  font-family: "HelveticaNeueBold";
+  font-family: "Helvetica";
   font-style: normal;
   font-weight: 700;
-  src: url("./fonts/HelveticaNeueBold.woff2") format("woff2");
+  src: url("./fonts/helvetica/HelveticaNeueBold.woff2") format("woff2");
 }
-
 @font-face {
   font-display: swap;
-  font-family: "HelveticaNeueHeavy";
+  font-family: "Helvetica";
   font-style: normal;
   font-weight: 800;
-  src: url("./fonts/HelveticaNeueHeavy.woff2") format("woff2");
+  src: url("./fonts/helvetica/HelveticaNeueHeavy.woff2") format("woff2");
 }
-
 @font-face {
   font-display: swap;
-  font-family: "HelveticaNeueLight";
+  font-family: "Helvetica";
   font-style: normal;
   font-weight: 300;
-  src: url("./fonts/HelveticaNeueLight.woff2") format("woff2");
+  src: url("./fonts/helvetica/HelveticaNeueLight.woff2") format("woff2");
 }
-
 @font-face {
   font-display: swap;
-  font-family: "HelveticaNeueMedium";
+  font-family: "Helvetica";
   font-style: normal;
   font-weight: 500;
-  src: url("./fonts/HelveticaNeueMedium.woff2") format("woff2");
+  src: url("./fonts/helvetica/HelveticaNeueMedium.woff2") format("woff2");
 }
-
 @font-face {
   font-display: swap;
-  font-family: "HelveticaNeueRoman";
+  font-family: "Helvetica";
   font-style: normal;
   font-weight: 400;
-  src: url("./fonts/HelveticaNeueRoman.woff2") format("woff2");
+  src: url("./fonts/helvetica/HelveticaNeueRoman.woff2") format("woff2");
 }
-
 @font-face {
   font-display: swap;
-  font-family: "HelveticaNeueThin";
+  font-family: "Helvetica";
   font-style: normal;
   font-weight: 200;
-  src: url("./fonts/HelveticaNeueThin.woff2") format("woff2");
+  src: url("./fonts/helvetica/HelveticaNeueThin.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Helvetica";
+  font-style: normal;
+  font-weight: 100;
+  src: url("./fonts/helvetica/HelveticaNeueUltraLight.woff2") format("woff2");
+}
+
+/* Akkurat Fontları */
+@font-face {
+  font-display: swap;
+  font-family: "Akkurat";
+  font-style: normal;
+  font-weight: 100;
+  src: url("./fonts/akkurat/Akkurat-Light.woff2") format("woff2");
+}
+
+/* Chronicle Display Fontları */
+@font-face {
+  font-display: swap;
+  font-family: "ChronicleDisplay";
+  font-style: normal;
+  font-weight: 900;
+  src: url("./fonts/chronicle_display/ChronicleDisplayBlack.woff2")
+    format("woff2");
 }
 
 @font-face {
   font-display: swap;
-  font-family: "HelveticaNeueUltraLight";
+  font-family: "ChronicleDisplay";
+  font-style: italic;
+  font-weight: 300;
+  src: url("./fonts/chronicle_display/ChronicleDisplayLightItalic.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "ChronicleDisplay";
   font-style: normal;
-  font-weight: 100;
-  src: url("./fonts/HelveticaNeueUltraLight.woff2") format("woff2");
+  font-weight: 400;
+  src: url("./fonts/chronicle_display/ChronicleDisplayRoman.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "ChronicleDisplay";
+  font-style: normal;
+  font-weight: 600;
+  src: url("./fonts/chronicle_display/ChronicleDisplaySemibold.woff2")
+    format("woff2");
 }
 
 * {

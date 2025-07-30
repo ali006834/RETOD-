@@ -1,0 +1,42 @@
+.featuredSelect {
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+  width: 100px;
+  display: flex;
+  justify-content: flex-end;
+}
+.featuredSelect_title {
+  display: flex;
+  gap: 5px;
+}
+.featuredSelect span svg {
+  width: 23px;
+  height: 23px;
+}
+.featuredSelect_content {
+  position: absolute;
+  top: 30px;
+  background-color: #fff;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  z-index: 9999;
+  right: 0px;
+  width: 200px;
+}
+.selected {
+  background-color: #6b7280;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  color: #fff;
+}
+.not_selected {
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+.selected:hover,
+.not_selected:hover {
+  background-color: #6b7280;
+  color: #fff;
+}

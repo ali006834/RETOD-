@@ -1,0 +1,18 @@
+const svg = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="27px"
+    height="27px"
+    viewBox="0 0 24 24"
+    fill="none"
+  >
+    <path
+      d="M21 8.99998C21 12.7539 15.7156 17.9757 12.5857 20.5327C12.2416 20.8137 11.7516 20.8225 11.399 20.5523C8.26723 18.1523 3 13.1225 3 8.99998C3 2.00001 12 2.00002 12 8C12 2.00001 21 1.99999 21 8.99998Z"
+      stroke="#000000"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+);
+
+export default svg;

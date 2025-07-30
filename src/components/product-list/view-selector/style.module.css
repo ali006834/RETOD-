@@ -1,0 +1,50 @@
+/* Yeni eklenen stiller */
+.view_selector {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /* margin-right: 20px; */
+}
+
+.view_selector_label {
+  font-size: 14px;
+  font-family: "HelveticaNeueLight";
+  color: #272727;
+}
+
+.view_selector_slider {
+  -webkit-appearance: none;
+  width: 120px;
+  height: 4px;
+  background: #ddd;
+  outline: none;
+}
+
+.view_selector_slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #000;
+  cursor: pointer;
+}
+
+.view_selector_slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #000;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1024px) {
+  .view_selector_slider {
+    -webkit-appearance: none;
+    width: 90%;
+    margin: 15px auto 0px;
+    height: 4px;
+    background: #ddd;
+    outline: none;
+  }
+}

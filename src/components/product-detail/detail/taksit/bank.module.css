@@ -1,0 +1,70 @@
+.table {
+  width: 375px;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.table th,
+.table td {
+  text-align: center;
+  color: #333;
+  height: 30px;
+  border: 1px solid #c1c1c1;
+}
+
+.table tr:nth-child(even) {
+  background-color: #eaeaea !important;
+}
+
+.table th {
+  background-color: #f8f8f8;
+  font-weight: bold;
+  font-size: 10px;
+}
+
+.bankLogoCell {
+  padding: 10px;
+  width: 100px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.logo {
+  width: 80% !important;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.table td {
+  vertical-align: middle;
+  font-size: 12px;
+}
+
+@media (max-width: 1024px) {
+  .table {
+    max-width: 300px;
+  }
+
+  .table td {
+    font-size: 12px;
+  }
+
+  .logo {
+    max-width: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .table {
+    max-width: 400px;
+  }
+
+  .table td {
+    font-size: 12px;
+  }
+
+  .logo {
+    max-width: 80px;
+  }
+}

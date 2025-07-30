@@ -1,0 +1,204 @@
+.detail_wrapper {
+  width: 100%;
+  padding: 20px 60px 30px 0;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  z-index: 9;
+}
+.detail_content h1 {
+  font-size: 20px;
+  font-family: "HelveticaNeueLight" !important;
+}
+.productTag {
+  font-size: 13px;
+  color: #f60000;
+  font-weight: bold;
+  font-family: "HelveticaNeueLight" !important;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  display: flex;
+  gap: 10px;
+}
+.productTag span {
+  display: block;
+  margin-bottom: 10px;
+}
+.price_content {
+  margin-top: 20px;
+}
+.price_content span {
+  font-size: 14px; /*12px*/
+  padding: 3px 8px;
+  line-height: 16px; /*20px*/
+  font-weight: 800;
+  font-family: "HelveticaNeueLight" !important;
+}
+.discCount del {
+  /* color: #9ca3af; */
+  color: #000;
+  margin-right: 5px;
+}
+.price {
+  color: #fff;
+  background-color: #000;
+  margin-left: 1px;
+  padding: 0 2px;
+}
+
+.discount_rate {
+  margin-left: 1px;
+  padding: 0 2px;
+  color: #fff;
+  background-color: #f60000;
+}
+.product_size {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 30px;
+}
+.product_size_item {
+  width: 45px;
+  height: 45px;
+  min-width: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #949494;
+  font-family: "HelveticaNeueThin" !important;
+  font-size: 11px;
+  cursor: pointer;
+  background: transparent;
+  border-radius: 50%;
+}
+.product_size_selected_item {
+  width: 45px;
+  height: 45px;
+  min-width: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000;
+  background: #000;
+  color: #fff;
+  font-family: "HelveticaNeueLight" !important;
+  font-size: 11px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.product_size_item_no_stock_selected {
+  width: 45px;
+  height: 45px;
+  min-width: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000;
+  background-color: #000;
+  font-family: "HelveticaNeueLight" !important;
+  font-size: 11px;
+  cursor: pointer;
+  position: relative;
+  color: rgb(209, 213, 219);
+  border-radius: 50%;
+}
+
+/* Variant ismi uzunsa ellipsis uygula  */
+.product_size_item_label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 40px;
+}
+
+.product_size_item_no_stock_selected::after {
+  content: "";
+  position: absolute;
+  width: 45px;
+  height: 1px;
+  background-color: #949494;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  box-shadow: 0 0 1px #949494;
+}
+
+.product_size_item_no_stock {
+  width: 45px;
+  height: 45px;
+  min-width: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(209 213 219);
+  font-family: "HelveticaNeueLight" !important;
+  font-size: 14px;
+  cursor: pointer;
+  position: relative;
+  color: rgb(209, 213, 219);
+  border-radius: 50%;
+}
+.product_size_item_no_stock::after {
+  content: "";
+  position: absolute;
+  width: 45px;
+  height: 1px;
+  background-color: #949494;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  box-shadow: 0 0 1px #949494;
+}
+.product_detail_colors {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  gap: 5px;
+}
+.product_detail_colors img {
+  cursor: pointer;
+}
+.colorName {
+  display: flex;
+  gap: 5px;
+  margin-top: 10px;
+  align-items: center;
+}
+.colorName span {
+  font-size: 14px;
+  color: #3b3b3b;
+  text-decoration: underline;
+}
+.alternative_colors {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 6px;
+}
+.alternative_colors_title {
+  font-family: "HelveticaNeueLight" !important;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.alternative_colors img {
+  width: 100%;
+}
+.sort_title {
+  color: #fff;
+  font-family: "HelveticaNeueLight" !important;
+  padding: 8px 10px;
+  background-color: #000;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+@media only screen and (max-width: 1200px) {
+  .product_size {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+  .detail_wrapper {
+    padding: 30px 0;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .alternative_colors {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
