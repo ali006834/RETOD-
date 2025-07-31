@@ -131,12 +131,15 @@ const Center = (props: HeaderProps) => {
                 <div className={styles.alt_category_wrapper_botom}>
                   {/* statik kategoriler */}
                   <div className={styles.alt_static_category}>
+                    <span className={styles.alt_static_category_title}>
+                      Önerilen Kategoriler
+                    </span>
                     <div>
                       {staticCategoryMenu?.data.map((item, index) => {
                         return (
                           <Link href={item.href} key={index}>
                             <a>
-                              <span>{item?.name?.charAt(0)}</span>
+                              {/* <span>{item?.name?.charAt(0)}</span> */}
                               {item.name}
                             </a>
                           </Link>
@@ -144,10 +147,12 @@ const Center = (props: HeaderProps) => {
                       })}
                     </div>
                   </div>
-
                   {/* Alt kategoriler */}
                   <div className={styles.alt_category_container}>
                     <div className={styles.alt_category_list}>
+                      <span className={styles.alt_category_list_title}>
+                        Kategoriler
+                      </span>
                       {altCat?.map((altCategory: any, index: number) => {
                         return (
                           <>
