@@ -179,7 +179,7 @@
 }
 
 .searchModalInner {
-  max-width: 1440px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -187,16 +187,17 @@
 .productsGrid {
   flex: 2;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 15px;
 }
 
 .product_title h2 {
   -webkit-font-smoothing: antialiased;
-  font-family: "HelveticaNeueThin" !important;
+  font-family: "ChronicleDisplay" !important;
+  font-weight: 600;
   color: #000;
-  font-size: 13px;
+  font-size: 14px;
   margin-top: 5px;
   line-height: 24px;
   letter-spacing: 0.8px;
