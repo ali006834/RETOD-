@@ -7,7 +7,7 @@ import { HeaderProps } from "src/components/__generated__/types";
 import FavoriteSVG from "src/components/svg/favorite";
 import UserIcon from "src/components/svg/user";
 import CartIcon from "src/components/svg/cart";
-import { SearchInput } from "src/components/header/desktop";
+import { SearchInput } from "src/components/header/search";
 import MaxQuantityPerCartModal from "src/components/components/modal-max-quantity-per-cart";
 
 import IOMenuSVG from "./svg/io-menu";

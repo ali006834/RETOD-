@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import { observer } from "mobx-react-lite";
 import { useRouter } from "next/router";
 import { useStore, useTranslation, Link, Image } from "@ikas/storefront";
@@ -13,8 +13,8 @@ import IOCloseSVG from "../../svg/close";
 import BellSVG from "../../svg/notification";
 import ArrowRight from "../../svg/arrow-right-white";
 import Close from "../../svg/close";
-import SearchSVG from "../../svg/search";
 import ScrollingText from "../scrolling-text";
+import { SearchInput } from "../search";
 
 import { NS } from "../";
 
@@ -218,84 +218,6 @@ const Center = (props: HeaderProps) => {
     </div>
   );
 };
-
-/* SearchInput */
-export const SearchInput = observer((props: HeaderProps) => {
-  const { t } = useTranslation();
-  const uiStore = UIStore.getInstance();
-  const router = useRouter();
-  const [ShowSearch, setShowSearch] = useState<boolean>(true);
-  const searchInputRef = useRef<HTMLInputElement>(null);
-
-  const onKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
-    if (event.key === "Enter") {
-      event.preventDefault();
-      router.push(`/search?s=${uiStore.searchKeyword}`);
-    }
-  };
-
-  const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    uiStore.searchKeyword = event.target.value;
-  };
-
-  useEffect(() => {
-    if (searchInputRef.current) {
-      searchInputRef.current.focus();
-      searchInputRef.current.value = "";
-    }
-  }, [ShowSearch]);
-
-  return (
-    <div className={styles.searchInputWrapper}>
-      <div onClick={() => setShowSearch(!ShowSearch)}>
-        <div className={styles.headerButtonBottomTextSearch}>
-          <SearchSVG height="20px" width="20px" color="#000" />
-        </div>
-      </div>
-
-      {!ShowSearch && (
-        <div className={styles.searchInputContainer}>
-          <div className={styles.searchInputContent}>
-            <span>Sitemizde arama yapın</span>
-            <div className={styles.searchInput}>
-              <input
-                type="search"
-                value={uiStore.searchKeyword}
-                placeholder={t(`${NS}:searchInput.placeholder`)}
-                onKeyPress={onKeyPress}
-                onChange={onChange}
-                ref={searchInputRef}
-              />
-              <div
-                className={styles.headerButtonBottomText}
-                onClick={() => setShowSearch(!ShowSearch)}
-              >
-                <IOCloseSVG />
-              </div>
-            </div>
-            {/* Arama kısmındaki kategoriler */}
-            <div className={styles.categoriesInSearchField}>
-              <Link href="/">
-                <a className={styles.accountWrapper}>
-                  <div className={styles.headerButtonBottomText}>
-                    Öne Çıkanlar
-                  </div>
-                </a>
-              </Link>
-              <Link href="/">
-                <a className={styles.accountWrapper}>
-                  <div className={styles.headerButtonBottomText}>
-                    Tüm Çantalar
-                  </div>
-                </a>
-              </Link>
-            </div>
-          </div>
-        </div>
-      )}
-    </div>
-  );
-});
 
 /* Sağ taraf | Bell */
 export const Bell = observer((props: HeaderProps) => {

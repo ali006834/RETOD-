@@ -31,6 +31,7 @@ export type HeaderProps = {
 	logo_black?: IkasImage;
 	staticCategoryMenu?: IkasCategoryList;
 	categoryMenu?: IkasCategoryList;
+	searchRecomProducts?: IkasProductList;
 	special_for_your?: IkasNavigationLink;
 	scrollingTexts?: ScrollingTexts[];
 };
