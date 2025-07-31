@@ -123,6 +123,7 @@ const Center = (props: HeaderProps) => {
             {isHovered && (
               <div className={styles.alt_category_wrapper}>
                 <div className={styles.alt_category_wrapper_botom}>
+                  {/* statik kategoriler */}
                   <div className={styles.alt_static_category}>
                     <div>
                       {staticCategoryMenu?.data.map((item, index) => {
@@ -137,6 +138,8 @@ const Center = (props: HeaderProps) => {
                       })}
                     </div>
                   </div>
+
+                  {/* Alt kategoriler */}
                   <div className={styles.alt_category_container}>
                     {altCat?.map((altCategory: any, index: number) => {
                       return (

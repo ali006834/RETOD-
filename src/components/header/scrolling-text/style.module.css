@@ -3,7 +3,7 @@
   background-color: #f0f0f0;
   color: #000;
   padding: 0;
-  font-family: "Helvetica" !important;
+  font-family: "Akkurat" !important;
   font-weight: 300;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -19,7 +19,7 @@
 .scrolling_text_container {
   flex: 1;
   position: relative;
-  height: 35px;
+  height: 33px;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -33,15 +33,14 @@
   height: 100%;
   display: flex;
   align-items: center;
-  margin-top: 5px;
 }
 
 .scrolling_text_item {
   position: absolute;
   left: 0;
   width: 100%;
-  font-size: 12px;
-  text-transform: uppercase;
+  font-size: 13px;
+  /* text-transform: uppercase; */
   letter-spacing: 0.5px;
   text-align: center;
   white-space: nowrap;
