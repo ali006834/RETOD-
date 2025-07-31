@@ -10,10 +10,16 @@ import { toJS } from "mobx";
 import styles from "./style.module.css";
 
 import { NS } from "../";
+import { useScreen } from "src/utils/hooks/useScreen";
+
+// Swiper
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
 
 /* SearchInput */
 export const SearchInput = observer((props: HeaderProps) => {
   const { searchRecomProducts } = props;
+
   const { t } = useTranslation();
   const uiStore = UIStore.getInstance();
   const router = useRouter();
@@ -51,10 +57,13 @@ export const SearchInput = observer((props: HeaderProps) => {
     }
   }, [showInlineSearch]);
 
+  //Eğer searchRecomProducts yoksa null dön..
+  if (!searchRecomProducts) return null;
+
   // Proxiden gelen verileri JS'e çevir..
   const searchRecomProductsArr = toJS(searchRecomProducts);
-
   console.log("searchRecomProductsArr:::", searchRecomProductsArr);
+
   return (
     <>
       <div className={styles.inlineSearchWrapper}>
@@ -91,55 +100,35 @@ export const SearchInput = observer((props: HeaderProps) => {
           <div className={styles.searchModalContainer}>
             <div className={styles.searchModalContent}>
               <div className={styles.searchModalInner}>
-                {searchRecomProductsArr &&
-                  searchRecomProductsArr.data &&
-                  Array.isArray(searchRecomProductsArr.data) &&
-                  searchRecomProductsArr.data.length > 0 && (
-                    <div className={styles.searchRecomProducts}>
-                      <div className={styles.searchModalHeader}>
-                        <h3 className={styles.searchRecomTitle}>
-                          Önerilen Ürünler
-                        </h3>
-                        <button
-                          onClick={handleCloseSearch}
-                          className={styles.searchModalCloseButton}
-                        >
-                          <IOCloseSVG width="24px" height="24px" />
-                        </button>
-                      </div>
-                      <div className={styles.searchProductGrid}>
-                        {searchRecomProductsArr.data.map(
-                          (product: any, index: number) => (
-                            <Link
-                              key={index}
-                              href={product.href || `/product/${product.slug}`}
-                            >
-                              <a className={styles.searchProductItem}>
-                                <div className={styles.productImageWrapper}>
-                                  <Image
-                                    image={
-                                      product?.image ||
-                                      product.featuredImage?.src
-                                    }
-                                    alt={product.image?.altText || product.name}
-                                    className={styles.productImage}
-                                  />
-                                </div>
-                                <div className={styles.productInfo}>
-                                  <h4 className={styles.productTitle}>
-                                    {product.name}
-                                  </h4>
-                                  <p className={styles.productPrice}>
-                                    {product.formattedPrice}
-                                  </p>
-                                </div>
-                              </a>
-                            </Link>
-                          )
-                        )}
-                      </div>
+                <div className={styles.searchModalHeader}>
+                  <h3 className={styles.searchRecomTitle}>Önerilen Ürünler</h3>
+                  <button
+                    onClick={handleCloseSearch}
+                    className={styles.searchModalCloseButton}
+                  >
+                    <IOCloseSVG width="24px" height="24px" />
+                  </button>
+                </div>
+
+                <div className={styles.productsGrid}>
+                  {searchRecomProducts.data.map((product, index) => (
+                    <div key={product.id} className={styles.productItem}>
+                      {product?.selectedVariant?.mainImage?.image?.id && (
+                        <Link href={product?.href}>
+                          <Image
+                            className={styles.productImage}
+                            image={product?.selectedVariant?.mainImage?.image}
+                            alt={product.name}
+                            width={900}
+                            height={1350}
+                            objectFit="cover"
+                          />
+                        </Link>
+                      )}
+                      <ProductTitle product={product} />
                     </div>
-                  )}
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -148,3 +137,18 @@ export const SearchInput = observer((props: HeaderProps) => {
     </>
   );
 });
+
+type Props = {
+  product: IkasProduct;
+};
+
+const ProductTitle = observer(({ product }: Props) => (
+  <div className={styles.product_title}>
+    {/* <span>{product?.brand?.name}</span> */}
+    <Link href={product.href}>
+      <a>
+        <h2>{product.name}</h2>
+      </a>
+    </Link>
+  </div>
+));
