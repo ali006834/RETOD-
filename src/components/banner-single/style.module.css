@@ -1,8 +1,10 @@
 .wrapper {
   margin: 40px 0;
   width: 100%;
-  font-family: "HelveticaNeueThin" !important;
+  font-family: "Helvetica" !important;
   letter-spacing: 1px;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .container {

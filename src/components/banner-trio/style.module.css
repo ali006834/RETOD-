@@ -1,103 +1,309 @@
 .wrapper {
-  margin: 40px 0;
   width: 100%;
-  font-family: "HelveticaNeueThin" !important;
-  letter-spacing: 1px;
+  max-width: 1440px;
+  margin: auto;
+  margin-top: 50px !important;
+  font-family: "Akkurat";
 }
 
-.container {
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+/*= Web alanı */
+.desktopContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  cursor: pointer;
 }
 
-.bannerWrapper {
+/*= Mobil Alan */
+.mobileContainer {
+  display: none;
+}
+
+.bannerWrapper,
+.slide {
   position: relative;
   width: 100%;
+  height: auto;
   overflow: hidden;
+  aspect-ratio: 8/10;
 }
 
 .bannerImage {
   width: 100%;
-  height: auto;
-  object-fit: contain;
-  display: block;
-  transition: transform 0.5s ease;
+  height: 100%;
+  object-fit: cover;
 }
 
-.contentWrapper {
-  padding: 0 20px;
-  text-align: center;
-  max-width: 1000px;
-  margin: 0 auto;
+.bannerVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.bannerHeader {
-  color: #555;
-  font-size: 2.5rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  line-height: 2;
-  letter-spacing: 1.5px;
+/* Slider stilleri */
+.sliderWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  gap: 5px;
+}
+
+.slide {
+  flex: 0 0 calc(100% - 10px);
+  scroll-snap-align: start;
+}
+
+.sliderArrowPrev,
+.sliderArrowNext {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.sliderArrowPrev {
+  left: 10px;
+}
+
+.sliderArrowNext {
+  right: 10px;
+}
+
+/* Hide scrollbar for slider */
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+.slider {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/*+ Yazılar */
+.contentOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 15px;
+}
+
+.bannerText {
+  margin: 0 0 8px 0;
+  font-size: 17px;
+  font-weight: normal;
+  color: #34342f;
 }
 
 .bannerContent {
-  color: #555;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: 1rem;
-  text-align: center;
+  margin: 0 0 20px 0;
+  font-size: 16px;
+  color: #34342f;
 }
 
 .bannerButton {
-  display: inline-block;
-  color: #222;
-  padding: 12px 32px;
-  font-size: 1rem;
-  font-weight: 500;
-  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: #34342f;
   cursor: pointer;
   transition: all 0.3s ease;
-  letter-spacing: 1px;
-  transition: font-weight 0.3s ease;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
 }
 
-/* Responsive */
-@media (min-width: 768px) and (max-width: 1024px) {
-  .bannerHeader {
-    font-size: 2rem;
+.overlayContainer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 15px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+}
+
+.overlayContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/*+ Orta Yazı Alanı Stilleri */
+.centerTextWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.centerTextLink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  font-weight: 400;
+  font-family: "ChronicleDisplay" !important;
+}
+
+.centerText {
+  padding-bottom: 10px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.2;
+  font-family: "ChronicleDisplay" !important;
+}
+
+.centerContent {
+  padding-bottom: 20px;
+  font-size: 1.25rem;
+  text-align: center;
+  line-height: 1.4;
+  max-width: 300px;
+  font-family: "ChronicleDisplay" !important;
+}
+
+.centerButton {
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  border: none;
+  font-family: "Akkurat" !important;
+}
+
+.centerButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Mobil Orta Yazı Alanı */
+.mobileTextWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+/*= Responsive */
+@media (max-width: 1024px) {
+  .desktopContainer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .contentOverlay {
+    padding: 10px;
+  }
+
+  .bannerText {
+    font-size: 14px;
   }
 
   .bannerContent {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 767px) {
-  .wrapper {
-    margin: 20px 0;
-  }
-
-  .container {
-    gap: 5px;
-  }
-
-  .bannerHeader {
-    font-size: 1.5rem;
-    white-space: nowrap;
-  }
-
-  .bannerContent {
-    font-size: 0.75rem;
+    font-size: 12px;
+    margin-bottom: 15px;
   }
 
   .bannerButton {
-    padding: 10px 24px;
-    font-size: 0.9rem;
+    padding: 4px 8px;
+    font-size: 12px;
   }
 
-  .contentWrapper {
+  /* Orta yazı alanları için responsive */
+  .centerTextWrapper,
+  .mobileTextWrapper {
+    padding: 25px 15px;
+  }
+
+  .centerText {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .centerContent {
+    font-size: 14px;
+    margin-bottom: 20px;
+    max-width: 250px;
+  }
+
+  .centerButton {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .desktopContainer {
+    display: none;
+  }
+
+  .mobileContainer {
+    display: block;
+  }
+
+  .wrapper {
+    margin-top: 30px !important;
     padding: 0;
+  }
+
+  .bannerWrapper,
+  .slide {
+    aspect-ratio: 3/4;
+  }
+
+  .slide {
+    flex: 0 0 100%;
+    margin: 0;
+  }
+
+  .slider {
+    gap: 0;
+  }
+
+  /* Mobil için orta yazı alanları */
+  .mobileTextWrapper {
+    padding: 20px 15px;
+  }
+
+  .centerText {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .centerContent {
+    font-size: 13px;
+    margin-bottom: 18px;
+    max-width: 200px;
+  }
+
+  .centerButton {
+    padding: 8px 16px;
+    font-size: 12px;
   }
 }
