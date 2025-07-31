@@ -122,92 +122,99 @@ const Center = (props: HeaderProps) => {
                 </div>
               </div>
             )}
-            {isHovered && (
-              <div className={styles.alt_category_wrapper}>
-                <div className={styles.alt_category_wrapper_botom}>
-                  {/* statik kategoriler */}
-                  <div className={styles.alt_static_category}>
-                    <span className={styles.alt_static_category_title}>
-                      Önerilen Kategoriler
-                    </span>
-                    <div>
-                      {staticCategoryMenu?.data.map((item, index) => {
-                        return (
-                          <Link href={item.href} key={index}>
-                            <a>
-                              {/* <span>{item?.name?.charAt(0)}</span> */}
-                              {item.name}
-                            </a>
-                          </Link>
-                        );
-                      })}
-                    </div>
-                  </div>
-                  {/* Alt kategoriler */}
-                  <div className={styles.alt_category_container}>
-                    <div className={styles.alt_category_list}>
-                      <span className={styles.alt_category_list_title}>
-                        Kategoriler
+            {isHovered &&
+              altCat?.some(
+                (altCategory) => altCategory.parentId === item.id
+              ) && (
+                <div className={styles.alt_category_wrapper}>
+                  <div className={styles.alt_category_wrapper_botom}>
+                    {/* statik kategoriler */}
+                    <div className={styles.alt_static_category}>
+                      <span className={styles.alt_static_category_title}>
+                        Önerilen Kategoriler
                       </span>
-                      {altCat?.map((altCategory: any, index: number) => {
-                        return (
-                          <>
-                            {item.id === altCategory.parentId &&
-                              altCategory?.image === null && (
-                                <div key={index}>
-                                  <div className={styles.alt_category_content}>
-                                    <Link href={altCategory.href}>
-                                      <a>
-                                        <span>{altCategory.name}</span>
-                                      </a>
-                                    </Link>
-                                  </div>
-                                </div>
-                              )}
-                          </>
-                        );
-                      })}
+                      <div>
+                        {staticCategoryMenu?.data.map((item, index) => {
+                          return (
+                            <Link href={item.href} key={index}>
+                              <a>
+                                {/* <span>{item?.name?.charAt(0)}</span> */}
+                                {item.name}
+                              </a>
+                            </Link>
+                          );
+                        })}
+                      </div>
                     </div>
-
-                    {/* Resim alanı */}
-                    <div className={styles.alt_category_images}>
-                      {altCat?.map((altCategory: any, index: number) => {
-                        return (
-                          <>
-                            {item.id === altCategory.parentId &&
-                              altCategory?.image !== null && (
-                                <div
-                                  key={`image-${index}`}
-                                  className={styles.category_image_item}
-                                >
-                                  <img
-                                    src={altCategory?.image?.src}
-                                    alt={altCategory?.image?.altText || ""}
-                                  />
-                                  <div className={styles.category_image_info}>
-                                    <h3 className={styles.category_image_title}>
-                                      {altCategory.name}
-                                    </h3>
-                                    {altCategory.description && (
-                                      <p
-                                        className={
-                                          styles.category_image_description
-                                        }
-                                      >
-                                        {altCategory.description}
-                                      </p>
-                                    )}
+                    {/* Alt kategoriler */}
+                    <div className={styles.alt_category_container}>
+                      <div className={styles.alt_category_list}>
+                        <span className={styles.alt_category_list_title}>
+                          Kategoriler
+                        </span>
+                        {altCat?.map((altCategory: any, index: number) => {
+                          return (
+                            <>
+                              {item.id === altCategory.parentId &&
+                                altCategory?.image === null && (
+                                  <div key={index}>
+                                    <div
+                                      className={styles.alt_category_content}
+                                    >
+                                      <Link href={altCategory.href}>
+                                        <a>
+                                          <span>{altCategory.name}</span>
+                                        </a>
+                                      </Link>
+                                    </div>
                                   </div>
-                                </div>
-                              )}
-                          </>
-                        );
-                      })}
+                                )}
+                            </>
+                          );
+                        })}
+                      </div>
+
+                      {/* Resim alanı */}
+                      <div className={styles.alt_category_images}>
+                        {altCat?.map((altCategory: any, index: number) => {
+                          return (
+                            <>
+                              {item.id === altCategory.parentId &&
+                                altCategory?.image !== null && (
+                                  <div
+                                    key={`image-${index}`}
+                                    className={styles.category_image_item}
+                                  >
+                                    <img
+                                      src={altCategory?.image?.src}
+                                      alt={altCategory?.image?.altText || ""}
+                                    />
+                                    <div className={styles.category_image_info}>
+                                      <h3
+                                        className={styles.category_image_title}
+                                      >
+                                        {altCategory.name}
+                                      </h3>
+                                      {altCategory.description && (
+                                        <p
+                                          className={
+                                            styles.category_image_description
+                                          }
+                                        >
+                                          {altCategory.description}
+                                        </p>
+                                      )}
+                                    </div>
+                                  </div>
+                                )}
+                            </>
+                          );
+                        })}
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            )}
+              )}
           </div>
         );
       })}
