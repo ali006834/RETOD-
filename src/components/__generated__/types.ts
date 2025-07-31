@@ -26,6 +26,17 @@ export type SlidingSlider = {
 	imageSlider?: IkasImage;
 };
 
+export type ShoppingPolicies = { 
+	iconSP?: string;
+	contentSP?: string;
+};
+
+export type SocialMedia = { 
+	icon_SM?: string;
+	isExternal_SM?: boolean;
+	link_SM?: IkasNavigationLink;
+};
+
 export type HeaderProps = {
 	logo?: IkasImage;
 	logo_black?: IkasImage;
@@ -34,6 +45,14 @@ export type HeaderProps = {
 	searchRecomProducts?: IkasProductList;
 	special_for_your?: IkasNavigationLink;
 	scrollingTexts?: ScrollingTexts[];
+};
+
+export type FooterProps = {
+	logo?: IkasImage;
+	shoppingPolicies?: ShoppingPolicies[];
+	socialMediaList?: SocialMedia[];
+	supportLinks?: IkasNavigationLink[];
+	legalLinks?: IkasNavigationLink[];
 };
 
 export type BannerTopSliderProps = {

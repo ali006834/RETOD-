@@ -17,13 +17,8 @@ import { toJS } from "mobx";
 export const NS = "footer";
 
 const Footer: React.FC<FooterProps> = (props) => {
-  const {
-    legalLinks,
-    supportLinks,
-    logoDeltix,
-    shoppingPolicies,
-    socialMediaList,
-  } = props;
+  const { legalLinks, supportLinks, logo, shoppingPolicies, socialMediaList } =
+    props;
 
   const { t } = useTranslation();
 
@@ -37,10 +32,10 @@ const Footer: React.FC<FooterProps> = (props) => {
         <div className={styles.logoTriangleContainer}>
           <div className={styles.triangle}></div>
           <div className={styles.logoContainer}>
-            {logoDeltix && (
+            {logo && (
               <Image
-                image={logoDeltix}
-                alt={logoDeltix.altText || "Logo"}
+                image={logo}
+                alt={logo.altText || "Logo"}
                 layout="fill"
                 objectFit="contain"
               />
@@ -55,9 +50,9 @@ const Footer: React.FC<FooterProps> = (props) => {
               <div key={index} className={styles.policyItem}>
                 <div
                   className={styles.policyIcon}
-                  dangerouslySetInnerHTML={{ __html: item.iconSP || "" }}
+                  dangerouslySetInnerHTML={{ __html: item?.iconSP || "" }}
                 />
-                <span>{item.contentSP}</span>
+                <span>{item?.contentSP}</span>
               </div>
             ))}
           </div>
@@ -89,7 +84,7 @@ const Footer: React.FC<FooterProps> = (props) => {
             <div className={styles.socialLinks}>
               {socialMediaListArr?.map((item, index) => (
                 <Link key={index} href={item?.link_SM?.href || "/"}>
-                  {item.isExternal_SM ? (
+                  {item?.isExternal_SM ? (
                     <a target="_blank" className={styles.socialLink}>
                       <div
                         dangerouslySetInnerHTML={{

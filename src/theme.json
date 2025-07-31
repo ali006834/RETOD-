@@ -14,7 +14,7 @@
       "componentJson": null,
       "props": [
         {
-          "id": "abd476a8-d14a-4037-9550-1147a4dcf761",
+          "id": "88e66385-7057-46f9-af38-b922287aa7af",
           "name": "logo",
           "displayName": "",
           "description": "",
@@ -28,7 +28,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "948f4d64-24d2-44ed-85aa-19f2aa725c4a",
+          "id": "e79c7a12-baf6-4faf-9ed5-8e10bf46a521",
           "name": "showTax",
           "displayName": "",
           "description": "",
@@ -42,7 +42,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "00d1aa06-b92b-42f1-8cff-6f44119491ac",
+          "id": "8564a51e-e100-4d60-b0c1-418d0f9c174e",
           "name": "showCampaignOffersDesign",
           "displayName": "",
           "description": "",
@@ -56,7 +56,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "616f5a78-b1f9-4555-a740-db917c50478d",
+          "id": "dda02441-b191-4b7e-837e-890d0837f088",
           "name": "campaignOfferIsSmallDesign",
           "displayName": "",
           "description": "",
@@ -70,7 +70,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "ad8783bd-853d-4470-be9f-04bcef67b9df",
+          "id": "2bcc76c7-57ef-42b8-abe5-06ef2762a121",
           "name": "showCampaignIsBiggerImage",
           "displayName": "",
           "description": "",
@@ -84,7 +84,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "9b63c7a0-5a25-4079-aaf1-2a4cd3dcce2b",
+          "id": "63ef64c9-4dc8-4708-9dda-4011a0c29be3",
           "name": "campaignOffersTitleColor",
           "displayName": "",
           "description": "",
@@ -98,7 +98,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "2235c5ad-95ac-4c05-a0a7-dbc6ae41c7f6",
+          "id": "6904f3c9-c679-4710-af31-38363c3c3030",
           "name": "campaignOffersDescriptionColor",
           "displayName": "",
           "description": "",
@@ -112,7 +112,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "f1117a02-19fa-4b34-9837-ce6b6f98664f",
+          "id": "6b317233-bf98-4cf1-9fb8-d55fd555c382",
           "name": "campaignOffersContainerBgColor",
           "displayName": "",
           "description": "",
@@ -126,7 +126,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "506bacc9-dd04-40ce-9506-1d69b891eca5",
+          "id": "7b747f32-c016-4a51-8762-cafb5bbac698",
           "name": "showCampaignShowDiscountSettings",
           "displayName": "",
           "description": "",
@@ -140,7 +140,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "2b4402ed-7ca1-43f1-b831-9cbc7d00a866",
+          "id": "c73801e2-dfff-4d49-ac7e-970d0dab37ea",
           "name": "showCampaignHideDiscountBadge",
           "displayName": "",
           "description": "",
@@ -154,7 +154,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "7710e964-dca8-41f1-b625-a2bc6ecf15c6",
+          "id": "1ab7523e-5dfd-410f-b191-5b3f5881663b",
           "name": "campaignOffersDiscountPercentageColor",
           "displayName": "",
           "description": "",
@@ -168,7 +168,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "defc9f87-a36e-4b29-8ce1-94010a22c477",
+          "id": "ff94630b-5b06-46a8-abae-664f25b5c624",
           "name": "campaignOffersDiscountPercentageBgColor",
           "displayName": "",
           "description": "",
@@ -182,7 +182,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "de5d672c-3ff9-4ed5-93d8-6bd82fbbc80c",
+          "id": "e3b93c42-6fe0-406d-baf6-f692c1faacf3",
           "name": "showCampaignShowCountdownSettings",
           "displayName": "",
           "description": "",
@@ -196,7 +196,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "fe32ee77-4fe8-43b2-b9bc-25b12a5dc319",
+          "id": "1a3fe32a-472d-4558-be5f-6f9ab7c9778d",
           "name": "campaignOfferCountdownStyleIsLine",
           "displayName": "",
           "description": "",
@@ -210,7 +210,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "17a8e099-2798-4d49-a617-6f1c22ab950d",
+          "id": "e590bf83-9f0b-4169-8f96-4f7791ecb7ab",
           "name": "campaignOffersCountdownTextColor",
           "displayName": "",
           "description": "",
@@ -224,7 +224,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "4b031dc1-bd00-4eea-a844-c2026e088688",
+          "id": "7d48c8c0-5462-4b19-a786-74faabf48ccf",
           "name": "campaignOffersCountdownTimeColor",
           "displayName": "",
           "description": "",
@@ -238,7 +238,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "2f3873ad-b5c1-4d1b-8d67-8a2a671a4819",
+          "id": "321d41ee-5a51-46b3-9c4b-7240d20eadef",
           "name": "campaignOffersCountdownBgColor",
           "displayName": "",
           "description": "",
@@ -252,7 +252,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "44c45ac7-8612-4e37-ad32-1c70872fe508",
+          "id": "f8cbb79f-00fe-4d24-894f-b1deaa808467",
           "name": "campaignOffersEnableMiddlePhase",
           "displayName": "",
           "description": "",
@@ -266,7 +266,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "bdb20323-5968-4a0b-b598-b603b415cacf",
+          "id": "c0daa9ce-6608-48d4-b3e1-5adb027ce172",
           "name": "campaignOffersMiddlePhaseOverlayColor",
           "displayName": "",
           "description": "",
@@ -280,7 +280,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "931c6f72-aa43-4baa-b7bf-7db3a5865e6c",
+          "id": "6d5ab132-5a35-46ac-9a7e-2bf5bce253b9",
           "name": "campaignOfferCountdownStyleIsLineSuccessPage",
           "displayName": "",
           "description": "",
@@ -294,7 +294,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "432d893c-fac7-43a6-8efb-b1aebbd09f17",
+          "id": "576e3b65-a51a-4556-a926-9ef6227c42cf",
           "name": "buttonBgColor",
           "displayName": "",
           "description": "",
@@ -308,7 +308,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "b8c7727b-ffa3-4864-99e8-e00c6b71c476",
+          "id": "e1ffd901-dfa4-4249-8956-1035506a4201",
           "name": "buttonTextColor",
           "displayName": "",
           "description": "",
@@ -322,7 +322,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "5ff86457-7860-416b-8c8e-b33189cd114e",
+          "id": "8f0cf6d3-368b-4ffd-8928-effc55fe2a55",
           "name": "buttonDisabledBgColor",
           "displayName": "",
           "description": "",
@@ -336,7 +336,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "cbd01d9f-c0f2-4325-b4f7-f3d952529a2c",
+          "id": "beffd1eb-16f2-430b-8ac7-8e3e3864cad9",
           "name": "buttonDisabledTextColor",
           "displayName": "",
           "description": "",
@@ -350,7 +350,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "a03f41a5-cc16-4389-8332-fe5b73107b96",
+          "id": "66133441-88ff-49b9-8592-19c6b8a08336",
           "name": "primaryTextColor",
           "displayName": "",
           "description": "",
@@ -364,7 +364,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "804704e2-377e-4420-a0cd-34e88b6e4692",
+          "id": "60ce7e8f-96e0-4824-aa4b-a28fc87dc395",
           "name": "secondaryTextColor",
           "displayName": "",
           "description": "",
@@ -378,7 +378,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "5f0132d0-882e-47f9-88ba-935a12df8bbe",
+          "id": "a52fb35e-118d-4cff-bb16-0e83f8956418",
           "name": "primaryBgColor",
           "displayName": "",
           "description": "",
@@ -392,7 +392,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "c88dbffe-94b5-4c66-ad20-7035cceb2ddd",
+          "id": "57c4c72d-e9f9-4d9e-9356-29b63ba3e926",
           "name": "secondaryBgColor",
           "displayName": "",
           "description": "",
@@ -406,7 +406,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "9140853b-2794-4c13-99ff-e6a0ab27979e",
+          "id": "3aefb898-04c6-4058-899e-e7dc3ea0ef5a",
           "name": "borderColor",
           "displayName": "",
           "description": "",
@@ -420,7 +420,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "b7a9c999-f534-47d5-8586-f1319321bdba",
+          "id": "769d0f55-b89d-4314-94d9-df5e5b8e208f",
           "name": "cardBgColor",
           "displayName": "",
           "description": "",
@@ -434,7 +434,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "9efba1de-7150-45d5-abb7-caae1efcaccc",
+          "id": "4e0017a6-acf3-4865-853a-58fe30b860ab",
           "name": "errorColor",
           "displayName": "",
           "description": "",
@@ -448,7 +448,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "ed63349e-dbea-461e-967b-5a98a951d403",
+          "id": "2a2d6b82-cb64-4a9c-875d-9bcd07e6868d",
           "name": "errorLightColor",
           "displayName": "",
           "description": "",
@@ -462,7 +462,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "4058bc29-0f33-4810-9efe-3b02914a6bd9",
+          "id": "e024a40c-266b-4ee8-ab27-d19124b78ac9",
           "name": "warningColor",
           "displayName": "",
           "description": "",
@@ -476,7 +476,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "9accb267-156c-47f2-a889-51aaec96d76f",
+          "id": "a1e74cfe-0d0f-43d5-bd68-d840ea0323ad",
           "name": "warningLightColor",
           "displayName": "",
           "description": "",
@@ -490,7 +490,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "9a6f0d71-9b36-4fa7-b806-e7b71af27de1",
+          "id": "00fc29c4-014d-48a1-b410-1ab8eea505b4",
           "name": "successColor",
           "displayName": "",
           "description": "",
@@ -504,7 +504,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "33eb0a06-295b-47f3-b7e5-5aa6f4541e8f",
+          "id": "0eddbd93-0127-4f82-a34a-59ed2ad7b33b",
           "name": "successLightColor",
           "displayName": "",
           "description": "",
@@ -518,7 +518,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "3ef67982-b59d-42d8-a1b6-52ebe057958f",
+          "id": "56a9cb81-5fc1-491c-9208-96c451d1def3",
           "name": "secondaryButtonBgColor",
           "displayName": "",
           "description": "",
@@ -532,7 +532,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "70c7aa23-7d8a-4226-bed6-11c0c8f2c8a4",
+          "id": "79316131-bc1b-4f7b-b148-da8994a75610",
           "name": "secondaryButtonTextColor",
           "displayName": "",
           "description": "",
@@ -546,7 +546,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "4482e2ee-f15a-467d-87b7-fe7c05e026db",
+          "id": "1a21b1e1-fc92-4acc-9f64-323c7647b2b9",
           "name": "secondaryButtonBorderColor",
           "displayName": "",
           "description": "",
@@ -729,7 +729,80 @@
       "description": "Alt Menü (Footer)",
       "type": "COMPONENT",
       "componentJson": null,
-      "props": [],
+      "props": [
+        {
+          "id": "9c7b73a2-f108-43d5-aa7b-3f59eea7ceee",
+          "name": "logo",
+          "displayName": "Logo",
+          "description": "Logo",
+          "type": "IMAGE",
+          "isRequired": false,
+          "sliderData": {},
+          "translations": {},
+          "groupId": "704db35a-803a-497e-9712-69c1fb554120",
+          "excludedFields": [],
+          "excludedFieldsCategory": [],
+          "isFacetListNotSent": false
+        },
+        {
+          "id": "a264d8fd-bbbc-450e-9d33-4b206f11fee5",
+          "name": "shoppingPolicies",
+          "displayName": "Alışveriş Politikaları",
+          "description": "Alışveriş Politikaları",
+          "type": "CUSTOM",
+          "isRequired": false,
+          "customDataId": "87389e46-9422-4cec-bbdc-09c34fb5986d",
+          "sliderData": {},
+          "translations": {},
+          "groupId": "6d1c8eaa-f95a-4fc9-938f-1e033aa76614",
+          "excludedFields": [],
+          "excludedFieldsCategory": [],
+          "isFacetListNotSent": false
+        },
+        {
+          "id": "523e2f7b-cdc2-44fa-bed6-3896cb00c33d",
+          "name": "socialMediaList",
+          "displayName": "Sosyal Medya",
+          "description": "Sosyal Medya",
+          "type": "CUSTOM",
+          "isRequired": false,
+          "customDataId": "454c1427-0912-4493-8ceb-a5c226f0afc8",
+          "sliderData": {},
+          "translations": {},
+          "groupId": "1c6f3017-79b6-4432-8719-4a0ad58c1a25",
+          "excludedFields": [],
+          "excludedFieldsCategory": [],
+          "isFacetListNotSent": false
+        },
+        {
+          "id": "f96c0782-2163-4d83-9795-c0688dcec37f",
+          "name": "supportLinks",
+          "displayName": "Yardım ve Destek Linkleri",
+          "description": "Yardım ve Destek Linkleri",
+          "type": "LIST_OF_LINK",
+          "isRequired": false,
+          "sliderData": {},
+          "translations": {},
+          "groupId": "c1421713-e0d6-48d9-b003-5c18afd40d95",
+          "excludedFields": [],
+          "excludedFieldsCategory": [],
+          "isFacetListNotSent": false
+        },
+        {
+          "id": "fd6818be-c9b7-4b0a-a06f-c7a98928463a",
+          "name": "legalLinks",
+          "displayName": "Yasal Bilgilendirme Kategorileri",
+          "description": "Yasal Bilgilendirme Kategorileri",
+          "type": "LIST_OF_LINK",
+          "isRequired": false,
+          "sliderData": {},
+          "translations": {},
+          "groupId": "a10a63a0-28db-459e-a5a0-5505106aebf9",
+          "excludedFields": [],
+          "excludedFieldsCategory": [],
+          "isFacetListNotSent": false
+        }
+      ],
       "isHeader": false,
       "isFooter": true,
       "translations": {},
@@ -1689,7 +1762,180 @@
         {
           "id": "9bda7c59-d2e8-4478-87f1-e44eb5ddea01",
           "componentId": "b6119c6a-04ef-4f91-932a-0bfcc99efc43",
-          "propValues": {}
+          "propValues": {
+            "logo": {
+              "id": "theme-images/571cc7c5-4feb-42a7-bb03-d0ebcfec9825",
+              "altText": null
+            },
+            "supportLinks": [
+              {
+                "id": "1622d7d3-7ba6-4497-a914-8ca4f7961bd7",
+                "linkType": "PAGE",
+                "label": "Anasayfa",
+                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                "pageType": "INDEX",
+                "itemId": null,
+                "externalLink": null,
+                "fileUrl": null,
+                "pageComponentId": null,
+                "subLinks": []
+              },
+              {
+                "id": "d4a250ec-3c2f-4dd7-81a1-24dd1ff14285",
+                "linkType": "PAGE",
+                "label": "Anasayfa",
+                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                "pageType": "INDEX",
+                "itemId": null,
+                "externalLink": null,
+                "fileUrl": null,
+                "pageComponentId": null,
+                "subLinks": []
+              },
+              {
+                "id": "45f29df3-4740-4c29-a3cc-8288fe18bfd9",
+                "linkType": "PAGE",
+                "label": "Anasayfa",
+                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                "pageType": "INDEX",
+                "itemId": null,
+                "externalLink": null,
+                "fileUrl": null,
+                "pageComponentId": null,
+                "subLinks": []
+              },
+              {
+                "id": "af4afe2e-7c76-4f6d-a914-014faa0309c8",
+                "linkType": "PAGE",
+                "label": "Anasayfa",
+                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                "pageType": "INDEX",
+                "pageComponentId": null,
+                "subLinks": []
+              }
+            ],
+            "legalLinks": [
+              {
+                "id": "c4c0591b-ab5e-49e3-bfb3-4a05d2736123",
+                "linkType": "PAGE",
+                "label": "Anasayfa",
+                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                "pageType": "INDEX",
+                "pageComponentId": null,
+                "subLinks": []
+              },
+              {
+                "id": "3fb3d68d-cafe-4b4e-b8bf-ba1b8c267ccd",
+                "linkType": "PAGE",
+                "label": "Anasayfa",
+                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                "pageType": "INDEX",
+                "itemId": null,
+                "externalLink": null,
+                "fileUrl": null,
+                "pageComponentId": null,
+                "subLinks": []
+              }
+            ],
+            "socialMediaList": [
+              {
+                "id": "ea77061c-90cb-4dae-87ff-db7ded28f99c",
+                "linkType": "PAGE",
+                "label": "Anasayfa",
+                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                "pageType": "INDEX",
+                "itemId": null,
+                "externalLink": null,
+                "fileUrl": null,
+                "pageComponentId": null,
+                "subLinks": [],
+                "icon_SM": "  <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"#222\" width=\"20px\" height=\"20px\" viewBox=\"0 0 1920 1920\">\n    <path d=\"M1168.737 487.897c44.672-41.401 113.824-36.889 118.9-36.663l289.354-.113 6.317-417.504L1539.65 22.9C1511.675 16.02 1426.053 0 1237.324 0 901.268 0 675.425 235.206 675.425 585.137v93.97H337v451.234h338.425V1920h451.234v-789.66h356.7l62.045-451.233H1126.66v-69.152c0-54.937 14.214-96.112 42.078-122.058\" fill-rule=\"evenodd\"></path>\n  </svg>",
+                "isExternal_SM": true,
+                "link_SM": {
+                  "id": "54b322de-23b7-4f71-bb83-ea3b1f5f919d",
+                  "linkType": "PAGE",
+                  "label": "Anasayfa",
+                  "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                  "pageType": "INDEX",
+                  "pageComponentId": null,
+                  "subLinks": []
+                }
+              },
+              {
+                "id": "d8b026ea-b537-42da-8a18-42f20ae40d23",
+                "linkType": "PAGE",
+                "label": "Anasayfa",
+                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                "pageType": "INDEX",
+                "pageComponentId": null,
+                "subLinks": [],
+                "icon_SM": "  <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"222\" width=\"23px\" height=\"23px\" viewBox=\"0 0 24 24\">\n    <g>\n      <path fill=\"none\" d=\"M0 0h24v24H0z\"></path>\n      <path fill-rule=\"nonzero\" d=\"M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153a4.908 4.908 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 0 1-1.153 1.772 4.915 4.915 0 0 1-1.772 1.153c-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 0 1-1.772-1.153 4.904 4.904 0 0 1-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 0 1 1.153-1.772A4.897 4.897 0 0 1 5.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm6.5-.25a1.25 1.25 0 0 0-2.5 0 1.25 1.25 0 0 0 2.5 0zM12 9a3 3 0 1 1 0 6 3 3 0 0 1 0-6z\"></path>\n    </g>\n  </svg>",
+                "isExternal_SM": true,
+                "link_SM": {
+                  "id": "b256f6ad-0850-4c37-8ba7-7ce4954f414e",
+                  "linkType": "PAGE",
+                  "label": "Anasayfa",
+                  "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                  "pageType": "INDEX",
+                  "pageComponentId": null,
+                  "subLinks": []
+                }
+              },
+              {
+                "icon_SM": "  <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"23px\" height=\"23px\" viewBox=\"0 -3 20 20\" version=\"1.1\">\n    <title>youtube [#168]</title>\n    <desc>Created with Sketch.</desc>\n    <defs></defs>\n    <g id=\"Page-1\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\">\n      <g id=\"Dribbble-Light-Preview\" transform=\"translate(-300.000000, -7442.000000)\" fill=\"#222\">\n        <g id=\"icons\" transform=\"translate(56.000000, 160.000000)\">\n          <path d=\"M251.988432,7291.58588 L251.988432,7285.97425 C253.980638,7286.91168 255.523602,7287.8172 257.348463,7288.79353 C255.843351,7289.62824 253.980638,7290.56468 251.988432,7291.58588 M263.090998,7283.18289 C262.747343,7282.73013 262.161634,7282.37809 261.538073,7282.26141 C259.705243,7281.91336 248.270974,7281.91237 246.439141,7282.26141 C245.939097,7282.35515 245.493839,7282.58153 245.111335,7282.93357 C243.49964,7284.42947 244.004664,7292.45151 244.393145,7293.75096 C244.556505,7294.31342 244.767679,7294.71931 245.033639,7294.98558 C245.376298,7295.33761 245.845463,7295.57995 246.384355,7295.68865 C247.893451,7296.0008 255.668037,7296.17532 261.506198,7295.73552 C262.044094,7295.64178 262.520231,7295.39147 262.895762,7295.02447 C264.385932,7293.53455 264.28433,7285.06174 263.090998,7283.18289\" id=\"youtube-[#168]\"></path>\n        </g>\n      </g>\n    </g>\n  </svg>",
+                "isExternal_SM": true,
+                "link_SM": {
+                  "id": "bfc449ee-02a5-4eeb-b6c8-7b1f40d7ab50",
+                  "linkType": "PAGE",
+                  "label": "Anasayfa",
+                  "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                  "pageType": "INDEX",
+                  "pageComponentId": null,
+                  "subLinks": []
+                }
+              },
+              {
+                "icon_SM": "  <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"19px\" height=\"19px\" viewBox=\"0 0 20 20\" version=\"1.1\">\n    <title>whatsapp [#128]</title>\n    <desc>Created with Sketch.</desc>\n    <defs></defs>\n    <g id=\"Page-1\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\">\n      <g id=\"Dribbble-Light-Preview\" transform=\"translate(-300.000000, -7599.000000)\" fill=\"#222\">\n        <g id=\"icons\" transform=\"translate(56.000000, 160.000000)\">\n          <path d=\"M259.821,7453.12124 C259.58,7453.80344 258.622,7454.36761 257.858,7454.53266 C257.335,7454.64369 256.653,7454.73172 254.355,7453.77943 C251.774,7452.71011 248.19,7448.90097 248.19,7446.36621 C248.19,7445.07582 248.934,7443.57337 250.235,7443.57337 C250.861,7443.57337 250.999,7443.58538 251.205,7444.07952 C251.446,7444.6617 252.034,7446.09613 252.104,7446.24317 C252.393,7446.84635 251.81,7447.19946 251.387,7447.72462 C251.252,7447.88266 251.099,7448.05372 251.27,7448.3478 C251.44,7448.63589 252.028,7449.59418 252.892,7450.36341 C254.008,7451.35771 254.913,7451.6748 255.237,7451.80984 C255.478,7451.90987 255.766,7451.88687 255.942,7451.69881 C256.165,7451.45774 256.442,7451.05762 256.724,7450.6635 C256.923,7450.38141 257.176,7450.3464 257.441,7450.44643 C257.62,7450.50845 259.895,7451.56477 259.991,7451.73382 C260.062,7451.85686 260.062,7452.43903 259.821,7453.12124 M254.002,7439 L253.997,7439 L253.997,7439 C248.484,7439 244,7443.48535 244,7449 C244,7451.18666 244.705,7453.21526 245.904,7454.86076 L244.658,7458.57687 L248.501,7457.3485 C250.082,7458.39482 251.969,7459 254.002,7459 C259.515,7459 264,7454.51465 264,7449 C264,7443.48535 259.515,7439 254.002,7439\" id=\"whatsapp-[#128]\"></path>\n        </g>\n      </g>\n    </g>\n  </svg>",
+                "isExternal_SM": true,
+                "link_SM": {
+                  "id": "387d6985-f68c-4be8-9fd3-5487909d3093",
+                  "linkType": "PAGE",
+                  "label": "Anasayfa",
+                  "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                  "pageType": "INDEX",
+                  "pageComponentId": null,
+                  "subLinks": []
+                }
+              },
+              {
+                "isExternal_SM": true,
+                "icon_SM": "  <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"#222\" width=\"23px\" height=\"23px\" viewBox=\"0 0 1920 1920\">\n    <path d=\"m0 524.664 878.039 812.43 592.454-557.236c48.603 25.014 101.924 40.484 158.207 43.007 5.815.22 11.41.33 17.225.33 38.29 0 74.606-7.132 109.495-17.555v857.633l-424.812-491.847-82.943 71.643 442.804 512.692H64.951l442.804-512.692-82.943-71.643L0 1663.273V524.663ZM1278.977 329.56c-8.777 29.622-15.47 60.232-16.786 92.598-4.608 102.473 30.939 200.557 100.278 276.26 5.376 5.924 11.85 10.312 17.554 15.798l-502.598 472.866L.044 375.091V329.56ZM1645.552 165c4.06 0 8.229.11 12.398.22 151.295 6.802 268.47 134.838 261.777 286.243-6.583 147.126-127.926 262.106-273.736 262.106-4.06 0-8.338-.11-12.507-.33-151.295-6.692-268.47-134.838-261.667-286.243C1378.29 279.87 1499.743 165 1645.552 165Z\" fill-rule=\"evenodd\"></path>\n  </svg>",
+                "link_SM": {
+                  "id": "ef4834a7-c946-449c-936a-d04f1e994f97",
+                  "linkType": "PAGE",
+                  "label": "Anasayfa",
+                  "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                  "pageType": "INDEX",
+                  "pageComponentId": null,
+                  "subLinks": []
+                }
+              }
+            ],
+            "shoppingPolicies": [
+              {
+                "iconSP": "<svg width=\"40px\" height=\"40px\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M4 5.54054L11.5 3L19 5.54054V12.0569C19 14.4506 17.9281 16.7185 16.0786 18.2381L11.5 22L6.92137 18.2381C5.07187 16.7185 4 14.4506 4 12.0569V5.54054Z\" stroke=\"#333333\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path>\n<path d=\"M14 10L10.5 13\" stroke=\"#333333\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path>\n<path d=\"M9 11.5L10.5 13\" stroke=\"#333333\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path>\n</svg>",
+                "contentSP": "Güvenli Alışveriş"
+              },
+              {
+                "iconSP": "<svg fill=\"#000000\" xmlns=\"http://www.w3.org/2000/svg\" width=\"40px\" height=\"40px\" viewBox=\"0 0 100 100\" enable-background=\"new 0 0 100 100\" xml:space=\"preserve\">\n<path d=\"M76.5,58.3c0,0.1,0,0.2-0.1,0.2c-0.3,1.1-0.7,2.2-1.1,3.3c-0.5,1.2-1,2.3-1.6,3.4c-1.2,2.2-2.7,4.2-4.5,6\n\tc-1.7,1.8-3.7,3.4-5.9,4.7c-2.2,1.3-4.5,2.3-7,3c-2.5,0.7-5.1,1.1-7.7,1.1C32.8,80,20,67.2,20,51.3s12.8-28.6,28.6-28.6\n\tc5.3,0,10.3,1.5,14.6,4c0,0,0,0,0.1,0c2.1,1.2,4,2.7,5.6,4.4c0.5,0.4,0.8,0.7,1.2,1.2c0.9,0.8,1.6,0.3,1.6-0.9V22c0-1.1,0.9-2,2-2h4\n\tc1.1,0,2,0.9,2.2,2v24.5c0,0.9-0.8,1.8-1.8,1.8H53.6c-1.1,0-1.9-0.8-1.9-1.9v-4.2c0-1.1,0.9-2,2-2h9.4c0.8,0,1.4-0.2,1.7-0.7\n\tc-3.6-5-9.6-8.3-16.2-8.3c-11.1,0-20.1,9-20.1,20.1s9,20.1,20.1,20.1c8.7,0,16.1-5.5,18.9-13.3c0,0,0.3-1.8,1.7-1.8\n\tc1.4,0,4.8,0,5.7,0c0.8,0,1.6,0.6,1.6,1.5C76.5,58,76.5,58.1,76.5,58.3z\"></path>\n</svg>",
+                "contentSP": "Mağaza&Online Kolay Değişim ve İade"
+              },
+              {
+                "iconSP": "<svg width=\"40px\" height=\"40px\" viewBox=\"0 0 24 24\" version=\"1.1\" xml:space=\"preserve\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n\n<style type=\"text/css\">\n\t.st0{display:none;}\n\t.st1{display:inline;}\n\t.st2{opacity:0.2;fill:none;stroke:#000000;stroke-width:5.000000e-02;stroke-miterlimit:10;}\n</style>\n\n<g class=\"st0\" id=\"grid_system\"></g>\n\n<g id=\"_icons\">\n\n<path d=\"M18.4,4.4c0,0-0.1-0.1-0.1-0.1c-0.8-0.8-2-1.3-3.1-1.3H8.8C7.7,3,6.6,3.5,5.7,4.3c0,0-0.1,0.1-0.1,0.1L3.9,6.8   C3.3,7.7,3,8.7,3,9.7V17c0,2.2,1.8,4,4,4h10c2.2,0,4-1.8,4-4V9.7c0-1-0.3-2-0.9-2.9L18.4,4.4z M5.5,8l1.6-2.3C7.6,5.2,8.2,5,8.8,5   h6.3c0.6,0,1.2,0.2,1.7,0.7L18.5,8c0,0,0,0,0,0h-4.2H9.7L5.5,8C5.5,8,5.5,8,5.5,8z M13.3,10v2.5l-0.9-0.4C12.3,12,12.1,12,12,12   s-0.3,0-0.4,0.1l-0.9,0.4V10H13.3z M19,17c0,1.1-0.9,2-2,2H7c-1.1,0-2-0.9-2-2v-7h3.7v4c0,0.3,0.2,0.7,0.5,0.8   c0.3,0.2,0.6,0.2,0.9,0.1l1.9-0.8l1.9,0.8C14,15,14.2,15,14.3,15c0.2,0,0.4-0.1,0.5-0.2c0.3-0.2,0.5-0.5,0.5-0.8v-4H19V17z\"></path>\n\n</g>\n\n</svg>",
+                "contentSP": "3500 TL Üzeri Ücretsiz Standart Kargo"
+              }
+            ]
+          }
         },
         {
           "id": "ba23aedf-d06f-44d3-8dca-20745ff75682",
@@ -2044,6 +2290,147 @@
       "excludedFields": [],
       "excludedFieldsCategory": [],
       "isFacetListNotSent": false
+    },
+    {
+      "id": "87389e46-9422-4cec-bbdc-09c34fb5986d",
+      "name": "shoppingPolicies",
+      "translations": {},
+      "type": "DYNAMIC_LIST",
+      "isRequired": true,
+      "nestedData": [
+        {
+          "id": "9a60d882-c659-4468-bf49-19f6b2f6ec84",
+          "name": "Alışveriş Politkası",
+          "typescriptName": "ShoppingPolicies",
+          "translations": {},
+          "type": "OBJECT",
+          "isRequired": false,
+          "nestedData": [
+            {
+              "id": "f92889a5-c2da-4a26-b3d0-34d7e2b52ba3",
+              "name": "ikon (SVG formatında ekleyin)",
+              "translations": {},
+              "type": "RICH_TEXT",
+              "isRequired": false,
+              "key": "iconSP",
+              "sliderData": {},
+              "groupId": "",
+              "isRoot": false,
+              "level": 2,
+              "excludedFields": [],
+              "excludedFieldsCategory": [],
+              "isFacetListNotSent": false
+            },
+            {
+              "id": "bf51351b-4739-498d-809c-7634de02e32e",
+              "name": "İçerik (Politika)",
+              "translations": {},
+              "type": "TEXT",
+              "isRequired": false,
+              "key": "contentSP",
+              "sliderData": {},
+              "groupId": "",
+              "isRoot": false,
+              "level": 2,
+              "excludedFields": [],
+              "excludedFieldsCategory": [],
+              "isFacetListNotSent": false
+            }
+          ],
+          "sliderData": {},
+          "groupId": "",
+          "isRoot": false,
+          "level": 1,
+          "excludedFields": [],
+          "excludedFieldsCategory": [],
+          "isFacetListNotSent": false
+        }
+      ],
+      "sliderData": {},
+      "groupId": "",
+      "isRoot": true,
+      "level": 0,
+      "excludedFields": [],
+      "excludedFieldsCategory": [],
+      "isFacetListNotSent": false
+    },
+    {
+      "id": "454c1427-0912-4493-8ceb-a5c226f0afc8",
+      "name": "SocialMedia",
+      "translations": {},
+      "type": "DYNAMIC_LIST",
+      "isRequired": true,
+      "nestedData": [
+        {
+          "id": "0c64d480-ab65-47a1-934d-debd6fbb8679",
+          "name": "Soysal Medya",
+          "typescriptName": "SocialMedia",
+          "translations": {},
+          "type": "OBJECT",
+          "isRequired": false,
+          "nestedData": [
+            {
+              "id": "795e6884-2e87-49c3-b1b3-b5f121e70a0b",
+              "name": "İkon (SVG formatında yükleyiniz)",
+              "translations": {},
+              "type": "RICH_TEXT",
+              "isRequired": false,
+              "key": "icon_SM",
+              "sliderData": {},
+              "groupId": "",
+              "isRoot": false,
+              "level": 2,
+              "excludedFields": [],
+              "excludedFieldsCategory": [],
+              "isFacetListNotSent": false
+            },
+            {
+              "id": "c5f37bdf-fffb-43b9-b34d-8093955ac408",
+              "name": "Başka Bir Sekmede Aç",
+              "translations": {},
+              "type": "BOOLEAN",
+              "isRequired": false,
+              "key": "isExternal_SM",
+              "sliderData": {},
+              "groupId": "",
+              "isRoot": false,
+              "level": 2,
+              "excludedFields": [],
+              "excludedFieldsCategory": [],
+              "isFacetListNotSent": false
+            },
+            {
+              "id": "e5f0ae4d-aef2-44c3-a78b-c21811c6366d",
+              "name": "Yönlendirme Bağlantısı",
+              "translations": {},
+              "type": "LINK",
+              "isRequired": false,
+              "key": "link_SM",
+              "sliderData": {},
+              "groupId": "",
+              "isRoot": false,
+              "level": 2,
+              "excludedFields": [],
+              "excludedFieldsCategory": [],
+              "isFacetListNotSent": false
+            }
+          ],
+          "sliderData": {},
+          "groupId": "",
+          "isRoot": false,
+          "level": 1,
+          "excludedFields": [],
+          "excludedFieldsCategory": [],
+          "isFacetListNotSent": false
+        }
+      ],
+      "sliderData": {},
+      "groupId": "",
+      "isRoot": true,
+      "level": 0,
+      "excludedFields": [],
+      "excludedFieldsCategory": [],
+      "isFacetListNotSent": false
     }
   ],
   "groups": [
@@ -2140,6 +2527,31 @@
     {
       "id": "bbdca48f-3ce7-41c3-8d93-3cc41d4e2f86",
       "name": "Arama Alanı",
+      "translations": {}
+    },
+    {
+      "id": "704db35a-803a-497e-9712-69c1fb554120",
+      "name": "Logo",
+      "translations": {}
+    },
+    {
+      "id": "c1421713-e0d6-48d9-b003-5c18afd40d95",
+      "name": "Yardım & Destek Linkleri",
+      "translations": {}
+    },
+    {
+      "id": "a10a63a0-28db-459e-a5a0-5505106aebf9",
+      "name": "Yasal Bilgilendirme Kategorileri",
+      "translations": {}
+    },
+    {
+      "id": "6d1c8eaa-f95a-4fc9-938f-1e033aa76614",
+      "name": "Alışveriş Politikaları",
+      "translations": {}
+    },
+    {
+      "id": "1c6f3017-79b6-4432-8719-4a0ad58c1a25",
+      "name": "Sosyal Medya İkonları ve Yönlendirme Bağlantıları",
       "translations": {}
     }
   ],
