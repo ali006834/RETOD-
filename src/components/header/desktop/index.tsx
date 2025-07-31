@@ -15,6 +15,7 @@ import ArrowRight from "../../svg/arrow-right-white";
 import Close from "../../svg/close";
 import ScrollingText from "../scrolling-text";
 import { SearchInput } from "../search";
+import { toJS } from "mobx";
 
 import { NS } from "../";
 
@@ -73,15 +74,10 @@ const LeftSide = (props: HeaderProps) => {
 /* Merkez */
 const Center = (props: HeaderProps) => {
   const { categoryMenu, staticCategoryMenu } = props;
+
   const altCat = categoryMenu?.data.filter(
     (item: any) => item.parentId !== null
   );
-  console.log("------------------------");
-  console.log(
-    "Alt Kategoriler:::::",
-    altCat?.map((item: any) => item.name)
-  );
-  console.log("------------------------");
 
   const [hoveredCategory, setHoveredCategory] = useState<string | null>(null);
   const router = useRouter();

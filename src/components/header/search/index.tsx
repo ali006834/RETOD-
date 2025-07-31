@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { observer } from "mobx-react-lite";
 import { useRouter } from "next/router";
-import { useStore, useTranslation, Link } from "@ikas/storefront";
+import { useTranslation, Link, Image, IkasProduct } from "@ikas/storefront";
 import { HeaderProps } from "src/components/__generated__/types";
 import UIStore from "src/store/ui-store";
 import IOCloseSVG from "../../svg/close";
@@ -54,6 +54,7 @@ export const SearchInput = observer((props: HeaderProps) => {
   // Proxiden gelen verileri JS'e çevir..
   const searchRecomProductsArr = toJS(searchRecomProducts);
 
+  console.log("searchRecomProductsArr:::", searchRecomProductsArr);
   return (
     <>
       <div className={styles.inlineSearchWrapper}>
@@ -88,25 +89,26 @@ export const SearchInput = observer((props: HeaderProps) => {
       {showSearchModal && (
         <div className={styles.searchModalOverlay}>
           <div className={styles.searchModalContainer}>
-            <div className={styles.searchModalHeader}>
-              <button
-                onClick={handleCloseSearch}
-                className={styles.searchModalCloseButton}
-              >
-                <IOCloseSVG width="24px" height="24px" />
-              </button>
-            </div>
             <div className={styles.searchModalContent}>
               <div className={styles.searchModalInner}>
                 {searchRecomProductsArr &&
-                  Array.isArray(searchRecomProductsArr) &&
-                  searchRecomProductsArr.length > 0 && (
+                  searchRecomProductsArr.data &&
+                  Array.isArray(searchRecomProductsArr.data) &&
+                  searchRecomProductsArr.data.length > 0 && (
                     <div className={styles.searchRecomProducts}>
-                      <h3 className={styles.searchRecomTitle}>
-                        Önerilen Ürünler
-                      </h3>
+                      <div className={styles.searchModalHeader}>
+                        <h3 className={styles.searchRecomTitle}>
+                          Önerilen Ürünler
+                        </h3>
+                        <button
+                          onClick={handleCloseSearch}
+                          className={styles.searchModalCloseButton}
+                        >
+                          <IOCloseSVG width="24px" height="24px" />
+                        </button>
+                      </div>
                       <div className={styles.searchProductGrid}>
-                        {searchRecomProductsArr.map(
+                        {searchRecomProductsArr.data.map(
                           (product: any, index: number) => (
                             <Link
                               key={index}
@@ -114,9 +116,9 @@ export const SearchInput = observer((props: HeaderProps) => {
                             >
                               <a className={styles.searchProductItem}>
                                 <div className={styles.productImageWrapper}>
-                                  <img
-                                    src={
-                                      product.image?.src ||
+                                  <Image
+                                    image={
+                                      product?.image ||
                                       product.featuredImage?.src
                                     }
                                     alt={product.image?.altText || product.name}

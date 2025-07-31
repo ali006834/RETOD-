@@ -1,5 +1,3 @@
-/*+ Search Component Styles */
-
 @keyframes slideIn {
   from {
     opacity: 0;
@@ -151,9 +149,11 @@
 
 .searchModalHeader {
   display: flex;
-  justify-content: flex-end;
-  padding: 16px 20px;
-  border-top: 1px solid #e5e7eb;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 0 24px 0;
+  margin-bottom: 0;
 }
 
 .searchModalCloseButton {
@@ -175,6 +175,7 @@
 .searchModalContent {
   padding: 20px 0;
   min-height: 200px;
+  border-top: 1px solid #e5e7eb;
 }
 
 .searchModalInner {
@@ -191,7 +192,7 @@
   font-size: 24px;
   font-weight: 500;
   color: #1f2937;
-  margin-bottom: 24px;
+  margin: 0;
   font-family: "Helvetica", sans-serif;
 }
 
@@ -298,7 +299,7 @@
 
   .searchRecomTitle {
     font-size: 22px;
-    margin-bottom: 20px;
+    margin: 0;
   }
 }
 
@@ -337,10 +338,6 @@
     padding: 0 10px;
   }
 
-  .searchModalHeader {
-    padding: 12px 15px;
-  }
-
   .searchProductGrid {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
@@ -348,7 +345,7 @@
 
   .searchRecomTitle {
     font-size: 20px;
-    margin-bottom: 16px;
+    margin: 0;
   }
 
   .productInfo {
