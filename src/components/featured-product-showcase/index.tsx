@@ -6,6 +6,7 @@ import { IkasProduct, Image, Link } from "@ikas/storefront";
 import { useScreen } from "src/utils/hooks/useScreen";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
+
 import "swiper/css";
 import "swiper/css/navigation";
 
@@ -41,8 +42,12 @@ const BannerSingle = (props: FeaturedProductShowcaseProps) => {
           <Swiper
             modules={[Navigation]}
             scrollbar={true}
-            className="mySwiper"
-            navigation={true}
+            className={styles.mySwiper}
+            navigation={{
+              nextEl: ".swiper-button-next",
+              prevEl: "", // Sol ok Olmayacak
+            }}
+            loop={true} // Sonsuz döngü
             slidesPerView={2.5} // Varsayılan mobil
             spaceBetween={15}
             breakpoints={{
@@ -51,8 +56,9 @@ const BannerSingle = (props: FeaturedProductShowcaseProps) => {
                 spaceBetween: 15,
               },
               1024: {
-                slidesPerView: 4, // Web
+                slidesPerView: 4.5, // Web
                 spaceBetween: 15,
+                slidesPerGroup: 4, // Kaydırma grup sayısı
               },
             }}
           >
@@ -72,6 +78,10 @@ const BannerSingle = (props: FeaturedProductShowcaseProps) => {
                 </SwiperSlide>
               );
             })}
+            {/* Custom right arrow */}
+            <div
+              className={`${styles.swiperButtonNext} swiper-button-next`}
+            ></div>
           </Swiper>
         </div>
       </div>

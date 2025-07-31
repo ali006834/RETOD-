@@ -1,0 +1,138 @@
+.container {
+  width: 100%;
+  /* margin-bottom: 50px; */
+  margin-top: 30px;
+}
+
+.desktopContainer {
+  display: none;
+  max-width: 1530px;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0;
+  position: relative; 
+}
+
+.titleContainer {
+  position: absolute;
+  top: -50px; 
+  left: 0; 
+  z-index: 20;
+  text-align: left;
+  pointer-events: none;
+  max-width: 50%; 
+}
+
+.title {
+  font-family: var(--font-about);
+  font-size: 4rem;
+  letter-spacing: 0.1em;
+  margin: 0;
+  font-family: "Akkurat Pro" !important;
+  font-weight: 100;
+}
+
+.slidesGrid {
+  display: flex;
+  height: 500px; 
+  overflow: hidden;
+  position: relative;
+}
+
+.slideItem {
+  position: relative;
+  flex: 1;
+  transition: all 0.5s ease;
+  height: 100%;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.slideItem:not(:hover) {
+/* Hover olmayanları biraz koyulaştır */
+  /* filter: brightness(0.8);  */
+}
+
+.slideItem:hover {
+  flex: 3;
+  z-index: 2; /* Hover yapılan diğerlerinin üstünde dursun */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Gölge efekti ekleyebiliriz */
+}
+
+.imageContainer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slideImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.slideItem:hover .slideImage {
+  transform: scale(1.02);
+}
+
+.mobileSlide {
+  padding: 0 0.5rem;
+}
+
+.mobileImage {
+  width: 100%;
+  height: auto;
+  max-height: 60vh;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.slick-dots {
+  bottom: 1rem;
+}
+
+.slick-dots li button:before {
+  color: white;
+  opacity: 0.5;
+  font-size: 0.5rem;
+}
+
+.slick-dots li.slick-active button:before {
+  color: white;
+  opacity: 1;
+}
+
+.mobileContainer {
+  display: block;
+}
+
+
+/* Responsive */
+@media only screen and (max-width: 1600px) {
+  .container {
+    max-width: 1280px;
+    padding: 0 1rem;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    max-width: 880px;
+  }
+
+}
+
+
+@media (min-width: 1024px) {
+  .desktopContainer {
+    display: flex;
+  }
+
+  .mobileContainer {
+    display: none;
+  }
+}
