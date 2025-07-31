@@ -164,30 +164,43 @@
 }
 
 .centerText {
-  padding-bottom: 10px;
+  /* padding-bottom: 10px;
   font-size: 2.5rem;
   font-weight: bold;
   text-align: center;
   line-height: 1.2;
-  font-family: "ChronicleDisplay" !important;
+  font-family: "ChronicleDisplay" !important; */
+
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  font-family: "ChronicleDisplay";
 }
 
 .centerContent {
-  padding-bottom: 20px;
+  /* padding-bottom: 20px;
   font-size: 1.25rem;
   text-align: center;
   line-height: 1.4;
   max-width: 300px;
-  font-family: "ChronicleDisplay" !important;
+  font-family: "ChronicleDisplay" !important; */
+
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 500;
+  color: #000;
+  margin-bottom: 30px;
+  font-family: "Helvetica";
 }
 
 .centerButton {
+  display: flex;
+  font-size: 1rem;
   background: transparent;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-size: 14px;
-  font-weight: bold;
-  display: flex;
+  font-weight: 400;
   align-items: center;
   justify-content: center;
   gap: 8px;
