@@ -57,6 +57,43 @@ export const SearchInput = observer((props: HeaderProps) => {
     }
   }, [showInlineSearch]);
 
+  // Modal açıldığında body ve html scroll'unu tamamen engelle
+  useEffect(() => {
+    if (showSearchModal) {
+      // Mevcut scroll pozisyonunu kaydet
+      const scrollY = window.scrollY;
+
+      // Body ve HTML elementlerinin scroll'unu engelle
+      document.documentElement.style.overflow = "hidden";
+      document.body.style.overflow = "hidden";
+      document.body.style.position = "fixed";
+      document.body.style.top = `-${scrollY}px`;
+      document.body.style.width = "100%";
+    } else {
+      // Scroll engellemesini kaldır ve pozisyonu geri yükle
+      const scrollY = document.body.style.top;
+      document.documentElement.style.overflow = "";
+      document.body.style.overflow = "";
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.width = "";
+
+      // Scroll pozisyonunu geri yükle
+      if (scrollY) {
+        window.scrollTo(0, parseInt(scrollY || "0") * -1);
+      }
+    }
+
+    // Cleanup function
+    return () => {
+      document.documentElement.style.overflow = "";
+      document.body.style.overflow = "";
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.width = "";
+    };
+  }, [showSearchModal]);
+
   //Eğer searchRecomProducts yoksa null dön..
   if (!searchRecomProducts) return null;
 
