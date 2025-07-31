@@ -97,10 +97,6 @@ export const SearchInput = observer((props: HeaderProps) => {
   //Eğer searchRecomProducts yoksa null dön..
   if (!searchRecomProducts) return null;
 
-  // Proxiden gelen verileri JS'e çevir..
-  const searchRecomProductsArr = toJS(searchRecomProducts);
-  console.log("searchRecomProductsArr:::", searchRecomProductsArr);
-
   return (
     <>
       <div className={styles.inlineSearchWrapper}>
