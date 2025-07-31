@@ -76,6 +76,12 @@ const Center = (props: HeaderProps) => {
   const altCat = categoryMenu?.data.filter(
     (item: any) => item.parentId !== null
   );
+  console.log("------------------------");
+  console.log(
+    "Alt Kategoriler:::::",
+    altCat?.map((item: any) => item.name)
+  );
+  console.log("------------------------");
 
   const [hoveredCategory, setHoveredCategory] = useState<string | null>(null);
   const router = useRouter();
@@ -141,23 +147,62 @@ const Center = (props: HeaderProps) => {
 
                   {/* Alt kategoriler */}
                   <div className={styles.alt_category_container}>
-                    {altCat?.map((altCategory: any, index: number) => {
-                      return (
-                        <>
-                          {item.id === altCategory.parentId && (
-                            <div key={index}>
-                              <div className={styles.alt_category_content}>
-                                <Link href={altCategory.href}>
-                                  <a>
-                                    <span>{altCategory.name}</span>
-                                  </a>
-                                </Link>
-                              </div>
-                            </div>
-                          )}
-                        </>
-                      );
-                    })}
+                    <div className={styles.alt_category_list}>
+                      {altCat?.map((altCategory: any, index: number) => {
+                        return (
+                          <>
+                            {item.id === altCategory.parentId &&
+                              altCategory?.image === null && (
+                                <div key={index}>
+                                  <div className={styles.alt_category_content}>
+                                    <Link href={altCategory.href}>
+                                      <a>
+                                        <span>{altCategory.name}</span>
+                                      </a>
+                                    </Link>
+                                  </div>
+                                </div>
+                              )}
+                          </>
+                        );
+                      })}
+                    </div>
+
+                    {/* Resim alanı */}
+                    <div className={styles.alt_category_images}>
+                      {altCat?.map((altCategory: any, index: number) => {
+                        return (
+                          <>
+                            {item.id === altCategory.parentId &&
+                              altCategory?.image !== null && (
+                                <div
+                                  key={`image-${index}`}
+                                  className={styles.category_image_item}
+                                >
+                                  <img
+                                    src={altCategory?.image?.src}
+                                    alt={altCategory?.image?.altText || ""}
+                                  />
+                                  <div className={styles.category_image_info}>
+                                    <h3 className={styles.category_image_title}>
+                                      {altCategory.name}
+                                    </h3>
+                                    {altCategory.description && (
+                                      <p
+                                        className={
+                                          styles.category_image_description
+                                        }
+                                      >
+                                        {altCategory.description}
+                                      </p>
+                                    )}
+                                  </div>
+                                </div>
+                              )}
+                          </>
+                        );
+                      })}
+                    </div>
                   </div>
                 </div>
               </div>
