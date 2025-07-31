@@ -13,6 +13,8 @@
   "dependencies": {
     "@ikas/storefront": "^4.0.0",
     "@ikas/storefront-peer-deps": "^4.0.0",
+    "react-slick": "^0.30.3",
+    "slick-carousel": "^1.8.1",
     "styled-components": "^6.1.19"
   },
   "devDependencies": {

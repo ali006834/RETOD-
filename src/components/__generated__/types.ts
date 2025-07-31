@@ -22,6 +22,10 @@ export type BannerTopVideo = {
 	priorityOrder?: string;
 };
 
+export type SlidingSlider = { 
+	imageSlider?: IkasImage;
+};
+
 export type HeaderProps = {
 	logo?: IkasImage;
 	logo_black?: IkasImage;
@@ -69,5 +73,14 @@ export type FeaturedProductShowcaseProps = {
 	contentText?: string;
 	btnText?: string;
 	btnLink?: IkasNavigationLink;
+};
+
+export type BannerSlidingSliderProps = {
+	imageSliders?: SlidingSlider[];
+	titleBanner?: string;
+	lowerTitle?: string;
+	lowerContent?: string;
+	lowerBtnText?: string;
+	lowerBtnLink?: IkasNavigationLink;
 };
 
