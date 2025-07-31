@@ -14,7 +14,7 @@
       "componentJson": null,
       "props": [
         {
-          "id": "88e66385-7057-46f9-af38-b922287aa7af",
+          "id": "8499d442-a195-47ad-83e9-a818eb936119",
           "name": "logo",
           "displayName": "",
           "description": "",
@@ -28,7 +28,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "e79c7a12-baf6-4faf-9ed5-8e10bf46a521",
+          "id": "49647d52-a870-45de-b5ab-baffc85d610e",
           "name": "showTax",
           "displayName": "",
           "description": "",
@@ -42,7 +42,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "8564a51e-e100-4d60-b0c1-418d0f9c174e",
+          "id": "bcbd44d8-1f73-4ecc-8a26-5e84799236c1",
           "name": "showCampaignOffersDesign",
           "displayName": "",
           "description": "",
@@ -56,7 +56,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "dda02441-b191-4b7e-837e-890d0837f088",
+          "id": "11062ca9-cade-4ad4-b06b-10e559366357",
           "name": "campaignOfferIsSmallDesign",
           "displayName": "",
           "description": "",
@@ -70,7 +70,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "2bcc76c7-57ef-42b8-abe5-06ef2762a121",
+          "id": "6ff3d576-7d96-4ac5-9d31-6e42d02e00c6",
           "name": "showCampaignIsBiggerImage",
           "displayName": "",
           "description": "",
@@ -84,7 +84,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "63ef64c9-4dc8-4708-9dda-4011a0c29be3",
+          "id": "6f4ba62d-1e11-4bb2-916c-5f70c23e9200",
           "name": "campaignOffersTitleColor",
           "displayName": "",
           "description": "",
@@ -98,7 +98,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "6904f3c9-c679-4710-af31-38363c3c3030",
+          "id": "2f575275-c232-48e2-a0f7-b5c8591ff22a",
           "name": "campaignOffersDescriptionColor",
           "displayName": "",
           "description": "",
@@ -112,7 +112,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "6b317233-bf98-4cf1-9fb8-d55fd555c382",
+          "id": "ea6df768-8abb-4ea2-ad02-8bd47a930313",
           "name": "campaignOffersContainerBgColor",
           "displayName": "",
           "description": "",
@@ -126,7 +126,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "7b747f32-c016-4a51-8762-cafb5bbac698",
+          "id": "25ed8bc4-7358-4d29-b017-d88d300a6d1d",
           "name": "showCampaignShowDiscountSettings",
           "displayName": "",
           "description": "",
@@ -140,7 +140,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "c73801e2-dfff-4d49-ac7e-970d0dab37ea",
+          "id": "4d131708-8b4e-4ed8-ada1-c20be380e42d",
           "name": "showCampaignHideDiscountBadge",
           "displayName": "",
           "description": "",
@@ -154,7 +154,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "1ab7523e-5dfd-410f-b191-5b3f5881663b",
+          "id": "2dc7d6ae-048d-46fd-b6a8-51f72c9c7400",
           "name": "campaignOffersDiscountPercentageColor",
           "displayName": "",
           "description": "",
@@ -168,7 +168,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "ff94630b-5b06-46a8-abae-664f25b5c624",
+          "id": "0779542b-291f-453b-bb11-501d192cc686",
           "name": "campaignOffersDiscountPercentageBgColor",
           "displayName": "",
           "description": "",
@@ -182,7 +182,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "e3b93c42-6fe0-406d-baf6-f692c1faacf3",
+          "id": "cac05d81-72cd-4408-98ec-6949a3a2d545",
           "name": "showCampaignShowCountdownSettings",
           "displayName": "",
           "description": "",
@@ -196,7 +196,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "1a3fe32a-472d-4558-be5f-6f9ab7c9778d",
+          "id": "256dfdb4-b78c-45e8-a244-b934b06f2ab1",
           "name": "campaignOfferCountdownStyleIsLine",
           "displayName": "",
           "description": "",
@@ -210,7 +210,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "e590bf83-9f0b-4169-8f96-4f7791ecb7ab",
+          "id": "f4d77cc0-1b80-4efa-80d7-ee38aba1e240",
           "name": "campaignOffersCountdownTextColor",
           "displayName": "",
           "description": "",
@@ -224,7 +224,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "7d48c8c0-5462-4b19-a786-74faabf48ccf",
+          "id": "fb702b39-5527-4df8-b04f-897fe99f64ce",
           "name": "campaignOffersCountdownTimeColor",
           "displayName": "",
           "description": "",
@@ -238,7 +238,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "321d41ee-5a51-46b3-9c4b-7240d20eadef",
+          "id": "20b31187-3669-4c74-b827-c5cc5cc79ca2",
           "name": "campaignOffersCountdownBgColor",
           "displayName": "",
           "description": "",
@@ -252,7 +252,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "f8cbb79f-00fe-4d24-894f-b1deaa808467",
+          "id": "8634fc75-b82e-44da-abb4-dc06cef3ebee",
           "name": "campaignOffersEnableMiddlePhase",
           "displayName": "",
           "description": "",
@@ -266,7 +266,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "c0daa9ce-6608-48d4-b3e1-5adb027ce172",
+          "id": "6a0d65e7-df60-4393-ab01-128d0ce4edfe",
           "name": "campaignOffersMiddlePhaseOverlayColor",
           "displayName": "",
           "description": "",
@@ -280,7 +280,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "6d5ab132-5a35-46ac-9a7e-2bf5bce253b9",
+          "id": "c8ab569a-117e-4213-aa8e-04545a48b875",
           "name": "campaignOfferCountdownStyleIsLineSuccessPage",
           "displayName": "",
           "description": "",
@@ -294,7 +294,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "576e3b65-a51a-4556-a926-9ef6227c42cf",
+          "id": "0a1d6815-d8ce-443b-aa99-32a704539096",
           "name": "buttonBgColor",
           "displayName": "",
           "description": "",
@@ -308,7 +308,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "e1ffd901-dfa4-4249-8956-1035506a4201",
+          "id": "e0b87afb-46d8-447c-a452-aebeb770e5ef",
           "name": "buttonTextColor",
           "displayName": "",
           "description": "",
@@ -322,7 +322,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "8f0cf6d3-368b-4ffd-8928-effc55fe2a55",
+          "id": "f9b20e54-164a-461a-a9ef-97121de86985",
           "name": "buttonDisabledBgColor",
           "displayName": "",
           "description": "",
@@ -336,7 +336,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "beffd1eb-16f2-430b-8ac7-8e3e3864cad9",
+          "id": "3ca2cce4-8213-4c34-b0ba-0b4c2c4a157e",
           "name": "buttonDisabledTextColor",
           "displayName": "",
           "description": "",
@@ -350,7 +350,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "66133441-88ff-49b9-8592-19c6b8a08336",
+          "id": "0efac449-4a9f-48ad-b099-d9175a891007",
           "name": "primaryTextColor",
           "displayName": "",
           "description": "",
@@ -364,7 +364,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "60ce7e8f-96e0-4824-aa4b-a28fc87dc395",
+          "id": "e81aa069-dbc4-4dad-86d4-458309ac22e3",
           "name": "secondaryTextColor",
           "displayName": "",
           "description": "",
@@ -378,7 +378,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "a52fb35e-118d-4cff-bb16-0e83f8956418",
+          "id": "0cb2c98d-7373-4904-8248-9791cbe6b6ee",
           "name": "primaryBgColor",
           "displayName": "",
           "description": "",
@@ -392,7 +392,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "57c4c72d-e9f9-4d9e-9356-29b63ba3e926",
+          "id": "eb43bee0-d6a1-49fb-8002-72392c08ffcf",
           "name": "secondaryBgColor",
           "displayName": "",
           "description": "",
@@ -406,7 +406,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "3aefb898-04c6-4058-899e-e7dc3ea0ef5a",
+          "id": "a11e641b-deb5-4002-bdb6-b1e7e0c958af",
           "name": "borderColor",
           "displayName": "",
           "description": "",
@@ -420,7 +420,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "769d0f55-b89d-4314-94d9-df5e5b8e208f",
+          "id": "fef6fdb4-e557-4dcb-a1af-8f0054fc2503",
           "name": "cardBgColor",
           "displayName": "",
           "description": "",
@@ -434,7 +434,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "4e0017a6-acf3-4865-853a-58fe30b860ab",
+          "id": "c5e4675f-c4ef-492d-828c-9847f73b3b94",
           "name": "errorColor",
           "displayName": "",
           "description": "",
@@ -448,7 +448,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "2a2d6b82-cb64-4a9c-875d-9bcd07e6868d",
+          "id": "9a84f0f9-2679-4723-9d65-a085ce514a4a",
           "name": "errorLightColor",
           "displayName": "",
           "description": "",
@@ -462,7 +462,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "e024a40c-266b-4ee8-ab27-d19124b78ac9",
+          "id": "2c50b80b-873d-4f2b-b1f5-d4c8ab32e271",
           "name": "warningColor",
           "displayName": "",
           "description": "",
@@ -476,7 +476,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "a1e74cfe-0d0f-43d5-bd68-d840ea0323ad",
+          "id": "aa8cc4fb-46a4-4f69-a7f4-36d1b8fcd2a0",
           "name": "warningLightColor",
           "displayName": "",
           "description": "",
@@ -490,7 +490,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "00fc29c4-014d-48a1-b410-1ab8eea505b4",
+          "id": "68dd1fab-a321-4e05-b2a2-d5e701c039cb",
           "name": "successColor",
           "displayName": "",
           "description": "",
@@ -504,7 +504,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "0eddbd93-0127-4f82-a34a-59ed2ad7b33b",
+          "id": "1c99e2bd-c469-4e6d-93ed-c138bd57e4ae",
           "name": "successLightColor",
           "displayName": "",
           "description": "",
@@ -518,7 +518,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "56a9cb81-5fc1-491c-9208-96c451d1def3",
+          "id": "4a6c40ba-5a3d-414a-9564-6672379b9572",
           "name": "secondaryButtonBgColor",
           "displayName": "",
           "description": "",
@@ -532,7 +532,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "79316131-bc1b-4f7b-b148-da8994a75610",
+          "id": "fcf17d3b-0031-469d-8455-f62adfbe704e",
           "name": "secondaryButtonTextColor",
           "displayName": "",
           "description": "",
@@ -546,7 +546,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "1a21b1e1-fc92-4acc-9f64-323c7647b2b9",
+          "id": "bddbe51b-316e-4cd3-8679-3db426be2248",
           "name": "secondaryButtonBorderColor",
           "displayName": "",
           "description": "",
@@ -710,6 +710,34 @@
           "sliderData": {},
           "translations": {},
           "groupId": "617c8d42-e087-4745-a675-61912e1b9b9a",
+          "excludedFields": [],
+          "excludedFieldsCategory": [],
+          "isFacetListNotSent": false
+        },
+        {
+          "id": "3170efad-a5f8-477a-a377-56e3c8b9c363",
+          "name": "cartProducts",
+          "displayName": "Ürün Listesi",
+          "description": "Ürün Listesi",
+          "type": "PRODUCT_LIST",
+          "isRequired": false,
+          "sliderData": {},
+          "translations": {},
+          "groupId": "7f649271-1b7f-4b5c-8167-4d6a5d950097",
+          "excludedFields": [],
+          "excludedFieldsCategory": [],
+          "isFacetListNotSent": false
+        },
+        {
+          "id": "e018704c-5b41-45d7-adf5-994b876aa0c5",
+          "name": "title",
+          "displayName": "Başlık",
+          "description": "Başlık",
+          "type": "TEXT",
+          "isRequired": false,
+          "sliderData": {},
+          "translations": {},
+          "groupId": "7f649271-1b7f-4b5c-8167-4d6a5d950097",
           "excludedFields": [],
           "excludedFieldsCategory": [],
           "isFacetListNotSent": false
@@ -1428,6 +1456,123 @@
       "defaultPropValuesTranslations": {},
       "defaultPropValues": {},
       "commonPropValues": null
+    },
+    {
+      "id": "b0214df4-a89c-4a83-84ee-56e25518ccc9",
+      "dir": "product-list",
+      "displayName": "Kategori Sayfası",
+      "description": "Kategori Sayfası",
+      "type": "COMPONENT",
+      "componentJson": null,
+      "props": [
+        {
+          "id": "27ae24ce-7511-43de-932e-13c6012bac7d",
+          "name": "categories",
+          "displayName": "Kategori Listesi",
+          "description": "Kategori Listesi",
+          "type": "CATEGORY_LIST",
+          "isRequired": false,
+          "sliderData": {},
+          "translations": {},
+          "groupId": "69842a4e-1104-460d-94ee-38d4a333b331",
+          "excludedFields": [],
+          "excludedFieldsCategory": [],
+          "isFacetListNotSent": false
+        },
+        {
+          "id": "e97cd2c0-be66-4f48-9149-b2c1e7dcdd12",
+          "name": "productList",
+          "displayName": "Ürün Listesi",
+          "description": "Ürün Listesi",
+          "type": "PRODUCT_LIST",
+          "isRequired": false,
+          "sliderData": {},
+          "translations": {},
+          "groupId": "f0c123b2-fc2c-4f45-9345-74f5a425ca85",
+          "excludedFields": [],
+          "excludedFieldsCategory": [],
+          "isFacetListNotSent": false
+        }
+      ],
+      "isHeader": false,
+      "isFooter": false,
+      "translations": {},
+      "defaultPropValuesTranslations": {},
+      "defaultPropValues": {},
+      "commonPropValues": null
+    },
+    {
+      "id": "bf550c80-41a6-4875-a5b9-c87556690bb4",
+      "dir": "product-detail",
+      "displayName": "Ürün Detayı",
+      "description": "Ürün Detayı",
+      "type": "COMPONENT",
+      "componentJson": null,
+      "props": [
+        {
+          "id": "baad22b5-b97b-43e6-9b70-d49afe75c51f",
+          "name": "product",
+          "displayName": "product",
+          "description": "product",
+          "type": "PRODUCT_DETAIL",
+          "isRequired": false,
+          "sliderData": {},
+          "translations": {},
+          "groupId": "",
+          "excludedFields": [],
+          "excludedFieldsCategory": [],
+          "isFacetListNotSent": false
+        },
+        {
+          "id": "c0640e5d-b7f2-4b00-afc4-d29aadd0fa14",
+          "name": "deliveryDescription",
+          "displayName": "deliveryDescription",
+          "description": "deliveryDescription",
+          "type": "TEXT",
+          "isRequired": false,
+          "sliderData": {},
+          "translations": {},
+          "groupId": "",
+          "excludedFields": [],
+          "excludedFieldsCategory": [],
+          "isFacetListNotSent": false
+        },
+        {
+          "id": "b1ba3a79-8603-418f-88c9-4b40025d7373",
+          "name": "deliveryDescriptionLink",
+          "displayName": "deliveryDescriptionLink",
+          "description": "deliveryDescriptionLink",
+          "type": "LINK",
+          "isRequired": false,
+          "sliderData": {},
+          "translations": {},
+          "groupId": "",
+          "excludedFields": [],
+          "excludedFieldsCategory": [],
+          "isFacetListNotSent": false
+        },
+        {
+          "id": "585068da-faf2-46a3-b6c8-535e34abab24",
+          "name": "bankTable",
+          "displayName": "Tablo",
+          "description": "Tablo",
+          "type": "CUSTOM",
+          "isRequired": false,
+          "customDataId": "0dc47d32-7158-4743-a568-e239b4e937fc",
+          "sliderData": {},
+          "translations": {},
+          "groupId": "53a3c754-e0b6-46d5-bc4a-17c5ab98c4e9",
+          "excludedFields": [],
+          "excludedFieldsCategory": [],
+          "isFacetListNotSent": false
+        }
+      ],
+      "isHeader": false,
+      "isFooter": false,
+      "translations": {},
+      "defaultPropValuesTranslations": {},
+      "defaultPropValues": {},
+      "commonPropValues": null
     }
   ],
   "pages": [
@@ -1496,7 +1641,22 @@
               "recommendedProductsType": {
                 "recommendedProductType": "CATEGORY"
               }
-            }
+            },
+            "cartProducts": {
+              "id": "4a8052f8-8f54-4b19-8921-c43277588089",
+              "productListType": "ALL",
+              "initialSort": "LAST_ADDED",
+              "initialLimit": 20,
+              "productCount": null,
+              "productIds": null,
+              "category": null,
+              "usePageFilter": null,
+              "relatedProductsType": null,
+              "recommendedProductsType": {
+                "recommendedProductType": "CATEGORY"
+              }
+            },
+            "title": "Senin İçin Önerilenler"
           }
         },
         {
@@ -1968,7 +2128,280 @@
       "id": "aa9daf62-60d3-458b-ad91-e09b069bc63c",
       "name": "",
       "type": "PRODUCT",
-      "components": [],
+      "components": [
+        {
+          "id": "6d4f3706-b749-4730-a60c-9bb58bb20e4c",
+          "componentId": "b01c12e8-e280-44b6-8beb-a315513086f9",
+          "propValues": {
+            "categoryMenu": {
+              "categoryListType": "ALL",
+              "initialSort": "A_Z",
+              "initialLimit": 20,
+              "categoryCount": null,
+              "categoryIds": null
+            },
+            "logo": {
+              "id": "theme-images/218c87ea-fe09-46c5-aeac-b08ab25a724f",
+              "altText": null
+            },
+            "logo_black": {
+              "id": "theme-images/6eca4eff-b545-4e7d-97c5-21f14c40d9cd",
+              "altText": null
+            },
+            "scrollingTexts": [
+              {
+                "content": "Worldwide delivery and free returns - shop now"
+              },
+              {
+                "content": "New arrivals, now dropping five days a week - discover now"
+              }
+            ],
+            "special_for_your": {
+              "id": "24606484-f26d-45ac-86f8-099c5796f953",
+              "linkType": "PAGE",
+              "label": "Anasayfa",
+              "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+              "pageType": "INDEX",
+              "pageComponentId": null,
+              "subLinks": []
+            },
+            "staticCategoryMenu": {
+              "categoryListType": "STATIC",
+              "initialSort": "A_Z",
+              "initialLimit": 20,
+              "categoryCount": null,
+              "categoryIds": [
+                "40681fe2-21a8-452f-971f-0674b4a81c8e",
+                "7f1dc875-9c19-4994-bb18-af532e98e4a0",
+                "a5117e23-d26d-48f2-9daa-43bdc4001364"
+              ]
+            },
+            "searchRecomProducts": {
+              "id": "34f1f7dd-8a84-43e5-a2e3-a7f93168df88",
+              "productListType": "ALL",
+              "initialSort": "LAST_ADDED",
+              "initialLimit": 20,
+              "productCount": null,
+              "productIds": null,
+              "category": null,
+              "usePageFilter": null,
+              "relatedProductsType": null,
+              "recommendedProductsType": {
+                "recommendedProductType": "CATEGORY"
+              }
+            },
+            "cartProducts": {
+              "id": "4a8052f8-8f54-4b19-8921-c43277588089",
+              "productListType": "ALL",
+              "initialSort": "LAST_ADDED",
+              "initialLimit": 20,
+              "productCount": null,
+              "productIds": null,
+              "category": null,
+              "usePageFilter": null,
+              "relatedProductsType": null,
+              "recommendedProductsType": {
+                "recommendedProductType": "CATEGORY"
+              }
+            },
+            "title": "Senin İçin Önerilenler"
+          }
+        },
+        {
+          "id": "1003cbd1-cfd1-49b2-bfe5-8696888ecbcd",
+          "componentId": "b6119c6a-04ef-4f91-932a-0bfcc99efc43",
+          "propValues": {
+            "logo": {
+              "id": "theme-images/571cc7c5-4feb-42a7-bb03-d0ebcfec9825",
+              "altText": null
+            },
+            "supportLinks": [
+              {
+                "id": "1622d7d3-7ba6-4497-a914-8ca4f7961bd7",
+                "linkType": "PAGE",
+                "label": "Anasayfa",
+                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                "pageType": "INDEX",
+                "itemId": null,
+                "externalLink": null,
+                "fileUrl": null,
+                "pageComponentId": null,
+                "subLinks": []
+              },
+              {
+                "id": "d4a250ec-3c2f-4dd7-81a1-24dd1ff14285",
+                "linkType": "PAGE",
+                "label": "Anasayfa",
+                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                "pageType": "INDEX",
+                "itemId": null,
+                "externalLink": null,
+                "fileUrl": null,
+                "pageComponentId": null,
+                "subLinks": []
+              },
+              {
+                "id": "45f29df3-4740-4c29-a3cc-8288fe18bfd9",
+                "linkType": "PAGE",
+                "label": "Anasayfa",
+                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                "pageType": "INDEX",
+                "itemId": null,
+                "externalLink": null,
+                "fileUrl": null,
+                "pageComponentId": null,
+                "subLinks": []
+              },
+              {
+                "id": "af4afe2e-7c76-4f6d-a914-014faa0309c8",
+                "linkType": "PAGE",
+                "label": "Anasayfa",
+                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                "pageType": "INDEX",
+                "pageComponentId": null,
+                "subLinks": []
+              }
+            ],
+            "legalLinks": [
+              {
+                "id": "c4c0591b-ab5e-49e3-bfb3-4a05d2736123",
+                "linkType": "PAGE",
+                "label": "Anasayfa",
+                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                "pageType": "INDEX",
+                "pageComponentId": null,
+                "subLinks": []
+              },
+              {
+                "id": "3fb3d68d-cafe-4b4e-b8bf-ba1b8c267ccd",
+                "linkType": "PAGE",
+                "label": "Anasayfa",
+                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                "pageType": "INDEX",
+                "itemId": null,
+                "externalLink": null,
+                "fileUrl": null,
+                "pageComponentId": null,
+                "subLinks": []
+              }
+            ],
+            "socialMediaList": [
+              {
+                "id": "ea77061c-90cb-4dae-87ff-db7ded28f99c",
+                "linkType": "PAGE",
+                "label": "Anasayfa",
+                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                "pageType": "INDEX",
+                "itemId": null,
+                "externalLink": null,
+                "fileUrl": null,
+                "pageComponentId": null,
+                "subLinks": [],
+                "icon_SM": "  <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"#222\" width=\"20px\" height=\"20px\" viewBox=\"0 0 1920 1920\">\n    <path d=\"M1168.737 487.897c44.672-41.401 113.824-36.889 118.9-36.663l289.354-.113 6.317-417.504L1539.65 22.9C1511.675 16.02 1426.053 0 1237.324 0 901.268 0 675.425 235.206 675.425 585.137v93.97H337v451.234h338.425V1920h451.234v-789.66h356.7l62.045-451.233H1126.66v-69.152c0-54.937 14.214-96.112 42.078-122.058\" fill-rule=\"evenodd\"></path>\n  </svg>",
+                "isExternal_SM": true,
+                "link_SM": {
+                  "id": "54b322de-23b7-4f71-bb83-ea3b1f5f919d",
+                  "linkType": "PAGE",
+                  "label": "Anasayfa",
+                  "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                  "pageType": "INDEX",
+                  "pageComponentId": null,
+                  "subLinks": []
+                }
+              },
+              {
+                "id": "d8b026ea-b537-42da-8a18-42f20ae40d23",
+                "linkType": "PAGE",
+                "label": "Anasayfa",
+                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                "pageType": "INDEX",
+                "pageComponentId": null,
+                "subLinks": [],
+                "icon_SM": "  <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"222\" width=\"23px\" height=\"23px\" viewBox=\"0 0 24 24\">\n    <g>\n      <path fill=\"none\" d=\"M0 0h24v24H0z\"></path>\n      <path fill-rule=\"nonzero\" d=\"M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153a4.908 4.908 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 0 1-1.153 1.772 4.915 4.915 0 0 1-1.772 1.153c-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 0 1-1.772-1.153 4.904 4.904 0 0 1-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 0 1 1.153-1.772A4.897 4.897 0 0 1 5.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm6.5-.25a1.25 1.25 0 0 0-2.5 0 1.25 1.25 0 0 0 2.5 0zM12 9a3 3 0 1 1 0 6 3 3 0 0 1 0-6z\"></path>\n    </g>\n  </svg>",
+                "isExternal_SM": true,
+                "link_SM": {
+                  "id": "b256f6ad-0850-4c37-8ba7-7ce4954f414e",
+                  "linkType": "PAGE",
+                  "label": "Anasayfa",
+                  "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                  "pageType": "INDEX",
+                  "pageComponentId": null,
+                  "subLinks": []
+                }
+              },
+              {
+                "icon_SM": "  <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"23px\" height=\"23px\" viewBox=\"0 -3 20 20\" version=\"1.1\">\n    <title>youtube [#168]</title>\n    <desc>Created with Sketch.</desc>\n    <defs></defs>\n    <g id=\"Page-1\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\">\n      <g id=\"Dribbble-Light-Preview\" transform=\"translate(-300.000000, -7442.000000)\" fill=\"#222\">\n        <g id=\"icons\" transform=\"translate(56.000000, 160.000000)\">\n          <path d=\"M251.988432,7291.58588 L251.988432,7285.97425 C253.980638,7286.91168 255.523602,7287.8172 257.348463,7288.79353 C255.843351,7289.62824 253.980638,7290.56468 251.988432,7291.58588 M263.090998,7283.18289 C262.747343,7282.73013 262.161634,7282.37809 261.538073,7282.26141 C259.705243,7281.91336 248.270974,7281.91237 246.439141,7282.26141 C245.939097,7282.35515 245.493839,7282.58153 245.111335,7282.93357 C243.49964,7284.42947 244.004664,7292.45151 244.393145,7293.75096 C244.556505,7294.31342 244.767679,7294.71931 245.033639,7294.98558 C245.376298,7295.33761 245.845463,7295.57995 246.384355,7295.68865 C247.893451,7296.0008 255.668037,7296.17532 261.506198,7295.73552 C262.044094,7295.64178 262.520231,7295.39147 262.895762,7295.02447 C264.385932,7293.53455 264.28433,7285.06174 263.090998,7283.18289\" id=\"youtube-[#168]\"></path>\n        </g>\n      </g>\n    </g>\n  </svg>",
+                "isExternal_SM": true,
+                "link_SM": {
+                  "id": "bfc449ee-02a5-4eeb-b6c8-7b1f40d7ab50",
+                  "linkType": "PAGE",
+                  "label": "Anasayfa",
+                  "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                  "pageType": "INDEX",
+                  "pageComponentId": null,
+                  "subLinks": []
+                }
+              },
+              {
+                "icon_SM": "  <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"19px\" height=\"19px\" viewBox=\"0 0 20 20\" version=\"1.1\">\n    <title>whatsapp [#128]</title>\n    <desc>Created with Sketch.</desc>\n    <defs></defs>\n    <g id=\"Page-1\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\">\n      <g id=\"Dribbble-Light-Preview\" transform=\"translate(-300.000000, -7599.000000)\" fill=\"#222\">\n        <g id=\"icons\" transform=\"translate(56.000000, 160.000000)\">\n          <path d=\"M259.821,7453.12124 C259.58,7453.80344 258.622,7454.36761 257.858,7454.53266 C257.335,7454.64369 256.653,7454.73172 254.355,7453.77943 C251.774,7452.71011 248.19,7448.90097 248.19,7446.36621 C248.19,7445.07582 248.934,7443.57337 250.235,7443.57337 C250.861,7443.57337 250.999,7443.58538 251.205,7444.07952 C251.446,7444.6617 252.034,7446.09613 252.104,7446.24317 C252.393,7446.84635 251.81,7447.19946 251.387,7447.72462 C251.252,7447.88266 251.099,7448.05372 251.27,7448.3478 C251.44,7448.63589 252.028,7449.59418 252.892,7450.36341 C254.008,7451.35771 254.913,7451.6748 255.237,7451.80984 C255.478,7451.90987 255.766,7451.88687 255.942,7451.69881 C256.165,7451.45774 256.442,7451.05762 256.724,7450.6635 C256.923,7450.38141 257.176,7450.3464 257.441,7450.44643 C257.62,7450.50845 259.895,7451.56477 259.991,7451.73382 C260.062,7451.85686 260.062,7452.43903 259.821,7453.12124 M254.002,7439 L253.997,7439 L253.997,7439 C248.484,7439 244,7443.48535 244,7449 C244,7451.18666 244.705,7453.21526 245.904,7454.86076 L244.658,7458.57687 L248.501,7457.3485 C250.082,7458.39482 251.969,7459 254.002,7459 C259.515,7459 264,7454.51465 264,7449 C264,7443.48535 259.515,7439 254.002,7439\" id=\"whatsapp-[#128]\"></path>\n        </g>\n      </g>\n    </g>\n  </svg>",
+                "isExternal_SM": true,
+                "link_SM": {
+                  "id": "387d6985-f68c-4be8-9fd3-5487909d3093",
+                  "linkType": "PAGE",
+                  "label": "Anasayfa",
+                  "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                  "pageType": "INDEX",
+                  "pageComponentId": null,
+                  "subLinks": []
+                }
+              },
+              {
+                "isExternal_SM": true,
+                "icon_SM": "  <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"#222\" width=\"23px\" height=\"23px\" viewBox=\"0 0 1920 1920\">\n    <path d=\"m0 524.664 878.039 812.43 592.454-557.236c48.603 25.014 101.924 40.484 158.207 43.007 5.815.22 11.41.33 17.225.33 38.29 0 74.606-7.132 109.495-17.555v857.633l-424.812-491.847-82.943 71.643 442.804 512.692H64.951l442.804-512.692-82.943-71.643L0 1663.273V524.663ZM1278.977 329.56c-8.777 29.622-15.47 60.232-16.786 92.598-4.608 102.473 30.939 200.557 100.278 276.26 5.376 5.924 11.85 10.312 17.554 15.798l-502.598 472.866L.044 375.091V329.56ZM1645.552 165c4.06 0 8.229.11 12.398.22 151.295 6.802 268.47 134.838 261.777 286.243-6.583 147.126-127.926 262.106-273.736 262.106-4.06 0-8.338-.11-12.507-.33-151.295-6.692-268.47-134.838-261.667-286.243C1378.29 279.87 1499.743 165 1645.552 165Z\" fill-rule=\"evenodd\"></path>\n  </svg>",
+                "link_SM": {
+                  "id": "ef4834a7-c946-449c-936a-d04f1e994f97",
+                  "linkType": "PAGE",
+                  "label": "Anasayfa",
+                  "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                  "pageType": "INDEX",
+                  "pageComponentId": null,
+                  "subLinks": []
+                }
+              }
+            ],
+            "shoppingPolicies": [
+              {
+                "iconSP": "<svg width=\"40px\" height=\"40px\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M4 5.54054L11.5 3L19 5.54054V12.0569C19 14.4506 17.9281 16.7185 16.0786 18.2381L11.5 22L6.92137 18.2381C5.07187 16.7185 4 14.4506 4 12.0569V5.54054Z\" stroke=\"#333333\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path>\n<path d=\"M14 10L10.5 13\" stroke=\"#333333\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path>\n<path d=\"M9 11.5L10.5 13\" stroke=\"#333333\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path>\n</svg>",
+                "contentSP": "Güvenli Alışveriş"
+              },
+              {
+                "iconSP": "<svg fill=\"#000000\" xmlns=\"http://www.w3.org/2000/svg\" width=\"40px\" height=\"40px\" viewBox=\"0 0 100 100\" enable-background=\"new 0 0 100 100\" xml:space=\"preserve\">\n<path d=\"M76.5,58.3c0,0.1,0,0.2-0.1,0.2c-0.3,1.1-0.7,2.2-1.1,3.3c-0.5,1.2-1,2.3-1.6,3.4c-1.2,2.2-2.7,4.2-4.5,6\n\tc-1.7,1.8-3.7,3.4-5.9,4.7c-2.2,1.3-4.5,2.3-7,3c-2.5,0.7-5.1,1.1-7.7,1.1C32.8,80,20,67.2,20,51.3s12.8-28.6,28.6-28.6\n\tc5.3,0,10.3,1.5,14.6,4c0,0,0,0,0.1,0c2.1,1.2,4,2.7,5.6,4.4c0.5,0.4,0.8,0.7,1.2,1.2c0.9,0.8,1.6,0.3,1.6-0.9V22c0-1.1,0.9-2,2-2h4\n\tc1.1,0,2,0.9,2.2,2v24.5c0,0.9-0.8,1.8-1.8,1.8H53.6c-1.1,0-1.9-0.8-1.9-1.9v-4.2c0-1.1,0.9-2,2-2h9.4c0.8,0,1.4-0.2,1.7-0.7\n\tc-3.6-5-9.6-8.3-16.2-8.3c-11.1,0-20.1,9-20.1,20.1s9,20.1,20.1,20.1c8.7,0,16.1-5.5,18.9-13.3c0,0,0.3-1.8,1.7-1.8\n\tc1.4,0,4.8,0,5.7,0c0.8,0,1.6,0.6,1.6,1.5C76.5,58,76.5,58.1,76.5,58.3z\"></path>\n</svg>",
+                "contentSP": "Mağaza&Online Kolay Değişim ve İade"
+              },
+              {
+                "iconSP": "<svg width=\"40px\" height=\"40px\" viewBox=\"0 0 24 24\" version=\"1.1\" xml:space=\"preserve\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n\n<style type=\"text/css\">\n\t.st0{display:none;}\n\t.st1{display:inline;}\n\t.st2{opacity:0.2;fill:none;stroke:#000000;stroke-width:5.000000e-02;stroke-miterlimit:10;}\n</style>\n\n<g class=\"st0\" id=\"grid_system\"></g>\n\n<g id=\"_icons\">\n\n<path d=\"M18.4,4.4c0,0-0.1-0.1-0.1-0.1c-0.8-0.8-2-1.3-3.1-1.3H8.8C7.7,3,6.6,3.5,5.7,4.3c0,0-0.1,0.1-0.1,0.1L3.9,6.8   C3.3,7.7,3,8.7,3,9.7V17c0,2.2,1.8,4,4,4h10c2.2,0,4-1.8,4-4V9.7c0-1-0.3-2-0.9-2.9L18.4,4.4z M5.5,8l1.6-2.3C7.6,5.2,8.2,5,8.8,5   h6.3c0.6,0,1.2,0.2,1.7,0.7L18.5,8c0,0,0,0,0,0h-4.2H9.7L5.5,8C5.5,8,5.5,8,5.5,8z M13.3,10v2.5l-0.9-0.4C12.3,12,12.1,12,12,12   s-0.3,0-0.4,0.1l-0.9,0.4V10H13.3z M19,17c0,1.1-0.9,2-2,2H7c-1.1,0-2-0.9-2-2v-7h3.7v4c0,0.3,0.2,0.7,0.5,0.8   c0.3,0.2,0.6,0.2,0.9,0.1l1.9-0.8l1.9,0.8C14,15,14.2,15,14.3,15c0.2,0,0.4-0.1,0.5-0.2c0.3-0.2,0.5-0.5,0.5-0.8v-4H19V17z\"></path>\n\n</g>\n\n</svg>",
+                "contentSP": "3500 TL Üzeri Ücretsiz Standart Kargo"
+              }
+            ]
+          }
+        },
+        {
+          "id": "3d1e23fb-14ad-4a05-ab98-044d45d77f60",
+          "componentId": "bf550c80-41a6-4875-a5b9-c87556690bb4",
+          "propValues": {
+            "deliveryDescription": "dwadwad",
+            "deliveryDescriptionLink": {
+              "id": "4192c877-cdaa-4123-890d-9fee3dcea757",
+              "linkType": "PAGE",
+              "label": "Anasayfa",
+              "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+              "pageType": "INDEX",
+              "pageComponentId": null,
+              "subLinks": []
+            }
+          }
+        }
+      ],
       "specifications": [],
       "disableIndex": false
     },
@@ -2020,6 +2453,298 @@
             "secondaryButtonBgColor": null,
             "secondaryButtonTextColor": null,
             "secondaryButtonBorderColor": null
+          }
+        }
+      ],
+      "specifications": [],
+      "disableIndex": false
+    },
+    {
+      "id": "0386506f-b433-44c4-9540-3f39fb83a66f",
+      "name": "",
+      "type": "CATEGORY",
+      "components": [
+        {
+          "id": "377d74eb-3017-466d-9209-74f4610ff665",
+          "componentId": "b01c12e8-e280-44b6-8beb-a315513086f9",
+          "propValues": {
+            "categoryMenu": {
+              "categoryListType": "ALL",
+              "initialSort": "A_Z",
+              "initialLimit": 20,
+              "categoryCount": null,
+              "categoryIds": null
+            },
+            "logo": {
+              "id": "theme-images/218c87ea-fe09-46c5-aeac-b08ab25a724f",
+              "altText": null
+            },
+            "logo_black": {
+              "id": "theme-images/6eca4eff-b545-4e7d-97c5-21f14c40d9cd",
+              "altText": null
+            },
+            "scrollingTexts": [
+              {
+                "content": "Worldwide delivery and free returns - shop now"
+              },
+              {
+                "content": "New arrivals, now dropping five days a week - discover now"
+              }
+            ],
+            "special_for_your": {
+              "id": "24606484-f26d-45ac-86f8-099c5796f953",
+              "linkType": "PAGE",
+              "label": "Anasayfa",
+              "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+              "pageType": "INDEX",
+              "pageComponentId": null,
+              "subLinks": []
+            },
+            "staticCategoryMenu": {
+              "categoryListType": "STATIC",
+              "initialSort": "A_Z",
+              "initialLimit": 20,
+              "categoryCount": null,
+              "categoryIds": [
+                "40681fe2-21a8-452f-971f-0674b4a81c8e",
+                "7f1dc875-9c19-4994-bb18-af532e98e4a0",
+                "a5117e23-d26d-48f2-9daa-43bdc4001364"
+              ]
+            },
+            "searchRecomProducts": {
+              "id": "34f1f7dd-8a84-43e5-a2e3-a7f93168df88",
+              "productListType": "ALL",
+              "initialSort": "LAST_ADDED",
+              "initialLimit": 20,
+              "productCount": null,
+              "productIds": null,
+              "category": null,
+              "usePageFilter": null,
+              "relatedProductsType": null,
+              "recommendedProductsType": {
+                "recommendedProductType": "CATEGORY"
+              }
+            },
+            "cartProducts": {
+              "id": "4a8052f8-8f54-4b19-8921-c43277588089",
+              "productListType": "ALL",
+              "initialSort": "LAST_ADDED",
+              "initialLimit": 20,
+              "productCount": null,
+              "productIds": null,
+              "category": null,
+              "usePageFilter": null,
+              "relatedProductsType": null,
+              "recommendedProductsType": {
+                "recommendedProductType": "CATEGORY"
+              }
+            },
+            "title": "Senin İçin Önerilenler"
+          }
+        },
+        {
+          "id": "81576e9c-4a97-4ad2-8489-86f2864a7ad7",
+          "componentId": "b6119c6a-04ef-4f91-932a-0bfcc99efc43",
+          "propValues": {
+            "logo": {
+              "id": "theme-images/571cc7c5-4feb-42a7-bb03-d0ebcfec9825",
+              "altText": null
+            },
+            "supportLinks": [
+              {
+                "id": "1622d7d3-7ba6-4497-a914-8ca4f7961bd7",
+                "linkType": "PAGE",
+                "label": "Anasayfa",
+                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                "pageType": "INDEX",
+                "itemId": null,
+                "externalLink": null,
+                "fileUrl": null,
+                "pageComponentId": null,
+                "subLinks": []
+              },
+              {
+                "id": "d4a250ec-3c2f-4dd7-81a1-24dd1ff14285",
+                "linkType": "PAGE",
+                "label": "Anasayfa",
+                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                "pageType": "INDEX",
+                "itemId": null,
+                "externalLink": null,
+                "fileUrl": null,
+                "pageComponentId": null,
+                "subLinks": []
+              },
+              {
+                "id": "45f29df3-4740-4c29-a3cc-8288fe18bfd9",
+                "linkType": "PAGE",
+                "label": "Anasayfa",
+                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                "pageType": "INDEX",
+                "itemId": null,
+                "externalLink": null,
+                "fileUrl": null,
+                "pageComponentId": null,
+                "subLinks": []
+              },
+              {
+                "id": "af4afe2e-7c76-4f6d-a914-014faa0309c8",
+                "linkType": "PAGE",
+                "label": "Anasayfa",
+                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                "pageType": "INDEX",
+                "pageComponentId": null,
+                "subLinks": []
+              }
+            ],
+            "legalLinks": [
+              {
+                "id": "c4c0591b-ab5e-49e3-bfb3-4a05d2736123",
+                "linkType": "PAGE",
+                "label": "Anasayfa",
+                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                "pageType": "INDEX",
+                "pageComponentId": null,
+                "subLinks": []
+              },
+              {
+                "id": "3fb3d68d-cafe-4b4e-b8bf-ba1b8c267ccd",
+                "linkType": "PAGE",
+                "label": "Anasayfa",
+                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                "pageType": "INDEX",
+                "itemId": null,
+                "externalLink": null,
+                "fileUrl": null,
+                "pageComponentId": null,
+                "subLinks": []
+              }
+            ],
+            "socialMediaList": [
+              {
+                "id": "ea77061c-90cb-4dae-87ff-db7ded28f99c",
+                "linkType": "PAGE",
+                "label": "Anasayfa",
+                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                "pageType": "INDEX",
+                "itemId": null,
+                "externalLink": null,
+                "fileUrl": null,
+                "pageComponentId": null,
+                "subLinks": [],
+                "icon_SM": "  <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"#222\" width=\"20px\" height=\"20px\" viewBox=\"0 0 1920 1920\">\n    <path d=\"M1168.737 487.897c44.672-41.401 113.824-36.889 118.9-36.663l289.354-.113 6.317-417.504L1539.65 22.9C1511.675 16.02 1426.053 0 1237.324 0 901.268 0 675.425 235.206 675.425 585.137v93.97H337v451.234h338.425V1920h451.234v-789.66h356.7l62.045-451.233H1126.66v-69.152c0-54.937 14.214-96.112 42.078-122.058\" fill-rule=\"evenodd\"></path>\n  </svg>",
+                "isExternal_SM": true,
+                "link_SM": {
+                  "id": "54b322de-23b7-4f71-bb83-ea3b1f5f919d",
+                  "linkType": "PAGE",
+                  "label": "Anasayfa",
+                  "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                  "pageType": "INDEX",
+                  "pageComponentId": null,
+                  "subLinks": []
+                }
+              },
+              {
+                "id": "d8b026ea-b537-42da-8a18-42f20ae40d23",
+                "linkType": "PAGE",
+                "label": "Anasayfa",
+                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                "pageType": "INDEX",
+                "pageComponentId": null,
+                "subLinks": [],
+                "icon_SM": "  <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"222\" width=\"23px\" height=\"23px\" viewBox=\"0 0 24 24\">\n    <g>\n      <path fill=\"none\" d=\"M0 0h24v24H0z\"></path>\n      <path fill-rule=\"nonzero\" d=\"M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153a4.908 4.908 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 0 1-1.153 1.772 4.915 4.915 0 0 1-1.772 1.153c-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 0 1-1.772-1.153 4.904 4.904 0 0 1-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 0 1 1.153-1.772A4.897 4.897 0 0 1 5.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm6.5-.25a1.25 1.25 0 0 0-2.5 0 1.25 1.25 0 0 0 2.5 0zM12 9a3 3 0 1 1 0 6 3 3 0 0 1 0-6z\"></path>\n    </g>\n  </svg>",
+                "isExternal_SM": true,
+                "link_SM": {
+                  "id": "b256f6ad-0850-4c37-8ba7-7ce4954f414e",
+                  "linkType": "PAGE",
+                  "label": "Anasayfa",
+                  "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                  "pageType": "INDEX",
+                  "pageComponentId": null,
+                  "subLinks": []
+                }
+              },
+              {
+                "icon_SM": "  <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"23px\" height=\"23px\" viewBox=\"0 -3 20 20\" version=\"1.1\">\n    <title>youtube [#168]</title>\n    <desc>Created with Sketch.</desc>\n    <defs></defs>\n    <g id=\"Page-1\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\">\n      <g id=\"Dribbble-Light-Preview\" transform=\"translate(-300.000000, -7442.000000)\" fill=\"#222\">\n        <g id=\"icons\" transform=\"translate(56.000000, 160.000000)\">\n          <path d=\"M251.988432,7291.58588 L251.988432,7285.97425 C253.980638,7286.91168 255.523602,7287.8172 257.348463,7288.79353 C255.843351,7289.62824 253.980638,7290.56468 251.988432,7291.58588 M263.090998,7283.18289 C262.747343,7282.73013 262.161634,7282.37809 261.538073,7282.26141 C259.705243,7281.91336 248.270974,7281.91237 246.439141,7282.26141 C245.939097,7282.35515 245.493839,7282.58153 245.111335,7282.93357 C243.49964,7284.42947 244.004664,7292.45151 244.393145,7293.75096 C244.556505,7294.31342 244.767679,7294.71931 245.033639,7294.98558 C245.376298,7295.33761 245.845463,7295.57995 246.384355,7295.68865 C247.893451,7296.0008 255.668037,7296.17532 261.506198,7295.73552 C262.044094,7295.64178 262.520231,7295.39147 262.895762,7295.02447 C264.385932,7293.53455 264.28433,7285.06174 263.090998,7283.18289\" id=\"youtube-[#168]\"></path>\n        </g>\n      </g>\n    </g>\n  </svg>",
+                "isExternal_SM": true,
+                "link_SM": {
+                  "id": "bfc449ee-02a5-4eeb-b6c8-7b1f40d7ab50",
+                  "linkType": "PAGE",
+                  "label": "Anasayfa",
+                  "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                  "pageType": "INDEX",
+                  "pageComponentId": null,
+                  "subLinks": []
+                }
+              },
+              {
+                "icon_SM": "  <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"19px\" height=\"19px\" viewBox=\"0 0 20 20\" version=\"1.1\">\n    <title>whatsapp [#128]</title>\n    <desc>Created with Sketch.</desc>\n    <defs></defs>\n    <g id=\"Page-1\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\">\n      <g id=\"Dribbble-Light-Preview\" transform=\"translate(-300.000000, -7599.000000)\" fill=\"#222\">\n        <g id=\"icons\" transform=\"translate(56.000000, 160.000000)\">\n          <path d=\"M259.821,7453.12124 C259.58,7453.80344 258.622,7454.36761 257.858,7454.53266 C257.335,7454.64369 256.653,7454.73172 254.355,7453.77943 C251.774,7452.71011 248.19,7448.90097 248.19,7446.36621 C248.19,7445.07582 248.934,7443.57337 250.235,7443.57337 C250.861,7443.57337 250.999,7443.58538 251.205,7444.07952 C251.446,7444.6617 252.034,7446.09613 252.104,7446.24317 C252.393,7446.84635 251.81,7447.19946 251.387,7447.72462 C251.252,7447.88266 251.099,7448.05372 251.27,7448.3478 C251.44,7448.63589 252.028,7449.59418 252.892,7450.36341 C254.008,7451.35771 254.913,7451.6748 255.237,7451.80984 C255.478,7451.90987 255.766,7451.88687 255.942,7451.69881 C256.165,7451.45774 256.442,7451.05762 256.724,7450.6635 C256.923,7450.38141 257.176,7450.3464 257.441,7450.44643 C257.62,7450.50845 259.895,7451.56477 259.991,7451.73382 C260.062,7451.85686 260.062,7452.43903 259.821,7453.12124 M254.002,7439 L253.997,7439 L253.997,7439 C248.484,7439 244,7443.48535 244,7449 C244,7451.18666 244.705,7453.21526 245.904,7454.86076 L244.658,7458.57687 L248.501,7457.3485 C250.082,7458.39482 251.969,7459 254.002,7459 C259.515,7459 264,7454.51465 264,7449 C264,7443.48535 259.515,7439 254.002,7439\" id=\"whatsapp-[#128]\"></path>\n        </g>\n      </g>\n    </g>\n  </svg>",
+                "isExternal_SM": true,
+                "link_SM": {
+                  "id": "387d6985-f68c-4be8-9fd3-5487909d3093",
+                  "linkType": "PAGE",
+                  "label": "Anasayfa",
+                  "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                  "pageType": "INDEX",
+                  "pageComponentId": null,
+                  "subLinks": []
+                }
+              },
+              {
+                "isExternal_SM": true,
+                "icon_SM": "  <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"#222\" width=\"23px\" height=\"23px\" viewBox=\"0 0 1920 1920\">\n    <path d=\"m0 524.664 878.039 812.43 592.454-557.236c48.603 25.014 101.924 40.484 158.207 43.007 5.815.22 11.41.33 17.225.33 38.29 0 74.606-7.132 109.495-17.555v857.633l-424.812-491.847-82.943 71.643 442.804 512.692H64.951l442.804-512.692-82.943-71.643L0 1663.273V524.663ZM1278.977 329.56c-8.777 29.622-15.47 60.232-16.786 92.598-4.608 102.473 30.939 200.557 100.278 276.26 5.376 5.924 11.85 10.312 17.554 15.798l-502.598 472.866L.044 375.091V329.56ZM1645.552 165c4.06 0 8.229.11 12.398.22 151.295 6.802 268.47 134.838 261.777 286.243-6.583 147.126-127.926 262.106-273.736 262.106-4.06 0-8.338-.11-12.507-.33-151.295-6.692-268.47-134.838-261.667-286.243C1378.29 279.87 1499.743 165 1645.552 165Z\" fill-rule=\"evenodd\"></path>\n  </svg>",
+                "link_SM": {
+                  "id": "ef4834a7-c946-449c-936a-d04f1e994f97",
+                  "linkType": "PAGE",
+                  "label": "Anasayfa",
+                  "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                  "pageType": "INDEX",
+                  "pageComponentId": null,
+                  "subLinks": []
+                }
+              }
+            ],
+            "shoppingPolicies": [
+              {
+                "iconSP": "<svg width=\"40px\" height=\"40px\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M4 5.54054L11.5 3L19 5.54054V12.0569C19 14.4506 17.9281 16.7185 16.0786 18.2381L11.5 22L6.92137 18.2381C5.07187 16.7185 4 14.4506 4 12.0569V5.54054Z\" stroke=\"#333333\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path>\n<path d=\"M14 10L10.5 13\" stroke=\"#333333\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path>\n<path d=\"M9 11.5L10.5 13\" stroke=\"#333333\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path>\n</svg>",
+                "contentSP": "Güvenli Alışveriş"
+              },
+              {
+                "iconSP": "<svg fill=\"#000000\" xmlns=\"http://www.w3.org/2000/svg\" width=\"40px\" height=\"40px\" viewBox=\"0 0 100 100\" enable-background=\"new 0 0 100 100\" xml:space=\"preserve\">\n<path d=\"M76.5,58.3c0,0.1,0,0.2-0.1,0.2c-0.3,1.1-0.7,2.2-1.1,3.3c-0.5,1.2-1,2.3-1.6,3.4c-1.2,2.2-2.7,4.2-4.5,6\n\tc-1.7,1.8-3.7,3.4-5.9,4.7c-2.2,1.3-4.5,2.3-7,3c-2.5,0.7-5.1,1.1-7.7,1.1C32.8,80,20,67.2,20,51.3s12.8-28.6,28.6-28.6\n\tc5.3,0,10.3,1.5,14.6,4c0,0,0,0,0.1,0c2.1,1.2,4,2.7,5.6,4.4c0.5,0.4,0.8,0.7,1.2,1.2c0.9,0.8,1.6,0.3,1.6-0.9V22c0-1.1,0.9-2,2-2h4\n\tc1.1,0,2,0.9,2.2,2v24.5c0,0.9-0.8,1.8-1.8,1.8H53.6c-1.1,0-1.9-0.8-1.9-1.9v-4.2c0-1.1,0.9-2,2-2h9.4c0.8,0,1.4-0.2,1.7-0.7\n\tc-3.6-5-9.6-8.3-16.2-8.3c-11.1,0-20.1,9-20.1,20.1s9,20.1,20.1,20.1c8.7,0,16.1-5.5,18.9-13.3c0,0,0.3-1.8,1.7-1.8\n\tc1.4,0,4.8,0,5.7,0c0.8,0,1.6,0.6,1.6,1.5C76.5,58,76.5,58.1,76.5,58.3z\"></path>\n</svg>",
+                "contentSP": "Mağaza&Online Kolay Değişim ve İade"
+              },
+              {
+                "iconSP": "<svg width=\"40px\" height=\"40px\" viewBox=\"0 0 24 24\" version=\"1.1\" xml:space=\"preserve\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n\n<style type=\"text/css\">\n\t.st0{display:none;}\n\t.st1{display:inline;}\n\t.st2{opacity:0.2;fill:none;stroke:#000000;stroke-width:5.000000e-02;stroke-miterlimit:10;}\n</style>\n\n<g class=\"st0\" id=\"grid_system\"></g>\n\n<g id=\"_icons\">\n\n<path d=\"M18.4,4.4c0,0-0.1-0.1-0.1-0.1c-0.8-0.8-2-1.3-3.1-1.3H8.8C7.7,3,6.6,3.5,5.7,4.3c0,0-0.1,0.1-0.1,0.1L3.9,6.8   C3.3,7.7,3,8.7,3,9.7V17c0,2.2,1.8,4,4,4h10c2.2,0,4-1.8,4-4V9.7c0-1-0.3-2-0.9-2.9L18.4,4.4z M5.5,8l1.6-2.3C7.6,5.2,8.2,5,8.8,5   h6.3c0.6,0,1.2,0.2,1.7,0.7L18.5,8c0,0,0,0,0,0h-4.2H9.7L5.5,8C5.5,8,5.5,8,5.5,8z M13.3,10v2.5l-0.9-0.4C12.3,12,12.1,12,12,12   s-0.3,0-0.4,0.1l-0.9,0.4V10H13.3z M19,17c0,1.1-0.9,2-2,2H7c-1.1,0-2-0.9-2-2v-7h3.7v4c0,0.3,0.2,0.7,0.5,0.8   c0.3,0.2,0.6,0.2,0.9,0.1l1.9-0.8l1.9,0.8C14,15,14.2,15,14.3,15c0.2,0,0.4-0.1,0.5-0.2c0.3-0.2,0.5-0.5,0.5-0.8v-4H19V17z\"></path>\n\n</g>\n\n</svg>",
+                "contentSP": "3500 TL Üzeri Ücretsiz Standart Kargo"
+              }
+            ]
+          }
+        },
+        {
+          "id": "f3bc5edf-b743-43ce-bf92-370aba698347",
+          "componentId": "b0214df4-a89c-4a83-84ee-56e25518ccc9",
+          "propValues": {
+            "categories": {
+              "categoryListType": "ALL",
+              "initialSort": "A_Z",
+              "initialLimit": 20,
+              "categoryCount": null,
+              "categoryIds": null
+            },
+            "productList": {
+              "id": "de6ce7c9-202c-4c1a-a196-9e6f61a9e08b",
+              "productListType": "ALL",
+              "initialSort": "LAST_ADDED",
+              "initialLimit": 20,
+              "productCount": null,
+              "productIds": null,
+              "category": null,
+              "usePageFilter": null,
+              "relatedProductsType": null,
+              "recommendedProductsType": {
+                "recommendedProductType": "CATEGORY"
+              }
+            }
           }
         }
       ],
@@ -2431,6 +3156,356 @@
       "excludedFields": [],
       "excludedFieldsCategory": [],
       "isFacetListNotSent": false
+    },
+    {
+      "id": "46fe6f47-0538-4e26-9a73-e551c743519e",
+      "name": "Taksit İçeriği",
+      "typescriptName": "InstallmentContent",
+      "translations": {},
+      "type": "OBJECT",
+      "isRequired": true,
+      "nestedData": [
+        {
+          "id": "ca5179da-9986-4c52-85ad-0f51fd5491e7",
+          "name": "Oran",
+          "translations": {},
+          "type": "TEXT",
+          "isRequired": false,
+          "key": "rate",
+          "sliderData": {},
+          "groupId": "",
+          "isRoot": false,
+          "level": 1,
+          "excludedFields": [],
+          "excludedFieldsCategory": [],
+          "isFacetListNotSent": false
+        }
+      ],
+      "sliderData": {},
+      "groupId": "",
+      "isRoot": true,
+      "level": 0,
+      "excludedFields": [],
+      "excludedFieldsCategory": [],
+      "isFacetListNotSent": false
+    },
+    {
+      "id": "e086f77e-8268-450d-b89a-3c69062b760e",
+      "name": "Tablo Başlıkları",
+      "typescriptName": "TableTitles",
+      "translations": {},
+      "type": "OBJECT",
+      "isRequired": true,
+      "nestedData": [
+        {
+          "id": "efefdd05-eaed-45ce-8bff-7364b5189252",
+          "name": "1. Başlık",
+          "translations": {},
+          "type": "TEXT",
+          "isRequired": false,
+          "key": "table_Header_1",
+          "sliderData": {},
+          "groupId": "",
+          "isRoot": false,
+          "level": 1,
+          "excludedFields": [],
+          "excludedFieldsCategory": [],
+          "isFacetListNotSent": false
+        },
+        {
+          "id": "c91bb864-28c2-43ea-a076-47ac736f54f0",
+          "name": "2. Başlık",
+          "translations": {},
+          "type": "TEXT",
+          "isRequired": false,
+          "key": "table_Header_2",
+          "sliderData": {},
+          "groupId": "",
+          "isRoot": false,
+          "level": 1,
+          "excludedFields": [],
+          "excludedFieldsCategory": [],
+          "isFacetListNotSent": false
+        },
+        {
+          "id": "4a2e3bbd-7e41-48fb-ab85-9a05a8110bd9",
+          "name": "3. Başlık",
+          "translations": {},
+          "type": "TEXT",
+          "isRequired": false,
+          "key": "table_Header_3",
+          "sliderData": {},
+          "groupId": "",
+          "isRoot": false,
+          "level": 1,
+          "excludedFields": [],
+          "excludedFieldsCategory": [],
+          "isFacetListNotSent": false
+        }
+      ],
+      "sliderData": {},
+      "groupId": "",
+      "isRoot": true,
+      "level": 0,
+      "excludedFields": [],
+      "excludedFieldsCategory": [],
+      "isFacetListNotSent": false
+    },
+    {
+      "id": "17108301-f351-4211-ae4c-bbf65aa0d7a1",
+      "name": "Faiz Oranları",
+      "typescriptName": "InterestRates",
+      "translations": {},
+      "type": "OBJECT",
+      "isRequired": true,
+      "nestedData": [
+        {
+          "id": "b3b04558-00f1-4d10-9d69-6552f584b727",
+          "name": "2 Taksit Faiz Oranı (Peşin Fiyatla Aynı Değer)",
+          "translations": {},
+          "type": "TEXT",
+          "isRequired": false,
+          "key": "interestRate_1_2",
+          "sliderData": {},
+          "groupId": "",
+          "isRoot": false,
+          "level": 1,
+          "excludedFields": [],
+          "excludedFieldsCategory": [],
+          "isFacetListNotSent": false
+        },
+        {
+          "id": "8f0864c0-b18a-4d31-9a90-3fc129124f72",
+          "name": "(3-6) Taksit Faiz Oranı",
+          "translations": {},
+          "type": "TEXT",
+          "isRequired": false,
+          "key": "interestRate_3_6",
+          "sliderData": {},
+          "groupId": "",
+          "isRoot": false,
+          "level": 1,
+          "excludedFields": [],
+          "excludedFieldsCategory": [],
+          "isFacetListNotSent": false
+        },
+        {
+          "id": "75daddf9-5677-46c3-b3c5-041cb4998096",
+          "name": "(7-12) Taksit Faiz Oranı",
+          "translations": {},
+          "type": "TEXT",
+          "isRequired": false,
+          "key": "interestRate_7_12",
+          "sliderData": {},
+          "groupId": "",
+          "isRoot": false,
+          "level": 1,
+          "excludedFields": [],
+          "excludedFieldsCategory": [],
+          "isFacetListNotSent": false
+        }
+      ],
+      "sliderData": {},
+      "groupId": "",
+      "isRoot": true,
+      "level": 0,
+      "excludedFields": [],
+      "excludedFieldsCategory": [],
+      "isFacetListNotSent": false
+    },
+    {
+      "id": "dfdd1952-be98-4fc9-8bc4-5db3f1f0a4c5",
+      "name": "Row",
+      "translations": {},
+      "type": "DYNAMIC_LIST",
+      "isRequired": true,
+      "nestedData": [
+        {
+          "id": "24d544b2-685f-42cf-ab78-3c61891cc6ee",
+          "name": "Satır",
+          "typescriptName": "Row",
+          "translations": {},
+          "type": "OBJECT",
+          "isRequired": false,
+          "nestedData": [
+            {
+              "id": "2f5ea46e-ce14-4b16-8442-cee8b7c67005",
+              "name": "Tablo İçeriği",
+              "translations": {},
+              "type": "CUSTOM",
+              "isRequired": false,
+              "key": "installmentContent",
+              "customDataId": "46fe6f47-0538-4e26-9a73-e551c743519e",
+              "sliderData": {},
+              "groupId": "",
+              "isRoot": false,
+              "level": 2,
+              "excludedFields": [],
+              "excludedFieldsCategory": [],
+              "isFacetListNotSent": false
+            }
+          ],
+          "sliderData": {},
+          "groupId": "",
+          "isRoot": false,
+          "level": 1,
+          "excludedFields": [],
+          "excludedFieldsCategory": [],
+          "isFacetListNotSent": false
+        }
+      ],
+      "sliderData": {},
+      "groupId": "",
+      "isRoot": true,
+      "level": 0,
+      "excludedFields": [],
+      "excludedFieldsCategory": [],
+      "isFacetListNotSent": false
+    },
+    {
+      "id": "515cf671-ff38-4817-8af2-c3c8bf735bb5",
+      "name": "AddBank",
+      "translations": {},
+      "type": "DYNAMIC_LIST",
+      "isRequired": true,
+      "nestedData": [
+        {
+          "id": "cefbc9bb-3330-45a2-9f77-a345bec49eb7",
+          "name": "Banka Ekle",
+          "typescriptName": "AddBank",
+          "translations": {},
+          "type": "OBJECT",
+          "isRequired": false,
+          "nestedData": [
+            {
+              "id": "468acc60-c537-4983-9de6-bdc7ee63ca8b",
+              "name": "Logo",
+              "translations": {},
+              "type": "IMAGE",
+              "isRequired": false,
+              "key": "logo",
+              "sliderData": {},
+              "groupId": "",
+              "isRoot": false,
+              "level": 2,
+              "excludedFields": [],
+              "excludedFieldsCategory": [],
+              "isFacetListNotSent": false
+            },
+            {
+              "id": "82cfdca0-ece4-4873-bdb5-89fc96e4dc5f",
+              "name": "Faiz Oranları",
+              "translations": {},
+              "type": "CUSTOM",
+              "isRequired": false,
+              "key": "interestRates",
+              "customDataId": "17108301-f351-4211-ae4c-bbf65aa0d7a1",
+              "sliderData": {},
+              "groupId": "",
+              "isRoot": false,
+              "level": 2,
+              "excludedFields": [],
+              "excludedFieldsCategory": [],
+              "isFacetListNotSent": false
+            },
+            {
+              "id": "5635c208-a709-4798-abb8-a67a56a5fa92",
+              "name": "İçerik",
+              "translations": {},
+              "type": "CUSTOM",
+              "isRequired": false,
+              "key": "content",
+              "customDataId": "dfdd1952-be98-4fc9-8bc4-5db3f1f0a4c5",
+              "sliderData": {},
+              "groupId": "",
+              "isRoot": false,
+              "level": 2,
+              "excludedFields": [],
+              "excludedFieldsCategory": [],
+              "isFacetListNotSent": false
+            }
+          ],
+          "sliderData": {},
+          "groupId": "",
+          "isRoot": false,
+          "level": 1,
+          "excludedFields": [],
+          "excludedFieldsCategory": [],
+          "isFacetListNotSent": false
+        }
+      ],
+      "sliderData": {},
+      "groupId": "",
+      "isRoot": true,
+      "level": 0,
+      "excludedFields": [],
+      "excludedFieldsCategory": [],
+      "isFacetListNotSent": false
+    },
+    {
+      "id": "0dc47d32-7158-4743-a568-e239b4e937fc",
+      "name": "MainTable",
+      "translations": {},
+      "type": "DYNAMIC_LIST",
+      "isRequired": true,
+      "nestedData": [
+        {
+          "id": "d0e744ee-8d27-4267-a001-b03e01e6ec55",
+          "name": "Tablo",
+          "typescriptName": "MainTable",
+          "translations": {},
+          "type": "OBJECT",
+          "isRequired": false,
+          "nestedData": [
+            {
+              "id": "c1b0df09-82af-4472-a205-4d43ad163313",
+              "name": "Başlıkları Gir",
+              "translations": {},
+              "type": "CUSTOM",
+              "isRequired": false,
+              "key": "enterTitles",
+              "customDataId": "e086f77e-8268-450d-b89a-3c69062b760e",
+              "sliderData": {},
+              "groupId": "",
+              "isRoot": false,
+              "level": 2,
+              "excludedFields": [],
+              "excludedFieldsCategory": [],
+              "isFacetListNotSent": false
+            },
+            {
+              "id": "72ad7c03-a5a4-4a26-81f3-3fe14528cde2",
+              "name": "Logo ve Oranları Gir",
+              "translations": {},
+              "type": "CUSTOM",
+              "isRequired": false,
+              "key": "enterLogoAndPropotions",
+              "customDataId": "515cf671-ff38-4817-8af2-c3c8bf735bb5",
+              "sliderData": {},
+              "groupId": "",
+              "isRoot": false,
+              "level": 2,
+              "excludedFields": [],
+              "excludedFieldsCategory": [],
+              "isFacetListNotSent": false
+            }
+          ],
+          "sliderData": {},
+          "groupId": "",
+          "isRoot": false,
+          "level": 1,
+          "excludedFields": [],
+          "excludedFieldsCategory": [],
+          "isFacetListNotSent": false
+        }
+      ],
+      "sliderData": {},
+      "groupId": "",
+      "isRoot": true,
+      "level": 0,
+      "excludedFields": [],
+      "excludedFieldsCategory": [],
+      "isFacetListNotSent": false
     }
   ],
   "groups": [
@@ -2552,6 +3627,26 @@
     {
       "id": "1c6f3017-79b6-4432-8719-4a0ad58c1a25",
       "name": "Sosyal Medya İkonları ve Yönlendirme Bağlantıları",
+      "translations": {}
+    },
+    {
+      "id": "69842a4e-1104-460d-94ee-38d4a333b331",
+      "name": "Kategori Listesi",
+      "translations": {}
+    },
+    {
+      "id": "f0c123b2-fc2c-4f45-9345-74f5a425ca85",
+      "name": "Ürün Listesi",
+      "translations": {}
+    },
+    {
+      "id": "7f649271-1b7f-4b5c-8167-4d6a5d950097",
+      "name": "Sağ Taraf Açılan Sepet Alanı (Cart Pop-Up)",
+      "translations": {}
+    },
+    {
+      "id": "53a3c754-e0b6-46d5-bc4a-17c5ab98c4e9",
+      "name": "Taksit Tablosu",
       "translations": {}
     }
   ],

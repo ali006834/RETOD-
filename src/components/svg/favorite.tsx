@@ -4,15 +4,21 @@ interface FavoriteProps {
   width?: string;
   height?: string;
   color?: string;
+  fill?: boolean;
 }
 
-const svg = ({ width, height, color = "#000" }: FavoriteProps) => (
+const svg = ({
+  width,
+  height,
+  color = "#000",
+  fill = false,
+}: FavoriteProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={width}
     height={height}
     viewBox="0 0 24 24"
-    fill="none"
+    fill={fill ? "currentColor" : "none"}
   >
     <path
       fill-rule="evenodd"

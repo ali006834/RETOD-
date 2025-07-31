@@ -4,6 +4,7 @@ import {
 	IkasVideo,
 	IkasCategoryList,
 	IkasProductList,
+	IkasProduct,
 } from "@ikas/storefront"
 
 export type ScrollingTexts = { 
@@ -37,6 +38,37 @@ export type SocialMedia = {
 	link_SM?: IkasNavigationLink;
 };
 
+export type InstallmentContent = { 
+	rate?: string;
+};
+
+export type TableTitles = { 
+	table_Header_1?: string;
+	table_Header_2?: string;
+	table_Header_3?: string;
+};
+
+export type InterestRates = { 
+	interestRate_1_2?: string;
+	interestRate_3_6?: string;
+	interestRate_7_12?: string;
+};
+
+export type Row = { 
+	installmentContent?: InstallmentContent;
+};
+
+export type AddBank = { 
+	logo?: IkasImage;
+	interestRates?: InterestRates;
+	content?: Row;
+};
+
+export type MainTable = { 
+	enterTitles?: TableTitles;
+	enterLogoAndPropotions?: AddBank;
+};
+
 export type HeaderProps = {
 	logo?: IkasImage;
 	logo_black?: IkasImage;
@@ -45,6 +77,8 @@ export type HeaderProps = {
 	searchRecomProducts?: IkasProductList;
 	special_for_your?: IkasNavigationLink;
 	scrollingTexts?: ScrollingTexts[];
+	cartProducts?: IkasProductList;
+	title?: string;
 };
 
 export type FooterProps = {
@@ -108,5 +142,17 @@ export type BannerThinProps = {
 	banner_center?: IkasImage;
 	banner_cente_mobile?: IkasImage;
 	banner_center_link?: IkasNavigationLink;
+};
+
+export type ProductListProps = {
+	categories?: IkasCategoryList;
+	productList?: IkasProductList;
+};
+
+export type ProductDetailProps = {
+	product?: IkasProduct;
+	deliveryDescription?: string;
+	deliveryDescriptionLink?: IkasNavigationLink;
+	bankTable?: MainTable[];
 };
 
