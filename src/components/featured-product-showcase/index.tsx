@@ -22,7 +22,11 @@ const BannerSingle = (props: FeaturedProductShowcaseProps) => {
       <div className={styles.container}>
         {/* Left side - Grid 8 (text content) */}
         <div className={styles.contentContainer}>
-          {headerText && <div className={styles.headerText}>{headerText}</div>}
+          {headerText && (
+            <div className={styles.headerText}>
+              {headerText.toLocaleUpperCase("tr-TR")}
+            </div>
+          )}
           {titleText && <h2 className={styles.titleText}>{titleText}</h2>}
           {contentText && <p className={styles.contentText}>{contentText}</p>}
           {btnText && btnLink && (
