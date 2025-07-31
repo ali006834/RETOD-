@@ -84,3 +84,9 @@ export type BannerSlidingSliderProps = {
 	lowerBtnLink?: IkasNavigationLink;
 };
 
+export type BannerThinProps = {
+	banner_center?: IkasImage;
+	banner_cente_mobile?: IkasImage;
+	banner_center_link?: IkasNavigationLink;
+};
+

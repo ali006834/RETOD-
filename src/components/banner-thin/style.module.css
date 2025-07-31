@@ -1,0 +1,38 @@
+.wrapper {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.container {
+  /* max-width: 1440px; */
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.bannerWrapper {
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+}
+
+.bannerImage {
+  width: 100%;
+  object-fit: contain;
+}
+
+.bannerLink {
+  position: relative;
+  display: block;
+}
+
+/*= Responsive Ayarlar*/
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    margin-top: 10px;
+  }
+}
