@@ -1,0 +1,110 @@
+import React from "react";
+import { observer } from "mobx-react-lite";
+import styles from "./style.module.css";
+import { FeaturedProductShowcaseProps } from "../__generated__/types";
+import { IkasProduct, Image, Link } from "@ikas/storefront";
+import { useScreen } from "src/utils/hooks/useScreen";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+
+const BannerSingle = (props: FeaturedProductShowcaseProps) => {
+  const { products, headerText, titleText, contentText, btnText, btnLink } =
+    props;
+
+  if (!products) {
+    return null;
+  }
+
+  return (
+    <div className={styles.wrapper}>
+      <div className={styles.container}>
+        {/* Left side - Grid 8 (text content) */}
+        <div className={styles.contentContainer}>
+          {headerText && <div className={styles.headerText}>{headerText}</div>}
+          {titleText && <h2 className={styles.titleText}>{titleText}</h2>}
+          {contentText && <p className={styles.contentText}>{contentText}</p>}
+          {btnText && btnLink && (
+            <Link href={btnLink}>
+              <a className={styles.btn}>{btnText}</a>
+            </Link>
+          )}
+        </div>
+
+        {/* Right side - Grid 4 (products slider) */}
+        <div className={styles.sliderContainer}>
+          <Swiper
+            modules={[Navigation]}
+            scrollbar={true}
+            className="mySwiper"
+            navigation={true}
+            slidesPerView={2.5} // Varsayılan mobil
+            spaceBetween={15}
+            breakpoints={{
+              768: {
+                slidesPerView: 3, // Tablet
+                spaceBetween: 15,
+              },
+              1024: {
+                slidesPerView: 4, // Web
+                spaceBetween: 15,
+              },
+            }}
+          >
+            {products?.data?.map((products, index) => {
+              return (
+                <SwiperSlide key={index}>
+                  <div className={styles.product_container}>
+                    <Link href={products.href}>
+                      <a>
+                        <ProductImage product={products} />
+                        <div className={styles.product_Info}>
+                          <ProductTitle product={products} />
+                        </div>
+                      </a>
+                    </Link>
+                  </div>
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+//Tip Tanımlaması
+type Props = {
+  product: IkasProduct;
+};
+
+const ProductImage = observer(({ product }: Props) => {
+  if (!product.selectedVariant.mainImage?.image?.id) {
+    return <img src="/product-dummy-image.jpeg" />;
+  }
+
+  return product.selectedVariant.mainImage.image.isVideo ? (
+    <video playsInline src={product.selectedVariant.mainImage.image.src} />
+  ) : (
+    <Image
+      // layout="responsive"
+      width="200px"
+      height="300px"
+      objectFit="contain"
+      useBlur={true}
+      image={product.selectedVariant.mainImage?.image!}
+      alt={product.selectedVariant.product?.name || undefined}
+      className={styles.slider_product_items}
+    />
+  );
+});
+
+const ProductTitle = observer(({ product }: Props) => (
+  <div className={styles.product_title} data-tooltip={product.name}>
+    <h2>{product.name}</h2>
+  </div>
+));
+
+export default observer(BannerSingle);
