@@ -5,7 +5,7 @@
 
 /*= Üst Footer */
 .upperFooter {
-  background-color: #f5f5f5;
+  background-color: #f6f1eb;
   padding: 60px 0 40px 0px;
   position: relative;
   overflow: visible;
@@ -142,9 +142,112 @@
   display: block;
 }
 
+/*= Middle Footer */
+.middleFooter {
+  background-color: #f6f1eb;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 40px 0;
+}
+
+.middleContent {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 30px;
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.middleLeft {
+  flex: 1;
+  text-align: start;
+}
+
+.middleRight {
+  flex: 1;
+  text-align: start;
+}
+
+.middleTitle {
+  font-size: 32px;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 20px;
+  font-family: "Helvetica" !important;
+}
+
+.middleText {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  max-width: 600px;
+}
+
+.middleButton {
+  background-color: #222;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease;
+}
+
+.middleButton:hover {
+  background-color: #444;
+}
+
+/* Sağ taraf - App Section */
+.appTitle {
+  font-size: 24px;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 25px;
+  font-family: "Helvetica" !important;
+}
+
+.qrSection {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.qrImageArea {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  flex-shrink: 0;
+  border: 1px solid #ddd;
+}
+
+.qrText {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.acceptsSection {
+  margin-top: 30px;
+}
+
+.acceptsTitle {
+  font-size: 18px;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 15px;
+  font-family: "Helvetica" !important;
+}
+
 /*= Alt Footer */
 .lowerFooter {
-  background-color: #eeeeee;
+  background-color: #f6f1eb;
   padding: 20px 0;
   margin: auto;
 }
@@ -224,6 +327,38 @@
     grid-template-columns: repeat(auto-fill, 35px);
   }
 
+  /* Middle footer tablet düzeni */
+  .middleContent {
+    padding: 0 20px;
+    gap: 40px;
+  }
+
+  .middleTitle {
+    font-size: 28px;
+  }
+
+  .middleText {
+    font-size: 15px;
+  }
+
+  .appTitle {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .qrImageArea {
+    width: 70px;
+    height: 70px;
+  }
+
+  .qrText {
+    font-size: 13px;
+  }
+
+  .acceptsTitle {
+    font-size: 16px;
+  }
+
   /* Lower footer tablet düzeni */
   .lowerFooter {
     padding: 20px;
@@ -284,6 +419,55 @@
     flex: 1 1 100%;
   }
 
+  /* Middle footer mobil düzeni */
+  .middleFooter {
+    padding: 30px 0;
+  }
+
+  .middleContent {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .middleTitle {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  .middleText {
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
+
+  .middleButton {
+    padding: 12px 25px;
+    font-size: 13px;
+  }
+
+  .appTitle {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .qrSection {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .qrImageArea {
+    width: 60px;
+    height: 60px;
+  }
+
+  .qrText {
+    font-size: 12px;
+  }
+
+  .acceptsTitle {
+    font-size: 14px;
+  }
+
   /* Lower footer mobil düzeni */
   .payment {
     padding: 0;
@@ -310,6 +494,37 @@
   }
 
   .policyItem span {
+    font-size: 13px;
+  }
+
+  /* Middle footer çok küçük ekranlar */
+  .middleTitle {
+    font-size: 20px;
+  }
+
+  .middleText {
+    font-size: 13px;
+  }
+
+  .middleButton {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+
+  .appTitle {
+    font-size: 16px;
+  }
+
+  .qrImageArea {
+    width: 50px;
+    height: 50px;
+  }
+
+  .qrText {
+    font-size: 11px;
+  }
+
+  .acceptsTitle {
     font-size: 13px;
   }
 

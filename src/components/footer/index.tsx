@@ -108,6 +108,48 @@ const Footer: React.FC<FooterProps> = (props) => {
         </div>
       </div>
 
+      {/* Middle Footer */}
+      <div className={styles.middleFooter}>
+        <div className={styles.middleContent}>
+          {/* Sol taraf - MR PORTER */}
+          <div className={styles.middleLeft}>
+            <h2 className={styles.middleTitle}>MR PORTER</h2>
+            <p className={styles.middleText}>
+              Shop from over 500 of the world's finest luxury designer brands &
+              be dressed for any occasion
+            </p>
+            <button className={styles.middleButton}>Visit MRPORTER.COM</button>
+          </div>
+
+          {/* Sağ taraf - NET-A-PORTER APP */}
+          <div className={styles.middleRight}>
+            <h2 className={styles.appTitle}>GET THE NET-A-PORTER APP</h2>
+
+            <div className={styles.qrSection}>
+              <div className={styles.qrImageArea}>
+                {logo && (
+                  <Image
+                    image={logo}
+                    alt="QR Code"
+                    layout="fill"
+                    objectFit="contain"
+                  />
+                )}
+              </div>
+              <p className={styles.qrText}>
+                Scan the QR code with your iOS or Android smartphone to download
+                the app
+              </p>
+            </div>
+
+            <div className={styles.acceptsSection}>
+              <h3 className={styles.acceptsTitle}>Net-A-Porter accepts</h3>
+              {/* Bu kısım daha sonra doldurulacak */}
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Lower Footer */}
       <div className={styles.lowerFooter}>
         <div className={styles.payment}>
