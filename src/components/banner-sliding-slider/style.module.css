@@ -222,7 +222,8 @@
   }
 
   .lowerTitle {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
+    padding-left: 0%;
   }
 }
 
@@ -254,6 +255,14 @@
   }
 
   .lowerTitle {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
+    padding-left: 0%;
+  }
+
+  .lowerContent {
+    font-family: "ChronicleDisplay";
+    font-size: 1.2rem;
+    line-height: 1.5;
+    line-height: 1.3;
   }
 }

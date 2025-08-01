@@ -156,7 +156,14 @@ const SlidingSlider = (props: BannerSlidingSliderProps) => {
         {(lowerTitle || lowerContent || lowerBtnText) && (
           <div className={styles.lowerSectionMobile}>
             <div className={styles.lowerGridMobile}>
-              {/* Sol Alan - Left Area */}
+              {/* Sol Alan - Right Area */}
+              <div className={styles.lowerRightMobile}>
+                {lowerTitle && (
+                  <h3 className={styles.lowerTitle}>{lowerTitle}</h3>
+                )}
+              </div>
+
+              {/* Sağ Alan - Left Area */}
               <div className={styles.lowerLeftMobile}>
                 {lowerContent && (
                   <div className={styles.lowerContent}>{lowerContent}</div>
@@ -165,13 +172,6 @@ const SlidingSlider = (props: BannerSlidingSliderProps) => {
                   <div className={styles.lowerButton}>
                     <Link href={lowerBtnLink}>{lowerBtnText}</Link>
                   </div>
-                )}
-              </div>
-
-              {/* Sağ Alan - Right Area */}
-              <div className={styles.lowerRightMobile}>
-                {lowerTitle && (
-                  <h3 className={styles.lowerTitle}>{lowerTitle}</h3>
                 )}
               </div>
             </div>
