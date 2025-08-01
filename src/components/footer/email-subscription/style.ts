@@ -89,7 +89,7 @@ export const Title = styled.p`
   font-size: 17px;
   text-align: center;
   color: #121314;
-  font-family: "HelveticaNeueLight" !important;
+  font-family: "Helvetica" !important;
 `;
 
 export const CheckboxContainer = styled.div`

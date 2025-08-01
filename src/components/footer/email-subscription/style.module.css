@@ -9,13 +9,12 @@
 }
 
 .Title {
-  font-size: 14px;
-  /* font-weight: 600; */
+  font-size: 1.5rem;
   text-align: start;
   margin-bottom: 24px;
-  color: #333;
-  font-family: "HelveticaNeueLight" !important;
-  letter-spacing: 0.1px;
+  font-weight: 400;
+  line-height: 1.2;
+  font-family: "ChronicleDisplay";
 }
 
 .CustomForm {
@@ -65,7 +64,7 @@
 }
 
 .InputContainer span {
-  font-family: "HelveticaNeueLight" !important;
+  font-family: "Helvetica" !important;
 }
 
 .InputContainer input:focus {

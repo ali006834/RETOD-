@@ -205,7 +205,7 @@ const Footer: React.FC<FooterProps> = (props) => {
 
       {/*//= Lower Footer */}
       <div className={styles.lowerFooter}>
-        <div className={styles.payment}>
+        <div className={styles.copyRight}>
           <span>{t(`${NS}:copyrightText`)}</span>
         </div>
       </div>

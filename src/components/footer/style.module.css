@@ -52,19 +52,18 @@
 }
 
 .helpTitle {
-  font-size: 18px;
-  font-weight: bold;
-  color: #222;
-  margin: 0;
-  font-family: "Helvetica" !important;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.2;
+  font-family: "ChronicleDisplay";
 }
 
 .helpContent {
-  font-size: 14px;
-  color: #666;
-  line-height: 1.5;
-  margin: 0;
-  max-width: 400px;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #000;
+  font-family: "Helvetica";
 }
 
 .languageSection {
@@ -74,11 +73,10 @@
 }
 
 .langTitle {
-  font-size: 18px;
-  font-weight: bold;
-  color: #222;
-  margin: 0;
-  font-family: "Helvetica" !important;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.2;
+  font-family: "ChronicleDisplay";
 }
 
 .languageSelectWrapper {
@@ -150,8 +148,11 @@
 }
 
 .policyItem span {
-  font-size: 14px;
-  color: #222;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #000;
+  font-family: "Helvetica";
 }
 
 .policyIcon {
@@ -173,7 +174,10 @@
 .socialMediaTitle {
   display: block;
   margin-bottom: 15px;
-  font-weight: bold;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.2;
+  font-family: "ChronicleDisplay";
 }
 
 .socialLinks {
@@ -243,45 +247,48 @@
 }
 
 .middleTitle {
-  font-size: 32px;
-  font-weight: bold;
-  color: #222;
-  margin-bottom: 20px;
-  font-family: "Helvetica" !important;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 15px;
+  font-family: "ChronicleDisplay";
 }
 
 .middleText {
-  font-size: 16px;
-  color: #666;
+  font-size: 0.8rem;
   line-height: 1.6;
-  margin-bottom: 30px;
-  max-width: 600px;
+  font-weight: 400;
+  color: #000;
+  margin-bottom: 15px;
+  font-family: "Helvetica";
 }
 
 .middleButton {
+  font-size: 1rem;
+  display: inline-block;
   background-color: #222;
   color: white;
+  padding: 0.8rem 4.5rem;
+  text-decoration: none;
   border: none;
-  padding: 15px 30px;
-  font-size: 14px;
-  font-weight: bold;
-  cursor: pointer;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: background-color 0.3s ease;
+  border-radius: 2px;
+  font-weight: 400;
+  transition: opacity 0.3s;
+  max-width: fit-content;
+  font-family: "Akkurat";
 }
 
 .middleButton:hover {
-  background-color: #444;
+  opacity: 0.9;
 }
 
 /* Sağ taraf - App Section */
 .appTitle {
-  font-size: 24px;
-  font-weight: bold;
-  color: #222;
-  margin-bottom: 25px;
-  font-family: "Helvetica" !important;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  font-family: "ChronicleDisplay";
 }
 
 .qrSection {
@@ -300,10 +307,11 @@
 }
 
 .qrText {
-  font-size: 14px;
-  color: #666;
+  font-size: 0.8rem;
   line-height: 1.5;
-  margin: 0;
+  font-weight: 400;
+  color: #000;
+  font-family: "Helvetica";
 }
 
 .acceptsSection {
@@ -311,11 +319,11 @@
 }
 
 .acceptsTitle {
-  font-size: 18px;
-  font-weight: bold;
-  color: #222;
-  margin-bottom: 15px;
-  font-family: "Helvetica" !important;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  font-family: "ChronicleDisplay";
 }
 
 .acceptedCards {
@@ -344,7 +352,7 @@
   margin: auto;
 }
 
-.payment {
+.copyRight {
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
@@ -352,9 +360,13 @@
   text-align: center;
 }
 
-.payment span {
-  font-size: 14px;
-  color: #333;
+.copyRight span {
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #000;
+  margin-bottom: 30px;
+  font-family: "Helvetica";
 }
 
 .lowerFooter .page_links_lf {
@@ -579,7 +591,7 @@
   }
 
   /* Lower footer mobil düzeni */
-  .payment {
+  .copyRight {
     padding: 0;
   }
 }
@@ -630,7 +642,7 @@
 
   .page_links a,
   .page_links_lf a,
-  .payment span {
+  .copyRight span {
     font-size: 13px;
   }
 

@@ -36,33 +36,31 @@
 }
 
 .bannerHeader {
-  color: #555;
-  font-size: 2.5rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  line-height: 2;
-  letter-spacing: 1.5px;
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 10px;
+  line-height: 1.2;
+  font-family: "ChronicleDisplay";
 }
 
 .bannerContent {
-  color: #555;
-  font-size: 1.1rem;
+  font-size: 16px;
   line-height: 1.6;
-  margin-bottom: 1rem;
-  text-align: center;
+  font-weight: 500;
+  color: #000;
+  margin-bottom: 10px;
+  font-family: "Helvetica";
 }
 
 .bannerButton {
   display: inline-block;
-  color: #222;
-  padding: 12px 32px;
-  font-size: 1rem;
-  font-weight: 500;
+  color: #000;
+  text-decoration: underline;
   border: none;
   cursor: pointer;
-  transition: all 0.3s ease;
-  letter-spacing: 1px;
-  transition: font-weight 0.3s ease;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
 }
 
 /* Responsive */
