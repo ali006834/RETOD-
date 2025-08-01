@@ -1809,7 +1809,20 @@
                   "autoplay": true,
                   "loop": true,
                   "muted": true
-                }
+                },
+                "videoLink": {
+                  "id": "9f34ecb6-4591-4510-8ba5-349449ac845d",
+                  "linkType": "PAGE",
+                  "label": "Anasayfa",
+                  "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                  "pageType": "INDEX",
+                  "pageComponentId": null,
+                  "subLinks": []
+                },
+                "titleCDT": "dadawd",
+                "btnTextCDT": "dwadwadwad",
+                "contentCDT": "dwadwadwad",
+                "priorityOrder": "1"
               }
             ],
             "imageList": [
@@ -1817,6 +1830,19 @@
                 "imageCDT": {
                   "id": "theme-images/d3330b1b-d329-46e5-9cd2-6894b782243a",
                   "altText": null
+                },
+                "titleCDT": "afwafwafwafwf",
+                "contentCDT": "dwadwafwafwafwafwafwaf",
+                "btnTextCDT": "fwafwafawfawfawf",
+                "priorityOrder": "2",
+                "imageLink": {
+                  "id": "039d3a2b-0467-4142-b7a2-f17bc572c93b",
+                  "linkType": "PAGE",
+                  "label": "Anasayfa",
+                  "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                  "pageType": "INDEX",
+                  "pageComponentId": null,
+                  "subLinks": []
                 }
               }
             ],
@@ -1825,12 +1851,32 @@
                 "imageCDT": {
                   "id": "theme-images/4987e896-6e90-407e-bae7-583ff69a5870",
                   "altText": null
-                }
+                },
+                "imageLink": {
+                  "id": "0c278ff0-c70b-45ce-9735-f9cf56ac30e3",
+                  "linkType": "PAGE",
+                  "label": "Anasayfa",
+                  "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                  "pageType": "INDEX",
+                  "pageComponentId": null,
+                  "subLinks": []
+                },
+                "priorityOrder": "3"
               },
               {
                 "imageCDT": {
                   "id": "theme-images/a5846f9d-6a32-47cb-8363-be6ddee45156",
                   "altText": null
+                },
+                "priorityOrder": "4",
+                "imageLink": {
+                  "id": "78ae9205-d3ed-461f-a389-96f1dfe55923",
+                  "linkType": "PAGE",
+                  "label": "Anasayfa",
+                  "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                  "pageType": "INDEX",
+                  "pageComponentId": null,
+                  "subLinks": []
                 }
               }
             ],
@@ -3127,6 +3173,51 @@
               "isFacetListNotSent": false
             },
             {
+              "id": "a75fbd42-e6dc-4848-8de6-a9420dca46ec",
+              "name": "Başlık Metni",
+              "translations": {},
+              "type": "TEXT",
+              "isRequired": false,
+              "key": "titleCDT",
+              "sliderData": {},
+              "groupId": "",
+              "isRoot": false,
+              "level": 2,
+              "excludedFields": [],
+              "excludedFieldsCategory": [],
+              "isFacetListNotSent": false
+            },
+            {
+              "id": "2ce61e8c-829a-49f4-a8bb-dc9a7705f91e",
+              "name": "İçerik Metni",
+              "translations": {},
+              "type": "RICH_TEXT",
+              "isRequired": false,
+              "key": "contentCDT",
+              "sliderData": {},
+              "groupId": "",
+              "isRoot": false,
+              "level": 2,
+              "excludedFields": [],
+              "excludedFieldsCategory": [],
+              "isFacetListNotSent": false
+            },
+            {
+              "id": "b8c2f037-5709-47e5-8353-ea8a39ad824c",
+              "name": "Buton Metni",
+              "translations": {},
+              "type": "TEXT",
+              "isRequired": false,
+              "key": "btnTextCDT",
+              "sliderData": {},
+              "groupId": "",
+              "isRoot": false,
+              "level": 2,
+              "excludedFields": [],
+              "excludedFieldsCategory": [],
+              "isFacetListNotSent": false
+            },
+            {
               "id": "ed9c5357-e996-4eff-b714-94725cab999c",
               "name": "Öncelik Sıralaması (1-99 arasında seçim yapınız)",
               "translations": {},
@@ -3196,6 +3287,51 @@
               "type": "LINK",
               "isRequired": false,
               "key": "videoLink",
+              "sliderData": {},
+              "groupId": "",
+              "isRoot": false,
+              "level": 2,
+              "excludedFields": [],
+              "excludedFieldsCategory": [],
+              "isFacetListNotSent": false
+            },
+            {
+              "id": "d72e2572-cb56-4d50-b488-edf335c72e58",
+              "name": "Başlık Metni",
+              "translations": {},
+              "type": "TEXT",
+              "isRequired": false,
+              "key": "titleCDT",
+              "sliderData": {},
+              "groupId": "",
+              "isRoot": false,
+              "level": 2,
+              "excludedFields": [],
+              "excludedFieldsCategory": [],
+              "isFacetListNotSent": false
+            },
+            {
+              "id": "b9dd07ed-6615-4095-8cab-05a279502b7b",
+              "name": "İçerik Metni",
+              "translations": {},
+              "type": "RICH_TEXT",
+              "isRequired": false,
+              "key": "contentCDT",
+              "sliderData": {},
+              "groupId": "",
+              "isRoot": false,
+              "level": 2,
+              "excludedFields": [],
+              "excludedFieldsCategory": [],
+              "isFacetListNotSent": false
+            },
+            {
+              "id": "297ace8d-787c-432d-a150-06b15a12f333",
+              "name": "Buton Metni",
+              "translations": {},
+              "type": "TEXT",
+              "isRequired": false,
+              "key": "btnTextCDT",
               "sliderData": {},
               "groupId": "",
               "isRoot": false,

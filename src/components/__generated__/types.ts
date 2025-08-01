@@ -14,12 +14,18 @@ export type ScrollingTexts = {
 export type BannerTopImage = { 
 	imageCDT?: IkasImage;
 	imageLink?: IkasNavigationLink;
+	titleCDT?: string;
+	contentCDT?: string;
+	btnTextCDT?: string;
 	priorityOrder?: string;
 };
 
 export type BannerTopVideo = { 
 	videoCDT?: IkasVideo;
 	videoLink?: IkasNavigationLink;
+	titleCDT?: string;
+	contentCDT?: string;
+	btnTextCDT?: string;
 	priorityOrder?: string;
 };
 

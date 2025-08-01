@@ -129,6 +129,27 @@ const BannerTop = (props: BannerTopSliderProps) => {
                       controls={item.data?.videoCDT?.controls || false}
                       playsInline
                     ></video>
+
+                    {/* Text overlay - sol alt */}
+                    {(item.data?.titleCDT ||
+                      item.data?.contentCDT ||
+                      item.data?.btnTextCDT) && (
+                      <div className={styles.textOverlay}>
+                        {item.data?.titleCDT && (
+                          <h2 className={styles.title}>{item.data.titleCDT}</h2>
+                        )}
+                        {item.data?.contentCDT && (
+                          <p className={styles.content}>
+                            {item.data.contentCDT}
+                          </p>
+                        )}
+                        {item.data?.btnTextCDT && (
+                          <span className={styles.btnText}>
+                            {item.data.btnTextCDT}
+                          </span>
+                        )}
+                      </div>
+                    )}
                   </div>
                 </Link>
               </SwiperSlide>
@@ -150,6 +171,29 @@ const BannerTop = (props: BannerTopSliderProps) => {
                         objectFit="contain"
                         layout="fill"
                       />
+
+                      {/* Text overlay - sol alt */}
+                      {(item.data?.titleCDT ||
+                        item.data?.contentCDT ||
+                        item.data?.btnTextCDT) && (
+                        <div className={styles.textOverlay}>
+                          {item.data?.titleCDT && (
+                            <h2 className={styles.title}>
+                              {item.data.titleCDT}
+                            </h2>
+                          )}
+                          {item.data?.contentCDT && (
+                            <p className={styles.content}>
+                              {item.data.contentCDT}
+                            </p>
+                          )}
+                          {item.data?.btnTextCDT && (
+                            <span className={styles.btnText}>
+                              {item.data.btnTextCDT}
+                            </span>
+                          )}
+                        </div>
+                      )}
                     </div>
                   ) : (
                     <div className={styles.placeholder}>No Image</div>
