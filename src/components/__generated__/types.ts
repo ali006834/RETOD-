@@ -5,6 +5,10 @@ import {
 	IkasCategoryList,
 	IkasProductList,
 	IkasProduct,
+	IkasBlogList,
+	IkasBlog,
+	IkasBlogCategory,
+	IkasBlogCategoryList,
 } from "@ikas/storefront"
 
 export type ScrollingTexts = { 
@@ -188,6 +192,7 @@ export type ProductDetailProps = {
 
 export type BottomScrollingTextProps = {
 	scrollingTexts?: ScrollingTexts[];
+	transitionPeriod?: string;
 };
 
 export type BannerTextsProps = {
@@ -195,5 +200,15 @@ export type BannerTextsProps = {
 	contentText?: string;
 	btnText?: string;
 	navigationLink?: IkasNavigationLink;
+};
+
+export type BlogListsProps = {
+	blogs?: IkasBlogList;
+};
+
+export type BlogDetailProps = {
+	blog?: IkasBlog;
+	test?: IkasBlogCategory;
+	deneme?: IkasBlogCategoryList;
 };
 

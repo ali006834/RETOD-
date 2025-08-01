@@ -4,7 +4,7 @@ import { BottomScrollingTextProps } from "src/components/__generated__/types";
 import { toJS } from "mobx";
 
 const ScrollingText = (props: BottomScrollingTextProps) => {
-  const { scrollingTexts } = props;
+  const { scrollingTexts, transitionPeriod } = props;
 
   const scrollingTextsArr = toJS(scrollingTexts);
 
@@ -21,7 +21,14 @@ const ScrollingText = (props: BottomScrollingTextProps) => {
         {/* Scrolling text area - now takes full available width */}
         <div className={styles.scrolling_text_container}>
           <div className={styles.scrolling_text_wrapper}>
-            <div className={styles.scrolling_text_item}>
+            <div
+              className={styles.scrolling_text_item}
+              style={
+                {
+                  "--transition-period": `${transitionPeriod || 2000}s`,
+                } as React.CSSProperties
+              }
+            >
               <span className={styles.text_content}>
                 {scrollingText.repeat(10)}
               </span>

@@ -53,7 +53,7 @@
 
 .scrolling_text_item .text_content {
   display: inline-block;
-  animation: scrollRight 200s linear infinite;
+  animation: scrollRight var(--transition-period, 2000s) linear infinite;
 }
 
 @keyframes scrollRight {
