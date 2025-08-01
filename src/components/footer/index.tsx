@@ -19,6 +19,7 @@ const Footer: React.FC<FooterProps> = (props) => {
     shoppingPolicies,
     socialMediaList,
     footerLower,
+    footerUpperTop,
   } = props;
 
   const { t } = useTranslation();
@@ -29,83 +30,151 @@ const Footer: React.FC<FooterProps> = (props) => {
 
   return (
     <div className={styles.footerContainer}>
-      {/* Upper Footer */}
+      {/*//= Upper Footer */}
       <div className={styles.upperFooter}>
-        <div className={styles.logoTriangleContainer}>
-          <div className={styles.triangle}></div>
-          <div className={styles.logoContainer}>
-            {logo && (
-              <Image
-                image={logo}
-                alt={logo.altText || "Logo"}
-                layout="fill"
-                objectFit="contain"
-              />
-            )}
-          </div>
-        </div>
-
-        <div className={styles.upperFooterContent}>
-          {/* Legal Links - 3 columns */}
-          <div className={styles.page_links}>
-            {legalLinks?.map((item, index) => (
-              <div key={index}>
-                <Link href={item.href}>
-                  <a>{item.label}</a>
-                </Link>
-              </div>
-            ))}
-          </div>
-
-          {/* Support Links - 3 columns */}
-          <div className={styles.page_links}>
-            {supportLinks?.map((item, index) => (
-              <div key={index}>
-                <Link href={item.href}>
-                  <a>{item.label}</a>
-                </Link>
-              </div>
-            ))}
-          </div>
-
-          {/* Email Subscription - 4 columns */}
+        {/*//+ Üst Footer Top */}
+        <div className={styles.upperFooterTop}>
+          {/* Email Subscription - 6 columns */}
           <div className={styles.emailSection}>
             <EmailSubscriptionAndLanguageSelect />
           </div>
+          {/* Help & Language Section - 6 columns */}
+          <div className={styles.footerUpperRight}>
+            <div className={styles.helpAndLanguageSection}>
+              {/* Need Help Section */}
+              <div className={styles.helpSection}>
+                <h3 className={styles.helpTitle}>{footerUpperTop?.title}</h3>
+                <p className={styles.helpContent}>{footerUpperTop?.content}</p>
+              </div>
 
-          {/* Social Media - 2 columns */}
-          <div className={styles.socialMediaSection}>
-            <span className={styles.socialMediaTitle}>
-              {t(`${NS}:follow_us`)}
-            </span>
-            <div className={styles.socialLinks}>
-              {socialMediaListArr?.map((item, index) => (
-                <Link key={index} href={item?.link_SM?.href || "/"}>
-                  {item?.isExternal_SM ? (
-                    <a target="_blank" className={styles.socialLink}>
-                      <div
-                        dangerouslySetInnerHTML={{
-                          __html: item?.icon_SM || "",
-                        }}
-                      />
-                    </a>
-                  ) : (
-                    <a className={styles.socialLink}>
-                      <div
-                        dangerouslySetInnerHTML={{
-                          __html: item?.icon_SM || "",
-                        }}
-                      />
-                    </a>
-                  )}
-                </Link>
+              {/* Language Section */}
+              <div className={styles.languageSection}>
+                <h3 className={styles.langTitle}>
+                  {footerUpperTop?.langTitle}
+                </h3>
+                <div className={styles.languageSelectWrapper}>
+                  <LanguageSelect />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/*//+  Üst Footer Bottom */}
+        <div className={styles.upperFooterBottom}>
+          {/* Logo ve Triangle Container */}
+          <div className={styles.logoTriangleContainer}>
+            <div className={styles.triangle}></div>
+            <div className={styles.logoContainer}>
+              {logo && (
+                <Image
+                  image={logo}
+                  alt={logo.altText || "Logo"}
+                  layout="fill"
+                  objectFit="contain"
+                />
+              )}
+            </div>
+          </div>
+
+          {/* Üst Footer Content */}
+          <div className={styles.upperFooterContent}>
+            {/* Legal Links - 3 columns */}
+            <div className={styles.page_links}>
+              {legalLinks?.map((item, index) => (
+                <div key={index}>
+                  <Link href={item.href}>
+                    <a>{item.label}</a>
+                  </Link>
+                </div>
               ))}
+            </div>
+
+            {/* Support Links - 3 columns */}
+            <div className={styles.page_links}>
+              {supportLinks?.map((item, index) => (
+                <div key={index}>
+                  <Link href={item.href}>
+                    <a>{item.label}</a>
+                  </Link>
+                </div>
+              ))}
+            </div>
+
+            {/* Email Subscription - 4 columns */}
+            {/* Sağ taraf - NET-A-PORTER APP - 5 columns */}
+            <div className={styles.middleRight}>
+              <h2 className={styles.appTitle}>{footerLower?.qrTitle}</h2>
+
+              {/* QR alanı  */}
+              <div className={styles.qrSection}>
+                <div className={styles.qrImageArea}>
+                  {footerLower?.qrImage && (
+                    <Image
+                      image={footerLower.qrImage}
+                      alt="QR Code"
+                      layout="fill"
+                      objectFit="contain"
+                    />
+                  )}
+                </div>
+                <p className={styles.qrText}>{footerLower?.qrContent}</p>
+              </div>
+
+              {/* Kredi kartları alanı */}
+              <div className={styles.acceptsSection}>
+                <h3 className={styles.acceptsTitle}>
+                  {footerLower?.acceptedCardsTitle}
+                </h3>
+                <div className={styles.acceptedCards}>
+                  {Array.isArray(acceptedCardsArr) &&
+                    acceptedCardsArr.map((item: any, index: number) => (
+                      <div
+                        key={index}
+                        className={styles.cardIcon}
+                        dangerouslySetInnerHTML={{
+                          __html: item?.acceptedCardsImage || "",
+                        }}
+                      />
+                    ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Social Media - 2 columns */}
+            <div className={styles.socialMediaSection}>
+              <span className={styles.socialMediaTitle}>
+                {t(`${NS}:follow_us`)}
+              </span>
+              <div className={styles.socialLinks}>
+                {socialMediaListArr?.map((item, index) => (
+                  <Link key={index} href={item?.link_SM?.href || "/"}>
+                    {item?.isExternal_SM ? (
+                      <a target="_blank" className={styles.socialLink}>
+                        <div
+                          dangerouslySetInnerHTML={{
+                            __html: item?.icon_SM || "",
+                          }}
+                        />
+                      </a>
+                    ) : (
+                      <a className={styles.socialLink}>
+                        <div
+                          dangerouslySetInnerHTML={{
+                            __html: item?.icon_SM || "",
+                          }}
+                        />
+                      </a>
+                    )}
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Middle Footer */}
+      {/*//= Middle Footer */}
       <div className={styles.middleFooter}>
         <div className={styles.middleContent}>
           {/* Shopping Policies - 3 columns */}
@@ -131,49 +200,10 @@ const Footer: React.FC<FooterProps> = (props) => {
               </button>
             </Link>
           </div>
-
-          {/* Sağ taraf - NET-A-PORTER APP - 5 columns */}
-          <div className={styles.middleRight}>
-            <h2 className={styles.appTitle}>{footerLower?.qrTitle}</h2>
-
-            {/* QR alanı  */}
-            <div className={styles.qrSection}>
-              <div className={styles.qrImageArea}>
-                {footerLower?.qrImage && (
-                  <Image
-                    image={footerLower.qrImage}
-                    alt="QR Code"
-                    layout="fill"
-                    objectFit="contain"
-                  />
-                )}
-              </div>
-              <p className={styles.qrText}>{footerLower?.qrContent}</p>
-            </div>
-
-            {/* Kredi kartları alanı */}
-            <div className={styles.acceptsSection}>
-              <h3 className={styles.acceptsTitle}>
-                {footerLower?.acceptedCardsTitle}
-              </h3>
-              <div className={styles.acceptedCards}>
-                {Array.isArray(acceptedCardsArr) &&
-                  acceptedCardsArr.map((item: any, index: number) => (
-                    <div
-                      key={index}
-                      className={styles.cardIcon}
-                      dangerouslySetInnerHTML={{
-                        __html: item?.acceptedCardsImage || "",
-                      }}
-                    />
-                  ))}
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 
-      {/* Lower Footer */}
+      {/*//= Lower Footer */}
       <div className={styles.lowerFooter}>
         <div className={styles.payment}>
           <span>{t(`${NS}:copyrightText`)}</span>

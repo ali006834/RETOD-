@@ -12,6 +12,83 @@
   /* margin-top: 20px; */
 }
 
+.upperFooterTop {
+  max-width: 1540px;
+  margin: 0 auto;
+  padding: 0 30px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.upperFooterBottom {
+  border-top: 1px solid #ddd;
+}
+
+.emailSection {
+  grid-column: span 6;
+}
+
+.footerUpperRight {
+  grid-column: span 6;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Help and Language Section Styles */
+.helpAndLanguageSection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.helpSection {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.helpTitle {
+  font-size: 18px;
+  font-weight: bold;
+  color: #222;
+  margin: 0;
+  font-family: "Helvetica" !important;
+}
+
+.helpContent {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 400px;
+}
+
+.languageSection {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.langTitle {
+  font-size: 18px;
+  font-weight: bold;
+  color: #222;
+  margin: 0;
+  font-family: "Helvetica" !important;
+}
+
+.languageSelectWrapper {
+  width: fit-content;
+}
+
+.footerRight {
+  grid-column: span 6;
+}
+
 .logoTriangleContainer {
   position: absolute;
   right: 5%;
@@ -56,11 +133,11 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 30px;
-  padding: 30px 0 0 0;
+  padding: 30px 30px 0px;
 }
 
 .shoppingPoliciesMiddle {
-  grid-column: span 3;
+  grid-column: span 6;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -87,10 +164,6 @@
 
 .page_links {
   grid-column: span 2;
-}
-
-.emailSection {
-  grid-column: span 4;
 }
 
 .socialMediaSection {
@@ -160,12 +233,12 @@
 }
 
 .middleLeft {
-  grid-column: span 4;
+  grid-column: span 6;
   text-align: start;
 }
 
 .middleRight {
-  grid-column: span 5;
+  grid-column: span 4;
   text-align: start;
 }
 
@@ -306,6 +379,10 @@
     padding: 60px 20px 40px;
   }
 
+  .upperFooterTop {
+    padding: 0 20px;
+  }
+
   .upperFooterContent {
     grid-template-columns: repeat(12, 1fr);
     gap: 30px;
@@ -329,6 +406,11 @@
 
   /* email ve social media */
   .emailSection {
+    grid-column: span 6;
+    margin-top: 30px;
+  }
+
+  .footerUpperRight {
     grid-column: span 6;
     margin-top: 30px;
   }
@@ -414,6 +496,12 @@
     height: 50px;
   }
 
+  .upperFooterTop {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+    gap: 20px;
+  }
+
   .upperFooterContent {
     grid-template-columns: 1fr;
     padding: 40px 20px 0;
@@ -422,6 +510,7 @@
   /* Mobilde tek sütuna dönüş */
   .page_links,
   .emailSection,
+  .footerUpperRight,
   .socialMediaSection {
     grid-column: span 1 !important;
     margin-top: 20px;
@@ -446,8 +535,7 @@
     gap: 30px;
   }
 
-  .middleLeft,
-  .middleRight {
+  .middleLeft {
     grid-column: span 1;
   }
 
@@ -543,6 +631,16 @@
   .page_links a,
   .page_links_lf a,
   .payment span {
+    font-size: 13px;
+  }
+
+  /* Help and Language Section Mobile */
+  .helpTitle,
+  .langTitle {
+    font-size: 16px;
+  }
+
+  .helpContent {
     font-size: 13px;
   }
 }

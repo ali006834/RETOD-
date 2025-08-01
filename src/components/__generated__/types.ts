@@ -85,6 +85,12 @@ export type AcceptedCards = {
 	acceptedCardsImage?: string;
 };
 
+export type FooterTop = { 
+	title?: string;
+	content?: string;
+	langTitle?: string;
+};
+
 export type HeaderProps = {
 	logo?: IkasImage;
 	logo_black?: IkasImage;
@@ -104,6 +110,7 @@ export type FooterProps = {
 	supportLinks?: IkasNavigationLink[];
 	legalLinks?: IkasNavigationLink[];
 	footerLower?: FooterLower;
+	footerUpperTop?: FooterTop;
 };
 
 export type BannerTopSliderProps = {
