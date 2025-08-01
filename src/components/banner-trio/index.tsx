@@ -156,7 +156,7 @@ const BannerTrio = (props: BannerTrioProps) => {
                       : undefined
                   }
                 >
-                  {bannerCenterText.toLocaleUpperCase("tr-TR")}
+                  {bannerCenterText}
                 </h2>
               )}
               {bannerCenterContent && (
@@ -179,7 +179,7 @@ const BannerTrio = (props: BannerTrioProps) => {
                     borderColor: bannerCenterButtonTextColor || "#fff",
                   }}
                 >
-                  {bannerCenterButtonText.toLocaleUpperCase("tr-TR")}
+                  {bannerCenterButtonText}
                   <ArrowRightIcon
                     color={bannerCenterButtonTextColor || "#fff"}
                   />

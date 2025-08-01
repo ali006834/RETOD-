@@ -7,8 +7,6 @@ import {
 	IkasProduct,
 	IkasBlogList,
 	IkasBlog,
-	IkasBlogCategory,
-	IkasBlogCategoryList,
 } from "@ikas/storefront"
 
 export type ScrollingTexts = { 
@@ -208,7 +206,5 @@ export type BlogListsProps = {
 
 export type BlogDetailProps = {
 	blog?: IkasBlog;
-	test?: IkasBlogCategory;
-	deneme?: IkasBlogCategoryList;
 };
 

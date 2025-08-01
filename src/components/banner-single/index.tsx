@@ -47,17 +47,11 @@ const BannerSingle = (props: BannerSingleProps) => {
         </div>
 
         <div className={styles.contentWrapper}>
-          {headerText && (
-            <h2 className={styles.bannerHeader}>
-              {headerText.toLocaleUpperCase("tr-TR")}
-            </h2>
-          )}
+          {headerText && <h2 className={styles.bannerHeader}>{headerText}</h2>}
           {contentText && <p className={styles.bannerContent}>{contentText}</p>}
           {btnText && (
             <Link href={navigationLink?.href || ""}>
-              <a className={styles.bannerButton}>
-                {btnText.toLocaleUpperCase("tr-TR")}
-              </a>
+              <a className={styles.bannerButton}>{btnText}</a>
             </Link>
           )}
         </div>
