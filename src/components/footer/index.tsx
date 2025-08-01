@@ -7,23 +7,25 @@ import EmailSubscription from "./email-subscription";
 import { LanguageSelect } from "../language";
 import { useTranslation } from "@ikas/storefront";
 
-import Facebook from "../svg/facebook";
-import Instagram from "../svg/instagram";
-import PinterestIcon from "../svg/pinterest";
-import WhatsappIcon from "../svg/whatsapp";
-import YoutubeIcon from "../svg/youtube";
 import { toJS } from "mobx";
 
 export const NS = "footer";
 
 const Footer: React.FC<FooterProps> = (props) => {
-  const { legalLinks, supportLinks, logo, shoppingPolicies, socialMediaList } =
-    props;
+  const {
+    legalLinks,
+    supportLinks,
+    logo,
+    shoppingPolicies,
+    socialMediaList,
+    footerLower,
+  } = props;
 
   const { t } = useTranslation();
 
   const shoppingPoliciesArr = toJS(shoppingPolicies);
   const socialMediaListArr = toJS(socialMediaList);
+  const acceptedCardsArr = toJS(footerLower?.acceptedCardsImages);
 
   return (
     <div className={styles.footerContainer}>
@@ -44,25 +46,20 @@ const Footer: React.FC<FooterProps> = (props) => {
         </div>
 
         <div className={styles.upperFooterContent}>
-          {/* Shopping Policies - 3 columns */}
-          <div className={styles.shoppingPolicies}>
-            {shoppingPoliciesArr?.map((item, index) => (
-              <div key={index} className={styles.policyItem}>
-                <div
-                  className={styles.policyIcon}
-                  dangerouslySetInnerHTML={{ __html: item?.iconSP || "" }}
-                />
-                <span>{item?.contentSP}</span>
+          {/* Legal Links - 3 columns */}
+          <div className={styles.page_links}>
+            {legalLinks?.map((item, index) => (
+              <div key={index}>
+                <Link href={item.href}>
+                  <a>{item.label}</a>
+                </Link>
               </div>
             ))}
           </div>
 
-          {/* Customer Services - 3 columns */}
+          {/* Support Links - 3 columns */}
           <div className={styles.page_links}>
-            {/* <span className={styles.headingsInFooter}>
-              {t(`${NS}:services`).toLocaleUpperCase("tr-TR")}
-            </span> */}
-            {legalLinks?.map((item, index) => (
+            {supportLinks?.map((item, index) => (
               <div key={index}>
                 <Link href={item.href}>
                   <a>{item.label}</a>
@@ -111,40 +108,66 @@ const Footer: React.FC<FooterProps> = (props) => {
       {/* Middle Footer */}
       <div className={styles.middleFooter}>
         <div className={styles.middleContent}>
-          {/* Sol taraf - MR PORTER */}
-          <div className={styles.middleLeft}>
-            <h2 className={styles.middleTitle}>MR PORTER</h2>
-            <p className={styles.middleText}>
-              Shop from over 500 of the world's finest luxury designer brands &
-              be dressed for any occasion
-            </p>
-            <button className={styles.middleButton}>Visit MRPORTER.COM</button>
+          {/* Shopping Policies - 3 columns */}
+          <div className={styles.shoppingPoliciesMiddle}>
+            {shoppingPoliciesArr?.map((item, index) => (
+              <div key={index} className={styles.policyItem}>
+                <div
+                  className={styles.policyIcon}
+                  dangerouslySetInnerHTML={{ __html: item?.iconSP || "" }}
+                />
+                <span>{item?.contentSP}</span>
+              </div>
+            ))}
           </div>
 
-          {/* Sağ taraf - NET-A-PORTER APP */}
-          <div className={styles.middleRight}>
-            <h2 className={styles.appTitle}>GET THE NET-A-PORTER APP</h2>
+          {/* Sol taraf - MR PORTER - 4 columns */}
+          <div className={styles.middleLeft}>
+            <h2 className={styles.middleTitle}>{footerLower?.title}</h2>
+            <p className={styles.middleText}>{footerLower?.content}</p>
+            <Link href={footerLower?.btnLink?.href || "#"}>
+              <button className={styles.middleButton}>
+                {footerLower?.btnText}
+              </button>
+            </Link>
+          </div>
 
+          {/* Sağ taraf - NET-A-PORTER APP - 5 columns */}
+          <div className={styles.middleRight}>
+            <h2 className={styles.appTitle}>{footerLower?.qrTitle}</h2>
+
+            {/* QR alanı  */}
             <div className={styles.qrSection}>
               <div className={styles.qrImageArea}>
-                {logo && (
+                {footerLower?.qrImage && (
                   <Image
-                    image={logo}
+                    image={footerLower.qrImage}
                     alt="QR Code"
                     layout="fill"
                     objectFit="contain"
                   />
                 )}
               </div>
-              <p className={styles.qrText}>
-                Scan the QR code with your iOS or Android smartphone to download
-                the app
-              </p>
+              <p className={styles.qrText}>{footerLower?.qrContent}</p>
             </div>
 
+            {/* Kredi kartları alanı */}
             <div className={styles.acceptsSection}>
-              <h3 className={styles.acceptsTitle}>Net-A-Porter accepts</h3>
-              {/* Bu kısım daha sonra doldurulacak */}
+              <h3 className={styles.acceptsTitle}>
+                {footerLower?.acceptedCardsTitle}
+              </h3>
+              <div className={styles.acceptedCards}>
+                {Array.isArray(acceptedCardsArr) &&
+                  acceptedCardsArr.map((item: any, index: number) => (
+                    <div
+                      key={index}
+                      className={styles.cardIcon}
+                      dangerouslySetInnerHTML={{
+                        __html: item?.acceptedCardsImage || "",
+                      }}
+                    />
+                  ))}
+              </div>
             </div>
           </div>
         </div>
@@ -154,16 +177,6 @@ const Footer: React.FC<FooterProps> = (props) => {
       <div className={styles.lowerFooter}>
         <div className={styles.payment}>
           <span>{t(`${NS}:copyrightText`)}</span>
-          {/* Support Linkler  */}
-          <div className={styles.page_links_lf}>
-            {supportLinks?.map((item, index) => (
-              <div key={index}>
-                <Link href={item.href}>
-                  <a>{item.label}</a>
-                </Link>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </div>

@@ -82,7 +82,7 @@ export type FooterLower = {
 };
 
 export type AcceptedCards = { 
-	acceptedCardsImage?: IkasImage;
+	acceptedCardsImage?: string;
 };
 
 export type HeaderProps = {

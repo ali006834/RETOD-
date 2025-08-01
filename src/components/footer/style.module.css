@@ -1,6 +1,6 @@
 .footerContainer {
   width: 100%;
-  font-family: "HelveticaNeueLight" !important;
+  font-family: "Helvetica" !important;
 }
 
 /*= Üst Footer */
@@ -29,7 +29,7 @@
   width: 180px;
   height: 120px;
   background-color: #f6f1eb;
-  border: 3px solid #fff;
+  border: 2px solid #fff;
   /* background-color: #f6f1eb; */
 }
 
@@ -59,12 +59,11 @@
   padding: 30px 0 0 0;
 }
 
-.shoppingPolicies {
+.shoppingPoliciesMiddle {
   grid-column: span 3;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin-left: 10%;
 }
 
 .policyItem {
@@ -95,7 +94,7 @@
 }
 
 .socialMediaSection {
-  grid-column: span 3;
+  grid-column: span 4;
 }
 
 .socialMediaTitle {
@@ -154,18 +153,19 @@
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 30px;
-  display: flex;
-  gap: 60px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 30px;
   align-items: flex-start;
 }
 
 .middleLeft {
-  flex: 1;
+  grid-column: span 4;
   text-align: start;
 }
 
 .middleRight {
-  flex: 1;
+  grid-column: span 5;
   text-align: start;
 }
 
@@ -245,6 +245,25 @@
   font-family: "Helvetica" !important;
 }
 
+.acceptedCards {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.cardIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardIcon svg {
+  max-width: 40px;
+  max-height: 40px;
+  width: auto;
+  height: auto;
+}
+
 /*= Alt Footer */
 .lowerFooter {
   background-color: #f6f1eb;
@@ -253,12 +272,11 @@
 }
 
 .payment {
-  display: flex;
-  justify-content: space-between;
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 30px;
+  text-align: center;
 }
 
 .payment span {
@@ -294,12 +312,9 @@
     padding: 60px 20px 0;
   }
 
-  .shoppingPolicies {
-    display: inline-block;
-    grid-column: span 6;
-    flex-direction: column;
-    margin-left: 0;
-    margin-bottom: 5px !important;
+  .shoppingPoliciesMiddle {
+    grid-column: span 12;
+    margin-bottom: 30px;
   }
 
   .policyItem {
@@ -330,7 +345,17 @@
   /* Middle footer tablet düzeni */
   .middleContent {
     padding: 0 20px;
-    gap: 40px;
+    gap: 30px;
+    grid-template-columns: 1fr;
+  }
+
+  .middleLeft {
+    grid-column: span 1;
+    margin-bottom: 30px;
+  }
+
+  .middleRight {
+    grid-column: span 1;
   }
 
   .middleTitle {
@@ -362,17 +387,6 @@
   /* Lower footer tablet düzeni */
   .lowerFooter {
     padding: 20px;
-  }
-
-  .payment {
-    flex-direction: column;
-    gap: 15px;
-    align-items: flex-start;
-  }
-
-  .page_links_lf {
-    flex-wrap: wrap;
-    row-gap: 10px;
   }
 }
 
@@ -406,12 +420,16 @@
   }
 
   /* Mobilde tek sütuna dönüş */
-  .shoppingPolicies,
   .page_links,
   .emailSection,
   .socialMediaSection {
     grid-column: span 1 !important;
     margin-top: 20px;
+  }
+
+  .shoppingPoliciesMiddle {
+    grid-column: span 1 !important;
+    margin-bottom: 30px;
   }
 
   .policyItem {
@@ -424,8 +442,13 @@
   }
 
   .middleContent {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     gap: 30px;
+  }
+
+  .middleLeft,
+  .middleRight {
+    grid-column: span 1;
   }
 
   .middleTitle {
@@ -470,16 +493,6 @@
   /* Lower footer mobil düzeni */
   .payment {
     padding: 0;
-  }
-
-  .payment span {
-    margin: auto;
-  }
-
-  .page_links_lf {
-    flex-direction: row;
-    margin: auto;
-    gap: 10px;
   }
 }
 
