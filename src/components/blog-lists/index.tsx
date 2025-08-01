@@ -15,88 +15,6 @@ import "swiper/css/scrollbar";
 const BlogList: React.FC<BlogListsProps> = (props: BlogListsProps) => {
   const { t } = useTranslation();
 
-  // GEÇİCİ VERİLER - IKAS KAPALI OLDUĞU İÇİN
-  const tempBlogData = [
-    {
-      id: 1,
-      href: "/blog/gecici-blog-1",
-      title: "Blog Yazısı Başlığı 1",
-      shortDescription:
-        "Bu geçici bir blog yazısı açıklamasıdır. CSS düzenlemeleri için kullanılmaktadır.",
-      image: {
-        src: "/image/image_blog.webp",
-      },
-    },
-    {
-      id: 2,
-      href: "/blog/gecici-blog-2",
-      title: "Blog Yazısı Başlığı 2",
-      shortDescription:
-        "İkinci geçici blog yazısı açıklaması. Tasarım çalışmaları için örnek içerik.",
-      image: {
-        src: "/image/image_blog.webp",
-      },
-    },
-    {
-      id: 3,
-      href: "/blog/gecici-blog-3",
-      title: "Blog Yazısı Başlığı 3",
-      shortDescription:
-        "Üçüncü geçici blog yazısı. Lorem ipsum dolor sit amet consectetur adipiscing elit.",
-      image: {
-        src: "/image/image_blog.webp",
-      },
-    },
-    {
-      id: 4,
-      href: "/blog/gecici-blog-4",
-      title: "Blog Yazısı Başlığı 4",
-      shortDescription:
-        "Dördüncü geçici blog yazısı örneği. CSS testleri için kullanılıyor.",
-      image: {
-        src: "/image/image_blog.webp",
-      },
-    },
-    {
-      id: 5,
-      href: "/blog/gecici-blog-5",
-      title: "Blog Yazısı Başlığı 5",
-      shortDescription:
-        "Beşinci geçici blog yazısı. Slider özelliğini test etmek için eklendi.",
-      image: {
-        src: "/image/image_blog.webp",
-      },
-    },
-    {
-      id: 6,
-      href: "/blog/gecici-blog-6",
-      title: "Blog Yazısı Başlığı 6",
-      shortDescription: "Altıncı geçici blog yazısı. Grid'in son elemanı.",
-      image: {
-        src: "/image/image_blog.webp",
-      },
-    },
-    {
-      id: 7,
-      href: "/blog/gecici-blog-7",
-      title: "Blog Yazısı Başlığı 7",
-      shortDescription:
-        "Yedinci blog yazısı. Bu noktadan sonra slider aktif olacak.",
-      image: {
-        src: "/image/image_blog.webp",
-      },
-    },
-    {
-      id: 8,
-      href: "/blog/gecici-blog-8",
-      title: "Blog Yazısı Başlığı 8",
-      shortDescription: "Sekizinci blog yazısı. Slider test verisi.",
-      image: {
-        src: "/image/image_blog.webp",
-      },
-    },
-  ];
-
   console.log("dwadwadwad", props.blogs);
 
   const renderBlogItem = (item: any) => (
@@ -163,7 +81,7 @@ const BlogList: React.FC<BlogListsProps> = (props: BlogListsProps) => {
               },
             }}
           >
-            {tempBlogData.map((item) => (
+            {props?.blogs?.data.map((item) => (
               <SwiperSlide key={item.id}>
                 <Link href={item.href}>{renderBlogItem(item)}</Link>
               </SwiperSlide>
