@@ -90,10 +90,6 @@
     font-size: 12px;
   }
 
-  .scrolling_text_item .text_content {
-    animation: scrollRight 40s linear infinite;
-  }
-
   .header_content {
     padding: 0 12px;
   }
