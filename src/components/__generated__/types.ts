@@ -180,3 +180,7 @@ export type ProductDetailProps = {
 	bankTable?: MainTable[];
 };
 
+export type BottomScrollingTextProps = {
+	scrollingTexts?: ScrollingTexts[];
+};
+
