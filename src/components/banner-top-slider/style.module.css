@@ -83,37 +83,41 @@
 }
 
 .title {
-  font-size: 3rem;
+  font-family: "ChronicleDisplayRoman", serif;
+  font-size: 32px;
   font-weight: 400;
-  margin-bottom: 10px;
   line-height: 1.2;
-  font-family: "ChronicleDisplay";
+  margin: 0 0 12px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .content {
+  font-family: "Akkurat-Regular", sans-serif;
   font-size: 16px;
-  line-height: 1.6;
-  font-weight: 500;
-  margin-bottom: 20px;
-  font-family: "Helvetica";
+  font-weight: 400;
+  line-height: 1.4;
+  margin: 0 0 20px 0;
+  opacity: 0.9;
 }
 
 .btnText {
-  font-size: 1rem;
+  font-family: "Akkurat-Regular", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 12px 24px;
+  border: 2px solid white;
+  background: transparent;
   display: inline-block;
-  background-color: #222;
-  color: white;
-  padding: 0.8rem 4.5rem;
-  text-decoration: none;
-  border-radius: 2px;
-  font-weight: 400;
-  transition: opacity 0.3s;
-  max-width: fit-content;
-  font-family: "Akkurat";
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .btnText:hover {
-  opacity: 0.9;
+  background: white;
+  color: #000;
 }
 
 /* Oklar */

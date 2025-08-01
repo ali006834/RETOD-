@@ -18,6 +18,14 @@
   display: none;
 }
 
+.mobileItem {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  aspect-ratio: 920/1150;
+}
+
 .bannerWrapper,
 .slide {
   position: relative;
@@ -277,7 +285,9 @@
   }
 
   .mobileContainer {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
   }
 
   .wrapper {
@@ -285,23 +295,15 @@
     padding: 0;
   }
 
-  .bannerWrapper,
-  .slide {
-    aspect-ratio: 3/4;
-  }
-
-  .slide {
-    flex: 0 0 100%;
-    margin: 0;
-  }
-
-  .slider {
-    gap: 0;
+  .mobileItem {
+    aspect-ratio: 920/1150;
+    margin-bottom: 0;
   }
 
   /* Mobil için orta yazı alanları */
   .mobileTextWrapper {
     padding: 20px 15px;
+    margin-bottom: 0;
   }
 
   .centerText {

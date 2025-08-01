@@ -1,10 +1,8 @@
-import React, { useRef } from "react";
+import React from "react";
 import { observer } from "mobx-react-lite";
 import styles from "./style.module.css";
 import { BannerTrioProps } from "../__generated__/types";
 import { Image, Link } from "@ikas/storefront";
-import NextIcon from "src/components/svg/next";
-import PrevIcon from "src/components/svg/prev";
 import ArrowRightIcon from "./svg/arrow-right";
 
 const BannerTrio = (props: BannerTrioProps) => {
@@ -25,41 +23,10 @@ const BannerTrio = (props: BannerTrioProps) => {
     bannerCenterButtonTextColor,
   } = props;
 
-  const sliderRef = useRef<HTMLDivElement>(null);
-
   // Sol fotoğraf ve sağ video kontrolü
   if (!banner_left || !banner_right) {
     return null;
   }
-
-  // Sol ve sağ banner'lar için mobil slider (sadece görsel/video)
-  const banners = [
-    {
-      banner: banner_left,
-      link: banner_left_link,
-      type: "image" as const,
-    },
-    {
-      banner: banner_right,
-      link: banner_right_link,
-      type: "video" as const,
-    },
-  ];
-
-  const scrollToSlide = (direction: "prev" | "next") => {
-    if (!sliderRef.current) return;
-
-    const { scrollLeft, clientWidth } = sliderRef.current;
-    const scrollTo =
-      direction === "next"
-        ? scrollLeft + clientWidth
-        : scrollLeft - clientWidth;
-
-    sliderRef.current.scrollTo({
-      left: scrollTo,
-      behavior: "smooth",
-    });
-  };
 
   return (
     <div className={styles.wrapper}>
@@ -157,7 +124,23 @@ const BannerTrio = (props: BannerTrioProps) => {
 
       {/*//= Mobile/Tablet Alanı */}
       <div className={styles.mobileContainer}>
-        {/* Orta yazı alanı mobilde de göster */}
+        {/* Sol Fotoğraf */}
+        <div className={styles.mobileItem}>
+          <Link href={banner_left_link?.href || ""}>
+            <a>
+              <Image
+                width={920}
+                height={1150}
+                alt={banner_left?.altText || ""}
+                image={banner_left}
+                useBlur={true}
+                className={styles.bannerImage}
+              />
+            </a>
+          </Link>
+        </div>
+
+        {/* Orta yazı alanı */}
         <div
           className={styles.mobileTextWrapper}
           style={{ backgroundColor: banner_bg_color || "#f5f5f5" }}
@@ -206,55 +189,23 @@ const BannerTrio = (props: BannerTrioProps) => {
           </Link>
         </div>
 
-        <div className={styles.sliderWrapper}>
-          <button
-            className={styles.sliderArrowPrev}
-            onClick={() => scrollToSlide("prev")}
-            aria-label="Previous banner"
-          >
-            <PrevIcon />
-          </button>
-
-          <div className={styles.slider} ref={sliderRef}>
-            {banners.map(({ banner, link, type }, index) => (
-              <div key={index} className={styles.slide}>
-                <Link href={link?.href || ""}>
-                  <a>
-                    {type === "video" ? (
-                      <video
-                        width={503}
-                        height={400}
-                        autoPlay
-                        muted
-                        loop
-                        playsInline
-                        className={styles.bannerVideo}
-                      >
-                        <source src={banner?.videoSrc || ""} type="video/mp4" />
-                      </video>
-                    ) : (
-                      <Image
-                        width={503}
-                        height={400}
-                        alt={banner?.altText || ""}
-                        image={banner}
-                        useBlur={true}
-                        className={styles.bannerImage}
-                      />
-                    )}
-                  </a>
-                </Link>
-              </div>
-            ))}
-          </div>
-
-          <button
-            className={styles.sliderArrowNext}
-            onClick={() => scrollToSlide("next")}
-            aria-label="Next banner"
-          >
-            <NextIcon />
-          </button>
+        {/* Sağ Video */}
+        <div className={styles.mobileItem}>
+          <Link href={banner_right_link?.href || ""}>
+            <a>
+              <video
+                width={503}
+                height={400}
+                autoPlay
+                muted
+                loop
+                playsInline
+                className={styles.bannerVideo}
+              >
+                <source src={banner_right?.videoSrc || ""} type="video/mp4" />
+              </video>
+            </a>
+          </Link>
         </div>
       </div>
     </div>
