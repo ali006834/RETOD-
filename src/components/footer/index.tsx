@@ -101,7 +101,6 @@ const Footer: React.FC<FooterProps> = (props) => {
               ))}
             </div>
 
-            {/* Email Subscription - 4 columns */}
             {/* Sağ taraf - NET-A-PORTER APP - 5 columns */}
             <div className={styles.middleRight}>
               <h2 className={styles.appTitle}>{footerLower?.qrTitle}</h2>

@@ -515,21 +515,27 @@
   }
 
   .upperFooterContent {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     padding: 40px 20px 0;
+    gap: 20px;
   }
 
-  /* Mobilde tek sütuna dönüş */
-  .page_links,
+  /* Mobilde page_links yan yana */
+  .page_links {
+    grid-column: span 1;
+    margin-top: 20px;
+  }
+
+  /* Diğer bölümler tek sütuna dönüş */
   .emailSection,
   .footerUpperRight,
   .socialMediaSection {
-    grid-column: span 1 !important;
+    grid-column: span 2 !important;
     margin-top: 20px;
   }
 
   .shoppingPoliciesMiddle {
-    grid-column: span 1 !important;
+    grid-column: span 2 !important;
     margin-bottom: 30px;
   }
 
