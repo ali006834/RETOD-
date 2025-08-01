@@ -31,11 +31,14 @@ const BannerSingle = (props: FeaturedProductShowcaseProps) => {
             )}
             {titleText && <h2 className={styles.titleText}>{titleText}</h2>}
             {contentText && <p className={styles.contentText}>{contentText}</p>}
-            {btnText && btnLink && (
-              <Link href={btnLink}>
-                <a className={styles.btn}>{btnText}</a>
-              </Link>
-            )}
+            {/* Desktop button */}
+            <div className={styles.desktopButton}>
+              {btnText && btnLink && (
+                <Link href={btnLink}>
+                  <a className={styles.btn}>{btnText}</a>
+                </Link>
+              )}
+            </div>
           </div>
 
           {/* Right side - Grid 4 (products slider) */}
@@ -84,6 +87,15 @@ const BannerSingle = (props: FeaturedProductShowcaseProps) => {
                 className={`${styles.swiperButtonNext} swiper-button-next`}
               ></div>
             </Swiper>
+          </div>
+
+          {/* Mobile button - shows only on mobile below slider */}
+          <div className={styles.mobileButton}>
+            {btnText && btnLink && (
+              <Link href={btnLink}>
+                <a className={styles.btn}>{btnText}</a>
+              </Link>
+            )}
           </div>
         </div>
       </div>
