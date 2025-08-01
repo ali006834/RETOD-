@@ -184,3 +184,10 @@ export type BottomScrollingTextProps = {
 	scrollingTexts?: ScrollingTexts[];
 };
 
+export type BannerTextsProps = {
+	headerText?: string;
+	contentText?: string;
+	btnText?: string;
+	navigationLink?: IkasNavigationLink;
+};
+
