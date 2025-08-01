@@ -61,12 +61,25 @@ const SlidingSlider = (props: BannerSlidingSliderProps) => {
             )}
             <div className={styles.slidesGrid} ref={boxRef}>
               {slides.map((slide) => {
-                const src =
+                const srcValue =
                   typeof slide?.imageSlider?.getSrc === "function"
-                    ? slide?.imageSlider?.getSrc
+                    ? slide?.imageSlider?.getSrc(1500)
+                    : slide?.imageSlider?.src;
+                const src =
+                  typeof srcValue === "string"
+                    ? srcValue
                     : slide?.imageSlider?.src;
                 const alt =
                   slide?.imageSlider?.altText || titleBanner || "Slide image";
+
+                // Video dosyalarını kontrol et
+                const isVideo =
+                  src &&
+                  typeof src === "string" &&
+                  (src.includes(".mp4") ||
+                    src.includes(".webm") ||
+                    src.includes(".mov") ||
+                    src.includes("video"));
 
                 return (
                   <div
@@ -75,16 +88,33 @@ const SlidingSlider = (props: BannerSlidingSliderProps) => {
                     onMouseEnter={handleMouseEnter}
                   >
                     <div className={styles.imageContainer}>
-                      <div className={styles.imagePlaceholder} />
-                      <img
-                        alt={alt}
-                        height={769}
-                        width={1500}
-                        src={slide?.imageSlider?.src}
-                        loading="lazy"
-                        decoding="async"
-                        className={styles.slideImage}
-                      />
+                      {isVideo ? (
+                        <video
+                          autoPlay
+                          muted
+                          loop
+                          playsInline
+                          className={styles.slideImage}
+                          style={{
+                            width: "100%",
+                            height: "100%",
+                            objectFit: "cover",
+                          }}
+                        >
+                          <source src={src} type="video/mp4" />
+                          Video desteklenmiyor.
+                        </video>
+                      ) : (
+                        <img
+                          alt={alt}
+                          height={769}
+                          width={1500}
+                          src={slide?.imageSlider?.src}
+                          loading="lazy"
+                          decoding="async"
+                          className={styles.slideImage}
+                        />
+                      )}
                     </div>
                   </div>
                 );
@@ -125,27 +155,60 @@ const SlidingSlider = (props: BannerSlidingSliderProps) => {
         {slides.length > 0 && (
           <Slider {...settings}>
             {slides.map((slide) => {
-              const src =
+              const srcValue =
                 typeof slide?.imageSlider?.getSrc === "function"
-                  ? slide?.imageSlider?.getSrc
+                  ? slide?.imageSlider?.getSrc(1500)
+                  : slide?.imageSlider?.src;
+              const src =
+                typeof srcValue === "string"
+                  ? srcValue
                   : slide?.imageSlider?.src;
               const alt =
                 slide?.imageSlider?.altText || titleBanner || "Slide image";
+
+              // Video dosyalarını kontrol et
+              const isVideo =
+                src &&
+                typeof src === "string" &&
+                (src.includes(".mp4") ||
+                  src.includes(".webm") ||
+                  src.includes(".mov") ||
+                  src.includes("video"));
 
               return (
                 <div
                   key={slide?.imageSlider?.id}
                   className={styles.mobileSlide}
                 >
-                  <img
-                    alt={alt}
-                    height={769}
-                    width={1500}
-                    src={slide?.imageSlider?.src}
-                    loading="lazy"
-                    decoding="async"
-                    className={styles.mobileImage}
-                  />
+                  {isVideo ? (
+                    <video
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      className={styles.mobileImage}
+                      style={{
+                        width: "100%",
+                        height: "auto",
+                        maxHeight: "60vh",
+                        objectFit: "cover",
+                        borderRadius: "0.5rem",
+                      }}
+                    >
+                      <source src={src} type="video/mp4" />
+                      Video desteklenmiyor.
+                    </video>
+                  ) : (
+                    <img
+                      alt={alt}
+                      height={769}
+                      width={1500}
+                      src={slide?.imageSlider?.src}
+                      loading="lazy"
+                      decoding="async"
+                      className={styles.mobileImage}
+                    />
+                  )}
                 </div>
               );
             })}

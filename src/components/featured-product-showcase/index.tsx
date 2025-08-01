@@ -19,84 +19,82 @@ const BannerSingle = (props: FeaturedProductShowcaseProps) => {
   }
 
   return (
-    <div className={styles.mainWrapper}>
-      <div className={styles.wrapper}>
-        <div className={styles.container}>
-          {/* Left side - Grid 8 (text content) */}
-          <div className={styles.contentContainer}>
-            {headerText && (
-              <div className={styles.headerText}>
-                {headerText.toLocaleUpperCase("tr-TR")}
-              </div>
-            )}
-            {titleText && <h2 className={styles.titleText}>{titleText}</h2>}
-            {contentText && <p className={styles.contentText}>{contentText}</p>}
-            {/* Desktop button */}
-            <div className={styles.desktopButton}>
-              {btnText && btnLink && (
-                <Link href={btnLink}>
-                  <a className={styles.btn}>{btnText}</a>
-                </Link>
-              )}
+    <div className={styles.wrapper}>
+      <div className={styles.container}>
+        {/* Left side - Grid 8 (text content) */}
+        <div className={styles.contentContainer}>
+          {headerText && (
+            <div className={styles.headerText}>
+              {headerText.toLocaleUpperCase("tr-TR")}
             </div>
-          </div>
-
-          {/* Right side - Grid 4 (products slider) */}
-          <div className={styles.sliderContainer}>
-            <Swiper
-              modules={[Navigation]}
-              scrollbar={true}
-              className={styles.mySwiper}
-              navigation={{
-                nextEl: ".swiper-button-next",
-                prevEl: "", // Sol ok Olmayacak
-              }}
-              loop={true} // Sonsuz döngü
-              slidesPerView={2.5} // Varsayılan mobil
-              spaceBetween={15}
-              breakpoints={{
-                768: {
-                  slidesPerView: 3, // Tablet
-                  spaceBetween: 15,
-                },
-                1024: {
-                  slidesPerView: 4.5, // Web
-                  spaceBetween: 15,
-                  slidesPerGroup: 4, // Kaydırma grup sayısı
-                },
-              }}
-            >
-              {products?.data?.map((products, index) => {
-                return (
-                  <SwiperSlide key={index}>
-                    <div className={styles.product_container}>
-                      <Link href={products.href}>
-                        <a>
-                          <ProductImage product={products} />
-                          <div className={styles.product_Info}>
-                            <ProductTitle product={products} />
-                          </div>
-                        </a>
-                      </Link>
-                    </div>
-                  </SwiperSlide>
-                );
-              })}
-              {/* Custom right arrow */}
-              <div
-                className={`${styles.swiperButtonNext} swiper-button-next`}
-              ></div>
-            </Swiper>
-          </div>
-
-          {/* Mobile button - shows only on mobile below slider */}
-          <div className={styles.mobileButton}>
+          )}
+          {titleText && <h2 className={styles.titleText}>{titleText}</h2>}
+          {contentText && <p className={styles.contentText}>{contentText}</p>}
+          {/* Desktop button */}
+          <div className={styles.desktopButton}>
             {btnText && btnLink && (
               <Link href={btnLink}>
                 <a className={styles.btn}>{btnText}</a>
               </Link>
             )}
           </div>
+        </div>
+
+        {/* Right side - Grid 4 (products slider) */}
+        <div className={styles.sliderContainer}>
+          <Swiper
+            modules={[Navigation]}
+            scrollbar={true}
+            className={styles.mySwiper}
+            navigation={{
+              nextEl: ".swiper-button-next",
+              prevEl: "", // Sol ok Olmayacak
+            }}
+            loop={true} // Sonsuz döngü
+            slidesPerView={2.5} // Varsayılan mobil
+            spaceBetween={15}
+            breakpoints={{
+              768: {
+                slidesPerView: 3, // Tablet
+                spaceBetween: 15,
+              },
+              1024: {
+                slidesPerView: 4.5, // Web
+                spaceBetween: 15,
+                slidesPerGroup: 4, // Kaydırma grup sayısı
+              },
+            }}
+          >
+            {products?.data?.map((products, index) => {
+              return (
+                <SwiperSlide key={index}>
+                  <div className={styles.product_container}>
+                    <Link href={products.href}>
+                      <a>
+                        <ProductImage product={products} />
+                        <div className={styles.product_Info}>
+                          <ProductTitle product={products} />
+                        </div>
+                      </a>
+                    </Link>
+                  </div>
+                </SwiperSlide>
+              );
+            })}
+            {/* Custom right arrow */}
+            <div
+              className={`${styles.swiperButtonNext} swiper-button-next`}
+            ></div>
+          </Swiper>
+        </div>
+
+        {/* Mobile button - shows only on mobile below slider */}
+        <div className={styles.mobileButton}>
+          {btnText && btnLink && (
+            <Link href={btnLink}>
+              <a className={styles.btn}>{btnText}</a>
+            </Link>
+          )}
         </div>
       </div>
     </div>

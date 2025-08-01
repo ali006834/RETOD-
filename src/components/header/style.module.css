@@ -337,7 +337,6 @@
   width: 300px;
   height: 300px;
   object-fit: cover;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .category_image_info {
@@ -351,14 +350,14 @@
   font-weight: 600;
   color: #1f2937;
   margin: 0 0 8px 0;
-  font-family: "Helvetica" !important;
+  font-family: "ChronicleDisplay" !important;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
 .category_image_description {
   font-size: 14px;
-  color: #6b7280;
+  color: #444;
   margin: 0;
   line-height: 1.5;
   font-family: "Helvetica" !important;
