@@ -69,6 +69,22 @@ export type MainTable = {
 	enterLogoAndPropotions?: AddBank;
 };
 
+export type FooterLower = { 
+	title?: string;
+	content?: string;
+	btnText?: string;
+	btnLink?: IkasNavigationLink;
+	qrTitle?: string;
+	qrImage?: IkasImage;
+	qrContent?: string;
+	acceptedCardsTitle?: string;
+	acceptedCardsImages?: AcceptedCards;
+};
+
+export type AcceptedCards = { 
+	acceptedCardsImage?: IkasImage;
+};
+
 export type HeaderProps = {
 	logo?: IkasImage;
 	logo_black?: IkasImage;
@@ -87,6 +103,7 @@ export type FooterProps = {
 	socialMediaList?: SocialMedia[];
 	supportLinks?: IkasNavigationLink[];
 	legalLinks?: IkasNavigationLink[];
+	footerLower?: FooterLower;
 };
 
 export type BannerTopSliderProps = {
