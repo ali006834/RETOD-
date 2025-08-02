@@ -81,7 +81,8 @@
         "confirm": "Onayla",
         "hidden": "Filtreleri Gizle",
         "show": "Filtreleri Göster",
-        "filter_product": "Sırala"
+        "filter_product": "Sırala",
+        "all": "Hepsi"
       }
     }
   },

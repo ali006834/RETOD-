@@ -8,11 +8,17 @@ import { FiltersProps } from "../index/index";
 export const ListFilters = observer(({ filter, lastChild }: FiltersProps) => {
   if (!filter.displayedValues || !filter.displayedValues.length) return null;
 
+  // Seçili değerlerin isimlerini al
+  const selectedValues = filter.displayedValues
+    .filter((value) => value.isSelected)
+    .map((value) => value.name);
+
   return (
     <FiltersWrapper
       settings={filter.settings}
       title={filter.name}
       noBorder={lastChild}
+      selectedValues={selectedValues}
     >
       {filter.displayedValues.map((value) => (
         <FilterCheckbox

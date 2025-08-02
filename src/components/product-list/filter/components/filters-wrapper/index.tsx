@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { IkasProductFilterSettings } from "@ikas/storefront";
+import { IkasProductFilterSettings, useTranslation } from "@ikas/storefront";
 import { useScreen } from "src/utils/hooks/useScreen";
 import ArrowDown from "src/components/svg/arrow-down";
 
@@ -12,11 +12,13 @@ type FiltersWrapperProps = {
   settings?: IkasProductFilterSettings | null | undefined;
   children: React.ReactNode;
   defaultOpen?: boolean; //Başlangıç ta açık gelsin mi?
+  selectedValues?: string[]; // Seçili değerlerin isimleri
 };
 
 export const FiltersWrapper = (props: FiltersWrapperProps) => {
-  const { settings, defaultOpen } = props;
+  const { settings, defaultOpen, selectedValues } = props;
   const { isMobile } = useScreen();
+  const { t } = useTranslation();
 
   // Başlangıç durumunu belirle:
   // 1. Eğer defaultOpen explicit olarak belirtilmişse onu kullan
@@ -38,7 +40,23 @@ export const FiltersWrapper = (props: FiltersWrapperProps) => {
           }`}
           onClick={() => setActive((prev) => !prev)}
         >
-          <S.FilterTitle>{props.title}</S.FilterTitle>
+          <div>
+            <S.FilterTitle>{props.title}</S.FilterTitle>
+            {selectedValues !== undefined && (
+              <div
+                style={{
+                  fontSize: "12px",
+                  color: "#979897",
+                  marginTop: "4px",
+                  fontFamily: "Helvetica",
+                }}
+              >
+                {selectedValues.length > 0
+                  ? selectedValues.join(", ")
+                  : t("list.filters.sort.all")}
+              </div>
+            )}
+          </div>
           <ArrowDown
             className={`${styles.toggle_icon} ${active ? styles.rotated : ""}`}
             strokeColor="#333"

@@ -58,11 +58,7 @@ export const FilterCheckbox = ({
     <Checkbox checked={checked} onChange={onChange} radioStyle={radioStyle}>
       <S.FilterCheckboxLabel $isSelected={checked}>
         {colorCode && <S.ColorSquare $colorCode={colorCode} />}
-        {colorCode
-          ? formattedLabel
-          : radioStyle
-          ? formattedLabel
-          : `${formattedLabel} (${resultCount})`}
+        {formattedLabel}
       </S.FilterCheckboxLabel>
     </Checkbox>
   );
