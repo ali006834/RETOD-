@@ -13,7 +13,7 @@
 }
 
 .filter_sidebar {
-  width: 250px;
+  width: 350px;
   flex-shrink: 0;
 }
 
@@ -55,8 +55,8 @@
 }
 .product_list_products {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 15px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
 }
 .product_list_no_product {
   font-family: "HelveticaNeueLight" !important;

@@ -42,11 +42,11 @@ const ProductList = (props: ProductListProps) => {
     }
   };
 
-  // Grid leyout view selector işlemleri (Sayfada ürün kaç sütunlu gözüksün?)
+  //+ Grid leyout view selector işlemleri (Sayfada ürün kaç sütunlu gözüksün?)
   const getDefaultColumns = () => {
     if (isMobile) return 2; // Mobile için varsayılan 2 sütun (%50)
     if (isTablet) return 2; // Tablet için varsayılan 2 sütun
-    return 4; // Desktop için varsayılan 4 sütun ...
+    return 3; // Desktop için varsayılan 4 sütun ...
   };
 
   const [columns, setColumns] = useState(getDefaultColumns());
@@ -88,8 +88,6 @@ const ProductList = (props: ProductListProps) => {
       pageName.includes(cat?.category_name.toLowerCase() || "")
     )
   );
-
-  console.log("matchedCategory::", matchedCategory);
 
   return (
     <div className={styles.product_list_wrapper}>
