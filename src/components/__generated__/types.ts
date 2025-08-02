@@ -99,6 +99,17 @@ export type FooterTop = {
 	langTitle?: string;
 };
 
+export type CategorNames = { 
+	category_name?: string;
+};
+
+export type DiscountBannerCategoryNames = { 
+	cat_names?: CategorNames;
+	header_text?: string;
+	content_text?: string;
+	bg_color?: string;
+};
+
 export type HeaderProps = {
 	logo?: IkasImage;
 	logo_black?: IkasImage;
@@ -179,6 +190,7 @@ export type BannerThinProps = {
 export type ProductListProps = {
 	categories?: IkasCategoryList;
 	productList?: IkasProductList;
+	categorNames?: DiscountBannerCategoryNames[];
 };
 
 export type ProductDetailProps = {

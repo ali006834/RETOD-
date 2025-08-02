@@ -15,9 +15,10 @@ import ArrowRightIcon from "src/components/svg/arrow-right";
 import CloseIcon from "src/components/svg/close";
 import { useScreen } from "src/utils/hooks/useScreen";
 import ViewSelector from "./view-selector";
+import SpecialDiscountBanner from "./special-discount-banner";
 
 const ProductList = (props: ProductListProps) => {
-  const { productList, categories } = props;
+  const { productList, categories, categorNames } = props;
 
   if (!productList) {
     return null;
@@ -59,6 +60,31 @@ const ProductList = (props: ProductListProps) => {
     gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))`,
   };
 
+  //+Special Discount Banner İşlemleri
+  // İndirim Banner gösterilecek kategoriyi bul.. ve MobX proxy nesnelerini normal nesnelere dönüştür
+  const normalCategorNames = categorNames
+    ? JSON.parse(JSON.stringify(categorNames))
+    : [];
+
+  // Sayfa adını güvenli şekilde alalım...
+  const pageName =
+    (productList as any).pageSpecificData?.name?.toLowerCase() || "";
+
+  //Kategori adı interface
+  interface CategoryType {
+    cat_names?: Array<{
+      category_name: string;
+    }>;
+    header_text?: string;
+    content_text?: string;
+    bg_color?: string;
+  }
+  const matchedCategory = normalCategorNames?.find((category: CategoryType) =>
+    category?.cat_names?.some((cat) =>
+      pageName.includes(cat?.category_name.toLowerCase() || "")
+    )
+  );
+
   return (
     <div className={styles.product_list_wrapper}>
       {/*//= Divider - Ayrık Çizgisi */}
@@ -67,6 +93,14 @@ const ProductList = (props: ProductListProps) => {
       {/*//= İçerikler*/}
       {!isDesktop ? (
         <div className={styles.product_list_header}>
+          {/* Özel indirim bannerı (Sadece eşleşen kategoride görünür) */}
+          {matchedCategory && (
+            <SpecialDiscountBanner
+              header_text={matchedCategory.header_text}
+              content_text={matchedCategory.content_text}
+              bg_color={matchedCategory.bg_color}
+            />
+          )}
           <div className={styles.product_list_top_mobile}>
             <ModalFilter {...props} />
             <Header productList={productList} />
@@ -79,6 +113,14 @@ const ProductList = (props: ProductListProps) => {
         </div>
       ) : (
         <div className={styles.product_list_top}>
+          {/* Özel indirim bannerı (Sadece eşleşen kategoride görünür) */}
+          {matchedCategory && (
+            <SpecialDiscountBanner
+              header_text={matchedCategory.header_text}
+              content_text={matchedCategory.content_text}
+              bg_color={matchedCategory.bg_color}
+            />
+          )}
           <div className={styles.product_list_breadcrumb}>
             <Header productList={productList} />
           </div>

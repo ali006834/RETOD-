@@ -1,0 +1,82 @@
+.wrapper {
+  margin: -30px 0 20px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.header {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  color: #d0021b;
+  font-family: "ChronicleDisplay";
+}
+
+.content {
+  font-size: 18px;
+  color: inherit;
+  font-family: "ChronicleDisplay";
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Responsive */
+
+@media (min-width: 1025px) {
+  .container {
+    max-width: 90%;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .header {
+    font-size: 28px;
+  }
+
+  .content {
+    font-size: 16px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .wrapper {
+    padding: 30px 0;
+  }
+
+  .header {
+    font-size: 24px;
+  }
+
+  .content {
+    font-size: 15px;
+  }
+}
+
+/* Mini Mobile */
+@media (max-width: 479px) {
+  .wrapper {
+    padding: 20px 0;
+  }
+
+  .header {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .content {
+    font-size: 14px;
+  }
+}
