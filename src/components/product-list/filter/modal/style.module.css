@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
-  font-family: "HelveticaNeueLight" !important;
+  font-family: "Helvetica" !important;
   /* font-size: 1rem; */
 }
 .modal_filter {
@@ -36,7 +36,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: "HelveticaNeueLight" !important;
+  font-family: "Helvetica" !important;
   padding-bottom: 50px;
   font-size: 25px;
   padding-bottom: 30px;

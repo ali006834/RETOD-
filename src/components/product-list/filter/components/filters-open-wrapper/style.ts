@@ -28,7 +28,7 @@ export const FilterTitleWrapper = styled.button`
 export const FilterTitle = styled.p`
   font-size: 16px;
   color: #3a3a3a;
-  font-family: "HelveticaNeueLight" !important;
+  font-family: "Helvetica" !important;
   font-weight: 500;
 `;
 

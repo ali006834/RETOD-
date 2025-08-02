@@ -33,7 +33,7 @@ export const FilterTitle = styled.div`
   gap: 10px;
   font-size: 0.9rem;
   color: #333;
-  font-family: "HelveticaNeueLight" !important;
+  font-family: "Helvetica" !important;
   font-weight: 500;
 
   img {

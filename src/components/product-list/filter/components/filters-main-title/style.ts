@@ -25,7 +25,7 @@ export const ClearFiltersButton = styled.button`
   padding: 12px 20px;
   // border-radius: 12px;
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  font-family: "HelveticaNeueMedium" !important;
+  font-family: "Helvetica" !important;
   position: relative;
   overflow: hidden;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
@@ -87,7 +87,7 @@ export const ClearFiltersButtonMinimal = styled.button`
   padding: 10px 18px;
   border-radius: 8px;
   transition: all 0.2s ease;
-  font-family: "HelveticaNeueMedium" !important;
+  font-family: "Helvetica" !important;
   letter-spacing: -0.01em;
 
   &:hover {
