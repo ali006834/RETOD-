@@ -78,12 +78,18 @@ const ProductList = (props: ProductListProps) => {
     header_text?: string;
     content_text?: string;
     bg_color?: string;
+    header_color?: string;
+    content_color?: string;
+    isColorEffectEnabled?: boolean;
+    isTextEffectEnabled?: boolean;
   }
   const matchedCategory = normalCategorNames?.find((category: CategoryType) =>
     category?.cat_names?.some((cat) =>
       pageName.includes(cat?.category_name.toLowerCase() || "")
     )
   );
+
+  console.log("matchedCategory::", matchedCategory);
 
   return (
     <div className={styles.product_list_wrapper}>
@@ -96,9 +102,13 @@ const ProductList = (props: ProductListProps) => {
           {/* Özel indirim bannerı (Sadece eşleşen kategoride görünür) */}
           {matchedCategory && (
             <SpecialDiscountBanner
-              header_text={matchedCategory.header_text}
-              content_text={matchedCategory.content_text}
-              bg_color={matchedCategory.bg_color}
+              header_text={matchedCategory?.header_text}
+              content_text={matchedCategory?.content_text}
+              bg_color={matchedCategory?.bg_color}
+              header_color={matchedCategory?.header_color}
+              content_color={matchedCategory?.content_color}
+              isColorEffectEnabled={matchedCategory?.isColorEffectEnabled}
+              isTextEffectEnabled={matchedCategory?.isTextEffectEnabled}
             />
           )}
           <div className={styles.product_list_top_mobile}>
@@ -116,9 +126,13 @@ const ProductList = (props: ProductListProps) => {
           {/* Özel indirim bannerı (Sadece eşleşen kategoride görünür) */}
           {matchedCategory && (
             <SpecialDiscountBanner
-              header_text={matchedCategory.header_text}
-              content_text={matchedCategory.content_text}
-              bg_color={matchedCategory.bg_color}
+              header_text={matchedCategory?.header_text}
+              content_text={matchedCategory?.content_text}
+              bg_color={matchedCategory?.bg_color}
+              header_color={matchedCategory?.header_color}
+              content_color={matchedCategory?.content_color}
+              isColorEffectEnabled={matchedCategory?.isColorEffectEnabled}
+              isTextEffectEnabled={matchedCategory?.isTextEffectEnabled}
             />
           )}
           <div className={styles.product_list_breadcrumb}>

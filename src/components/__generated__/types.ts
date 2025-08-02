@@ -106,8 +106,12 @@ export type CategorNames = {
 export type DiscountBannerCategoryNames = { 
 	cat_names?: CategorNames;
 	header_text?: string;
+	header_color?: string;
 	content_text?: string;
+	content_color?: string;
 	bg_color?: string;
+	isColorEffectEnabled?: boolean;
+	isTextEffectEnabled?: boolean;
 };
 
 export type HeaderProps = {
