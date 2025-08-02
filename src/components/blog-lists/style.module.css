@@ -5,6 +5,15 @@
   position: relative;
 }
 
+.bannerTitle {
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-family: "Akkurat";
+  text-align: start;
+  color: #222;
+  margin-bottom: 20px;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
@@ -14,7 +23,9 @@
 
 .blogImg {
   width: 100% !important;
-  height: 100% !important;
+  /* height: 100% !important; */
+  height: 300px;
+  object-fit: cover;
 }
 
 .contentArea {
@@ -26,6 +37,15 @@
   text-align: start;
 }
 
+.blogCategory {
+  font-size: 1rem;
+  color: #979897;
+  font-weight: 500;
+  font-family: "Akkurat";
+  text-transform: uppercase;
+  margin-bottom: 1rem; /* 16px */
+}
+
 .textContent {
   display: flex;
   flex-direction: column;
@@ -34,11 +54,19 @@
 }
 
 .title {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   line-height: 1.3;
+  letter-spacing: 0.5px;
   text-align: start;
   font-weight: 500;
+  font-family: ChronicleDisplay;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-family: "ChronicleDisplay";
+  margin-bottom: 20px;
 }
 
 .title:hover {
@@ -46,7 +74,7 @@
   color: var(--primary-color);
 }
 
-.shortDescription {
+/* .shortDescription {
   color: #000;
   font-size: 0.7rem;
   line-height: 1.5;
@@ -59,15 +87,9 @@
   height: 60px;
   font-weight: 500;
   font-family: "Helvetica";
-}
+} */
 
-.blogImg {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-.readMoreBtn button {
+/* .readMoreBtn button {
   font-size: 1rem;
   display: inline-block;
   background-color: #222;
@@ -86,7 +108,7 @@
 
 .readMoreBtn :hover {
   opacity: 0.9;
-}
+} */
 
 /* Swiper Navigation */
 .swiperWrapper {

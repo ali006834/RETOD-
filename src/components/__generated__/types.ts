@@ -201,6 +201,7 @@ export type BannerTextsProps = {
 };
 
 export type BlogListsProps = {
+	bannerTitle?: string;
 	blogs?: IkasBlogList;
 };
 

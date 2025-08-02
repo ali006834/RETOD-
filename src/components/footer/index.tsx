@@ -44,7 +44,12 @@ const Footer: React.FC<FooterProps> = (props) => {
               {/* Need Help Section */}
               <div className={styles.helpSection}>
                 <h3 className={styles.helpTitle}>{footerUpperTop?.title}</h3>
-                <p className={styles.helpContent}>{footerUpperTop?.content}</p>
+                <p
+                  className={styles.helpContent}
+                  dangerouslySetInnerHTML={{
+                    __html: footerUpperTop?.content || "",
+                  }}
+                />
               </div>
 
               {/* Language Section */}

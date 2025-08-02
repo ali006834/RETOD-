@@ -348,8 +348,8 @@
 /*= Alt Footer */
 .lowerFooter {
   background-color: #f6f1eb;
-  padding: 20px 0;
-  margin: auto;
+  padding: 10px 0;
+  margin: auto auto 36px; /* üstten auto, soldan ve sağdan auto ve altta 36px */
 }
 
 .copyRight {
