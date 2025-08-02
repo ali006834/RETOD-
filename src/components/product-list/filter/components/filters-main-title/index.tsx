@@ -21,6 +21,10 @@ export const FiltersMainTitle = observer(({ productList }: Props) => {
 
   return (
     <S.TitleWrapper>
+      <S.ResultsText>
+        {productList.data.length} {t("list.filters.sort.results")}
+      </S.ResultsText>
+      <S.Separator>|</S.Separator>
       <S.ClearFiltersButton
         onClick={() => {
           productList.clearFilters();

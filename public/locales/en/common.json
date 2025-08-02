@@ -86,7 +86,8 @@
         "hidden": "Hide Filters",
         "show": "Show Filters",
         "filter_product": "Sort",
-        "all": "All"
+        "all": "All",
+        "results": "Results"
       }
     }
   },

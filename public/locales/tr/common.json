@@ -82,7 +82,8 @@
         "hidden": "Filtreleri Gizle",
         "show": "Filtreleri Göster",
         "filter_product": "Sırala",
-        "all": "Hepsi"
+        "all": "Hepsi",
+        "results": "Sonuçlar"
       }
     }
   },
