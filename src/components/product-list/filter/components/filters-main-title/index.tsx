@@ -32,7 +32,7 @@ export const FiltersMainTitle = observer(({ productList }: Props) => {
       >
         {t("productList.clearFilters")}
         <span>
-          {productList.isLoading && <Loading height="1.2rem" width="1.2rem" />}
+          {productList.isLoading && <Loading height="0.8rem" width="0.8rem" />}
         </span>
       </S.ClearFiltersButton>
     </S.TitleWrapper>
