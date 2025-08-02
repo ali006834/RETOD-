@@ -7,6 +7,7 @@ type FilterCheckboxProps = {
   label: string;
   resultCount: number;
   onChange: () => void;
+  radioStyle?: boolean;
 };
 
 export const FilterCheckbox = ({
@@ -14,6 +15,7 @@ export const FilterCheckbox = ({
   label,
   resultCount,
   onChange,
+  radioStyle,
 }: FilterCheckboxProps) => {
   const formatLabel = (text: string) => {
     if (!text) return text;
@@ -51,9 +53,9 @@ export const FilterCheckbox = ({
   const formattedLabel = formatLabel(label);
 
   return (
-    <Checkbox checked={checked} onChange={onChange}>
+    <Checkbox checked={checked} onChange={onChange} radioStyle={radioStyle}>
       <S.FilterCheckboxLabel $isSelected={checked}>
-        {formattedLabel} ({resultCount})
+        {radioStyle ? formattedLabel : `${formattedLabel} (${resultCount})`}
       </S.FilterCheckboxLabel>
     </Checkbox>
   );

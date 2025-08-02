@@ -26,6 +26,7 @@ export const CustomCheckboxInnerWrapper = styled.span<{ $mr: boolean }>`
 
 type CustomCheckboxProps = {
   $status: FormItemStatus;
+  $radioStyle?: boolean;
 };
 
 export const CustomCheckbox = styled.span<CustomCheckboxProps>`
@@ -46,8 +47,15 @@ export const CustomCheckbox = styled.span<CustomCheckboxProps>`
       border-color: ${theme.color.red};
     `};
 
-  border-radius: 3px;
+  border-radius: ${({ $radioStyle }) => ($radioStyle ? "50%" : "3px")};
   cursor: pointer;
+`;
+
+export const RadioDot = styled.span`
+  width: 8px;
+  height: 8px;
+  background-color: #000;
+  border-radius: 50%;
 `;
 
 export const HiddenCheckbox = styled.input`

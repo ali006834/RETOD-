@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { IkasProductFilterSettings } from "@ikas/storefront";
 import { useScreen } from "src/utils/hooks/useScreen";
+import ArrowDown from "src/components/svg/arrow-down";
 
 import * as S from "./style";
 import styles from "./style.module.css";
@@ -38,7 +39,12 @@ export const FiltersWrapper = (props: FiltersWrapperProps) => {
           onClick={() => setActive((prev) => !prev)}
         >
           <S.FilterTitle>{props.title}</S.FilterTitle>
-          <div className={styles.toggle_icon} />
+          <ArrowDown
+            className={`${styles.toggle_icon} ${active ? styles.rotated : ""}`}
+            strokeColor="#333"
+            width="16px"
+            height="16px"
+          />
         </div>
         <div
           className={`${styles.filter_group_content} ${

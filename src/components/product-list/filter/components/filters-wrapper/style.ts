@@ -27,10 +27,11 @@ export const FilterTitleWrapper = styled.button`
 `;
 
 export const FilterTitle = styled.p`
-  font-weight: 400;
+  font-weight: 500;
   font-size: 16px;
   line-height: 28px;
-  font-family: "HelveticaNeueLight" !important;
+  font-family: "Helvetica" !important;
+  
 `;
 
 export const FilterTitleExpandButton = styled.span`
@@ -41,5 +42,5 @@ export const FilterTitleExpandButton = styled.span`
   align-items: center;
   justify-content: center;
   padding: 2px;
-  font-family: "HelveticaNeueLight" !important;
+  font-family: "Helvetica" !important;
 `;

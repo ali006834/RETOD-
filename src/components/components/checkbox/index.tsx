@@ -8,6 +8,7 @@ type Props = {
   status?: FormItemStatus;
   children?: React.ReactNode;
   onChange?: (checked: boolean) => void;
+  radioStyle?: boolean;
 };
 
 const Checkbox = (props: Props) => {
@@ -22,8 +23,9 @@ const Checkbox = (props: Props) => {
         }
       />
       <S.CustomCheckboxInnerWrapper $mr={!!props.children}>
-        <S.CustomCheckbox $status={props.status}>
-          {!!props.checked && <CheckSVG />}
+        <S.CustomCheckbox $status={props.status} $radioStyle={props.radioStyle}>
+          {!!props.checked &&
+            (props.radioStyle ? <S.RadioDot /> : <CheckSVG />)}
         </S.CustomCheckbox>
       </S.CustomCheckboxInnerWrapper>
       {!!props.children && props.children}
