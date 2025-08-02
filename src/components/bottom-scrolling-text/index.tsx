@@ -29,9 +29,10 @@ const ScrollingText = (props: BottomScrollingTextProps) => {
                 } as React.CSSProperties
               }
             >
-              <span className={styles.text_content}>
-                {scrollingText.repeat(10)}
-              </span>
+              <span
+                className={styles.text_content}
+                dangerouslySetInnerHTML={{ __html: scrollingText.repeat(10) }}
+              ></span>
             </div>
           </div>
         </div>

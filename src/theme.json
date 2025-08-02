@@ -2207,13 +2207,10 @@
           "propValues": {
             "scrollingTexts": [
               {
-                "content": "<span style=\"font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; font-size: 14px; font-family: &quot;Twemoji Country Flags&quot;, Inter, sans-serif;\">Mala Mıni&nbsp;</span><span style=\"font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; font-size: 14px; font-family: &quot;Twemoji Country Flags&quot;, Inter, sans-serif;\">Mal</span>"
+                "content": "<span style=\"font-family: &quot;Twemoji Country Flags&quot;, Inter, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400;\">3500 TL ÜZERİ ÜCRETSİZ KARGO</span>"
               },
               {
-                "content": "(XXX GÜNÜ HARİÇ) AYNI GÜN KARGO SEÇENEĞİ İLE SABAH 00'A KADAR VERİLEN SİPARİŞLER (SADECE XXX) AYNI GÜN TESLİM!"
-              },
-              {
-                "content": "<span style=\"font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; font-size: 14px; font-family: &quot;Twemoji Country Flags&quot;, Inter, sans-serif;\">Mala Mıni&nbsp;</span><span style=\"font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; font-size: 14px; font-family: &quot;Twemoji Country Flags&quot;, Inter, sans-serif;\">Mal</span>"
+                "content": "<span style=\"font-family: &quot;Twemoji Country Flags&quot;, Inter, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400;\">ÇAĞRI MERKEZİ - +90 554 895 2220</span>"
               }
             ],
             "transitionPeriod": "1000"
@@ -3188,7 +3185,7 @@
                 "header_text": "Parti İndirimi Başladı!",
                 "content_text": "<div>Şıklığın adresi bu indirimde!</div><div>Resmi davetlerden samimi buluşmalara kadar her ortama uygun şık parçalarda kaçırılmayacak fırsatlar sizi bekliyor.</div><div>Parti elbiseleri, tasarım çantalar ve stil sahibi crop top'lar şimdi özel fiyatlarla!</div>",
                 "bg_color": "#f6f1ebff",
-                "isColorEffectEnabled": true,
+                "isColorEffectEnabled": false,
                 "isTextEffectEnabled": false,
                 "header_color": "#d0021bff",
                 "content_color": "#222222ff"
