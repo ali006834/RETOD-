@@ -21,7 +21,8 @@ export const ListFilters = observer(({ filter, lastChild }: FiltersProps) => {
           onChange={() => filter.onFilterValueClick(value)}
           label={value.name}
           resultCount={value.resultCount ?? 0}
-          radioStyle={true}
+          radioStyle={false}
+          colorCode={value.colorCode || undefined}
         />
       ))}
     </FiltersWrapper>

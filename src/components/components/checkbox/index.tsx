@@ -23,7 +23,11 @@ const Checkbox = (props: Props) => {
         }
       />
       <S.CustomCheckboxInnerWrapper $mr={!!props.children}>
-        <S.CustomCheckbox $status={props.status} $radioStyle={props.radioStyle}>
+        <S.CustomCheckbox
+          $status={props.status}
+          $radioStyle={props.radioStyle}
+          $checked={!!props.checked}
+        >
           {!!props.checked &&
             (props.radioStyle ? <S.RadioDot /> : <CheckSVG />)}
         </S.CustomCheckbox>

@@ -27,6 +27,7 @@ export const CustomCheckboxInnerWrapper = styled.span<{ $mr: boolean }>`
 type CustomCheckboxProps = {
   $status: FormItemStatus;
   $radioStyle?: boolean;
+  $checked?: boolean;
 };
 
 export const CustomCheckbox = styled.span<CustomCheckboxProps>`
@@ -36,9 +37,9 @@ export const CustomCheckbox = styled.span<CustomCheckboxProps>`
   width: 16px;
   height: 16px;
   padding: 2px;
-  color: ${({ theme }) => theme.color.checkbox};
+  color: ${({ $checked, theme }) => ($checked ? "#fff" : theme.color.checkbox)};
   border: 1px solid #000;
-  background-color: ${({ theme }) => theme.color.checkboxBg};
+  background-color: ${({ $checked, theme }) => ($checked ? "#000" : theme.color.checkboxBg)};
 
   ${({ $status, theme }) =>
     $status === "error" &&
@@ -47,14 +48,14 @@ export const CustomCheckbox = styled.span<CustomCheckboxProps>`
       border-color: ${theme.color.red};
     `};
 
-  border-radius: ${({ $radioStyle }) => ($radioStyle ? "50%" : "3px")};
+  border-radius: ${({ $radioStyle }) => ($radioStyle ? "50%" : "0px")};
   cursor: pointer;
 `;
 
 export const RadioDot = styled.span`
   width: 8px;
   height: 8px;
-  background-color: #000;
+  background-color: #fff;
   border-radius: 50%;
 `;
 
