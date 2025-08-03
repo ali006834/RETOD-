@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { observer } from "mobx-react-lite";
 import {
   IkasDisplayedVariantType,
@@ -31,10 +31,10 @@ import "swiper/css";
 
 type Props = {
   product: IkasProduct;
+  columns?: number;
 };
-
 const Product = (props: Props) => {
-  const { product } = props;
+  const { product, columns } = props;
   const { t } = useTranslation();
   const { isMobile } = useScreen();
 
@@ -45,6 +45,24 @@ const Product = (props: Props) => {
   const router = useRouter();
 
   const [isOpen, setIsOpen] = useState(false);
+
+  //+ View Selcetor işlemleri
+  const [isHovered, setIsHovered] = useState(true);
+  // Eğer grid layout (View-Selector) sayısı değişirse, modal'ı kapat ve hover durumunu ayarla
+  useEffect(() => {
+    setIsOpen(false);
+    setIsHovered(true);
+  }, [columns]);
+
+  // Modal'ı açıp kapatmak için toggle fonksiyonu
+  const toggleIcon = () => {
+    setIsOpen(!isOpen);
+  };
+
+  // Ürünlerlerin kaçarlı gözükeceğine dair işlemler
+  const ifColumnNotEqual6 = columns !== 6; // Eğer sütun sayısı 6 değilse, etiketleri göster
+  const ifColumnEqual5 = columns == 5; // Eğer sütun sayısı 5 ise, etiketleri gösterme
+  const ifColumnEqual4 = isMobile && columns == 4; // Eğer mobilde ve sütun sayısı 4 ise, etiketleri gösterme
 
   return (
     <div className={styles.product_container}>
@@ -82,24 +100,30 @@ const Product = (props: Props) => {
             </MinimalMobileModal>
           </>
         )}
-        <ProductTitle {...props} />
-        <Price {...props} />
-        <ProductTag {...props} />
+        {ifColumnNotEqual6 && !ifColumnEqual5 && !ifColumnEqual4 && (
+          <>
+            <ProductTitle {...props} />
+            <Price {...props} />
+          </>
+        )}
+        {ifColumnNotEqual6 && !ifColumnEqual5 && <ProductTag {...props} />}
       </div>
       {!isMobile && (
         <div className={styles.onHoverAddCart}>
           <div>
-            <S.VariantsWrapper>
-              {product?.displayedVariantTypes
-                .filter((dVT) => dVT.variantType.isColorSelection)
-                .map((dVT) => (
-                  <VariantType
-                    key={dVT.variantType.id}
-                    product={product}
-                    dVT={dVT}
-                  />
-                ))}
-            </S.VariantsWrapper>
+            {ifColumnNotEqual6 && !ifColumnEqual5 && (
+              <S.VariantsWrapper>
+                {product?.displayedVariantTypes
+                  .filter((dVT) => dVT.variantType.isColorSelection)
+                  .map((dVT) => (
+                    <VariantType
+                      key={dVT.variantType.id}
+                      product={product}
+                      dVT={dVT}
+                    />
+                  ))}
+              </S.VariantsWrapper>
+            )}
           </div>
         </div>
       )}
