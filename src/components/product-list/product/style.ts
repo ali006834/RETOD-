@@ -126,7 +126,7 @@ export const ProductTags = styled.div`
   gap: 1px;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 10px 0px;
+  padding: 10px 0px 0px;
 
   @media screen and (max-width: ${breakpoints.md}) {
     padding: 3px 0px;
@@ -135,13 +135,13 @@ export const ProductTags = styled.div`
 `;
 
 export const ProductTag = styled.div`
-  color: #136538;
+  color: #979897;
   background: none;
   border: none;
   padding: 2px 0px;
   font-size: 14px;
   font-family: "Helvetica" !important;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 16px;
   letter-spacing: 1.5px;
   transition: color 0.2s ease;

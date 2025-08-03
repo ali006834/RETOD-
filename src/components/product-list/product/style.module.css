@@ -2,10 +2,6 @@
   position: relative;
 }
 
-.product_container:hover {
-  /* outline: 1px solid black; */
-}
-
 .favorite {
   position: absolute;
   top: 0px;
@@ -275,14 +271,14 @@
 
 .onHoverAddCart {
   width: 100%;
-  opacity: 0;
-  transform: translateY(0px); /* 0px aşağıda başlar */
+  opacity: 1;
+  transform: translateY(0px);
   transition: opacity 0.3s ease, transform 0.3s ease;
   top: 0;
   z-index: 1;
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
   padding: 0px 0px 10px 0px;
-  pointer-events: none; /*Tıklanabilirliğini devre dışı bırakmak için */
+  pointer-events: auto;
 }
 
 /* Hover sırasında görünür ve yukarı kayar */
@@ -295,14 +291,14 @@
 /*= Hover da gözüken Renk ve Bedenler */
 .product_size {
   display: grid;
-  grid-template-columns: repeat(7, minmax(0, 1fr));
+  grid-template-columns: repeat(9, minmax(0, 1fr));
   gap: 0px;
 }
 
 .product_size_item_color {
-  width: 25px;
-  height: 25px;
-  min-width: 25px;
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -312,12 +308,12 @@
   font-size: 14px;
   cursor: pointer;
   background: transparent;
-  /* border-radius: 100%; */
+  border-radius: 100%;
 }
 .product_size_selected_item_color {
-  width: 25px;
-  height: 25px;
-  min-width: 25px;
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -328,12 +324,12 @@
   font-family: "Helvetica" !important;
   font-size: 14px;
   cursor: pointer;
-  /* border-radius: 100%; */
+  border-radius: 100%;
 }
 .product_size_item_no_stock_selected_color {
-  width: 25px;
-  height: 25px;
-  min-width: 25px;
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -349,9 +345,9 @@
 }
 
 .product_size_item {
-  width: 35px;
-  height: 35px;
-  min-width: 35px;
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -363,9 +359,9 @@
   background: transparent;
 }
 .product_size_selected_item {
-  width: 35px;
-  height: 35px;
-  min-width: 35px;
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -378,9 +374,9 @@
   cursor: pointer;
 }
 .product_size_item_no_stock_selected {
-  width: 35px;
-  height: 35px;
-  min-width: 35px;
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -404,9 +400,9 @@
   transform-origin: right;
 }
 .product_size_item_no_stock {
-  width: 35px;
-  height: 35px;
-  min-width: 35px;
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
   display: flex;
   justify-content: center;
   align-items: center;

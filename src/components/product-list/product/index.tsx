@@ -69,13 +69,15 @@ const Product = (props: Props) => {
             </Button>
             <MinimalMobileModal isOpen={isOpen} setIsOpen={setIsOpen}>
               <S.VariantsWrapper>
-                {product?.displayedVariantTypes.map((dVT) => (
-                  <VariantType
-                    key={dVT.variantType.id}
-                    product={product}
-                    dVT={dVT}
-                  />
-                ))}
+                {product?.displayedVariantTypes
+                  .filter((dVT) => dVT.variantType.isColorSelection)
+                  .map((dVT) => (
+                    <VariantType
+                      key={dVT.variantType.id}
+                      product={product}
+                      dVT={dVT}
+                    />
+                  ))}
               </S.VariantsWrapper>
             </MinimalMobileModal>
           </>
@@ -88,13 +90,15 @@ const Product = (props: Props) => {
         <div className={styles.onHoverAddCart}>
           <div>
             <S.VariantsWrapper>
-              {product?.displayedVariantTypes.map((dVT) => (
-                <VariantType
-                  key={dVT.variantType.id}
-                  product={product}
-                  dVT={dVT}
-                />
-              ))}
+              {product?.displayedVariantTypes
+                .filter((dVT) => dVT.variantType.isColorSelection)
+                .map((dVT) => (
+                  <VariantType
+                    key={dVT.variantType.id}
+                    product={product}
+                    dVT={dVT}
+                  />
+                ))}
             </S.VariantsWrapper>
           </div>
         </div>
@@ -342,7 +346,7 @@ const VariantType = observer(({ dVT, product }: VariantTypeProps) => {
       {/* Eğer sadece Dinamik olarak almak istersen alttaki kodu aktif et   */}
       {/* <S.VariantTypeName>{dVT.variantType.name}</S.VariantTypeName> */}
       <S.VariantTypeName>
-        {getStaticVariantName(dVT.variantType.name)}
+        {/* {getStaticVariantName(dVT.variantType.name)} */}
       </S.VariantTypeName>
 
       <VariantValues dVT={dVT} product={product} />
