@@ -22,6 +22,37 @@ const generateTableData = (value: string): TableData => {
   const { t } = useTranslation();
 
   switch (value) {
+    case `${t("product-detail:bodyTable.clothes")}`:
+      return {
+        table1: [
+          {
+            size: `${t("product-detail:bodyTable.size")}`,
+            chest: `${t("product-detail:bodyTable.chest")} (cm)`,
+            waist: `${t("product-detail:bodyTable.waist")} (cm)`,
+            hip: `${t("product-detail:bodyTable.hip")} (cm)`,
+          },
+          { size: "34", chest: "82", waist: "62", hip: "90" },
+          { size: "36", chest: "86", waist: "66", hip: "94" },
+          { size: "38", chest: "90", waist: "70", hip: "98" },
+          { size: "40", chest: "94", waist: "74", hip: "102" },
+          { size: "42", chest: "98", waist: "78", hip: "106" },
+          { size: "44", chest: "102", waist: "82", hip: "110" },
+        ],
+        table2: [
+          {
+            size: `${t("product-detail:bodyTable.size")}`,
+            chest: `${t("product-detail:bodyTable.chest")} (cm)`,
+            waist: `${t("product-detail:bodyTable.waist")} (cm)`,
+            hip: `${t("product-detail:bodyTable.hip")} (cm)`,
+          },
+          { size: "XS", chest: "82", waist: "62", hip: "90" },
+          { size: "S", chest: "86", waist: "66", hip: "94" },
+          { size: "M", chest: "90", waist: "70", hip: "98" },
+          { size: "L", chest: "94", waist: "74", hip: "102" },
+          { size: "XL", chest: "98", waist: "78", hip: "106" },
+          { size: "XXL", chest: "102", waist: "82", hip: "110" },
+        ],
+      };
     case `${t("product-detail:bodyTable.top")}`:
       return {
         table1: [
@@ -130,34 +161,64 @@ const generateTableData = (value: string): TableData => {
   }
 };
 
-const CustomDropdown: React.FC<{
-  values: string[];
-  onSelect: (value: string) => void;
-}> = ({ values, onSelect }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [selectedValue, setSelectedValue] = useState(values[0]);
+const MeasurementGuide: React.FC = () => {
+  const { t } = useTranslation();
 
-  const handleSelect = (value: string) => {
-    setSelectedValue(value);
-    setIsOpen(false);
-    onSelect(value);
-  };
+  const measurements = [
+    {
+      image: "/image/size-guide/gogus-olcu.avif",
+      title: t("product-detail:bodyTable.chestMeasurement"),
+      description: t("product-detail:bodyTable.chestDescription"),
+    },
+    {
+      image: "/image/size-guide/bel-olcu.avif",
+      title: t("product-detail:bodyTable.waistMeasurement"),
+      description: t("product-detail:bodyTable.waistDescription"),
+    },
+    {
+      image: "/image/size-guide/basen-olcu.avif",
+      title: t("product-detail:bodyTable.hipMeasurement"),
+      description: t("product-detail:bodyTable.hipDescription"),
+    },
+  ];
 
   return (
-    <div className={styles.custom_dropdown}>
-      <div className={styles.selected_value} onClick={() => setIsOpen(!isOpen)}>
-        {selectedValue}
-        <span className={`arrow ${isOpen ? "open" : ""}`}></span>
+    <div className={styles.measurement_guide}>
+      <h4>{t("product-detail:bodyTable.howToMeasure")}</h4>
+      <div className={styles.measurement_items}>
+        {measurements.map((item, index) => (
+          <div key={index} className={styles.measurement_item}>
+            <img src={item.image} alt={item.title} />
+            <h5>{item.title}</h5>
+            <p>{item.description}</p>
+          </div>
+        ))}
       </div>
-      {isOpen && (
-        <ul className={styles.dropdown_list}>
-          {values.map((value: any, index: any) => (
-            <li key={index} onClick={() => handleSelect(value)}>
-              {value}
-            </li>
-          ))}
-        </ul>
-      )}
+      <p className={styles.measurement_note}>
+        {t("product-detail:bodyTable.measurementUnit")}
+      </p>
+    </div>
+  );
+};
+
+const TabHeaders: React.FC<{
+  values: string[];
+  selectedValue: string;
+  onSelect: (value: string) => void;
+}> = ({ values, selectedValue, onSelect }) => {
+  return (
+    <div className={styles.tab_headers}>
+      {values.map((value: string, index: number) => (
+        <div
+          key={index}
+          className={`${styles.tab_header} ${
+            selectedValue === value ? styles.active_tab : ""
+          }`}
+          onClick={() => onSelect(value)}
+        >
+          {value}
+        </div>
+      ))}
     </div>
   );
 };
@@ -205,6 +266,7 @@ const SizeTable: React.FC = () => {
   }, [ShowSizeModal]);
 
   const values: any = [
+    `${t("product-detail:bodyTable.clothes")}`,
     `${t("product-detail:bodyTable.top")}`,
     `${t("product-detail:bodyTable.dress")}`,
     `${t("product-detail:bodyTable.trouser")}`,
@@ -246,14 +308,28 @@ const SizeTable: React.FC = () => {
               <CloseSvg />
             </div>
             <div className={styles.table_container}>
-              <h3>{t("product-detail:bodyTable.size_guide")}</h3>
-              <CustomDropdown values={values} onSelect={handleSelect} />
-              <Table data={tableData} title="" />
-              {tableData2.length > 0 && (
-                <Table
-                  data={tableData2}
-                  title={t("product-detail:bodyTable.bigSize")}
-                />
+              <h3>{t("product-detail:bodyTable.size_table")}</h3>
+              <TabHeaders
+                values={values}
+                selectedValue={selectedValue}
+                onSelect={handleSelect}
+              />
+              <div className={styles.tables_wrapper}>
+                <Table data={tableData} title="" />
+                {tableData2.length > 0 && (
+                  <Table
+                    data={tableData2}
+                    title={
+                      selectedValue ===
+                      `${t("product-detail:bodyTable.clothes")}`
+                        ? ""
+                        : t("product-detail:bodyTable.bigSize")
+                    }
+                  />
+                )}
+              </div>
+              {selectedValue === `${t("product-detail:bodyTable.clothes")}` && (
+                <MeasurementGuide />
               )}
             </div>
           </div>

@@ -102,6 +102,7 @@
     "neck": "Neck",
     "size_guide": "Size Guide",
     "size_table": "Size Table",
+    "clothes": "Clothes",
     "trouser": "Trousers",
     "coat": "Coat",
     "jacket": "Jacket",
@@ -113,7 +114,15 @@
     "dress": "Dress",
     "top": "Top",
     "arm": "Arm",
-    "bigSize": "Big Size"
+    "bigSize": "Big Size",
+    "howToMeasure": "How to Measure Your Size?",
+    "chestMeasurement": "Chest",
+    "chestDescription": "Measure from the widest part of the chest.",
+    "waistMeasurement": "Waist",
+    "waistDescription": "Measure from the narrowest part of the waist area.",
+    "hipMeasurement": "Hip",
+    "hipDescription": "Measure from the widest part around the hips.",
+    "measurementUnit": "All measurements are in CM."
   },
   "instalment": "Installment Options"
 }

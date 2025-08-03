@@ -12,8 +12,8 @@ const withTM = require("next-transpile-modules")([
 
 const config = {
   i18n: {
-    defaultLocale: "en",
-    locales: ["en"],
+    defaultLocale: "tr",
+    locales: ["tr"],
     localeDetection: false,
   },
   basePath: process.env.NEXTJS_BASE_PATH || "",

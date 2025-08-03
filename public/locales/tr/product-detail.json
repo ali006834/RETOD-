@@ -102,6 +102,7 @@
     "neck": "Boyun",
     "size_guide": "Beden Rehberi",
     "size_table": "Beden Tablosu",
+    "clothes": "Giyisiler",
     "trouser": "Pantalon",
     "coat": "Palto & Manto",
     "jacket": "Ceket",
@@ -113,6 +114,14 @@
     "dress": "Elbise",
     "top": "Üst Parça",
     "arm": "Kol",
-    "bigSize": "Büyük Beden"
+    "bigSize": "Büyük Beden",
+    "howToMeasure": "Bedeninizi Nasıl Ölçmelisiniz?",
+    "chestMeasurement": "Göğüs",
+    "chestDescription": "Göğsü en geniş kısmından ölçün.",
+    "waistMeasurement": "Bel",
+    "waistDescription": "Karın bölgesi en dar kısımdan ölçün.",
+    "hipMeasurement": "Basen",
+    "hipDescription": "Basen çevresini en geniş kısımdan ölçün.",
+    "measurementUnit": "Tüm ölçülerin birimi CM'dir."
   }
 }
