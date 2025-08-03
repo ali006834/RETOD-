@@ -95,7 +95,7 @@ const ProductImage = observer(({ product }: Props) => {
   if (!product.selectedVariant.mainImage?.image?.id) {
     return (
       <img
-        src="/default-product-image.jpg"
+        src="/default-product-image.png"
         style={{
           width: "100%",
           height: "auto", // Oranı koru
