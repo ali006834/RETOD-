@@ -47,7 +47,7 @@ export const PopupContainer = styled.div`
 
   @media (max-width: 480px) {
     width: 260px;
-    right: -20px;
+    right: -0px;
     
     &::after {
       right: 44px;
@@ -159,7 +159,7 @@ export const SocialButton = styled.button`
 
   &:focus {
     outline: none;
-    border-color: #d14600;
+    border-color: #222;
   }
 
   &:active {
