@@ -1,0 +1,51 @@
+.wrapper {
+  width: 100%;
+}
+.container {
+  max-width: 1480px;
+  margin: auto;
+  padding: 50px 10px;
+  box-sizing: border-box;
+}
+.container h4 {
+  font-size: 24px;
+  font-weight: 600;
+  font-family: "ChronicleDisplay" !important;
+  margin-bottom: 20px;
+}
+.product_container a {
+  text-decoration: none;
+  color: #000;
+}
+.product_Info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+.product_title h2 {
+  font-size: 1rem;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+  color: #3b3b3b;
+  font-weight: 600;
+  font-family: "ChronicleDisplay" !important;
+}
+.price_content span {
+  font-size: 1rem;
+  line-height: 16px;
+  font-weight: 600;
+  font-family: "ChronicleDisplay" !important;
+}
+.discCount del {
+  color: #9ca3af;
+}
+.price {
+  color: #000;
+  margin-right: 5px;
+}
+@media only screen and (max-width: 600px) {
+  .container {
+    padding: 0px 10px 50px 10px;
+  }
+}

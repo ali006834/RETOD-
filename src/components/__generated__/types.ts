@@ -225,3 +225,11 @@ export type BlogDetailProps = {
 	blog?: IkasBlog;
 };
 
+export type AlternativeProductsProps = {
+	alternativeProducts?: IkasProductList;
+};
+
+export type LastSeenProductsProps = {
+	lastSeenProducts?: IkasProductList;
+};
+
