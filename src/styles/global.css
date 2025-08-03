@@ -90,14 +90,6 @@
 }
 
 /* Chronicle Display Fontları */
-@font-face {
-  font-display: swap;
-  font-family: "ChronicleDisplay";
-  font-style: normal;
-  font-weight: 900;
-  src: url("./fonts/chronicle_display/ChronicleDisplayBlack.woff2")
-    format("woff2");
-}
 
 @font-face {
   font-display: swap;
@@ -123,6 +115,15 @@
   font-style: normal;
   font-weight: 600;
   src: url("./fonts/chronicle_display/ChronicleDisplaySemibold.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "ChronicleDisplay";
+  font-style: normal;
+  font-weight: 900;
+  src: url("./fonts/chronicle_display/ChronicleDisplayBlack.woff2")
     format("woff2");
 }
 

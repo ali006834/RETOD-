@@ -252,3 +252,15 @@ export type RegisterProps = {
 	title2?: string;
 };
 
+export type ForgotPasswordProps = {
+	title?: string;
+};
+
+export type RecoverPasswordProps = {
+	title?: string;
+};
+
+export type PageSearchProps = {
+	productList?: IkasProductList;
+};
+

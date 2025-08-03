@@ -10,25 +10,26 @@ export const Wrapper = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-weight: 300;
+  font-weight: 500;
   font-size: 36px;
   line-height: 56px;
   margin-bottom: 24px;
-  font-family: "HelveticaNeueMedium" !important;
+  font-family: "Helvetica" !important;
 `;
 
 export const Footer = styled.footer`
   margin-top: 12px;
   font-size: 11px;
   line-height: 28px;
-  font-family: "HelveticaNeueMedium" !important;
+  font-weight: 500;
+  font-family: "Helvetica" !important;
   text-align: center;
   text-underline-offset: 5px;
 
   a {
     font-weight: 400;
     color: #121314;
-    font-family: "HelveticaNeueBold" !important;
+    font-family: "Helvetica" !important;
   }
 `;
 
