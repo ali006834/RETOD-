@@ -1,6 +1,6 @@
 {
   "sss": "Sıkça Sorulan Sorular",
-  "refund": "İade ve Teslimat",
+  "refund": "Teslimat ve Kolay İade",
   "shortDetail": "Yıkama Talimatı",
   "productFeatures": "Ürün Özellikleri",
   "detail": {
@@ -91,7 +91,7 @@
     }
   },
   "selected_size": "Seçilmiş Beden",
-  "description": "Ürün Açıklaması",
+  "description": "Ürün Detayları",
   "instalment": "Taksit Seçenekleri",
   "size": "Beden",
   "bodyTable": {

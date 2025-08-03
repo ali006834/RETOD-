@@ -11,6 +11,7 @@
   font-weight: 300;
   font-family: "Helvetica" !important;
 }
+
 .productTag {
   font-size: 13px;
   color: #f60000;
@@ -75,7 +76,7 @@
   border: 1px solid transparent;
   font-weight: 300;
   font-family: "Helvetica" !important;
-  font-size: 11px;
+  font-size: 13px;
   cursor: pointer;
   background: transparent;
   transition: all 0.3s ease;
@@ -97,7 +98,7 @@
   color: #000;
   font-weight: 300;
   font-family: "Helvetica" !important;
-  font-size: 11px;
+  font-size: 13px;
   cursor: pointer;
 }
 .product_size_item_no_stock_selected {
@@ -111,7 +112,7 @@
   background: transparent;
   font-weight: 300;
   font-family: "Helvetica" !important;
-  font-size: 11px;
+  font-size: 13px;
   cursor: pointer;
   position: relative;
   color: #999;
@@ -147,7 +148,7 @@
   border: 1px solid transparent;
   font-weight: 300;
   font-family: "Helvetica" !important;
-  font-size: 11px;
+  font-size: 13px;
   cursor: pointer;
   position: relative;
   color: #999;
@@ -224,6 +225,7 @@
   display: grid;
   grid-template-columns: repeat(7, minmax(0, 1fr));
   gap: 10px;
+  padding-left: 10px;
   max-width: 100%;
 }
 

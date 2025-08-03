@@ -16,7 +16,7 @@ export const Description = (
   return (
     <S.DescriptionWrapperTop>
       <FiltersSvgWrapper
-        title={t("product-detail:description").toLocaleUpperCase("tr-TR")}
+        title={t("product-detail:description")}
         svg={Shirt?.src}
         settings={{
           showCollapsedOnDesktop: props.isOpen, // Açık/kapalı durumu buradan kontrol ediliyor

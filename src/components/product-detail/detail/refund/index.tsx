@@ -31,7 +31,7 @@ const Refund = (
   return (
     <S.DescriptionWrapperTop>
       <FiltersSvgWrapper
-        title={t("product-detail:refund").toLocaleUpperCase("tr-TR")}
+        title={t("product-detail:refund")}
         svg={RefundIcon?.src}
         settings={{
           showCollapsedOnDesktop: props.isOpen,

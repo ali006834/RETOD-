@@ -6,9 +6,9 @@ export const Wrapper = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-family: "HelveticaNeueMedium" !important;
+  font-family: "Helvetica" !important;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 28px;
   color: #000;
   padding-right: 32px;
@@ -69,11 +69,11 @@ export const VariantTypeNameWrapper = styled.div`
 `;
 export const VariantTypeName = styled.div`
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 14px;
   line-height: 28px;
   color: #000;
-  font-family: "HelveticaNeueMedium" !important;
+  font-family: "Helvetica" !important;
 `;
 export const VariantType = styled.div`
   margin: 35px 0;
@@ -101,29 +101,31 @@ export const DescriptionWrapper = styled.div`
 `;
 export const DescriptionTitle = styled.p`
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 24px;
   margin-bottom: 20px;
-  font-family: "HelveticaNeueBold" !important;
+  font-family: "Helvetica" !important;
 `;
 export const Description = styled.div`
   font-style: normal;
   font-weight: 300;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 28px;
-  font-family: "HelveticaNeueThin" !important;
+  font-family: "Akkurat" !important;
   text-align: justify !important;
   span {
-    font-family: "HelveticaNeueMedium" !important;
+    font-family: "Akkurat" !important;
+    font-weight: 400;
     color: #3b3b3b !important;
-    font-size: 14px !important;
+    font-size: 12px !important;
     text-align: justify !important;
   }
   ,
   p {
-    font-family: "HelveticaNeueMedium" !important;
+    font-family: "Akkurat" !important;
+    font-weight: 400;
     color: #3b3b3b !important;
-    font-size: 14px !important;
+    font-size: 12px !important;
     text-align: justify !important;
   }
 `;

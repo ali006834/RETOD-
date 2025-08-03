@@ -17,7 +17,7 @@ const Taksit = (props: {
   return (
     <S.DescriptionWrapperTopTaksit>
       <FiltersSvgWrapper
-        title={t("product-detail:instalment").toLocaleUpperCase("tr-TR")}
+        title={t("product-detail:instalment")}
         svg="./svg/payment.svg"
         settings={{
           showCollapsedOnDesktop: props.isOpen,

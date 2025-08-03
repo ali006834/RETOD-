@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { IkasProductFilterSettings } from "@ikas/storefront";
 import { useScreen } from "src/utils/hooks/useScreen";
-import Plus from "src/components/svg/plus";
-import Minus from "src/components/svg/minus";
+import ArrowRight from "src/components/svg/arrow-right";
 
 import * as S from "./style";
 
@@ -71,11 +70,20 @@ export const FilterTitle = ({
   return (
     <S.FilterTitleWrapper onClick={onClickExpandButton}>
       <S.FilterTitle>
-        <img src={svg} alt="icon" /> <span>{title}</span>
+        {/* Eğer SVG istersen aşağıdaki kodu kullanın */}
+        {/* <img src={svg} alt="icon" /> <span>{title}</span> */}
+        <span>{title}</span>
       </S.FilterTitle>
       <S.FilterTitleExpandButton active={active}>
-        {/* + işareti (details btn)*/}
-        {active ? <Minus /> : <Plus />}
+        {/* Arrow icon with rotation based on active state */}
+        <div
+          style={{
+            transform: active ? "rotate(-90deg)" : "rotate(0deg)",
+            transition: "transform 0.2s ease",
+          }}
+        >
+          <ArrowRight fill="#000" width="0.8em" height="0.8em" />
+        </div>
       </S.FilterTitleExpandButton>
     </S.FilterTitleWrapper>
   );

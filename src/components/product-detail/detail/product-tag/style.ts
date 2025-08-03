@@ -8,7 +8,6 @@ export const ProductTags = styled.div`
   gap: 1px;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 10px 0px 0px;
 
   @media screen and (max-width: ${breakpoints.md}) {
     padding: 3px 0px;

@@ -10,7 +10,7 @@ export const FiltersWrapper = styled.div<FiltersWrapperProps>`
     css`
       padding-bottom: 5px;
       margin: 10px 0;
-      border-bottom: 1px solid #d1d5db;
+      border-bottom: 0.5px solid #d1d5db;
     `};
 `;
 
@@ -31,10 +31,10 @@ export const FilterTitle = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: #333;
   font-family: "Helvetica" !important;
-  font-weight: 500;
+  font-weight: 400;
 
   img {
     width: 20px !important;
@@ -51,8 +51,6 @@ export const FilterTitleExpandButton = styled.span<{ active: boolean }>`
   justify-content: center;
   padding: 2px;
   transition: transform 0.3s ease;
-  //#e0e0e0 #769684
-  background-color: #e0e0e0;
   border-radius: 100%;
 
   /* Hover efekti */

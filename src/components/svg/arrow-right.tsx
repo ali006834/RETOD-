@@ -1,13 +1,23 @@
 import React from "react";
 
-const svg = () => (
+interface ArrowRightProps {
+  fill?: string;
+  width?: string;
+  height?: string;
+}
+
+const svg = ({
+  fill = "#000000",
+  width = "1.2em",
+  height = "1.2em",
+}: ArrowRightProps) => (
   <svg
-    fill="#000000"
+    fill={fill}
     viewBox="0 0 32 32"
     version="1.1"
     xmlns="http://www.w3.org/2000/svg"
-    height="1.2em"
-    width="1.2em"
+    height={height}
+    width={width}
   >
     <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
     <g
