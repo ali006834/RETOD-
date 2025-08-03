@@ -114,6 +114,11 @@ export type DiscountBannerCategoryNames = {
 	isTextEffectEnabled?: boolean;
 };
 
+export type DeliveryContent = { 
+	question?: string;
+	answer?: string;
+};
+
 export type HeaderProps = {
 	logo?: IkasImage;
 	logo_black?: IkasImage;
@@ -314,5 +319,31 @@ export type DistanceSalesAgreementProps = {
 	btnRight?: string;
 	btnRightLink?: IkasNavigationLink;
 	content?: string;
+};
+
+export type FaqProps = {
+	title?: string;
+	textPicture?: string;
+	imageWeb?: IkasImage;
+	imageMobile?: IkasImage;
+	footer_links?: IkasNavigationLink[];
+	contents?: DeliveryContent[];
+	titleRight?: string;
+	contentRight?: string;
+	btnRight?: string;
+	btnRightLink?: IkasNavigationLink;
+};
+
+export type ReturnsAndDeliveryProps = {
+	title?: string;
+	textPicture?: string;
+	imageWeb?: IkasImage;
+	imageMobile?: IkasImage;
+	footer_links?: IkasNavigationLink[];
+	titleRight?: string;
+	contentRight?: string;
+	btnRight?: string;
+	btnRightLink?: IkasNavigationLink;
+	contents?: DeliveryContent[];
 };
 
