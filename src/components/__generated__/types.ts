@@ -264,3 +264,55 @@ export type PageSearchProps = {
 	productList?: IkasProductList;
 };
 
+export type AboutProps = {
+	title?: string;
+	textPicture?: string;
+	imageWeb?: IkasImage;
+	imageMobile?: IkasImage;
+	footer_links?: IkasNavigationLink[];
+	titleRight?: string;
+	contentRight?: string;
+	btnRight?: string;
+	btnRightLink?: IkasNavigationLink;
+	content?: string;
+};
+
+export type CookiePolicyProps = {
+	title?: string;
+	textPicture?: string;
+	imageWeb?: IkasImage;
+	imageMobile?: IkasImage;
+	footer_links?: IkasNavigationLink[];
+	titleRight?: string;
+	contentRight?: string;
+	btnRight?: string;
+	btnRightLink?: IkasNavigationLink;
+	content?: string;
+};
+
+export type PrivacyPolicyProps = {
+	title?: string;
+	textPicture?: string;
+	imageWeb?: IkasImage;
+	imageMobile?: IkasImage;
+	footer_links?: IkasNavigationLink[];
+	titleRight?: string;
+	contentRight?: string;
+	btnRight?: string;
+	btnRightLink?: IkasNavigationLink;
+	content?: string;
+};
+
+export type DistanceSalesAgreementProps = {
+	title?: string;
+	textPicture?: string;
+	imageWeb?: IkasImage;
+	imageMobile?: IkasImage;
+	footer_links?: IkasNavigationLink[];
+	titleRight?: string;
+	contentRight?: string;
+	btnRight?: string;
+	btnRightLink?: IkasNavigationLink;
+	content?: string;
+};
+
