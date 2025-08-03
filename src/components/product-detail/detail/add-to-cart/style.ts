@@ -48,3 +48,37 @@ export const IncreaseButton = styled(QuantityButton)``;
 export const Icon = styled.span`
   margin-left: 8px;
 `;
+
+export const ActionButtonsGroup = styled.div`
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-shrink: 0;
+`;
+
+export const ActionButton = styled.button`
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(209, 213, 219);
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    border-color: rgb(156, 163, 175);
+    background-color: rgb(249, 250, 251);
+  }
+
+  &:focus {
+    outline: none;
+    border-color: rgb(99, 102, 241);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+`;

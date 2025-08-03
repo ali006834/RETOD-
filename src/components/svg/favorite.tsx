@@ -18,19 +18,19 @@ const svg = ({
     width={width}
     height={height}
     viewBox="0 0 24 24"
-    fill={fill ? "currentColor" : "none"}
+    fill="none"
   >
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M16.55 3.084a5.452 5.452 0 0 1 3.852 9.307l-.648.654-.86.854-6.852 6.852L5.19 13.9l-.86-.854-.648-.654a5.453 5.453 0 1 1 7.706-7.712l.654.654.655-.654a5.452 5.452 0 0 1 3.852-1.595Z"
-      fill="transparent"
-      fill-opacity=".16"
+      fill={fill ? color : "transparent"}
+      fillOpacity={fill ? "1" : ".16"}
       stroke={color}
-      stroke-width="1.5"
-      stroke-miterlimit="10"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="1.5"
+      strokeMiterlimit="10"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );

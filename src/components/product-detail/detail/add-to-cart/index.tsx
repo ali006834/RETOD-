@@ -10,6 +10,12 @@ import { ProductDetailProps } from "src/components/__generated__/types";
 import BellSVG from "./svg/bs-bell";
 import BellFillSVG from "./svg/bs-bell-fill";
 import Alert from "src/components/components/alert";
+import ShareSVG from "src/components/svg/share";
+import FavoriteSVG from "src/components/svg/favorite";
+import useFavorite from "../favorite-button/useFavorite";
+import ModalLoginRequired from "../components/modal-login-required";
+import { useTranslation } from "@ikas/storefront";
+import { Loading } from "src/components/components/button";
 
 import * as S from "./style";
 import product from "src/components/product-list/product";
@@ -17,6 +23,7 @@ import product from "src/components/product-list/product";
 export const AddToCart = observer((props: ProductDetailProps) => {
   const [quantity, setQuantity] = useState(1);
   const [showStockAlert, setShowStockAlert] = useState(false);
+  const { t } = useTranslation();
 
   const hasStock = props.product?.selectedVariant.hasStock;
 
@@ -26,6 +33,34 @@ export const AddToCart = observer((props: ProductDetailProps) => {
     setShowStockAlert(true);
     setTimeout(() => setShowStockAlert(false), 2500);
   };
+
+  // Favorite functionality
+  const {
+    isProductFavorite,
+    showLoginModal,
+    closeLoginModal,
+    pending: favoritePending,
+    toggleFavorite,
+  } = useFavorite({
+    productId: props.product?.id || "",
+  });
+
+  const handleShare = (product?: IkasProduct) => {
+    if (product && navigator.share) {
+      navigator.share({
+        title: product.name,
+        text: product.name,
+        url: window.location.href,
+      });
+    } else if (product) {
+      // Fallback for browsers that don't support Web Share API
+      navigator.clipboard.writeText(window.location.href);
+      // You might want to show a toast notification here
+    }
+  };
+
+  const modalLoginText = (key: string) =>
+    t(`common:favorite.loginModal.${key}`);
 
   // console.log("Seçilen beden stoğu:", selectedVariantStock);
 
@@ -41,6 +76,23 @@ export const AddToCart = observer((props: ProductDetailProps) => {
           />
         )}
         <AddToCartButton product={props.product} quantity={quantity} />
+        <S.ActionButtonsGroup>
+          <S.ActionButton onClick={toggleFavorite} disabled={favoritePending}>
+            {favoritePending ? (
+              <Loading />
+            ) : (
+              <FavoriteSVG
+                width="24px"
+                height="24px"
+                color={isProductFavorite ? "#d14600" : "#666"}
+                fill={isProductFavorite}
+              />
+            )}
+          </S.ActionButton>
+          <S.ActionButton onClick={() => handleShare(props.product)}>
+            <ShareSVG width="24px" height="24px" fill="#666" />
+          </S.ActionButton>
+        </S.ActionButtonsGroup>
         <BackInStock product={props.product} />
       </S.Wrapper>
       {showStockAlert && (
@@ -51,6 +103,15 @@ export const AddToCart = observer((props: ProductDetailProps) => {
           onClose={() => setShowStockAlert(false)}
         />
       )}
+      <ModalLoginRequired
+        isModalVisible={showLoginModal}
+        title={modalLoginText("title")}
+        text={modalLoginText("text")}
+        loginButtonText={modalLoginText("loginButtonText")}
+        noAccountText={modalLoginText("noAccountText")}
+        redirectUrl={props.product?.href || ""}
+        onClose={closeLoginModal}
+      />
     </>
   );
 });
