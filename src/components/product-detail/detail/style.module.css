@@ -25,33 +25,40 @@
   margin-bottom: 10px;
 }
 .price_content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
   margin-top: 20px;
 }
 .price_content span {
-  font-size: 14px; /*12px*/
-  padding: 3px 8px;
-  line-height: 16px; /*20px*/
-  font-weight: 800;
-  font-family: "HelveticaNeueLight" !important;
+  font-size: 1.1rem;
+  line-height: 20px;
+  font-weight: 400;
+  font-family: "Helvetica" !important;
+  text-wrap: nowrap;
 }
 .discCount del {
-  /* color: #9ca3af; */
+  font-size: 1rem;
   color: #000;
-  margin-right: 5px;
-}
-.price {
-  color: #fff;
-  background-color: #000;
-  margin-left: 1px;
-  padding: 0 2px;
+  opacity: 0.65;
+  line-height: 20px;
 }
 
 .discount_rate {
-  margin-left: 1px;
-  padding: 0 2px;
-  color: #fff;
-  background-color: #f60000;
+  font-family: "Helvetica" !important;
+  display: inline-block;
+  border: 1px solid #222;
+  color: #222;
+  background: transparent;
+  padding: 1px 8px;
+  border-radius: 25px;
+  font-size: 0.7rem;
+  font-weight: 400;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
 }
+
 .product_size {
   display: grid;
   grid-template-columns: repeat(7, minmax(0, 1fr));
@@ -200,5 +207,11 @@
 @media only screen and (max-width: 600px) {
   .alternative_colors {
     grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .discount_rate {
+    font-size: 0.8rem;
+    padding: 3px 6px;
+    margin-left: 6px;
   }
 }

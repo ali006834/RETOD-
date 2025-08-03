@@ -71,14 +71,16 @@ const ProductDetail = (props: ProductDetailProps) => {
       {!isMobile && <div className={styles.divider} />}
       <div className={styles.wrapper}>
         <div className={styles.container}>
-          {/*//= Breadcrumb */}
-          <div className={styles.tittle_container}>{renderBreadcrumb()}</div>
           {/*//= İçerikler */}
           <div className={styles.product_detail}>
             <div className={styles.product_slider}>
               <Slider {...props} />
             </div>
             <div className={styles.product_detail_content}>
+              {/*//= Breadcrumb */}
+              <div className={styles.tittle_container}>
+                {renderBreadcrumb()}
+              </div>
               <Detail {...props} />
             </div>
           </div>

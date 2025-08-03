@@ -15,7 +15,6 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Zoom, Navigation, Pagination, Mousewheel } from "swiper/modules";
-import { Image } from "@ikas/storefront";
 
 type ActiveImageIdType = string | null;
 
@@ -135,14 +134,36 @@ const ImagePopUp = ({
               <SwiperSlide key={index}>
                 <div className="swiper-zoom-container">
                   <div className={styles.image_figure}>
-                    <img
-                      src={item.image?.src}
-                      alt="product"
-                      className={styles.image}
-                      style={{ userSelect: "none" }}
-                      width={900}
-                      height={1350}
-                    />
+                    {item.isVideo == true ? (
+                      <div
+                        style={{
+                          aspectRatio: "2 / 3",
+                          width: "400",
+                          overflow: "hidden",
+                        }}
+                      >
+                        <video
+                          autoPlay
+                          muted
+                          loop
+                          playsInline
+                          style={{
+                            width: "440px",
+                            height: "580px",
+                            paddingTop: "30px",
+                          }}
+                        >
+                          <source src={item.image?.src} type="video/mp4" />
+                        </video>
+                      </div>
+                    ) : (
+                      <img
+                        src={item.image?.src}
+                        alt="product"
+                        className={styles.image}
+                        style={{ userSelect: "none" }}
+                      />
+                    )}
                   </div>
                 </div>
               </SwiperSlide>

@@ -26,18 +26,20 @@ export const Price = observer((props: ProductDetailProps) => {
 
   return (
     <div className={styles.price_content}>
+      {/* indirim oranı */}
+      {price.hasDiscount && (
+        <span className={styles.discount_rate}>{`-%${discountRate}`}</span>
+      )}
+
       {/* indirimsiz fiyat */}
       {price.hasDiscount && (
         <span className={styles.discCount}>
           <del> {price.formattedSellPrice}</del>
         </span>
       )}
+
       {/* satış fiyatı */}
       <span className={styles.price}>{price.formattedFinalPrice}</span>
-      {/* indirim oranı */}
-      {price.hasDiscount && (
-        <span className={styles.discount_rate}>{` -% ${discountRate}`}</span>
-      )}
     </div>
   );
 });
