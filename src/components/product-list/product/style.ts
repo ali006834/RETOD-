@@ -135,19 +135,20 @@ export const ProductTags = styled.div`
 `;
 
 export const ProductTag = styled.div`
-  color: #979897;
+  color: #656565;
   background: none;
   border: none;
   padding: 2px 0px;
-  font-size: 14px;
+  font-size: 12px;
   font-family: "Helvetica" !important;
   font-weight: 300;
   line-height: 16px;
-  letter-spacing: 1.5px;
+  letter-spacing: .15em;
+  line-height: 1.5;
   transition: color 0.2s ease;
 
   &:hover {
-    color: #0f4d2b;
+    color: #979897;
   }
 `;
 
