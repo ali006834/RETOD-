@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { IkasProduct } from "@ikas/storefront";
+import { IkasProduct, useTranslation } from "@ikas/storefront";
 
 import FacebookSVG from "src/components/svg/facebook";
 import WhatsAppSVG from "src/components/svg/whatsapp";
@@ -20,6 +20,7 @@ export const SharePopup: React.FC<SharePopupProps> = ({
   onClose,
 }) => {
   const [copySuccess, setCopySuccess] = useState(false);
+  const { t } = useTranslation();
 
   if (!isVisible || !product) return null;
 
@@ -79,7 +80,9 @@ export const SharePopup: React.FC<SharePopupProps> = ({
         <S.PopupContent>
           <S.CopyLinkSection>
             <S.CopyLinkButton onClick={handleCopyLink}>
-              {copySuccess ? "✓ Kopyalandı!" : "Kopyala Linki"}
+              {copySuccess
+                ? "✓ " + t("product-detail:detail.share.copied")
+                : t("product-detail:detail.share.copyLink")}
             </S.CopyLinkButton>
           </S.CopyLinkSection>
 

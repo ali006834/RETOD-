@@ -50,6 +50,7 @@ export const Icon = styled.span`
 `;
 
 export const ActionButtonsGroup = styled.div`
+  position: relative;
   display: flex;
   gap: 8px;
   align-items: center;

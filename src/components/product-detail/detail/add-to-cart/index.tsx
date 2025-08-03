@@ -88,6 +88,11 @@ export const AddToCart = observer((props: ProductDetailProps) => {
           <S.ActionButton onClick={handleShare}>
             <ShareSVG width="24px" height="24px" fill="#666" />
           </S.ActionButton>
+          <SharePopup
+            product={props.product}
+            isVisible={showSharePopup}
+            onClose={handleCloseSharePopup}
+          />
         </S.ActionButtonsGroup>
         <BackInStock product={props.product} />
       </S.Wrapper>
@@ -107,11 +112,6 @@ export const AddToCart = observer((props: ProductDetailProps) => {
         noAccountText={modalLoginText("noAccountText")}
         redirectUrl={props.product?.href || ""}
         onClose={closeLoginModal}
-      />
-      <SharePopup
-        product={props.product}
-        isVisible={showSharePopup}
-        onClose={handleCloseSharePopup}
       />
     </>
   );

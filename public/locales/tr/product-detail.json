@@ -56,7 +56,9 @@
       "title": "Açıklama"
     },
     "share": {
-      "title": "Paylaş:"
+      "title": "Paylaş",
+      "copyLink": "Linki Kopyala",
+      "copied": "Kopyalandı"
     },
     "variantType": {
       "selectPlaceholder": "Bir seçenek seçin"

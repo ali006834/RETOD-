@@ -57,7 +57,9 @@
       "title": "Description"
     },
     "share": {
-      "title": "Share:"
+      "title": "Share",
+      "copyLink": "Copy Link",
+      "copied": "Copied"
     },
     "variantType": {
       "selectPlaceholder": "Choose an option"
