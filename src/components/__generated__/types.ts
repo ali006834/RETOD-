@@ -2,8 +2,8 @@ import {
 	IkasImage,
 	IkasNavigationLink,
 	IkasVideo,
-	IkasCategoryList,
 	IkasProductList,
+	IkasCategoryList,
 	IkasProduct,
 	IkasBlogList,
 	IkasBlog,
@@ -117,6 +117,17 @@ export type DiscountBannerCategoryNames = {
 export type DeliveryContent = { 
 	question?: string;
 	answer?: string;
+};
+
+export type Campaigns = { 
+	isActive?: boolean;
+	campaignTitle?: string;
+	campaignDate?: string;
+	campaignDescription?: string;
+	campaignImage?: IkasImage;
+	campaignConditions?: string;
+	btnText?: string;
+	productList?: IkasProductList;
 };
 
 export type HeaderProps = {
@@ -345,5 +356,14 @@ export type ReturnsAndDeliveryProps = {
 	btnRight?: string;
 	btnRightLink?: IkasNavigationLink;
 	contents?: DeliveryContent[];
+};
+
+export type CampaignsProps = {
+	title?: string;
+	textPicture?: string;
+	imageWeb?: IkasImage;
+	imageMobile?: IkasImage;
+	footer_links?: IkasNavigationLink[];
+	campaigns?: Campaigns[];
 };
 

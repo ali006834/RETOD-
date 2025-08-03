@@ -1,0 +1,300 @@
+.wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.heroViewport {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.heroImage {
+  /* position: fixed; */
+  /* top: 0; */
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+
+.heroImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heroContent {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1300px;
+  padding: 2rem;
+  color: white;
+  padding-bottom: 8rem;
+  z-index: 1;
+}
+
+.title {
+  font-weight: 500;
+  font-family: "Helvetica" !important;
+  font-size: 1.5rem;
+}
+
+.textPicture {
+  font-weight: 600;
+  font-family: "Helvetica" !important;
+  font-size: 3.2rem;
+  max-width: 50%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: white;
+  position: relative;
+}
+
+.navDivider {
+  max-width: 1300px;
+  margin: 0 auto;
+  border-bottom: 1px solid #999;
+  width: 100%;
+  padding-top: 20px;
+  margin-bottom: 20px;
+}
+
+.FooterLinks {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer_link {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 15px;
+}
+
+.footer_link a {
+  text-decoration: none;
+  color: #121314;
+  font-weight: 400;
+  font-family: "Helvetica" !important;
+  padding: 10px 20px;
+  display: block;
+  font-size: 13px;
+}
+
+.footer_link a:hover {
+  background-color: #f6f1eb;
+}
+
+/* İçerik Bölümü */
+.about_content {
+  padding: 100px 0;
+  background: #fff;
+}
+
+.about_wrapper:not(:has(.hero_banner)) .about_content {
+  padding-top: 50px;
+}
+
+.content_container {
+  display: flex;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.sidebar {
+  width: 280px;
+  padding-right: 60px;
+  flex-shrink: 0;
+}
+
+.sidebar_title {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  letter-spacing: 1px;
+}
+
+.main_content {
+  flex: 1;
+  padding-top: 20px;
+}
+
+.about_text {
+  font-size: 1.1rem;
+  text-align: justify;
+  line-height: 1.9;
+  color: #555;
+}
+
+.about_text h2 {
+  font-size: 2rem;
+  margin: 50px 0 25px;
+  color: #222;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+.about_text p {
+  margin-bottom: 25px;
+}
+
+.main_content {
+  flex: 1;
+}
+
+/*= Kampanyalar Stili */
+.completed_label {
+  padding: 12px 30px;
+  background: #e0e0e0;
+  color: #666;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  display: inline-block;
+}
+
+.campaign_card {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.campaign_image_container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 50%; /* 2:1 aspect ratio */
+  overflow: hidden;
+}
+
+.campaign_image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.campaign_info {
+  padding: 30px;
+}
+
+.campaign_title {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: 300;
+}
+
+.campaign_description {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.campaign_date {
+  font-size: 1rem;
+  color: #888;
+  margin-bottom: 15px;
+}
+
+.campaign_date span {
+  display: flex;
+  align-items: center;
+}
+
+.campaign_status_active {
+  color: #006c35;
+}
+
+.campaign_status_passive {
+  color: #ff0000;
+}
+
+.campaign_conditions {
+  font-size: 0.9rem;
+  color: #777;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.campaign_button {
+  padding: 12px 30px;
+  background: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.campaign_button:hover {
+  background: #444;
+}
+
+/* Zigzag Separator */
+.zigzag_separator {
+  text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .campaign_title {
+    font-size: 1.5rem;
+  }
+
+  .campaign_description {
+    font-size: 1rem;
+  }
+
+  .campaign_info {
+    padding: 20px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .heroSection {
+    height: 300px;
+  }
+
+  .heroContent {
+    padding: 1rem;
+    padding-bottom: 3rem;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .textPicture {
+    font-size: 1rem;
+    max-width: 80%;
+  }
+
+  .container {
+    padding: 10px;
+  }
+}
