@@ -44,7 +44,8 @@ export const RemovedNotification = styled.div`
 
 export const Item = styled.li`
   padding: 15px 0;
-  font-family: "HelveticaNeueMedium" !important;
+  font-weight: 300;
+  font-family: "Helvetica" !important;
 `;
 
 export const ItemContent = styled.div`
@@ -105,7 +106,8 @@ export const ItemProductImage = styled.picture`
 
 export const ItemProductName = styled.div`
   font-size: 14px;
-  font-family: "HelveticaNeueLight" !important;
+  font-weight: 300;
+  font-family: "Helvetica" !important;
   margin-bottom: 8px;
   display: -webkit-box;
   -webkit-line-clamp: 2;
@@ -119,7 +121,8 @@ export const ItemProductVariantValuesText = styled.div`
   font-size: 12px;
   line-height: 24px;
   color: #4b5563;
-  font-family: "HelveticaNeueMedium";
+  font-weight: 300;
+  font-family: "Helvetica" !important;
 `;
 
 export const ItemRemove = styled.button`
@@ -330,13 +333,14 @@ export const Products = styled.ul`
 export const NoProducts = styled.div`
   margin-top: 40px;
   text-align: center;
-  font-family: "HelveticaNeueLight" !important;
+  font-weight: 300;
+  font-family: "Helvetica" !important;
   color: #6b7280;
   a {
     color: #000;
     text-decoration: underline;
     font-weight: 700;
-    font-family: "HelveticaNeueLight" !important;
+  font-family: "Helvetica" !important;
   }
 `;
 
