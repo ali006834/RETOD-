@@ -11,6 +11,7 @@ import { ProductTag } from "./product-tag";
 import Refund from "./refund";
 import Taksit from "./taksit";
 import { ProductShortExplanation } from "./product-short-explanation";
+import { ProductSku } from "./product-sku";
 
 const Detail = (props: ProductDetailProps) => {
   // Hangi bileşenin açık olduğunu takip eden state
@@ -23,6 +24,9 @@ const Detail = (props: ProductDetailProps) => {
   return (
     <div className={styles.detail_wrapper}>
       <div className={styles.detail_content}>
+        <div className={styles.productSku}>
+          <ProductSku {...props} />
+        </div>
         <div className={styles.title_wrapper}>
           <Title {...props} />
         </div>

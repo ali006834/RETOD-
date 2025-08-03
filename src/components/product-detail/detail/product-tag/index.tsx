@@ -16,7 +16,9 @@ export const ProductTag = observer((props: ProductDetailProps) => {
       <S.ProductTags>
         {product.tags?.map((item, index) => (
           <S.ProductTag key={index}>
-            <S.ProductTagsRatio>{item.name}</S.ProductTagsRatio>
+            <S.ProductTagsRatio>
+              {item.name.toLocaleUpperCase("tr-TR")}
+            </S.ProductTagsRatio>
           </S.ProductTag>
         ))}
       </S.ProductTags>
