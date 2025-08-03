@@ -76,7 +76,7 @@ export const VariantTypeName = styled.div`
   font-family: "HelveticaNeueMedium" !important;
 `;
 export const VariantType = styled.div`
-  margin: 15px 0;
+  margin: 35px 0;
 `;
 
 export const VariantValue = styled.div``;

@@ -78,20 +78,20 @@ const BankTable = observer(
           </thead>
           <tbody>
             {safeBankTable.map((bankProxy: any, bankIndex: number) =>
-              bankProxy.enterLogoAndProportions.map(
+              bankProxy?.enterLogoAndProportions?.map(
                 (proportion: any, proportionIndex: number) => {
                   // Her `enterLogoAndProportions` için ilgili `installmentContent` değerlerini al
-                  const installments = proportion.content.flatMap(
+                  const installments = proportion?.content?.flatMap(
                     (contentItem: any) =>
-                      Array.isArray(contentItem.installmentContent)
-                        ? contentItem.installmentContent
-                        : contentItem.installmentContent
-                        ? [contentItem.installmentContent]
+                      Array.isArray(contentItem?.installmentContent)
+                        ? contentItem?.installmentContent
+                        : contentItem?.installmentContent
+                        ? [contentItem?.installmentContent]
                         : []
                   );
 
                   // Her proportion için interestRates değerlerini al
-                  const interestRates = proportion.interestRates;
+                  const interestRates = proportion?.interestRates;
 
                   return (
                     <React.Fragment key={`${bankIndex}-${proportionIndex}`}>
@@ -105,23 +105,23 @@ const BankTable = observer(
                               {/* Burada her proportion için logo'yu alıyoruz */}
                               <img
                                 src={
-                                  proportion.logo?.src ||
-                                  proportion.logo?.getSrc()
+                                  proportion?.logo?.src ||
+                                  proportion?.logo?.getSrc()
                                 }
-                                alt={proportion.logo?.altText}
+                                alt={proportion?.logo?.altText}
                                 className={styles.logo}
                               />
                             </td>
                           )}
                           {/* Taksit Oranı */}
-                          <td>{taksit.rate}</td>
+                          <td>{taksit?.rate}</td>
                           {/*Taksit Tutarı*/}
                           <td>
-                            {calculateInstallment(taksit.rate, interestRates)}
+                            {calculateInstallment(taksit?.rate, interestRates)}
                           </td>
                           {/*toplam Tutar*/}
                           <td>
-                            {getInterestRate(taksit.rate, interestRates) ||
+                            {getInterestRate(taksit?.rate, interestRates) ||
                               price}
                           </td>
                         </tr>

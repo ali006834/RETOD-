@@ -8,13 +8,14 @@
 }
 .detail_content h1 {
   font-size: 20px;
-  font-family: "HelveticaNeueLight" !important;
+  font-weight: 300;
+  font-family: "Helvetica" !important;
 }
 .productTag {
   font-size: 13px;
   color: #f60000;
-  font-weight: bold;
-  font-family: "HelveticaNeueLight" !important;
+  font-weight: 300;
+  font-family: "Helvetica" !important;
   text-decoration: underline;
   text-underline-offset: 4px;
   display: flex;
@@ -71,12 +72,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #949494;
-  font-family: "HelveticaNeueThin" !important;
+  border: 1px solid transparent;
+  font-weight: 300;
+  font-family: "Helvetica" !important;
   font-size: 11px;
   cursor: pointer;
   background: transparent;
-  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.product_size_item:hover {
+  border: 1px solid #ddd;
+  background: transparent;
 }
 .product_size_selected_item {
   width: 45px;
@@ -85,13 +92,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #000;
-  background: #000;
-  color: #fff;
-  font-family: "HelveticaNeueLight" !important;
+  border: 1px solid #ddd;
+  background: transparent;
+  color: #000;
+  font-weight: 300;
+  font-family: "Helvetica" !important;
   font-size: 11px;
   cursor: pointer;
-  border-radius: 50%;
 }
 .product_size_item_no_stock_selected {
   width: 45px;
@@ -100,14 +107,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #000;
-  background-color: #000;
-  font-family: "HelveticaNeueLight" !important;
+  border: 1px solid #ddd;
+  background: transparent;
+  font-weight: 300;
+  font-family: "Helvetica" !important;
   font-size: 11px;
   cursor: pointer;
   position: relative;
-  color: rgb(209, 213, 219);
-  border-radius: 50%;
+  color: #999;
 }
 
 /* Variant ismi uzunsa ellipsis uygula  */
@@ -121,13 +128,13 @@
 .product_size_item_no_stock_selected::after {
   content: "";
   position: absolute;
-  width: 45px;
+  width: 35px;
   height: 1px;
-  background-color: #949494;
+  background-color: #ddd;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(45deg);
-  box-shadow: 0 0 1px #949494;
+  box-shadow: 0 0 1px rgba(221, 221, 221, 0.5);
 }
 
 .product_size_item_no_stock {
@@ -137,24 +144,30 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid rgb(209 213 219);
-  font-family: "HelveticaNeueLight" !important;
-  font-size: 14px;
+  border: 1px solid transparent;
+  font-weight: 300;
+  font-family: "Helvetica" !important;
+  font-size: 11px;
   cursor: pointer;
   position: relative;
-  color: rgb(209, 213, 219);
-  border-radius: 50%;
+  color: #999;
+  transition: all 0.3s ease;
+}
+
+.product_size_item_no_stock:hover {
+  border: 1px solid #ddd;
+  background: transparent;
 }
 .product_size_item_no_stock::after {
   content: "";
   position: absolute;
-  width: 45px;
+  width: 35px;
   height: 1px;
-  background-color: #949494;
+  background-color: #ddd;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(45deg);
-  box-shadow: 0 0 1px #949494;
+  box-shadow: 0 0 1px rgba(221, 221, 221, 0.5);
 }
 .product_detail_colors {
   display: grid;
@@ -181,7 +194,8 @@
   gap: 6px;
 }
 .alternative_colors_title {
-  font-family: "HelveticaNeueLight" !important;
+  font-weight: 300;
+  font-family: "Helvetica" !important;
   font-size: 15px;
   margin-bottom: 10px;
 }
@@ -190,11 +204,82 @@
 }
 .sort_title {
   color: #fff;
-  font-family: "HelveticaNeueLight" !important;
+  font-weight: 300;
+  font-family: "Helvetica" !important;
   padding: 8px 10px;
   background-color: #000;
   display: inline-block;
   margin-bottom: 10px;
+}
+
+/* Renk varyantları için CSS */
+.color_variant_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.color_variants {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 10px;
+  max-width: 100%;
+}
+
+.color_item {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.color_item:hover {
+  border: 2px solid #333;
+}
+
+.color_item_selected {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #333;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 2px white;
+}
+
+.color_item_no_stock {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  border-radius: 50%;
+  opacity: 0.5;
+  position: relative;
+}
+
+.color_item_no_stock::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 1px;
+  background-color: #999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
 }
 @media only screen and (max-width: 1200px) {
   .product_size {
