@@ -233,3 +233,22 @@ export type LastSeenProductsProps = {
 	lastSeenProducts?: IkasProductList;
 };
 
+export type CartProps = {
+	summaryText?: string;
+};
+
+export type Page404Props = {
+	image?: IkasImage;
+};
+
+export type LoginProps = {
+	title?: string;
+};
+
+export type RegisterProps = {
+	title?: string;
+	content?: string;
+	image?: IkasImage;
+	title2?: string;
+};
+

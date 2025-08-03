@@ -13,7 +13,7 @@
     "form": {
       "email": "E-posta",
       "button": "KAYDOL",
-      "info": "Batik <a href=\"/\" style=\"text-decoration: underline; color: black;\">Web Sitesi Gizlilik ve Çerez Politikası</a>’nı okudum ve anladım. Bu kapsamda kişisel verilerimin işlenmesini, pazarlama ve tanıtım faaliyetlerinin tarafıma sms ve e-mail yoluyla yapılmasını kabul ediyor ve onaylıyorum."
+      "info": "Dizaynella <a href=\"/\" style=\"text-decoration: underline; color: black;\">Web Sitesi Gizlilik ve Çerez Politikası</a>’nı okudum ve anladım. Bu kapsamda kişisel verilerimin işlenmesini, pazarlama ve tanıtım faaliyetlerinin tarafıma sms ve e-mail yoluyla yapılmasını kabul ediyor ve onaylıyorum."
     },
     "responseStatus": {
       "success": "Bültenimize kaydoldunuz.",
@@ -39,7 +39,7 @@
   "socail_media": "Bizi takip edin:",
   "popular_cat": "Popüler Kategoriler",
   "services": "Müşteri Hizmetleri",
-  "brand": "Batik",
+  "brand": "Dizaynella",
   "follow_us": "BİZİ TAKİP EDİN",
   "otherUsefulLinks": "Faydalı Diğer Linkler"
 }
