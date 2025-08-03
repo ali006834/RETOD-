@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { ProductDetailProps } from "src/components/__generated__/types";
 import { observer } from "mobx-react-lite";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/scrollbar";
-import { Navigation } from "swiper/modules";
 import "swiper/css/navigation";
+import "swiper/css/thumbs";
+import { Navigation, Thumbs } from "swiper/modules";
 import styles from "./style.module.css";
 import ImagePopUp from "./imagePopUp";
 import { Image } from "@ikas/storefront";
@@ -20,29 +21,130 @@ const Slider = (props: ProductDetailProps) => {
 
   const [showImagePopUp, setShowImagePopUp] = useState(false);
   const [imageId, setImageId] = useState<any>("");
+  const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+  const [activeImageIndex, setActiveImageIndex] = useState(0);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsSmallScreen(window.innerWidth <= 1200);
+    };
+
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, []);
+
+  useEffect(() => {
+    const imageElements = product?.selectedVariant.images
+      ?.map((_, index) => document.getElementById(`main-image-${index}`))
+      .filter(Boolean);
+
+    if (!imageElements?.length) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const index = parseInt(entry.target.id.split("-")[2]);
+            setActiveImageIndex(index);
+          }
+        });
+      },
+      {
+        root: null, // Viewport'u kullan
+        threshold: 0.5,
+      }
+    );
+
+    imageElements.forEach((element) => {
+      if (element) observer.observe(element);
+    });
+
+    return () => {
+      imageElements.forEach((element) => {
+        if (element) observer.unobserve(element);
+      });
+    };
+  }, [product?.selectedVariant.images, styles.main_images]);
+
+  const scrollToImage = (index: number) => {
+    const imageElement = document.getElementById(`main-image-${index}`);
+    if (imageElement) {
+      imageElement.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+      setActiveImageIndex(index);
+    }
+  };
 
   return (
     <div className={styles.slider_wrapper}>
       <div className="product_swiper">
         <div className={styles.web_image}>
-          {product?.selectedVariant.images?.map((image, index) => {
-            return (
-              <div key={index}>
-                <div
-                  onClick={() => {
-                    setImageId(image.imageId);
-                    setShowImagePopUp(!showImagePopUp);
-                  }}
-                  className={styles.image_wrapper}
-                >
-                  <img
-                    src={image.image?.src}
-                    alt={image.image?.altText || ""}
-                  />
-                </div>
-              </div>
-            );
-          })}
+          <div className={styles.gallery_container}>
+            {/* Ana fotoğraflar - Alt alta dizili */}
+            <div className={styles.main_images}>
+              {product?.selectedVariant.images?.map((image, index) => {
+                return (
+                  <div
+                    key={index}
+                    id={`main-image-${index}`}
+                    className={styles.main_image_item}
+                  >
+                    <div
+                      onClick={() => {
+                        setImageId(image.imageId);
+                        setShowImagePopUp(!showImagePopUp);
+                      }}
+                      className={styles.image_wrapper}
+                    >
+                      <img
+                        src={image.image?.src}
+                        alt={image.image?.altText || ""}
+                      />
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Thumbnail Swiper - Sağ tarafta */}
+            <div className={styles.thumbs_swiper}>
+              <Swiper
+                modules={[Thumbs]}
+                onSwiper={setThumbsSwiper}
+                direction={isSmallScreen ? "horizontal" : "vertical"}
+                slidesPerView={isSmallScreen ? "auto" : 4}
+                spaceBetween={10}
+                watchSlidesProgress={true}
+                freeMode={false}
+                grabCursor={false}
+                allowTouchMove={true}
+                className="thumbs-swiper"
+              >
+                {product?.selectedVariant.images?.map((image, index) => {
+                  return (
+                    <SwiperSlide key={index}>
+                      <div
+                        className={`${styles.thumb_wrapper} ${
+                          activeImageIndex === index ? styles.active_thumb : ""
+                        }`}
+                        onClick={() => scrollToImage(index)}
+                      >
+                        <img
+                          src={image.image?.src}
+                          alt={image.image?.altText || ""}
+                        />
+                      </div>
+                    </SwiperSlide>
+                  );
+                })}
+              </Swiper>
+            </div>
+          </div>
         </div>
 
         {/* mobile */}

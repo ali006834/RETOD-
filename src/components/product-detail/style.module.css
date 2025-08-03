@@ -9,11 +9,10 @@
 }
 .product_detail {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 30px !important;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 3rem !important;
 }
 .product_slider {
-  grid-column: span 1 / span 1;
   width: 100%;
 }
 .product_detail_content {
