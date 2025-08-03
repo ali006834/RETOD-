@@ -10,7 +10,7 @@ export const FiltersWrapper = styled.div<FiltersWrapperProps>`
     css`
       padding-bottom: 5px;
       margin: 10px 0;
-      border-bottom: 0.5px solid #d1d5db;
+      border-bottom: 1px solid #d1d5db;
     `};
 `;
 
