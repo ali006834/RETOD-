@@ -10,7 +10,6 @@ import { Navigation, Thumbs } from "swiper/modules";
 import styles from "./style.module.css";
 import ImagePopUp from "./imagePopUp";
 import { Image } from "@ikas/storefront";
-import { FavoriteButton } from "../detail/favorite-button";
 
 const Slider = (props: ProductDetailProps) => {
   const { product } = props;
@@ -190,10 +189,6 @@ const Slider = (props: ProductDetailProps) => {
               );
             })}
           </Swiper>
-        </div>
-
-        <div className={styles.favorite}>
-          <FavoriteButton {...props} />
         </div>
 
         <div className="pop-swiper-container">
