@@ -9,7 +9,7 @@ import {
 import Loading from "src/components/svg/loading";
 import styles from "./style.module.css";
 import ArrowDown from "src/components/svg/arrow-down";
-import FilterSvg from "src/components/svg/filter";
+
 import { useRouter } from "next/router";
 
 type Props = {
@@ -63,8 +63,12 @@ const SortSelect = observer(({ productList }: Props) => {
         className={styles.featuredSelect_title}
         onClick={() => setShowFeatured(!ShowFeatured)}
       >
-        <FilterSvg fill="#222" height="24" width="24" />
-        <span>
+        <span className={styles.sortLabel}>Sırala</span>
+        <span
+          className={`${styles.arrowContainer} ${
+            ShowFeatured ? styles.arrowRotated : ""
+          }`}
+        >
           <ArrowDown strokeColor="#222" height="2em" width="2em" />
         </span>
         <span>{productList.isLoading && <Loading />}</span>

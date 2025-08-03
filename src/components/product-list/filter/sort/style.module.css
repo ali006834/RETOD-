@@ -9,6 +9,11 @@
 .featuredSelect_title {
   display: flex;
   gap: 5px;
+  align-items: center;
+  padding: 8px 12px;
+  border: 1px solid #000;
+  background: transparent;
+  cursor: pointer;
 }
 .featuredSelect span svg {
   width: 23px;
@@ -16,14 +21,14 @@
 }
 .featuredSelect_content {
   position: absolute;
-  top: 30px;
+  top: 45px;
   background-color: #fff;
   text-align: left;
   font-size: 14px;
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   z-index: 9999;
   right: 0px;
-  width: 140px;
+  width: 180px;
 }
 .selected {
   background-color: #6b7280;
@@ -39,4 +44,20 @@
 .not_selected:hover {
   background-color: #6b7280;
   color: #fff;
+}
+
+.sortLabel {
+  font-size: 14px;
+  color: #222;
+  font-weight: 500;
+}
+
+.arrowContainer {
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.arrowRotated {
+  transform: rotate(180deg);
 }
