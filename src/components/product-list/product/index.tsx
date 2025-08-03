@@ -381,7 +381,7 @@ const ProductImage = observer(({ product }: Props) => {
     <div className="product-list-slider">
       {router.pathname !== "/account/favorite-products" && product.hasStock ? (
         <Swiper
-          modules={[Scrollbar, Pagination]}
+          modules={[Scrollbar, Navigation, Pagination]}
           className="mySwiper"
           loop={true}
           navigation={true}
@@ -465,7 +465,7 @@ const ProductTitle = observer(({ product }: Props) => (
     <span>{product?.brand?.name}</span>
     <Link href={product.href}>
       <a>
-        <h2>{product.name}</h2>
+        <h2>{product.name.toLocaleUpperCase("tr-TR")}</h2>
       </a>
     </Link>
   </div>

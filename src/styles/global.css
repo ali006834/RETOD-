@@ -204,8 +204,8 @@ body {
 }
 .product-list-slider .swiper-button-prev,
 .product-list-slider .swiper-button-next {
-  visibility: hidden;
-  opacity: 0;
+  visibility: visible;
+  opacity: 1;
   color: #000 !important;
   background-color: transparent !important;
   transition: all 0.8s ease;
