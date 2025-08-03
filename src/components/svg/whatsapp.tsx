@@ -1,25 +1,31 @@
-const svg = ({ fill }: { fill?: boolean }) => (
+import React from "react";
+
+interface WhatsAppProps {
+  fill?: string;
+  width?: string;
+  height?: string;
+}
+
+const svg = ({
+  fill = "#000",
+  width = "30px",
+  height = "30px",
+}: WhatsAppProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="30px"
-    height="30px"
+    width={width}
+    height={height}
     viewBox="0 0 20 20"
     version="1.1"
   >
     <title>whatsapp [#128]</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g
-      id="Page-1"
-      stroke="none"
-      stroke-width="1"
-      fill="none"
-      fill-rule="evenodd"
-    >
+    <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
       <g
         id="Dribbble-Light-Preview"
         transform="translate(-300.000000, -7599.000000)"
-        fill="#222"
+        fill={fill}
       >
         <g id="icons" transform="translate(56.000000, 160.000000)">
           <path

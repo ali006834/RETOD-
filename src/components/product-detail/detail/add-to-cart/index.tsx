@@ -16,6 +16,7 @@ import useFavorite from "../favorite-button/useFavorite";
 import ModalLoginRequired from "../components/modal-login-required";
 import { useTranslation } from "@ikas/storefront";
 import { Loading } from "src/components/components/button";
+import SharePopup from "./share-popup";
 
 import * as S from "./style";
 import product from "src/components/product-list/product";
@@ -23,6 +24,7 @@ import product from "src/components/product-list/product";
 export const AddToCart = observer((props: ProductDetailProps) => {
   const [quantity, setQuantity] = useState(1);
   const [showStockAlert, setShowStockAlert] = useState(false);
+  const [showSharePopup, setShowSharePopup] = useState(false);
   const { t } = useTranslation();
 
   const hasStock = props.product?.selectedVariant.hasStock;
@@ -45,18 +47,12 @@ export const AddToCart = observer((props: ProductDetailProps) => {
     productId: props.product?.id || "",
   });
 
-  const handleShare = (product?: IkasProduct) => {
-    if (product && navigator.share) {
-      navigator.share({
-        title: product.name,
-        text: product.name,
-        url: window.location.href,
-      });
-    } else if (product) {
-      // Fallback for browsers that don't support Web Share API
-      navigator.clipboard.writeText(window.location.href);
-      // You might want to show a toast notification here
-    }
+  const handleShare = () => {
+    setShowSharePopup(true);
+  };
+
+  const handleCloseSharePopup = () => {
+    setShowSharePopup(false);
   };
 
   const modalLoginText = (key: string) =>
@@ -89,7 +85,7 @@ export const AddToCart = observer((props: ProductDetailProps) => {
               />
             )}
           </S.ActionButton>
-          <S.ActionButton onClick={() => handleShare(props.product)}>
+          <S.ActionButton onClick={handleShare}>
             <ShareSVG width="24px" height="24px" fill="#666" />
           </S.ActionButton>
         </S.ActionButtonsGroup>
@@ -111,6 +107,11 @@ export const AddToCart = observer((props: ProductDetailProps) => {
         noAccountText={modalLoginText("noAccountText")}
         redirectUrl={props.product?.href || ""}
         onClose={closeLoginModal}
+      />
+      <SharePopup
+        product={props.product}
+        isVisible={showSharePopup}
+        onClose={handleCloseSharePopup}
       />
     </>
   );
