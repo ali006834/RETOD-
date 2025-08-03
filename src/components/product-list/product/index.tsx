@@ -1,49 +1,40 @@
-"use client";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { observer } from "mobx-react-lite";
 import {
   IkasDisplayedVariantType,
   IkasDisplayedVariantValue,
   IkasProduct,
-  IkasProductFilter,
-  IkasProductFilterValue,
   Image,
   Link,
   useTranslation,
 } from "@ikas/storefront";
+
 import * as S from "./style";
 import styles from "./style.module.css";
+
 import { FavoriteButton } from "src/components/product-detail/detail/favorite-button";
-import { useScreen } from "src/utils/hooks/useScreen";
 import { useRouter } from "next/router";
-import PlusSVG from "../../svg/plus";
-import PlusXSVG from "../../svg/plusX";
-import { FiltersWrapper } from "../filter/components/filters-wrapper";
-import productList from "..";
-import { createContext, useContext } from "react";
-import {
-  VariantsWrapper,
-  VariantTypeBody,
-  VariantTypeName,
-  VariantTypeNameWrapper,
-} from "src/components/product-detail/detail/style";
+import { VariantsList } from "./variants-list";
+import { useScreen } from "src/utils/hooks/useScreen";
 import { SelectOnChangeParamType } from "src/components/components/select";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import { Navigation, Pagination } from "swiper/modules";
-import { ProductDetailProps } from "src/components/__generated__/types";
 import useAddToCartButton from "src/components/product-detail/detail/add-to-cart/hooks/useAddToCartButton";
 import Button from "src/components/components/button";
-import Alert from "src/components/components/alert";
+import BasketIcon from "src/components/svg/basket";
+
+import { Scrollbar, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper-bundle.css";
+import "swiper/css/scrollbar";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css";
 
 type Props = {
   product: IkasProduct;
-  columns?: number;
 };
 
 const Product = (props: Props) => {
-  const { product, columns } = props;
+  const { product } = props;
   const { t } = useTranslation();
   const { isMobile } = useScreen();
 
@@ -54,64 +45,29 @@ const Product = (props: Props) => {
   const router = useRouter();
 
   const [isOpen, setIsOpen] = useState(false);
-  const [isHovered, setIsHovered] = useState(true);
-  const [showStockAlert, setShowStockAlert] = useState(false);
-
-  // Eğer grid layout (View-Selector) sayısı değişirse, modal'ı kapat ve hover durumunu ayarla
-  useEffect(() => {
-    setIsOpen(false);
-    setIsHovered(true);
-  }, [columns]);
-
-  // Modal'ı açıp kapatmak için toggle fonksiyonu
-  const toggleIcon = () => {
-    setIsOpen(!isOpen);
-  };
-
-  // Ürünlerlerin kaçarlı gözükeceğine dair işlemler
-  const ifColumnNotEqual8 = columns !== 8;
-  const ifColumnEqual5 = columns == 5;
-  const ifColumnEqual4 = isMobile && columns == 4;
-
-  // Sepete ekleme işlemi için
-  const {
-    loading,
-    buttonText,
-    buttonState,
-    disabled,
-    isBackInStockReminderSaved,
-    onButtonClick,
-  } = useAddToCartButton({
-    product,
-    quantity: 1,
-    onExceedStock: () => {
-      setShowStockAlert(true);
-      setTimeout(() => setShowStockAlert(false), 2500);
-    },
-  });
 
   return (
     <div className={styles.product_container}>
-      {/* Favori butonu */}
       <div className={styles.favorite}>
         <FavoriteButton {...props} />
       </div>
-      {/* Resim içeriği */}
       <div className={styles.imageContainer}>
         <Link href={product.href}>
           <a title={a11yTitle}>
             <S.ImageWrapper $hasStock={product.hasStock}>
               <ProductImage {...props} />
-              {/* <DiscountBadge {...props} /> */}
-              {!isMobile && ifColumnNotEqual8 && !ifColumnEqual5 && (
-                <ProductTag {...props} />
-              )}
+              <DiscountBadge {...props} />
             </S.ImageWrapper>
           </a>
         </Link>
-        {!isMobile && (
-          <div className={isHovered ? styles.active : styles.passive}>
-            <div>
+      </div>
+      <div className={styles.product_Info}>
+        {isMobile && (
+          <>
+            <Button onClick={() => setIsOpen(true)} block>
+              {t("common:product.addToCart")}
+            </Button>
+            <MinimalMobileModal isOpen={isOpen} setIsOpen={setIsOpen}>
               <S.VariantsWrapper>
                 {product?.displayedVariantTypes.map((dVT) => (
                   <VariantType
@@ -121,35 +77,16 @@ const Product = (props: Props) => {
                   />
                 ))}
               </S.VariantsWrapper>
-            </div>
-          </div>
+            </MinimalMobileModal>
+          </>
         )}
+        <ProductTitle {...props} />
+        <Price {...props} />
+        <ProductTag {...props} />
       </div>
-
-      {/* ürün başlığı ve fiyat */}
-      {ifColumnNotEqual8 && !ifColumnEqual5 && !ifColumnEqual4 && (
-        <Link href={product.href}>
-          <a title={a11yTitle}>
-            <div className={styles.product_Info}>
-              <div className={styles.product_info_title}>
-                <ProductTitle {...props} />
-              </div>
-              <div className={styles.product_info_price}>
-                <Price {...props} />
-              </div>
-              {isMobile && <ProductTag {...props} />}
-            </div>
-          </a>
-        </Link>
-      )}
-
-      {/* Mobilse sepete ekle butonu ekle */}
-      {isMobile && !ifColumnEqual4 && (
-        <>
-          <Button onClick={onButtonClick} block>
-            {t("common:product.addToCart")}
-          </Button>
-          <MinimalMobileModal isOpen={isOpen} setIsOpen={setIsOpen}>
+      {!isMobile && (
+        <div className={styles.onHoverAddCart}>
+          <div>
             <S.VariantsWrapper>
               {product?.displayedVariantTypes.map((dVT) => (
                 <VariantType
@@ -159,19 +96,6 @@ const Product = (props: Props) => {
                 />
               ))}
             </S.VariantsWrapper>
-          </MinimalMobileModal>
-        </>
-      )}
-      {ifColumnNotEqual8 && !ifColumnEqual5 && (
-        <div className={styles.size_icon_container}>
-          <div
-            onClick={() => {
-              setIsHovered(!isHovered);
-              toggleIcon();
-            }}
-            className={styles.size_icon}
-          >
-            {isOpen ? <PlusXSVG /> : <PlusSVG />}
           </div>
         </div>
       )}
@@ -276,15 +200,13 @@ const VariantValues = observer(({ dVT, product }: VariantValueType) => {
   });
 
   return (
-    <div>
-      <SelectVariantValue
-        product={product}
-        dVT={dVT}
-        onButtonClick={onButtonClick}
-        colorSection={colorSection}
-        onVariantValueChange={onVariantValueChange}
-      />
-    </div>
+    <SelectVariantValue
+      product={product}
+      dVT={dVT}
+      onButtonClick={onButtonClick}
+      colorSection={colorSection}
+      onVariantValueChange={onVariantValueChange}
+    />
   );
 });
 
@@ -361,12 +283,7 @@ const SelectVariantValue = observer(
                         }
                         onClick={() => onChange(item?.value)}
                       >
-                        <div
-                          className={styles.product_size_item_label}
-                          title={item.label.toLocaleUpperCase("tr-TR")}
-                        >
-                          {item.label.toLocaleUpperCase("tr-TR")}
-                        </div>
+                        <div>{item.label}</div>
                       </div>
                     )}
                   </>
@@ -383,12 +300,7 @@ const SelectVariantValue = observer(
                             : styles.product_size_item_no_stock
                         }
                       >
-                        <div
-                          className={styles.product_size_item_label}
-                          title={item.label.toLocaleUpperCase("tr-TR")}
-                        >
-                          {item.label.toLocaleUpperCase("tr-TR")}
-                        </div>
+                        <div>{item.label}</div>
                       </div>
                     )}
                   </>
@@ -407,137 +319,153 @@ type VariantTypeProps = {
   dVT: IkasDisplayedVariantType;
 };
 
-// Varyant Tipleri (İsimleri) Örn; Beden, Renk vb...
+//! Renkler ve Bedenler
 const VariantType = observer(({ dVT, product }: VariantTypeProps) => {
+  // Gelen variantType.name değerini kendisini dinamik olarak alma yerlerine statik olarak "Renk" ve "Beden" olarak al..
+  const getStaticVariantName = (name: any) => {
+    const lowerCaseName = name.toLowerCase();
+
+    if (lowerCaseName.includes("renk") || lowerCaseName.includes("color")) {
+      return "Renk Seçenekleri";
+    } else if (
+      lowerCaseName.includes("beden") ||
+      lowerCaseName.includes("size")
+    ) {
+      return "Beden Seçenekleri";
+    }
+    // Eğer başka bir format gelirse olduğu gibi döndür..
+    return name;
+  };
+
   return (
     <S.VariantType>
+      {/* Eğer sadece Dinamik olarak almak istersen alttaki kodu aktif et   */}
+      {/* <S.VariantTypeName>{dVT.variantType.name}</S.VariantTypeName> */}
       <S.VariantTypeName>
-        {dVT.variantType.name.toLocaleUpperCase("tr-TR")}
+        {getStaticVariantName(dVT.variantType.name)}
       </S.VariantTypeName>
+
       <VariantValues dVT={dVT} product={product} />
     </S.VariantType>
   );
 });
 
-const DEFAULT_IMAGE = "/default-product-image.jpg";
+//Fotoğraf alanı
 const ProductImage = observer(({ product }: Props) => {
-  const mainImage = product.selectedVariant.mainImage?.image;
-  const images = product.selectedVariant.images?.length
-    ? product.selectedVariant.images
-    : [
-        {
-          image: {
-            src: DEFAULT_IMAGE,
-            id: "default",
-          } as any,
-        },
-      ];
-
-  if (!mainImage?.id) {
-    return (
-      <img
-        src={DEFAULT_IMAGE}
-        alt="Product placeholder"
-        style={{
-          width: "100%",
-          height: "auto", // Oranı koru
-          aspectRatio: "460/690", // Diğer görsellerle aynı oran
-          objectFit: "cover",
-        }}
-      />
-    );
+  if (!product.selectedVariant.mainImage?.image?.id) {
+    return <img src="/product-dummy-image.jpeg" />;
   }
 
-  return mainImage.isVideo ? (
-    <video src={mainImage.src} />
+  const router = useRouter();
+
+  return product.selectedVariant.mainImage.image.isVideo ? (
+    // Video
+    <video
+      src={product.selectedVariant.mainImage.image.src}
+      style={{
+        width: "100%",
+        aspectRatio: "500 / 500",
+        objectFit: "cover",
+      }}
+      loop
+      autoPlay
+      playsInline
+      muted
+    />
   ) : (
+    // Fotoğraf
     <div className="product-list-slider">
-      <Swiper
-        modules={[Pagination]}
-        className="mySwiper"
-        loop={true}
-        pagination={true}
-        slidesPerView={1}
-        spaceBetween={0}
-      >
-        {images.map((item, index) => {
-          return (
-            <SwiperSlide key={index}>
-              <Image
-                width={460}
-                height={690}
-                layout="responsive"
-                objectFit="cover"
-                useBlur={true}
-                image={item.image as any}
-                alt={product.selectedVariant.product?.name || "Product image"}
-              />
-            </SwiperSlide>
-          );
-        })}
-      </Swiper>
+      {router.pathname !== "/account/favorite-products" && product.hasStock ? (
+        <Swiper
+          modules={[Scrollbar, Pagination]}
+          className="mySwiper"
+          loop={true}
+          navigation={true}
+          scrollbar={true}
+          slidesPerView={1}
+          spaceBetween={0}
+        >
+          {product?.selectedVariant?.images?.map((item, index) => {
+            return (
+              <SwiperSlide key={index}>
+                <Image
+                  width={460}
+                  height={690}
+                  layout="responsive"
+                  objectFit="cover"
+                  useBlur={true}
+                  image={item.image as any}
+                  alt={product.selectedVariant.product?.name || "Product image"}
+                />
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+      ) : (
+        <Image
+          layout="responsive"
+          width="500px"
+          height="750px"
+          objectFit="cover"
+          useBlur={true}
+          image={product.selectedVariant.mainImage?.image!}
+          alt={product.selectedVariant.product?.name || undefined}
+        />
+      )}
     </div>
   );
 });
 
+//Ürün etiketleri
+const ProductTag = observer(({ product }: Props) => {
+  if (!product.tags) {
+    return null;
+  }
+
+  if (product.hasStock && product.tags.length > 0) {
+    return (
+      <S.ProductTags>
+        {product.tags?.map((item, index) => (
+          <S.ProductTag key={index}>
+            <S.ProductTagsRatio>
+              {item.name.toLocaleUpperCase("tr-TR")}
+            </S.ProductTagsRatio>
+          </S.ProductTag>
+        ))}
+      </S.ProductTags>
+    );
+  } else {
+    return null;
+  }
+});
+
 const Price = observer(({ product }: Props) => {
-  let regularPrice = parseFloat(
-    product.selectedVariant.price.formattedSellPrice.replace(/[^\d.-]/g, "")
-  );
-  let discountedPrice = parseFloat(
-    product.selectedVariant.price.formattedFinalPrice.replace(/[^\d.-]/g, "")
-  );
-
-  let discountRate = (
-    ((regularPrice - discountedPrice) / regularPrice) *
-    100
-  ).toFixed(0);
-
   return (
     <div className={styles.price_content}>
-      {product.selectedVariant.price.hasDiscount && (
+      <span className={styles.price}>
+        {product.selectedVariant.price.formattedFinalPrice}
+      </span>
+      {product.selectedVariant.price.hasDiscount ? (
         <span className={styles.discCount}>
           <del> {product.selectedVariant.price.formattedSellPrice}</del>
         </span>
+      ) : (
+        <span className={styles.no_discCount}></span>
       )}
-      <div>
-        <span className={styles.price}>
-          {product.selectedVariant.price.formattedFinalPrice}
-        </span>
-        {product.selectedVariant.price.hasDiscount && (
-          <span className={styles.discount_rate}>{` -% ${discountRate}`}</span>
-        )}
-      </div>
     </div>
   );
 });
 
 const ProductTitle = observer(({ product }: Props) => (
   <div className={styles.product_title}>
-    <h2>{product.name}</h2>
+    <span>{product?.brand?.name}</span>
+    <Link href={product.href}>
+      <a>
+        <h2>{product.name}</h2>
+      </a>
+    </Link>
   </div>
 ));
-
-const ProductTag = observer(({ product }: Props) => {
-  if (!product.tags || product.tags.length === 0) {
-    return null;
-  }
-
-  if (product.hasStock) {
-    return (
-      <S.ProductTags>
-        {product.tags.map((item, index) => (
-          <S.ProductTag key={index}>
-            <S.ProductTagText>
-              {item.name.toLocaleUpperCase("tr-TR")}
-            </S.ProductTagText>
-          </S.ProductTag>
-        ))}
-      </S.ProductTags>
-    );
-  }
-  return null;
-});
 
 const DiscountBadge = observer(({ product }: Props) => {
   const { t } = useTranslation();
@@ -557,7 +485,7 @@ const DiscountBadge = observer(({ product }: Props) => {
       {product.hasStock && (
         <>
           <S.DiscountBadgeDiscountRatio>
-            %{product.selectedVariant.price.discountPercentage}
+            -{product.selectedVariant.price.discountPercentage}%
           </S.DiscountBadgeDiscountRatio>
         </>
       )}

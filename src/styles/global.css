@@ -62,7 +62,31 @@
   font-family: "Akkurat";
   font-style: normal;
   font-weight: 400;
-  src: url("./fonts/akkurat/Akkurat-Regular.woff2") format("woff2");
+  src: url("./fonts/akkurat/AkkuratRegular.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Akkurat";
+  font-style: normal;
+  font-weight: 600;
+  src: url("./fonts/akkurat/Akkurat.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Akkurat";
+  font-style: normal;
+  font-weight: 800;
+  src: url("./fonts/akkurat/AkkuratBold.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Akkurat";
+  font-style: normal;
+  font-weight: 300;
+  src: url("./fonts/akkurat/AkkuratLight.woff2") format("woff2");
 }
 
 /* Chronicle Display Fontları */

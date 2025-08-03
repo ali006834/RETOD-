@@ -9,7 +9,10 @@ type ImageWrapperProps = {
 
 export const ImageWrapper = styled.figure<ImageWrapperProps>`
   position: relative;
-  margin-bottom: 7px;
+
+  @media only screen and (max-width: 600px) {
+    margin-bottom: 0px;
+  }
 
   ${({ $hasStock }) => {
     if ($hasStock) return ``;
@@ -33,31 +36,29 @@ type DiscountBadgeProps = {
 
 export const DiscountBadge = styled.div<DiscountBadgeProps>`
   position: absolute;
-
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
 
   @media screen and (max-width: ${breakpoints.md}) {
-    left: 12px;
-    top: 12px;
-    padding: 5px 10px;
+    right: 10px;
+    top: 10px;
+    padding: 2px 4px;
   }
-  top: 5px;
-  left: 12px;
+  top: 10px;
+  right: 10px;
   padding: 5px 10px;
   text-wrap: nowrap;
-  font-family: "HelveticaNeueLight" !important;
+  font-family: "Helvetica" !important;
+  font-weight: 400;
   ${({ $hasStock }) => {
     if ($hasStock) {
       return css`
         background-color: #fbfbfb;
-        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         color: #000;
       `;
     }
-
     return css`
       background-color: red;
       color: #fff;
@@ -68,8 +69,8 @@ export const DiscountBadge = styled.div<DiscountBadgeProps>`
 `;
 export const DiscountBadgeDiscountRatio = styled.span`
   display: block;
-  font-size: 10px;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 500;
   line-height: 24px;
 `;
 export const DiscountBadgeSoldOut = styled.span`
@@ -80,7 +81,7 @@ export const DiscountBadgeSoldOut = styled.span`
 `;
 export const DiscountBadgeDiscountText = styled.span`
   display: block;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 16px;
 `;
 export const Title = styled.p`
@@ -110,49 +111,48 @@ export const FinalPrice = styled.span<FinalPriceProps>`
     font-size: 14px;
   }
 `;
+
+export const BoxSelect = styled.select`
+  width: 100%;
+  padding: 12px 16px;
+  background-color: #fff;
+  border: 1px solid #dfe2e6;
+`;
+
 export const ProductTags = styled.div`
-  position: absolute;
-  top: 10px;
-  left: 10px;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  gap: 5px;
-
-  z-index: 2;
+  flex-wrap: wrap;
+  gap: 1px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 10px 0px;
 
   @media screen and (max-width: ${breakpoints.md}) {
-    top: 5px;
-    left: 5px;
+    padding: 3px 0px;
+    position: relative;
   }
 `;
 
 export const ProductTag = styled.div`
-  font-family: "HelveticaNeueThin";
-  background-color: rgba(0, 0, 0, 0.8);
-  color: white;
-  padding: 4px 8px;
-  font-size: 10px;
-  line-height: 1.2;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  border-radius: 2px;
+  color: #136538;
+  background: none;
+  border: none;
+  padding: 2px 0px;
+  font-size: 14px;
+  font-family: "Helvetica" !important;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 1.5px;
+  transition: color 0.2s ease;
 
-  @media screen and (max-width: ${breakpoints.md}) {
-    padding: 3px 6px;
-    font-size: 9px;
+  &:hover {
+    color: #0f4d2b;
   }
-`;
-
-export const ProductTagText = styled.span`
-  display: block;
 `;
 
 export const ProductTagsRatio = styled.span`
   display: block;
-  font-size: 10px;
-  font-weight: 600;
-  line-height: 24px;
 `;
 
 export const VariantType = styled.div`
@@ -163,14 +163,12 @@ export const VariantValue = styled.div``;
 
 export const VariantTypeName = styled.div`
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 14px;
-  line-height: 28px;
+  line-height: 24px;
   margin-bottom: 5px;
   color: #000;
-  font-family: "HelveticaNeueLight" !important;
+  font-family: "Helvetica" !important;
 `;
 
-export const VariantsWrapper = styled.div`
-  z-index: -1;
-`;
+export const VariantsWrapper = styled.div``;

@@ -2,13 +2,21 @@
   position: relative;
 }
 
+.product_container:hover {
+  /* outline: 1px solid black; */
+}
+
 .favorite {
   position: absolute;
   top: 0px;
-  right: 5px;
+  left: 5px;
   padding: 10px;
   box-sizing: border-box;
-  z-index: 99;
+  opacity: 0;
+}
+
+.product_container:hover .favorite {
+  opacity: 1;
 }
 
 .product_container a {
@@ -16,108 +24,279 @@
   color: #000;
 }
 
+.check_sizes {
+  padding: 10px 5px 20px 5px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  visibility: hidden;
+  opacity: 0;
+  background-color: #fff;
+  transition: opacity 0.3s ease-in;
+}
+
+.check_sizes_imp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product_container:hover .check_sizes {
+  visibility: visible;
+  opacity: 1;
+  box-sizing: border-box;
+}
+
+.product_size {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product_size_title {
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-family: "Helvetica" !important;
+}
+
+.product_size_item {
+  min-width: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  font-family: "Helvetica" !important;
+  font-size: 10px;
+  cursor: pointer;
+  background: transparent;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #fff;
+}
+
+.product_size_selected_item {
+  min-width: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  font-weight: 400;
+  font-family: "Helvetica" !important;
+  font-size: 10px;
+  cursor: pointer;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #fff;
+}
+
+.product_size_item_no_stock_selected {
+  min-width: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  font-family: "Helvetica" !important;
+  font-size: 10px;
+  cursor: pointer;
+  position: relative;
+  color: rgb(177, 178, 179);
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #fff;
+}
+
+.product_size_item_no_stock {
+  min-width: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  font-family: "Helvetica" !important;
+  font-size: 10px;
+  cursor: pointer;
+  position: relative;
+  color: rgb(209, 213, 219);
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #fff;
+}
+
+.product_size_item:hover,
+.product_size_item_no_stock:hover,
+.product_size_item_no_stock_selected:hover,
+.product_size_selected_item:hover {
+  border: 1px solid #000;
+  box-sizing: border-box;
+}
+
 .product_Info {
-  padding: 0px 0px 10px 0 !important;
-  margin: -10px 0 0 0 !important;
+  /* padding: 10px 5px 30px 20px; */
+  padding: 10px 5px 0px 5px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.product_info_title {
-  margin-bottom: 8px;
-}
-
-.product_info_price {
-  margin-bottom: 8px;
-}
+/* .product_Info {
+  padding: 10px 5px 20px 5px;
+  width: 100%;
+} */
 
 .product_title h2 {
-  font-size: 15px;
-  line-height: 16px;
-  letter-spacing: 0.4px;
-  margin-top: 1rem;
-  text-align: center;
-  color: #3b3b3b;
-  font-family: "HelveticaNeueLight" !important;
-  font-weight: 500;
-  white-space: nowrap;
-  overflow: hidden; /* Taşan kısmı gizler */
-  text-overflow: ellipsis; /* Üç nokta koyar */
+  -webkit-font-smoothing: antialiased;
+  color: #000;
+  font-weight: 800;
+  font-family: "Akkurat" !important;
+  font-size: 16px;
+  margin-top: 5px;
+  line-height: 24px;
+  letter-spacing: 0.6px;
+  overflow: hidden;
+  /* text-transform: uppercase; */
 }
 
-.price_content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2px;
+.product_title span {
+  opacity: 0.65;
+  letter-spacing: 0.6px;
+  color: #000;
+  font-size: 12px;
+  font-weight: 400;
+  font-family: "Akkurat" !important;
+}
+
+.product_title h2:hover {
+  opacity: 0.65;
+  color: #000;
 }
 
 .price_content span {
-  font-size: 12px;
-  padding: 3px 8px;
+  font-size: 14px;
   line-height: 20px;
-  font-weight: 800;
-  font-family: "HelveticaNeueLight" !important;
+  font-weight: bold;
+  font-family: "Akkurat" !important;
+  text-wrap: nowrap;
 }
 
 .discCount del {
   color: #000;
+  opacity: 0.65;
+  font-size: 11px;
+  line-height: 20px;
+}
+
+.no_discCount {
+  margin-top: 15px;
 }
 
 .price {
-  color: #fff;
-  background-color: #000;
-  margin-left: 2px;
-  padding: 0 2px;
-}
-
-.discount_rate {
-  margin-left: 1px;
-  padding: 0 2px;
   color: #000;
-  background-color: #ccc;
+  margin-right: 5px;
 }
 
 .product_detail_colors button {
   cursor: pointer;
+  border-radius: 50%;
   width: 20px;
   height: 20px;
 }
 
+@media only screen and (max-width: 1200px) {
+  .favorite {
+    top: 0px;
+    right: 0px;
+    opacity: 1;
+  }
+
+  .check_sizes {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .product_Info {
+    padding: 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    visibility: visible;
+    opacity: 1;
+    background-color: transparent;
+  }
+
+  .product_container:hover {
+    outline: none;
+  }
+
+  .product_title h2 {
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: 0.6px;
+
+    text-transform: capitalize;
+  }
+
+  .price_content {
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  .no_discCount {
+    margin-top: 0;
+  }
+
+  .product_detail_colors {
+    gap: 5px;
+  }
+
+  .product_detail_colors button {
+    cursor: pointer;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+  }
+
+  .favorite {
+    top: 0px;
+    left: -10px;
+    opacity: 1;
+  }
+
+  .check_sizes {
+    bottom: 15%;
+  }
+}
+
 .imageContainer {
   position: relative;
-  overflow: hidden;
+  margin-bottom: 5px;
 }
 
-.active {
+.onHoverAddCart {
   width: 100%;
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(0px); /* 0px aşağıda başlar */
   transition: opacity 0.3s ease, transform 0.3s ease;
-  position: absolute;
-  bottom: 32px;
+  top: 0;
   z-index: 1;
-  background: rgba(255, 255, 255, 0.8);
-  padding: 0px 10px 20px 10px;
-  pointer-events: none;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  padding: 0px 0px 10px 0px;
+  pointer-events: none; /*Tıklanabilirliğini devre dışı bırakmak için */
 }
 
-.passive {
-  width: 100%;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  position: absolute;
-  bottom: 32px;
-  z-index: 1;
-  background: rgba(255, 255, 255, 0.8);
-  padding: 0px 10px 20px 10px;
-  pointer-events: none;
+/* Hover sırasında görünür ve yukarı kayar */
+.product_container:hover .onHoverAddCart {
   opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
+  transform: translateY(0px);
+  pointer-events: auto; /* Artık tıklanabilir */
 }
 
+/*= Hover da gözüken Renk ve Bedenler */
 .product_size {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 5px;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 0px;
 }
 
 .product_size_item_color {
@@ -128,11 +307,12 @@
   justify-content: center;
   align-items: center;
   border: 1px solid #949494;
-  font-family: "HelveticaNeueLight" !important;
+  font-weight: 400;
+  font-family: "Helvetica" !important;
   font-size: 14px;
   cursor: pointer;
   background: transparent;
-  border-radius: 100%;
+  /* border-radius: 100%; */
 }
 .product_size_selected_item_color {
   width: 25px;
@@ -144,10 +324,11 @@
   border: 1px solid #000;
   background: #000;
   color: #fff;
-  font-family: "HelveticaNeueLight" !important;
+  font-weight: 400;
+  font-family: "Helvetica" !important;
   font-size: 14px;
   cursor: pointer;
-  border-radius: 100%;
+  /* border-radius: 100%; */
 }
 .product_size_item_no_stock_selected_color {
   width: 25px;
@@ -158,7 +339,8 @@
   align-items: center;
   border: 1px solid #000;
   background-color: #000;
-  font-family: "HelveticaNeueLight" !important;
+  font-weight: 400;
+  font-family: "Helvetica" !important;
   font-size: 14px;
   cursor: pointer;
   position: relative;
@@ -167,20 +349,21 @@
 }
 
 .product_size_item {
-  width: 50px;
+  width: 35px;
   height: 35px;
   min-width: 35px;
   display: flex;
   justify-content: center;
   align-items: center;
   border: 1px solid #949494;
-  font-family: "HelveticaNeueLight" !important;
-  font-size: 12px;
+  font-weight: 400;
+  font-family: "Helvetica" !important;
+  font-size: 14px;
   cursor: pointer;
   background: transparent;
 }
 .product_size_selected_item {
-  width: 50px;
+  width: 35px;
   height: 35px;
   min-width: 35px;
   display: flex;
@@ -189,12 +372,13 @@
   border: 1px solid #000;
   background: #000;
   color: #fff;
-  font-family: "HelveticaNeueLight" !important;
-  font-size: 12px;
+  font-weight: 400;
+  font-family: "Helvetica" !important;
+  font-size: 14px;
   cursor: pointer;
 }
 .product_size_item_no_stock_selected {
-  width: 50px;
+  width: 35px;
   height: 35px;
   min-width: 35px;
   display: flex;
@@ -202,21 +386,13 @@
   align-items: center;
   border: 1px solid #000;
   background-color: #000;
-  font-family: "HelveticaNeueLight" !important;
-  font-size: 12px;
+  font-weight: 400;
+  font-family: "Helvetica" !important;
+  font-size: 14px;
   cursor: pointer;
   position: relative;
   color: rgb(209, 213, 219);
 }
-
-/* Variant ismi uzunsa ellipsis uygula  */
-.product_size_item_label {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  max-width: 200px;
-}
-
 .product_size_item_no_stock_selected::after {
   content: "";
   position: absolute;
@@ -228,14 +404,15 @@
   transform-origin: right;
 }
 .product_size_item_no_stock {
-  width: 50px;
+  width: 35px;
   height: 35px;
   min-width: 35px;
   display: flex;
   justify-content: center;
   align-items: center;
   border: 1px solid rgb(209 213 219);
-  font-family: "HelveticaNeueLight" !important;
+  font-weight: 400;
+  font-family: "Helvetica" !important;
   font-size: 14px;
   cursor: pointer;
   position: relative;
@@ -257,12 +434,12 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  z-index: 9999;
+  height: 100%; /* Ekranın tamamını kaplar */
+  background: rgba(0, 0, 0, 0.7); /* Arka plan daha karanlık olur */
+  z-index: 9999; /* En üstte görünmesi için yüksek z-index */
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: flex-end; /* Modalı aşağıya hizalar */
 }
 
 .modal {
@@ -274,24 +451,6 @@
   animation: slideUp 0.3s ease-out;
 }
 
-.size_icon_container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.size_icon {
-  background-color: #e0e0e0;
-  border-radius: 50%;
-  width: 28px;
-  height: 28px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.2s ease;
-  cursor: pointer;
-}
-
 @keyframes slideUp {
   from {
     transform: translateY(100%);
@@ -301,79 +460,9 @@
   }
 }
 
-/*= Responsive*/
-@media only screen and (max-width: 1200px) {
-  .favorite {
-    top: 0px;
-    right: 30px;
-  }
-}
-
-@media only screen and (max-width: 900px) {
-  .favorite {
-    top: 0px;
-    right: 30px;
-  }
-  .size_icon_container {
-    display: none;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .favorite {
-    top: 0px;
-    right: 20px;
-  }
-  .product_detail_colors {
-    gap: 5px;
-  }
-  .product_detail_colors button {
-    cursor: pointer;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-  }
-  .price_content {
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    white-space: nowrap;
-  }
-
-  .discCount del {
-    color: #000;
-  }
-
-  .price {
-    /* color: #9ca3af; */
-    color: #fff;
-    background-color: #000;
-  }
-
-  .discount_rate {
-    color: #fff;
-    background-color: #f60000;
-  }
-}
-
-@media only screen and (max-width: 400px) {
-  .price_content {
-    flex-direction: column; /* Mobilde alt alta hizalanacak */
-    align-items: flex-start;
-    white-space: nowrap;
-  }
-  .discCount del {
-    color: #000;
-  }
-
-  .price {
-    /* color: #9ca3af; */
-    color: #fff;
-    background-color: #000;
-  }
-
-  .discount_rate {
-    color: #fff;
-    background-color: #f60000;
+/* Tablet*/
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .onHoverAddCart {
+    width: 94%;
   }
 }

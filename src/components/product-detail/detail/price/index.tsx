@@ -5,7 +5,12 @@ import { ProductDetailProps } from "src/components/__generated__/types";
 import styles from "../style.module.css";
 
 export const Price = observer((props: ProductDetailProps) => {
-  const { price }: any = props?.product?.selectedVariant;
+  const { price }: any = props?.product?.selectedVariant || {};
+
+  // Eğer price yoksa boş component döndür
+  if (!price) {
+    return null;
+  }
 
   let regularPrice = parseFloat(
     price.formattedSellPrice.replace(/[^\d.-]/g, "")
