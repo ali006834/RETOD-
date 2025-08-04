@@ -24,37 +24,43 @@ const BannerSingle = (props: BannerSingleProps) => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
-        <div className={styles.bannerWrapper}>
-          {isMobile ? (
-            <Image
-              width={750}
-              height={1100}
-              image={imageMobil}
-              alt={imageMobil?.altText || ""}
-              useBlur={true}
-              className={styles.bannerImage}
-            />
-          ) : (
-            <Image
-              width={2880}
-              height={1350}
-              alt={imageWeb?.altText || ""}
-              image={imageWeb}
-              useBlur={true}
-              className={styles.bannerImage}
-            />
-          )}
-        </div>
+        <Link href={navigationLink?.href || ""}>
+          <a>
+            <div className={styles.bannerWrapper}>
+              {isMobile ? (
+                <Image
+                  width={750}
+                  height={1100}
+                  image={imageMobil}
+                  alt={imageMobil?.altText || ""}
+                  useBlur={true}
+                  className={styles.bannerImage}
+                />
+              ) : (
+                <Image
+                  width={2880}
+                  height={1350}
+                  alt={imageWeb?.altText || ""}
+                  image={imageWeb}
+                  useBlur={true}
+                  className={styles.bannerImage}
+                />
+              )}
+            </div>
 
-        <div className={styles.contentWrapper}>
-          {headerText && <h2 className={styles.bannerHeader}>{headerText}</h2>}
-          {contentText && <p className={styles.bannerContent}>{contentText}</p>}
-          {btnText && (
-            <Link href={navigationLink?.href || ""}>
-              <a className={styles.bannerButton}>{btnText}</a>
-            </Link>
-          )}
-        </div>
+            <div className={styles.contentWrapper}>
+              {headerText && (
+                <h2 className={styles.bannerHeader}>{headerText}</h2>
+              )}
+              {contentText && (
+                <p className={styles.bannerContent}>{contentText}</p>
+              )}
+              {btnText && (
+                <span className={styles.bannerButton}>{btnText}</span>
+              )}
+            </div>
+          </a>
+        </Link>
       </div>
     </div>
   );

@@ -453,15 +453,26 @@ export type BannerSingleVideoProps = {
 };
 
 export type BannerDuoProps = {
+	banner_left?: IkasImage;
+	banner_left_link?: IkasNavigationLink;
 	banner_right?: IkasVideo;
 	banner_right_link?: IkasNavigationLink;
-	banner_bg_color?: string;
-	banner_center_link?: IkasNavigationLink;
-	bannerCenterText?: string;
-	bannerCenterTextColor?: string;
-	bannerCenterContent?: string;
-	bannerCenterContentColor?: string;
-	bannerCenterButtonText?: string;
-	bannerCenterButtonTextColor?: string;
+};
+
+export type RewardsProps = {
+	title?: string;
+	textPicture?: string;
+	imageWeb?: IkasImage;
+	imageMobile?: IkasImage;
+	contents?: DeliveryContent[];
+	contentsTitle?: string;
+	contentsOrientation?: string;
+	awardTitle?: string;
+	awardContent?: string;
+	rewardPackages?: string;
+	productShowcaseTitle?: string;
+	productShowcaseContent?: string;
+	productShowcaseBtnText?: string;
+	productShowcaseBtnLink?: IkasNavigationLink;
 };
 
