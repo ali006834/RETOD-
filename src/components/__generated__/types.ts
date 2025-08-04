@@ -447,3 +447,21 @@ export type CareerProps = {
 	otherInformation?: string;
 };
 
+export type BannerSingleVideoProps = {
+	videoWeb?: IkasVideo;
+	videoMobile?: IkasVideo;
+};
+
+export type BannerDuoProps = {
+	banner_right?: IkasVideo;
+	banner_right_link?: IkasNavigationLink;
+	banner_bg_color?: string;
+	banner_center_link?: IkasNavigationLink;
+	bannerCenterText?: string;
+	bannerCenterTextColor?: string;
+	bannerCenterContent?: string;
+	bannerCenterContentColor?: string;
+	bannerCenterButtonText?: string;
+	bannerCenterButtonTextColor?: string;
+};
+

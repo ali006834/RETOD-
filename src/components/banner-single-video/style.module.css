@@ -1,0 +1,31 @@
+.wrapper {
+  width: 100%;
+  max-width: 1440px;
+  margin: 40px auto 0px;
+}
+
+.container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.bannerWrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.bannerVideo {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .wrapper {
+    margin: 20px 0;
+  }
+}

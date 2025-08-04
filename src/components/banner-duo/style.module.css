@@ -1,0 +1,324 @@
+.wrapper {
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
+  margin-top: 40px !important;
+  font-family: "Akkurat";
+}
+
+/*= Web alanı */
+.desktopContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  cursor: pointer;
+}
+
+/*= Mobil Alan */
+.mobileContainer {
+  display: none;
+}
+
+.mobileItem {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  aspect-ratio: 920/1150;
+}
+
+.bannerWrapper,
+.slide {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  aspect-ratio: 8/10;
+}
+
+.bannerImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bannerVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Slider stilleri */
+.sliderWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  gap: 5px;
+}
+
+.slide {
+  flex: 0 0 calc(100% - 10px);
+  scroll-snap-align: start;
+}
+
+.sliderArrowPrev,
+.sliderArrowNext {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.sliderArrowPrev {
+  left: 10px;
+}
+
+.sliderArrowNext {
+  right: 10px;
+}
+
+/* Hide scrollbar for slider */
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+.slider {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/*+ Yazılar */
+.contentOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 15px;
+}
+
+.bannerText {
+  margin: 0 0 8px 0;
+  font-size: 17px;
+  font-weight: normal;
+  color: #34342f;
+}
+
+.bannerContent {
+  margin: 0 0 20px 0;
+  font-size: 16px;
+  color: #34342f;
+}
+
+.bannerButton {
+  background: rgba(255, 255, 255, 0.2);
+  color: #34342f;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.overlayContainer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 15px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+}
+
+.overlayContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/*+ Orta Yazı Alanı Stilleri */
+.centerTextWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.centerTextLink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  font-weight: 400;
+  font-family: "ChronicleDisplay" !important;
+}
+
+.centerText {
+  /* padding-bottom: 10px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.2;
+  font-family: "ChronicleDisplay" !important; */
+
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  font-family: "ChronicleDisplay";
+}
+
+.centerContent {
+  /* padding-bottom: 20px;
+  font-size: 1.25rem;
+  text-align: center;
+  line-height: 1.4;
+  max-width: 300px;
+  font-family: "ChronicleDisplay" !important; */
+
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 500;
+  color: #000;
+  margin-bottom: 30px;
+  font-family: "Helvetica";
+}
+
+.centerButton {
+  display: flex;
+  font-size: 1rem;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 400;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  border: none;
+  font-family: "Akkurat" !important;
+}
+
+.centerButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Mobil Orta Yazı Alanı */
+.mobileTextWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+/*= Responsive */
+@media (max-width: 1024px) {
+  .desktopContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .contentOverlay {
+    padding: 10px;
+  }
+
+  .bannerText {
+    font-size: 14px;
+  }
+
+  .bannerContent {
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+
+  .bannerButton {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+
+  /* Orta yazı alanları için responsive */
+  .centerTextWrapper,
+  .mobileTextWrapper {
+    padding: 25px 15px;
+  }
+
+  .centerText {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .centerContent {
+    font-size: 14px;
+    margin-bottom: 20px;
+    max-width: 250px;
+  }
+
+  .centerButton {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .desktopContainer {
+    display: none;
+  }
+
+  .mobileContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .wrapper {
+    margin-top: 30px !important;
+    padding: 0;
+  }
+
+  .mobileItem {
+    aspect-ratio: 920/1150;
+    margin-bottom: 0;
+  }
+
+  /* Mobil için orta yazı alanları */
+  .mobileTextWrapper {
+    padding: 20px 15px;
+    margin-bottom: 0;
+  }
+
+  .centerText {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .centerContent {
+    font-size: 13px;
+    margin-bottom: 18px;
+    max-width: 200px;
+  }
+
+  .centerButton {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+}
