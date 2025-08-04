@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { observable } from "mobx";
 import {
   Validator,
   EmailRule,
   useTranslation,
   IkasProduct,
+  useStore,
 } from "@ikas/storefront";
 
 import { FormAlertType } from "src/components/components/alert";
@@ -22,9 +23,18 @@ type Props = {
 
 export default function useModalBackInStock({ product }: Props) {
   const { t } = useTranslation();
+  const store = useStore();
   const [model] = useState(() => observable({ email: "" }));
   const [pending, setPending] = useState(false);
   const [formAlert, setFormAlert] = useState<FormAlertType | null>();
+
+  // Müşteri giriş yapmışsa email'ini otomatik doldur
+  useEffect(() => {
+    const customerEmail = store.customerStore.customer?.email;
+    if (customerEmail && !model.email) {
+      model.email = customerEmail;
+    }
+  }, [store.customerStore.customer?.email, model]);
 
   const SUB_NS = `${NS}:detail.addToCart.backInStockModal`;
   const i18nText = (key: string) => t(`${SUB_NS}.${key}`);
@@ -60,7 +70,7 @@ export default function useModalBackInStock({ product }: Props) {
           : "success";
       const title =
         status === "error"
-          ? i18nText(".alert.errorTitle")
+          ? i18nText("alert.errorTitle")
           : status === "info"
           ? undefined
           : i18nText("alert.successTitle");

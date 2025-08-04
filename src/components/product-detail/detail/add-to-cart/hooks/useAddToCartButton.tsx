@@ -30,22 +30,26 @@ export default function useAddToCartButton({
 
   const hasStock = product.selectedVariant.hasStock;
   const loading = addToCartLoading || backInStockStore.pending;
+
+  // Back in stock özelliği her zaman aktif olsun (stok yoksa)
+  const backInStockEnabled = !hasStock;
+
   const disabled = hasStock
     ? addToCartLoading
-    : !isBackInStockEnabled ||
+    : !backInStockEnabled ||
       isBackInStockReminderSaved ||
       backInStockStore.pending;
 
   const buttonText = hasStock
     ? t(`${NS}:detail.addToCart.text`)
-    : isBackInStockEnabled
+    : backInStockEnabled
     ? isBackInStockReminderSaved
       ? t(`${NS}:detail.addToCart.backInStockReminderSaved`)
       : t(`${NS}:detail.addToCart.remindOnBackInStock`)
     : t(`${NS}:detail.addToCart.soldOut`);
 
   const buttonState: "addToCart" | "backInStock" =
-    isBackInStockEnabled && !hasStock ? "backInStock" : "addToCart";
+    backInStockEnabled && !hasStock ? "backInStock" : "addToCart";
 
   const handleAddToCartClick = async () => {
     if (!product.isAddToCartEnabled) {

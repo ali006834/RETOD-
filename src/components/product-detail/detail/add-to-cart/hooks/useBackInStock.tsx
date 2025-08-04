@@ -11,30 +11,27 @@ export default function useBackInStock({ product }: Props) {
   const backInStockStore = useBackInStockStore();
 
   const {
-    isBackInStockEnabled,
+    isBackInStockEnabled: originalIsBackInStockEnabled,
     isBackInStockReminderSaved,
     isBackInStockCustomerLoginRequired,
   } = product.selectedVariant;
 
+  // Back in stock özelliği her zaman aktif olsun (stok yoksa)
+  const hasStock = product.selectedVariant.hasStock;
+  const isBackInStockEnabled = !hasStock;
+
   const handleBackInStockClick = async () => {
     const isCustomerExist = !!store.customerStore.customer?.id;
 
-    if (!isBackInStockCustomerLoginRequired && !isCustomerExist) {
-      backInStockStore.visibleModal = "backInStock";
-      return;
-    }
-
+    // Müşteri giriş yapmamışsa ve login gerekiyorsa
     if (isBackInStockCustomerLoginRequired && !isCustomerExist) {
       backInStockStore.visibleModal = "loginRequired";
       return;
     }
 
-    if (isCustomerExist) {
-      backInStockStore.pending = true;
-      const email = store.customerStore.customer?.email;
-      if (email) await product.selectedVariant.saveBackInStockReminder(email);
-      backInStockStore.pending = false;
-    }
+    // Diğer tüm durumlarda back in stock modal'ını aç
+    // (müşteri giriş yapmış olsa bile modal'ı göster)
+    backInStockStore.visibleModal = "backInStock";
   };
 
   return {

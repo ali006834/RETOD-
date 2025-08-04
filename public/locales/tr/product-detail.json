@@ -25,7 +25,7 @@
     "addToCart": {
       "text": "Sepete Ekle",
       "soldOut": "TÜKENDİ",
-      "remindOnBackInStock": "Stokta olduğunda beni haberdar et",
+      "remindOnBackInStock": "Gelince Haber Ver",
       "backInStockReminderSaved": "Stokta olduğunda sizi haberdar edeceğiz",
       "loginModal": {
         "title": "Stokta Olduğunda Bildir",
