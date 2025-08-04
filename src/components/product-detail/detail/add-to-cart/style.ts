@@ -46,6 +46,9 @@ export const Quantity = styled.span<{ $isFullWidth: boolean }>`
 export const IncreaseButton = styled(QuantityButton)``;
 
 export const Icon = styled.span`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-left: 8px;
 `;
 
