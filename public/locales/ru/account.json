@@ -1,0 +1,87 @@
+{
+  "menu": {
+    "title": "МОЙ АККАУНТ",
+    "accountInfo": "Информация об аккаунте",
+    "orders": "Мои заказы",
+    "addresses": "Мои адреса",
+    "favoriteProducts": "Избранные товары",
+    "raffles": "Розыгрыши",
+    "orderDetail": "Детали заказа",
+    "logout": "Выйти"
+  },
+  "accountInfo": {
+    "form": {
+      "firstName": "Имя",
+      "lastName": "Фамилия",
+      "phone": "Телефон",
+      "email": "Электронная почта",
+      "save": "СОХРАНИТЬ"
+    },
+    "formMessage": {
+      "requiredRule": "Пожалуйста, заполните это поле",
+      "phoneRule": "{{ phoneNumber }} не является действительным номером телефона"
+    },
+    "formAlert": {
+      "successTitle": "Операция сохранения успешна",
+      "successText": "Ваша информация была успешно обновлена",
+      "unsuccessTitle": "Операция сохранения не удалась",
+      "unsuccessText": "Произошла неожиданная ошибка."
+    }
+  },
+  "address": {
+    "createAddress": "Создать адрес",
+    "editAddress": "Редактировать адрес",
+    "myAddresses": "Мои адреса",
+    "addNewAddress": "Добавить новый адрес",
+    "noAddressPlaceholder": "У вас нет зарегистрированного адреса. Пожалуйста, создайте адрес ниже.",
+    "form": {
+      "title": "Название адреса",
+      "firstName": "Имя",
+      "lastName": "Фамилия",
+      "addressLine1": "Адрес",
+      "addressLine2": "Квартира",
+      "postalCode": "Почтовый индекс",
+      "country": "Страна",
+      "state": "Область",
+      "city": "Город",
+      "district": "Район",
+      "phone": "Телефон",
+      "placeholder": {
+        "title": "дом, работа и т.д...",
+        "firstName": "Имя",
+        "lastName": "Фамилия",
+        "addressLine1": "Адрес",
+        "addressLine2": "Квартира",
+        "postalCode": "Почтовый индекс",
+        "country": "Страна",
+        "state": "Область",
+        "city": "Город",
+        "district": "Район",
+        "phone": "пример: +79551112233"
+      }
+    },
+    "email": "Электронная почта",
+    "save": "Сохранить",
+    "delete": "Удалить",
+    "deleteConfirm": "Вы действительно хотите удалить этот адрес?",
+    "requiredRule": "Обязательно",
+    "phoneRule": "{{ phoneNumber }} не является действительным номером телефона",
+    "invalidRule": "Поле недействительно"
+  },
+  "favoriteProducts": {
+    "title": "Мои избранные",
+    "noFavoriteProduct": "Нет товаров, которые вам нравятся",
+    "browseProduct": "Просмотреть товары"
+  },
+  "orders": {
+    "title": "Мои заказы",
+    "noOrders": "В данный момент нет покупок для отображения.",
+    "message": "Когда вы совершите покупки в нашем интернет-магазине, вы увидите их здесь.",
+    "startShopping": "НАЧАТЬ ПОКУПКИ",
+    "orderedAt": "Заказано {{ orderDate }}",
+    "xNumberedOrder": "Заказ № {{ orderNumber }}",
+    "xProduct": "{{productQuantity}} товар",
+    "showOrderDetail": "Показать детали заказа"
+  },
+  "loading": "Загрузка..."
+}

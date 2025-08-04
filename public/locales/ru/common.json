@@ -1,0 +1,234 @@
+{
+  "discover": "Открыть",
+  "location": "Местоположение",
+
+  "languages": {
+    "language_names": {
+      "Arapça": "عربي",
+      "Rusça": "Русский",
+      "İngilizce": "English",
+      "Türkçe": "Türkçe"
+    }
+  },
+
+  "button": {
+    "text": "Узнать больше"
+  },
+
+  "selectYourLanguage": "Выберите ваш язык",
+  "instagram": {
+    "post": "публикации",
+    "follower": "подписчики",
+    "button": "Подписаться"
+  },
+
+  "discover_now": "Открыть сейчас",
+  "title": "Корзина",
+  "piece": "Штука",
+
+  "loading": "Загрузка",
+
+  "wishList": {
+    "title": "Список желаний",
+    "empty": "Ваш список желаний пуст.",
+    "favoriteProducts": {
+      "noFavoriteProduct": "Нет избранных товаров.",
+      "browseProduct": "Просмотреть товары",
+      "tip": "Добавьте ваши любимые товары, чтобы просмотреть их позже.",
+      "instructions": "Нажмите на значок сердца на странице с деталями товара, чтобы добавить и просмотреть ваши любимые товары здесь."
+    }
+  },
+
+  "emptyCart": {
+    "text": "ВАША КОРЗИНА ПУСТА",
+    "button": "НАЧАТЬ ПОКУПКИ СЕЙЧАС"
+  },
+
+  "coupon": {
+    "apply": "Применить",
+    "empty": "Пусто",
+    "placeholder": "Введите код купона"
+  },
+
+  "summary": {
+    "title": "Итого корзины",
+    "subTotal": "Промежуточный итог: ",
+    "total": "Итого: ",
+    "info": "Доставка, налоги и коды купонов будут рассчитаны на этапе оплаты.",
+    "continueShopping": "Продолжить покупки",
+    "checkout": "Оформить заказ",
+    "cart": "Завершить оплату"
+  },
+
+  "buttonLoading": "Загрузка",
+  "maxQuantityPerCartModal": {
+    "title": "ДОСТИГНУТ МАКСИМАЛЬНЫЙ ЛИМИТ КОЛИЧЕСТВА В КОРЗИНЕ",
+    "text": "{{ productName }} максимальное количество может быть добавлено в корзину."
+  },
+  "product": {
+    "discountText": "скидка",
+    "discountBadgeSoldOut": "Распродано",
+    "discount": "Скидка",
+    "addToCart": "Добавить в корзину"
+  },
+  "bannerVideo": {
+    "men": "Мужчины",
+    "women": "Женщины"
+  },
+  "list": {
+    "home": "Главная страница",
+    "noProduct": "К сожалению, в данной категории товаров сейчас нет.",
+    "loadMoreProducts": "Загрузить больше товаров",
+    "filters": {
+      "sort": {
+        "text": "Фильтр",
+        "confirm": "Подтвердить",
+        "hidden": "Скрыть фильтры",
+        "show": "Показать фильтры",
+        "filter_product": "Сортировать",
+        "all": "Все",
+        "results": "Результаты"
+      }
+    }
+  },
+  "productList": {
+    "totalProductCount": "{{ count }} Товар",
+    "sort": {
+      "label": "Сортировать",
+      "featured": "Рекомендуемые",
+      "increasingPrice": "Возрастание цены",
+      "decreasingPrice": "Убывание цены",
+      "increasingDiscount": "Возрастание скидки",
+      "decrasingDiscount": "Убывание скидки",
+      "firstAdded": "Сначала добавленные",
+      "lastAdded": "Последние добавленные"
+    },
+    "filters": "Фильтры",
+    "header": {
+      "filter": "ФИЛЬТРЫ",
+      "sort": "СОРТИРОВКА"
+    },
+    "categories": "Категории",
+    "clearFilters": "Очистить",
+    "numberRangeFilters": {
+      "from": "От",
+      "to": "До"
+    },
+    "numberRangeListFilters": {
+      "priceAndMore": "{{ price }} и больше"
+    }
+  },
+  "pagination": {
+    "prev": "пред",
+    "previousPage": "Предыдущая страница",
+    "next": "след",
+    "nextPage": "Следующая страница"
+  },
+  "orderDetail": {
+    "loading": "Загрузка...",
+    "orderDetail": "Детали заказа",
+    "xNumberedOrder": "Заказ № {{ orderNumber }}",
+    "orderedAt": "Заказано {{ orderDate }}",
+    "refundRequest": "Создать запрос на возврат",
+    "refundRequestDisabled": "Нет товара для возврата",
+    "refundStatus": {
+      "refundApproved": "Запрос на возврат одобрен",
+      "refunded": "Возвращено",
+      "cancelRefunded": "Возврат отменен",
+      "requestRefunded": "Запрос на возврат отправлен"
+    },
+    "undelivered": "Не доставлено",
+    "delivered": "Доставлено",
+    "refunds": "Возвраты",
+    "cancelled": "Отменено",
+    "deliveryAddress": "Адрес доставки",
+    "billingInfo": "Платежная информация",
+    "summary": "Итого",
+    "orderAmount": "Сумма заказа",
+    "cargo": "Доставка",
+    "estimatedTax": "Расчетный налог",
+    "interest": "Процент",
+    "total": "Итого",
+    "payment": "Оплата",
+    "orderLineItem": {
+      "quantityTitle": "{{ quantity }} товар"
+    },
+    "refund": {
+      "backButton": "Назад к деталям",
+      "refundSuccess": "Ваш запрос на возврат создан",
+      "refundButtonNoItem": "Выберите товар для возврата",
+      "refundButton": "ВОЗВРАТ {{ quantity }} ТОВАР",
+      "selectRefundItem": "Пожалуйста, выберите товары, которые хотите вернуть",
+      "selectRefundQuantity": "Количество товаров, которые вы хотите вернуть"
+    }
+  },
+  "orderPackageStatus": {
+    "status": "Статус",
+    "unfulfilled": "Заказ создан",
+    "readyForShipment": "Заказ готов к отправке",
+    "readyForPickUp": "Заказ готов к самовывозу",
+    "fulfilled": "Заказ отправлен",
+    "partiallyFulfilled": "Заказ частично отправлен",
+    "delivered": "Заказ доставлен",
+    "partiallyDelivered": "Заказ частично доставлен",
+    "unableToDeliver": "Заказ не доставлен",
+    "cancelled": "Заказ отменен",
+    "partiallyCancelled": "Заказ частично отменен",
+    "cancelRejected": "Запрос на отмену заказа отклонен",
+    "cancelRequested": "Запрошена отмена заказа",
+    "refunded": "Возвращено",
+    "partiallyRefunded": "Частично возвращено",
+    "refundRequestAccepted": "Запрос на возврат одобрен",
+    "refundRejected": "Запрос на возврат отклонен",
+    "refundRequested": "Запрошен возврат"
+  },
+  "orderTransactions": {
+    "paymentMethod": {
+      "APP_PAYMENT": "Оплата через приложение",
+      "BUY_ONLINE_PAY_AT_STORE": "Купить онлайн, оплатить в магазине",
+      "CASH": "Наличные",
+      "CASH_ON_DELIVERY": "Наличными при доставке",
+      "CREDIT_CARD": "Кредитная карта",
+      "CREDIT_CARD_ON_DELIVERY": "Кредитная карта при доставке",
+      "GIFT_CARD": "Подарочная карта",
+      "MONEY_ORDER": "Денежный перевод",
+      "OTHER": "Другое",
+      "WALLET": "Кошелек"
+    }
+  },
+  "pageBlogs": {
+    "blogCard": {
+      "detailLinkText": "Читать сейчас ->"
+    }
+  },
+  "contact": {
+    "title": "Свяжитесь с нами",
+    "reach_us": "Способы связи с нами"
+  },
+  "favorite": {
+    "tooltipText": {
+      "add": "Добавить товар в избранное",
+      "remove": "Удалить товар из избранного"
+    },
+    "loginModal": {
+      "title": "Требуется вход",
+      "text": "Вам необходимо войти в свой аккаунт для этой операции.\nПожалуйста, нажмите кнопку ниже для входа. (После входа вы будете перенаправлены на эту страницу)",
+      "loginButtonText": "ВОЙТИ",
+      "noAccountText": "Нет аккаунта?"
+    }
+  },
+  "login": "Войти",
+  "register": "Зарегистрироваться",
+  "language_title": "Какой язык вы хотите использовать?",
+  "products": "Отображаемый товар",
+  "filterResult": "ПОКАЗАНО ВСЕ {{count}} РЕЗУЛЬТАТОВ",
+  "completed": "Завершено",
+  "active": "Активно",
+  "inactive": "Неактивно",
+
+  "lastSeenProduct": {
+    "text": "Последние просмотренные товары"
+  },
+  "buy": "Начать покупки",
+  "zoomMessage": "Двойное нажатие для увеличения"
+}

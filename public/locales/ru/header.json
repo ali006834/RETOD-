@@ -1,0 +1,25 @@
+{
+  "searchInput": {
+    "placeholder": "Поиск в магазине"
+  },
+  "summary": {
+    "title": "Итого корзины",
+    "subTotal": "Промежуточный итог: ",
+    "total": "Итого: ",
+    "info": "Доставка, налоги и коды купонов будут рассчитаны на этапе оплаты.",
+    "continueShopping": "Продолжить покупки",
+    "checkout": "Оформить заказ",
+    "cart": "Завершить оплату"
+  },
+  "headerButton_text": {
+    "close": "Закрыть",
+    "search": "Поиск",
+    "account": "Аккаунт",
+    "login": "Войти",
+    "favorite": "Избранное",
+    "cart": "Корзина"
+  },
+  "new_arrivals": "Новинки",
+  "specailForYou": "Специально для вас",
+  "beginShopping": "НАЧАТЬ ПОКУПКИ"
+}

@@ -275,7 +275,7 @@ export const Bell = observer((props: HeaderProps) => {
             </div>
             <div className={styles.modal_bell_icon}>
               <span>
-                <BellSVG />
+                <BellSVG height="24px" width="24px" color="#000" />
               </span>
             </div>
             <div className={styles.modal_content}>

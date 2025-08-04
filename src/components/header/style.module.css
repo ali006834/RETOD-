@@ -98,12 +98,13 @@
 .modal_bell_icon span {
   display: block;
   background-color: #fafafa;
-  padding: 20px;
+  padding: 20px 23px;
   border-radius: 50%;
 }
 
 .modal_content {
   padding: 10px;
+  font-family: "Helvetica" !important;
 }
 
 .modal_content p {
@@ -122,6 +123,7 @@
   color: #fff;
   background-color: #333;
   border: 1px solid #333;
+  white-space: nowrap;
 }
 
 .modal_content a:hover {

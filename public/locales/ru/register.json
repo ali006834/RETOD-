@@ -1,0 +1,37 @@
+{
+  "title": "Регистрация",
+  "form": {
+    "firstName": "Имя",
+    "lastName": "Фамилия",
+    "email": "Электронная почта",
+    "password": "Пароль",
+    "register": "СОЗДАТЬ АККАУНТ",
+    "registerWith": "Зарегистрироваться через",
+    "phone": "Телефон"
+  },
+  "formMessage": {
+    "requiredRule": "Пожалуйста, заполните это поле",
+    "emailRule": "Пожалуйста, введите действительный email",
+    "minRule": "Должно быть не менее 6 символов",
+    "phoneRule": "{{ phoneNumber }} не является действительным номером телефона"
+  },
+  "formAlert": {
+    "successTitle": "Регистрация успешна",
+    "successText": "Пожалуйста, подождите процесса перенаправления...",
+    "emailExistTitle": "Email уже существует.",
+    "emailExistText": "Email уже существует. Введите другой email",
+    "unsuccessTitle": "Регистрация не удалась.",
+    "unsuccessText": "Проверьте вашу информацию и попробуйте снова",
+    "errorTitle": "Ошибка!",
+    "errorText": "Произошла неожиданная ошибка."
+  },
+
+  "captchaText": "Этот сайт защищен reCAPTCHA, применяются {{ privacyPolicy }} и {{ termsOfService }}.",
+  "privacyPolicy": "Политика конфиденциальности",
+  "termsOfService": "Условия обслуживания",
+
+  "alreadyHaveAccount": "Уже есть аккаунт?",
+  "login": "Войти здесь",
+  "forgotPassword": "Забыли пароль",
+  "continueAsGuest": "Продолжить как гость"
+}
