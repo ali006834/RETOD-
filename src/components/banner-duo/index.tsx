@@ -23,8 +23,7 @@ const BannerDuo = (props: BannerDuoProps) => {
               image={banner_left}
               className={styles.bannerImage}
               alt="Banner Left"
-              width={920}
-              height={1150}
+              layout="fill"
             />
           </a>
         </Link>
