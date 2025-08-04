@@ -1,0 +1,25 @@
+{
+  "communication": "Career",
+  "formText": "The personal data you provide through this form is collected to evaluate your job application and to contact you. For more information regarding the processing of your personal data, please refer to",
+  "fromHere": "here",
+  "toReach": "you can reach.",
+  "select": "Select",
+  "subject": "Department*",
+  "subSubject": "Position*",
+  "firstName": "First Name*",
+  "lastName": "Last Name*",
+  "phone": "Phone*",
+  "email": "Email*",
+  "message": "Message*",
+  "submit": "Submit",
+  "formTitle": "Contact",
+  "uploadCv": "Upload CV",
+  "removeCv": "Remove CV",
+  "cvUploaded": "CV Uploaded",
+  "cvUploadLimit": "You can upload a maximum of 1 CV",
+  "application": "Application Form",
+
+  "contact-form": {
+    "methodNotAllowed": "Method not allowed"
+  }
+}

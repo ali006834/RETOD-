@@ -1,27 +1,26 @@
 import React from "react";
-import { ContactProps } from "../__generated__/types";
+import { CareerProps } from "../__generated__/types";
 import styles from "./style.module.css";
 import NavigationFooterLinks from "./navigation-footer-links";
 import { Image, Link, useTranslation } from "@ikas/storefront";
 import { useScreen } from "src/utils/hooks/useScreen";
 import { toJS } from "mobx";
 import DotIcon from "./svg/dot";
-import ContactForm from "./form";
+import CareerForm from "./form";
 
-const Contact: React.FC<ContactProps> = (props) => {
+const Career: React.FC<CareerProps> = (props) => {
   const {
-    imageWeb,
-    imageMobile,
     title,
     textPicture,
+    imageWeb,
+    imageMobile,
 
     footer_links,
 
     formTitle,
-    contactForm,
+    careerForm,
 
-    contactInformation,
-    mapLink,
+    otherInformation,
   } = props;
 
   const { t } = useTranslation();
@@ -68,15 +67,25 @@ const Contact: React.FC<ContactProps> = (props) => {
               />
             </div>
           </div>
-          {/* İletişim Formu */}
-          <ContactForm
-            contactForm={
-              (Array.isArray(contactForm)
-                ? contactForm.filter((item) => typeof item.name === "string")
-                : []) as { name: string; messageType: any[] }[]
+          {/* Kariyer Formu */}
+          <CareerForm
+            departments={
+              (Array.isArray(careerForm)
+                ? careerForm
+                    ?.filter(
+                      (item) => typeof item?.name === "string" && item.name
+                    )
+                    .map((item) => ({
+                      name: item.name!,
+                      positions: Array.isArray(item.departments)
+                        ? item.departments.map((dept) => ({
+                            name: dept.departmentName,
+                          }))
+                        : [],
+                    }))
+                : []) as { name: string; positions: { name: string }[] }[]
             }
-            contactInformation={contactInformation}
-            mapLink={mapLink}
+            otherInformation={otherInformation}
           />
         </div>
       </div>
@@ -84,4 +93,4 @@ const Contact: React.FC<ContactProps> = (props) => {
   );
 };
 
-export default Contact;
+export default Career;

@@ -101,7 +101,7 @@
 
 /* İçerik Bölümü */
 .about_content {
-  padding: 10px 0;
+  padding: 0 0 10px;
   background: #fff;
 }
 
@@ -111,7 +111,7 @@
 
 .content_container {
   display: flex;
-  max-width: 1400px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -133,6 +133,11 @@
 .main_content {
   flex: 1;
   padding-top: 20px;
+}
+
+.about_text {
+  font-weight: 300;
+  font-family: "Helvetica" !important;
 }
 
 /*= Kampanyalar Stili */

@@ -169,13 +169,13 @@ export type Province = {
 	stores?: District;
 };
 
-export type Department = { 
-	departmentName?: string;
+export type Position = { 
+	positionName?: string;
 };
 
 export type CareerForm = { 
 	name?: string;
-	departments?: Department;
+	departments?: Position;
 };
 
 export type HeaderProps = {
@@ -434,5 +434,16 @@ export type StoresProps = {
 	imageMobile?: IkasImage;
 	footer_links?: IkasNavigationLink[];
 	storeList?: Province[];
+};
+
+export type CareerProps = {
+	title?: string;
+	textPicture?: string;
+	imageWeb?: IkasImage;
+	imageMobile?: IkasImage;
+	footer_links?: IkasNavigationLink[];
+	formTitle?: string;
+	careerForm?: CareerForm[];
+	otherInformation?: string;
 };
 

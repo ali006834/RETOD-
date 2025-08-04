@@ -2,33 +2,23 @@ import React, { useRef } from "react";
 import styles from "./style.module.css";
 import { Link, useTranslation } from "@ikas/storefront";
 
-interface ContactFormProps {
-  contactForm: Array<{
+interface CareerFormProps {
+  departments: Array<{
     name: string;
-    messageType: Array<{
-      messageName: string;
-      subTopic?: Array<{
-        messageName: string;
-        subTopic?: any;
-      }>;
+    positions: Array<{
+      name: string;
     }>;
   }>;
-  contactInformation?: string;
-  mapLink?: string;
+  otherInformation?: string;
 }
 
-const ContactForm: React.FC<ContactFormProps> = ({
-  contactForm,
-  contactInformation,
-  mapLink,
+const CareerForm: React.FC<CareerFormProps> = ({
+  departments,
+  otherInformation,
 }) => {
   const [formData, setFormData] = React.useState({
-    mainTopic: "",
-    subTopic: "",
-    subSubTopic: "",
-    orderNumber: "",
-    invoiceNumber: "",
-    productCode: "",
+    department: "",
+    position: "",
     firstName: "",
     lastName: "",
     phone: "",
@@ -36,29 +26,28 @@ const ContactForm: React.FC<ContactFormProps> = ({
     message: "",
   });
 
-  const [subTopics, setSubTopics] = React.useState<
-    Array<{ messageName: string; subTopic?: any }>
-  >([]);
-  const [subSubTopics, setSubSubTopics] = React.useState<Array<any>>([]);
+  const [positions, setPositions] = React.useState<Array<{ name: string }>>([]);
 
-  // Dosya yükleme için state ve referans
-  const [files, setFiles] = React.useState<File[]>([]);
-  const fileInputRef = useRef<HTMLInputElement>(null);
+  // CV yükleme için state ve referans
+  const [cv, setCv] = React.useState<File | null>(null);
+  const cvInputRef = useRef<HTMLInputElement>(null);
 
   // Loading state
   const [isSubmitting, setIsSubmitting] = React.useState(false);
 
-  // Dosya yükleme işlemi
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files) {
-      const newFiles = Array.from(e.target.files).slice(0, 4 - files.length);
-      setFiles((prev) => [...prev, ...newFiles]);
+  // CV yükleme işlemi
+  const handleCvChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files[0]) {
+      setCv(e.target.files[0]);
     }
   };
 
-  // Dosya silme işlemi
-  const removeFile = (index: number) => {
-    setFiles((prev) => prev.filter((_, i) => i !== index));
+  // CV silme işlemi
+  const removeCv = () => {
+    setCv(null);
+    if (cvInputRef.current) {
+      cvInputRef.current.value = "";
+    }
   };
 
   // Form verilerini güncelleme fonksiyonu
@@ -84,12 +73,12 @@ const ContactForm: React.FC<ContactFormProps> = ({
     Object.entries(formData).forEach(([key, value]) => {
       formDataToSend.append(key, value);
     });
-    files.forEach((file) => {
-      formDataToSend.append("files", file);
-    });
+    if (cv) {
+      formDataToSend.append("cv", cv);
+    }
 
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch("/api/career", {
         method: "POST",
         body: formDataToSend,
       });
@@ -100,19 +89,15 @@ const ContactForm: React.FC<ContactFormProps> = ({
         alert("Mesajınız başarıyla gönderildi!");
         // Formu sıfırla
         setFormData({
-          mainTopic: "",
-          subTopic: "",
-          subSubTopic: "",
-          orderNumber: "",
-          invoiceNumber: "",
-          productCode: "",
+          department: "",
+          position: "",
           firstName: "",
           lastName: "",
           phone: "",
           email: "",
           message: "",
         });
-        setFiles([]);
+        setCv(null);
       } else {
         throw new Error(result.message || "Bir hata oluştu");
       }
@@ -139,145 +124,80 @@ const ContactForm: React.FC<ContactFormProps> = ({
     }
   };
 
-  // Ana konu değiştiğinde alt konuları güncelle
+  // Departman değiştiğinde pozisyonları güncelle
   React.useEffect(() => {
-    if (formData.mainTopic && contactForm) {
-      const selectedTopic = contactForm.find(
-        (topic) => topic.name === formData.mainTopic
+    if (formData.department && departments) {
+      const selectedDepartment = departments.find(
+        (dept) => dept.name === formData.department
       );
-      if (selectedTopic && selectedTopic.messageType) {
-        setSubTopics(selectedTopic.messageType);
+      if (selectedDepartment && selectedDepartment.positions) {
+        setPositions(selectedDepartment.positions);
       } else {
-        setSubTopics([]);
+        setPositions([]);
       }
-      setFormData((prev) => ({ ...prev, subTopic: "", subSubTopic: "" }));
+      setFormData((prev) => ({ ...prev, position: "" }));
     }
-  }, [formData.mainTopic, contactForm]);
-
-  // Alt konu değiştiğinde alt alt konuları güncelle
-  React.useEffect(() => {
-    if (formData.subTopic && subTopics.length > 0) {
-      const selectedSubTopic = subTopics.find(
-        (topic) => topic.messageName === formData.subTopic
-      );
-      if (selectedSubTopic && selectedSubTopic.subTopic) {
-        setSubSubTopics(selectedSubTopic.subTopic);
-      } else {
-        setSubSubTopics([]);
-      }
-      setFormData((prev) => ({ ...prev, subSubTopic: "" }));
-    }
-  }, [formData.subTopic, subTopics]);
+  }, [formData.department, departments]);
 
   const { t } = useTranslation();
-  const NS = "contact";
+  const NS = "career";
 
   return (
     <div className={styles.form_section}>
       <div className={styles.form_container}>
         <h2 className={styles.form_title}>
-          {t(`${NS}:communication`).toLocaleUpperCase("tr-TR")}
+          {t(`${NS}:application`).toLocaleUpperCase("tr-TR")}
         </h2>
         <p className={styles.form_disclaimer}>
           {t(`${NS}:formText`)}{" "}
-          <Link href="/pages/aydinlatma-metni" passHref>
+          <Link href="/pages/gizlilik-politikasi" passHref>
             <a className={styles.privacy_link}>{t(`${NS}:fromHere`)}</a>
           </Link>{" "}
           {t(`${NS}:toReach`)}
         </p>
 
-        <form onSubmit={handleSubmit} className={styles.contact_form}>
-          {/* Topic Selection */}
+        <form onSubmit={handleSubmit} className={styles.career_form}>
+          {/* Department and Position Selection */}
           <div className={styles.form_row}>
             <div className={styles.form_group}>
-              <label htmlFor="mainTopic">{t(`${NS}:subject`)}</label>
+              <label htmlFor="department">
+                {t(`${NS}:subject`).toLocaleUpperCase("tr-TR")}
+              </label>
               <select
-                id="mainTopic"
-                name="mainTopic"
-                value={formData.mainTopic}
+                id="department"
+                name="department"
+                value={formData.department}
                 onChange={handleChange}
                 required
-                disabled={!contactForm || contactForm.length === 0}
+                disabled={!departments || departments.length === 0}
               >
                 <option value="">{t(`${NS}:select`)}</option>
-                {contactForm?.map((topic, index) => (
-                  <option key={index} value={topic.name}>
-                    {topic.name}
+                {departments?.map((dept, index) => (
+                  <option key={index} value={dept.name}>
+                    {dept.name}
                   </option>
                 ))}
               </select>
             </div>
 
             <div className={styles.form_group}>
-              <label htmlFor="subTopic">{t(`${NS}:subSubject`)}</label>
+              <label htmlFor="position">
+                {t(`${NS}:subSubject`).toLocaleUpperCase("tr-TR")}
+              </label>
               <select
-                id="subTopic"
-                name="subTopic"
-                value={formData.subTopic}
+                id="position"
+                name="position"
+                value={formData.position}
                 onChange={handleChange}
-                disabled={subTopics.length === 0}
+                disabled={positions.length === 0}
               >
                 <option value="">{t(`${NS}:select`)}</option>
-                {subTopics.map((topic, index) => (
-                  <option key={index} value={topic.messageName}>
-                    {topic.messageName}
+                {positions.map((position, index) => (
+                  <option key={index} value={position.name}>
+                    {position.name}
                   </option>
                 ))}
               </select>
-            </div>
-
-            <div className={styles.form_group}>
-              <label htmlFor="subSubTopic">{t(`${NS}:subSubSubject`)}</label>
-              <select
-                id="subSubTopic"
-                name="subSubTopic"
-                value={formData.subSubTopic}
-                onChange={handleChange}
-                disabled={subSubTopics.length === 0}
-              >
-                <option value="">{t(`${NS}:select`)}</option>
-                {subSubTopics.map((topic, index) => (
-                  <option key={index} value={topic.messageName}>
-                    {topic.messageName}
-                  </option>
-                ))}
-              </select>
-            </div>
-          </div>
-
-          {/* Order/Invoice/Product Info */}
-          <div className={styles.form_row}>
-            <div className={styles.form_group}>
-              <label htmlFor="orderNumber">{t(`${NS}:orderNumber`)}</label>
-              <input
-                type="text"
-                id="orderNumber"
-                name="orderNumber"
-                value={formData.orderNumber}
-                onChange={handleChange}
-              />
-            </div>
-
-            <div className={styles.form_group}>
-              <label htmlFor="invoiceNumber">{t(`${NS}:invoiceNumber`)}</label>
-              <input
-                type="text"
-                id="invoiceNumber"
-                name="invoiceNumber"
-                value={formData.invoiceNumber}
-                onChange={handleChange}
-              />
-            </div>
-
-            <div className={styles.form_group}>
-              <label htmlFor="productCode">{t(`${NS}:productCode`)}</label>
-              <input
-                type="text"
-                id="productCode"
-                name="productCode"
-                value={formData.productCode}
-                onChange={handleChange}
-              />
             </div>
           </div>
 
@@ -347,42 +267,39 @@ const ContactForm: React.FC<ContactFormProps> = ({
             />
           </div>
 
-          {/* File Upload */}
+          {/* CV Upload */}
           <div className={styles.form_group}>
-            <label>
-              {t(`${NS}:photos`)} - {t(`${NS}:maxPhotoLimit`)}
-            </label>
+            <label>CV</label>
             <div className={styles.file_upload_container}>
               <input
                 type="file"
-                ref={fileInputRef}
-                onChange={handleFileChange}
-                multiple
-                accept="image/*"
+                ref={cvInputRef}
+                onChange={handleCvChange}
+                accept=".pdf,.doc,.docx"
                 style={{ display: "none" }}
               />
               <button
                 type="button"
                 className={styles.upload_button}
-                onClick={() => fileInputRef.current?.click()}
-                disabled={files.length >= 4}
+                onClick={() => cvInputRef.current?.click()}
+                disabled={!!cv}
               >
-                {t(`${NS}:uploadPhotos`)}
+                {cv ? "CV Yüklendi" : "CV Yükle"}
               </button>
-              <div className={styles.file_preview_container}>
-                {files.map((file, index) => (
-                  <div key={index} className={styles.file_preview}>
-                    <span>{file.name}</span>
+              {cv && (
+                <div className={styles.file_preview_container}>
+                  <div className={styles.file_preview}>
+                    <span>{cv.name}</span>
                     <button
                       type="button"
-                      onClick={() => removeFile(index)}
+                      onClick={removeCv}
                       className={styles.remove_file}
                     >
                       ×
                     </button>
                   </div>
-                ))}
-              </div>
+                </div>
+              )}
             </div>
           </div>
 
@@ -397,22 +314,14 @@ const ContactForm: React.FC<ContactFormProps> = ({
       </div>
 
       {/* Contact Information */}
-      {contactInformation && (
+      {otherInformation && (
         <div
           className={styles.contact_info}
-          dangerouslySetInnerHTML={{ __html: contactInformation }}
-        />
-      )}
-
-      {/* Map */}
-      {mapLink && (
-        <div
-          className={styles.map_container}
-          dangerouslySetInnerHTML={{ __html: mapLink }}
+          dangerouslySetInnerHTML={{ __html: otherInformation }}
         />
       )}
     </div>
   );
 };
 
-export default ContactForm;
+export default CareerForm;

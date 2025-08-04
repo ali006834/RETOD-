@@ -37,7 +37,7 @@ interface Province {
   provinceName: string;
   stores: Store[];
 }
-const Contact: React.FC<StoresProps> = (props) => {
+const Stores: React.FC<StoresProps> = (props) => {
   const { imageWeb, imageMobile, title, textPicture, footer_links, storeList } =
     props;
 
@@ -364,4 +364,4 @@ const Contact: React.FC<StoresProps> = (props) => {
   );
 };
 
-export default Contact;
+export default Stores;

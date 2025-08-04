@@ -1,0 +1,25 @@
+{
+  "communication": "Kariyer",
+  "formText": "Bu form aracılığıyla paylaştığınız kişisel verileriniz, iş başvurunuzu değerlendirmek ve sizinle iletişime geçebilmek amacıyla alınmaktadır. Kişisel verilerinizin işlenmesine ilişkin detaylı bilgiye",
+  "fromHere": "buradan",
+  "toReach": "ulaşabilirsiniz.",
+  "select": "Seçiniz",
+  "subject": "Departman*",
+  "subSubject": "Pozisyon*",
+  "firstName": "Ad*",
+  "lastName": "Soyad*",
+  "phone": "Telefon*",
+  "email": "Email*",
+  "message": "Mesaj*",
+  "submit": "Gönder",
+  "formTitle": "İletişim",
+  "uploadCv": "CV Yükle",
+  "removeCv": "CV Sil",
+  "cvUploaded": "CV Yüklendi",
+  "cvUploadLimit": "Maksimum 1 CV yükleyebilirsiniz",
+  "application": "Başvuru Formu",
+
+  "contact-form": {
+    "methodNotAllowed": "Yöntem izin verilmedi"
+  }
+}
