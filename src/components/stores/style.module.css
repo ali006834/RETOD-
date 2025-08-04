@@ -1,0 +1,454 @@
+.wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.heroViewport {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.heroImage {
+  /* position: fixed; */
+  /* top: 0; */
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+
+.heroImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heroContent {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1300px;
+  padding: 2rem;
+  color: white;
+  padding-bottom: 8rem;
+  z-index: 1;
+}
+
+.title {
+  font-weight: 500;
+  font-family: "Helvetica" !important;
+  font-size: 1.5rem;
+}
+
+.textPicture {
+  font-weight: 600;
+  font-family: "Helvetica" !important;
+  font-size: 3.2rem;
+  max-width: 50%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: white;
+  position: relative;
+}
+
+.navDivider {
+  max-width: 1300px;
+  margin: 0 auto;
+  border-bottom: 1px solid #999;
+  width: 100%;
+  padding-top: 20px;
+  margin-bottom: 20px;
+}
+
+.FooterLinks {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer_link {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 15px;
+}
+
+.footer_link a {
+  text-decoration: none;
+  color: #121314;
+  font-weight: 400;
+  font-family: "Helvetica" !important;
+  padding: 10px 20px;
+  display: block;
+  font-size: 13px;
+}
+
+.footer_link a:hover {
+  background-color: #f6f1eb;
+}
+/* İçerik Bölümü */
+.about_content {
+  padding: 40px 0;
+  background: #fff;
+}
+
+.content_container {
+  display: flex;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.sidebar {
+  width: 280px;
+  padding-right: 60px;
+  flex-shrink: 0;
+}
+
+.sidebar_title {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  letter-spacing: 1px;
+}
+
+.main_content {
+  flex: 1;
+}
+
+.about_text {
+  font-size: 1.1rem;
+  text-align: justify;
+  line-height: 1.9;
+  color: #555;
+}
+
+.about_text h2 {
+  font-size: 2rem;
+  margin: 50px 0 25px;
+  color: #222;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+.about_text p {
+  margin-bottom: 25px;
+}
+
+/*? Mağazalar Bölümü  */
+.section_title {
+  font-size: 1.8rem;
+  color: #222;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+.section_subtitle {
+  color: #666;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.select_container {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.select_wrapper {
+  position: relative;
+  flex: 1;
+  min-width: 200px;
+}
+
+.custom_select {
+  width: 100%;
+  padding: 0.8rem 1.2rem;
+  border: 1px solid #e0e0e0;
+  /* border-radius: 4px; */
+  background-color: #fff;
+  font-size: 0.95rem;
+  color: #333;
+  appearance: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.custom_select:focus {
+  outline: none;
+  border-color: #999;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.05);
+}
+
+.select_arrow {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #666;
+  pointer-events: none;
+}
+
+/* Store List */
+.store_list_title {
+  font-size: 1.4rem;
+  color: #222;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.store_count {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: normal;
+}
+
+.store_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.store_card {
+  border: 1px solid #eaeaea;
+  /* border-radius: 6px; */
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.store_card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.store_content {
+  padding: 1.5rem;
+  flex: 1;
+}
+
+.store_name {
+  font-size: 1.2rem;
+  color: #222;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.store_info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.info_item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.info_item a {
+  color: #444;
+  text-decoration: none;
+}
+
+.info_icon {
+  margin-top: 0.1rem;
+}
+
+.store_description {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.store_description p {
+  margin-bottom: 0.5rem;
+}
+
+.directions_button {
+  background-color: #222;
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  text-align: center;
+  width: 100%;
+}
+
+.directions_button:hover {
+  background-color: #333;
+}
+
+/*= Store Card Image */
+/* Add these new styles to your existing CSS */
+
+/* Store Buttons */
+.store_buttons {
+  display: flex;
+  border-top: 1px solid #f0f0f0;
+}
+
+.directions_button {
+  flex: 1;
+  background-color: #222;
+  color: white;
+  border: none;
+  padding: 0.8rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.directions_button:hover {
+  background-color: #333;
+}
+
+.hours_button {
+  flex: 1;
+  background-color: #f5f5f5;
+  color: #222;
+  border: none;
+  padding: 0.8rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.hours_button:hover {
+  background-color: #e0e0e0;
+}
+
+/* Modal Styles */
+.modal_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal_content {
+  background-color: white;
+  padding: 2rem;
+  /* border-radius: 8px; */
+  max-width: 400px;
+  width: 90%;
+  position: relative;
+}
+
+.modal_close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #666;
+}
+
+.modal_content h3 {
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+  color: #222;
+}
+
+.hours_list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.hour_item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.day {
+  font-weight: 500;
+  color: #333;
+}
+
+.time {
+  color: #666;
+}
+
+@media only screen and (max-width: 768px) {
+  .select_container {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .store_grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section_title {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .heroSection {
+    height: 300px;
+  }
+
+  .heroContent {
+    padding: 1rem;
+    padding-bottom: 3rem;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .textPicture {
+    font-size: 1rem;
+    max-width: 80%;
+  }
+
+  .container {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .store_buttons {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,226 @@
+/* Form Alanı */
+.form_section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  /* margin-top: 20px; */
+  font-weight: 400;
+  font-family: "Helvetica" !important;
+}
+
+.form_container {
+  padding: 10px 0;
+}
+
+.form_title {
+  font-size: 1.5rem;
+  color: #111;
+  margin-bottom: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-family: "Helvetica" !important;
+}
+
+.form_disclaimer {
+  font-size: 0.85rem;
+  color: #333;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  max-width: 800px;
+}
+
+.privacy_link {
+  color: #111;
+  text-decoration: underline;
+}
+
+.contact_form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.form_row {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+.form_group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.form_group label {
+  font-size: 0.8rem;
+  color: #111;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+}
+
+.form_group input,
+.form_group select,
+.form_group textarea {
+  padding: 10px 0;
+  border: none;
+  border-bottom: 1px solid #111;
+  font-size: 0.9rem;
+  background: transparent;
+  transition: border-color 0.3s;
+}
+
+.form_group input:focus,
+.form_group select:focus,
+.form_group textarea:focus {
+  outline: none;
+  border-bottom: 1px solid #111;
+}
+
+.form_group select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 1rem;
+}
+
+.form_group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.submit_button {
+  background: #111;
+  color: white;
+  border: 1px solid #111;
+  padding: 12px 40px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  align-self: flex-start;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.submit_button:hover {
+  background: transparent;
+  color: #111;
+}
+
+/* İletişim Bilgileri */
+.contact_info {
+  margin-top: 60px;
+  padding: 30px 0;
+}
+
+/* Harita */
+.map_container {
+  margin-top: 40px;
+  height: 400px;
+}
+
+.map_container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Eğer parent seçilmezse */
+.form_group select:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  border-bottom: 1px solid #ccc;
+}
+
+.form_group select {
+  appearance: none;
+  -webkit-appearance: none; /* Safari için */
+  -moz-appearance: none; /* Firefox için */
+  padding: 12px 36px 12px 12px;
+}
+
+.form_group select:focus {
+  border-color: #111;
+  box-shadow: 0 0 0 2px #1112;
+}
+
+/*! Fotoğraf alanı  */
+/* Fotoğraf Yükleme Alanı Stilleri */
+.file_upload_container {
+  margin-top: 10px;
+}
+
+.upload_button {
+  background: #f5f5f5;
+  color: #111;
+  border: 1px dashed #111;
+  padding: 10px 15px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-bottom: 10px;
+}
+
+.upload_button:hover {
+  background: #111;
+  color: white;
+}
+
+.upload_button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.file_preview_container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.file_preview {
+  background: #f5f5f5;
+  padding: 8px 12px;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+}
+
+.remove_file {
+  background: none;
+  border: none;
+  color: #ff4444;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+  padding: 0;
+}
+
+/*= Responsive */
+@media only screen and (max-width: 768px) {
+  .form_row {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .form_group {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .form_section {
+    padding: 0 15px;
+  }
+
+  .form_title {
+    font-size: 1.3rem;
+  }
+}

@@ -130,6 +130,54 @@ export type Campaigns = {
 	productList?: IkasProductList;
 };
 
+export type MessageSubTopic = { 
+	topicName?: string;
+};
+
+export type MessageTopic = { 
+	messageName?: string;
+	subTopic?: MessageSubTopic;
+};
+
+export type ContactForm = { 
+	name?: string;
+	messageType?: MessageTopic;
+};
+
+export type WorkingHours = { 
+	dayName?: string;
+	checkInTime?: string;
+	checkOutTime?: string;
+};
+
+export type ShoppingCentre = { 
+	name?: string;
+	address?: string;
+	phone?: string;
+	link?: string;
+	workingHours?: WorkingHours;
+	isAvm?: boolean;
+};
+
+export type District = { 
+	districtName?: string;
+	districtStores?: ShoppingCentre;
+};
+
+export type Province = { 
+	provinceName?: string;
+	stores?: District;
+};
+
+export type Department = { 
+	departmentName?: string;
+};
+
+export type CareerForm = { 
+	name?: string;
+	departments?: Department;
+};
+
 export type HeaderProps = {
 	logo?: IkasImage;
 	logo_black?: IkasImage;
@@ -286,11 +334,11 @@ export type AboutProps = {
 	imageWeb?: IkasImage;
 	imageMobile?: IkasImage;
 	footer_links?: IkasNavigationLink[];
+	content?: string;
 	titleRight?: string;
 	contentRight?: string;
 	btnRight?: string;
 	btnRightLink?: IkasNavigationLink;
-	content?: string;
 };
 
 export type CookiePolicyProps = {
@@ -299,11 +347,11 @@ export type CookiePolicyProps = {
 	imageWeb?: IkasImage;
 	imageMobile?: IkasImage;
 	footer_links?: IkasNavigationLink[];
+	content?: string;
 	titleRight?: string;
 	contentRight?: string;
 	btnRight?: string;
 	btnRightLink?: IkasNavigationLink;
-	content?: string;
 };
 
 export type PrivacyPolicyProps = {
@@ -312,11 +360,11 @@ export type PrivacyPolicyProps = {
 	imageWeb?: IkasImage;
 	imageMobile?: IkasImage;
 	footer_links?: IkasNavigationLink[];
+	content?: string;
 	titleRight?: string;
 	contentRight?: string;
 	btnRight?: string;
 	btnRightLink?: IkasNavigationLink;
-	content?: string;
 };
 
 export type DistanceSalesAgreementProps = {
@@ -325,11 +373,11 @@ export type DistanceSalesAgreementProps = {
 	imageWeb?: IkasImage;
 	imageMobile?: IkasImage;
 	footer_links?: IkasNavigationLink[];
+	content?: string;
 	titleRight?: string;
 	contentRight?: string;
 	btnRight?: string;
 	btnRightLink?: IkasNavigationLink;
-	content?: string;
 };
 
 export type FaqProps = {
@@ -365,5 +413,26 @@ export type CampaignsProps = {
 	imageMobile?: IkasImage;
 	footer_links?: IkasNavigationLink[];
 	campaigns?: Campaigns[];
+};
+
+export type ContactProps = {
+	title?: string;
+	textPicture?: string;
+	imageWeb?: IkasImage;
+	imageMobile?: IkasImage;
+	footer_links?: IkasNavigationLink[];
+	formTitle?: string;
+	contactForm?: ContactForm[];
+	contactInformation?: string;
+	mapLink?: string;
+};
+
+export type StoresProps = {
+	title?: string;
+	textPicture?: string;
+	imageWeb?: IkasImage;
+	imageMobile?: IkasImage;
+	footer_links?: IkasNavigationLink[];
+	storeList?: Province[];
 };
 
