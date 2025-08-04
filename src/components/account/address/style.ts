@@ -6,5 +6,6 @@ export const AddressBoxes = styled.ul<{ $visible: boolean }>`
   column-gap: 16px;
   row-gap: 32px;
   padding-bottom: 10px;
-  font-family: "HelveticaNeueLight" !important;
+  font-weight: 400;
+  font-family: "Helvetica" !important;
 `;

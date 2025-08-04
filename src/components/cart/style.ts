@@ -18,7 +18,7 @@ export const Title = styled.h1`
   font-size: 22px;
   line-height: 48px;
   margin-bottom: 24px;
-  font-family: "HelveticaNeueThin !important";
+  font-family: "Helvetica" !important";
   @media screen and (max-width: ${breakpoints.md}) {
     line-height: 0;
     padding-left: 10px;
@@ -52,7 +52,7 @@ export const ItemsHeader = styled.header`
   font-size: 14px;
   line-height: 24px;
   padding: 10px 0;
-  font-family: "HelveticaNeueThin !important";
+  font-family: "Helvetica" !important";
 
   @media screen and (max-width: ${breakpoints.md}) {
     display: none;
@@ -104,11 +104,11 @@ export const SummaryBox = styled.div`
 `;
 
 export const BoxTitle = styled.p`
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 32px;
-  margin-bottom: 24px;
-  font-family: "HelveticaNeueMedium";
+font-size: 20px;
+line-height: 32px;
+margin-bottom: 24px;
+font-weight: 400;
+font-family: "Helvetica";
 `;
 
 export const SummaryBoxInner = styled.div``;
@@ -116,18 +116,18 @@ export const SummaryBoxText = styled.div`
   display: flex;
   justify-content: space-between;
   font-size: 14px;
-  font-weight: 300;
   margin-bottom: 8px;
   color: #000;
-  font-family: "HelveticaNeueMedium";
+font-weight: 400;
+font-family: "Helvetica";
 `;
 export const TotalFinalPrice = styled(SummaryBoxText)`
   border-top: 1px solid #eeeeee;
   padding-top: 8px;
   color: #000;
-  font-weight: 500;
   margin-top: 8px;
-  font-family: "HelveticaNeueMedium";
+font-weight: 400;
+font-family: "Helvetica";
 `;
 
 export const SummaryButtonWrapper = styled.div`
@@ -139,7 +139,8 @@ export const SummaryButtonWrapper = styled.div`
     color: #333;
     font-size: 14px;
     display: block;
-    font-family: "HelveticaNeueMedium";
+   font-weight: 400;
+font-family: "Helvetica";
     text-underline-offset: 6px;
     text-align: center;
     margin-top: 30px;
@@ -149,7 +150,7 @@ export const SummaryButtonWrapper = styled.div`
     text-align: center;
     padding: 10px;
     text-decoration: none;
-    font-family: "HelveticaNeueThin";
+    font-family: "Helvetica";
     color: #fff;
     font-size: 18px;
     display: block;
@@ -161,17 +162,17 @@ export const SummaryButtonWrapper = styled.div`
 `;
 
 export const SummaryFreeShippingText = styled.div`
-  font-weight: 300;
+  font-weight: 500;
   font-size: 14px;
   line-height: 24px;
   margin-top: 18px;
   text-align: center;
-  font-family: "HelveticaNeueMedium";
+  font-family: "Helvetica";
 
   span {
     display: inline-block;
     vertical-align: middle;
-    font-family: "HelveticaNeueMedium";
+    font-family: "Helvetica";
   }
   span:first-child {
     margin-right: 8px;
@@ -188,7 +189,8 @@ export const RemoveCouponButton = styled.button`
   top: 50%;
   transform: translateY(-50%);
   color: red;
-  font-family: "HelveticaNeueMedium";
+  font-family: "Helvetica";
+  font-weight: 400;
   width: ${REMOVE_COUPON_BUTTON_WIDTH}px;
   height: calc(100% - 2px);
   right: 1px;

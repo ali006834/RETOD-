@@ -5,14 +5,16 @@ export const AddressBox = styled.li`
   flex-direction: column;
   border-top: 2px solid #eeeeee;
   padding: 10px 0;
-  font-family: "HelveticaNeueLight" !important;
+  font-weight: 400;
+  font-family: "Helvetica" !important;
 `;
 
 export const Title = styled.p`
   font-weight: 500;
   margin-bottom: 8px;
   flex-grow: 0;
-  font-family: "HelveticaNeueBold" !important;
+  font-weight: 700;
+  font-family: "Helvetica" !important;
 `;
 
 export const Content = styled.div`
@@ -43,7 +45,8 @@ export const Button = styled.button<{ $type: boolean }>`
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   padding: 10px 20px;
   cursor: pointer;
-  font-family: "HelveticaNeueLight" !important;
+  font-weight: 400;
+  font-family: "Helvetica" !important;
   border: none;
   :hover {
     text-decoration: underline;

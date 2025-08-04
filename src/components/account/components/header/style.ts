@@ -11,7 +11,7 @@ export const Header = styled.header`
 export const HeaderTitle = styled.h2`
   font-weight: 600;
   font-size: 25px;
-  font-family: "HelveticaNeueBold" !important;
+  font-family: "Helvetica" !important;
   @media screen and (max-width: ${breakpoints.md}) {
     font-size: 20px;
     line-height: 36px;

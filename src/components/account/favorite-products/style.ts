@@ -17,13 +17,13 @@ export const Products = styled.ul`
 export const NoProducts = styled.div`
   margin-top: 40px;
   text-align: center;
-  font-family: "HelveticaNeueLight" !important;
+  font-family: "Helvetica" !important;
   color: #6b7280;
   a {
     color: #000;
     text-decoration: underline;
     font-weight: 700;
-    font-family: "HelveticaNeueLight" !important;
+    font-family: "Helvetica" !important;
   }
 `;
 

@@ -8,7 +8,7 @@ export const DesktopTitle = styled.h1`
   margin-bottom: 24px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   color: #2d3748;
-  font-family: "HelveticaNeueBold" !important;
+  font-family: "Helvetica" !important;
 `;
 
 export const MobileOverlay = styled.div`
@@ -88,7 +88,7 @@ export const Title = styled.h1`
   line-height: 1.5;
   padding: 0 12px;
   color: #1a202c;
-  font-family: "HelveticaNeueThin" !important;
+  font-family: "Helvetica" !important;
 `;
 
 export const List = styled.ul`
@@ -117,7 +117,7 @@ export const ListItem = styled.li<ListItemProps>`
     padding: 12px 16px;
     color: ${({ $selected }) => ($selected ? "#000" : "#222")};
     font-weight: ${({ $selected }) => ($selected ? 600 : 500)};
-    font-family: "HelveticaNeueLight" !important;
+    font-family: "Helvetica" !important;
     text-decoration: none;
     // border-radius: 8px;
     transition: all 0.2s ease;
@@ -139,7 +139,7 @@ export const ListItem = styled.li<ListItemProps>`
     gap: 8px;
     justify-content: flex-start;
     font-weight: 600;
-    font-family: "HelveticaNeueLight" !important;
+  font-family: "Helvetica" !important;
 
     &:hover {
       background-color: #fff5f5 !important;

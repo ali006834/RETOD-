@@ -12,5 +12,5 @@ export const Text = styled.p`
   display: block;
   font-size: 36px;
   margin-bottom: 20px;
-  font-family: "HelveticaNeueThin !important";
+  font-family: "Helvetica" !important";
 `;

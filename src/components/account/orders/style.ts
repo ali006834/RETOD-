@@ -13,8 +13,8 @@ export const NoOrdersText = styled.p`
   font-size: 20px;
   margin-bottom: 20px;
   letter-spacing: 0.7px;
-  font-family: "HelveticaNeueLight" !important;
-  font-weight: bold;
+  font-weight: 700;
+  font-family: "Helvetica" !important;
   text-align: start;
   width: 100%;
 `;
@@ -23,7 +23,8 @@ export const NoOrdersContent = styled.p`
   font-size: 20px;
   margin-bottom: 20px;
   letter-spacing: 0.7px;
-  font-family: "HelveticaNeueLight" !important;
+  font-weight: 500;
+  font-family: "Helvetica" !important;
   text-align: start;
   width: 100%;
 `;

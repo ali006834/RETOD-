@@ -86,9 +86,31 @@
 }
 
 .filter_group_content.open {
-  max-height: 1000px;
+  max-height: 500px;
   opacity: 1;
   padding-bottom: 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Scrollbar Özelleştirmesi */
+.filter_group_content.open::-webkit-scrollbar {
+  width: 4px;
+}
+
+.filter_group_content.open::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 2px;
+}
+
+.filter_group_content.open::-webkit-scrollbar-thumb {
+  background: #bdbdbd;
+  border-radius: 2px;
+  transition: background 0.2s ease;
+}
+
+.filter_group_content.open::-webkit-scrollbar-thumb:hover {
+  background: #999;
 }
 
 /* Filtre Seçenekleri */
