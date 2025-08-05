@@ -5,10 +5,7 @@ import WhatsAppButton from "./whatsapp-button";
 import styles from "./style.module.css";
 
 const FloatingButtons = (props: FloatingButtonsProps) => {
-  const { phoneNumber, togglePoint } = props;
-
-  console.log("togglePoint::::", togglePoint);
-  console.log("phoneNumber:::", phoneNumber);
+  const { phoneNumber, togglePoint, messageText } = props;
 
   const [whatsappVisible, setWhatsappVisible] = useState(false);
   const [scrollTopVisible, setScrollTopVisible] = useState(false);
@@ -17,6 +14,8 @@ const FloatingButtons = (props: FloatingButtonsProps) => {
   useEffect(() => {
     const toggleVisibility = () => {
       const scrollY = window.pageYOffset;
+
+      console.log("Scroll Y:", scrollY, "Toggle Point:", togglePointNumberInt);
 
       // Her iki buton da aynı scroll değerinde görünsün
       if (scrollY > togglePointNumberInt) {
@@ -28,7 +27,10 @@ const FloatingButtons = (props: FloatingButtonsProps) => {
       }
     };
 
-    window.addEventListener("scroll", toggleVisibility);
+    // İlk yüklemede kontrol et
+    toggleVisibility();
+
+    window.addEventListener("scroll", toggleVisibility, { passive: true });
 
     return () => window.removeEventListener("scroll", toggleVisibility);
   }, [togglePointNumberInt]);
@@ -40,7 +42,10 @@ const FloatingButtons = (props: FloatingButtonsProps) => {
           whatsappVisible ? styles.visible : styles.hidden
         }`}
       >
-        <WhatsAppButton phoneNumber={phoneNumber || ""} />
+        <WhatsAppButton
+          phoneNumber={phoneNumber || ""}
+          messageText={messageText || ""}
+        />
       </div>
       <div
         className={`${styles.buttonWrapper} ${

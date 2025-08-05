@@ -478,6 +478,7 @@ export type RewardsProps = {
 
 export type FloatingButtonsProps = {
 	phoneNumber?: string;
+	messageText?: string;
 	togglePoint?: string;
 };
 

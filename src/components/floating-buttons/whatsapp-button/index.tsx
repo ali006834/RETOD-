@@ -1,15 +1,14 @@
 import React from "react";
+import { FloatingButtonsProps } from "../../__generated__/types";
 import WhatsAppSvg from "../../svg/whatsapp";
 import styles from "./style.module.css";
 
-const WhatsAppButton = ({ phoneNumber }: { phoneNumber: string }) => {
+const WhatsAppButton = (props: FloatingButtonsProps) => {
+  const { phoneNumber, messageText } = props;
   const handleWhatsAppClick = () => {
-    // WhatsApp numarasını ve mesajını buraya ekleyebilirsiniz
-    const message = "Merhaba, size ulaşmak istiyorum.";
-
     if (phoneNumber) {
       const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-        message
+        messageText || ""
       )}`;
       window.open(whatsappUrl, "_blank");
     } else {
