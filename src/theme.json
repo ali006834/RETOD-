@@ -11463,13 +11463,25 @@
                 "label": "Anasayfa",
                 "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
                 "pageType": "INDEX",
+                "itemId": null,
+                "externalLink": null,
+                "fileUrl": null,
+                "pageComponentId": null,
+                "subLinks": []
+              },
+              {
+                "id": "a65eb166-1786-4ff2-8c22-5e12e381d537",
+                "linkType": "PAGE",
+                "label": "Anasayfa",
+                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                "pageType": "INDEX",
                 "pageComponentId": null,
                 "subLinks": []
               }
             ],
             "content": "<h2 class=\"cq ci hq cs cl fr cn co cp\" style=\"-webkit-font-smoothing: antialiased; margin-bottom: 8px; font-weight: 500; direction: ltr; font-family: &quot;Chronicle Display&quot;, &quot;Times New Roman&quot;, serif, sans-serif, &quot;MSung PRC Medium&quot;; line-height: 1.25; color: rgb(17, 17, 17); font-size: 20px;\"><p class=\"MsoNormal\" style=\"color: rgb(0, 0, 0); font-family: Helvetica; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400;\">Biz, Dizaynella ailesi olarak tasarımın gücüne, detayların fark yarattığına ve estetikle fonksiyonelliğin bir araya geldiğinde ortaya çıkan büyülü etkiye inanıyoruz.<o:p></o:p></p><p class=\"MsoNormal\" style=\"color: rgb(0, 0, 0); font-family: Helvetica; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400;\"><o:p>&nbsp;</o:p></p><p class=\"MsoNormal\" style=\"color: rgb(0, 0, 0); font-family: Helvetica; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400;\">Kuruluşumuzdan bu yana amacımız yalnızca ürün üretmek değil; hayata değer katan, duygulara dokunan, sizi yansıtan özel tasarımlar ortaya koymak oldu. Her bir parçamız; özenle seçilen materyaller, güçlü bir yaratıcı vizyon ve işçiliğe duyulan saygıyla hayat buluyor.<o:p></o:p></p><p class=\"MsoNormal\" style=\"color: rgb(0, 0, 0); font-family: Helvetica; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400;\"><o:p>&nbsp;</o:p></p><p class=\"MsoNormal\" style=\"color: rgb(0, 0, 0); font-family: Helvetica; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400;\">Bizim için tasarım; bir stil göstergesi olmanın ötesinde, kendini ifade etmenin en zarif yoludur. Bu yüzden her ürünümüz, yalnızca bir obje değil; karakteri, hikâyesi ve ruhu olan bir deneyim sunar.<o:p></o:p></p><p class=\"MsoNormal\" style=\"color: rgb(0, 0, 0); font-family: Helvetica; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400;\"><o:p>&nbsp;</o:p></p><p class=\"MsoNormal\" style=\"color: rgb(0, 0, 0); font-family: Helvetica; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400;\">Yeniliğe açık, sürdürülebilirliğe önem veren ve müşteri memnuniyetini odağında tutan bir anlayışla üretim yapıyoruz. Üretimden teslimata kadar tüm süreçlerde şeffaflık, titizlik ve güven ilkelerinden asla taviz vermiyoruz.<o:p></o:p></p><p class=\"MsoNormal\" style=\"color: rgb(0, 0, 0); font-family: Helvetica; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400;\"><o:p>&nbsp;</o:p></p><p class=\"MsoNormal\" style=\"color: rgb(0, 0, 0); font-family: Helvetica; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400;\">İster kendiniz için, ister sevdikleriniz için…<o:p></o:p></p><p class=\"MsoNormal\" style=\"color: rgb(0, 0, 0); font-family: Helvetica; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400;\">Dizaynella’da bulacağınız her parça; sizin zarafetinizi, stilinizi ve yaşam tarzınızı tamamlamak için tasarlandı.<o:p></o:p></p><p class=\"MsoNormal\" style=\"color: rgb(0, 0, 0); font-family: Helvetica; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400;\"><o:p>&nbsp;</o:p></p><p class=\"\" data-start=\"263\" data-end=\"473\" style=\"color: rgb(0, 0, 0); font-family: Helvetica; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; -webkit-tap-highlight-color: transparent;\"></p><p class=\"MsoNormal\" style=\"color: rgb(0, 0, 0); font-family: Helvetica; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400;\">Çünkü biz, sıradanı değil; sizi yansıtan özgünlüğü tasarlıyoruz.</p></h2>",
             "titleRight": "Yardıma mı İhtiyacınız Var?",
-            "contentRight": "<p style=\"font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; font-size: 14px; font-family: &quot;Twemoji Country Flags&quot;, Inter, sans-serif;\">Herhangi bir sorunuz varsa lütfen Müşteri Hizmetlerini ziyaret edin.</p><p style=\"font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; font-size: 14px; font-family: &quot;Twemoji Country Flags&quot;, Inter, sans-serif;\">info@dizaynella.com.tr&nbsp;</p><p style=\"font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; font-size: 14px; font-family: &quot;Twemoji Country Flags&quot;, Inter, sans-serif;\">+90 554 895 2220</p>",
+            "contentRight": "<p style=\"font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; font-size: 14px; font-family: &quot;Twemoji Country Flags&quot;, Inter, sans-serif;\">Herhangi bir sorunuz varsa lütfen Müşteri Hizmetlerini ziyaret edin.</p><p style=\"font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; font-size: 14px; font-family: &quot;Twemoji Country Flags&quot;, Inter, sans-serif;\">info@dizaynella.com.tr</p><p style=\"font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; font-size: 14px; font-family: &quot;Twemoji Country Flags&quot;, Inter, sans-serif;\">+90 554 895 2220</p>",
             "btnRight": "Hemen İletişime Geç",
             "btnRightLink": {
               "id": "b67c3f12-b143-41e0-b444-02a3a7b7fec2",
@@ -12709,7 +12721,54 @@
         {
           "id": "f9e09d0d-31d6-4720-a29e-98c9f31115e3",
           "componentId": "3741d21b-ab7d-47b7-be97-32e4f2038ea1",
-          "propValues": {}
+          "propValues": {
+            "imageWeb": {
+              "id": "theme-images/52b4fe06-043c-4eb5-a89d-6e5e4459fe81",
+              "altText": null
+            },
+            "imageMobile": {
+              "id": "theme-images/179ef4e7-65f2-474e-935c-1b3293de7064",
+              "altText": null
+            },
+            "title": "awsw",
+            "textPicture": "dwad",
+            "footer_links": [
+              {
+                "id": "71806d01-3f73-4a66-a92e-0ea9f4d6a07e",
+                "linkType": "PAGE",
+                "label": "Anasayfa",
+                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                "pageType": "INDEX",
+                "itemId": null,
+                "externalLink": null,
+                "fileUrl": null,
+                "pageComponentId": null,
+                "subLinks": []
+              },
+              {
+                "id": "694d33c5-8427-4e5d-a73b-ae7ee729988a",
+                "linkType": "PAGE",
+                "label": "Anasayfa",
+                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                "pageType": "INDEX",
+                "pageComponentId": null,
+                "subLinks": []
+              }
+            ],
+            "content": "dwadwadawd",
+            "titleRight": "dwad",
+            "contentRight": "dwadwadwad",
+            "btnRight": "dwadwadwad",
+            "btnRightLink": {
+              "id": "844a3302-58a7-4760-b701-22b980545c1b",
+              "linkType": "PAGE",
+              "label": "Anasayfa",
+              "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+              "pageType": "INDEX",
+              "pageComponentId": null,
+              "subLinks": []
+            }
+          }
         }
       ],
       "slug": "gizlilik-politikasi",
@@ -13121,6 +13180,30 @@
             "footer_links": [
               {
                 "id": "21904fe3-61c5-467d-8e01-4d00439cb23c",
+                "linkType": "PAGE",
+                "label": "Anasayfa",
+                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                "pageType": "INDEX",
+                "itemId": null,
+                "externalLink": null,
+                "fileUrl": null,
+                "pageComponentId": null,
+                "subLinks": []
+              },
+              {
+                "id": "60e38230-42d8-4236-b8f8-57f8e239e74e",
+                "linkType": "PAGE",
+                "label": "Anasayfa",
+                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+                "pageType": "INDEX",
+                "itemId": null,
+                "externalLink": null,
+                "fileUrl": null,
+                "pageComponentId": null,
+                "subLinks": []
+              },
+              {
+                "id": "ddde21c2-892b-42ac-a47e-8c625bf77e3d",
                 "linkType": "PAGE",
                 "label": "Anasayfa",
                 "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",

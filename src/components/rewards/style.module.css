@@ -406,8 +406,9 @@
 }
 
 .toggleHeading {
-  font-size: 24px;
-  font-weight: 600;
+  font-family: "Helvetica" !important;
+  font-size: 16px;
+  font-weight: 400;
   color: #121314;
   transition: color 0.3s ease, transform 0.3s ease;
   margin-bottom: 10px;

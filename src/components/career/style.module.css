@@ -185,6 +185,42 @@
     padding: 10px;
   }
 
+  .footer_link {
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    padding: 10px 0;
+  }
+
+  .footer_link::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+  }
+
+  .footer_link_swiper {
+    width: 100%;
+  }
+
+  .footer_link_slide {
+    width: auto !important;
+    flex-shrink: 0;
+  }
+
+  .footer_link_slide a {
+    text-decoration: none;
+    color: #121314;
+    font-weight: 400;
+    font-family: "Helvetica" !important;
+    padding: 10px 20px;
+    display: block;
+    font-size: 14px;
+    white-space: nowrap;
+  }
+
+  .footer_link_slide a:hover {
+    background-color: #f6f1eb;
+  }
+
   .heroViewport {
     position: relative;
     width: 100%;
