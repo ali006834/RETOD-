@@ -11,8 +11,15 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 const BannerSingle = (props: FeaturedProductShowcaseProps) => {
-  const { products, headerText, titleText, contentText, btnText, btnLink } =
-    props;
+  const {
+    products,
+    headerText,
+    titleText,
+    contentText,
+    btnText,
+    btnLink,
+    isWidthVideo,
+  } = props;
 
   if (!products) {
     return null;
@@ -67,7 +74,10 @@ const BannerSingle = (props: FeaturedProductShowcaseProps) => {
                   <div className={styles.product_container}>
                     <Link href={products.href}>
                       <a>
-                        <ProductImage product={products} />
+                        <ProductImage
+                          product={products}
+                          isWidthVideo={isWidthVideo}
+                        />
                         <div className={styles.product_Info}>
                           <ProductTitle product={products} />
                         </div>
@@ -100,16 +110,45 @@ const BannerSingle = (props: FeaturedProductShowcaseProps) => {
 //Tip Tanımlaması
 type Props = {
   product: IkasProduct;
+  isWidthVideo?: boolean;
 };
 
-const ProductImage = observer(({ product }: Props) => {
-  if (!product.selectedVariant.mainImage?.image?.id) {
-    return <img src="/product-dummy-image.jpeg" />;
+const ProductImage = observer(({ product, isWidthVideo }: Props) => {
+  const mainImage = product.selectedVariant.mainImage?.image;
+
+  if (isWidthVideo && mainImage?.isVideo) {
+    // isWidthVideo true ve ana görsel video ise video göster
+    return (
+      <video
+        playsInline
+        autoPlay
+        loop
+        muted
+        controls={false}
+        src={mainImage.src}
+        style={{
+          width: "100%",
+          aspectRatio: "6 / 9",
+          objectFit: "cover",
+          maxHeight: "1620px",
+        }}
+      />
+    );
   }
 
-  return product.selectedVariant.mainImage.image.isVideo ? (
-    <video playsInline src={product.selectedVariant.mainImage.image.src} />
-  ) : (
+  // Diğer durumlarda (isWidthVideo false veya ana görsel video değilse) resim göster
+  let image = mainImage;
+  if (mainImage?.isVideo) {
+    // Ana görsel video ise, ilk video olmayanı bul
+    const nonVideoImage = product.selectedVariant.images?.find(
+      (img) => !img.image?.isVideo
+    )?.image;
+    image = nonVideoImage || undefined;
+  }
+  if (!image?.id) {
+    return <img src="/product-dummy-image.jpeg" />;
+  }
+  return (
     <Image
       // layout="responsive"
       width="200px"

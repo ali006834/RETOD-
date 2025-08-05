@@ -32,9 +32,10 @@ import "swiper/css";
 type Props = {
   product: IkasProduct;
   columns?: number;
+  isWidthVideo?: boolean;
 };
 const Product = (props: Props) => {
-  const { product, columns } = props;
+  const { product, columns, isWidthVideo } = props;
   const { t } = useTranslation();
   const { isMobile } = useScreen();
 
@@ -73,7 +74,7 @@ const Product = (props: Props) => {
         <Link href={product.href}>
           <a title={a11yTitle}>
             <S.ImageWrapper $hasStock={product.hasStock}>
-              <ProductImage {...props} />
+              <ProductImage {...props} isWidthVideo={isWidthVideo} />
               <DiscountBadge {...props} />
             </S.ImageWrapper>
           </a>
@@ -379,64 +380,101 @@ const VariantType = observer(({ dVT, product }: VariantTypeProps) => {
 });
 
 //Fotoğraf alanı
-const ProductImage = observer(({ product }: Props) => {
-  if (!product.selectedVariant.mainImage?.image?.id) {
+const ProductImage = observer(({ product, isWidthVideo }: Props) => {
+  const router = useRouter();
+  const { isMobile } = useScreen();
+
+  // Tüm görselleri al
+  const allImages = product.selectedVariant?.images ?? [];
+
+  // isWidthVideo true ise hem video hem fotoğraf, değilse sadece fotoğraflar
+  const displayImages = isWidthVideo
+    ? allImages
+    : allImages.filter((item) => !item.image?.isVideo);
+
+  // Eğer hiç görsel yoksa ana görseli kullan
+  const fallbackImage = product.selectedVariant.mainImage;
+  const imagesToShow =
+    displayImages.length > 0
+      ? displayImages
+      : fallbackImage
+      ? [fallbackImage]
+      : [];
+
+  // Eğer hiç gösterilecek görsel yoksa dummy image
+  if (imagesToShow.length === 0) {
     return <img src="/product-dummy-image.jpeg" />;
   }
 
-  const router = useRouter();
-
-  return product.selectedVariant.mainImage.image.isVideo ? (
-    // Video
-    <video
-      src={product.selectedVariant.mainImage.image.src}
-      style={{
-        width: "100%",
-        aspectRatio: "500 / 500",
-        objectFit: "cover",
-      }}
-      loop
-      autoPlay
-      playsInline
-      muted
-    />
-  ) : (
-    // Fotoğraf
+  return (
     <div className="product-list-slider">
       {router.pathname !== "/account/favorite-products" && product.hasStock ? (
         <Swiper
-          modules={[Scrollbar, Navigation, Pagination]}
+          modules={[Pagination]}
           className="mySwiper"
-          loop={true}
-          navigation={true}
-          scrollbar={true}
+          loop={false}
+          pagination={true}
           slidesPerView={1}
           spaceBetween={0}
         >
-          {product?.selectedVariant?.images?.map((item, index) => {
+          {imagesToShow.map((item, index) => {
+            if (item.image?.isVideo) {
+              return (
+                <SwiperSlide key={`video-${index}`}>
+                  <video
+                    playsInline
+                    autoPlay
+                    loop
+                    muted
+                    controls={false}
+                    src={item.image.src}
+                    style={{
+                      width: "100%",
+                      aspectRatio: "2/3",
+                      objectFit: "cover",
+                      maxHeight: "665px",
+                    }}
+                  />
+                </SwiperSlide>
+              );
+            }
             return (
-              <SwiperSlide key={index}>
+              <SwiperSlide key={`image-${index}`}>
                 <Image
-                  width={460}
-                  height={690}
-                  layout="responsive"
+                  width="540px"
+                  height="810px"
                   objectFit="cover"
                   useBlur={true}
-                  image={item.image as any}
-                  alt={product.selectedVariant.product?.name || "Product image"}
+                  image={item.image!}
+                  alt={product.selectedVariant.product?.name || undefined}
                 />
               </SwiperSlide>
             );
           })}
         </Swiper>
+      ) : imagesToShow[0].image?.isVideo ? (
+        <video
+          playsInline
+          autoPlay
+          loop
+          muted
+          controls={false}
+          src={imagesToShow[0].image.src}
+          style={{
+            width: "100%",
+            aspectRatio: "6 / 9",
+            objectFit: "cover",
+            maxHeight: "1620px",
+          }}
+        />
       ) : (
         <Image
           layout="responsive"
-          width="500px"
-          height="750px"
+          width="1080px"
+          height="1620px"
           objectFit="cover"
           useBlur={true}
-          image={product.selectedVariant.mainImage?.image!}
+          image={imagesToShow[0].image!}
           alt={product.selectedVariant.product?.name || undefined}
         />
       )}

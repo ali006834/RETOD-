@@ -12,11 +12,19 @@ import ImagePopUp from "./imagePopUp";
 import { Image } from "@ikas/storefront";
 
 const Slider = (props: ProductDetailProps) => {
-  const { product } = props;
+  const { product, isWidthVideo } = props;
 
   if (!product?.selectedVariant?.images) {
     return null;
   }
+
+  // Tüm görselleri al
+  const allImages = product.selectedVariant?.images ?? [];
+
+  // isWidthVideo true ise hem video hem fotoğraf, değilse sadece fotoğraflar
+  const displayImages = isWidthVideo
+    ? allImages
+    : allImages.filter((item) => !item.image?.isVideo);
 
   const [showImagePopUp, setShowImagePopUp] = useState(false);
   const [imageId, setImageId] = useState<any>("");
@@ -36,7 +44,7 @@ const Slider = (props: ProductDetailProps) => {
   }, []);
 
   useEffect(() => {
-    const imageElements = product?.selectedVariant.images
+    const imageElements = displayImages
       ?.map((_, index) => document.getElementById(`main-image-${index}`))
       .filter(Boolean);
 
@@ -66,7 +74,7 @@ const Slider = (props: ProductDetailProps) => {
         if (element) observer.unobserve(element);
       });
     };
-  }, [product?.selectedVariant.images, styles.main_images]);
+  }, [displayImages, styles.main_images]);
 
   const scrollToImage = (index: number) => {
     const imageElement = document.getElementById(`main-image-${index}`);
@@ -86,7 +94,7 @@ const Slider = (props: ProductDetailProps) => {
           <div className={styles.gallery_container}>
             {/* Ana fotoğraflar - Alt alta dizili */}
             <div className={styles.main_images}>
-              {product?.selectedVariant.images?.map((image, index) => {
+              {displayImages?.map((image, index) => {
                 return (
                   <div
                     key={index}
@@ -100,10 +108,26 @@ const Slider = (props: ProductDetailProps) => {
                       }}
                       className={styles.image_wrapper}
                     >
-                      <img
-                        src={image.image?.src}
-                        alt={image.image?.altText || ""}
-                      />
+                      {image.image?.isVideo ? (
+                        <video
+                          playsInline
+                          autoPlay
+                          loop
+                          muted
+                          controls={false}
+                          src={image.image.src}
+                          style={{
+                            width: "100%",
+                            height: "100%",
+                            objectFit: "cover",
+                          }}
+                        />
+                      ) : (
+                        <img
+                          src={image.image?.src}
+                          alt={image.image?.altText || ""}
+                        />
+                      )}
                     </div>
                   </div>
                 );
@@ -124,7 +148,7 @@ const Slider = (props: ProductDetailProps) => {
                 allowTouchMove={true}
                 className="thumbs-swiper"
               >
-                {product?.selectedVariant.images?.map((image, index) => {
+                {displayImages?.map((image, index) => {
                   return (
                     <SwiperSlide key={index}>
                       <div
@@ -133,10 +157,26 @@ const Slider = (props: ProductDetailProps) => {
                         }`}
                         onClick={() => scrollToImage(index)}
                       >
-                        <img
-                          src={image.image?.src}
-                          alt={image.image?.altText || ""}
-                        />
+                        {image.image?.isVideo ? (
+                          <video
+                            playsInline
+                            autoPlay
+                            loop
+                            muted
+                            controls={false}
+                            src={image.image.src}
+                            style={{
+                              width: "100%",
+                              height: "100%",
+                              objectFit: "cover",
+                            }}
+                          />
+                        ) : (
+                          <img
+                            src={image.image?.src}
+                            alt={image.image?.altText || ""}
+                          />
+                        )}
                       </div>
                     </SwiperSlide>
                   );
@@ -170,7 +210,7 @@ const Slider = (props: ProductDetailProps) => {
               },
             }}
           >
-            {product?.selectedVariant.images?.map((image, index) => {
+            {displayImages?.map((image, index) => {
               return (
                 <SwiperSlide key={index}>
                   <div
@@ -180,10 +220,26 @@ const Slider = (props: ProductDetailProps) => {
                     }}
                     className={styles.image_wrapper}
                   >
-                    <img
-                      src={image.image?.src}
-                      alt={image.image?.altText || ""}
-                    />
+                    {image.image?.isVideo ? (
+                      <video
+                        playsInline
+                        autoPlay
+                        loop
+                        muted
+                        controls={false}
+                        src={image.image.src}
+                        style={{
+                          width: "100%",
+                          height: "100%",
+                          objectFit: "cover",
+                        }}
+                      />
+                    ) : (
+                      <img
+                        src={image.image?.src}
+                        alt={image.image?.altText || ""}
+                      />
+                    )}
                   </div>
                 </SwiperSlide>
               );

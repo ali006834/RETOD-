@@ -13,7 +13,7 @@ import "swiper/css/navigation";
 export const NS = "product-detail";
 
 const AlternativeProducts = (props: AlternativeProductsProps) => {
-  const { alternativeProducts } = props;
+  const { alternativeProducts, isWidthVideo } = props;
   const { t } = useTranslation();
 
   if (!alternativeProducts) {
@@ -55,7 +55,10 @@ const AlternativeProducts = (props: AlternativeProductsProps) => {
             {alternativeProducts?.data.map((product, index) => {
               return (
                 <SwiperSlide key={index}>
-                  <AlternativeProduct product={product} />
+                  <AlternativeProduct
+                    product={product}
+                    isWidthVideo={isWidthVideo}
+                  />
                 </SwiperSlide>
               );
             })}
@@ -68,9 +71,10 @@ const AlternativeProducts = (props: AlternativeProductsProps) => {
 
 type Props = {
   product: IkasProduct;
+  isWidthVideo?: boolean;
 };
 
-const AlternativeProduct = observer(({ product }: Props) => {
+const AlternativeProduct = observer(({ product, isWidthVideo }: Props) => {
   const { t } = useTranslation();
 
   const a11yTitle = product.selectedVariant.hasStock
@@ -81,7 +85,7 @@ const AlternativeProduct = observer(({ product }: Props) => {
     <div className={styles.product_container}>
       <Link href={product.href}>
         <a title={a11yTitle}>
-          <ProductImage product={product} />
+          <ProductImage product={product} isWidthVideo={isWidthVideo} />
           <div className={styles.product_Info}>
             <ProductTitle product={product} />
             <Price product={product} />
@@ -92,27 +96,45 @@ const AlternativeProduct = observer(({ product }: Props) => {
   );
 });
 
-const ProductImage = observer(({ product }: Props) => {
-  if (!product.selectedVariant.mainImage?.image?.id) {
+const ProductImage = observer(({ product, isWidthVideo }: Props) => {
+  const mainImage = product.selectedVariant.mainImage?.image;
+
+  if (isWidthVideo && mainImage?.isVideo) {
+    // isWidthVideo true ve ana görsel video ise video göster
     return (
-      <img
-        src="/default-product-image.png"
+      <video
+        playsInline
+        autoPlay
+        loop
+        muted
+        controls={false}
+        src={mainImage.src}
         style={{
           width: "100%",
-          height: "auto", // Oranı koru
-          aspectRatio: "460/690", // Diğer görsellerle aynı oran
+          aspectRatio: "6 / 9",
           objectFit: "cover",
+          maxHeight: "1620px",
         }}
       />
     );
   }
 
-  return product.selectedVariant.mainImage.image.isVideo ? (
-    <video src={product.selectedVariant.mainImage.image.src} />
-  ) : (
+  // Diğer durumlarda (isWidthVideo false veya ana görsel video değilse) resim göster
+  let image = mainImage;
+  if (mainImage?.isVideo) {
+    // Ana görsel video ise, ilk video olmayanı bul
+    const nonVideoImage = product.selectedVariant.images?.find(
+      (img) => !img.image?.isVideo
+    )?.image;
+    image = nonVideoImage || undefined;
+  }
+  if (!image?.id) {
+    return <img src="/product-dummy-image.jpeg" />;
+  }
+  return (
     <Image
-      width={460}
-      height={690}
+      width={1080}
+      height={1620}
       objectFit="cover"
       useBlur={true}
       image={product.selectedVariant.mainImage?.image!}

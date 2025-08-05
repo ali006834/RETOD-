@@ -18,7 +18,7 @@ import ViewSelector from "./view-selector";
 import SpecialDiscountBanner from "./special-discount-banner";
 
 const ProductList = (props: ProductListProps) => {
-  const { productList, categories, categorNames } = props;
+  const { productList, categories, categorNames, isWidthVideo } = props;
 
   if (!productList) {
     return null;
@@ -200,7 +200,12 @@ const ProductList = (props: ProductListProps) => {
             <div className={styles.product_list_products} style={gridStyle}>
               {productList?.data.map((product, index) => {
                 return (
-                  <Product key={index} product={product} columns={columns} />
+                  <Product
+                    key={index}
+                    product={product}
+                    columns={columns}
+                    isWidthVideo={isWidthVideo}
+                  />
                 );
               })}
             </div>

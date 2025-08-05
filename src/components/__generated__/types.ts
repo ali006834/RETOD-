@@ -238,6 +238,7 @@ export type FeaturedProductShowcaseProps = {
 	contentText?: string;
 	btnText?: string;
 	btnLink?: IkasNavigationLink;
+	isWidthVideo?: boolean;
 };
 
 export type BannerSlidingSliderProps = {
@@ -259,6 +260,7 @@ export type ProductListProps = {
 	categories?: IkasCategoryList;
 	productList?: IkasProductList;
 	categorNames?: DiscountBannerCategoryNames[];
+	isWidthVideo?: boolean;
 };
 
 export type ProductDetailProps = {
@@ -266,6 +268,7 @@ export type ProductDetailProps = {
 	deliveryDescription?: string;
 	deliveryDescriptionLink?: IkasNavigationLink;
 	bankTable?: MainTable[];
+	isWidthVideo?: boolean;
 };
 
 export type BottomScrollingTextProps = {
@@ -291,10 +294,12 @@ export type BlogDetailProps = {
 
 export type AlternativeProductsProps = {
 	alternativeProducts?: IkasProductList;
+	isWidthVideo?: boolean;
 };
 
 export type LastSeenProductsProps = {
 	lastSeenProducts?: IkasProductList;
+	isWidthVideo?: boolean;
 };
 
 export type CartProps = {

@@ -15,6 +15,7 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Zoom, Navigation, Pagination, Mousewheel } from "swiper/modules";
+import { Image } from "@ikas/storefront";
 
 type ActiveImageIdType = string | null;
 
@@ -137,8 +138,8 @@ const ImagePopUp = ({
                     {item.isVideo == true ? (
                       <div
                         style={{
-                          aspectRatio: "2 / 3",
-                          width: "400",
+                          aspectRatio: "1080 / 1920",
+                          height: "90%",
                           overflow: "hidden",
                         }}
                       >
@@ -148,21 +149,36 @@ const ImagePopUp = ({
                           loop
                           playsInline
                           style={{
-                            width: "440px",
-                            height: "580px",
-                            paddingTop: "30px",
+                            width: "100%",
+                            height: "100%",
+                            objectFit: "cover",
                           }}
                         >
                           <source src={item.image?.src} type="video/mp4" />
                         </video>
                       </div>
                     ) : (
-                      <img
-                        src={item.image?.src}
-                        alt="product"
-                        className={styles.image}
-                        style={{ userSelect: "none" }}
-                      />
+                      <div
+                        style={{
+                          aspectRatio: "1080 / 1620",
+                          height: "90%",
+                          objectFit: "contain",
+                          overflow: "hidden",
+                        }}
+                      >
+                        <Image
+                          width={1080}
+                          height={1620}
+                          layout="responsive"
+                          objectFit="cover"
+                          useBlur={true}
+                          image={item.image as any}
+                          alt={
+                            props?.product?.selectedVariant?.product?.name ||
+                            "Product image"
+                          }
+                        />
+                      </div>
                     )}
                   </div>
                 </div>

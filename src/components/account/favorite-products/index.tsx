@@ -62,7 +62,7 @@ const Products = observer(
           return (
             <S.ProductWrapper key={product.id + index}>
               {/* //ürünler  */}
-              <Product product={product} />
+              <Product product={product} isWidthVideo={false} />
             </S.ProductWrapper>
           );
         })}
