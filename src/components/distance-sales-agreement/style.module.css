@@ -114,8 +114,7 @@
   grid-column: 2;
   padding: 1.5rem;
   background: #f6f1eb;
-  height: auto;
-  min-height: fit-content;
+  height: fit-content;
   display: flex;
   flex-direction: column;
 }
