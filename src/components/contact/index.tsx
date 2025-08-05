@@ -72,7 +72,7 @@ const Contact: React.FC<ContactProps> = (props) => {
           <ContactForm
             contactForm={
               (Array.isArray(contactForm)
-                ? contactForm.filter((item) => typeof item.name === "string")
+                ? contactForm?.filter((item) => typeof item?.name === "string")
                 : []) as { name: string; messageType: any[] }[]
             }
             contactInformation={contactInformation}

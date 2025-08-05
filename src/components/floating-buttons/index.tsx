@@ -15,8 +15,6 @@ const FloatingButtons = (props: FloatingButtonsProps) => {
     const toggleVisibility = () => {
       const scrollY = window.pageYOffset;
 
-      console.log("Scroll Y:", scrollY, "Toggle Point:", togglePointNumberInt);
-
       // Her iki buton da aynı scroll değerinde görünsün
       if (scrollY > togglePointNumberInt) {
         setWhatsappVisible(true);

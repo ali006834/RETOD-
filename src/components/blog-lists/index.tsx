@@ -19,22 +19,18 @@ const BlogList: React.FC<BlogListsProps> = (props: BlogListsProps) => {
   // Blog'a ait kategori adını al..
   const categoryArr = toJS(props.blogs?.data[0]?.category);
 
+  console.log("dwadwad:::", props.blogs?.data);
+
   // Blogların görsellerini ve başlıklarını render eden fonksiyon
   const renderBlogItem = (item: any) => (
     <div className={styles.blogItem} key={item.id}>
-      <Link href={item.href} passHref>
-        <a>
-          {item?.image && (
-            <img className={styles.blogImg} src={item?.image.src} />
-          )}
-          <div className={styles.contentArea}>
-            <span className={styles.blogCategory}>{categoryArr?.name}</span>
-            <div className={styles.textContent}>
-              <span className={styles.title}>{item.title}</span>
-            </div>
-          </div>
-        </a>
-      </Link>
+      {item?.image && <img className={styles.blogImg} src={item?.image.src} />}
+      <div className={styles.contentArea}>
+        <span className={styles.blogCategory}>{categoryArr?.name}</span>
+        <div className={styles.textContent}>
+          <span className={styles.title}>{item.title}</span>
+        </div>
+      </div>
     </div>
   );
 
@@ -44,11 +40,24 @@ const BlogList: React.FC<BlogListsProps> = (props: BlogListsProps) => {
       {props?.blogs?.count && props?.blogs?.count <= 6 ? (
         // 6 veya daha az blog varsa grid kullan
         <div className={styles.grid}>
-          {props?.blogs?.data.map((item) => (
-            <Link href={item.href} key={item.id}>
-              {renderBlogItem(item)}
-            </Link>
-          ))}
+          {props?.blogs?.data.map((item) => {
+            console.log("🚀 Blog render edildi - Grid:", item.href); // Debug: Blog render ediliyor mu?
+            return (
+              <div
+                key={item.id}
+                onClick={() => {
+                  console.log("🚀 Blog tıklandı - Grid:", {
+                    title: item.title,
+                    href: item.href,
+                    id: item.id,
+                  });
+                }}
+                style={{ cursor: "pointer" }}
+              >
+                <Link href={item.href}>{renderBlogItem(item)}</Link>
+              </div>
+            );
+          })}
         </div>
       ) : (
         // 6'dan fazla blog varsa swiper kullan
@@ -84,11 +93,25 @@ const BlogList: React.FC<BlogListsProps> = (props: BlogListsProps) => {
               },
             }}
           >
-            {props?.blogs?.data.map((item) => (
-              <SwiperSlide key={item.id}>
-                <Link href={item.href}>{renderBlogItem(item)}</Link>
-              </SwiperSlide>
-            ))}
+            {props?.blogs?.data.map((item) => {
+              console.log("🚀 Blog render edildi - Swiper:", item.href); // Debug: Blog render ediliyor mu?
+              return (
+                <SwiperSlide key={item.id}>
+                  <div
+                    onClick={() => {
+                      console.log("🚀 Blog tıklandı - Swiper:", {
+                        title: item.title,
+                        href: item.href,
+                        id: item.id,
+                      });
+                    }}
+                    style={{ cursor: "pointer" }}
+                  >
+                    <Link href={item.href}>{renderBlogItem(item)}</Link>
+                  </div>
+                </SwiperSlide>
+              );
+            })}
           </Swiper>
           {/* <div className={styles.swiperButtonPrev}>
             <PrevIcon />
