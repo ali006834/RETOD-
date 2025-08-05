@@ -31,6 +31,7 @@ const DesktopHeader = (props: HeaderProps) => {
           <div className={styles.innerContainer}>
             {/* Dil Seçimi */}
             <LanguageSelect />
+            Dil
             {/* Logo */}
             <LeftSide {...props} />
             {/* İkonlar */}
