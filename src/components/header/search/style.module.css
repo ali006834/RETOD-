@@ -322,7 +322,7 @@
 @media only screen and (max-width: 700px) {
   .inlineSearchContainer {
     position: fixed;
-    top: 0px;
+    top: 12px;
     z-index: 10000;
     background: #fff;
     padding: 12px;

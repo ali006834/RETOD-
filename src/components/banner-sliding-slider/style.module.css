@@ -86,7 +86,6 @@
   height: auto;
   max-height: 60vh;
   object-fit: cover;
-  border-radius: 0.5rem;
 }
 
 .slick-dots {

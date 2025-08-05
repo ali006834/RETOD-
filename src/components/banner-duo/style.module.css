@@ -37,12 +37,36 @@
   display: block;
 }
 
+/* Swiper Styles for Mobile */
+.swiperContainer {
+  width: 100%;
+  height: auto;
+}
+
+.slideSection {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  height: 300px; /* Mobil için sabit yükseklik */
+}
+
+.slideSection .bannerImage,
+.slideSection .bannerVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 /*= Responsive */
-@media (max-width: 480px) {
+@media (max-width: 720px) {
   .wrapper {
-    flex-direction: column;
     margin-top: 30px !important;
-    padding: 0;
+    padding: 0 15px;
+  }
+
+  .slideSection {
+    height: 250px; /* Mobil için daha küçük yükseklik */
   }
 
   .leftSection,
