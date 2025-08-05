@@ -22,21 +22,19 @@ const BlogList: React.FC<BlogListsProps> = (props: BlogListsProps) => {
   // Blogların görsellerini ve başlıklarını render eden fonksiyon
   const renderBlogItem = (item: any) => (
     <div className={styles.blogItem} key={item.id}>
-      {item?.image && <img className={styles.blogImg} src={item?.image.src} />}
-      <div className={styles.contentArea}>
-        <span className={styles.blogCategory}>{categoryArr?.name}</span>
-        <div className={styles.textContent}>
-          <Link href={item.href}>
-            <span className={styles.title}>{item.title}</span>
-          </Link>
-          {/* <p className={styles.shortDescription}>{item.shortDescription}</p> */}
-        </div>
-        {/* <div className={styles.readMoreBtn}>
-          <Link href={item.href}>
-            <button>{t(`blog-lists:blog.readMore`)}</button>
-          </Link>
-        </div> */}
-      </div>
+      <Link href={item.href} passHref>
+        <a>
+          {item?.image && (
+            <img className={styles.blogImg} src={item?.image.src} />
+          )}
+          <div className={styles.contentArea}>
+            <span className={styles.blogCategory}>{categoryArr?.name}</span>
+            <div className={styles.textContent}>
+              <span className={styles.title}>{item.title}</span>
+            </div>
+          </div>
+        </a>
+      </Link>
     </div>
   );
 

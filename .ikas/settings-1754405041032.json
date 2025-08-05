@@ -1,0 +1,123 @@
+{
+  "storefront": {
+    "_id": "d04db4ef-4eed-42d3-80a8-2d4893ae7958",
+    "merchantId": "4ab3cdb9-fe6b-4c1a-8a05-65769a2aec14",
+    "deleted": false,
+    "name": "dev-dizaynella",
+    "type": "STOREFRONT",
+    "domains": [
+      {
+        "_id": "b97f77a3-5dec-47fc-b985-752bcb3ea254",
+        "createdAt": "2025-07-30T06:43:06.609Z",
+        "updatedAt": "2025-07-30T06:43:06.609Z",
+        "deleted": false,
+        "merchantDomainId": "",
+        "name": "dev-dizaynella.ikas.shop",
+        "isDefault": true,
+        "id": "b97f77a3-5dec-47fc-b985-752bcb3ea254"
+      }
+    ],
+    "status": "READY",
+    "salesChannelId": "07ab7773-6d54-4193-946d-7961bfdf0f7c",
+    "mainStorefrontThemeId": "ada5b895-8f45-49e3-b4d7-354f886ae123",
+    "localizations": [
+      {
+        "_id": "b3540552-881c-43d3-8796-2ba38d6c0802",
+        "createdAt": "2025-07-30T06:43:06.609Z",
+        "updatedAt": "2025-07-30T06:43:06.609Z",
+        "deleted": false,
+        "name": "Türkçe",
+        "isDefault": true,
+        "locale": "tr",
+        "id": "b3540552-881c-43d3-8796-2ba38d6c0802"
+      }
+    ],
+    "routings": [
+      {
+        "_id": "43e03d10-eb59-4347-896a-176be577b61c",
+        "createdAt": "2025-07-30T06:43:06.609Z",
+        "updatedAt": "2025-07-30T06:43:06.609Z",
+        "deleted": false,
+        "countryCodes": null,
+        "priceListId": null,
+        "locale": "tr",
+        "path": null,
+        "domain": null,
+        "id": "43e03d10-eb59-4347-896a-176be577b61c"
+      }
+    ],
+    "themes": [
+      {
+        "_id": "ada5b895-8f45-49e3-b4d7-354f886ae123",
+        "createdAt": "2025-07-30T06:43:06.609Z",
+        "updatedAt": "2025-07-30T06:43:06.609Z",
+        "deleted": false,
+        "name": "Kombos",
+        "status": "NOT_DEPLOYED",
+        "isMainTheme": true,
+        "domainKey": "7a3k2",
+        "themeId": "64e2bf75-b244-4d35-a172-eee34b5ef099",
+        "themeVersionId": "cd5cad5f-7487-4b0e-a6a4-996dbd6b9506",
+        "id": "ada5b895-8f45-49e3-b4d7-354f886ae123"
+      },
+      {
+        "_id": "5b332201-0e54-4557-afba-1bdc0a7285dc",
+        "createdAt": "2025-07-30T06:43:06.609Z",
+        "updatedAt": "2025-07-30T06:43:06.609Z",
+        "deleted": false,
+        "name": "dizaynella",
+        "status": "READY",
+        "isMainTheme": false,
+        "type": 2,
+        "domainKey": "9si9w",
+        "id": "5b332201-0e54-4557-afba-1bdc0a7285dc"
+      }
+    ],
+    "indexPageSeoSettings": [],
+    "socialLoginSettings": [],
+    "metaTemplates": [],
+    "createdAt": "2025-07-29T15:09:56.394Z",
+    "updatedAt": "2025-07-30T06:43:06.609Z",
+    "__v": 1,
+    "id": "d04db4ef-4eed-42d3-80a8-2d4893ae7958"
+  },
+  "salesChannel": {
+    "id": "07ab7773-6d54-4193-946d-7961bfdf0f7c",
+    "merchantId": "4ab3cdb9-fe6b-4c1a-8a05-65769a2aec14",
+    "deleted": false,
+    "name": "dev-dizaynella",
+    "type": "STOREFRONT",
+    "stockLocations": [
+      {
+        "id": "5728e9bf-a9c2-41ac-923a-f7ff78698d48",
+        "order": 1
+      }
+    ],
+    "paymentGateways": [
+      {
+        "id": "c84904c1-0dc7-472f-86ff-8d593ed2df16",
+        "order": 0
+      }
+    ]
+  },
+  "localizationMap": {
+    "43e03d10-eb59-4347-896a-176be577b61c": "/localizations/ada5b895-8f45-49e3-b4d7-354f886ae123_tr.json"
+  },
+  "customerSettings": null,
+  "domain": "undefined.myikas.com",
+  "customerReviewSettings": null,
+  "productBackInStockSettings": null,
+  "storefrontJSScripts": [],
+  "merchantSettings": {
+    "merchantName": "dev-dizaynella",
+    "currencyCode": "TRY",
+    "defaultLocale": "tr",
+    "region": "TR",
+    "storeName": "dev-dizaynella",
+    "merchantId": "4ab3cdb9-fe6b-4c1a-8a05-65769a2aec14"
+  },
+  "custom": {
+    "hasStoreStockStatusSupport": false
+  },
+  "storefrontPopups": []
+}
