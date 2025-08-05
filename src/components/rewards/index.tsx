@@ -1,25 +1,30 @@
 import React, { useState } from "react";
-import { FaqProps } from "../__generated__/types";
+import { RewardsProps } from "../__generated__/types";
 import styles from "./style.module.css";
 import NavigationFooterLinks from "./navigation-footer-links";
 import { Image, Link } from "@ikas/storefront";
 import { toJS } from "mobx";
 import { useScreen } from "src/utils/hooks/useScreen";
 
-const faq: React.FC<FaqProps> = (props) => {
+const rewards: React.FC<RewardsProps> = (props) => {
   const {
     title,
     textPicture,
     imageWeb,
     imageMobile,
+
+    awardTitle,
+    awardContent,
+    rewardPackages,
+
+    productShowcaseTitle,
+    productShowcaseContent,
+    showcaseProducts,
+    productShowcaseBtnLink,
+
     contents,
-
-    footer_links,
-
-    titleRight,
-    contentRight,
-    btnRight,
-    btnRightLink,
+    contentsTitle,
+    contentsOrientation,
   } = props;
 
   const { isMobile } = useScreen();
@@ -71,10 +76,118 @@ const faq: React.FC<FaqProps> = (props) => {
           {textPicture && <p className={styles.textPicture}>{textPicture}</p>}
         </div>
       </div>
+      {/* Award Section */}
+      <div className={styles.awardSection}>
+        <div className={styles.awardContainer}>
+          {awardTitle && <h2 className={styles.awardTitle}>{awardTitle}</h2>}
+          {awardContent && (
+            <p
+              className={styles.awardContent}
+              dangerouslySetInnerHTML={{ __html: awardContent }}
+            />
+          )}
+
+          {rewardPackages && Array.isArray(rewardPackages) && (
+            <div className={styles.rewardPackages}>
+              {rewardPackages.map((packageItem: any, index: number) => (
+                <div key={index} className={styles.packageCard}>
+                  {packageItem.title && <h3>{packageItem.title}</h3>}
+                  {packageItem.description && <p>{packageItem.description}</p>}
+                  {packageItem.price && (
+                    <span className={styles.price}>{packageItem.price}</span>
+                  )}
+                </div>
+              ))}
+            </div>
+          )}
+
+          <div className={styles.memberSection}>
+            <h2 className={styles.memberTitle}>Not a member yet?</h2>
+            <p className={styles.memberDescription}>
+              Create an account to join NET-A-PORTER Rewards or sign in to track
+              your progress in your account{" "}
+            </p>
+            <div className={styles.memberButtons}>
+              <button className={styles.memberButton}>Create Account</button>
+              <button className={styles.memberButton}>Sign In</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Divider */}
+      <div className={styles.navDivider}></div>
+
+      {/* Product Showcase Section */}
+      <div className={styles.productShowcaseSection}>
+        <div className={styles.showcaseContainer}>
+          {productShowcaseTitle && (
+            <h2 className={styles.showcaseTitle}>{productShowcaseTitle}</h2>
+          )}
+          {productShowcaseContent && (
+            <p
+              className={styles.showcaseContent}
+              dangerouslySetInnerHTML={{ __html: productShowcaseContent }}
+            />
+          )}
+
+          {showcaseProducts && showcaseProducts.data && (
+            <div className={styles.productsGrid}>
+              {showcaseProducts.data.map((product: any, index: number) => (
+                <div key={index} className={styles.productCard}>
+                  {product.featuredImage && (
+                    <Image
+                      layout="responsive"
+                      width="300px"
+                      height="400px"
+                      objectFit="cover"
+                      useBlur={true}
+                      image={product.featuredImage}
+                      alt={
+                        product.featuredImage?.altText ||
+                        product.name ||
+                        "Product"
+                      }
+                    />
+                  )}
+                  {product.name && <h3>{product.name}</h3>}
+                  {product.price && (
+                    <span className={styles.productPrice}>
+                      {product.price.selling}
+                    </span>
+                  )}
+                </div>
+              ))}
+            </div>
+          )}
+
+          {productShowcaseBtnLink && (
+            <div className={styles.showcaseButtonWrapper}>
+              <Link href={productShowcaseBtnLink} passHref>
+                <a className={styles.showcaseButton}>View All Products</a>
+              </Link>
+            </div>
+          )}
+        </div>
+      </div>
+
       <div className={styles.container}>
         <div className={styles.FooterLinks}>
-          <NavigationFooterLinks footer_links={footer_links} />
+          <NavigationFooterLinks footer_links={undefined} />
           <div className={styles.navDivider}></div>
+        </div>
+
+        {/* Contents Title and Orientation */}
+        <div className={styles.contentsHeader}>
+          {contentsTitle && (
+            <h2 className={styles.contentsTitle}>{contentsTitle}</h2>
+          )}
+          {contentsOrientation && (
+            <p
+              className={styles.contentsOrientation}
+              dangerouslySetInnerHTML={{ __html: contentsOrientation }}
+            />
+          )}
         </div>
 
         {/* İçerikler */}
@@ -106,22 +219,13 @@ const faq: React.FC<FaqProps> = (props) => {
               </div>
             ))}
           </div>
-          <div className={styles.sideContent}>
-            <h3>{titleRight}</h3>
-            <p>{contentRight}</p>
-            {btnRightLink && (
-              <Link href={btnRightLink} passHref>
-                <a className={styles.contactButton}>{btnRight}</a>
-              </Link>
-            )}
-          </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default faq;
+export default rewards;
 
 // SVG
 // Modern SVG Icons

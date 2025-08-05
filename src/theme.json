@@ -14,7 +14,7 @@
       "componentJson": null,
       "props": [
         {
-          "id": "e02a782e-8258-4d32-9f79-59d00ccd40ff",
+          "id": "6b5a0d30-cbee-4e54-ae09-321c92e5d660",
           "name": "logo",
           "displayName": "",
           "description": "",
@@ -28,7 +28,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "2f210f74-534f-4586-bb54-11e9dbf70fc8",
+          "id": "350853a0-84ce-47ec-8838-14edee8d3322",
           "name": "showTax",
           "displayName": "",
           "description": "",
@@ -42,7 +42,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "f10d98a9-7cd7-44ca-9273-c7450742e8fa",
+          "id": "f6b392c7-de2c-4520-8994-3e979ba6cd85",
           "name": "showCampaignOffersDesign",
           "displayName": "",
           "description": "",
@@ -56,7 +56,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "129fc752-606d-4261-a32f-262f51f76e7e",
+          "id": "f540c989-2939-4cfa-a111-433fceb7962d",
           "name": "campaignOfferIsSmallDesign",
           "displayName": "",
           "description": "",
@@ -70,7 +70,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "89222a4c-24ab-400a-820e-d1237f1dfc65",
+          "id": "69c8d514-c4a0-4226-a635-8a2e3d720ad0",
           "name": "showCampaignIsBiggerImage",
           "displayName": "",
           "description": "",
@@ -84,7 +84,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "aaa704db-cedd-4149-870b-4c28f45c814a",
+          "id": "3bec7f28-3f69-4ab3-bc6b-8a4865636b1a",
           "name": "campaignOffersTitleColor",
           "displayName": "",
           "description": "",
@@ -98,7 +98,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "c5a316aa-c55f-42a7-b547-ca9b48d00125",
+          "id": "70cfe806-4679-40d5-b031-0605d48bbb51",
           "name": "campaignOffersDescriptionColor",
           "displayName": "",
           "description": "",
@@ -112,7 +112,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "31d32661-f465-4a23-b40f-7ec3a4e4563d",
+          "id": "b40c3bc9-035c-454e-a782-a641efe31b0b",
           "name": "campaignOffersContainerBgColor",
           "displayName": "",
           "description": "",
@@ -126,7 +126,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "f10b0e0a-0932-4de1-99fe-5404548aef21",
+          "id": "07fbb6ab-d72b-45ef-b225-66bba5cac085",
           "name": "showCampaignShowDiscountSettings",
           "displayName": "",
           "description": "",
@@ -140,7 +140,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "c5a0a31c-2417-4edb-9e77-fad3dbcdaace",
+          "id": "6cf0e4e8-aba7-46fd-b522-e5820740a20f",
           "name": "showCampaignHideDiscountBadge",
           "displayName": "",
           "description": "",
@@ -154,7 +154,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "683bb267-052b-4339-8ed8-45a06b6c1098",
+          "id": "83bdae98-8714-4f2e-9754-52db1d7bb1b8",
           "name": "campaignOffersDiscountPercentageColor",
           "displayName": "",
           "description": "",
@@ -168,7 +168,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "32ef09bc-4836-4506-85c6-fab91b5576ec",
+          "id": "d1fc527a-cd49-49eb-b84a-483111bc8873",
           "name": "campaignOffersDiscountPercentageBgColor",
           "displayName": "",
           "description": "",
@@ -182,7 +182,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "b842616a-a9f6-4dca-906b-f0a91d413e58",
+          "id": "a64b5128-8282-4aa1-854f-9849b21b37d1",
           "name": "showCampaignShowCountdownSettings",
           "displayName": "",
           "description": "",
@@ -196,7 +196,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "ef14f675-8f08-4283-8fea-b126c5644be9",
+          "id": "e538b00c-084a-4aab-bc8d-3ef8fffbeb84",
           "name": "campaignOfferCountdownStyleIsLine",
           "displayName": "",
           "description": "",
@@ -210,7 +210,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "0792c749-a344-44ba-91e9-0df7b97b21a3",
+          "id": "68155952-5964-4c17-a898-1ced81e1cd68",
           "name": "campaignOffersCountdownTextColor",
           "displayName": "",
           "description": "",
@@ -224,7 +224,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "50dbdabf-514c-4c27-8211-584c50faaf7b",
+          "id": "fb4a2f26-5ad1-4dec-aeaf-7cb5427d09de",
           "name": "campaignOffersCountdownTimeColor",
           "displayName": "",
           "description": "",
@@ -238,7 +238,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "5e24a7c1-2daf-464d-90af-7bb9fb4b417b",
+          "id": "7f624e47-c7d1-47e6-becd-1a6ace887fde",
           "name": "campaignOffersCountdownBgColor",
           "displayName": "",
           "description": "",
@@ -252,7 +252,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "3e010fb8-4cc3-4f43-84b4-27f3ab2389e6",
+          "id": "bb452c70-60cc-47b6-b485-f6c089bb9b7b",
           "name": "campaignOffersEnableMiddlePhase",
           "displayName": "",
           "description": "",
@@ -266,7 +266,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "8e92c7d0-0f0e-4c24-aee9-6bf70875ef24",
+          "id": "e7eef5fc-bc8d-4200-a33d-4a68b8d0be86",
           "name": "campaignOffersMiddlePhaseOverlayColor",
           "displayName": "",
           "description": "",
@@ -280,7 +280,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "5f5f5e7d-7152-4341-8d04-19f8906c4d7a",
+          "id": "77306db5-50c3-4ac2-bac2-a2ceb06fb041",
           "name": "campaignOfferCountdownStyleIsLineSuccessPage",
           "displayName": "",
           "description": "",
@@ -294,7 +294,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "c063b692-062e-4658-99bf-c2f513366231",
+          "id": "eff49e18-1fbd-41f5-ae51-c7e26d3c5998",
           "name": "buttonBgColor",
           "displayName": "",
           "description": "",
@@ -308,7 +308,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "7414a1df-83e6-4490-892a-a4bf987d5ef6",
+          "id": "7ea9d2b9-507a-4815-84dd-cfd72fbb2562",
           "name": "buttonTextColor",
           "displayName": "",
           "description": "",
@@ -322,7 +322,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "3fe8bdde-ade7-4095-81c6-8179aa4fce6f",
+          "id": "ba112e66-ac00-4445-bbf7-bb87994b5c55",
           "name": "buttonDisabledBgColor",
           "displayName": "",
           "description": "",
@@ -336,7 +336,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "127bb38d-bf70-4d5b-a5a2-fab856256bea",
+          "id": "190a7451-14de-43e5-bd55-294d9f61b901",
           "name": "buttonDisabledTextColor",
           "displayName": "",
           "description": "",
@@ -350,7 +350,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "fa758ed8-b321-4dbd-8720-d788fe6c0ddf",
+          "id": "f3d903a5-04fa-4a1c-be94-9c486aca48b4",
           "name": "primaryTextColor",
           "displayName": "",
           "description": "",
@@ -364,7 +364,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "4fb382b9-bcdd-47a9-b4c1-5bb99abf8cc2",
+          "id": "d15a0816-2350-47df-9ec6-10071d3957df",
           "name": "secondaryTextColor",
           "displayName": "",
           "description": "",
@@ -378,7 +378,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "a4b4f69a-f663-4557-bac2-efce09f67075",
+          "id": "cd516a15-b05c-423a-805b-86d0b231094d",
           "name": "primaryBgColor",
           "displayName": "",
           "description": "",
@@ -392,7 +392,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "ccd79530-ab7d-45a9-aeb6-e785149df6cb",
+          "id": "a34fed37-95a1-4426-96ce-6d4e2277db46",
           "name": "secondaryBgColor",
           "displayName": "",
           "description": "",
@@ -406,7 +406,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "edf02822-9f07-4d5b-8e85-94080f9751ae",
+          "id": "315bb83c-96ae-4b2f-8e78-ff71ee33ce80",
           "name": "borderColor",
           "displayName": "",
           "description": "",
@@ -420,7 +420,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "711edbeb-46d0-4e45-8cfe-b1b7caab2aae",
+          "id": "2be8b003-a0be-4eb9-a017-a65acb1f4572",
           "name": "cardBgColor",
           "displayName": "",
           "description": "",
@@ -434,7 +434,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "fd2e9762-7053-46e0-9bf4-aa53f8361bbf",
+          "id": "4d16620e-91f0-4a73-bd2c-16991f9c9464",
           "name": "errorColor",
           "displayName": "",
           "description": "",
@@ -448,7 +448,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "e8c54655-817e-4a47-b2de-3bb5a4e2c440",
+          "id": "9a342d85-c2f9-49af-8e43-9df0c944a813",
           "name": "errorLightColor",
           "displayName": "",
           "description": "",
@@ -462,7 +462,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "9b2d41f8-91a7-4cd8-ac57-183a50cb3bca",
+          "id": "17f14332-b85c-4824-9de9-1f06a5dfd704",
           "name": "warningColor",
           "displayName": "",
           "description": "",
@@ -476,7 +476,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "72985cc4-2e3f-4add-aead-f6c50c4ec8f3",
+          "id": "425737a3-d362-42af-a51d-a557bf96e93a",
           "name": "warningLightColor",
           "displayName": "",
           "description": "",
@@ -490,7 +490,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "40e21b04-df16-4efd-a6e3-795023827b40",
+          "id": "b0772ad7-134f-4f45-9132-970217de0d59",
           "name": "successColor",
           "displayName": "",
           "description": "",
@@ -504,7 +504,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "67332047-adb3-400d-8e34-8a01080845c3",
+          "id": "72979498-9f11-40da-bff1-e53eb4e2e9c7",
           "name": "successLightColor",
           "displayName": "",
           "description": "",
@@ -518,7 +518,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "53974c55-a75a-428f-bac0-b78730162833",
+          "id": "e1052aee-5239-43ee-a770-0e24908e8779",
           "name": "secondaryButtonBgColor",
           "displayName": "",
           "description": "",
@@ -532,7 +532,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "c74b7a50-756f-4c98-864f-277de4efb7d9",
+          "id": "3102531d-ac83-4c14-b374-06d70facd6f2",
           "name": "secondaryButtonTextColor",
           "displayName": "",
           "description": "",
@@ -546,7 +546,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "a32f1442-bdf8-4ce2-815e-591b47abc359",
+          "id": "c97bd089-e854-433e-b488-bfb8b08d414e",
           "name": "secondaryButtonBorderColor",
           "displayName": "",
           "description": "",
@@ -3800,49 +3800,6 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "5b26f70a-ff36-4811-8a9a-239148af9055",
-          "name": "contents",
-          "displayName": "Soru & Cevap İçeriği",
-          "description": "Soru & Cevap İçeriği",
-          "type": "CUSTOM",
-          "isRequired": false,
-          "customDataId": "669a0260-d8fc-48d8-811a-49d5a5562430",
-          "sliderData": {},
-          "translations": {},
-          "groupId": "788c7a18-a379-442d-99ac-69a396dd858a",
-          "excludedFields": [],
-          "excludedFieldsCategory": [],
-          "isFacetListNotSent": false
-        },
-        {
-          "id": "902b1812-c1a7-4a76-85a1-d04a7f6e5a97",
-          "name": "contentsTitle",
-          "displayName": "Soru & Cevap Alanı Başlık Metni",
-          "description": "Soru & Cevap Alanı Başlık Metni",
-          "type": "TEXT",
-          "isRequired": false,
-          "sliderData": {},
-          "translations": {},
-          "groupId": "788c7a18-a379-442d-99ac-69a396dd858a",
-          "excludedFields": [],
-          "excludedFieldsCategory": [],
-          "isFacetListNotSent": false
-        },
-        {
-          "id": "4810b520-02d2-4668-be00-749284eaad08",
-          "name": "contentsOrientation",
-          "displayName": "Soru & Cevap Alanı Yönlendirme Metni",
-          "description": "Soru & Cevap Alanı Yönlendirme Metni",
-          "type": "RICH_TEXT",
-          "isRequired": false,
-          "sliderData": {},
-          "translations": {},
-          "groupId": "788c7a18-a379-442d-99ac-69a396dd858a",
-          "excludedFields": [],
-          "excludedFieldsCategory": [],
-          "isFacetListNotSent": false
-        },
-        {
           "id": "e17a45ae-955a-477d-b846-21267059f215",
           "name": "awardTitle",
           "displayName": "Ödül Başlık Metni",
@@ -3914,10 +3871,10 @@
         },
         {
           "id": "7b8110c9-a3c9-452d-8cba-190c5ecf199f",
-          "name": "productShowcaseBtnText",
-          "displayName": "Ürün Vitrin Buton Metni",
-          "description": "Ürün Vitrin Buton Metni",
-          "type": "TEXT",
+          "name": "showcaseProducts",
+          "displayName": "Vitrin Ürünleri",
+          "description": "Vitrin Ürünleri",
+          "type": "PRODUCT_LIST",
           "isRequired": false,
           "sliderData": {},
           "translations": {},
@@ -3936,6 +3893,49 @@
           "sliderData": {},
           "translations": {},
           "groupId": "f51600cd-381c-4b05-af40-3b2a6a8829e8",
+          "excludedFields": [],
+          "excludedFieldsCategory": [],
+          "isFacetListNotSent": false
+        },
+        {
+          "id": "5b26f70a-ff36-4811-8a9a-239148af9055",
+          "name": "contents",
+          "displayName": "Soru & Cevap İçeriği",
+          "description": "Soru & Cevap İçeriği",
+          "type": "CUSTOM",
+          "isRequired": false,
+          "customDataId": "669a0260-d8fc-48d8-811a-49d5a5562430",
+          "sliderData": {},
+          "translations": {},
+          "groupId": "788c7a18-a379-442d-99ac-69a396dd858a",
+          "excludedFields": [],
+          "excludedFieldsCategory": [],
+          "isFacetListNotSent": false
+        },
+        {
+          "id": "902b1812-c1a7-4a76-85a1-d04a7f6e5a97",
+          "name": "contentsTitle",
+          "displayName": "Soru & Cevap Alanı Başlık Metni",
+          "description": "Soru & Cevap Alanı Başlık Metni",
+          "type": "TEXT",
+          "isRequired": false,
+          "sliderData": {},
+          "translations": {},
+          "groupId": "788c7a18-a379-442d-99ac-69a396dd858a",
+          "excludedFields": [],
+          "excludedFieldsCategory": [],
+          "isFacetListNotSent": false
+        },
+        {
+          "id": "4810b520-02d2-4668-be00-749284eaad08",
+          "name": "contentsOrientation",
+          "displayName": "Soru & Cevap Alanı Yönlendirme Metni",
+          "description": "Soru & Cevap Alanı Yönlendirme Metni",
+          "type": "RICH_TEXT",
+          "isRequired": false,
+          "sliderData": {},
+          "translations": {},
+          "groupId": "788c7a18-a379-442d-99ac-69a396dd858a",
           "excludedFields": [],
           "excludedFieldsCategory": [],
           "isFacetListNotSent": false
@@ -4581,12 +4581,9 @@
               {
                 "id": "3fb3d68d-cafe-4b4e-b8bf-ba1b8c267ccd",
                 "linkType": "PAGE",
-                "label": "Ella Privilege Club",
-                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
-                "pageType": "INDEX",
-                "itemId": null,
-                "externalLink": null,
-                "fileUrl": null,
+                "label": "Ödüller",
+                "pageId": "d1f59c8a-9035-4d78-8e3c-ac051c0fe670",
+                "pageType": "CUSTOM",
                 "pageComponentId": null,
                 "subLinks": []
               },
@@ -4985,12 +4982,9 @@
               {
                 "id": "3fb3d68d-cafe-4b4e-b8bf-ba1b8c267ccd",
                 "linkType": "PAGE",
-                "label": "Ella Privilege Club",
-                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
-                "pageType": "INDEX",
-                "itemId": null,
-                "externalLink": null,
-                "fileUrl": null,
+                "label": "Ödüller",
+                "pageId": "d1f59c8a-9035-4d78-8e3c-ac051c0fe670",
+                "pageType": "CUSTOM",
                 "pageComponentId": null,
                 "subLinks": []
               },
@@ -5512,12 +5506,9 @@
               {
                 "id": "3fb3d68d-cafe-4b4e-b8bf-ba1b8c267ccd",
                 "linkType": "PAGE",
-                "label": "Ella Privilege Club",
-                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
-                "pageType": "INDEX",
-                "itemId": null,
-                "externalLink": null,
-                "fileUrl": null,
+                "label": "Ödüller",
+                "pageId": "d1f59c8a-9035-4d78-8e3c-ac051c0fe670",
+                "pageType": "CUSTOM",
                 "pageComponentId": null,
                 "subLinks": []
               },
@@ -5993,12 +5984,9 @@
               {
                 "id": "3fb3d68d-cafe-4b4e-b8bf-ba1b8c267ccd",
                 "linkType": "PAGE",
-                "label": "Ella Privilege Club",
-                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
-                "pageType": "INDEX",
-                "itemId": null,
-                "externalLink": null,
-                "fileUrl": null,
+                "label": "Ödüller",
+                "pageId": "d1f59c8a-9035-4d78-8e3c-ac051c0fe670",
+                "pageType": "CUSTOM",
                 "pageComponentId": null,
                 "subLinks": []
               },
@@ -6399,12 +6387,9 @@
               {
                 "id": "3fb3d68d-cafe-4b4e-b8bf-ba1b8c267ccd",
                 "linkType": "PAGE",
-                "label": "Ella Privilege Club",
-                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
-                "pageType": "INDEX",
-                "itemId": null,
-                "externalLink": null,
-                "fileUrl": null,
+                "label": "Ödüller",
+                "pageId": "d1f59c8a-9035-4d78-8e3c-ac051c0fe670",
+                "pageType": "CUSTOM",
                 "pageComponentId": null,
                 "subLinks": []
               },
@@ -6799,12 +6784,9 @@
               {
                 "id": "3fb3d68d-cafe-4b4e-b8bf-ba1b8c267ccd",
                 "linkType": "PAGE",
-                "label": "Ella Privilege Club",
-                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
-                "pageType": "INDEX",
-                "itemId": null,
-                "externalLink": null,
-                "fileUrl": null,
+                "label": "Ödüller",
+                "pageId": "d1f59c8a-9035-4d78-8e3c-ac051c0fe670",
+                "pageType": "CUSTOM",
                 "pageComponentId": null,
                 "subLinks": []
               },
@@ -7204,12 +7186,9 @@
               {
                 "id": "3fb3d68d-cafe-4b4e-b8bf-ba1b8c267ccd",
                 "linkType": "PAGE",
-                "label": "Ella Privilege Club",
-                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
-                "pageType": "INDEX",
-                "itemId": null,
-                "externalLink": null,
-                "fileUrl": null,
+                "label": "Ödüller",
+                "pageId": "d1f59c8a-9035-4d78-8e3c-ac051c0fe670",
+                "pageType": "CUSTOM",
                 "pageComponentId": null,
                 "subLinks": []
               },
@@ -7606,12 +7585,9 @@
               {
                 "id": "3fb3d68d-cafe-4b4e-b8bf-ba1b8c267ccd",
                 "linkType": "PAGE",
-                "label": "Ella Privilege Club",
-                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
-                "pageType": "INDEX",
-                "itemId": null,
-                "externalLink": null,
-                "fileUrl": null,
+                "label": "Ödüller",
+                "pageId": "d1f59c8a-9035-4d78-8e3c-ac051c0fe670",
+                "pageType": "CUSTOM",
                 "pageComponentId": null,
                 "subLinks": []
               },
@@ -8014,12 +7990,9 @@
               {
                 "id": "3fb3d68d-cafe-4b4e-b8bf-ba1b8c267ccd",
                 "linkType": "PAGE",
-                "label": "Ella Privilege Club",
-                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
-                "pageType": "INDEX",
-                "itemId": null,
-                "externalLink": null,
-                "fileUrl": null,
+                "label": "Ödüller",
+                "pageId": "d1f59c8a-9035-4d78-8e3c-ac051c0fe670",
+                "pageType": "CUSTOM",
                 "pageComponentId": null,
                 "subLinks": []
               },
@@ -8414,12 +8387,9 @@
               {
                 "id": "3fb3d68d-cafe-4b4e-b8bf-ba1b8c267ccd",
                 "linkType": "PAGE",
-                "label": "Ella Privilege Club",
-                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
-                "pageType": "INDEX",
-                "itemId": null,
-                "externalLink": null,
-                "fileUrl": null,
+                "label": "Ödüller",
+                "pageId": "d1f59c8a-9035-4d78-8e3c-ac051c0fe670",
+                "pageType": "CUSTOM",
                 "pageComponentId": null,
                 "subLinks": []
               },
@@ -8814,12 +8784,9 @@
               {
                 "id": "3fb3d68d-cafe-4b4e-b8bf-ba1b8c267ccd",
                 "linkType": "PAGE",
-                "label": "Ella Privilege Club",
-                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
-                "pageType": "INDEX",
-                "itemId": null,
-                "externalLink": null,
-                "fileUrl": null,
+                "label": "Ödüller",
+                "pageId": "d1f59c8a-9035-4d78-8e3c-ac051c0fe670",
+                "pageType": "CUSTOM",
                 "pageComponentId": null,
                 "subLinks": []
               },
@@ -9214,12 +9181,9 @@
               {
                 "id": "3fb3d68d-cafe-4b4e-b8bf-ba1b8c267ccd",
                 "linkType": "PAGE",
-                "label": "Ella Privilege Club",
-                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
-                "pageType": "INDEX",
-                "itemId": null,
-                "externalLink": null,
-                "fileUrl": null,
+                "label": "Ödüller",
+                "pageId": "d1f59c8a-9035-4d78-8e3c-ac051c0fe670",
+                "pageType": "CUSTOM",
                 "pageComponentId": null,
                 "subLinks": []
               },
@@ -9616,12 +9580,9 @@
               {
                 "id": "3fb3d68d-cafe-4b4e-b8bf-ba1b8c267ccd",
                 "linkType": "PAGE",
-                "label": "Ella Privilege Club",
-                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
-                "pageType": "INDEX",
-                "itemId": null,
-                "externalLink": null,
-                "fileUrl": null,
+                "label": "Ödüller",
+                "pageId": "d1f59c8a-9035-4d78-8e3c-ac051c0fe670",
+                "pageType": "CUSTOM",
                 "pageComponentId": null,
                 "subLinks": []
               },
@@ -10018,12 +9979,9 @@
               {
                 "id": "3fb3d68d-cafe-4b4e-b8bf-ba1b8c267ccd",
                 "linkType": "PAGE",
-                "label": "Ella Privilege Club",
-                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
-                "pageType": "INDEX",
-                "itemId": null,
-                "externalLink": null,
-                "fileUrl": null,
+                "label": "Ödüller",
+                "pageId": "d1f59c8a-9035-4d78-8e3c-ac051c0fe670",
+                "pageType": "CUSTOM",
                 "pageComponentId": null,
                 "subLinks": []
               },
@@ -10420,12 +10378,9 @@
               {
                 "id": "3fb3d68d-cafe-4b4e-b8bf-ba1b8c267ccd",
                 "linkType": "PAGE",
-                "label": "Ella Privilege Club",
-                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
-                "pageType": "INDEX",
-                "itemId": null,
-                "externalLink": null,
-                "fileUrl": null,
+                "label": "Ödüller",
+                "pageId": "d1f59c8a-9035-4d78-8e3c-ac051c0fe670",
+                "pageType": "CUSTOM",
                 "pageComponentId": null,
                 "subLinks": []
               },
@@ -10820,12 +10775,9 @@
               {
                 "id": "3fb3d68d-cafe-4b4e-b8bf-ba1b8c267ccd",
                 "linkType": "PAGE",
-                "label": "Ella Privilege Club",
-                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
-                "pageType": "INDEX",
-                "itemId": null,
-                "externalLink": null,
-                "fileUrl": null,
+                "label": "Ödüller",
+                "pageId": "d1f59c8a-9035-4d78-8e3c-ac051c0fe670",
+                "pageType": "CUSTOM",
                 "pageComponentId": null,
                 "subLinks": []
               },
@@ -11235,12 +11187,9 @@
               {
                 "id": "3fb3d68d-cafe-4b4e-b8bf-ba1b8c267ccd",
                 "linkType": "PAGE",
-                "label": "Ella Privilege Club",
-                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
-                "pageType": "INDEX",
-                "itemId": null,
-                "externalLink": null,
-                "fileUrl": null,
+                "label": "Ödüller",
+                "pageId": "d1f59c8a-9035-4d78-8e3c-ac051c0fe670",
+                "pageType": "CUSTOM",
                 "pageComponentId": null,
                 "subLinks": []
               },
@@ -11719,12 +11668,9 @@
               {
                 "id": "3fb3d68d-cafe-4b4e-b8bf-ba1b8c267ccd",
                 "linkType": "PAGE",
-                "label": "Ella Privilege Club",
-                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
-                "pageType": "INDEX",
-                "itemId": null,
-                "externalLink": null,
-                "fileUrl": null,
+                "label": "Ödüller",
+                "pageId": "d1f59c8a-9035-4d78-8e3c-ac051c0fe670",
+                "pageType": "CUSTOM",
                 "pageComponentId": null,
                 "subLinks": []
               },
@@ -12155,12 +12101,9 @@
               {
                 "id": "3fb3d68d-cafe-4b4e-b8bf-ba1b8c267ccd",
                 "linkType": "PAGE",
-                "label": "Ella Privilege Club",
-                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
-                "pageType": "INDEX",
-                "itemId": null,
-                "externalLink": null,
-                "fileUrl": null,
+                "label": "Ödüller",
+                "pageId": "d1f59c8a-9035-4d78-8e3c-ac051c0fe670",
+                "pageType": "CUSTOM",
                 "pageComponentId": null,
                 "subLinks": []
               },
@@ -12556,12 +12499,9 @@
               {
                 "id": "3fb3d68d-cafe-4b4e-b8bf-ba1b8c267ccd",
                 "linkType": "PAGE",
-                "label": "Ella Privilege Club",
-                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
-                "pageType": "INDEX",
-                "itemId": null,
-                "externalLink": null,
-                "fileUrl": null,
+                "label": "Ödüller",
+                "pageId": "d1f59c8a-9035-4d78-8e3c-ac051c0fe670",
+                "pageType": "CUSTOM",
                 "pageComponentId": null,
                 "subLinks": []
               },
@@ -12957,12 +12897,9 @@
               {
                 "id": "3fb3d68d-cafe-4b4e-b8bf-ba1b8c267ccd",
                 "linkType": "PAGE",
-                "label": "Ella Privilege Club",
-                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
-                "pageType": "INDEX",
-                "itemId": null,
-                "externalLink": null,
-                "fileUrl": null,
+                "label": "Ödüller",
+                "pageId": "d1f59c8a-9035-4d78-8e3c-ac051c0fe670",
+                "pageType": "CUSTOM",
                 "pageComponentId": null,
                 "subLinks": []
               },
@@ -13397,12 +13334,9 @@
               {
                 "id": "3fb3d68d-cafe-4b4e-b8bf-ba1b8c267ccd",
                 "linkType": "PAGE",
-                "label": "Ella Privilege Club",
-                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
-                "pageType": "INDEX",
-                "itemId": null,
-                "externalLink": null,
-                "fileUrl": null,
+                "label": "Ödüller",
+                "pageId": "d1f59c8a-9035-4d78-8e3c-ac051c0fe670",
+                "pageType": "CUSTOM",
                 "pageComponentId": null,
                 "subLinks": []
               },
@@ -13838,12 +13772,9 @@
               {
                 "id": "3fb3d68d-cafe-4b4e-b8bf-ba1b8c267ccd",
                 "linkType": "PAGE",
-                "label": "Ella Privilege Club",
-                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
-                "pageType": "INDEX",
-                "itemId": null,
-                "externalLink": null,
-                "fileUrl": null,
+                "label": "Ödüller",
+                "pageId": "d1f59c8a-9035-4d78-8e3c-ac051c0fe670",
+                "pageType": "CUSTOM",
                 "pageComponentId": null,
                 "subLinks": []
               },
@@ -14375,12 +14306,9 @@
               {
                 "id": "3fb3d68d-cafe-4b4e-b8bf-ba1b8c267ccd",
                 "linkType": "PAGE",
-                "label": "Ella Privilege Club",
-                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
-                "pageType": "INDEX",
-                "itemId": null,
-                "externalLink": null,
-                "fileUrl": null,
+                "label": "Ödüller",
+                "pageId": "d1f59c8a-9035-4d78-8e3c-ac051c0fe670",
+                "pageType": "CUSTOM",
                 "pageComponentId": null,
                 "subLinks": []
               },
@@ -14837,12 +14765,9 @@
               {
                 "id": "3fb3d68d-cafe-4b4e-b8bf-ba1b8c267ccd",
                 "linkType": "PAGE",
-                "label": "Ella Privilege Club",
-                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
-                "pageType": "INDEX",
-                "itemId": null,
-                "externalLink": null,
-                "fileUrl": null,
+                "label": "Ödüller",
+                "pageId": "d1f59c8a-9035-4d78-8e3c-ac051c0fe670",
+                "pageType": "CUSTOM",
                 "pageComponentId": null,
                 "subLinks": []
               },
@@ -15427,12 +15352,9 @@
               {
                 "id": "3fb3d68d-cafe-4b4e-b8bf-ba1b8c267ccd",
                 "linkType": "PAGE",
-                "label": "Ella Privilege Club",
-                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
-                "pageType": "INDEX",
-                "itemId": null,
-                "externalLink": null,
-                "fileUrl": null,
+                "label": "Ödüller",
+                "pageId": "d1f59c8a-9035-4d78-8e3c-ac051c0fe670",
+                "pageType": "CUSTOM",
                 "pageComponentId": null,
                 "subLinks": []
               },
@@ -15917,12 +15839,9 @@
               {
                 "id": "3fb3d68d-cafe-4b4e-b8bf-ba1b8c267ccd",
                 "linkType": "PAGE",
-                "label": "Ella Privilege Club",
-                "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
-                "pageType": "INDEX",
-                "itemId": null,
-                "externalLink": null,
-                "fileUrl": null,
+                "label": "Ödüller",
+                "pageId": "d1f59c8a-9035-4d78-8e3c-ac051c0fe670",
+                "pageType": "CUSTOM",
                 "pageComponentId": null,
                 "subLinks": []
               },
@@ -16124,6 +16043,66 @@
               "title": "Yardıma mı ihtiyacınız var?",
               "content": "<p style=\"font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; font-size: 14px; font-family: &quot;Twemoji Country Flags&quot;, Inter, sans-serif;\">Herhangi bir sorunuz varsa lütfen Müşteri Hizmetlerini ziyaret edin.</p><p style=\"font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; font-size: 14px; font-family: &quot;Twemoji Country Flags&quot;, Inter, sans-serif;\">info@dizaynella.com.tr - +90 554 895 2220</p>",
               "langTitle": " Konum & Dil Seçeneği"
+            }
+          }
+        },
+        {
+          "id": "c88033ca-9a23-478e-9687-fde516685403",
+          "componentId": "7730dfd2-865e-42e7-b9e3-d6f1873fda24",
+          "propValues": {
+            "title": "Ödüller",
+            "textPicture": "Rewards All - Dizaynella ",
+            "imageWeb": {
+              "id": "theme-images/017ef90a-ae50-46dc-818f-5335336dd13b",
+              "altText": null
+            },
+            "imageMobile": {
+              "id": "theme-images/7f649993-534c-4556-8de8-7a536d99c84d",
+              "altText": null
+            },
+            "contents": [
+              {
+                "question": "Dizaynella Rewards nedir?",
+                "answer": "Dizaynella Rewards, sadakat programımızdır. Satın aldığınız her ürün, size özel ayrıcalıkların kilidini açmaya bir adım daha yaklaşmanızı sağlar. Yıllık harcama tutarınıza göre sizi dört farklı üyelik seviyesinden birine dahil ederiz: Bronz, Gümüş, Altın veya EIP (En İyi Müşteri Programı)."
+              },
+              {
+                "question": "Rewards üyelik seviyeme nasıl hak kazandım?",
+                "answer": "<p data-start=\"506\" data-end=\"752\">Dizaynella Rewards programına katılmak için, sitemizde bir <strong data-start=\"567\" data-end=\"587\">kullanıcı hesabı</strong> oluşturmanız gerekir. (Kayıt ve Hesap Koşullarımızda belirtildiği şekilde.)<br data-start=\"663\" data-end=\"666\">\nRewards programına yeni katıldıysanız, başlangıçta <strong data-start=\"717\" data-end=\"733\">Bronz seviye</strong> ile başlarsınız.</p>\n<p data-start=\"754\" data-end=\"965\">İlerleyen süreçte, bulunduğunuz üyelik seviyesi <strong data-start=\"802\" data-end=\"849\">takvim yılı içerisindeki toplam harcamanıza</strong> göre güncellenir. Gerekli koşulları sağladığınızda yıl içinde <strong data-start=\"912\" data-end=\"964\">herhangi bir zamanda üst seviyeye geçebilirsiniz</strong>.</p>"
+              },
+              {
+                "question": "Mevcut Rewards üyelik seviyemi ne kadar süreyle koruyacağım?",
+                "answer": "Üyeliğiniz bir üst seviyeye yükseltilmediği sürece, <strong data-start=\"1095\" data-end=\"1148\">bulunduğunuz seviyede yıl sonuna kadar kalırsınız</strong>.<br data-start=\"1149\" data-end=\"1152\">\nBir üst seviye için gereken harcama tutarını tamamladığınızda ve iade süresi sona erdiğinde, <strong data-start=\"1245\" data-end=\"1293\">üyelik seviyeniz otomatik olarak yükseltilir</strong>."
+              }
+            ],
+            "contentsTitle": "Sıkça sorulan sorular",
+            "contentsOrientation": "Loyalty Terms and Conditions\nAny other questions? Have a look at more FAQs",
+            "awardTitle": "Our Rewards Program",
+            "awardContent": "NET‑A‑PORTER Rewards offers exclusive benefits based on your annual spend. The more you shop, the more you’ll unlock, including early access to sales, brand collaborations, priority customer service and your own Personal Shopper.\n\nExplore our benefits:",
+            "productShowcaseTitle": "Can we tempt you?",
+            "productShowcaseContent": "<span style=\"color: rgb(17, 17, 17); font-family: ChronicleText, Georgia, serif, sans-serif, &quot;MSung PRC Medium&quot;; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 325; text-align: center; white-space-collapse: preserve-breaks;\">Explore our curated selection of new items</span>",
+            "productShowcaseBtnLink": {
+              "id": "d99101be-b88b-42df-b892-0e3396c51028",
+              "linkType": "PAGE",
+              "label": "Anasayfa",
+              "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+              "pageType": "INDEX",
+              "pageComponentId": null,
+              "subLinks": []
+            },
+            "rewardPackages": "Deneme",
+            "showcaseProducts": {
+              "id": "6b64e667-2dee-4d94-845f-6b5c26a57d7a",
+              "productListType": "ALL",
+              "initialSort": "LAST_ADDED",
+              "initialLimit": 20,
+              "productCount": null,
+              "productIds": null,
+              "category": null,
+              "usePageFilter": null,
+              "relatedProductsType": null,
+              "recommendedProductsType": {
+                "recommendedProductType": "CATEGORY"
+              }
             }
           }
         }

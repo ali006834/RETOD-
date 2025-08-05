@@ -469,16 +469,16 @@ export type RewardsProps = {
 	textPicture?: string;
 	imageWeb?: IkasImage;
 	imageMobile?: IkasImage;
-	contents?: DeliveryContent[];
-	contentsTitle?: string;
-	contentsOrientation?: string;
 	awardTitle?: string;
 	awardContent?: string;
 	rewardPackages?: string;
 	productShowcaseTitle?: string;
 	productShowcaseContent?: string;
-	productShowcaseBtnText?: string;
+	showcaseProducts?: IkasProductList;
 	productShowcaseBtnLink?: IkasNavigationLink;
+	contents?: DeliveryContent[];
+	contentsTitle?: string;
+	contentsOrientation?: string;
 };
 
 export type FloatingButtonsProps = {
