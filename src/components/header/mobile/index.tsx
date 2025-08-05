@@ -20,7 +20,7 @@ import CartModal from "../desktop/cartModal";
 import { useRouter } from "next/router";
 import ArrowRight from "src/components/svg/arrow-right-white";
 import { LanguageSelect } from "src/components/language";
-// import { Bell } from "src/components/header/desktop";
+import { Bell } from "src/components/header/desktop";
 
 const MobileHeader = (props: HeaderProps) => {
   return (
@@ -31,7 +31,7 @@ const MobileHeader = (props: HeaderProps) => {
           <Center {...props} />
           <RightSide {...props} />
         </div>
-        <SearchInput {...props} />
+
         <Sidenav {...props} />
       </header>
       <MaxQuantityPerCartModal />
@@ -41,18 +41,21 @@ const MobileHeader = (props: HeaderProps) => {
 
 export default observer(MobileHeader);
 
+// Hamburger Menu - İkonu
 const LeftSide = observer((props: HeaderProps) => {
   const uiStore = UIStore.getInstance();
 
   return (
     <div className={styles.leftSide}>
       <button className={styles.sidenavButton} onClick={uiStore.toggleSidenav}>
-        <IOMenuSVG />
+        <IOMenuSVG width="16px" height="16px" color="#000" strokeWidth="1.1" />
       </button>
+      <SearchInput {...props} />
     </div>
   );
 });
 
+// Logo
 const Center = observer((props: HeaderProps) => {
   const { logo } = props;
   if (!logo) {
@@ -65,8 +68,8 @@ const Center = observer((props: HeaderProps) => {
           <Image
             image={logo}
             alt={logo?.altText || ""}
-            width={150}
-            height={30}
+            width={200}
+            height={20}
           />
         </a>
       </Link>
@@ -103,8 +106,8 @@ const Sidenav = observer((props: HeaderProps) => {
                   <Image
                     image={logo}
                     alt={logo?.altText || ""}
-                    width={190}
-                    height={35}
+                    width={230}
+                    height={30}
                   />
                 </a>
               </Link>
@@ -248,12 +251,12 @@ const RightSide = observer((props: HeaderProps) => {
 
   return (
     <div className={styles.rightSide}>
-      {/* <Bell {...props} /> */}
+      <Bell {...props} />
 
       {userToken && (
         <Link href="/account/favorite-products">
           <a>
-            <FavoriteSVG />
+            <FavoriteSVG width="20px" height="20px" color="#000" />
           </a>
         </Link>
       )}
@@ -261,20 +264,20 @@ const RightSide = observer((props: HeaderProps) => {
       {userToken ? (
         <Link href="/account">
           <a>
-            <UserIcon />
+            <UserIcon width="20px" height="20px" color="#000" />
           </a>
         </Link>
       ) : (
         <Link href="/account/login">
           <a>
-            <UserIcon />
+            <UserIcon width="20px" height="20px" color="#000" />
           </a>
         </Link>
       )}
 
       <button className={styles.cartWrapper} onClick={uiStore.toggleCartModal}>
         <div className={styles.cartQuantity}>{quantity}</div>
-        <CartIcon />
+        <CartIcon width="20px" height="20px" color="#000" />
       </button>
       <div
         className={

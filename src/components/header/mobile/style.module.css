@@ -4,7 +4,7 @@
 
 .mobile_category_container {
   width: 100%;
-  padding: 20px 0;
+  padding: 40px 0 20px;
 }
 
 .mobile_category_container ul li {
@@ -37,7 +37,8 @@
 .top_category_content a {
   color: #000;
   padding: 10px;
-  font-family: "MangoSans", Arial, Helvetica, sans-serif;
+  font-family: "Helvetica" !important;
+  font-weight: 400;
 }
 
 .mobil_fixed_menu {
@@ -80,7 +81,8 @@
   align-items: center;
   justify-content: flex-start;
   gap: 10px;
-  font-family: "MangoSans", Arial, Helvetica, sans-serif;
+  font-family: "Helvetica" !important;
+  font-weight: 400;
 }
 
 .childcategory a img {
@@ -107,11 +109,12 @@
 .leftSide {
   display: flex;
   align-items: center;
+  gap: 5px;
 }
 
 .sidenavButton {
-  width: 30px;
-  height: 30px;
+  width: 22px;
+  height: 22px;
   border: none;
   background: transparent;
 }
@@ -119,6 +122,7 @@
 .sidenavButton svg {
   width: 100%;
   height: 100%;
+  margin-top: -2px;
 }
 
 .sidenavOverlay {
@@ -199,7 +203,8 @@
 .cartQuantity {
   position: absolute;
   font-size: 12px;
-  font-family: "MangoSans Light", Arial, Helvetica, sans-serif;
+  font-family: "Helvetica" !important;
+  font-weight: 400;
   right: -4px;
   top: -10px;
   border-radius: 50%;
@@ -278,7 +283,8 @@
 .buttonPayment a {
   text-decoration: none;
   color: #fff;
-  font-family: "Poppins-Medium" !important;
+  font-family: "Helvetica" !important;
+  font-weight: 400;
   display: flex;
   justify-content: space-between;
   background-color: #000;
