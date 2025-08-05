@@ -567,4 +567,19 @@
   .showcaseTitle {
     font-size: 2.5rem;
   }
+
+  .heroViewport {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+  }
+  .contentGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .mainContent {
+    grid-column: 1;
+  }
 }
