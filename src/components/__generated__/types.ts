@@ -476,3 +476,8 @@ export type RewardsProps = {
 	productShowcaseBtnLink?: IkasNavigationLink;
 };
 
+export type FloatingButtonsProps = {
+	phoneNumber?: string;
+	togglePoint?: string;
+};
+

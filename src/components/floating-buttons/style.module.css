@@ -1,0 +1,25 @@
+.floatingButtons {
+  position: fixed;
+  bottom: 60px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.buttonWrapper {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.buttonWrapper.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+}
+
+.buttonWrapper.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}

@@ -8,6 +8,7 @@ import Config from "config.json";
 import "src/styles/global.css";
 import { ThemeProvider } from "styled-components";
 import { theme } from "src/styles/styled";
+import FloatingButtons from "src/components/floating-buttons";
 
 IkasStorefrontConfig.init({
   ...Config,
@@ -21,6 +22,7 @@ const IkasThemeApp: React.FC<AppProps> = (props) => {
   return (
     <ThemeProvider theme={theme}>
       <Component {...pageProps} />
+      <FloatingButtons />
     </ThemeProvider>
   );
 };
