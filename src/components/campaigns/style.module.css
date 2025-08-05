@@ -92,11 +92,23 @@
   font-family: "Helvetica" !important;
   padding: 10px 20px;
   display: block;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .footer_link a:hover {
   background-color: #f6f1eb;
+}
+
+.content {
+  font-size: 14px;
+  font-family: "Helvetica" !important;
+  font-weight: 400;
+}
+
+.contentRight {
+  font-size: 14px;
+  font-family: "Helvetica" !important;
+  font-weight: 400;
 }
 
 /* İçerik Bölümü */

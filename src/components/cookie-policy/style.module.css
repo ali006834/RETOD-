@@ -90,7 +90,7 @@
   font-family: "Helvetica" !important;
   padding: 10px 20px;
   display: block;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .footer_link a:hover {
@@ -104,6 +104,18 @@
   grid-template-columns: 2fr 1fr;
   gap: 3rem;
   margin-top: 2rem;
+}
+
+.content {
+  font-size: 14px;
+  font-family: "Helvetica" !important;
+  font-weight: 400;
+}
+
+.contentRight {
+  font-size: 14px;
+  font-family: "Helvetica" !important;
+  font-weight: 400;
 }
 
 .mainContent {

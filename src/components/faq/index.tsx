@@ -108,7 +108,12 @@ const faq: React.FC<FaqProps> = (props) => {
           </div>
           <div className={styles.sideContent}>
             <h3>{titleRight}</h3>
-            <p>{contentRight}</p>
+            {contentRight && (
+              <p
+                className={styles.contentRight}
+                dangerouslySetInnerHTML={{ __html: contentRight }}
+              />
+            )}
             {btnRightLink && (
               <Link href={btnRightLink} passHref>
                 <a className={styles.contactButton}>{btnRight}</a>

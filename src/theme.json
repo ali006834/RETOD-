@@ -14,7 +14,7 @@
       "componentJson": null,
       "props": [
         {
-          "id": "6b5a0d30-cbee-4e54-ae09-321c92e5d660",
+          "id": "f7097bf1-3390-4203-a084-edff0a91489f",
           "name": "logo",
           "displayName": "",
           "description": "",
@@ -28,7 +28,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "350853a0-84ce-47ec-8838-14edee8d3322",
+          "id": "d5d4fb62-d143-4a44-9e48-3556ab5be4a8",
           "name": "showTax",
           "displayName": "",
           "description": "",
@@ -42,7 +42,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "f6b392c7-de2c-4520-8994-3e979ba6cd85",
+          "id": "69c1168a-8d85-465b-9313-2b60466e8fd7",
           "name": "showCampaignOffersDesign",
           "displayName": "",
           "description": "",
@@ -56,7 +56,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "f540c989-2939-4cfa-a111-433fceb7962d",
+          "id": "b1e2d035-a5c1-447b-8014-b75d632f11d4",
           "name": "campaignOfferIsSmallDesign",
           "displayName": "",
           "description": "",
@@ -70,7 +70,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "69c8d514-c4a0-4226-a635-8a2e3d720ad0",
+          "id": "609a3edc-8441-4672-862c-3204f819c3a3",
           "name": "showCampaignIsBiggerImage",
           "displayName": "",
           "description": "",
@@ -84,7 +84,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "3bec7f28-3f69-4ab3-bc6b-8a4865636b1a",
+          "id": "0e6fc95a-3979-42d2-9526-c9f5f4888445",
           "name": "campaignOffersTitleColor",
           "displayName": "",
           "description": "",
@@ -98,7 +98,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "70cfe806-4679-40d5-b031-0605d48bbb51",
+          "id": "9ceb351d-8407-4cbe-a412-bebb6d57a46b",
           "name": "campaignOffersDescriptionColor",
           "displayName": "",
           "description": "",
@@ -112,7 +112,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "b40c3bc9-035c-454e-a782-a641efe31b0b",
+          "id": "2ac837f3-c8f9-487d-94a4-22179b32e142",
           "name": "campaignOffersContainerBgColor",
           "displayName": "",
           "description": "",
@@ -126,7 +126,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "07fbb6ab-d72b-45ef-b225-66bba5cac085",
+          "id": "ccd848ec-3de1-4354-9620-4c22226e2405",
           "name": "showCampaignShowDiscountSettings",
           "displayName": "",
           "description": "",
@@ -140,7 +140,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "6cf0e4e8-aba7-46fd-b522-e5820740a20f",
+          "id": "e3145d7d-e453-48aa-97eb-02079fba154e",
           "name": "showCampaignHideDiscountBadge",
           "displayName": "",
           "description": "",
@@ -154,7 +154,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "83bdae98-8714-4f2e-9754-52db1d7bb1b8",
+          "id": "b6384946-f8ef-4f10-93d3-e05c138705c2",
           "name": "campaignOffersDiscountPercentageColor",
           "displayName": "",
           "description": "",
@@ -168,7 +168,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "d1fc527a-cd49-49eb-b84a-483111bc8873",
+          "id": "4051900d-d01c-42f3-aee5-81c6eb67666c",
           "name": "campaignOffersDiscountPercentageBgColor",
           "displayName": "",
           "description": "",
@@ -182,7 +182,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "a64b5128-8282-4aa1-854f-9849b21b37d1",
+          "id": "74f6f1f2-a216-45c3-8332-9e08aeba1a00",
           "name": "showCampaignShowCountdownSettings",
           "displayName": "",
           "description": "",
@@ -196,7 +196,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "e538b00c-084a-4aab-bc8d-3ef8fffbeb84",
+          "id": "d99aaf51-88ff-4648-b8d8-e30c78f1625c",
           "name": "campaignOfferCountdownStyleIsLine",
           "displayName": "",
           "description": "",
@@ -210,7 +210,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "68155952-5964-4c17-a898-1ced81e1cd68",
+          "id": "ea0a2a2b-bc0b-4811-8113-b1e41daeca35",
           "name": "campaignOffersCountdownTextColor",
           "displayName": "",
           "description": "",
@@ -224,7 +224,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "fb4a2f26-5ad1-4dec-aeaf-7cb5427d09de",
+          "id": "3a398e58-c925-43b3-ad09-60cb427f8ba2",
           "name": "campaignOffersCountdownTimeColor",
           "displayName": "",
           "description": "",
@@ -238,7 +238,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "7f624e47-c7d1-47e6-becd-1a6ace887fde",
+          "id": "a6f64eeb-7427-42ba-9360-8c62f322f37d",
           "name": "campaignOffersCountdownBgColor",
           "displayName": "",
           "description": "",
@@ -252,7 +252,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "bb452c70-60cc-47b6-b485-f6c089bb9b7b",
+          "id": "1f95b117-6a19-4530-9914-5c62b2da43a4",
           "name": "campaignOffersEnableMiddlePhase",
           "displayName": "",
           "description": "",
@@ -266,7 +266,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "e7eef5fc-bc8d-4200-a33d-4a68b8d0be86",
+          "id": "c9990118-1e7b-403e-b0e6-586e093da96b",
           "name": "campaignOffersMiddlePhaseOverlayColor",
           "displayName": "",
           "description": "",
@@ -280,7 +280,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "77306db5-50c3-4ac2-bac2-a2ceb06fb041",
+          "id": "cff8aeed-1312-4523-85b6-7c3011788d33",
           "name": "campaignOfferCountdownStyleIsLineSuccessPage",
           "displayName": "",
           "description": "",
@@ -294,7 +294,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "eff49e18-1fbd-41f5-ae51-c7e26d3c5998",
+          "id": "697fb7d5-5dab-4b2a-93d4-c8488285ac96",
           "name": "buttonBgColor",
           "displayName": "",
           "description": "",
@@ -308,7 +308,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "7ea9d2b9-507a-4815-84dd-cfd72fbb2562",
+          "id": "98f27178-9813-4fc3-be1c-8919a21ce47f",
           "name": "buttonTextColor",
           "displayName": "",
           "description": "",
@@ -322,7 +322,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "ba112e66-ac00-4445-bbf7-bb87994b5c55",
+          "id": "1f3e31e2-ab09-4543-b6d0-54e1c4a376b0",
           "name": "buttonDisabledBgColor",
           "displayName": "",
           "description": "",
@@ -336,7 +336,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "190a7451-14de-43e5-bd55-294d9f61b901",
+          "id": "adf4a2bf-e9a8-4576-9846-16cce4515232",
           "name": "buttonDisabledTextColor",
           "displayName": "",
           "description": "",
@@ -350,7 +350,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "f3d903a5-04fa-4a1c-be94-9c486aca48b4",
+          "id": "59ecba28-b380-4da9-a2da-2f074fc1c292",
           "name": "primaryTextColor",
           "displayName": "",
           "description": "",
@@ -364,7 +364,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "d15a0816-2350-47df-9ec6-10071d3957df",
+          "id": "d8a2f997-bc9e-4198-a105-38abebf8be92",
           "name": "secondaryTextColor",
           "displayName": "",
           "description": "",
@@ -378,7 +378,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "cd516a15-b05c-423a-805b-86d0b231094d",
+          "id": "37eadc0a-7707-493e-992d-37dc84a99fb0",
           "name": "primaryBgColor",
           "displayName": "",
           "description": "",
@@ -392,7 +392,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "a34fed37-95a1-4426-96ce-6d4e2277db46",
+          "id": "2d33527f-2952-419c-9c3f-07ef8ac1dcac",
           "name": "secondaryBgColor",
           "displayName": "",
           "description": "",
@@ -406,7 +406,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "315bb83c-96ae-4b2f-8e78-ff71ee33ce80",
+          "id": "00915fd4-2dd5-4a94-ba31-9ff18447f040",
           "name": "borderColor",
           "displayName": "",
           "description": "",
@@ -420,7 +420,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "2be8b003-a0be-4eb9-a017-a65acb1f4572",
+          "id": "fbc71eb5-af13-4b04-962e-e025ac26de17",
           "name": "cardBgColor",
           "displayName": "",
           "description": "",
@@ -434,7 +434,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "4d16620e-91f0-4a73-bd2c-16991f9c9464",
+          "id": "3ad1db97-cff4-4b31-9925-0963ff3605a0",
           "name": "errorColor",
           "displayName": "",
           "description": "",
@@ -448,7 +448,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "9a342d85-c2f9-49af-8e43-9df0c944a813",
+          "id": "8355dec6-4b37-49b0-8a74-b9d59d9c44f3",
           "name": "errorLightColor",
           "displayName": "",
           "description": "",
@@ -462,7 +462,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "17f14332-b85c-4824-9de9-1f06a5dfd704",
+          "id": "c97c1919-6ac8-4432-a3ec-e6c04f4e694f",
           "name": "warningColor",
           "displayName": "",
           "description": "",
@@ -476,7 +476,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "425737a3-d362-42af-a51d-a557bf96e93a",
+          "id": "46867446-6b7a-49ab-9166-ef860b8f340f",
           "name": "warningLightColor",
           "displayName": "",
           "description": "",
@@ -490,7 +490,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "b0772ad7-134f-4f45-9132-970217de0d59",
+          "id": "919f9dbe-fae1-4a7c-9020-8b1e6056d991",
           "name": "successColor",
           "displayName": "",
           "description": "",
@@ -504,7 +504,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "72979498-9f11-40da-bff1-e53eb4e2e9c7",
+          "id": "b47dad61-9758-4574-8578-c2a0bb39a74d",
           "name": "successLightColor",
           "displayName": "",
           "description": "",
@@ -518,7 +518,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "e1052aee-5239-43ee-a770-0e24908e8779",
+          "id": "5aa92f37-d825-4a25-a343-c6594333e701",
           "name": "secondaryButtonBgColor",
           "displayName": "",
           "description": "",
@@ -532,7 +532,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "3102531d-ac83-4c14-b374-06d70facd6f2",
+          "id": "676cd714-59c1-4dbb-8583-974478de49f6",
           "name": "secondaryButtonTextColor",
           "displayName": "",
           "description": "",
@@ -546,7 +546,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "c97bd089-e854-433e-b488-bfb8b08d414e",
+          "id": "bb51e21f-534c-4724-bebb-39fa5ca06f74",
           "name": "secondaryButtonBorderColor",
           "displayName": "",
           "description": "",
@@ -11467,10 +11467,10 @@
                 "subLinks": []
               }
             ],
-            "content": "<h2 class=\"cq ci hq cs cl fr cn co cp\" style=\"-webkit-font-smoothing: antialiased; margin-bottom: 8px; font-weight: 500; direction: ltr; font-family: &quot;Chronicle Display&quot;, &quot;Times New Roman&quot;, serif, sans-serif, &quot;MSung PRC Medium&quot;; line-height: 1.25; color: rgb(17, 17, 17); font-size: 20px;\">ABOUT NET-A-PORTER</h2><div class=\"\" style=\"-webkit-font-smoothing: antialiased; color: rgb(0, 0, 0); font-family: &quot;Times New Roman&quot;; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400;\"><div style=\"-webkit-font-smoothing: antialiased;\"><div class=\"\" style=\"-webkit-font-smoothing: antialiased;\"><p class=\"hr ci fp hs cl fr co cp ht hu hv hw hx hy\" style=\"-webkit-font-smoothing: antialiased; font-weight: 500; direction: ltr; font-size: 14px; color: rgb(17, 17, 17); font-family: ChronicleText, Georgia, serif, sans-serif, &quot;MSung PRC Medium&quot;; line-height: 1.5; margin-bottom: 24px;\">NET‑A‑PORTER is the ultimate luxury fashion destination for women. Since 2000, it has offered customers a curated assortment of fashion, fine watches, jewelry and home décor, from the world’s most coveted brands.</p><p class=\"hr ci fp hs cl fr co cp ht hu hv hw hx hy\" style=\"-webkit-font-smoothing: antialiased; font-weight: 500; direction: ltr; font-size: 14px; color: rgb(17, 17, 17); font-family: ChronicleText, Georgia, serif, sans-serif, &quot;MSung PRC Medium&quot;; line-height: 1.5; margin-bottom: 24px;\">NET‑A‑PORTER creates unique experiences for its EIPs (Extremely Important People) with dedicated Personal Shoppers and invitation-only benefits.</p><p class=\"hr ci fp hs cl fr co cp ht hu hv hw hx hy\" style=\"-webkit-font-smoothing: antialiased; font-weight: 500; direction: ltr; font-size: 14px; color: rgb(17, 17, 17); font-family: ChronicleText, Georgia, serif, sans-serif, &quot;MSung PRC Medium&quot;; line-height: 1.5; margin-bottom: 24px;\">Through content, it provides expert styling advice, engaging storytelling and profiles incredible women via editorial vertical, PORTER. NET SUSTAIN, its product curation of consciously crafted luxury, and circular fashion services, Repair &amp; Rewear and NET‑A‑PORTER x Reflaunt, support customers to shop with a focus on conscious consumerism. NET‑A‑PORTER is part of LuxExperience, the leading digital, multi-brand luxury group.</p><h2 class=\"cq ci hq cs cl fr cn co cp\" style=\"margin-bottom: 8px; font-weight: 500; line-height: 1.25; font-size: 20px; -webkit-font-smoothing: antialiased; direction: ltr; font-family: &quot;Chronicle Display&quot;, &quot;Times New Roman&quot;, serif, sans-serif, &quot;MSung PRC Medium&quot;; color: rgb(17, 17, 17);\">ABOUT NET-A-PORTER</h2><div class=\"\" style=\"font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; font-size: medium; font-family: &quot;Times New Roman&quot;; -webkit-font-smoothing: antialiased;\"><div style=\"-webkit-font-smoothing: antialiased;\"><div class=\"\" style=\"-webkit-font-smoothing: antialiased;\"><p class=\"hr ci fp hs cl fr co cp ht hu hv hw hx hy\" style=\"margin-bottom: 24px; font-weight: 500; font-size: 14px; line-height: 1.5; font-family: ChronicleText, Georgia, serif, sans-serif, &quot;MSung PRC Medium&quot;; -webkit-font-smoothing: antialiased; direction: ltr; color: rgb(17, 17, 17);\">NET‑A‑PORTER is the ultimate luxury fashion destination for women. Since 2000, it has offered customers a curated assortment of fashion, fine watches, jewelry and home décor, from the world’s most coveted brands.</p><p class=\"hr ci fp hs cl fr co cp ht hu hv hw hx hy\" style=\"margin-bottom: 24px; font-weight: 500; font-size: 14px; line-height: 1.5; font-family: ChronicleText, Georgia, serif, sans-serif, &quot;MSung PRC Medium&quot;; -webkit-font-smoothing: antialiased; direction: ltr; color: rgb(17, 17, 17);\">NET‑A‑PORTER creates unique experiences for its EIPs (Extremely Important People) with dedicated Personal Shoppers and invitation-only benefits.</p><p class=\"hr ci fp hs cl fr co cp ht hu hv hw hx hy\" style=\"margin-bottom: 24px; font-weight: 500; font-size: 14px; line-height: 1.5; font-family: ChronicleText, Georgia, serif, sans-serif, &quot;MSung PRC Medium&quot;; -webkit-font-smoothing: antialiased; direction: ltr; color: rgb(17, 17, 17);\">Through content, it provides expert styling advice, engaging storytelling and profiles incredible women via editorial vertical, PORTER. NET SUSTAIN, its product curation of consciously crafted luxury, and circular fashion services, Repair &amp; Rewear and NET‑A‑PORTER x Reflaunt, support customers to shop with a focus on conscious consumerism. NET‑A‑PORTER is part of LuxExperience, the leading digital, multi-brand luxury group.</p><h2 class=\"cq ci hq cs cl fr cn co cp\" style=\"margin-bottom: 8px; font-weight: 500; line-height: 1.25; font-size: 20px; -webkit-font-smoothing: antialiased; direction: ltr; font-family: &quot;Chronicle Display&quot;, &quot;Times New Roman&quot;, serif, sans-serif, &quot;MSung PRC Medium&quot;; color: rgb(17, 17, 17);\">ABOUT NET-A-PORTER</h2><div class=\"\" style=\"font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; font-size: medium; font-family: &quot;Times New Roman&quot;; -webkit-font-smoothing: antialiased;\"><div style=\"-webkit-font-smoothing: antialiased;\"><div class=\"\" style=\"-webkit-font-smoothing: antialiased;\"><p class=\"hr ci fp hs cl fr co cp ht hu hv hw hx hy\" style=\"margin-bottom: 24px; font-weight: 500; font-size: 14px; line-height: 1.5; font-family: ChronicleText, Georgia, serif, sans-serif, &quot;MSung PRC Medium&quot;; -webkit-font-smoothing: antialiased; direction: ltr; color: rgb(17, 17, 17);\">NET‑A‑PORTER is the ultimate luxury fashion destination for women. Since 2000, it has offered customers a curated assortment of fashion, fine watches, jewelry and home décor, from the world’s most coveted brands.</p><p class=\"hr ci fp hs cl fr co cp ht hu hv hw hx hy\" style=\"margin-bottom: 24px; font-weight: 500; font-size: 14px; line-height: 1.5; font-family: ChronicleText, Georgia, serif, sans-serif, &quot;MSung PRC Medium&quot;; -webkit-font-smoothing: antialiased; direction: ltr; color: rgb(17, 17, 17);\">NET‑A‑PORTER creates unique experiences for its EIPs (Extremely Important People) with dedicated Personal Shoppers and invitation-only benefits.</p><p class=\"hr ci fp hs cl fr co cp ht hu hv hw hx hy\" style=\"margin-bottom: 24px; font-weight: 500; font-size: 14px; line-height: 1.5; font-family: ChronicleText, Georgia, serif, sans-serif, &quot;MSung PRC Medium&quot;; -webkit-font-smoothing: antialiased; direction: ltr; color: rgb(17, 17, 17);\">Through content, it provides expert styling advice, engaging storytelling and profiles incredible women via editorial vertical, PORTER. NET SUSTAIN, its product curation of consciously crafted luxury, and circular fashion services, Repair &amp; Rewear and NET‑A‑PORTER x Reflaunt, support customers to shop with a focus on conscious consumerism. NET‑A‑PORTER is part of LuxExperience, the leading digital, multi-brand luxury group.</p></div></div></div></div></div></div></div></div></div>",
-            "titleRight": "dwdwd",
-            "contentRight": "<span style=\"font-family: &quot;Twemoji Country Flags&quot;, Inter, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400;\">dwadwafwafwafwfdwadwadwadwadwadwadawd dwdwad dwdwad&nbsp;</span><span style=\"font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; font-size: 14px; font-family: &quot;Twemoji Country Flags&quot;, Inter, sans-serif;\">dwadwafwafwafwfdwadwadwadwadwadwadawd dwdwad dwdwad&nbsp;</span><span style=\"font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; font-size: 14px; font-family: &quot;Twemoji Country Flags&quot;, Inter, sans-serif;\">dwadwafwafwafwfdwadwadwadwadwadwadawd dwdwad dwdwad&nbsp;</span><span style=\"font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; font-size: 14px; font-family: &quot;Twemoji Country Flags&quot;, Inter, sans-serif;\">dwadwafwafwafwfdwadwadwadwadwadwadawd dwdwad dwdwad&nbsp;</span><span style=\"font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; font-size: 14px; font-family: &quot;Twemoji Country Flags&quot;, Inter, sans-serif;\">dwadwafwafwafwfdwadwadwadwadwadwadawd dwdwad dwdwad&nbsp;</span><span style=\"font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; font-size: 14px; font-family: &quot;Twemoji Country Flags&quot;, Inter, sans-serif;\">dwadwafwafwafwfdwadwadwadwadwadwadawd dwdwad dwdwad&nbsp;</span><span style=\"font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; font-size: 14px; font-family: &quot;Twemoji Country Flags&quot;, Inter, sans-serif;\">dwadwafwafwafwfdwadwadwadwadwadwadawd dwdwad dwdwad</span>",
-            "btnRight": "dwdwadwad",
+            "content": "<h2 class=\"cq ci hq cs cl fr cn co cp\" style=\"-webkit-font-smoothing: antialiased; margin-bottom: 8px; font-weight: 500; direction: ltr; font-family: &quot;Chronicle Display&quot;, &quot;Times New Roman&quot;, serif, sans-serif, &quot;MSung PRC Medium&quot;; line-height: 1.25; color: rgb(17, 17, 17); font-size: 20px;\"><p class=\"MsoNormal\" style=\"color: rgb(0, 0, 0); font-family: Helvetica; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400;\">Biz, Dizaynella ailesi olarak tasarımın gücüne, detayların fark yarattığına ve estetikle fonksiyonelliğin bir araya geldiğinde ortaya çıkan büyülü etkiye inanıyoruz.<o:p></o:p></p><p class=\"MsoNormal\" style=\"color: rgb(0, 0, 0); font-family: Helvetica; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400;\"><o:p>&nbsp;</o:p></p><p class=\"MsoNormal\" style=\"color: rgb(0, 0, 0); font-family: Helvetica; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400;\">Kuruluşumuzdan bu yana amacımız yalnızca ürün üretmek değil; hayata değer katan, duygulara dokunan, sizi yansıtan özel tasarımlar ortaya koymak oldu. Her bir parçamız; özenle seçilen materyaller, güçlü bir yaratıcı vizyon ve işçiliğe duyulan saygıyla hayat buluyor.<o:p></o:p></p><p class=\"MsoNormal\" style=\"color: rgb(0, 0, 0); font-family: Helvetica; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400;\"><o:p>&nbsp;</o:p></p><p class=\"MsoNormal\" style=\"color: rgb(0, 0, 0); font-family: Helvetica; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400;\">Bizim için tasarım; bir stil göstergesi olmanın ötesinde, kendini ifade etmenin en zarif yoludur. Bu yüzden her ürünümüz, yalnızca bir obje değil; karakteri, hikâyesi ve ruhu olan bir deneyim sunar.<o:p></o:p></p><p class=\"MsoNormal\" style=\"color: rgb(0, 0, 0); font-family: Helvetica; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400;\"><o:p>&nbsp;</o:p></p><p class=\"MsoNormal\" style=\"color: rgb(0, 0, 0); font-family: Helvetica; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400;\">Yeniliğe açık, sürdürülebilirliğe önem veren ve müşteri memnuniyetini odağında tutan bir anlayışla üretim yapıyoruz. Üretimden teslimata kadar tüm süreçlerde şeffaflık, titizlik ve güven ilkelerinden asla taviz vermiyoruz.<o:p></o:p></p><p class=\"MsoNormal\" style=\"color: rgb(0, 0, 0); font-family: Helvetica; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400;\"><o:p>&nbsp;</o:p></p><p class=\"MsoNormal\" style=\"color: rgb(0, 0, 0); font-family: Helvetica; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400;\">İster kendiniz için, ister sevdikleriniz için…<o:p></o:p></p><p class=\"MsoNormal\" style=\"color: rgb(0, 0, 0); font-family: Helvetica; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400;\">Dizaynella’da bulacağınız her parça; sizin zarafetinizi, stilinizi ve yaşam tarzınızı tamamlamak için tasarlandı.<o:p></o:p></p><p class=\"MsoNormal\" style=\"color: rgb(0, 0, 0); font-family: Helvetica; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400;\"><o:p>&nbsp;</o:p></p><p class=\"\" data-start=\"263\" data-end=\"473\" style=\"color: rgb(0, 0, 0); font-family: Helvetica; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; -webkit-tap-highlight-color: transparent;\"></p><p class=\"MsoNormal\" style=\"color: rgb(0, 0, 0); font-family: Helvetica; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400;\">Çünkü biz, sıradanı değil; sizi yansıtan özgünlüğü tasarlıyoruz.</p></h2>",
+            "titleRight": "Yardıma mı İhtiyacınız Var?",
+            "contentRight": "<p style=\"font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; font-size: 14px; font-family: &quot;Twemoji Country Flags&quot;, Inter, sans-serif;\">Herhangi bir sorunuz varsa lütfen Müşteri Hizmetlerini ziyaret edin.</p><p style=\"font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; font-size: 14px; font-family: &quot;Twemoji Country Flags&quot;, Inter, sans-serif;\">info@dizaynella.com.tr&nbsp;</p><p style=\"font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; font-size: 14px; font-family: &quot;Twemoji Country Flags&quot;, Inter, sans-serif;\">+90 554 895 2220</p>",
+            "btnRight": "Hemen İletişime Geç",
             "btnRightLink": {
               "id": "b67c3f12-b143-41e0-b444-02a3a7b7fec2",
               "linkType": "PAGE",
@@ -13131,12 +13131,21 @@
             ],
             "contents": [
               {
-                "question": "dwadwad"
+                "question": "Sipariş vermek için bir hesaba ihtiyacım var mı?",
+                "answer": "<p style=\"font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; font-size: 14px; font-family: &quot;Twemoji Country Flags&quot;, Inter, sans-serif;\">Hesap oluşturmadan alışveriş yapabilirsiniz. Ancak, bize kaydolursanız aşağıdaki avantajlardan yararlanabilirsiniz:</p><p style=\"font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; font-size: 14px; font-family: &quot;Twemoji Country Flags&quot;, Inter, sans-serif;\"><br></p><p style=\"font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; font-size: 14px; font-family: &quot;Twemoji Country Flags&quot;, Inter, sans-serif;\">Siparişlerinizi takip edin ve geçmiş satın alımlarınızı inceleyin</p><p style=\"font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; font-size: 14px; font-family: &quot;Twemoji Country Flags&quot;, Inter, sans-serif;\"><br></p><p style=\"font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; font-size: 14px; font-family: &quot;Twemoji Country Flags&quot;, Inter, sans-serif;\">Hesabınızdan doğrudan değişim veya iade talebinde bulunun</p><p style=\"font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; font-size: 14px; font-family: &quot;Twemoji Country Flags&quot;, Inter, sans-serif;\"><br></p><p style=\"font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; font-size: 14px; font-family: &quot;Twemoji Country Flags&quot;, Inter, sans-serif;\">Sevdiğiniz veya kaçırdığınız parçaları Gelince Haber ver Listenize ekleyin</p><p style=\"font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; font-size: 14px; font-family: &quot;Twemoji Country Flags&quot;, Inter, sans-serif;\"><br></p><p style=\"font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; font-size: 14px; font-family: &quot;Twemoji Country Flags&quot;, Inter, sans-serif;\">Adresinizi ve kart bilgilerinizi kaydedin, böylece gelecekte daha hızlı alışveriş yapabilirsiniz</p>"
+              },
+              {
+                "question": "Şifremi nasıl değişebilirim?",
+                "answer": "<span style=\"font-family: &quot;Twemoji Country Flags&quot;, Inter, sans-serif; font-size: 14px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400;\">Şifrenizi unuttuysanız, sıfırlamak için bir bağlantı isteyin veya 'Giriş Yap' sayfasındaki 'Şifremi unuttum' talimatlarını izleyin.</span>"
+              },
+              {
+                "question": "Siparişimdeki bir ürünü değiştirebilir veya iptal edebilir miyim?",
+                "answer": "<p style=\"font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; font-size: 14px; font-family: &quot;Twemoji Country Flags&quot;, Inter, sans-serif;\">Siparişinizin durumuna bağlı olarak, bir ürünü iptal etmeniz veya farklı bir bedenle değiştirmeniz mümkün olabilir. Lütfen mevcut bir siparişe ürün ekleyemediğimizi veya birleştiremediğimizi unutmayın.</p><p style=\"font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; font-size: 14px; font-family: &quot;Twemoji Country Flags&quot;, Inter, sans-serif;\"><br></p><p style=\"font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; font-size: 14px; font-family: &quot;Twemoji Country Flags&quot;, Inter, sans-serif;\">Satın aldığınız üründe herhangi bir değişiklik yapmanız gerekiyorsa lütfen en kısa sürede Müşteri Hizmetleri ekibimizi arayın, ne yapabileceğimize bakalım.</p>"
               }
             ],
-            "titleRight": "dwadwad",
-            "contentRight": "dwadwad",
-            "btnRight": "dwadwad",
+            "titleRight": "Yardıma mı İhtiyacınız Var?",
+            "contentRight": "<p style=\"font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; font-size: 14px; font-family: &quot;Twemoji Country Flags&quot;, Inter, sans-serif;\">Herhangi bir sorunuz varsa lütfen Müşteri Hizmetlerini ziyaret edin.</p><p style=\"font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; font-size: 14px; font-family: &quot;Twemoji Country Flags&quot;, Inter, sans-serif;\">info@dizaynella.com.tr&nbsp;</p><p style=\"font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; font-size: 14px; font-family: &quot;Twemoji Country Flags&quot;, Inter, sans-serif;\">+90 554 895 2220</p>",
+            "btnRight": "Hemen İletişime Geç",
             "btnRightLink": {
               "id": "6a8249f8-7028-4a98-b702-2e78f89a95bc",
               "linkType": "PAGE",

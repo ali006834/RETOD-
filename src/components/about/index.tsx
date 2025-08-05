@@ -56,12 +56,20 @@ const AboutUs: React.FC<AboutProps> = (props) => {
         </div>
         <div className={styles.contentGrid}>
           <div className={styles.mainContent}>
-            {content && <div dangerouslySetInnerHTML={{ __html: content }} />}
+            {content && (
+              <div
+                className={styles.content}
+                dangerouslySetInnerHTML={{ __html: content }}
+              />
+            )}
           </div>
           <div className={styles.sideContent}>
             <h3>{titleRight}</h3>
             {contentRight && (
-              <p dangerouslySetInnerHTML={{ __html: contentRight }} />
+              <p
+                className={styles.contentRight}
+                dangerouslySetInnerHTML={{ __html: contentRight }}
+              />
             )}
             {btnRightLink && (
               <Link href={btnRightLink} passHref>
