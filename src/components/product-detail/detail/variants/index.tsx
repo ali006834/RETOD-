@@ -333,10 +333,15 @@ const SwatchVariantValue = observer(
             return (
               <div
                 key={dVV.variantValue.id}
-                className={styles.color_item_no_stock}
+                className={
+                  isSelected
+                    ? styles.color_item_no_stock_selected
+                    : styles.color_item_no_stock
+                }
                 style={{
                   backgroundColor: dVV.variantValue.colorCode || "#ccc",
                 }}
+                onClick={() => onVariantValueChange(dVV)}
                 title={`${dVV.variantValue.name} - Stokta Yok`}
               />
             );
