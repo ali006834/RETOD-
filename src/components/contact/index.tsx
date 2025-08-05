@@ -7,6 +7,7 @@ import { useScreen } from "src/utils/hooks/useScreen";
 import { toJS } from "mobx";
 import DotIcon from "./svg/dot";
 import ContactForm from "./form";
+// import ContactForm from "./form/emailjs-version"; // EmailJS kullanmak için bu satırı aktif edin
 
 const Contact: React.FC<ContactProps> = (props) => {
   const {

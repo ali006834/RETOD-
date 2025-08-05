@@ -41,25 +41,25 @@ const ContactForm: React.FC<ContactFormProps> = ({
   >([]);
   const [subSubTopics, setSubSubTopics] = React.useState<Array<any>>([]);
 
-  // Dosya yükleme için state ve referans
-  const [files, setFiles] = React.useState<File[]>([]);
-  const fileInputRef = useRef<HTMLInputElement>(null);
+  // Dosya yükleme için state ve referans - Web3Forms Pro gerekli, geçici kapatıldı
+  // const [files, setFiles] = React.useState<File[]>([]);
+  // const fileInputRef = useRef<HTMLInputElement>(null);
 
   // Loading state
   const [isSubmitting, setIsSubmitting] = React.useState(false);
 
-  // Dosya yükleme işlemi
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files) {
-      const newFiles = Array.from(e.target.files).slice(0, 4 - files.length);
-      setFiles((prev) => [...prev, ...newFiles]);
-    }
-  };
+  // Dosya yükleme işlemi - Web3Forms Pro gerekli, geçici kapatıldı
+  // const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  //   if (e.target.files) {
+  //     const newFiles = Array.from(e.target.files).slice(0, 4 - files.length);
+  //     setFiles((prev) => [...prev, ...newFiles]);
+  //   }
+  // };
 
   // Dosya silme işlemi
-  const removeFile = (index: number) => {
-    setFiles((prev) => prev.filter((_, i) => i !== index));
-  };
+  // const removeFile = (index: number) => {
+  //   setFiles((prev) => prev.filter((_, i) => i !== index));
+  // };
 
   // Form verilerini güncelleme fonksiyonu
   const handleChange = (
@@ -79,24 +79,34 @@ const ContactForm: React.FC<ContactFormProps> = ({
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Form verilerini kontrol et
+    // Web3Forms için form verilerini hazırla
     const formDataToSend = new FormData();
+
+    // Web3Forms access key - Bu anahtarı web3forms.com'dan almanız gerekiyor
+    formDataToSend.append("access_key", "d47a27f7-ea3f-459b-8453-9c1b6a91d3bf"); // Bu anahtarı değiştirin
+
+    // Form verilerini ekle
     Object.entries(formData).forEach(([key, value]) => {
       formDataToSend.append(key, value);
     });
-    files.forEach((file) => {
-      formDataToSend.append("files", file);
-    });
+
+    // Dosyaları ekle - Web3Forms Pro özelliği gerekli
+    // files.forEach((file, index) => {
+    //   formDataToSend.append(`file_${index}`, file);
+    // });
+
+    // Honeypot spam koruması
+    formDataToSend.append("botcheck", "");
 
     try {
-      const response = await fetch("/api/contact", {
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         body: formDataToSend,
       });
 
       const result = await response.json();
 
-      if (response.ok) {
+      if (response.ok && result.success) {
         alert("Mesajınız başarıyla gönderildi!");
         // Formu sıfırla
         setFormData({
@@ -112,25 +122,15 @@ const ContactForm: React.FC<ContactFormProps> = ({
           email: "",
           message: "",
         });
-        setFiles([]);
+        // setFiles([]); // Web3Forms Pro gerekli
       } else {
         throw new Error(result.message || "Bir hata oluştu");
       }
     } catch (error) {
       console.error("Gönderim hatası:", error);
 
-      // API'den gelen hata mesajını göster
       if (error instanceof Error) {
-        try {
-          const errorData = JSON.parse(error.message);
-          alert(
-            `Hata: ${errorData.message}\n\nDetay: ${
-              errorData.error || "Bilinmeyen hata"
-            }`
-          );
-        } catch {
-          alert(`Hata: ${error.message}`);
-        }
+        alert(`Hata: ${error.message}`);
       } else {
         alert("Mesaj gönderilirken bir hata oluştu. Lütfen tekrar deneyin.");
       }
@@ -187,6 +187,15 @@ const ContactForm: React.FC<ContactFormProps> = ({
         </p>
 
         <form onSubmit={handleSubmit} className={styles.contact_form}>
+          {/* Honeypot field for spam protection - keep this hidden */}
+          <input
+            type="checkbox"
+            name="botcheck"
+            style={{ display: "none" }}
+            tabIndex={-1}
+            autoComplete="off"
+          />
+
           {/* Topic Selection */}
           <div className={styles.form_row}>
             <div className={styles.form_group}>
@@ -347,7 +356,8 @@ const ContactForm: React.FC<ContactFormProps> = ({
             />
           </div>
 
-          {/* File Upload */}
+          {/* File Upload - Web3Forms Pro özelliği gerekli, geçici olarak kapatıldı */}
+          {/* 
           <div className={styles.form_group}>
             <label>
               {t(`${NS}:photos`)} - {t(`${NS}:maxPhotoLimit`)}
@@ -385,6 +395,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
               </div>
             </div>
           </div>
+          */}
 
           <button
             type="submit"
