@@ -90,6 +90,7 @@ const Slider = (props: ProductDetailProps) => {
   return (
     <div className={styles.slider_wrapper}>
       <div className="product_swiper">
+        {/* web */}
         <div className={styles.web_image}>
           <div className={styles.gallery_container}>
             {/* Ana fotoğraflar - Alt alta dizili */}
@@ -230,14 +231,19 @@ const Slider = (props: ProductDetailProps) => {
                         src={image.image.src}
                         style={{
                           width: "100%",
-                          height: "100%",
+                          aspectRatio: "6 / 9",
                           objectFit: "cover",
+                          maxHeight: "1620px",
                         }}
                       />
                     ) : (
-                      <img
-                        src={image.image?.src}
+                      <Image
+                        image={image.image as any}
                         alt={image.image?.altText || ""}
+                        width={1080}
+                        height={1620}
+                        objectFit="cover"
+                        useBlur={true}
                       />
                     )}
                   </div>

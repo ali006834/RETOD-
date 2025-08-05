@@ -152,6 +152,7 @@ const ImagePopUp = ({
                             width: "100%",
                             height: "100%",
                             objectFit: "cover",
+                            margin: "auto",
                           }}
                         >
                           <source src={item.image?.src} type="video/mp4" />
@@ -164,6 +165,7 @@ const ImagePopUp = ({
                           height: "90%",
                           objectFit: "contain",
                           overflow: "hidden",
+                          margin: "auto",
                         }}
                       >
                         <Image

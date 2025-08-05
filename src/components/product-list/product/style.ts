@@ -150,6 +150,12 @@ export const ProductTag = styled.div`
   &:hover {
     color: #979897;
   }
+
+  @media screen and (max-width: ${breakpoints.sm}) {
+    font-size: 10px;
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+  }
 `;
 
 export const ProductTagsRatio = styled.span`

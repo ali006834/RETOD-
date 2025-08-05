@@ -28,9 +28,9 @@
   gap: 5px;
 }
 .tittle_container a {
-  font-family: "HelveticaNeueLight" !important;
+  font-family: "Helvetica" !important;
+  font-weight: 400;
   font-style: normal;
-  font-weight: bolder;
   color: #272727;
   line-height: 1.7;
   text-decoration: none;
@@ -50,7 +50,8 @@
 .title {
   font-size: 14px;
   color: #272727;
-  font-family: "HelveticaNeueLight" !important;
+  font-family: "Helvetica" !important;
+  font-weight: 400;
   line-height: 1.7;
 }
 .product_list_products {
@@ -59,7 +60,8 @@
   gap: 30px;
 }
 .product_list_no_product {
-  font-family: "HelveticaNeueLight" !important;
+  font-family: "Helvetica" !important;
+  font-weight: 400;
   margin-top: 20px;
 }
 .product_list_top {
@@ -211,7 +213,8 @@
   background-color: transparent;
   border: none;
   font-size: 16px;
-  font-family: "HelveticaNeueLight" !important;
+  font-family: "Helvetica" !important;
+  font-weight: 400;
   text-decoration: underline;
   text-underline-offset: 8px;
   cursor: pointer;
@@ -271,11 +274,15 @@
   }
 
   .tittle_container a {
-    font-size: 12px;
+    font-size: 11px;
+  }
+
+  .tittle_container svg {
+    width: 9px;
   }
 
   .title {
-    font-size: 12px;
+    font-size: 11px;
   }
 }
 .selected {

@@ -81,7 +81,7 @@ const Product = (props: Props) => {
         </Link>
       </div>
       <div className={styles.product_Info}>
-        {isMobile && (
+        {/* {isMobile && (
           <>
             <Button onClick={() => setIsOpen(true)} block>
               {t("common:product.addToCart")}
@@ -100,7 +100,7 @@ const Product = (props: Props) => {
               </S.VariantsWrapper>
             </MinimalMobileModal>
           </>
-        )}
+        )} */}
         {ifColumnNotEqual6 && !ifColumnEqual5 && !ifColumnEqual4 && (
           <>
             <ProductTitle {...props} />

@@ -2,6 +2,7 @@ import { observer } from "mobx-react-lite";
 import { FooterProps } from "../__generated__/types";
 import styles from "./style.module.css";
 import { Image, Link } from "@ikas/storefront";
+import { useRouter } from "next/router";
 
 import EmailSubscription from "./email-subscription";
 import { LanguageSelect } from "../language";
@@ -23,15 +24,22 @@ const Footer: React.FC<FooterProps> = (props) => {
   } = props;
 
   const { t } = useTranslation();
+  const router = useRouter();
 
   const shoppingPoliciesArr = toJS(shoppingPolicies);
   const socialMediaListArr = toJS(socialMediaList);
   const acceptedCardsArr = toJS(footerLower?.acceptedCardsImages);
 
+  // Ana sayfa kontrolü
+  const isHomePage = router.pathname === "/";
+
   return (
     <div className={styles.footerContainer}>
       {/*//= Upper Footer */}
-      <div className={styles.upperFooter}>
+      <div
+        className={styles.upperFooter}
+        style={{ marginTop: isHomePage ? "0" : "40px" }}
+      >
         {/*//+ Üst Footer Top */}
         <div className={styles.upperFooterTop}>
           {/* Email Subscription - 6 columns */}

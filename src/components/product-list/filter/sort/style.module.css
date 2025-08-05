@@ -61,3 +61,13 @@
 .arrowRotated {
   transform: rotate(180deg);
 }
+
+@media screen and (max-width: 500px) {
+  .featuredSelect_title {
+    padding: 6px 8px;
+  }
+  .featuredSelect span svg {
+    width: 18px;
+    height: 18px;
+  }
+}
