@@ -38,7 +38,6 @@ const faq: React.FC<FaqProps> = (props) => {
 
   const sssOptions = contents
     ? toJS(contents).map((item: any) => {
-        console.log("item::", item); // item'ı konsola yazdır
         return {
           title: item?.question,
           content: item?.answer,

@@ -14,7 +14,7 @@
       "componentJson": null,
       "props": [
         {
-          "id": "c0a12539-1e8b-4c6f-bfac-c3a29c867c53",
+          "id": "d6331f38-3c6f-47a3-8553-9123b9bb2e29",
           "name": "logo",
           "displayName": "",
           "description": "",
@@ -28,7 +28,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "e45a5aa8-f0ac-4841-8454-cf15e4be7b66",
+          "id": "f5819088-1f0c-43b7-bc1d-ea01a8e63b8d",
           "name": "showTax",
           "displayName": "",
           "description": "",
@@ -42,7 +42,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "7d9e93f3-b965-41ba-b583-a23ec4b5221b",
+          "id": "26eaa020-3590-4bf5-9f43-927874f1426e",
           "name": "showCampaignOffersDesign",
           "displayName": "",
           "description": "",
@@ -56,7 +56,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "e797eca3-f906-4e6e-b166-5bd8daf54818",
+          "id": "146bfb9d-61c9-4c09-bb6d-c9136e7d6a31",
           "name": "campaignOfferIsSmallDesign",
           "displayName": "",
           "description": "",
@@ -70,7 +70,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "0c931d2e-ceee-44e7-8a1d-7ada719a8e2c",
+          "id": "ee942247-264b-4236-9e80-399b2827b231",
           "name": "showCampaignIsBiggerImage",
           "displayName": "",
           "description": "",
@@ -84,7 +84,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "55f7109f-c699-48a2-92b3-3a7151a4fc7f",
+          "id": "7cc9cd02-e5ad-468a-8235-6acaba551504",
           "name": "campaignOffersTitleColor",
           "displayName": "",
           "description": "",
@@ -98,7 +98,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "8491f917-2a1f-41ce-9eba-08f101fc2be0",
+          "id": "0d468dd4-73ea-4931-9b28-49064b2a52d6",
           "name": "campaignOffersDescriptionColor",
           "displayName": "",
           "description": "",
@@ -112,7 +112,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "7d49f53b-bef8-475e-9a6b-2a5d6fe6c64a",
+          "id": "2fc957e2-4040-4d89-ad8c-783f319ff674",
           "name": "campaignOffersContainerBgColor",
           "displayName": "",
           "description": "",
@@ -126,7 +126,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "24029201-51a3-4a94-8ac4-5626462ac803",
+          "id": "338d4736-7d07-414c-96c5-18cb3388b218",
           "name": "showCampaignShowDiscountSettings",
           "displayName": "",
           "description": "",
@@ -140,7 +140,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "2566f101-9f95-42b8-9adb-36ff5c1a4dea",
+          "id": "f7edbf9f-1558-46b2-96d3-2776a8c5740c",
           "name": "showCampaignHideDiscountBadge",
           "displayName": "",
           "description": "",
@@ -154,7 +154,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "e6ea4bc5-b672-4aa7-848a-2cb90e049f9e",
+          "id": "59c56db7-8c8a-4bdc-b394-e289f4a6038a",
           "name": "campaignOffersDiscountPercentageColor",
           "displayName": "",
           "description": "",
@@ -168,7 +168,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "3a891b18-b815-4952-a6bf-478e27af8b36",
+          "id": "4c2851b7-9e42-4125-902e-6847c4faca83",
           "name": "campaignOffersDiscountPercentageBgColor",
           "displayName": "",
           "description": "",
@@ -182,7 +182,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "f289c017-98e8-4783-a063-8b11b7989443",
+          "id": "007e93c8-687f-4671-a801-c22c23785705",
           "name": "showCampaignShowCountdownSettings",
           "displayName": "",
           "description": "",
@@ -196,7 +196,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "d90426f3-8cc9-4a3c-a44e-30fb28dc3a1f",
+          "id": "492ec0ee-3d35-4646-bf94-cd3dc58f7006",
           "name": "campaignOfferCountdownStyleIsLine",
           "displayName": "",
           "description": "",
@@ -210,7 +210,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "fdc1fdb4-2914-45c1-ab19-b710b063329d",
+          "id": "7476bd05-13ab-46a3-ae47-a2286d007bf9",
           "name": "campaignOffersCountdownTextColor",
           "displayName": "",
           "description": "",
@@ -224,7 +224,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "bb92e628-6e0c-4952-b93e-c3f594b8cae8",
+          "id": "762599b4-7818-424f-864a-e52a08fe068a",
           "name": "campaignOffersCountdownTimeColor",
           "displayName": "",
           "description": "",
@@ -238,7 +238,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "622a6b54-8e64-44b9-9d7e-dab1efbb0b4d",
+          "id": "cab6ba06-f259-40b0-8671-5b756453d220",
           "name": "campaignOffersCountdownBgColor",
           "displayName": "",
           "description": "",
@@ -252,7 +252,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "db90fb00-1272-464a-b3e1-e12d1442b656",
+          "id": "d008be73-ed91-49e1-9aca-79240834475d",
           "name": "campaignOffersEnableMiddlePhase",
           "displayName": "",
           "description": "",
@@ -266,7 +266,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "3555d6dc-7827-420f-992b-05cbad154964",
+          "id": "5b0ae73d-8556-4bcc-8f25-e4d006772dc8",
           "name": "campaignOffersMiddlePhaseOverlayColor",
           "displayName": "",
           "description": "",
@@ -280,7 +280,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "3ccf51e5-0ebd-45bc-b55c-b64023636d88",
+          "id": "9c0d6981-2aca-4d2e-a00c-aef3a98595bf",
           "name": "campaignOfferCountdownStyleIsLineSuccessPage",
           "displayName": "",
           "description": "",
@@ -294,7 +294,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "71fbf0b9-af16-49c3-b50a-296d0ae3468d",
+          "id": "ebf35336-92e8-4c5c-a711-3902b5b457b2",
           "name": "buttonBgColor",
           "displayName": "",
           "description": "",
@@ -308,7 +308,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "4ab507cd-0be8-42a9-9b0c-5282d864d286",
+          "id": "eac04db2-b82a-445e-ba66-646a89ca8c4e",
           "name": "buttonTextColor",
           "displayName": "",
           "description": "",
@@ -322,7 +322,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "759282d1-ae14-4014-9585-c8f785948604",
+          "id": "9f5ebe1a-f913-4564-8edf-6dc95d0a7cee",
           "name": "buttonDisabledBgColor",
           "displayName": "",
           "description": "",
@@ -336,7 +336,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "308b73be-be39-4004-8029-38c3061c74b5",
+          "id": "23d71466-e59b-48ec-a7c7-7ab154527b55",
           "name": "buttonDisabledTextColor",
           "displayName": "",
           "description": "",
@@ -350,7 +350,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "00f4c4be-a731-4df1-8f87-83c92375d54e",
+          "id": "3c90e477-0636-4907-b3ff-c66c407292e0",
           "name": "primaryTextColor",
           "displayName": "",
           "description": "",
@@ -364,7 +364,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "896956d4-953b-4fcd-90b8-b5289a124698",
+          "id": "6cb5b43f-0e20-48b5-8da5-bdb78a644ef2",
           "name": "secondaryTextColor",
           "displayName": "",
           "description": "",
@@ -378,7 +378,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "167ee00c-f214-4737-a598-31df958ead4f",
+          "id": "28777569-da27-47ee-81af-5a959ec85ddf",
           "name": "primaryBgColor",
           "displayName": "",
           "description": "",
@@ -392,7 +392,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "a4cd96f5-3562-4c6d-a616-7483e15d5163",
+          "id": "1aa18431-22b6-4d14-bab3-ec3e095e415e",
           "name": "secondaryBgColor",
           "displayName": "",
           "description": "",
@@ -406,7 +406,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "8574e1cc-0e99-4a60-81eb-deac6aae8ff8",
+          "id": "0c058bcd-0c1d-4eb3-af91-fdf7a1681824",
           "name": "borderColor",
           "displayName": "",
           "description": "",
@@ -420,7 +420,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "0d03f045-b66e-4666-b7ca-78142e3140fb",
+          "id": "a99a445f-c74c-4e39-bbfe-98b312806856",
           "name": "cardBgColor",
           "displayName": "",
           "description": "",
@@ -434,7 +434,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "b7540dcc-348d-402e-8563-ec0cb0193c19",
+          "id": "c71abad9-4421-4d38-9032-79656c786207",
           "name": "errorColor",
           "displayName": "",
           "description": "",
@@ -448,7 +448,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "a344b5cc-830a-467f-9cbf-e80faf2c6881",
+          "id": "2f8eaffc-ff47-4c3d-81da-b60caf71eecc",
           "name": "errorLightColor",
           "displayName": "",
           "description": "",
@@ -462,7 +462,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "af37158d-ecd8-4dd0-b077-3b86eee0f0f2",
+          "id": "cadd734d-9ade-4737-8b03-be210851c8e6",
           "name": "warningColor",
           "displayName": "",
           "description": "",
@@ -476,7 +476,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "5e1479bc-e830-4acd-be31-e67d606925c6",
+          "id": "91f76d1c-d7f2-4387-9700-a4afc9632715",
           "name": "warningLightColor",
           "displayName": "",
           "description": "",
@@ -490,7 +490,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "67b74bb7-a690-4b4a-82de-3ea3008ec3c9",
+          "id": "038dd0f0-bbfb-4c9b-b1c7-4ba9cb000488",
           "name": "successColor",
           "displayName": "",
           "description": "",
@@ -504,7 +504,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "9daafbf1-6dbd-448f-8485-d6d1bc904b36",
+          "id": "512c12db-5d61-4dd7-bc26-8837b2c64cf5",
           "name": "successLightColor",
           "displayName": "",
           "description": "",
@@ -518,7 +518,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "c4e1f40c-5e47-4faa-aa81-f44612b92a4f",
+          "id": "769f8b93-35ec-4930-969d-2823f27d09a7",
           "name": "secondaryButtonBgColor",
           "displayName": "",
           "description": "",
@@ -532,7 +532,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "f218fd55-d737-44e5-976d-613a637b343a",
+          "id": "ec102cbf-bbdb-4a2b-8c22-9447befd1a48",
           "name": "secondaryButtonTextColor",
           "displayName": "",
           "description": "",
@@ -546,7 +546,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "692486df-cbe3-4a6f-96ad-5dc19c01e5fa",
+          "id": "7e2c6d3d-ad49-48bd-877f-5ae6a847456f",
           "name": "secondaryButtonBorderColor",
           "displayName": "",
           "description": "",
@@ -3832,6 +3832,21 @@
           "name": "rewardPackages",
           "displayName": "Ödül Paketleri",
           "description": "Ödül Paketleri",
+          "type": "CUSTOM",
+          "isRequired": false,
+          "customDataId": "fe2e0f49-c013-4497-b7e8-1773d183c8df",
+          "sliderData": {},
+          "translations": {},
+          "groupId": "3ff89e55-abca-42d6-bdfe-31774abd6f42",
+          "excludedFields": [],
+          "excludedFieldsCategory": [],
+          "isFacetListNotSent": false
+        },
+        {
+          "id": "454182b4-4494-42e4-bc0d-2ab759f4e621",
+          "name": "awardNotes",
+          "displayName": "Ödül Paket Notu (Varsa)",
+          "description": "Ödül Paket Notu (Varsa)",
           "type": "TEXT",
           "isRequired": false,
           "sliderData": {},
@@ -12722,6 +12737,8 @@
           "id": "f9e09d0d-31d6-4720-a29e-98c9f31115e3",
           "componentId": "3741d21b-ab7d-47b7-be97-32e4f2038ea1",
           "propValues": {
+            "title": "awsw",
+            "textPicture": "dwad",
             "imageWeb": {
               "id": "theme-images/52b4fe06-043c-4eb5-a89d-6e5e4459fe81",
               "altText": null
@@ -12730,8 +12747,6 @@
               "id": "theme-images/179ef4e7-65f2-474e-935c-1b3293de7064",
               "altText": null
             },
-            "title": "awsw",
-            "textPicture": "dwad",
             "footer_links": [
               {
                 "id": "71806d01-3f73-4a66-a92e-0ea9f4d6a07e",
@@ -14679,8 +14694,6 @@
               }
             ],
             "formTitle": "<p style=\"margin-bottom: 25px; color: rgb(85, 85, 85); font-family: HelveticaNeueLight; font-size: 17.6px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; text-align: justify;\">Sizlerden gelen öneriler ve şikayetler, en kaliteli hizmeti sunabilmemiz açısından bizim için çok değerlidir.&nbsp;<b>DİZAYNELLA&nbsp;</b>markası, mağazaları ve online alışveriş ile ilgili her türlü görüşleriniz için çağrı merkezimize pazar günleri hariç her gün&nbsp;<b>09:00- 20:00</b>&nbsp;arasında ulaşabilirsiniz. Ayrıca aşağıdaki iletişim formunu doldurarak da sorularınızı bize iletebilirsiniz. En kısa sürede size yanıt vereceğiz.</p><p style=\"margin-bottom: 25px; color: rgb(85, 85, 85); font-family: HelveticaNeueLight; font-size: 17.6px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; text-align: justify;\">* yazılmış alanların doldurulması zorunludur.</p>",
-            "contactInformation": "<p style=\"color: rgb(0, 0, 0); font-family: HelveticaNeueLight; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; text-align: center;\">İLETİŞİM BİLGİLERİ</p><p style=\"color: rgb(0, 0, 0); font-family: HelveticaNeueLight; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; text-align: center;\"><br></p><p style=\"color: rgb(0, 0, 0); font-family: HelveticaNeueLight; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; text-align: center;\">Merkez, Birahane Sk. No:7, 34381 Bomonti Şişli İstanbul</p><p style=\"color: rgb(0, 0, 0); font-family: HelveticaNeueLight; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; text-align: center;\"><br></p><p style=\"color: rgb(0, 0, 0); font-family: HelveticaNeueLight; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; text-align: center;\">Müşteri Hizmetleri</p><p style=\"color: rgb(0, 0, 0); font-family: HelveticaNeueLight; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; text-align: center;\">Çalışma Saatleri: Hafta içi 09:00-20:00, Cumartesi 09:00-20:00</p><p style=\"color: rgb(0, 0, 0); font-family: HelveticaNeueLight; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; text-align: center;\"><br></p><p style=\"color: rgb(0, 0, 0); font-family: HelveticaNeueLight; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; text-align: center;\"></p><p style=\"color: rgb(0, 0, 0); font-family: HelveticaNeueLight; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; text-align: center;\">0554 895 22 20</p><p style=\"color: rgb(0, 0, 0); font-family: HelveticaNeueLight; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; text-align: center;\">info@dizaynella.com.tr</p>",
-            "mapLink": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.414812008918!2d28.97584278944413!3d41.05992454236467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab710a1c2210f%3A0xbe9884d3b0e6ca43!2sDizaynElla!5e0!3m2!1str!2str!4v1754304224617!5m2!1str!2str\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
             "contactForm": [
               {
                 "name": "Şikayet",
@@ -14712,7 +14725,9 @@
                   }
                 ]
               }
-            ]
+            ],
+            "contactInformation": "<p style=\"color: rgb(0, 0, 0); font-family: HelveticaNeueLight; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; text-align: center;\">İLETİŞİM BİLGİLERİ</p><p style=\"color: rgb(0, 0, 0); font-family: HelveticaNeueLight; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; text-align: center;\"><br></p><p style=\"color: rgb(0, 0, 0); font-family: HelveticaNeueLight; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; text-align: center;\">Merkez, Birahane Sk. No:7, 34381 Bomonti Şişli İstanbul</p><p style=\"color: rgb(0, 0, 0); font-family: HelveticaNeueLight; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; text-align: center;\"><br></p><p style=\"color: rgb(0, 0, 0); font-family: HelveticaNeueLight; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; text-align: center;\">Müşteri Hizmetleri</p><p style=\"color: rgb(0, 0, 0); font-family: HelveticaNeueLight; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; text-align: center;\">Çalışma Saatleri: Hafta içi 09:00-20:00, Cumartesi 09:00-20:00</p><p style=\"color: rgb(0, 0, 0); font-family: HelveticaNeueLight; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; text-align: center;\"><br></p><p style=\"color: rgb(0, 0, 0); font-family: HelveticaNeueLight; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; text-align: center;\"></p><p style=\"color: rgb(0, 0, 0); font-family: HelveticaNeueLight; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; text-align: center;\">0554 895 22 20</p><p style=\"color: rgb(0, 0, 0); font-family: HelveticaNeueLight; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; text-align: center;\">info@dizaynella.com.tr</p>",
+            "mapLink": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.414812008918!2d28.97584278944413!3d41.05992454236467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab710a1c2210f%3A0xbe9884d3b0e6ca43!2sDizaynElla!5e0!3m2!1str!2str!4v1754304224617!5m2!1str!2str\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
           }
         }
       ],
@@ -16196,6 +16211,33 @@
               "id": "theme-images/7f649993-534c-4556-8de8-7a536d99c84d",
               "altText": null
             },
+            "awardTitle": "Our Rewards Program",
+            "awardContent": "<p>NET‑A‑PORTER Rewards offers exclusive benefits based on your annual spend. The more you shop, the more you’ll unlock, including early access to sales, brand collaborations, priority customer service and your own Personal Shopper.</p><p>Explore our benefits:</p>",
+            "productShowcaseTitle": "Can we tempt you?",
+            "productShowcaseContent": "<span style=\"color: rgb(17, 17, 17); font-family: ChronicleText, Georgia, serif, sans-serif, &quot;MSung PRC Medium&quot;; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 325; text-align: center; white-space-collapse: preserve-breaks;\">Explore our curated selection of new items</span>",
+            "showcaseProducts": {
+              "id": "6b64e667-2dee-4d94-845f-6b5c26a57d7a",
+              "productListType": "ALL",
+              "initialSort": "LAST_ADDED",
+              "initialLimit": 20,
+              "productCount": null,
+              "productIds": null,
+              "category": null,
+              "usePageFilter": null,
+              "relatedProductsType": null,
+              "recommendedProductsType": {
+                "recommendedProductType": "CATEGORY"
+              }
+            },
+            "productShowcaseBtnLink": {
+              "id": "d99101be-b88b-42df-b892-0e3396c51028",
+              "linkType": "PAGE",
+              "label": "Anasayfa",
+              "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+              "pageType": "INDEX",
+              "pageComponentId": null,
+              "subLinks": []
+            },
             "contents": [
               {
                 "question": "Dizaynella Rewards nedir?",
@@ -16211,35 +16253,76 @@
               }
             ],
             "contentsTitle": "Sıkça sorulan sorular",
-            "contentsOrientation": "Loyalty Terms and Conditions\nAny other questions? Have a look at more FAQs",
-            "awardTitle": "Our Rewards Program",
-            "awardContent": "NET‑A‑PORTER Rewards offers exclusive benefits based on your annual spend. The more you shop, the more you’ll unlock, including early access to sales, brand collaborations, priority customer service and your own Personal Shopper.\n\nExplore our benefits:",
-            "productShowcaseTitle": "Can we tempt you?",
-            "productShowcaseContent": "<span style=\"color: rgb(17, 17, 17); font-family: ChronicleText, Georgia, serif, sans-serif, &quot;MSung PRC Medium&quot;; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 325; text-align: center; white-space-collapse: preserve-breaks;\">Explore our curated selection of new items</span>",
-            "productShowcaseBtnLink": {
-              "id": "d99101be-b88b-42df-b892-0e3396c51028",
-              "linkType": "PAGE",
-              "label": "Anasayfa",
-              "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
-              "pageType": "INDEX",
-              "pageComponentId": null,
-              "subLinks": []
-            },
-            "rewardPackages": "Deneme",
-            "showcaseProducts": {
-              "id": "6b64e667-2dee-4d94-845f-6b5c26a57d7a",
-              "productListType": "ALL",
-              "initialSort": "LAST_ADDED",
-              "initialLimit": 20,
-              "productCount": null,
-              "productIds": null,
-              "category": null,
-              "usePageFilter": null,
-              "relatedProductsType": null,
-              "recommendedProductsType": {
-                "recommendedProductType": "CATEGORY"
+            "contentsOrientation": "<p style=\"text-decoration: underline;\">Loyalty Terms and Conditions</p>\n<p>Any other questions? Have a look at more <span style=\"text-decoration: underline;\">FAQs</span></p>",
+            "awardNotes": "Deneme Notu",
+            "rewardPackages": [
+              {
+                "packageImage": {
+                  "id": "theme-images/f9e9fd4e-3f3b-439f-9f78-dd6dc372abcb",
+                  "altText": null
+                },
+                "packageTitle": "Bronz",
+                "spendingLimit": "0 - 500TL",
+                "packageBenefits": [
+                  {
+                    "title": "dwd",
+                    "description": "dwadwad"
+                  },
+                  {
+                    "title": "dwad"
+                  },
+                  {
+                    "title": "dwad"
+                  },
+                  {
+                    "title": "dwad"
+                  }
+                ]
+              },
+              {
+                "packageImage": {
+                  "id": "theme-images/45bdf5b1-be5b-4909-934c-775534e54323",
+                  "altText": null
+                },
+                "packageTitle": "dwad",
+                "spendingLimit": "dwadwad",
+                "packageBenefits": [
+                  {
+                    "title": "dwad"
+                  },
+                  {
+                    "title": "dwad"
+                  }
+                ]
+              },
+              {
+                "packageImage": {
+                  "id": "theme-images/9ec66d03-1fae-4e14-b888-a171081f2d88",
+                  "altText": null
+                },
+                "packageTitle": "dwa",
+                "spendingLimit": "dwadwadwad",
+                "packageBenefits": [
+                  {
+                    "title": "dwad",
+                    "description": "dwadwad"
+                  }
+                ]
+              },
+              {
+                "packageImage": {
+                  "id": "theme-images/95a0c346-e10a-4124-a619-8e19e0e22156",
+                  "altText": null
+                },
+                "packageTitle": "dwa",
+                "spendingLimit": "dwad",
+                "packageBenefits": [
+                  {
+                    "title": "dwa"
+                  }
+                ]
               }
-            }
+            ]
           }
         }
       ],
@@ -18366,6 +18449,163 @@
               "isRequired": false,
               "key": "departments",
               "customDataId": "fc11fc9b-bde0-4250-8404-072e2b573edc",
+              "sliderData": {},
+              "groupId": "",
+              "isRoot": false,
+              "level": 2,
+              "excludedFields": [],
+              "excludedFieldsCategory": [],
+              "isFacetListNotSent": false
+            }
+          ],
+          "sliderData": {},
+          "groupId": "",
+          "isRoot": false,
+          "level": 1,
+          "excludedFields": [],
+          "excludedFieldsCategory": [],
+          "isFacetListNotSent": false
+        }
+      ],
+      "sliderData": {},
+      "groupId": "",
+      "isRoot": true,
+      "level": 0,
+      "excludedFields": [],
+      "excludedFieldsCategory": [],
+      "isFacetListNotSent": false
+    },
+    {
+      "id": "141c076c-a7f5-4bd3-afa9-3e4a1033dfd2",
+      "name": "PackageBenefits",
+      "translations": {},
+      "type": "DYNAMIC_LIST",
+      "isRequired": true,
+      "nestedData": [
+        {
+          "id": "1b24869e-4ac5-467d-934b-c9ec0b1776f0",
+          "name": "Paket Avantajı",
+          "typescriptName": "PackageBenefits",
+          "translations": {},
+          "type": "OBJECT",
+          "isRequired": false,
+          "nestedData": [
+            {
+              "id": "fcb9ba92-315d-41c3-b619-588687b49823",
+              "name": "Başlık Metni",
+              "translations": {},
+              "type": "TEXT",
+              "isRequired": false,
+              "key": "title",
+              "sliderData": {},
+              "groupId": "",
+              "isRoot": false,
+              "level": 2,
+              "excludedFields": [],
+              "excludedFieldsCategory": [],
+              "isFacetListNotSent": false
+            },
+            {
+              "id": "49bed0eb-a578-41b8-9adb-6e9e68292ff8",
+              "name": "Açıklama Metni",
+              "translations": {},
+              "type": "RICH_TEXT",
+              "isRequired": false,
+              "key": "description",
+              "sliderData": {},
+              "groupId": "",
+              "isRoot": false,
+              "level": 2,
+              "excludedFields": [],
+              "excludedFieldsCategory": [],
+              "isFacetListNotSent": false
+            }
+          ],
+          "sliderData": {},
+          "groupId": "",
+          "isRoot": false,
+          "level": 1,
+          "excludedFields": [],
+          "excludedFieldsCategory": [],
+          "isFacetListNotSent": false
+        }
+      ],
+      "sliderData": {},
+      "groupId": "",
+      "isRoot": true,
+      "level": 0,
+      "excludedFields": [],
+      "excludedFieldsCategory": [],
+      "isFacetListNotSent": false
+    },
+    {
+      "id": "fe2e0f49-c013-4497-b7e8-1773d183c8df",
+      "name": "Packages",
+      "translations": {},
+      "type": "DYNAMIC_LIST",
+      "isRequired": true,
+      "nestedData": [
+        {
+          "id": "cde2d5f8-2678-4951-9be5-71846abf3464",
+          "name": "Paket",
+          "typescriptName": "Packages",
+          "translations": {},
+          "type": "OBJECT",
+          "isRequired": false,
+          "nestedData": [
+            {
+              "id": "16cf2623-7b78-456a-8d98-80ac8fb79fc3",
+              "name": "Paket Görseli",
+              "translations": {},
+              "type": "IMAGE",
+              "isRequired": false,
+              "key": "packageImage",
+              "sliderData": {},
+              "groupId": "",
+              "isRoot": false,
+              "level": 2,
+              "excludedFields": [],
+              "excludedFieldsCategory": [],
+              "isFacetListNotSent": false
+            },
+            {
+              "id": "97c31501-350e-4771-8397-34821e613bb8",
+              "name": "Paket Başlık Metni",
+              "translations": {},
+              "type": "TEXT",
+              "isRequired": false,
+              "key": "packageTitle",
+              "sliderData": {},
+              "groupId": "",
+              "isRoot": false,
+              "level": 2,
+              "excludedFields": [],
+              "excludedFieldsCategory": [],
+              "isFacetListNotSent": false
+            },
+            {
+              "id": "e666d47e-fa70-4e9e-a3c6-a06f71c4f3a0",
+              "name": "Harcama Limiti",
+              "translations": {},
+              "type": "TEXT",
+              "isRequired": false,
+              "key": "spendingLimit",
+              "sliderData": {},
+              "groupId": "",
+              "isRoot": false,
+              "level": 2,
+              "excludedFields": [],
+              "excludedFieldsCategory": [],
+              "isFacetListNotSent": false
+            },
+            {
+              "id": "65e750ac-a5bb-41b8-81b0-e442fb71ed76",
+              "name": "Paket Avantajı",
+              "translations": {},
+              "type": "CUSTOM",
+              "isRequired": false,
+              "key": "packageBenefits",
+              "customDataId": "141c076c-a7f5-4bd3-afa9-3e4a1033dfd2",
               "sliderData": {},
               "groupId": "",
               "isRoot": false,

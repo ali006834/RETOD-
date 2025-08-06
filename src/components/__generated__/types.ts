@@ -178,6 +178,18 @@ export type CareerForm = {
 	departments?: Position;
 };
 
+export type PackageBenefits = { 
+	title?: string;
+	description?: string;
+};
+
+export type Packages = { 
+	packageImage?: IkasImage;
+	packageTitle?: string;
+	spendingLimit?: string;
+	packageBenefits?: PackageBenefits;
+};
+
 export type HeaderProps = {
 	logo?: IkasImage;
 	logo_black?: IkasImage;
@@ -471,7 +483,8 @@ export type RewardsProps = {
 	imageMobile?: IkasImage;
 	awardTitle?: string;
 	awardContent?: string;
-	rewardPackages?: string;
+	rewardPackages?: Packages[];
+	awardNotes?: string;
 	productShowcaseTitle?: string;
 	productShowcaseContent?: string;
 	showcaseProducts?: IkasProductList;

@@ -16,6 +16,7 @@ const rewards: React.FC<RewardsProps> = (props) => {
     awardTitle,
     awardContent,
     rewardPackages,
+    awardNotes,
 
     productShowcaseTitle,
     productShowcaseContent,
@@ -28,6 +29,10 @@ const rewards: React.FC<RewardsProps> = (props) => {
   } = props;
 
   const { isMobile } = useScreen();
+
+  console.log("rewardPackages::", rewardPackages);
+  const rewardPackagesArr = toJS(rewardPackages);
+  console.log("rewardPackagesArr::", rewardPackagesArr);
 
   // Her bir seçenek için açılma durumunu tutacak state
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -43,7 +48,6 @@ const rewards: React.FC<RewardsProps> = (props) => {
 
   const sssOptions = contents
     ? toJS(contents).map((item: any) => {
-        console.log("item::", item); // item'ı konsola yazdır
         return {
           title: item?.question,
           content: item?.answer,
@@ -87,14 +91,64 @@ const rewards: React.FC<RewardsProps> = (props) => {
             />
           )}
 
-          {rewardPackages && Array.isArray(rewardPackages) && (
-            <div className={styles.rewardPackages}>
-              {rewardPackages.map((packageItem: any, index: number) => (
-                <div key={index} className={styles.packageCard}>
-                  {packageItem.title && <h3>{packageItem.title}</h3>}
-                  {packageItem.description && <p>{packageItem.description}</p>}
-                  {packageItem.price && (
-                    <span className={styles.price}>{packageItem.price}</span>
+          {/*//+ Rewards Paketleri  */}
+          {rewardPackagesArr && (
+            <div className={styles.rewardPackagesGrid}>
+              {rewardPackagesArr.map((packageItem: any, index: number) => (
+                <div key={index} className={styles.packageCardCustom}>
+                  {/* Package Header (Title + Spending Limit) */}
+                  <div className={styles.packageHeader}>
+                    <span className={styles.packageTitle}>
+                      {packageItem?.packageTitle}
+                    </span>
+                    <span className={styles.spendingLimit}>
+                      {packageItem?.spendingLimit}
+                    </span>
+                  </div>
+
+                  {/* Package Image */}
+                  {packageItem?.packageImage && (
+                    <div className={styles.packageImageWrapper}>
+                      <Image
+                        // width={1500}
+                        // height={325}
+                        objectFit="contain"
+                        layout="fill"
+                        useBlur={true}
+                        image={packageItem?.packageImage}
+                        alt={
+                          packageItem?.packageImage?.altText ||
+                          packageItem?.packageTitle ||
+                          "Reward package"
+                        }
+                      />
+                    </div>
+                  )}
+
+                  {/* Package Benefits Grid */}
+                  {packageItem?.packageBenefits &&
+                    Array.isArray(packageItem?.packageBenefits) && (
+                      <div className={styles.packageBenefitsGrid}>
+                        {packageItem?.packageBenefits.map(
+                          (benefit: any, bIndex: number) => (
+                            <div key={bIndex} className={styles.benefitItem}>
+                              <div className={styles.benefitTitle}>
+                                {benefit?.title}
+                              </div>
+                              {benefit?.description && (
+                                <div className={styles.benefitDescription}>
+                                  {benefit?.description}
+                                </div>
+                              )}
+                            </div>
+                          )
+                        )}
+                      </div>
+                    )}
+
+                  {/* Award Notes */}
+                  {awardNotes && (
+                    <div className={styles.awardNotes}>{awardNotes}</div>
                   )}
                 </div>
               ))}
@@ -137,9 +191,9 @@ const rewards: React.FC<RewardsProps> = (props) => {
                 <div key={index} className={styles.productCard}>
                   {product.featuredImage && (
                     <Image
-                      layout="responsive"
-                      width="300px"
-                      height="400px"
+                      layout={"responsive"}
+                      width={300}
+                      height={400}
                       objectFit="cover"
                       useBlur={true}
                       image={product.featuredImage}
