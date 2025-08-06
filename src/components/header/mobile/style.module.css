@@ -1,6 +1,8 @@
 .mobile_category_container {
   width: 100%;
-  padding: 20px 0;
+  padding: 15px 20px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 15px;
 }
 
 .mobile_category_container ul li {
@@ -15,7 +17,6 @@
 }
 
 .top_category_wrapper {
-  border-bottom: 1px solid #e5e7eb;
   padding: 7px 0;
 }
 
@@ -32,7 +33,7 @@
 
 .top_category_content a {
   color: #000;
-  padding: 10px;
+  padding: 10px 0 10px;
   font-family: "Helvetica" !important;
   font-weight: 400;
 }
@@ -48,8 +49,8 @@
 
 .mobil_back {
   position: absolute;
-  top: -60px;
-  left: 10px;
+  top: -5px;
+  left: 20px;
   z-index: 9999999;
 }
 
@@ -143,7 +144,7 @@
   width: 350px;
   max-width: 100%;
   z-index: 99999;
-  padding: 24px 0;
+  padding: 24px 0 0;
   transition: transform 300ms ease-in-out;
   overflow: auto;
   display: flex;
@@ -161,26 +162,202 @@
 
 .sidenavHeader {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 0 8px;
   align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 15px;
 }
 
-.sidenavlang {
-  width: 100%;
-  height: 52px;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  border-top: 1px solid #99999933;
-  padding: 15px 0px;
-  z-index: 1;
+.locationRegisterSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.locationText {
+  font-family: "Helvetica" !important;
+  font-weight: 400;
+  color: #000;
+  font-size: 16px;
+}
+
+.registerButton {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  font-family: "Helvetica" !important;
+  font-weight: 400;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.userSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.userButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  font-family: "Helvetica" !important;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.userButton span {
+  color: #fff;
+}
+
+.customerCategories {
+  padding: 15px 20px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 15px;
+}
+
+.categoryItem {
+  padding: 10px 0;
+}
+
+.categoryItem:last-child {
+  border-bottom: none;
+}
+
+.categoryItem a {
+  text-decoration: none;
+  color: #000;
+  font-family: "Helvetica" !important;
+  font-weight: 300;
+  font-size: 16px;
+  display: block;
+}
+
+.helpSection {
+  padding: 15px 20px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 15px;
+}
+
+.helpTitle {
+  font-family: "Helvetica" !important;
+  font-weight: 400;
+  font-size: 14px;
+  color: #000;
+  margin: 0 0 8px 0;
+  text-transform: uppercase;
+}
+
+.helpText {
+  font-family: "Helvetica" !important;
+  font-weight: 300;
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.helpLink {
+  color: #666;
+  text-decoration: underline;
+  font-family: "Helvetica" !important;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.helpLink:hover {
+  color: #000;
+}
+
+.parent_category_title {
+  padding: 15px 20px;
+  border-bottom: 1px solid #ddd;
+  background-color: #f8f9fa;
+  margin-top: -20px;
+}
+
+.parent_category_title h2 {
+  font-family: "Helvetica" !important;
+  font-weight: 400;
+  font-size: 18px;
+  color: #000;
+  margin: 0;
+  text-align: center;
+}
+
+.mobile_text_categories {
+  padding: 15px 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.mobile_text_category_item {
+  padding: 12px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.mobile_text_category_item:last-child {
+  border-bottom: none;
+}
+
+.mobile_text_category_item a {
+  text-decoration: none;
+  color: #000;
+  font-family: "Helvetica" !important;
+  font-weight: 300;
+  font-size: 16px;
+  display: block;
+  white-space: nowrap;
+}
+
+.mobile_category_images {
+  padding: 20px;
+  gap: 10px;
+}
+
+.mobile_category_image_item {
+  overflow: hidden;
+}
+
+.mobile_category_image_item a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.mobile_category_image {
+  height: 280px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.mobile_category_image_info {
+  padding: 15px;
   background-color: #fff;
 }
 
-.sidenavlang div {
-  padding-left: 5px;
-  box-sizing: border-box;
+.mobile_category_image_title {
+  font-family: "Helvetica" !important;
+  font-weight: 400;
+  font-size: 16px;
+  color: #000;
+  margin: 0 0 8px 0;
+}
+
+.mobile_category_image_description {
+  font-family: "Helvetica" !important;
+  font-weight: 300;
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+  line-height: 1.4;
 }
 
 .rightSide {
@@ -262,7 +439,7 @@
   background: none;
   border: none;
   cursor: pointer;
-  padding-top: 10px;
+  padding: 9px 8px 0 0;
   display: flex;
   justify-content: flex-end;
 }

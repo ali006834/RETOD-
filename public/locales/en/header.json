@@ -21,5 +21,14 @@
   },
   "new_arrivals": "New Arrivals",
   "specailForYou": "Special For You",
-  "beginShopping": "BEGIN SHOPPING"
+  "beginShopping": "BEGIN SHOPPING",
+
+  "mobileHeader": {
+    "signIn": "Sign In / Register",
+    "customerService": "Customer Service",
+    "wishList": "Wish List",
+    "needHelp": "Need Help?",
+    "helpText": "For any enquiries please visit Dizaynella ",
+    "visitLink": "Customer Care"
+  }
 }

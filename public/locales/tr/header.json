@@ -2,6 +2,7 @@
   "searchInput": {
     "placeholder": "Mağazada ara"
   },
+
   "summary": {
     "title": "Sepet Özeti",
     "subTotal": "Ara Toplam: ",
@@ -11,6 +12,7 @@
     "checkout": "ŞİMDİ SATIN AL",
     "cart": "Ödemeyi Tamamla"
   },
+
   "headerButton_text": {
     "close": "Kapat",
     "search": "Ara",
@@ -19,7 +21,17 @@
     "favorite": "Favoriler",
     "cart": "Sepet"
   },
+
   "new_arrivals": "Yeni Eklenenler",
   "specailForYou": "Sizin İçin Seçtiklerimiz",
-  "beginShopping": "ALIŞVERİŞE BAŞLAYIN"
+  "beginShopping": "ALIŞVERİŞE BAŞLAYIN",
+
+  "mobileHeader": {
+    "signIn": "Oturum Aç / Kayıt Ol",
+    "customerService": "Müşteri Hizmetleri",
+    "wishList": "Favori Listem",
+    "needHelp": "Yardım İste",
+    "helpText": "Herhangi bir sorunuz varsa lütfen Dizaynella Müşteri Hizmetlerine",
+    "visitLink": "ziyaret edin"
+  }
 }

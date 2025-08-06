@@ -15,6 +15,10 @@ import IOCloseSVG from "src/components/svg/close";
 import styles from "./style.module.css";
 import ArrowRightBlack from "src/components/svg/arrow-right";
 import LeftArrow from "src/components/svg/left-arrow";
+import NextIcon from "src/components/svg/next";
+import PrevIcon from "src/components/svg/prev";
+
+import ScrollingText from "../scrolling-text";
 
 import CartModal from "../desktop/cartModal";
 import { useRouter } from "next/router";
@@ -25,6 +29,7 @@ import { Bell } from "src/components/header/desktop";
 const MobileHeader = (props: HeaderProps) => {
   return (
     <>
+      <ScrollingText {...props} />
       <header className={styles.header}>
         <div className={styles.row}>
           <LeftSide {...props} />
@@ -80,6 +85,17 @@ const Center = observer((props: HeaderProps) => {
 const Sidenav = observer((props: HeaderProps) => {
   const uiStore = UIStore.getInstance();
   const { logo } = props;
+  const [userToken, setUserToken] = useState<string | null>("");
+  const [expandedCategories, setExpandedCategories] = useState<string[]>([]);
+  const [categoryHistory, setCategoryHistory] = useState<string[]>([]);
+
+  const { t } = useTranslation();
+
+  useEffect(() => {
+    const token: string | null = localStorage.getItem("customerToken");
+    setUserToken(token);
+  }, []);
+
   if (!logo) {
     return null;
   }
@@ -99,15 +115,14 @@ const Sidenav = observer((props: HeaderProps) => {
       >
         <div>
           <div className={styles.sidenavHeader}>
-            <div style={{ width: "15%" }}></div>
-            <div style={{ width: "65%", textAlign: "center" }}>
+            <div style={{ width: "70%", textAlign: "center" }}>
               <Link href="/">
                 <a>
                   <Image
                     image={logo}
                     alt={logo?.altText || ""}
-                    width={230}
-                    height={30}
+                    width={180}
+                    height={18}
                   />
                 </a>
               </Link>
@@ -115,29 +130,94 @@ const Sidenav = observer((props: HeaderProps) => {
             <button
               className={styles.sidenavCloseButton}
               onClick={uiStore.toggleSidenav}
-              style={{ width: "20%" }}
+              style={{ width: "30%" }}
             >
               <IOCloseSVG />
             </button>
           </div>
-          <Navigation {...props} />
-        </div>
-        <div className={styles.sidenavlang}>
-          <LanguageSelect />
+          {expandedCategories.length === 0 && (
+            <div className={styles.locationRegisterSection}>
+              <div className={styles.locationText}>
+                <LanguageSelect />
+              </div>
+              <div className={styles.userSection}>
+                {userToken ? (
+                  <Link href="/account">
+                    <a className={styles.userButton}>
+                      <UserIcon width="16px" height="16px" color="#fff" />
+                      <span>{t(`header:headerButton_text.account`)}</span>
+                    </a>
+                  </Link>
+                ) : (
+                  <Link href="/account/login">
+                    <a className={styles.userButton}>
+                      <UserIcon width="16px" height="16px" color="#fff" />
+                      <span>{t(`header:mobileHeader.signIn`)}</span>
+                    </a>
+                  </Link>
+                )}
+              </div>
+            </div>
+          )}
+          <Navigation
+            {...props}
+            expandedCategories={expandedCategories}
+            setExpandedCategories={setExpandedCategories}
+            categoryHistory={categoryHistory}
+            setCategoryHistory={setCategoryHistory}
+          />
+          <div className={styles.customerCategories}>
+            <div className={styles.categoryItem}>
+              <Link href="/customer-service">
+                <a>{t(`header:mobileHeader.customerService`)}</a>
+              </Link>
+            </div>
+            <div className={styles.categoryItem}>
+              <Link href="/account/favorite-products">
+                <a>{t(`header:mobileHeader.wishList`)}</a>
+              </Link>
+            </div>
+          </div>
+          <div className={styles.helpSection}>
+            <h3 className={styles.helpTitle}>
+              {t(`header:mobileHeader.needHelp`)}
+            </h3>
+            <p className={styles.helpText}>
+              {t(`header:mobileHeader.helpText`)}{" "}
+              <Link href="/customer-service">
+                <a
+                  href="/account/favorite-products"
+                  className={styles.helpLink}
+                >
+                  {t(`header:mobileHeader.visitLink`)}
+                </a>
+              </Link>
+            </p>
+          </div>
         </div>
       </div>
     </>
   );
 });
 
-const Navigation = (props: HeaderProps) => {
-  const { categoryMenu } = props;
+const Navigation = (
+  props: HeaderProps & {
+    expandedCategories: string[];
+    setExpandedCategories: React.Dispatch<React.SetStateAction<string[]>>;
+    categoryHistory: string[];
+    setCategoryHistory: React.Dispatch<React.SetStateAction<string[]>>;
+  }
+) => {
+  const {
+    categoryMenu,
+    expandedCategories,
+    setExpandedCategories,
+    categoryHistory,
+    setCategoryHistory,
+  } = props;
   if (!categoryMenu) {
     return null;
   }
-
-  const [expandedCategories, setExpandedCategories] = useState<string[]>([]);
-  const [categoryHistory, setCategoryHistory] = useState<string[]>([]);
 
   const toggleCategory = (categoryId: string) => {
     setCategoryHistory((prev) => [...prev, categoryId]);
@@ -169,44 +249,153 @@ const Navigation = (props: HeaderProps) => {
 
     return (
       <ul>
-        {childCategories.map((childCategory) => (
-          <li key={childCategory.id} className={styles.top_category_wrapper}>
-            <div className={styles.top_category_content}>
-              {categoryMenu.data.some(
-                (item) => item.parentId === childCategory.id
-              ) ? (
-                <>
-                  <Link href={childCategory.href}>
-                    <a>{childCategory.name}</a>
-                  </Link>
-                  <span onClick={() => toggleCategory(childCategory.id)}>
-                    {!expandedCategories.includes(childCategory.id) && (
-                      <ArrowRightBlack />
-                    )}
-                  </span>
-                </>
-              ) : (
-                <Link href={childCategory.href}>
-                  <a>{childCategory.name}</a>
-                </Link>
-              )}
-            </div>
-            <div>
-              {expandedCategories.includes(childCategory.id) && (
-                <ul className={styles.mobil_fixed_menu}>
-                  <div className={styles.mobil_back}>
-                    <span onClick={goBack}>
-                      <LeftArrow />
+        {childCategories.map((childCategory) => {
+          // Check if this specific category has child categories with images
+          const childCategoriesWithImages = categoryMenu.data.filter(
+            (item) => item.parentId === childCategory.id && item.image !== null
+          );
+          const hasImagesInChildren = childCategoriesWithImages.length > 0;
+
+          return (
+            <li key={childCategory.id} className={styles.top_category_wrapper}>
+              <div className={styles.top_category_content}>
+                {categoryMenu.data.some(
+                  (item) => item.parentId === childCategory.id
+                ) ? (
+                  <>
+                    <Link href={childCategory.href}>
+                      <a>{childCategory.name.toLocaleUpperCase("tr-TR")}</a>
+                    </Link>
+                    <span onClick={() => toggleCategory(childCategory.id)}>
+                      {!expandedCategories.includes(childCategory.id) && (
+                        <NextIcon width="24px" height="24px" />
+                      )}
                     </span>
-                  </div>
-                  {renderCategories(childCategory.id)}
-                </ul>
-              )}
-            </div>
-          </li>
-        ))}
+                  </>
+                ) : (
+                  <Link href={childCategory.href}>
+                    <a>{childCategory.name.toLocaleUpperCase("tr-TR")}</a>
+                  </Link>
+                )}
+              </div>
+              <div>
+                {expandedCategories.includes(childCategory.id) && (
+                  <ul className={styles.mobil_fixed_menu}>
+                    <div className={styles.mobil_back}>
+                      <span onClick={goBack}>
+                        <PrevIcon width="24px" height="24px" />
+                      </span>
+                    </div>
+                    <div className={styles.parent_category_title}>
+                      <h2>{childCategory.name.toLocaleUpperCase("tr-TR")}</h2>
+                    </div>
+                    {renderMixedCategories(childCategory.id)}
+                  </ul>
+                )}
+              </div>
+            </li>
+          );
+        })}
       </ul>
     );
+  };
+
+  const renderMixedCategories = (parentId: string) => {
+    const allChildCategories = categoryMenu.data.filter(
+      (item) => item.parentId === parentId
+    );
+
+    const categoriesWithoutImages = allChildCategories.filter(
+      (item) => item.image === null || item.image === undefined
+    );
+
+    const categoriesWithImages = allChildCategories.filter(
+      (item) => item.image !== null && item.image !== undefined
+    );
+
+    return (
+      <>
+        {/* First show categories without images */}
+        {categoriesWithoutImages.length > 0 && (
+          <div className={styles.mobile_text_categories}>
+            {categoriesWithoutImages.map((category) => (
+              <div
+                key={category.id}
+                className={styles.mobile_text_category_item}
+              >
+                <Link href={category.href}>
+                  <a>{category.name.toLocaleUpperCase("tr-TR")}</a>
+                </Link>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* Then show categories with images */}
+        {categoriesWithImages.length > 0 && (
+          <div className={styles.mobile_category_images}>
+            {categoriesWithImages.map((category) => (
+              <div
+                key={category.id}
+                className={styles.mobile_category_image_item}
+              >
+                <Link href={category.href}>
+                  <a>
+                    <img
+                      src={category.image?.src}
+                      alt={category.image?.altText || category.name}
+                      className={styles.mobile_category_image}
+                    />
+                    <div className={styles.mobile_category_image_info}>
+                      <h3 className={styles.mobile_category_image_title}>
+                        {category.name}
+                      </h3>
+                      {category.description && (
+                        <p className={styles.mobile_category_image_description}>
+                          {category.description}
+                        </p>
+                      )}
+                    </div>
+                  </a>
+                </Link>
+              </div>
+            ))}
+          </div>
+        )}
+      </>
+    );
+  };
+
+  const renderCategoriesWithImages = (parentId: string) => {
+    const childCategories = categoryMenu.data.filter(
+      (item) => item.parentId === parentId && item.image !== null
+    );
+
+    return childCategories.map((category) => (
+      <div key={category.id} className={styles.mobile_category_image_item}>
+        <Link href={category.href}>
+          <a>
+            <img
+              src={category.image?.src}
+              alt={category.image?.altText || category.name}
+              width={200}
+              height={100}
+              className={styles.mobile_category_image}
+            />
+            <div className={styles.mobile_category_image_info}>
+              <h3 className={styles.mobile_category_image_title}>
+                {category.name}
+              </h3>
+              {category.description && (
+                <p className={styles.mobile_category_image_description}>
+                  {category.description}
+                </p>
+              )}
+            </div>
+          </a>
+        </Link>
+      </div>
+    ));
   };
 
   const router = useRouter();
@@ -257,20 +446,6 @@ const RightSide = observer((props: HeaderProps) => {
         <Link href="/account/favorite-products">
           <a>
             <FavoriteSVG width="20px" height="20px" color="#000" />
-          </a>
-        </Link>
-      )}
-
-      {userToken ? (
-        <Link href="/account">
-          <a>
-            <UserIcon width="20px" height="20px" color="#000" />
-          </a>
-        </Link>
-      ) : (
-        <Link href="/account/login">
-          <a>
-            <UserIcon width="20px" height="20px" color="#000" />
           </a>
         </Link>
       )}

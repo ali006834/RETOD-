@@ -2,6 +2,7 @@
   "searchInput": {
     "placeholder": "Поиск в магазине"
   },
+
   "summary": {
     "title": "Итого корзины",
     "subTotal": "Промежуточный итог: ",
@@ -11,6 +12,7 @@
     "checkout": "Оформить заказ",
     "cart": "Завершить оплату"
   },
+
   "headerButton_text": {
     "close": "Закрыть",
     "search": "Поиск",
@@ -19,7 +21,17 @@
     "favorite": "Избранное",
     "cart": "Корзина"
   },
+
   "new_arrivals": "Новинки",
   "specailForYou": "Специально для вас",
-  "beginShopping": "НАЧАТЬ ПОКУПКИ"
+  "beginShopping": "НАЧАТЬ ПОКУПКИ",
+
+  "mobileHeader": {
+    "signIn": "Войти / Зарегистрироваться",
+    "customerService": "Служба поддержки",
+    "wishList": "Избранное",
+    "needHelp": "Нужна помощь?",
+    "helpText": "Для любых вопросов, пожалуйста, посетите Dizaynella",
+    "visitLink": "Служба поддержки"
+  }
 }

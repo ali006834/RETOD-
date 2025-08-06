@@ -19,8 +19,6 @@ const BlogList: React.FC<BlogListsProps> = (props: BlogListsProps) => {
   // Blog'a ait kategori adını al..
   const categoryArr = toJS(props.blogs?.data[0]?.category);
 
-  console.log("dwadwad:::", props.blogs?.data);
-
   // Blogların görsellerini ve başlıklarını render eden fonksiyon
   const renderBlogItem = (item: any) => (
     <div className={styles.blogItem} key={item.id}>

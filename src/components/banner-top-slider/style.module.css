@@ -73,11 +73,10 @@
 /* Text overlay stilleri */
 .textOverlay {
   position: absolute;
-  bottom: 40px;
-  left: 40px;
+  bottom: 90px;
+  left: 45px;
   z-index: 5;
   color: white;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
   max-width: 400px;
   z-index: 999;
 }
