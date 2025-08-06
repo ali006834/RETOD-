@@ -14,7 +14,7 @@
       "componentJson": null,
       "props": [
         {
-          "id": "d6331f38-3c6f-47a3-8553-9123b9bb2e29",
+          "id": "2b44955c-a26f-45b1-a1c8-a0583d07a033",
           "name": "logo",
           "displayName": "",
           "description": "",
@@ -28,7 +28,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "f5819088-1f0c-43b7-bc1d-ea01a8e63b8d",
+          "id": "09f6e073-5db7-456e-b7f7-c99aa9bb4db3",
           "name": "showTax",
           "displayName": "",
           "description": "",
@@ -42,7 +42,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "26eaa020-3590-4bf5-9f43-927874f1426e",
+          "id": "99b2d82b-9f38-4ef2-94a6-1704176c2423",
           "name": "showCampaignOffersDesign",
           "displayName": "",
           "description": "",
@@ -56,7 +56,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "146bfb9d-61c9-4c09-bb6d-c9136e7d6a31",
+          "id": "a3ac1ba7-db00-4328-b182-45ea2d393f66",
           "name": "campaignOfferIsSmallDesign",
           "displayName": "",
           "description": "",
@@ -70,7 +70,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "ee942247-264b-4236-9e80-399b2827b231",
+          "id": "fddbb189-8780-41e0-a934-7b2d33d73192",
           "name": "showCampaignIsBiggerImage",
           "displayName": "",
           "description": "",
@@ -84,7 +84,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "7cc9cd02-e5ad-468a-8235-6acaba551504",
+          "id": "adc41af5-69a6-4dcf-bcf5-33eca5c2920b",
           "name": "campaignOffersTitleColor",
           "displayName": "",
           "description": "",
@@ -98,7 +98,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "0d468dd4-73ea-4931-9b28-49064b2a52d6",
+          "id": "7915c46b-55e8-48f6-9ee5-afec3ad6c8b0",
           "name": "campaignOffersDescriptionColor",
           "displayName": "",
           "description": "",
@@ -112,7 +112,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "2fc957e2-4040-4d89-ad8c-783f319ff674",
+          "id": "8cfe817e-7c6d-4b8d-a84d-6f7e53f8ed5b",
           "name": "campaignOffersContainerBgColor",
           "displayName": "",
           "description": "",
@@ -126,7 +126,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "338d4736-7d07-414c-96c5-18cb3388b218",
+          "id": "6a2374c8-b07d-4b87-bd97-6fa0f2be5967",
           "name": "showCampaignShowDiscountSettings",
           "displayName": "",
           "description": "",
@@ -140,7 +140,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "f7edbf9f-1558-46b2-96d3-2776a8c5740c",
+          "id": "a3349cf6-52de-4a6d-a0e7-ca63dfbb75da",
           "name": "showCampaignHideDiscountBadge",
           "displayName": "",
           "description": "",
@@ -154,7 +154,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "59c56db7-8c8a-4bdc-b394-e289f4a6038a",
+          "id": "d08e409c-7bc4-47cb-bc5e-66766471eca5",
           "name": "campaignOffersDiscountPercentageColor",
           "displayName": "",
           "description": "",
@@ -168,7 +168,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "4c2851b7-9e42-4125-902e-6847c4faca83",
+          "id": "ef34fde1-9669-48fc-b4a3-88652c14ddd7",
           "name": "campaignOffersDiscountPercentageBgColor",
           "displayName": "",
           "description": "",
@@ -182,7 +182,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "007e93c8-687f-4671-a801-c22c23785705",
+          "id": "a0bdbc45-de1f-4fbb-84f9-45156ebb0260",
           "name": "showCampaignShowCountdownSettings",
           "displayName": "",
           "description": "",
@@ -196,7 +196,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "492ec0ee-3d35-4646-bf94-cd3dc58f7006",
+          "id": "e624e9c8-3d14-4669-b110-0547d3916b66",
           "name": "campaignOfferCountdownStyleIsLine",
           "displayName": "",
           "description": "",
@@ -210,7 +210,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "7476bd05-13ab-46a3-ae47-a2286d007bf9",
+          "id": "2c52c498-dde8-4c9e-9f80-f4adf13eca81",
           "name": "campaignOffersCountdownTextColor",
           "displayName": "",
           "description": "",
@@ -224,7 +224,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "762599b4-7818-424f-864a-e52a08fe068a",
+          "id": "98994c19-74fd-4c15-afab-178ac9e5bd4f",
           "name": "campaignOffersCountdownTimeColor",
           "displayName": "",
           "description": "",
@@ -238,7 +238,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "cab6ba06-f259-40b0-8671-5b756453d220",
+          "id": "c4a952df-ba9b-4f3c-99d9-61d6bf778e0c",
           "name": "campaignOffersCountdownBgColor",
           "displayName": "",
           "description": "",
@@ -252,7 +252,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "d008be73-ed91-49e1-9aca-79240834475d",
+          "id": "5056e1d4-4455-46b3-805f-6a3e2cd845d0",
           "name": "campaignOffersEnableMiddlePhase",
           "displayName": "",
           "description": "",
@@ -266,7 +266,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "5b0ae73d-8556-4bcc-8f25-e4d006772dc8",
+          "id": "a59bb000-8046-44e9-a72f-0e4c0d747972",
           "name": "campaignOffersMiddlePhaseOverlayColor",
           "displayName": "",
           "description": "",
@@ -280,7 +280,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "9c0d6981-2aca-4d2e-a00c-aef3a98595bf",
+          "id": "7e3d96f5-e004-45e1-b7c2-7a81bfab89bc",
           "name": "campaignOfferCountdownStyleIsLineSuccessPage",
           "displayName": "",
           "description": "",
@@ -294,7 +294,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "ebf35336-92e8-4c5c-a711-3902b5b457b2",
+          "id": "ce018c2b-9064-47f5-8e96-23906c0dcb68",
           "name": "buttonBgColor",
           "displayName": "",
           "description": "",
@@ -308,7 +308,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "eac04db2-b82a-445e-ba66-646a89ca8c4e",
+          "id": "b217f5b0-1912-4339-b10b-383ee83bf7de",
           "name": "buttonTextColor",
           "displayName": "",
           "description": "",
@@ -322,7 +322,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "9f5ebe1a-f913-4564-8edf-6dc95d0a7cee",
+          "id": "e30dee4e-a8a6-4958-9d16-22771560e716",
           "name": "buttonDisabledBgColor",
           "displayName": "",
           "description": "",
@@ -336,7 +336,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "23d71466-e59b-48ec-a7c7-7ab154527b55",
+          "id": "6d296eb8-eaa5-48bc-909e-fd9d62a0a20a",
           "name": "buttonDisabledTextColor",
           "displayName": "",
           "description": "",
@@ -350,7 +350,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "3c90e477-0636-4907-b3ff-c66c407292e0",
+          "id": "4f91d661-a1dc-4a88-b029-40b569667c9f",
           "name": "primaryTextColor",
           "displayName": "",
           "description": "",
@@ -364,7 +364,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "6cb5b43f-0e20-48b5-8da5-bdb78a644ef2",
+          "id": "bd644a27-1fc2-4c6a-a62a-c6814a9df446",
           "name": "secondaryTextColor",
           "displayName": "",
           "description": "",
@@ -378,7 +378,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "28777569-da27-47ee-81af-5a959ec85ddf",
+          "id": "ee200d97-a711-4a43-b54d-9e3a4e4627ac",
           "name": "primaryBgColor",
           "displayName": "",
           "description": "",
@@ -392,7 +392,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "1aa18431-22b6-4d14-bab3-ec3e095e415e",
+          "id": "7d0ada45-6fc1-4eda-87b8-d3dc9754372f",
           "name": "secondaryBgColor",
           "displayName": "",
           "description": "",
@@ -406,7 +406,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "0c058bcd-0c1d-4eb3-af91-fdf7a1681824",
+          "id": "5cf15c43-e0be-4b24-a8b6-9e03c9555dc3",
           "name": "borderColor",
           "displayName": "",
           "description": "",
@@ -420,7 +420,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "a99a445f-c74c-4e39-bbfe-98b312806856",
+          "id": "ffa42738-1d1b-4bfe-9c49-e28b7cfb8990",
           "name": "cardBgColor",
           "displayName": "",
           "description": "",
@@ -434,7 +434,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "c71abad9-4421-4d38-9032-79656c786207",
+          "id": "1dc73c08-f083-4052-85fb-ae9ee81f3370",
           "name": "errorColor",
           "displayName": "",
           "description": "",
@@ -448,7 +448,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "2f8eaffc-ff47-4c3d-81da-b60caf71eecc",
+          "id": "5b6654e5-4184-47a3-b134-793c6e5b5cb5",
           "name": "errorLightColor",
           "displayName": "",
           "description": "",
@@ -462,7 +462,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "cadd734d-9ade-4737-8b03-be210851c8e6",
+          "id": "72da34fb-825d-4b36-9b69-f40ab0f3a87f",
           "name": "warningColor",
           "displayName": "",
           "description": "",
@@ -476,7 +476,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "91f76d1c-d7f2-4387-9700-a4afc9632715",
+          "id": "c70499de-f963-4d36-a3b0-cfa036e168b2",
           "name": "warningLightColor",
           "displayName": "",
           "description": "",
@@ -490,7 +490,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "038dd0f0-bbfb-4c9b-b1c7-4ba9cb000488",
+          "id": "1a957c95-fb0a-46e0-a516-e8f571d89cec",
           "name": "successColor",
           "displayName": "",
           "description": "",
@@ -504,7 +504,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "512c12db-5d61-4dd7-bc26-8837b2c64cf5",
+          "id": "823e4547-b345-4f8e-970a-d32a0917518b",
           "name": "successLightColor",
           "displayName": "",
           "description": "",
@@ -518,7 +518,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "769f8b93-35ec-4930-969d-2823f27d09a7",
+          "id": "aa563270-c1ee-48ab-aecd-171304d372f4",
           "name": "secondaryButtonBgColor",
           "displayName": "",
           "description": "",
@@ -532,7 +532,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "ec102cbf-bbdb-4a2b-8c22-9447befd1a48",
+          "id": "6e570525-9fdc-482d-b969-141afb48815e",
           "name": "secondaryButtonTextColor",
           "displayName": "",
           "description": "",
@@ -546,7 +546,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "7e2c6d3d-ad49-48bd-877f-5ae6a847456f",
+          "id": "ec9f1923-e842-4a95-a5af-e286281d72dd",
           "name": "secondaryButtonBorderColor",
           "displayName": "",
           "description": "",
@@ -16261,37 +16261,24 @@
                   "id": "theme-images/f9e9fd4e-3f3b-439f-9f78-dd6dc372abcb",
                   "altText": null
                 },
-                "packageTitle": "Bronz",
-                "spendingLimit": "0 - 500TL",
+                "packageTitle": "BRONZE",
+                "spendingLimit": "₺0-₺1.200 harcayın",
                 "packageBenefits": [
                   {
-                    "title": "dwd",
-                    "description": "dwadwad"
+                    "title": "Hoş Geldiniz Ödülü",
+                    "description": "NET-A-PORTER Ödülleri'ne katıldığınızda ve yeni bir seviyeye ulaştığınızda, sizi özel bir sürprizle ödüllendiriyoruz – hoş geldiniz ödülünüz için e-posta kutunuzu kontrol edin."
                   },
                   {
-                    "title": "dwad"
+                    "title": "Özel Ödüller",
+                    "description": "Değerli bir Ödül müşterisi olarak, size özel hazırlanmış ayrıcalıklı ödüller alacaksınız."
                   },
                   {
-                    "title": "dwad"
+                    "title": "Doğum Günü Ödülü",
+                    "description": "Hesabınıza doğum tarihinizi ekleyin, özel gününüzde doğum günü sürprizi kazanın."
                   },
                   {
-                    "title": "dwad"
-                  }
-                ]
-              },
-              {
-                "packageImage": {
-                  "id": "theme-images/45bdf5b1-be5b-4909-934c-775534e54323",
-                  "altText": null
-                },
-                "packageTitle": "dwad",
-                "spendingLimit": "dwadwad",
-                "packageBenefits": [
-                  {
-                    "title": "dwad"
-                  },
-                  {
-                    "title": "dwad"
+                    "title": "MR PORTER",
+                    "description": "MR PORTER’da bir hesap oluşturun ve erkek giyimine özel ayrıcalıklı ödüller kazanın."
                   }
                 ]
               },
@@ -16300,12 +16287,16 @@
                   "id": "theme-images/9ec66d03-1fae-4e14-b888-a171081f2d88",
                   "altText": null
                 },
-                "packageTitle": "dwa",
-                "spendingLimit": "dwadwadwad",
+                "packageTitle": "SILVER",
+                "spendingLimit": "₺1.200-₺6.000 harcayın",
                 "packageBenefits": [
                   {
-                    "title": "dwad",
-                    "description": "dwadwad"
+                    "title": "Özel Satışlara Erişim",
+                    "description": "NET-A-PORTER Rewards’a özel Özel Satışlara ilk erişim hakkını elde edin – sadık müşterilerimiz için ayrılmıştır."
+                  },
+                  {
+                    "title": "Yılda Bir Kez Ücretsiz Kargo",
+                    "description": "Siparişlerinizi yılda bir kez olmak üzere, dünyanın neresinde olursanız olun ücretsiz gönderiyoruz."
                   }
                 ]
               },
@@ -16314,11 +16305,38 @@
                   "id": "theme-images/95a0c346-e10a-4124-a619-8e19e0e22156",
                   "altText": null
                 },
-                "packageTitle": "dwa",
-                "spendingLimit": "dwad",
+                "packageTitle": "GOLD",
+                "spendingLimit": "₺6.000–₺12.000 harcayın",
                 "packageBenefits": [
                   {
-                    "title": "dwa"
+                    "title": "Ödül Müşteri Hizmetleri",
+                    "description": "7/24 hizmet veren Ödül Müşteri Hizmetleri ekibimizle anında destek alın."
+                  },
+                  {
+                    "title": "Yılda Dört Kez Ücretsiz Kargo",
+                    "description": "Siparişlerinizi yılda dört kez olmak üzere, dünyanın neresinde olursanız olun ücretsiz gönderiyoruz."
+                  }
+                ]
+              },
+              {
+                "packageImage": {
+                  "id": "theme-images/45bdf5b1-be5b-4909-934c-775534e54323",
+                  "altText": null
+                },
+                "packageTitle": "EIP",
+                "spendingLimit": "₺12.000-₺60.000 harcayın",
+                "packageBenefits": [
+                  {
+                    "title": "Kişisel Alışveriş Danışmanı",
+                    "description": "Yalnızca EIP müşterilerine özel olan kişisel alışveriş danışmanlarımız, size şık seçimler konusunda yardımcı olmak için hizmetinizde."
+                  },
+                  {
+                    "title": "EIP Ön İzleme",
+                    "description": "Yeni gelen ürünleri herkesten 36 saat önce görün ve satın alın."
+                  },
+                  {
+                    "title": "Ücretsiz Küresel Kargo",
+                    "description": "Dünyanın her yerine sınırsız ücretsiz kargo avantajından yararlanın."
                   }
                 ]
               }

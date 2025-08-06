@@ -5,6 +5,9 @@ import NavigationFooterLinks from "./navigation-footer-links";
 import { Image, Link } from "@ikas/storefront";
 import { toJS } from "mobx";
 import { useScreen } from "src/utils/hooks/useScreen";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const rewards: React.FC<RewardsProps> = (props) => {
   const {
@@ -55,6 +58,17 @@ const rewards: React.FC<RewardsProps> = (props) => {
       })
     : []; // Eğer titleAndContent undefined ise boş dizi
 
+  const sliderSettings = {
+    dots: true,
+    arrows: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 333000,
+  };
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.heroViewport}>
@@ -94,64 +108,66 @@ const rewards: React.FC<RewardsProps> = (props) => {
           {/*//+ Rewards Paketleri  */}
           {rewardPackagesArr && (
             <div className={styles.rewardPackagesGrid}>
-              {rewardPackagesArr.map((packageItem: any, index: number) => (
-                <div key={index} className={styles.packageCardCustom}>
-                  {/* Package Header (Title + Spending Limit) */}
-                  <div className={styles.packageHeader}>
-                    <span className={styles.packageTitle}>
-                      {packageItem?.packageTitle}
-                    </span>
-                    <span className={styles.spendingLimit}>
-                      {packageItem?.spendingLimit}
-                    </span>
-                  </div>
-
-                  {/* Package Image */}
-                  {packageItem?.packageImage && (
-                    <div className={styles.packageImageWrapper}>
-                      <Image
-                        // width={1500}
-                        // height={325}
-                        objectFit="contain"
-                        layout="fill"
-                        useBlur={true}
-                        image={packageItem?.packageImage}
-                        alt={
-                          packageItem?.packageImage?.altText ||
-                          packageItem?.packageTitle ||
-                          "Reward package"
-                        }
-                      />
+              <Slider {...sliderSettings}>
+                {rewardPackagesArr.map((packageItem: any, index: number) => (
+                  <div key={index} className={styles.packageCardCustom}>
+                    {/* Package Header (Title + Spending Limit) */}
+                    <div className={styles.packageHeader}>
+                      <span className={styles.packageTitle}>
+                        {packageItem?.packageTitle}
+                      </span>
+                      <span className={styles.spendingLimit}>
+                        {packageItem?.spendingLimit}
+                      </span>
                     </div>
-                  )}
 
-                  {/* Package Benefits Grid */}
-                  {packageItem?.packageBenefits &&
-                    Array.isArray(packageItem?.packageBenefits) && (
-                      <div className={styles.packageBenefitsGrid}>
-                        {packageItem?.packageBenefits.map(
-                          (benefit: any, bIndex: number) => (
-                            <div key={bIndex} className={styles.benefitItem}>
-                              <div className={styles.benefitTitle}>
-                                {benefit?.title}
-                              </div>
-                              {benefit?.description && (
-                                <div className={styles.benefitDescription}>
-                                  {benefit?.description}
-                                </div>
-                              )}
-                            </div>
-                          )
-                        )}
+                    {/* Package Image */}
+                    {packageItem?.packageImage && (
+                      <div className={styles.packageImageWrapper}>
+                        <Image
+                          // width={1500}
+                          // height={325}
+                          objectFit="contain"
+                          layout="fill"
+                          useBlur={true}
+                          image={packageItem?.packageImage}
+                          alt={
+                            packageItem?.packageImage?.altText ||
+                            packageItem?.packageTitle ||
+                            "Reward package"
+                          }
+                        />
                       </div>
                     )}
 
-                  {/* Award Notes */}
-                  {awardNotes && (
-                    <div className={styles.awardNotes}>{awardNotes}</div>
-                  )}
-                </div>
-              ))}
+                    {/* Package Benefits Grid */}
+                    {packageItem?.packageBenefits &&
+                      Array.isArray(packageItem?.packageBenefits) && (
+                        <div className={styles.packageBenefitsGrid}>
+                          {packageItem?.packageBenefits.map(
+                            (benefit: any, bIndex: number) => (
+                              <div key={bIndex} className={styles.benefitItem}>
+                                <div className={styles.benefitTitle}>
+                                  {benefit?.title}
+                                </div>
+                                {benefit?.description && (
+                                  <div className={styles.benefitDescription}>
+                                    {benefit?.description}
+                                  </div>
+                                )}
+                              </div>
+                            )
+                          )}
+                        </div>
+                      )}
+
+                    {/* Award Notes */}
+                    {awardNotes && (
+                      <div className={styles.awardNotes}>{awardNotes}</div>
+                    )}
+                  </div>
+                ))}
+              </Slider>
             </div>
           )}
 
