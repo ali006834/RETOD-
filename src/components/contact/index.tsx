@@ -29,8 +29,6 @@ const Contact: React.FC<ContactProps> = (props) => {
   const { t } = useTranslation();
   const { isMobile } = useScreen();
 
-  console.log("contactForm:::::::::", contactForm);
-
   return (
     <div className={styles.wrapper}>
       <div className={styles.heroViewport}>
