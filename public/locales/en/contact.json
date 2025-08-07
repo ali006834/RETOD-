@@ -23,5 +23,18 @@
 
   "contact-form": {
     "methodNotAllowed": "Method not allowed"
+  },
+
+  "errors": {
+    "title": "Error",
+    "error": "Error:",
+    "sendingError": "Sending error",
+    "errorOccurredMessage": "An error occurred while sending the message. Please try again.",
+    "sending": "Sending..."
+  },
+
+  "success": {
+    "title": "Success",
+    "messageSentSuccessfully": "Your message has been sent successfully! We will contact you as soon as possible."
   }
 }

@@ -1,6 +1,9 @@
 import React, { useRef } from "react";
 import styles from "./style.module.css";
 import { Link, useTranslation } from "@ikas/storefront";
+import Modal from "src/components/components/modal";
+import Success from "./svg/success";
+import Error from "./svg/error";
 
 interface ContactFormProps {
   contactForm: Array<{
@@ -15,12 +18,14 @@ interface ContactFormProps {
   }>;
   contactInformation?: string;
   mapLink?: string;
+  accessKey: string;
 }
 
 const ContactForm: React.FC<ContactFormProps> = ({
   contactForm,
   contactInformation,
   mapLink,
+  accessKey,
 }) => {
   const [formData, setFormData] = React.useState({
     mainTopic: "",
@@ -41,25 +46,20 @@ const ContactForm: React.FC<ContactFormProps> = ({
   >([]);
   const [subSubTopics, setSubSubTopics] = React.useState<Array<any>>([]);
 
-  // Dosya yükleme için state ve referans - Web3Forms Pro gerekli, geçici kapatıldı
-  // const [files, setFiles] = React.useState<File[]>([]);
-  // const fileInputRef = useRef<HTMLInputElement>(null);
-
   // Loading state
   const [isSubmitting, setIsSubmitting] = React.useState(false);
 
-  // Dosya yükleme işlemi - Web3Forms Pro gerekli, geçici kapatıldı
-  // const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-  //   if (e.target.files) {
-  //     const newFiles = Array.from(e.target.files).slice(0, 4 - files.length);
-  //     setFiles((prev) => [...prev, ...newFiles]);
-  //   }
-  // };
-
-  // Dosya silme işlemi
-  // const removeFile = (index: number) => {
-  //   setFiles((prev) => prev.filter((_, i) => i !== index));
-  // };
+  // Modal state
+  const [modal, setModal] = React.useState<{
+    show: boolean;
+    type: "error" | "success" | "info";
+    title?: string;
+    text: string;
+  }>({
+    show: false,
+    type: "info",
+    text: "",
+  });
 
   // Form verilerini güncelleme fonksiyonu
   const handleChange = (
@@ -83,17 +83,12 @@ const ContactForm: React.FC<ContactFormProps> = ({
     const formDataToSend = new FormData();
 
     // Web3Forms access key - Bu anahtarı web3forms.com'dan almanız gerekiyor
-    formDataToSend.append("access_key", "d47a27f7-ea3f-459b-8453-9c1b6a91d3bf"); // Bu anahtarı değiştirin
+    formDataToSend.append("access_key", accessKey); // Bu anahtarı değiştirin
 
     // Form verilerini ekle
     Object.entries(formData).forEach(([key, value]) => {
       formDataToSend.append(key, value);
     });
-
-    // Dosyaları ekle - Web3Forms Pro özelliği gerekli
-    // files.forEach((file, index) => {
-    //   formDataToSend.append(`file_${index}`, file);
-    // });
 
     // Honeypot spam koruması
     formDataToSend.append("botcheck", "");
@@ -107,7 +102,12 @@ const ContactForm: React.FC<ContactFormProps> = ({
       const result = await response.json();
 
       if (response.ok && result.success) {
-        alert("Mesajınız başarıyla gönderildi!");
+        setModal({
+          show: true,
+          type: "success",
+          title: t(`${NS}:success.title`),
+          text: t(`${NS}:success.messageSentSuccessfully`),
+        });
         // Formu sıfırla
         setFormData({
           mainTopic: "",
@@ -124,15 +124,26 @@ const ContactForm: React.FC<ContactFormProps> = ({
         });
         // setFiles([]); // Web3Forms Pro gerekli
       } else {
-        throw new Error(result.message || "Bir hata oluştu");
+        const errorMessage = result.message || "Bir hata oluştu";
+        throw { message: errorMessage };
       }
     } catch (error) {
-      console.error("Gönderim hatası:", error);
+      console.error(t(`${NS}:errors.sendingError`), error);
 
-      if (error instanceof Error) {
-        alert(`Hata: ${error.message}`);
+      if (error && typeof error === "object" && "message" in error) {
+        setModal({
+          show: true,
+          type: "error",
+          title: t(`${NS}:errors.title`),
+          text: `${t(`${NS}:errors.error`)} ${(error as any).message}`,
+        });
       } else {
-        alert("Mesaj gönderilirken bir hata oluştu. Lütfen tekrar deneyin.");
+        setModal({
+          show: true,
+          type: "error",
+          title: t(`${NS}:errors.title`),
+          text: t(`${NS}:errors.errorOccurredMessage`),
+        });
       }
     } finally {
       setIsSubmitting(false);
@@ -356,47 +367,6 @@ const ContactForm: React.FC<ContactFormProps> = ({
             />
           </div>
 
-          {/* File Upload - Web3Forms Pro özelliği gerekli, geçici olarak kapatıldı */}
-          {/* 
-          <div className={styles.form_group}>
-            <label>
-              {t(`${NS}:photos`)} - {t(`${NS}:maxPhotoLimit`)}
-            </label>
-            <div className={styles.file_upload_container}>
-              <input
-                type="file"
-                ref={fileInputRef}
-                onChange={handleFileChange}
-                multiple
-                accept="image/*"
-                style={{ display: "none" }}
-              />
-              <button
-                type="button"
-                className={styles.upload_button}
-                onClick={() => fileInputRef.current?.click()}
-                disabled={files.length >= 4}
-              >
-                {t(`${NS}:uploadPhotos`)}
-              </button>
-              <div className={styles.file_preview_container}>
-                {files.map((file, index) => (
-                  <div key={index} className={styles.file_preview}>
-                    <span>{file.name}</span>
-                    <button
-                      type="button"
-                      onClick={() => removeFile(index)}
-                      className={styles.remove_file}
-                    >
-                      ×
-                    </button>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-          */}
-
           <button
             type="submit"
             className={styles.submit_button}
@@ -422,6 +392,43 @@ const ContactForm: React.FC<ContactFormProps> = ({
           dangerouslySetInnerHTML={{ __html: mapLink }}
         />
       )}
+
+      {/* Modal for messages */}
+      <Modal
+        visible={modal.show}
+        title=""
+        onClose={() => setModal({ ...modal, show: false })}
+      >
+        <div className={styles.modal_content}>
+          {/* Logo */}
+          <img
+            src="/image/logo/logo-dizaynella.png"
+            alt="Dizaynella Logo"
+            className={styles.modal_logo}
+          />
+
+          {/* Icon */}
+          {modal.type === "success" ? (
+            <Success width="60" height="60" fill="#2e7d32" />
+          ) : (
+            <Error width="60" height="60" fill="#d32f2f" />
+          )}
+
+          {/* Title */}
+          <h3
+            className={`${styles.modal_title} ${
+              modal.type === "error"
+                ? styles.modal_title_error
+                : styles.modal_title_success
+            }`}
+          >
+            {modal.title}
+          </h3>
+
+          {/* Message */}
+          <p className={styles.modal_message}>{modal.text}</p>
+        </div>
+      </Modal>
     </div>
   );
 };

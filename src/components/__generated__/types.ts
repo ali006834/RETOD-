@@ -433,6 +433,7 @@ export type CampaignsProps = {
 };
 
 export type ContactProps = {
+	web3FormsAccessKey?: string;
 	title?: string;
 	textPicture?: string;
 	imageWeb?: IkasImage;

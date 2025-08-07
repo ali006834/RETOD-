@@ -23,5 +23,17 @@
 
   "contact-form": {
     "methodNotAllowed": "Yöntem izin verilmedi"
+  },
+
+  "errors": {
+    "title": "Hata",
+    "error": "Hata:",
+    "sendingError": "Gönderim hatası:",
+    "errorOccurredMessage": "Mesaj gönderilirken bir hata oluştu. Lütfen tekrar deneyin.",
+    "sending": "Gönderiliyor..."
+  },
+  "success": {
+    "title": "Başarılı",
+    "messageSentSuccessfully": "Mesajınız başarıyla gönderildi! Sizinle en kısa sürede iletişime geçeceğiz."
   }
 }
