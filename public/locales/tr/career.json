@@ -29,10 +29,18 @@
     "error": "Hata:",
     "sendingError": "Gönderim hatası:",
     "errorOccurredMessage": "Başvuru gönderilirken bir hata oluştu. Lütfen tekrar deneyin.",
-    "sending": "Gönderiliyor..."
+    "sending": "Gönderiliyor...",
+    "captchaError": "Güvenlik sorusu yanlış cevaplandı",
+    "phoneError": "Geçerli bir telefon numarası giriniz",
+    "phoneSyntaxError": "Telefon numarası 11 haneli olmalı ve 0 ile başlamalıdır"
   },
   "success": {
     "title": "Başarılı",
-    "applicationSentSuccessfully": "Başvurunuz başarıyla gönderildi! Sizinle en kısa sürede iletişime geçeceğiz."
+    "applicationSentSuccessfully": "Başvurunuz başarıyla gönderildi! Sizinle en kısa sürede iletişime geçeceğiz.",
+    "sending": "Gönderiliyor...",
+    "newQuestion": "Yeni soru",
+    "enterResult": "Sonucu giriniz",
+    "securityQuestion": "Güvenlik Sorusu",
+    "resumePlaceholder": "Özgeçmişinizi buraya yazabilirsiniz..."
   }
 }

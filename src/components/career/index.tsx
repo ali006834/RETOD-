@@ -28,8 +28,6 @@ const Career: React.FC<CareerProps> = (props) => {
   const { t } = useTranslation();
   const { isMobile } = useScreen();
 
-  console.log("careerForm:::::::::", careerForm);
-
   return (
     <div className={styles.wrapper}>
       <div className={styles.heroViewport}>

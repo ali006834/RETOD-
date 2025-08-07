@@ -11,7 +11,7 @@ interface ContactFormProps {
     messageType: Array<{
       messageName: string;
       subTopic?: Array<{
-        messageName: string;
+        topicName: string;
         subTopic?: any;
       }>;
     }>;
@@ -45,9 +45,14 @@ const ContactForm: React.FC<ContactFormProps> = ({
   const [phoneError, setPhoneError] = React.useState("");
 
   const [subTopics, setSubTopics] = React.useState<
-    Array<{ messageName: string; subTopic?: any }>
+    Array<{
+      messageName: string;
+      subTopic?: Array<{ topicName: string; subTopic?: any }>;
+    }>
   >([]);
-  const [subSubTopics, setSubSubTopics] = React.useState<Array<any>>([]);
+  const [subSubTopics, setSubSubTopics] = React.useState<
+    Array<{ topicName: string; subTopic?: any }>
+  >([]);
 
   // Loading state
   const [isSubmitting, setIsSubmitting] = React.useState(false);
@@ -157,6 +162,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
 
     // Web3Forms access key - Bu anahtarı web3forms.com'dan almanız gerekiyor
     formDataToSend.append("access_key", accessKey); // Bu anahtarı değiştirin
+    formDataToSend.append("subject", "Yeni İletişim Formu - dizaynella.com.tr");
 
     // Form verilerini ekle
     Object.entries(formData).forEach(([key, value]) => {
@@ -330,8 +336,8 @@ const ContactForm: React.FC<ContactFormProps> = ({
               >
                 <option value="">{t(`${NS}:select`)}</option>
                 {subSubTopics.map((topic, index) => (
-                  <option key={index} value={topic.messageName}>
-                    {topic.messageName}
+                  <option key={index} value={topic.topicName}>
+                    {topic.topicName}
                   </option>
                 ))}
               </select>

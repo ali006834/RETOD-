@@ -71,7 +71,7 @@ const CareerForm: React.FC<CareerFormProps> = ({
 
     // Check if it's exactly 11 digits and starts with 0
     if (digitsOnly.length !== 11 || !digitsOnly.startsWith("0")) {
-      return "Telefon numarası 11 haneli olmalı ve 0 ile başlamalıdır";
+      return t(`${NS}:errors.phoneSyntaxError`);
     }
 
     // Check if it matches Turkish mobile format (05xx) or landline format (02xx, 03xx, etc.)
@@ -79,7 +79,7 @@ const CareerForm: React.FC<CareerFormProps> = ({
     const landlinePattern = /^0[2-4]\d{8}$/;
 
     if (!mobilePattern.test(digitsOnly) && !landlinePattern.test(digitsOnly)) {
-      return "Geçerli bir telefon numarası giriniz";
+      return t(`${NS}:errors.phoneError`);
     }
 
     return "";
@@ -152,7 +152,7 @@ const CareerForm: React.FC<CareerFormProps> = ({
 
     // Validate captcha
     if (captchaValue !== captchaQuestion.answer.toString()) {
-      setCaptchaError("Güvenlik sorusu yanlış cevaplandı");
+      setCaptchaError(t(`${NS}:errors.captchaError`));
       return;
     }
 
@@ -204,7 +204,7 @@ const CareerForm: React.FC<CareerFormProps> = ({
         throw result.message || "Form gönderilemedi";
       }
     } catch (error) {
-      console.error("Gönderim hatası:", error);
+      console.error(t(`${NS}:errors.sendingError`), error);
 
       setModal({
         show: true,
@@ -372,13 +372,13 @@ const CareerForm: React.FC<CareerFormProps> = ({
               value={formData.resume}
               onChange={handleChange}
               rows={8}
-              placeholder="Özgeçmişinizi buraya yazabilirsiniz..."
+              placeholder={t(`${NS}:resumePlaceholder`)}
             />
           </div>
 
           {/* Captcha */}
           <div className={styles.form_group}>
-            <label htmlFor="captcha">Güvenlik Sorusu</label>
+            <label htmlFor="captcha">{t(`${NS}:securityQuestion`)}</label>
             <div className={styles.captcha_container}>
               <span className={styles.captcha_question}>
                 {captchaQuestion.num1} + {captchaQuestion.num2} = ?
@@ -392,7 +392,7 @@ const CareerForm: React.FC<CareerFormProps> = ({
                   setCaptchaValue(e.target.value);
                   setCaptchaError("");
                 }}
-                placeholder="Sonucu giriniz"
+                placeholder={t(`${NS}:enterResult`)}
                 required
                 className={styles.captcha_input}
               />
@@ -406,7 +406,7 @@ const CareerForm: React.FC<CareerFormProps> = ({
                   setCaptchaError("");
                 }}
                 className={styles.refresh_captcha}
-                title="Yeni soru"
+                title={t(`${NS}:newQuestion`)}
               >
                 <Refresh width="18" height="18" fill="#1C274C" />
               </button>
@@ -421,7 +421,7 @@ const CareerForm: React.FC<CareerFormProps> = ({
             className={styles.submit_button}
             disabled={isSubmitting}
           >
-            {isSubmitting ? "Gönderiliyor..." : t(`${NS}:submit`)}
+            {isSubmitting ? t(`${NS}:success.sending`) : t(`${NS}:submit`)}
           </button>
         </form>
       </div>

@@ -29,6 +29,8 @@ const Contact: React.FC<ContactProps> = (props) => {
   const { t } = useTranslation();
   const { isMobile } = useScreen();
 
+  console.log("contactForm:::::::::", contactForm);
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.heroViewport}>
@@ -75,7 +77,13 @@ const Contact: React.FC<ContactProps> = (props) => {
             contactForm={
               (Array.isArray(contactForm)
                 ? contactForm?.filter((item) => typeof item?.name === "string")
-                : []) as { name: string; messageType: any[] }[]
+                : []) as {
+                name: string;
+                messageType: Array<{
+                  messageName: string;
+                  subTopic?: Array<{ topicName: string; subTopic?: any }>;
+                }>;
+              }[]
             }
             contactInformation={contactInformation}
             mapLink={mapLink}

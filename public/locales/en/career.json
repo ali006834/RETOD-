@@ -29,10 +29,18 @@
     "error": "Error:",
     "sendingError": "Sending error:",
     "errorOccurredMessage": "An error occurred while sending the application. Please try again.",
-    "sending": "Sending..."
+    "sending": "Sending...",
+    "captchaError": "Incorrect answer to security question",
+    "phoneError": "Enter a valid phone number",
+    "phoneSyntaxError": "Phone number must be 11 digits and start with 0"
   },
   "success": {
     "title": "Success",
-    "applicationSentSuccessfully": "Your application has been sent successfully! We will contact you as soon as possible."
+    "applicationSentSuccessfully": "Your application has been sent successfully! We will contact you as soon as possible.",
+    "sending": "Sending...",
+    "newQuestion": "New question",
+    "enterResult": "Enter result",
+    "securityQuestion": "Security question",
+    "resumePlaceholder": "Your resume here..."
   }
 }
