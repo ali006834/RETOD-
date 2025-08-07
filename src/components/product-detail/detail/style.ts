@@ -108,13 +108,13 @@ export const DescriptionTitle = styled.p`
 `;
 export const Description = styled.div`
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 12px;
   line-height: 28px;
-  font-family: "Akkurat" !important;
+  font-family: "Helvetica" !important;
   text-align: justify !important;
   span {
-    font-family: "Akkurat" !important;
+    font-family: "Helvetica" !important;
     font-weight: 400;
     color: #3b3b3b !important;
     font-size: 12px !important;
@@ -122,7 +122,7 @@ export const Description = styled.div`
   }
   ,
   p {
-    font-family: "Akkurat" !important;
+    font-family: "Helvetica" !important;
     font-weight: 400;
     color: #3b3b3b !important;
     font-size: 12px !important;

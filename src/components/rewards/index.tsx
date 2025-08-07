@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import { RewardsProps } from "../__generated__/types";
 import styles from "./style.module.css";
 import NavigationFooterLinks from "./navigation-footer-links";
-import { Image, Link } from "@ikas/storefront";
+import { IkasProduct, Image, Link, useTranslation } from "@ikas/storefront";
 import { toJS } from "mobx";
 import { useScreen } from "src/utils/hooks/useScreen";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { observer } from "mobx-react-lite";
 
 const rewards: React.FC<RewardsProps> = (props) => {
   const {
@@ -32,10 +33,7 @@ const rewards: React.FC<RewardsProps> = (props) => {
   } = props;
 
   const { isMobile } = useScreen();
-
-  console.log("rewardPackages::", rewardPackages);
   const rewardPackagesArr = toJS(rewardPackages);
-  console.log("rewardPackagesArr::", rewardPackagesArr);
 
   // Her bir seçenek için açılma durumunu tutacak state
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -68,6 +66,8 @@ const rewards: React.FC<RewardsProps> = (props) => {
     autoplay: true,
     autoplaySpeed: 333000,
   };
+
+  const { t } = useTranslation();
 
   return (
     <div className={styles.wrapper}>
@@ -172,14 +172,17 @@ const rewards: React.FC<RewardsProps> = (props) => {
           )}
 
           <div className={styles.memberSection}>
-            <h2 className={styles.memberTitle}>Not a member yet?</h2>
+            <h2 className={styles.memberTitle}>{t("rewards:notAMemberYet")}</h2>
             <p className={styles.memberDescription}>
-              Create an account to join NET-A-PORTER Rewards or sign in to track
-              your progress in your account{" "}
+              {t("rewards:createAccountDescription")}
             </p>
             <div className={styles.memberButtons}>
-              <button className={styles.memberButton}>Create Account</button>
-              <button className={styles.memberButton}>Sign In</button>
+              <button className={styles.memberButton}>
+                {t("rewards:createAccount")}
+              </button>
+              <button className={styles.memberButton}>
+                {t("rewards:signIn")}
+              </button>
             </div>
           </div>
         </div>
@@ -204,28 +207,12 @@ const rewards: React.FC<RewardsProps> = (props) => {
           {showcaseProducts && showcaseProducts.data && (
             <div className={styles.productsGrid}>
               {showcaseProducts.data.map((product: any, index: number) => (
-                <div key={index} className={styles.productCard}>
-                  {product.featuredImage && (
-                    <Image
-                      layout={"responsive"}
-                      width={300}
-                      height={400}
-                      objectFit="cover"
-                      useBlur={true}
-                      image={product.featuredImage}
-                      alt={
-                        product.featuredImage?.altText ||
-                        product.name ||
-                        "Product"
-                      }
-                    />
-                  )}
-                  {product.name && <h3>{product.name}</h3>}
-                  {product.price && (
-                    <span className={styles.productPrice}>
-                      {product.price.selling}
-                    </span>
-                  )}
+                <div key={index} className={styles.product_container}>
+                  <Link href={product.href}>
+                    <a>
+                      <ProductImage product={product} />
+                    </a>
+                  </Link>
                 </div>
               ))}
             </div>
@@ -234,7 +221,9 @@ const rewards: React.FC<RewardsProps> = (props) => {
           {productShowcaseBtnLink && (
             <div className={styles.showcaseButtonWrapper}>
               <Link href={productShowcaseBtnLink} passHref>
-                <a className={styles.showcaseButton}>View All Products</a>
+                <a className={styles.showcaseButton}>
+                  {t("rewards:viewAllProducts")}
+                </a>
               </Link>
             </div>
           )}
@@ -297,8 +286,63 @@ const rewards: React.FC<RewardsProps> = (props) => {
 
 export default rewards;
 
+//Tip Tanımlaması
+type Props = {
+  product: IkasProduct;
+  isWidthVideo?: boolean;
+};
+
+//Ürün resimleri
+const ProductImage = observer(({ product, isWidthVideo }: Props) => {
+  const mainImage = product.selectedVariant.mainImage?.image;
+
+  if (isWidthVideo && mainImage?.isVideo) {
+    // isWidthVideo true ve ana görsel video ise video göster
+    return (
+      <video
+        playsInline
+        autoPlay
+        loop
+        muted
+        controls={false}
+        src={mainImage.src}
+        style={{
+          width: "100%",
+          aspectRatio: "6 / 9",
+          objectFit: "cover",
+          maxHeight: "1620px",
+        }}
+      />
+    );
+  }
+
+  // Diğer durumlarda (isWidthVideo false veya ana görsel video değilse) resim göster
+  let image = mainImage;
+  if (mainImage?.isVideo) {
+    // Ana görsel video ise, ilk video olmayanı bul
+    const nonVideoImage = product.selectedVariant.images?.find(
+      (img: any) => !img.image?.isVideo
+    )?.image;
+    image = nonVideoImage || undefined;
+  }
+  if (!image?.id) {
+    return <img src="/product-dummy-image.jpeg" />;
+  }
+  return (
+    <Image
+      // layout="responsive"
+      width="200px"
+      height="300px"
+      objectFit="contain"
+      useBlur={true}
+      image={product.selectedVariant.mainImage?.image!}
+      alt={product.selectedVariant.product?.name || undefined}
+      className={styles.slider_product_items}
+    />
+  );
+});
+
 // SVG
-// Modern SVG Icons
 const ArrowUpSVG = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
