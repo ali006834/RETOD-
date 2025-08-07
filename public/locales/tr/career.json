@@ -11,6 +11,7 @@
   "phone": "Telefon*",
   "email": "Email*",
   "message": "Mesaj*",
+  "resume": "Özgeçmişimiz",
   "submit": "Gönder",
   "formTitle": "İletişim",
   "uploadCv": "CV Yükle",
@@ -21,5 +22,17 @@
 
   "contact-form": {
     "methodNotAllowed": "Yöntem izin verilmedi"
+  },
+
+  "errors": {
+    "title": "Hata",
+    "error": "Hata:",
+    "sendingError": "Gönderim hatası:",
+    "errorOccurredMessage": "Başvuru gönderilirken bir hata oluştu. Lütfen tekrar deneyin.",
+    "sending": "Gönderiliyor..."
+  },
+  "success": {
+    "title": "Başarılı",
+    "applicationSentSuccessfully": "Başvurunuz başarıyla gönderildi! Sizinle en kısa sürede iletişime geçeceğiz."
   }
 }

@@ -10,6 +10,8 @@ import CareerForm from "./form";
 
 const Career: React.FC<CareerProps> = (props) => {
   const {
+    web3FormsAccessKey,
+
     title,
     textPicture,
     imageWeb,
@@ -25,6 +27,8 @@ const Career: React.FC<CareerProps> = (props) => {
 
   const { t } = useTranslation();
   const { isMobile } = useScreen();
+
+  console.log("careerForm:::::::::", careerForm);
 
   return (
     <div className={styles.wrapper}>
@@ -77,15 +81,20 @@ const Career: React.FC<CareerProps> = (props) => {
                     )
                     .map((item) => ({
                       name: item.name!,
-                      positions: Array.isArray(item.departments)
+                      departments: Array.isArray(item.departments)
                         ? item.departments.map((dept) => ({
-                            name: dept.departmentName,
+                            positionName: dept.positionName,
                           }))
                         : [],
                     }))
-                : []) as { name: string; positions: { name: string }[] }[]
+                : []) as {
+                name: string;
+                departments: { positionName: string }[];
+              }[]
             }
             otherInformation={otherInformation}
+            // erişim anahtarları
+            accessKey={web3FormsAccessKey || ""}
           />
         </div>
       </div>

@@ -41,6 +41,9 @@ const ContactForm: React.FC<ContactFormProps> = ({
     message: "",
   });
 
+  // Phone validation state
+  const [phoneError, setPhoneError] = React.useState("");
+
   const [subTopics, setSubTopics] = React.useState<
     Array<{ messageName: string; subTopic?: any }>
   >([]);
@@ -61,6 +64,55 @@ const ContactForm: React.FC<ContactFormProps> = ({
     text: "",
   });
 
+  // Phone number validation function
+  const validatePhone = (phone: string) => {
+    // Remove all non-digit characters
+    const digitsOnly = phone.replace(/\D/g, "");
+
+    // Check if it's exactly 11 digits and starts with 0
+    if (digitsOnly.length !== 11 || !digitsOnly.startsWith("0")) {
+      return "Telefon numarası 11 haneli olmalı ve 0 ile başlamalıdır";
+    }
+
+    // Check if it matches Turkish mobile format (05xx) or landline format (02xx, 03xx, etc.)
+    const mobilePattern = /^05\d{9}$/;
+    const landlinePattern = /^0[2-4]\d{8}$/;
+
+    if (!mobilePattern.test(digitsOnly) && !landlinePattern.test(digitsOnly)) {
+      return "Geçerli bir Türkiye telefon numarası giriniz";
+    }
+
+    return "";
+  };
+
+  // Format phone number as user types
+  const formatPhoneNumber = (value: string) => {
+    // Remove all non-digit characters
+    const digitsOnly = value.replace(/\D/g, "");
+
+    // Limit to 11 digits
+    const limitedDigits = digitsOnly.slice(0, 11);
+
+    // Format: 0 (000) 000 00 00
+    if (limitedDigits.length >= 1) {
+      let formatted = limitedDigits[0]; // 0
+      if (limitedDigits.length >= 2) {
+        formatted += " (" + limitedDigits.slice(1, 4); // 0 (000
+        if (limitedDigits.length >= 4) {
+          formatted += ") " + limitedDigits.slice(4, 7); // 0 (000) 000
+          if (limitedDigits.length >= 7) {
+            formatted += " " + limitedDigits.slice(7, 9); // 0 (000) 000 00
+            if (limitedDigits.length >= 9) {
+              formatted += " " + limitedDigits.slice(9, 11); // 0 (000) 000 00 00
+            }
+          }
+        }
+      }
+      return formatted;
+    }
+    return limitedDigits;
+  };
+
   // Form verilerini güncelleme fonksiyonu
   const handleChange = (
     e: React.ChangeEvent<
@@ -68,15 +120,36 @@ const ContactForm: React.FC<ContactFormProps> = ({
     >
   ) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
+
+    if (name === "phone") {
+      const formattedPhone = formatPhoneNumber(value);
+      const phoneValidationError = validatePhone(formattedPhone);
+
+      setFormData((prev) => ({
+        ...prev,
+        [name]: formattedPhone,
+      }));
+
+      setPhoneError(phoneValidationError);
+    } else {
+      setFormData((prev) => ({
+        ...prev,
+        [name]: value,
+      }));
+    }
   };
 
   // Form gönderim işlemi
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Validate phone number before submission
+    const phoneValidationError = validatePhone(formData.phone);
+    if (phoneValidationError) {
+      setPhoneError(phoneValidationError);
+      return;
+    }
+
     setIsSubmitting(true);
 
     // Web3Forms için form verilerini hazırla
@@ -265,10 +338,15 @@ const ContactForm: React.FC<ContactFormProps> = ({
             </div>
           </div>
 
-          {/* Order/Invoice/Product Info */}
+          {/* Order/Invoice/Product Info - Optional */}
           <div className={styles.form_row}>
             <div className={styles.form_group}>
-              <label htmlFor="orderNumber">{t(`${NS}:orderNumber`)}</label>
+              <label htmlFor="orderNumber">
+                {t(`${NS}:orderNumber`)}{" "}
+                <span className={styles.optional_text}>
+                  ({t(`${NS}:optional`)})
+                </span>
+              </label>
               <input
                 type="text"
                 id="orderNumber"
@@ -279,7 +357,12 @@ const ContactForm: React.FC<ContactFormProps> = ({
             </div>
 
             <div className={styles.form_group}>
-              <label htmlFor="invoiceNumber">{t(`${NS}:invoiceNumber`)}</label>
+              <label htmlFor="invoiceNumber">
+                {t(`${NS}:invoiceNumber`)}{" "}
+                <span className={styles.optional_text}>
+                  ({t(`${NS}:optional`)})
+                </span>
+              </label>
               <input
                 type="text"
                 id="invoiceNumber"
@@ -290,7 +373,12 @@ const ContactForm: React.FC<ContactFormProps> = ({
             </div>
 
             <div className={styles.form_group}>
-              <label htmlFor="productCode">{t(`${NS}:productCode`)}</label>
+              <label htmlFor="productCode">
+                {t(`${NS}:productCode`)}{" "}
+                <span className={styles.optional_text}>
+                  ({t(`${NS}:optional`)})
+                </span>
+              </label>
               <input
                 type="text"
                 id="productCode"
@@ -339,6 +427,9 @@ const ContactForm: React.FC<ContactFormProps> = ({
                 onChange={handleChange}
                 required
               />
+              {phoneError && (
+                <span className={styles.error_message}>{phoneError}</span>
+              )}
             </div>
 
             <div className={styles.form_group}>

@@ -11,6 +11,7 @@
   "phone": "Phone*",
   "email": "Email*",
   "message": "Message*",
+  "resume": "Resume",
   "submit": "Submit",
   "formTitle": "Contact",
   "uploadCv": "Upload CV",
@@ -21,5 +22,17 @@
 
   "contact-form": {
     "methodNotAllowed": "Method not allowed"
+  },
+
+  "errors": {
+    "title": "Error",
+    "error": "Error:",
+    "sendingError": "Sending error:",
+    "errorOccurredMessage": "An error occurred while sending the application. Please try again.",
+    "sending": "Sending..."
+  },
+  "success": {
+    "title": "Success",
+    "applicationSentSuccessfully": "Your application has been sent successfully! We will contact you as soon as possible."
   }
 }

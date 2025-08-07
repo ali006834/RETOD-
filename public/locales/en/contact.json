@@ -10,6 +10,7 @@
   "orderNumber": "Order Number",
   "invoiceNumber": "Invoice Number",
   "productCode": "Product Code",
+  "optional": "Optional",
   "firstName": "First Name*",
   "lastName": "Last Name*",
   "phone": "Phone*",

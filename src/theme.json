@@ -14,7 +14,7 @@
       "componentJson": null,
       "props": [
         {
-          "id": "a2944a14-68a0-432b-8ddf-b5cdeabd7f27",
+          "id": "95a1f624-9612-4e29-abb0-16d0bd3a145f",
           "name": "logo",
           "displayName": "",
           "description": "",
@@ -28,7 +28,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "1610eced-eceb-4803-adf1-d4f34a3422bf",
+          "id": "67415995-3f17-4526-8cbc-eb39c540a2b8",
           "name": "showTax",
           "displayName": "",
           "description": "",
@@ -42,7 +42,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "c89de479-e79f-4415-90b5-939259e39858",
+          "id": "830d8088-ffce-40b6-9aef-d73eac5d9f89",
           "name": "showCampaignOffersDesign",
           "displayName": "",
           "description": "",
@@ -56,7 +56,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "c5ca290c-b33e-43b3-923a-70b69240d4c7",
+          "id": "1f65d5b2-c8c0-4182-9f23-8b403d36bb49",
           "name": "campaignOfferIsSmallDesign",
           "displayName": "",
           "description": "",
@@ -70,7 +70,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "7fa099e2-e4bb-4903-949a-4be56d2c5bc9",
+          "id": "9ace6214-1e21-4949-98fe-15af401cd1da",
           "name": "showCampaignIsBiggerImage",
           "displayName": "",
           "description": "",
@@ -84,7 +84,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "02996ce4-f94e-4149-b95e-f5080b435749",
+          "id": "c67972f8-0686-4b98-8db1-432f2f809e65",
           "name": "campaignOffersTitleColor",
           "displayName": "",
           "description": "",
@@ -98,7 +98,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "293e9eee-b0f1-4962-b55c-b9848547c64c",
+          "id": "6dd7fa73-68b5-4b60-b08d-48c960131a8d",
           "name": "campaignOffersDescriptionColor",
           "displayName": "",
           "description": "",
@@ -112,7 +112,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "ef7188d8-093e-4173-9d8e-84fee1b2dec6",
+          "id": "bb974bc9-b316-488d-88fc-1d4a87bd5cc5",
           "name": "campaignOffersContainerBgColor",
           "displayName": "",
           "description": "",
@@ -126,7 +126,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "d8912f0a-6175-46db-a98b-9ba463b2c609",
+          "id": "e2b01dc1-cf4b-4390-a710-a88036b461db",
           "name": "showCampaignShowDiscountSettings",
           "displayName": "",
           "description": "",
@@ -140,7 +140,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "d9183ba1-efe5-41cb-bf8c-b270095fbed4",
+          "id": "31e940fb-bc2b-42a3-9f99-0cf561abad65",
           "name": "showCampaignHideDiscountBadge",
           "displayName": "",
           "description": "",
@@ -154,7 +154,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "c6cc452a-7cf1-4ca0-bf36-5dc4a8107d8f",
+          "id": "bebe6cc9-ee70-46e8-99bd-bc106eedbcf6",
           "name": "campaignOffersDiscountPercentageColor",
           "displayName": "",
           "description": "",
@@ -168,7 +168,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "28ab6bf0-0e50-44e9-91aa-b546d2e897aa",
+          "id": "ed9ff02e-0fb2-4c01-9cea-76801bbf8ab8",
           "name": "campaignOffersDiscountPercentageBgColor",
           "displayName": "",
           "description": "",
@@ -182,7 +182,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "2092b731-2c8c-461c-a1ab-83dcbb7135b9",
+          "id": "54aaa9e7-2e9c-48b9-be8a-3c5f1737eaba",
           "name": "showCampaignShowCountdownSettings",
           "displayName": "",
           "description": "",
@@ -196,7 +196,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "8629bbfe-3de9-464f-b9a5-4eb5b8dec17f",
+          "id": "6e8c0488-efea-407d-958c-b9dc984accb0",
           "name": "campaignOfferCountdownStyleIsLine",
           "displayName": "",
           "description": "",
@@ -210,7 +210,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "c3c508d4-5c0b-4201-b337-3d25df206d32",
+          "id": "e272f7ed-bb43-46ec-87da-cc7730fd52f2",
           "name": "campaignOffersCountdownTextColor",
           "displayName": "",
           "description": "",
@@ -224,7 +224,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "697b4adc-3e64-4995-a285-10e0c1b88db3",
+          "id": "34c4151b-f7db-46e2-a217-e98cdddd4b15",
           "name": "campaignOffersCountdownTimeColor",
           "displayName": "",
           "description": "",
@@ -238,7 +238,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "aa7ec4de-61a5-456f-8f0f-0e5921636735",
+          "id": "e9901d9e-9cdb-4e67-a34b-f6ea4029c9b1",
           "name": "campaignOffersCountdownBgColor",
           "displayName": "",
           "description": "",
@@ -252,7 +252,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "6c0e0670-2350-4f83-87af-1df897fe09c3",
+          "id": "514e2e5a-9144-4550-8101-5432fb549a86",
           "name": "campaignOffersEnableMiddlePhase",
           "displayName": "",
           "description": "",
@@ -266,7 +266,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "046e0dd5-7ced-41ec-a1ef-9326234470c0",
+          "id": "34fe6ce5-f21f-49e7-a685-0baca351b8b6",
           "name": "campaignOffersMiddlePhaseOverlayColor",
           "displayName": "",
           "description": "",
@@ -280,7 +280,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "b6587a84-a0f0-4964-acb3-4051554ef963",
+          "id": "a298da96-f7ba-4c64-b059-e20f5bb8d5e5",
           "name": "campaignOfferCountdownStyleIsLineSuccessPage",
           "displayName": "",
           "description": "",
@@ -294,7 +294,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "2e521a38-a523-49bc-b46b-f1ab368cb9ee",
+          "id": "d86e1b73-9dbc-4faa-a0e5-729d981aa745",
           "name": "buttonBgColor",
           "displayName": "",
           "description": "",
@@ -308,7 +308,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "5facc8f0-042a-49fd-b4f0-3c0d402be7cd",
+          "id": "dbab06e0-102b-4f8e-8c3a-653fc0fe440d",
           "name": "buttonTextColor",
           "displayName": "",
           "description": "",
@@ -322,7 +322,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "08af154e-a554-4aa2-9071-353d9128d4b2",
+          "id": "7e6c551e-76d2-4634-a9bd-61b38bee05ab",
           "name": "buttonDisabledBgColor",
           "displayName": "",
           "description": "",
@@ -336,7 +336,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "29442fe6-50bb-481b-9f64-46c2d8f4d40e",
+          "id": "31363a97-d175-4c84-9e37-aa7d488f2a16",
           "name": "buttonDisabledTextColor",
           "displayName": "",
           "description": "",
@@ -350,7 +350,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "60906ef0-6f2d-41a8-b3fc-3b568b7c192c",
+          "id": "042c6306-5459-4cb6-aa18-4c45cbae8b74",
           "name": "primaryTextColor",
           "displayName": "",
           "description": "",
@@ -364,7 +364,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "6cb24d13-1a30-4197-be5f-14fb6a1f8a95",
+          "id": "985e0982-93a4-4b24-a201-541575e682bc",
           "name": "secondaryTextColor",
           "displayName": "",
           "description": "",
@@ -378,7 +378,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "402e2f7a-5c2d-4314-8545-cab5a5516ebc",
+          "id": "3d3b6d2f-9fcd-43a7-b680-8530a83a841b",
           "name": "primaryBgColor",
           "displayName": "",
           "description": "",
@@ -392,7 +392,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "3ea1e642-15ff-40a1-8b9e-957ed7ede1bc",
+          "id": "600d055c-7d60-4885-b465-3a6c6c345657",
           "name": "secondaryBgColor",
           "displayName": "",
           "description": "",
@@ -406,7 +406,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "88b430c2-74da-44d2-9656-75bddf0af54a",
+          "id": "e74448fd-8ff5-4d5b-9457-a13cbbf56521",
           "name": "borderColor",
           "displayName": "",
           "description": "",
@@ -420,7 +420,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "f5ba7eee-891f-499d-834c-e6a2b1012963",
+          "id": "04a05af9-9f06-450a-9e7e-46e145a63637",
           "name": "cardBgColor",
           "displayName": "",
           "description": "",
@@ -434,7 +434,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "88d4fdec-f76e-411d-a33e-12d5bfd55c97",
+          "id": "cea79722-9187-47f4-aa42-1441d4c52c25",
           "name": "errorColor",
           "displayName": "",
           "description": "",
@@ -448,7 +448,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "9bdc8ee4-50d5-4593-ae43-23b4ed0501ab",
+          "id": "43c27074-b221-42de-a403-9cb7dfcafed1",
           "name": "errorLightColor",
           "displayName": "",
           "description": "",
@@ -462,7 +462,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "8437cfcf-972a-40a1-992b-e1efd7060c8f",
+          "id": "63daa748-f040-43fa-81e6-018680d31d40",
           "name": "warningColor",
           "displayName": "",
           "description": "",
@@ -476,7 +476,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "3e9a5998-4c94-4fbc-8a76-1362ca088290",
+          "id": "111c2cd4-5724-4f03-9776-234a56985fbd",
           "name": "warningLightColor",
           "displayName": "",
           "description": "",
@@ -490,7 +490,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "4b711eb8-a1b2-4cc2-93db-78e0be3a4886",
+          "id": "51a84b95-caa8-4edf-8e0f-281ed0223250",
           "name": "successColor",
           "displayName": "",
           "description": "",
@@ -504,7 +504,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "2779da6b-3791-482f-a846-99383879a48e",
+          "id": "addadb17-86c9-4585-a6f2-a0a0ad4f0a4e",
           "name": "successLightColor",
           "displayName": "",
           "description": "",
@@ -518,7 +518,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "c688ef7c-3a2b-4964-bb8c-ec6dfdd2e7ed",
+          "id": "4fbfc1ea-2f1e-45f3-b25c-c4309499937c",
           "name": "secondaryButtonBgColor",
           "displayName": "",
           "description": "",
@@ -532,7 +532,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "6c993156-2141-4a2b-aaed-089a007d86ca",
+          "id": "61d479c1-a3ba-4ea7-bdd9-ef0ce9f3c3d7",
           "name": "secondaryButtonTextColor",
           "displayName": "",
           "description": "",
@@ -546,7 +546,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "19afd776-923d-4839-8270-fd844ec62cdc",
+          "id": "bc8180cc-2ab6-4a4e-a3ec-0c091479c1c8",
           "name": "secondaryButtonBorderColor",
           "displayName": "",
           "description": "",
@@ -3512,6 +3512,20 @@
       "type": "COMPONENT",
       "componentJson": null,
       "props": [
+        {
+          "id": "1c3a79b4-7298-4fd7-ae06-1d9cf143f176",
+          "name": "web3FormsAccessKey",
+          "displayName": "Web3Forms Erişim Anahtarı (AccessKey Ör: 00000000-0000-0000-0000-000000000000)",
+          "description": "Web3Forms Erişim Anahtarı (AccessKey Ör: 00000000-0000-0000-0000-000000000000)",
+          "type": "TEXT",
+          "isRequired": false,
+          "sliderData": {},
+          "translations": {},
+          "groupId": "904643e7-c7e5-497d-b7ef-dcb72e5532fb",
+          "excludedFields": [],
+          "excludedFieldsCategory": [],
+          "isFacetListNotSent": false
+        },
         {
           "id": "df30935d-df0a-4641-b859-da8ca62068a3",
           "name": "title",
@@ -14650,6 +14664,7 @@
           "id": "877f2fa0-8628-4051-8b79-1473dffa3b0a",
           "componentId": "b9af4b86-3372-481c-afc9-1f834071b4aa",
           "propValues": {
+            "web3FormsAccessKey": "d47a27f7-ea3f-459b-8453-9c1b6a91d3bf",
             "title": "iletişim",
             "textPicture": "ContactUs",
             "imageWeb": {
@@ -14741,8 +14756,7 @@
               }
             ],
             "contactInformation": "<p style=\"color: rgb(0, 0, 0); font-family: HelveticaNeueLight; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; text-align: center;\">İLETİŞİM BİLGİLERİ</p><p style=\"color: rgb(0, 0, 0); font-family: HelveticaNeueLight; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; text-align: center;\"><br></p><p style=\"color: rgb(0, 0, 0); font-family: HelveticaNeueLight; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; text-align: center;\">Merkez, Birahane Sk. No:7, 34381 Bomonti Şişli İstanbul</p><p style=\"color: rgb(0, 0, 0); font-family: HelveticaNeueLight; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; text-align: center;\"><br></p><p style=\"color: rgb(0, 0, 0); font-family: HelveticaNeueLight; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; text-align: center;\">Müşteri Hizmetleri</p><p style=\"color: rgb(0, 0, 0); font-family: HelveticaNeueLight; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; text-align: center;\">Çalışma Saatleri: Hafta içi 09:00-20:00, Cumartesi 09:00-20:00</p><p style=\"color: rgb(0, 0, 0); font-family: HelveticaNeueLight; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; text-align: center;\"><br></p><p style=\"color: rgb(0, 0, 0); font-family: HelveticaNeueLight; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; text-align: center;\"></p><p style=\"color: rgb(0, 0, 0); font-family: HelveticaNeueLight; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; text-align: center;\">0554 895 22 20</p><p style=\"color: rgb(0, 0, 0); font-family: HelveticaNeueLight; font-size: medium; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; text-align: center;\">info@dizaynella.com.tr</p>",
-            "mapLink": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.414812008918!2d28.97584278944413!3d41.05992454236467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab710a1c2210f%3A0xbe9884d3b0e6ca43!2sDizaynElla!5e0!3m2!1str!2str!4v1754304224617!5m2!1str!2str\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
-            "web3FormsAccessKey": "d47a27f7-ea3f-459b-8453-9c1b6a91d3bf"
+            "mapLink": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.414812008918!2d28.97584278944413!3d41.05992454236467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab710a1c2210f%3A0xbe9884d3b0e6ca43!2sDizaynElla!5e0!3m2!1str!2str!4v1754304224617!5m2!1str!2str\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
           }
         }
       ],
@@ -15729,6 +15743,7 @@
           "id": "feb9a258-4d82-4763-900d-312a68a4d99a",
           "componentId": "454c09af-8d00-48bd-b281-acd44d37b217",
           "propValues": {
+            "web3FormsAccessKey": "d47a27f7-ea3f-459b-8453-9c1b6a91d3bf",
             "title": "Kariyer",
             "textPicture": "Career",
             "imageWeb": {
@@ -16228,48 +16243,6 @@
             },
             "awardTitle": "Our Rewards Program",
             "awardContent": "<p>NET‑A‑PORTER Rewards offers exclusive benefits based on your annual spend. The more you shop, the more you’ll unlock, including early access to sales, brand collaborations, priority customer service and your own Personal Shopper.</p><p>Explore our benefits:</p>",
-            "productShowcaseTitle": "Can we tempt you?",
-            "productShowcaseContent": "<span style=\"color: rgb(17, 17, 17); font-family: ChronicleText, Georgia, serif, sans-serif, &quot;MSung PRC Medium&quot;; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 325; text-align: center; white-space-collapse: preserve-breaks;\">Explore our curated selection of new items</span>",
-            "showcaseProducts": {
-              "id": "6b64e667-2dee-4d94-845f-6b5c26a57d7a",
-              "productListType": "ALL",
-              "initialSort": "LAST_ADDED",
-              "initialLimit": 20,
-              "productCount": null,
-              "productIds": null,
-              "category": null,
-              "usePageFilter": null,
-              "relatedProductsType": null,
-              "recommendedProductsType": {
-                "recommendedProductType": "CATEGORY"
-              }
-            },
-            "productShowcaseBtnLink": {
-              "id": "d99101be-b88b-42df-b892-0e3396c51028",
-              "linkType": "PAGE",
-              "label": "Anasayfa",
-              "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
-              "pageType": "INDEX",
-              "pageComponentId": null,
-              "subLinks": []
-            },
-            "contents": [
-              {
-                "question": "Dizaynella Rewards nedir?",
-                "answer": "Dizaynella Rewards, sadakat programımızdır. Satın aldığınız her ürün, size özel ayrıcalıkların kilidini açmaya bir adım daha yaklaşmanızı sağlar. Yıllık harcama tutarınıza göre sizi dört farklı üyelik seviyesinden birine dahil ederiz: Bronz, Gümüş, Altın veya EIP (En İyi Müşteri Programı)."
-              },
-              {
-                "question": "Rewards üyelik seviyeme nasıl hak kazandım?",
-                "answer": "<p data-start=\"506\" data-end=\"752\">Dizaynella Rewards programına katılmak için, sitemizde bir <strong data-start=\"567\" data-end=\"587\">kullanıcı hesabı</strong> oluşturmanız gerekir. (Kayıt ve Hesap Koşullarımızda belirtildiği şekilde.)<br data-start=\"663\" data-end=\"666\">\nRewards programına yeni katıldıysanız, başlangıçta <strong data-start=\"717\" data-end=\"733\">Bronz seviye</strong> ile başlarsınız.</p>\n<p data-start=\"754\" data-end=\"965\">İlerleyen süreçte, bulunduğunuz üyelik seviyesi <strong data-start=\"802\" data-end=\"849\">takvim yılı içerisindeki toplam harcamanıza</strong> göre güncellenir. Gerekli koşulları sağladığınızda yıl içinde <strong data-start=\"912\" data-end=\"964\">herhangi bir zamanda üst seviyeye geçebilirsiniz</strong>.</p>"
-              },
-              {
-                "question": "Mevcut Rewards üyelik seviyemi ne kadar süreyle koruyacağım?",
-                "answer": "Üyeliğiniz bir üst seviyeye yükseltilmediği sürece, <strong data-start=\"1095\" data-end=\"1148\">bulunduğunuz seviyede yıl sonuna kadar kalırsınız</strong>.<br data-start=\"1149\" data-end=\"1152\">\nBir üst seviye için gereken harcama tutarını tamamladığınızda ve iade süresi sona erdiğinde, <strong data-start=\"1245\" data-end=\"1293\">üyelik seviyeniz otomatik olarak yükseltilir</strong>."
-              }
-            ],
-            "contentsTitle": "Sıkça sorulan sorular",
-            "contentsOrientation": "<p style=\"text-decoration: underline;\">Loyalty Terms and Conditions</p>\n<p>Any other questions? Have a look at more <span style=\"text-decoration: underline;\">FAQs</span></p>",
-            "awardNotes": "Deneme Notu",
             "rewardPackages": [
               {
                 "packageImage": {
@@ -16355,7 +16328,49 @@
                   }
                 ]
               }
-            ]
+            ],
+            "awardNotes": "Deneme Notu",
+            "productShowcaseTitle": "Can we tempt you?",
+            "productShowcaseContent": "<span style=\"color: rgb(17, 17, 17); font-family: ChronicleText, Georgia, serif, sans-serif, &quot;MSung PRC Medium&quot;; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 325; text-align: center; white-space-collapse: preserve-breaks;\">Explore our curated selection of new items</span>",
+            "showcaseProducts": {
+              "id": "6b64e667-2dee-4d94-845f-6b5c26a57d7a",
+              "productListType": "ALL",
+              "initialSort": "LAST_ADDED",
+              "initialLimit": 20,
+              "productCount": null,
+              "productIds": null,
+              "category": null,
+              "usePageFilter": null,
+              "relatedProductsType": null,
+              "recommendedProductsType": {
+                "recommendedProductType": "CATEGORY"
+              }
+            },
+            "productShowcaseBtnLink": {
+              "id": "d99101be-b88b-42df-b892-0e3396c51028",
+              "linkType": "PAGE",
+              "label": "Anasayfa",
+              "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
+              "pageType": "INDEX",
+              "pageComponentId": null,
+              "subLinks": []
+            },
+            "contents": [
+              {
+                "question": "Dizaynella Rewards nedir?",
+                "answer": "Dizaynella Rewards, sadakat programımızdır. Satın aldığınız her ürün, size özel ayrıcalıkların kilidini açmaya bir adım daha yaklaşmanızı sağlar. Yıllık harcama tutarınıza göre sizi dört farklı üyelik seviyesinden birine dahil ederiz: Bronz, Gümüş, Altın veya EIP (En İyi Müşteri Programı)."
+              },
+              {
+                "question": "Rewards üyelik seviyeme nasıl hak kazandım?",
+                "answer": "<p data-start=\"506\" data-end=\"752\">Dizaynella Rewards programına katılmak için, sitemizde bir <strong data-start=\"567\" data-end=\"587\">kullanıcı hesabı</strong> oluşturmanız gerekir. (Kayıt ve Hesap Koşullarımızda belirtildiği şekilde.)<br data-start=\"663\" data-end=\"666\">\nRewards programına yeni katıldıysanız, başlangıçta <strong data-start=\"717\" data-end=\"733\">Bronz seviye</strong> ile başlarsınız.</p>\n<p data-start=\"754\" data-end=\"965\">İlerleyen süreçte, bulunduğunuz üyelik seviyesi <strong data-start=\"802\" data-end=\"849\">takvim yılı içerisindeki toplam harcamanıza</strong> göre güncellenir. Gerekli koşulları sağladığınızda yıl içinde <strong data-start=\"912\" data-end=\"964\">herhangi bir zamanda üst seviyeye geçebilirsiniz</strong>.</p>"
+              },
+              {
+                "question": "Mevcut Rewards üyelik seviyemi ne kadar süreyle koruyacağım?",
+                "answer": "Üyeliğiniz bir üst seviyeye yükseltilmediği sürece, <strong data-start=\"1095\" data-end=\"1148\">bulunduğunuz seviyede yıl sonuna kadar kalırsınız</strong>.<br data-start=\"1149\" data-end=\"1152\">\nBir üst seviye için gereken harcama tutarını tamamladığınızda ve iade süresi sona erdiğinde, <strong data-start=\"1245\" data-end=\"1293\">üyelik seviyeniz otomatik olarak yükseltilir</strong>."
+              }
+            ],
+            "contentsTitle": "Sıkça sorulan sorular",
+            "contentsOrientation": "<p style=\"text-decoration: underline;\">Loyalty Terms and Conditions</p>\n<p>Any other questions? Have a look at more <span style=\"text-decoration: underline;\">FAQs</span></p>"
           }
         }
       ],

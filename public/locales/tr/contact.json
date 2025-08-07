@@ -10,6 +10,7 @@
   "orderNumber": "Sipariş Numarası",
   "invoiceNumber": "Fatura Numarası",
   "productCode": "Ürün Kodu",
+  "optional": "İsteğe bağlı",
   "firstName": "Ad*",
   "lastName": "Soyad*",
   "phone": "Telefon*",

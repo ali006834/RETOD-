@@ -10,6 +10,7 @@
   "orderNumber": "Номер заказа",
   "invoiceNumber": "Номер счета",
   "productCode": "Код товара",
+  "optional": "Необязательно",
   "firstName": "Имя*",
   "lastName": "Фамилия*",
   "phone": "Телефон*",

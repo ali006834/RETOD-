@@ -455,6 +455,7 @@ export type StoresProps = {
 };
 
 export type CareerProps = {
+	web3FormsAccessKey?: string;
 	title?: string;
 	textPicture?: string;
 	imageWeb?: IkasImage;
