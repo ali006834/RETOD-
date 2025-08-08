@@ -18,7 +18,8 @@
       }
     },
     "relatedProducts": {
-      "text": "You May Also Like"
+      "text": "You May Also Like",
+      "shownHere": "SHOWN HERE"
     },
     "lastSeenProduct": {
       "text": "Last Seen Products"
@@ -93,6 +94,7 @@
   },
   "selected_size": "Selected Size",
   "description": "Product Details",
+  "completeTheLook": "Complete your look",
   "size": "Size",
   "bodyTable": {
     "size": "Size",

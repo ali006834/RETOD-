@@ -12,12 +12,13 @@ import Refund from "./refund";
 import Taksit from "./taksit";
 import { ProductShortExplanation } from "./product-short-explanation";
 import { ProductSku } from "./product-sku";
+import { CompleteTheLook } from "./complete-the-look";
 
 const Detail = (props: ProductDetailProps) => {
   // Hangi bileşenin açık olduğunu takip eden state
   const [openSection, setOpenSection] = useState<
-    "description" | "refund" | "taksit" | null
-  >("description");
+    "description" | "refund" | "taksit" | "complete-the-look" | null
+  >("complete-the-look");
 
   const { deliveryDescription } = props;
 
@@ -40,6 +41,15 @@ const Detail = (props: ProductDetailProps) => {
           <AddToCart {...props} />
         </div>
         <div className={styles.infos}>
+          <CompleteTheLook
+            {...props}
+            isOpen={openSection === "complete-the-look"}
+            onToggle={() =>
+              setOpenSection(
+                openSection === "complete-the-look" ? null : "complete-the-look"
+              )
+            }
+          />
           <Description
             {...props}
             isOpen={openSection === "description"}

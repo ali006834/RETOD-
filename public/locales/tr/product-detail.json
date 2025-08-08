@@ -17,7 +17,8 @@
       }
     },
     "relatedProducts": {
-      "text": "Ayrıca Göz Atmak İsteyebileceğiniz Ürünler"
+      "text": "Ayrıca Göz Atmak İsteyebileceğiniz Ürünler",
+      "shownHere": "BURADA GÖSTERİLEN"
     },
     "lastSeenProduct": {
       "text": "Son Görüntülenen Ürünler"
@@ -92,6 +93,7 @@
   },
   "selected_size": "Seçilmiş Beden",
   "description": "Ürün Detayları",
+  "completeTheLook": "Tam Bir Görünüm İçin Son Adım",
   "instalment": "Taksit Seçenekleri",
   "size": "Beden",
   "bodyTable": {

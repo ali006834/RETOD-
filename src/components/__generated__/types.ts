@@ -277,6 +277,9 @@ export type ProductListProps = {
 
 export type ProductDetailProps = {
 	product?: IkasProduct;
+	completeTheLookTitle?: string;
+	completeTheLookContent?: string;
+	completeTheLookProducts?: IkasProductList;
 	deliveryDescription?: string;
 	deliveryDescriptionLink?: IkasNavigationLink;
 	bankTable?: MainTable[];
