@@ -23,17 +23,18 @@ export const NS = "product-detail";
 export const CompleteTheLook = (
   props: ProductDetailProps & { isOpen: boolean; onToggle: () => void }
 ) => {
-  const {
-    completeTheLookProducts,
-    completeTheLookTitle,
-    completeTheLookContent,
-  } = props;
+  const { completeTheLookTitle, completeTheLookContent, product } = props;
 
-  // Eğer ürünler yoksa veya boş array ise hiçbir şey gösterme
+  // Kombin attribute'unu bul (case-insensitive)
+  const kombinAttribute = product?.attributes?.find(
+    (attr) => attr.productAttribute?.name?.toLowerCase() === "kombin"
+  );
+
+  // Kombin attribute'u yoksa veya products array'i boşsa hiçbir şey gösterme
   if (
-    !completeTheLookProducts ||
-    !completeTheLookProducts.data ||
-    completeTheLookProducts.data.length === 0
+    !kombinAttribute ||
+    !kombinAttribute.products ||
+    kombinAttribute.products.length === 0
   ) {
     return null;
   }
@@ -86,7 +87,7 @@ export const CompleteTheLook = (
                   },
                 }}
               >
-                {completeTheLookProducts.data.map((product, index) => {
+                {kombinAttribute.products.map((product, index) => {
                   return (
                     <SwiperSlide key={index}>
                       <ComplateTheLookProduct product={product} />
