@@ -4979,7 +4979,7 @@
               "usePageData": true
             },
             "completeTheLookTitle": "Tam Bir Görünüm İçin Son Adım",
-            "completeTheLookContent": "Giyinmek bir eylem, stil ise bir anlatımdır.\nHer parça, seni yansıtan bir detaydır. Kombinini tamamla, görünümüne son dokunuşu yap ve stilini bütünleştir.\nDizaynella’nın zarif dokunuşlarıyla şıklık, artık sadece bir seçim değil; bir ifade biçimi.",
+            "completeTheLookContent": "Giyinmek bir eylem, stil ise bir anlatımdır.\nHer parça, seni yansıtan bir detaydır. Kombinini tamamla, görünümüne son dokunuşu yap ve stilini bütünleştir.\n<b>Dizaynella’nın</b> zarif dokunuşlarıyla şıklık, artık sadece bir seçim değil; bir ifade biçimi.",
             "completeTheLookProducts": {
               "id": "d6268d35-e1a2-46de-864e-e08bbe125000",
               "productListType": "STATIC",
@@ -4987,18 +4987,6 @@
               "initialLimit": 20,
               "productCount": null,
               "productIds": [
-                {
-                  "productId": "eb81ceef-cde5-43db-abef-e757b27b24f7",
-                  "variantId": "6d65dab7-4cda-4c64-b142-97865dae13cb"
-                },
-                {
-                  "productId": "7d0782d1-8455-4237-8d9f-ca102d3964cf",
-                  "variantId": "8174308e-9acc-49e3-91e6-77994e49d8b2"
-                },
-                {
-                  "productId": "482e724d-16bc-4a47-8b5d-6cf16777b996",
-                  "variantId": "47e533a4-d25a-4ce9-b2a8-136109a05cbc"
-                },
                 {
                   "productId": "077e2153-d431-4a13-b1ca-52b368944bdf",
                   "variantId": "50606df7-3939-46b0-bff5-31ff62c02f65"

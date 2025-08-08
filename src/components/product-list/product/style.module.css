@@ -143,14 +143,13 @@
 .product_title h2 {
   font-size: 14px;
   letter-spacing: 0.28px;
-  font-weight: bold;
   -webkit-font-smoothing: antialiased;
   color: #111;
-  font-family: "Akkurat" !important;
+  font-family: "Helvetica" !important;
+  font-weight: 400;
   margin-top: 5px;
   line-height: 24px;
   overflow: hidden;
-  /* text-transform: uppercase; */
 }
 
 .product_title span {
@@ -158,8 +157,8 @@
   letter-spacing: 0.6px;
   color: #000;
   font-size: 12px;
+  font-family: "Helvetica" !important;
   font-weight: 400;
-  font-family: "Akkurat" !important;
 }
 
 .product_title h2:hover {
@@ -170,8 +169,8 @@
 .price_content span {
   font-size: 14px;
   line-height: 20px;
-  font-weight: bold;
-  font-family: "Akkurat" !important;
+  font-family: "Helvetica" !important;
+  font-weight: 400;
   text-wrap: nowrap;
 }
 
