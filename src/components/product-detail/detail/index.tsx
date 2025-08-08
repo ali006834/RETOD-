@@ -15,10 +15,23 @@ import { ProductSku } from "./product-sku";
 import { CompleteTheLook } from "./complete-the-look";
 
 const Detail = (props: ProductDetailProps) => {
+  // Kombin attribute'unu kontrol et
+  const kombinAttribute = props.product?.attributes?.find(
+    (attr) => attr.productAttribute?.name?.toLowerCase() === "kombin"
+  );
+
+  // Eğer Kombin attribute'u varsa complete-the-look, yoksa description açık olsun
+  const defaultOpenSection =
+    kombinAttribute &&
+    kombinAttribute.products &&
+    kombinAttribute.products.length > 0
+      ? "complete-the-look"
+      : "description";
+
   // Hangi bileşenin açık olduğunu takip eden state
   const [openSection, setOpenSection] = useState<
     "description" | "refund" | "taksit" | "complete-the-look" | null
-  >("complete-the-look");
+  >(defaultOpenSection);
 
   const { deliveryDescription } = props;
 
