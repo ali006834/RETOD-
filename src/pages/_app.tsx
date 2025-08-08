@@ -9,6 +9,7 @@ import "src/styles/global.css";
 import { ThemeProvider } from "styled-components";
 import { theme } from "src/styles/styled";
 import FloatingButtons from "src/components/floating-buttons";
+import CookieConsent from "src/components/cookie-consent";
 
 IkasStorefrontConfig.init({
   ...Config,
@@ -23,6 +24,7 @@ const IkasThemeApp: React.FC<AppProps> = (props) => {
     <ThemeProvider theme={theme}>
       <Component {...pageProps} />
       <FloatingButtons />
+      <CookieConsent />
     </ThemeProvider>
   );
 };
