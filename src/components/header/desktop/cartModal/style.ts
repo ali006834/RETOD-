@@ -368,14 +368,12 @@ export const ProductContainer = styled.div`
   display: flex;
   flex-direction: column;
   border: 1px solid #eaeaea;
-  border-radius: 8px;
   overflow: hidden;
   margin-bottom: 16px;
   transition: all 0.3s ease;
 
   &:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transform: translateY(-2px);
   }
 `;
 
@@ -432,7 +430,7 @@ export const ItemsContainer = styled.div`
 
 export const ProductImageContainer = styled.div`
   width: 100%;
-  aspect-ratio: 1/1;
+  aspect-ratio: 1080/1620;
   position: relative;
   overflow: hidden;
 

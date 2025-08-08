@@ -7,13 +7,15 @@ import TrFlagSvg from "src/components/svg/tr";
 import EnFlagSvg from "src/components/svg/en";
 import RuFlagSvg from "src/components/svg/ru";
 import ArFlagSvg from "src/components/svg/ar";
-import Globe from "src/components/svg/globe";
+import ArrowDown from "src/components/svg/arrow-down";
 
 export const LanguageSelect = observer(() => {
   const store = useStore();
   const { t } = useTranslation();
 
   const value = store.languageOptions?.find((lO) => lO.isSelected);
+  const defaultLanguage = "tr"; // From next.config.js defaultLocale
+  const currentLanguage = value?.locale || defaultLanguage;
 
   const handleChangeLanguage = (item: any) => {
     if (item) {
@@ -31,13 +33,13 @@ export const LanguageSelect = observer(() => {
           className={styles.select_langauge}
           onClick={() => setShowLanguageModal(true)}
         >
-          <Globe />
-          <p>{t("common:location")}:</p>
-          <p
-            style={{ textDecoration: "underline", textUnderlineOffset: "5px" }}
-          >
-            {value?.locale}
-          </p>
+          <span>
+            {currentLanguage == "tr" && <TrFlagSvg />}
+            {currentLanguage == "en" && <EnFlagSvg />}
+            {currentLanguage == "ru" && <RuFlagSvg />}
+            {currentLanguage == "ar" && <ArFlagSvg />}
+          </span>
+          <ArrowDown strokeColor="#000" width="16px" height="16px" />
         </div>
       </div>
       {ShowLanguageModal && (

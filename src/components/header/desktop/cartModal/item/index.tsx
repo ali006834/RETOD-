@@ -51,7 +51,6 @@ const Item = ({
   // Stok uyarısı için state
   const [showStockAlert, setShowStockAlert] = useState(false);
 
-  console.log("item:NNN::", item);
   const handleRemove = () => {
     setIsRemoving(true);
     setTimeout(() => {

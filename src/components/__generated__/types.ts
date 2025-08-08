@@ -198,8 +198,8 @@ export type HeaderProps = {
 	searchRecomProducts?: IkasProductList;
 	special_for_your?: IkasNavigationLink;
 	scrollingTexts?: ScrollingTexts[];
-	cartProducts?: IkasProductList;
 	title?: string;
+	cartProducts?: IkasProductList;
 };
 
 export type FooterProps = {

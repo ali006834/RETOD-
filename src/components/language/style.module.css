@@ -6,14 +6,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+.select_langauge:hover {
+  background-color: rgba(0, 0, 0, 0.05);
 }
 .select_langauge span {
-  text-transform: uppercase;
-  font-family: "Helvetica" !important;
-  font-weight: 400;
-  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+.select_langauge span svg {
+  width: 20px;
+  height: 15px;
+  overflow: hidden;
 }
 .langauge_modal {
   position: fixed;
@@ -48,15 +57,24 @@
   align-items: center;
   gap: 10px;
   cursor: pointer;
+  padding: 8px 0;
 }
-.language_content span {
+.language_content span:first-child {
+  display: flex;
+  align-items: center;
+}
+.language_content span:first-child svg {
+  width: 20px;
+  height: 15px;
+  overflow: hidden;
+}
+.language_content span:last-child {
   font-size: 18px;
   font-family: "Helvetica" !important;
   font-weight: 400;
   display: block;
-  margin-top: 15px;
 }
-.language_content span:hover {
+.language_content span:last-child:hover {
   color: #6b7280;
 }
 .selected_lang {
@@ -73,15 +91,16 @@
 .close svg path {
   stroke: #fff !important;
 }
-.select_langauge svg {
-  width: 22px;
-}
 @media only screen and (max-width: 1300px) {
-  .select_langauge span {
-    font-size: 10px;
+  .select_langauge span svg {
+    width: 16px;
+    height: 12px;
+    border-radius: 50%;
+    overflow: hidden;
   }
   .select_langauge svg {
-    width: 16px;
+    width: 14px;
+    height: 14px;
   }
 }
 @media only screen and (max-width: 600px) {

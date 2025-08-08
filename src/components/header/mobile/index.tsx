@@ -470,7 +470,7 @@ const RightSide = observer((props: HeaderProps) => {
               <IOCloseSVG />
             </button>
           </div>
-          <CartModal />
+          <CartModal {...props} />
         </div>
         {cart !== undefined && cart !== null && (
           <div className={styles.bottomContent}>

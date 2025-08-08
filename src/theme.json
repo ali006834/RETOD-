@@ -14,7 +14,7 @@
       "componentJson": null,
       "props": [
         {
-          "id": "cf7d922b-1c7b-431f-a31d-a9a1d9c4450e",
+          "id": "d91c02a8-29a7-47fe-a772-1837a8d3f4cd",
           "name": "logo",
           "displayName": "",
           "description": "",
@@ -28,7 +28,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "ab22c88d-2c53-4ab3-aa6d-9f3d2710157b",
+          "id": "9ce24c1d-fedd-4a9f-98a0-21b20bbc0f41",
           "name": "showTax",
           "displayName": "",
           "description": "",
@@ -42,7 +42,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "e01537b1-ece1-4490-a52c-3d099e58c417",
+          "id": "da165e74-4d1b-4d63-ac85-69a471492ee3",
           "name": "showCampaignOffersDesign",
           "displayName": "",
           "description": "",
@@ -56,7 +56,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "6c2eeb12-6ece-45d0-ae70-f9d477f5392a",
+          "id": "6317698d-5a62-4583-b3d6-03dfed49d62b",
           "name": "campaignOfferIsSmallDesign",
           "displayName": "",
           "description": "",
@@ -70,7 +70,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "95c30c4c-050e-4643-93fc-7875f71e0523",
+          "id": "1e119733-7965-4971-93a4-ef3c2ac1e3c6",
           "name": "showCampaignIsBiggerImage",
           "displayName": "",
           "description": "",
@@ -84,7 +84,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "12d553d3-fe1b-41f7-9b72-ae8eef717949",
+          "id": "d9176f00-17c5-400c-9c59-6de17dc89125",
           "name": "campaignOffersTitleColor",
           "displayName": "",
           "description": "",
@@ -98,7 +98,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "8e4c01b1-718a-4135-9f35-5b6d5457299e",
+          "id": "de4c876f-6770-44f8-8cc7-4e32dc15b88c",
           "name": "campaignOffersDescriptionColor",
           "displayName": "",
           "description": "",
@@ -112,7 +112,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "bdcb200d-84e7-4e7d-933e-6e07a4aaec35",
+          "id": "4bdb5a32-13b9-489f-b320-cdd47c086630",
           "name": "campaignOffersContainerBgColor",
           "displayName": "",
           "description": "",
@@ -126,7 +126,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "580e9da4-dbd4-49d9-8044-93639589b78a",
+          "id": "a630db5c-bc64-4be7-b37e-85c4e9657773",
           "name": "showCampaignShowDiscountSettings",
           "displayName": "",
           "description": "",
@@ -140,7 +140,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "aeabd390-2ead-43c1-935d-d3fdeabd6a18",
+          "id": "c2a29f0c-b4dc-4af9-911d-67ed6d665b62",
           "name": "showCampaignHideDiscountBadge",
           "displayName": "",
           "description": "",
@@ -154,7 +154,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "147e00d3-d1ba-46a4-9e88-b6c1e66f3f3c",
+          "id": "c11de116-97c7-4240-8a37-fd9c9ef97121",
           "name": "campaignOffersDiscountPercentageColor",
           "displayName": "",
           "description": "",
@@ -168,7 +168,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "7bb198ef-648d-49e1-aeb2-04db4fb90920",
+          "id": "58ae94b4-aa18-44ed-920a-7349b5e0cd23",
           "name": "campaignOffersDiscountPercentageBgColor",
           "displayName": "",
           "description": "",
@@ -182,7 +182,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "9f23505f-fe62-489a-8215-2a0d7794d4c9",
+          "id": "21b303e4-e5c0-4dad-ac50-077b20c7e639",
           "name": "showCampaignShowCountdownSettings",
           "displayName": "",
           "description": "",
@@ -196,7 +196,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "cf67af62-ecce-4d66-859e-e7505cd678cb",
+          "id": "e6af46fe-12ca-428e-8be7-db04b35d5984",
           "name": "campaignOfferCountdownStyleIsLine",
           "displayName": "",
           "description": "",
@@ -210,7 +210,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "d423339e-bec6-4643-8f45-8f50bec9e0c7",
+          "id": "6625f61f-cff4-451d-aafb-66efd342e793",
           "name": "campaignOffersCountdownTextColor",
           "displayName": "",
           "description": "",
@@ -224,7 +224,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "facf7539-27d0-41bb-8fda-bd588d1231aa",
+          "id": "4eb790e0-0ae8-4a1b-b7f1-aa5b8d07235c",
           "name": "campaignOffersCountdownTimeColor",
           "displayName": "",
           "description": "",
@@ -238,7 +238,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "5b5845b0-ced8-4654-b3ec-c68e764989a0",
+          "id": "299feef5-a6e4-4865-a057-66a14aa83c01",
           "name": "campaignOffersCountdownBgColor",
           "displayName": "",
           "description": "",
@@ -252,7 +252,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "72073040-ecf2-49bc-b788-3f771050e6d1",
+          "id": "d19af777-3207-4bd3-be64-7a7ed68cbc6c",
           "name": "campaignOffersEnableMiddlePhase",
           "displayName": "",
           "description": "",
@@ -266,7 +266,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "f8658fe2-e38a-4367-a743-9b9ef730200c",
+          "id": "a0c4fc1a-2e6a-472e-a252-e562993d0270",
           "name": "campaignOffersMiddlePhaseOverlayColor",
           "displayName": "",
           "description": "",
@@ -280,7 +280,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "bba1d740-36aa-4209-bc95-9abcebe0586e",
+          "id": "72ce3c63-1202-4777-b74f-8f78cf8459bb",
           "name": "campaignOfferCountdownStyleIsLineSuccessPage",
           "displayName": "",
           "description": "",
@@ -294,7 +294,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "306cff56-04e4-4765-8542-5650deb0e0c6",
+          "id": "1605e1cd-04d5-41e3-9916-8fab94949d91",
           "name": "buttonBgColor",
           "displayName": "",
           "description": "",
@@ -308,7 +308,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "211a2af3-403b-42e8-9f46-9de4da78558f",
+          "id": "37e5ebdb-e922-4ccb-b160-0439125af580",
           "name": "buttonTextColor",
           "displayName": "",
           "description": "",
@@ -322,7 +322,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "f612959e-8ddb-4ed4-884b-7e51d9717f46",
+          "id": "038ffc61-ae62-4ef8-afee-b4046a428ebc",
           "name": "buttonDisabledBgColor",
           "displayName": "",
           "description": "",
@@ -336,7 +336,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "1f81d902-7e40-4e69-b35c-8190d0716951",
+          "id": "b77687ff-a3e1-4c78-a18d-c0aeafacde77",
           "name": "buttonDisabledTextColor",
           "displayName": "",
           "description": "",
@@ -350,7 +350,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "ec758427-a18f-4863-8563-b0acf67a000d",
+          "id": "8ae92547-892c-4968-a9a6-85a04ee299d7",
           "name": "primaryTextColor",
           "displayName": "",
           "description": "",
@@ -364,7 +364,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "8f2d0b5d-71b5-4cdd-bb2c-ce975b89ff86",
+          "id": "4678f172-352c-4380-bc31-a403189eefff",
           "name": "secondaryTextColor",
           "displayName": "",
           "description": "",
@@ -378,7 +378,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "ae571a3b-dddc-4137-abb8-839e348c0f15",
+          "id": "8d296e29-7da0-4293-99ff-b37794f112bf",
           "name": "primaryBgColor",
           "displayName": "",
           "description": "",
@@ -392,7 +392,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "5d44660b-0265-4781-8e7b-ca02088d64c0",
+          "id": "3816f85e-e3cb-4e0e-b671-284381982f4c",
           "name": "secondaryBgColor",
           "displayName": "",
           "description": "",
@@ -406,7 +406,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "248492d1-a97f-47cb-9287-19058a704c8d",
+          "id": "58f2337c-41f0-4f6f-b5eb-3fd2f682476e",
           "name": "borderColor",
           "displayName": "",
           "description": "",
@@ -420,7 +420,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "0889c65d-ff24-4344-9b01-c8ac035745c4",
+          "id": "8309c2d4-6aa8-49ef-bb62-dc6e8732a934",
           "name": "cardBgColor",
           "displayName": "",
           "description": "",
@@ -434,7 +434,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "baa31c6b-83b6-483d-b830-a41b488feec9",
+          "id": "051081d0-deae-4d62-b41f-ff3d74b6ed2b",
           "name": "errorColor",
           "displayName": "",
           "description": "",
@@ -448,7 +448,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "8ef7be84-5311-494c-ae11-34da0ecec457",
+          "id": "ba61e0c7-2b88-4241-b858-4a4f9ac4f4e3",
           "name": "errorLightColor",
           "displayName": "",
           "description": "",
@@ -462,7 +462,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "ab6e7582-16f4-43cc-a36a-588de685c1ce",
+          "id": "0e5e6a7c-394c-4f73-a4c8-69e6ae0c7c34",
           "name": "warningColor",
           "displayName": "",
           "description": "",
@@ -476,7 +476,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "fda7daf2-4f81-4ca2-a1b2-b331a2ed4abf",
+          "id": "90b8db4b-7a1e-4ac0-9f94-7963dd3b2c2d",
           "name": "warningLightColor",
           "displayName": "",
           "description": "",
@@ -490,7 +490,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "19d636a7-4b35-4a95-a47f-42950db5ca0e",
+          "id": "398d2632-1f09-434d-953a-e8853d48a434",
           "name": "successColor",
           "displayName": "",
           "description": "",
@@ -504,7 +504,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "b002139f-fee8-4269-a219-f85f912729b6",
+          "id": "4d741485-9a95-40ed-8e91-220de080d332",
           "name": "successLightColor",
           "displayName": "",
           "description": "",
@@ -518,7 +518,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "5cab9d52-48c5-4554-b26e-eede85cb4d3f",
+          "id": "76c2ead5-99a0-4c6b-9949-f402875e16c2",
           "name": "secondaryButtonBgColor",
           "displayName": "",
           "description": "",
@@ -532,7 +532,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "1e179402-93ea-43d3-816f-164406771c0d",
+          "id": "0ab6de11-2052-4e51-8ee7-24cb1a7c0d42",
           "name": "secondaryButtonTextColor",
           "displayName": "",
           "description": "",
@@ -546,7 +546,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "a864649f-b2ac-41ae-a014-f5f0f36a2cb1",
+          "id": "16940593-13ac-41c3-9958-766d5a9ddfe5",
           "name": "secondaryButtonBorderColor",
           "displayName": "",
           "description": "",
@@ -715,11 +715,11 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "3170efad-a5f8-477a-a377-56e3c8b9c363",
-          "name": "cartProducts",
-          "displayName": "Ürün Listesi",
-          "description": "Ürün Listesi",
-          "type": "PRODUCT_LIST",
+          "id": "e018704c-5b41-45d7-adf5-994b876aa0c5",
+          "name": "title",
+          "displayName": "Başlık",
+          "description": "Başlık",
+          "type": "TEXT",
           "isRequired": false,
           "sliderData": {},
           "translations": {},
@@ -729,11 +729,11 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "e018704c-5b41-45d7-adf5-994b876aa0c5",
-          "name": "title",
-          "displayName": "Başlık",
-          "description": "Başlık",
-          "type": "TEXT",
+          "id": "3170efad-a5f8-477a-a377-56e3c8b9c363",
+          "name": "cartProducts",
+          "displayName": "Ürün Listesi",
+          "description": "Ürün Listesi",
+          "type": "PRODUCT_LIST",
           "isRequired": false,
           "sliderData": {},
           "translations": {},
@@ -4125,7 +4125,7 @@
               "productCount": null,
               "productIds": null,
               "category": null,
-              "usePageFilter": null,
+              "usePageFilter": false,
               "relatedProductsType": null,
               "recommendedProductsType": {
                 "recommendedProductType": "CATEGORY"
@@ -4918,7 +4918,7 @@
               "productCount": null,
               "productIds": null,
               "category": null,
-              "usePageFilter": null,
+              "usePageFilter": false,
               "relatedProductsType": null,
               "recommendedProductsType": {
                 "recommendedProductType": "CATEGORY"
@@ -5282,6 +5282,46 @@
             ],
             "isWidthVideo": true
           }
+        },
+        {
+          "id": "d8b43726-ef85-433f-adf8-248906032144",
+          "componentId": "a6ad0b59-f312-4aa6-83f7-7256c16efe76",
+          "propValues": {
+            "alternativeProducts": {
+              "id": "1a3f4c1a-ab39-4570-af96-8b9327dc86d5",
+              "productListType": "ALL",
+              "initialSort": "LAST_ADDED",
+              "initialLimit": 20,
+              "productCount": null,
+              "productIds": null,
+              "category": null,
+              "usePageFilter": null,
+              "relatedProductsType": null,
+              "recommendedProductsType": {
+                "recommendedProductType": "CATEGORY"
+              }
+            }
+          }
+        },
+        {
+          "id": "46460690-036a-4bd7-89ee-d242d3e8ce68",
+          "componentId": "ae6834b1-d2ef-4b17-ab13-3102c9fbbc57",
+          "propValues": {
+            "lastSeenProducts": {
+              "id": "f9a4b6f5-36e5-4661-a07d-d02df7f10767",
+              "productListType": "LAST_VIEWED",
+              "initialSort": "LAST_ADDED",
+              "initialLimit": 20,
+              "productCount": null,
+              "productIds": null,
+              "category": null,
+              "usePageFilter": null,
+              "relatedProductsType": null,
+              "recommendedProductsType": {
+                "recommendedProductType": "CATEGORY"
+              }
+            }
+          }
         }
       ],
       "specifications": [],
@@ -5415,7 +5455,7 @@
               "productCount": null,
               "productIds": null,
               "category": null,
-              "usePageFilter": null,
+              "usePageFilter": false,
               "relatedProductsType": null,
               "recommendedProductsType": {
                 "recommendedProductType": "CATEGORY"
@@ -5893,7 +5933,7 @@
               "productCount": null,
               "productIds": null,
               "category": null,
-              "usePageFilter": null,
+              "usePageFilter": false,
               "relatedProductsType": null,
               "recommendedProductsType": {
                 "recommendedProductType": "CATEGORY"
@@ -6296,7 +6336,7 @@
               "productCount": null,
               "productIds": null,
               "category": null,
-              "usePageFilter": null,
+              "usePageFilter": false,
               "relatedProductsType": null,
               "recommendedProductsType": {
                 "recommendedProductType": "CATEGORY"
@@ -6693,7 +6733,7 @@
               "productCount": null,
               "productIds": null,
               "category": null,
-              "usePageFilter": null,
+              "usePageFilter": false,
               "relatedProductsType": null,
               "recommendedProductsType": {
                 "recommendedProductType": "CATEGORY"
@@ -7095,7 +7135,7 @@
               "productCount": null,
               "productIds": null,
               "category": null,
-              "usePageFilter": null,
+              "usePageFilter": false,
               "relatedProductsType": null,
               "recommendedProductsType": {
                 "recommendedProductType": "CATEGORY"
@@ -7494,7 +7534,7 @@
               "productCount": null,
               "productIds": null,
               "category": null,
-              "usePageFilter": null,
+              "usePageFilter": false,
               "relatedProductsType": null,
               "recommendedProductsType": {
                 "recommendedProductType": "CATEGORY"
@@ -7899,7 +7939,7 @@
               "productCount": null,
               "productIds": null,
               "category": null,
-              "usePageFilter": null,
+              "usePageFilter": false,
               "relatedProductsType": null,
               "recommendedProductsType": {
                 "recommendedProductType": "CATEGORY"
@@ -8296,7 +8336,7 @@
               "productCount": null,
               "productIds": null,
               "category": null,
-              "usePageFilter": null,
+              "usePageFilter": false,
               "relatedProductsType": null,
               "recommendedProductsType": {
                 "recommendedProductType": "CATEGORY"
@@ -8693,7 +8733,7 @@
               "productCount": null,
               "productIds": null,
               "category": null,
-              "usePageFilter": null,
+              "usePageFilter": false,
               "relatedProductsType": null,
               "recommendedProductsType": {
                 "recommendedProductType": "CATEGORY"
@@ -9090,7 +9130,7 @@
               "productCount": null,
               "productIds": null,
               "category": null,
-              "usePageFilter": null,
+              "usePageFilter": false,
               "relatedProductsType": null,
               "recommendedProductsType": {
                 "recommendedProductType": "CATEGORY"
@@ -9489,7 +9529,7 @@
               "productCount": null,
               "productIds": null,
               "category": null,
-              "usePageFilter": null,
+              "usePageFilter": false,
               "relatedProductsType": null,
               "recommendedProductsType": {
                 "recommendedProductType": "CATEGORY"
@@ -9888,7 +9928,7 @@
               "productCount": null,
               "productIds": null,
               "category": null,
-              "usePageFilter": null,
+              "usePageFilter": false,
               "relatedProductsType": null,
               "recommendedProductsType": {
                 "recommendedProductType": "CATEGORY"
@@ -10287,7 +10327,7 @@
               "productCount": null,
               "productIds": null,
               "category": null,
-              "usePageFilter": null,
+              "usePageFilter": false,
               "relatedProductsType": null,
               "recommendedProductsType": {
                 "recommendedProductType": "CATEGORY"
@@ -10684,7 +10724,7 @@
               "productCount": null,
               "productIds": null,
               "category": null,
-              "usePageFilter": null,
+              "usePageFilter": false,
               "relatedProductsType": null,
               "recommendedProductsType": {
                 "recommendedProductType": "CATEGORY"
@@ -11096,7 +11136,7 @@
               "productCount": null,
               "productIds": null,
               "category": null,
-              "usePageFilter": null,
+              "usePageFilter": false,
               "relatedProductsType": null,
               "recommendedProductsType": {
                 "recommendedProductType": "CATEGORY"
@@ -11589,7 +11629,7 @@
               "productCount": null,
               "productIds": null,
               "category": null,
-              "usePageFilter": null,
+              "usePageFilter": false,
               "relatedProductsType": null,
               "recommendedProductsType": {
                 "recommendedProductType": "CATEGORY"
@@ -12022,7 +12062,7 @@
               "productCount": null,
               "productIds": null,
               "category": null,
-              "usePageFilter": null,
+              "usePageFilter": false,
               "relatedProductsType": null,
               "recommendedProductsType": {
                 "recommendedProductType": "CATEGORY"
@@ -12420,7 +12460,7 @@
               "productCount": null,
               "productIds": null,
               "category": null,
-              "usePageFilter": null,
+              "usePageFilter": false,
               "relatedProductsType": null,
               "recommendedProductsType": {
                 "recommendedProductType": "CATEGORY"
@@ -12865,7 +12905,7 @@
               "productCount": null,
               "productIds": null,
               "category": null,
-              "usePageFilter": null,
+              "usePageFilter": false,
               "relatedProductsType": null,
               "recommendedProductsType": {
                 "recommendedProductType": "CATEGORY"
@@ -13335,7 +13375,7 @@
               "productCount": null,
               "productIds": null,
               "category": null,
-              "usePageFilter": null,
+              "usePageFilter": false,
               "relatedProductsType": null,
               "recommendedProductsType": {
                 "recommendedProductType": "CATEGORY"
@@ -13785,7 +13825,7 @@
               "productCount": null,
               "productIds": null,
               "category": null,
-              "usePageFilter": null,
+              "usePageFilter": false,
               "relatedProductsType": null,
               "recommendedProductsType": {
                 "recommendedProductType": "CATEGORY"
@@ -14319,7 +14359,7 @@
               "productCount": null,
               "productIds": null,
               "category": null,
-              "usePageFilter": null,
+              "usePageFilter": false,
               "relatedProductsType": null,
               "recommendedProductsType": {
                 "recommendedProductType": "CATEGORY"
@@ -14811,7 +14851,7 @@
               "productCount": null,
               "productIds": null,
               "category": null,
-              "usePageFilter": null,
+              "usePageFilter": false,
               "relatedProductsType": null,
               "recommendedProductsType": {
                 "recommendedProductType": "CATEGORY"
@@ -15398,7 +15438,7 @@
               "productCount": null,
               "productIds": null,
               "category": null,
-              "usePageFilter": null,
+              "usePageFilter": false,
               "relatedProductsType": null,
               "recommendedProductsType": {
                 "recommendedProductType": "CATEGORY"
@@ -15886,7 +15926,7 @@
               "productCount": null,
               "productIds": null,
               "category": null,
-              "usePageFilter": null,
+              "usePageFilter": false,
               "relatedProductsType": null,
               "recommendedProductsType": {
                 "recommendedProductType": "CATEGORY"
