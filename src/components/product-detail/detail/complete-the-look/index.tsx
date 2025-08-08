@@ -29,7 +29,12 @@ export const CompleteTheLook = (
     completeTheLookContent,
   } = props;
 
-  if (!completeTheLookProducts) {
+  // Eğer ürünler yoksa veya boş array ise hiçbir şey gösterme
+  if (
+    !completeTheLookProducts ||
+    !completeTheLookProducts.data ||
+    completeTheLookProducts.data.length === 0
+  ) {
     return null;
   }
 
@@ -41,24 +46,22 @@ export const CompleteTheLook = (
         title={completeTheLookTitle || ""}
         svg={Shirt?.src}
         settings={{
-          showCollapsedOnDesktop: props.isOpen, // Açık/kapalı durumu buradan kontrol ediliyor
+          showCollapsedOnDesktop: props.isOpen,
           showCollapsedOnMobile: props.isOpen,
           sortType: IkasProductFilterSortType.CUSTOM_SORT,
           customSortedValues: null,
         }}
-        onClickExpandButton={props.onToggle} // Toggle işlemi buradan tetikleniyor
+        onClickExpandButton={props.onToggle}
       >
         <div className={styles.DescriptionWrapper}>
           <div className={styles.container}>
-            {completeTheLookProducts?.data.length > 0 && (
-              <div className={styles.title_container}>
-                <span
-                  dangerouslySetInnerHTML={{
-                    __html: completeTheLookContent || "",
-                  }}
-                />
-              </div>
-            )}
+            <div className={styles.title_container}>
+              <span
+                dangerouslySetInnerHTML={{
+                  __html: completeTheLookContent || "",
+                }}
+              />
+            </div>
 
             <div>
               <Swiper
@@ -83,7 +86,7 @@ export const CompleteTheLook = (
                   },
                 }}
               >
-                {completeTheLookProducts?.data.map((product, index) => {
+                {completeTheLookProducts.data.map((product, index) => {
                   return (
                     <SwiperSlide key={index}>
                       <ComplateTheLookProduct product={product} />
