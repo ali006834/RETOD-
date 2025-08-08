@@ -64,7 +64,7 @@ const rewards: React.FC<RewardsProps> = (props) => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 333000,
+    autoplaySpeed: 3000,
   };
 
   const { t } = useTranslation();
@@ -127,7 +127,7 @@ const rewards: React.FC<RewardsProps> = (props) => {
                         <Image
                           // width={1500}
                           // height={325}
-                          objectFit="contain"
+                          objectFit="cover"
                           layout="fill"
                           useBlur={true}
                           image={packageItem?.packageImage}
