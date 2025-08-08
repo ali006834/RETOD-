@@ -47,34 +47,34 @@ export type SocialMedia = {
 };
 
 export type InstallmentContent = { 
-	rate?: string;
+	rate: string;
 };
 
 export type TableTitles = { 
-	table_Header_1?: string;
-	table_Header_2?: string;
-	table_Header_3?: string;
+	table_Header_1: string;
+	table_Header_2: string;
+	table_Header_3: string;
 };
 
 export type InterestRates = { 
-	interestRate_1_2?: string;
-	interestRate_3_6?: string;
-	interestRate_7_12?: string;
+	interestRate_1_2: string;
+	interestRate_3_6: string;
+	interestRate_7_12: string;
 };
 
 export type Row = { 
-	installmentContent?: InstallmentContent;
+	installmentContent: InstallmentContent;
 };
 
 export type AddBank = { 
-	logo?: IkasImage;
-	interestRates?: InterestRates;
-	content?: Row;
+	logo: IkasImage;
+	interestRates: InterestRates;
+	content: Row;
 };
 
 export type MainTable = { 
-	enterTitles?: TableTitles;
-	enterLogoAndPropotions?: AddBank;
+	enterTitles: TableTitles;
+	enterLogoAndProportions: AddBank;
 };
 
 export type FooterLower = { 

@@ -95,7 +95,7 @@ const BankTable = observer(
 
                   return (
                     <React.Fragment key={`${bankIndex}-${proportionIndex}`}>
-                      {installments.map((taksit: any, i: number) => (
+                      {installments?.map((taksit: any, i: number) => (
                         <tr key={`${bankIndex}-${proportionIndex}-${i}`}>
                           {i === 0 && (
                             <td

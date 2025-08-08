@@ -134,55 +134,41 @@ const ImagePopUp = ({
             return (
               <SwiperSlide key={index}>
                 <div className="swiper-zoom-container">
-                  <div className={styles.image_figure}>
-                    {item.isVideo == true ? (
-                      <div
+                  {item.isVideo == true ? (
+                    <div
+                      style={{
+                        aspectRatio: "1080 / 1920",
+                        height: "90%",
+                        overflow: "hidden",
+                      }}
+                    >
+                      <video
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
                         style={{
-                          aspectRatio: "1080 / 1920",
-                          height: "90%",
-                          overflow: "hidden",
-                        }}
-                      >
-                        <video
-                          autoPlay
-                          muted
-                          loop
-                          playsInline
-                          style={{
-                            width: "100%",
-                            height: "100%",
-                            objectFit: "cover",
-                            margin: "auto",
-                          }}
-                        >
-                          <source src={item.image?.src} type="video/mp4" />
-                        </video>
-                      </div>
-                    ) : (
-                      <div
-                        style={{
-                          aspectRatio: "1080 / 1620",
-                          height: "90%",
-                          objectFit: "contain",
-                          overflow: "hidden",
+                          width: "100%",
+                          height: "100%",
+                          objectFit: "cover",
                           margin: "auto",
                         }}
                       >
-                        <Image
-                          width={1080}
-                          height={1620}
-                          layout="responsive"
-                          objectFit="cover"
-                          useBlur={true}
-                          image={item.image as any}
-                          alt={
-                            props?.product?.selectedVariant?.product?.name ||
-                            "Product image"
-                          }
-                        />
-                      </div>
-                    )}
-                  </div>
+                        <source src={item.image?.src} type="video/mp4" />
+                      </video>
+                    </div>
+                  ) : (
+                    <div className={styles.image_figure}>
+                      <img
+                        src={item.image?.src}
+                        alt="product"
+                        className={styles.image}
+                        style={{ userSelect: "none" }}
+                        width={1200}
+                        height={1800}
+                      />
+                    </div>
+                  )}
                 </div>
               </SwiperSlide>
             );

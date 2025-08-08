@@ -71,19 +71,37 @@ const ProductDetail = (props: ProductDetailProps) => {
       {!isMobile && <div className={styles.divider} />}
       <div className={styles.wrapper}>
         <div className={styles.container}>
-          {/*//= İçerikler */}
-          <div className={styles.product_detail}>
-            <div className={styles.product_slider}>
-              <Slider {...props} />
-            </div>
-            <div className={styles.product_detail_content}>
-              {/*//= Breadcrumb */}
-              <div className={styles.tittle_container}>
-                {renderBreadcrumb()}
+          {/*//= Mobil İçerik */}
+          {isMobile ? (
+            <div className={styles.product_detail}>
+              <div className={styles.product_slider}>
+                {/*//= Breadcrumb */}
+                <div className={styles.tittle_container}>
+                  {renderBreadcrumb()}
+                </div>
+                <Slider {...props} />
               </div>
-              <Detail {...props} />
+              <div className={styles.product_detail_content}>
+                <Detail {...props} />
+              </div>
             </div>
-          </div>
+          ) : (
+            <>
+              {/*//= web İçerik */}
+              <div className={styles.product_detail}>
+                <div className={styles.product_slider}>
+                  <Slider {...props} />
+                </div>
+                <div className={styles.product_detail_content}>
+                  {/*//= Breadcrumb */}
+                  <div className={styles.tittle_container}>
+                    {renderBreadcrumb()}
+                  </div>
+                  <Detail {...props} />
+                </div>
+              </div>
+            </>
+          )}
         </div>
       </div>
     </BankTableProvider>
