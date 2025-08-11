@@ -56,15 +56,9 @@ export default function useRegister(props: RegisterProps) {
       setPending(true);
       setFormAlert(undefined);
       const store = useStore();
-      const isEmailExist = await store.customerStore.checkEmail(form.email);
-      if (isEmailExist) {
-        setFormAlert({
-          status: "error",
-          title: t(`${NS}:formAlert.emailExistTitle`),
-          text: t(`${NS}:formAlert.emailExistText`),
-        });
-        return;
-      }
+
+      // Try to register directly - if email exists as active account, it will fail
+      // If email exists as inactive account (from guest checkout), it should succeed
       const response = await form.register();
       if (response.isFormError) return;
       if (!response.isSuccess) {
@@ -90,7 +84,7 @@ export default function useRegister(props: RegisterProps) {
         }
       }, 1000);
       setFormSubmitted(false);
-    } catch {
+    } catch (error) {
       setFormAlert({
         status: "error",
         title: t(`${NS}:formAlert.errorTitle`),
