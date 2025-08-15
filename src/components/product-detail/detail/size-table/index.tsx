@@ -166,17 +166,17 @@ const MeasurementGuide: React.FC = () => {
 
   const measurements = [
     {
-      image: "/image/size-guide/gogus-olcu.avif",
+      image: "/image/size-guide/vucut-olcu-ust.jpg",
       title: t("product-detail:bodyTable.chestMeasurement"),
       description: t("product-detail:bodyTable.chestDescription"),
     },
     {
-      image: "/image/size-guide/bel-olcu.avif",
+      image: "/image/size-guide/vucut-olcu-bel.jpg",
       title: t("product-detail:bodyTable.waistMeasurement"),
       description: t("product-detail:bodyTable.waistDescription"),
     },
     {
-      image: "/image/size-guide/basen-olcu.avif",
+      image: "/image/size-guide/vucut-olcu-alt.jpg",
       title: t("product-detail:bodyTable.hipMeasurement"),
       description: t("product-detail:bodyTable.hipDescription"),
     },
