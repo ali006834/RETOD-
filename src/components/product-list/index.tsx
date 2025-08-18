@@ -216,8 +216,22 @@ const ProductList = (props: ProductListProps) => {
             </div>
           )}
 
-          <div className={styles.pagination_wrapper}>
+          {/* <div className={styles.pagination_wrapper}>
             <Pagination productList={productList} />
+          </div> */}
+
+          <div className={styles.loadmore}>
+            {productList.isLoading ? (
+              <Loading />
+            ) : (
+              <div>
+                {productList.hasNext === true && (
+                  <button onClick={() => loadMoreProducts()}>
+                    {t("common:list.loadMoreProducts")}
+                  </button>
+                )}
+              </div>
+            )}
           </div>
         </div>
       </div>
