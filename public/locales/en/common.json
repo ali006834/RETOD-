@@ -230,5 +230,10 @@
     "text": "Last Seen Products"
   },
   "buy": "Start Shopping",
-  "zoomMessage": "Double tap to zoom in"
+  "zoomMessage": "Double tap to zoom in",
+
+  "cookieConsent": {
+    "title": "Cookie Policy",
+    "description": "Cookies help us provide you with the best experience on our website. For detailed information about cookies and their use, please visit our <a href='/pages/cookie-policy' target='_blank' rel='noreferrer'>Cookie Policy</a>."
+  }
 }

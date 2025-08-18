@@ -10,6 +10,11 @@ const withTM = require("next-transpile-modules")([
   "@ikas/storefront-providers",
 ]);
 
+// Bundle Analyzer için
+const withBundleAnalyzer = require("@next/bundle-analyzer")({
+  enabled: process.env.ANALYZE === "true",
+});
+
 const config = {
   i18n: {
     defaultLocale: "tr",
@@ -44,4 +49,4 @@ const config = {
   },
 };
 
-module.exports = withTM(config);
+module.exports = withBundleAnalyzer(withTM(config));

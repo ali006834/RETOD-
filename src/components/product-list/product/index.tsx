@@ -14,12 +14,9 @@ import styles from "./style.module.css";
 
 import { FavoriteButton } from "src/components/product-detail/detail/favorite-button";
 import { useRouter } from "next/router";
-import { VariantsList } from "./variants-list";
 import { useScreen } from "src/utils/hooks/useScreen";
 import { SelectOnChangeParamType } from "src/components/components/select";
 import useAddToCartButton from "src/components/product-detail/detail/add-to-cart/hooks/useAddToCartButton";
-import Button from "src/components/components/button";
-import BasketIcon from "src/components/svg/basket";
 
 import { Scrollbar, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";

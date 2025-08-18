@@ -16,6 +16,7 @@ import CloseIcon from "src/components/svg/close";
 import { useScreen } from "src/utils/hooks/useScreen";
 import ViewSelector from "./view-selector";
 import SpecialDiscountBanner from "./special-discount-banner";
+import Pagination from "./pagination";
 
 const ProductList = (props: ProductListProps) => {
   const { productList, categories, categorNames, isWidthVideo } = props;
@@ -215,18 +216,8 @@ const ProductList = (props: ProductListProps) => {
             </div>
           )}
 
-          <div className={styles.loadmore}>
-            {productList.isLoading ? (
-              <Loading />
-            ) : (
-              <div>
-                {productList.hasNext === true && (
-                  <button onClick={() => loadMoreProducts()}>
-                    {t("common:list.loadMoreProducts")}
-                  </button>
-                )}
-              </div>
-            )}
+          <div className={styles.pagination_wrapper}>
+            <Pagination productList={productList} />
           </div>
         </div>
       </div>

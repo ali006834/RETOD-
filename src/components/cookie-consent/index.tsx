@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import styles from "./style.module.css";
 import { useTranslation } from "@ikas/storefront";
 
+export const NS = "common";
+
 const CookieConsent: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -37,12 +39,12 @@ const CookieConsent: React.FC = () => {
         </button>
         <div className={styles.cookieText}>
           <h3 className={styles.cookieTitle}>
-            {t("cookie-consent:cookieConsent.title")}
+            {t(`common:cookieConsent.title`)}
           </h3>
           <p
             className={styles.cookieDescription}
             dangerouslySetInnerHTML={{
-              __html: t("cookie-consent:cookieConsent.description"),
+              __html: t(`common:cookieConsent.description`),
             }}
           />
         </div>

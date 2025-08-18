@@ -10,11 +10,6 @@ import { toJS } from "mobx";
 import styles from "./style.module.css";
 
 import { NS } from "../";
-import { useScreen } from "src/utils/hooks/useScreen";
-
-// Swiper
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
 
 /* SearchInput */
 export const SearchInput = observer((props: HeaderProps) => {

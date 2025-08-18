@@ -48,9 +48,9 @@ const Register = (props: RegisterProps) => {
               />
               <div className={styles.image_overlay}>
                 <div className={styles.image_title_brand_wrapper}>
-                  <h1 className={styles.image_title_brand1}>DIZAYN</h1>
+                  {/* <h1 className={styles.image_title_brand1}>DIZAYN</h1>
                   <h1 className={styles.image_title_brand2}>&</h1>
-                  <h1 className={styles.image_title_brand3}>ELLA</h1>
+                  <h1 className={styles.image_title_brand3}>ELLA</h1> */}
                 </div>
                 <h2 className={styles.image_title}>
                   {props.title2?.toLocaleUpperCase("tr-TR")}
