@@ -235,5 +235,13 @@
   "cookieConsent": {
     "title": "Cookie Policy",
     "description": "Cookies help us provide you with the best experience on our website. For detailed information about cookies and their use, please visit our <a href='/pages/cookie-policy' target='_blank' rel='noreferrer'>Cookie Policy</a>."
+  },
+
+  "relatedProducts": {
+    "text": "You May Also Like",
+    "shownHere": "SHOWN HERE"
+  },
+  "lastSeenProduct": {
+    "text": "Last Seen Products"
   }
 }

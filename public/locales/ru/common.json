@@ -235,5 +235,13 @@
   "cookieConsent": {
     "title": "Политика использования файлов cookie",
     "description": "Файлы cookie помогают нам предоставлять вам лучший опыт на нашем сайте. Подробную информацию о файлах cookie и их использовании можно найти в нашей <a href='/pages/cookie-policy' target='_blank' rel='noreferrer'>Политике использования файлов cookie</a>."
+  },
+
+  "relatedProducts": {
+    "text": "Вам также может понравиться",
+    "shownHere": "ПОКАЗАНО ЗДЕСЬ"
+  },
+  "lastSeenProduct": {
+    "text": "Последние просмотренные товары"
   }
 }

@@ -25,7 +25,7 @@ const LastSeenProducts = (props: LastSeenProductsProps) => {
       <div className={styles.container}>
         {lastSeenProducts?.data.length > 0 && (
           <div>
-            <h4>{t(`${NS}:detail.lastSeenProduct.text`)}</h4>
+            <h4>{t(`common:lastSeenProduct.text`)}</h4>
           </div>
         )}
 

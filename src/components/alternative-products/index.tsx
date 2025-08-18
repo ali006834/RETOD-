@@ -25,7 +25,7 @@ const AlternativeProducts = (props: AlternativeProductsProps) => {
       <div className={styles.container}>
         {alternativeProducts?.data.length > 0 && (
           <div>
-            <h4>{t(`${NS}:detail.relatedProducts.text`)}</h4>
+            <h4>{t(`common:relatedProducts.text`)}</h4>
           </div>
         )}
 
