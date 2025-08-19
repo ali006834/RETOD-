@@ -226,6 +226,25 @@
   cursor: pointer;
 }
 
+.loading_text {
+  font-family: "Helvetica" !important;
+  font-weight: 400;
+  font-size: 16px;
+  color: #666;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.no_more_products {
+  font-family: "Helvetica" !important;
+  font-weight: 400;
+  font-size: 14px;
+  color: #999;
+  text-align: center;
+  padding: 20px 0;
+  font-style: italic;
+}
+
 /*= Ayrık çizgisi - Divider */
 .divider {
   width: 100%;
@@ -294,4 +313,19 @@
 .selected {
   background-color: #000;
   color: wheat;
+}
+
+@media only screen and (max-width: 400px) {
+  .tittle_container {
+    gap: 3px;
+  }
+  .tittle_container a {
+    display: none;
+  }
+  .tittle_container svg {
+    display: none;
+  }
+  .product_list_top_mobile > :nth-child(2) {
+    margin: 0px;
+  }
 }

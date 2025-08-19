@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import { observer } from "mobx-react-lite";
 import { ProductListProps } from "../__generated__/types";
 import Product from "./product";
@@ -28,20 +28,52 @@ const ProductList = (props: ProductListProps) => {
   const { t } = useTranslation();
   const { isMobile, isTablet, isDesktop } = useScreen();
 
-  const loadMoreProducts = async () => {
-    if (!productList.hasNext) {
+  // Intersection Observer için ref
+  const loadMoreRef = useRef<HTMLDivElement>(null);
+
+  const loadMoreProducts = useCallback(async () => {
+    if (!productList.hasNext || productList.isLoading) {
       return;
     }
 
     try {
       const nextPage = productList.page + 1;
-
       productList.getNext();
       await productList.getPage(nextPage);
     } catch (error) {
       console.error("Daha fazla ürün yüklenemedi:", error);
     }
-  };
+  }, [productList]);
+
+  // Intersection Observer ile otomatik yükleme
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const [entry] = entries;
+        if (
+          entry.isIntersecting &&
+          productList.hasNext &&
+          !productList.isLoading
+        ) {
+          loadMoreProducts();
+        }
+      },
+      {
+        rootMargin: "100px", // Sayfanın altından 100px önce tetikle
+        threshold: 0.1,
+      }
+    );
+
+    if (loadMoreRef.current) {
+      observer.observe(loadMoreRef.current);
+    }
+
+    return () => {
+      if (loadMoreRef.current) {
+        observer.unobserve(loadMoreRef.current);
+      }
+    };
+  }, [loadMoreProducts, productList.hasNext, productList.isLoading]);
 
   //+ Grid leyout view selector işlemleri (Sayfada ürün kaç sütunlu gözüksün?)
   const getDefaultColumns = () => {
@@ -216,20 +248,17 @@ const ProductList = (props: ProductListProps) => {
             </div>
           )}
 
-          {/* <div className={styles.pagination_wrapper}>
-            <Pagination productList={productList} />
-          </div> */}
-
-          <div className={styles.loadmore}>
-            {productList.isLoading ? (
-              <Loading />
-            ) : (
-              <div>
-                {productList.hasNext === true && (
-                  <button onClick={() => loadMoreProducts()}>
-                    {t("common:list.loadMoreProducts")}
-                  </button>
-                )}
+          {/* Otomatik yükleme için gözlemci div */}
+          <div ref={loadMoreRef} className={styles.loadmore}>
+            {productList.isLoading && (
+              <div className={styles.loading_text}>
+                {t("common:list.loading") || "Yükleniyor..."}
+              </div>
+            )}
+            {!productList.hasNext && productList.data.length > 0 && (
+              <div className={styles.no_more_products}>
+                {productList.data.length}{" "}
+                {t("common:list.noMoreProducts") || "Gösterildi"}
               </div>
             )}
           </div>

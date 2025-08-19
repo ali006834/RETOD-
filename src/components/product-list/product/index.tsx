@@ -18,7 +18,7 @@ import { useScreen } from "src/utils/hooks/useScreen";
 import { SelectOnChangeParamType } from "src/components/components/select";
 import useAddToCartButton from "src/components/product-detail/detail/add-to-cart/hooks/useAddToCartButton";
 
-import { Scrollbar, Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import "swiper/css/scrollbar";
@@ -72,7 +72,7 @@ const Product = (props: Props) => {
           <a title={a11yTitle}>
             <S.ImageWrapper $hasStock={product.hasStock}>
               <ProductImage {...props} isWidthVideo={isWidthVideo} />
-              <DiscountBadge {...props} />
+              {/* <DiscountBadge {...props} /> */}
             </S.ImageWrapper>
           </a>
         </Link>
@@ -410,7 +410,7 @@ const ProductImage = observer(({ product, isWidthVideo }: Props) => {
           modules={[Pagination]}
           className="mySwiper"
           loop={false}
-          pagination={true}
+          pagination={isMobile ? false : true}
           slidesPerView={1}
           spaceBetween={0}
         >

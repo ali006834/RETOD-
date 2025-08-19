@@ -75,6 +75,8 @@
     "home": "Ana Sayfa",
     "noProduct": "Üzgünüz, şu anda bu kategoride ürünümüz yok.",
     "loadMoreProducts": "Daha Fazlasını Gör",
+    "noMoreProducts": "Ürün Gösterildi",
+    "loading": "Yükleniyor...",
     "filters": {
       "sort": {
         "text": "Filtre",

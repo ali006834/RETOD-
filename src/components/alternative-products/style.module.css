@@ -49,4 +49,8 @@
   .container {
     padding: 50px 0px;
   }
+
+  .container h4 {
+    font-size: 16px;
+  }
 }

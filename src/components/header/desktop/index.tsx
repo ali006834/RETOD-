@@ -15,7 +15,6 @@ import ArrowRight from "../../svg/arrow-right-white";
 import Close from "../../svg/close";
 import ScrollingText from "../scrolling-text";
 import { SearchInput } from "../search";
-import { toJS } from "mobx";
 
 import { NS } from "../";
 

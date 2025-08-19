@@ -152,7 +152,7 @@ export const ProductTag = styled.div`
   }
 
   @media screen and (max-width: ${breakpoints.sm}) {
-    font-size: 10px;
+    font-size: 9px;
     line-height: 1.2;
     letter-spacing: 0.05em;
   }

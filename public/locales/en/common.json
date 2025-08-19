@@ -79,6 +79,8 @@
     "home": "Home Page",
     "noProduct": "Sorry, we have no products in this category right now.",
     "loadMoreProducts": "Load More Products",
+    "noMoreProducts": "Products Shown",
+    "loading": "Loading...",
     "filters": {
       "sort": {
         "text": "Filter",

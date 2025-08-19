@@ -233,7 +233,7 @@
 
 .header_menu_link_content .top_category a:hover {
   text-decoration: underline;
-  text-underline-offset: 21px;
+  text-underline-offset: 17px;
 }
 
 .alt_category_wrapper {
@@ -242,7 +242,7 @@
 
 .alt_category_wrapper {
   position: absolute;
-  top: 160px;
+  top: 161px;
   left: 0;
   z-index: 100;
   width: 100%;
