@@ -78,26 +78,6 @@ const Product = (props: Props) => {
         </Link>
       </div>
       <div className={styles.product_Info}>
-        {/* {isMobile && (
-          <>
-            <Button onClick={() => setIsOpen(true)} block>
-              {t("common:product.addToCart")}
-            </Button>
-            <MinimalMobileModal isOpen={isOpen} setIsOpen={setIsOpen}>
-              <S.VariantsWrapper>
-                {product?.displayedVariantTypes
-                  .filter((dVT) => dVT.variantType.isColorSelection)
-                  .map((dVT) => (
-                    <VariantType
-                      key={dVT.variantType.id}
-                      product={product}
-                      dVT={dVT}
-                    />
-                  ))}
-              </S.VariantsWrapper>
-            </MinimalMobileModal>
-          </>
-        )} */}
         {ifColumnNotEqual6 && !ifColumnEqual5 && !ifColumnEqual4 && (
           <>
             <ProductTitle {...props} />
@@ -129,74 +109,6 @@ const Product = (props: Props) => {
   );
 };
 
-const MinimalMobileModal = ({ children, isOpen, setIsOpen }: any) => {
-  return (
-    <div>
-      {isOpen && (
-        <div className={styles.modalContainer} onClick={() => setIsOpen(false)}>
-          <div className={styles.modal} onClick={(e) => e.stopPropagation()}>
-            {children}
-          </div>
-        </div>
-      )}
-    </div>
-  );
-};
-
-type SwatchVariantValueProps = {
-  dVT: IkasDisplayedVariantType;
-  onVariantValueChange: (dVV: IkasDisplayedVariantValue) => void;
-};
-
-const SwatchVariantValue = observer(
-  ({ dVT, onVariantValueChange }: SwatchVariantValueProps) => {
-    return (
-      <div className="product-list-variant detail-variant">
-        <Swiper
-          modules={[Navigation]}
-          className="mySwiper"
-          loop={true}
-          navigation={true}
-          slidesPerView={6}
-          spaceBetween={5}
-          breakpoints={{
-            140: {
-              slidesPerView: 5,
-              spaceBetween: 5,
-            },
-            768: {
-              slidesPerView: 5,
-              spaceBetween: 5,
-            },
-            1024: {
-              slidesPerView: 6,
-              spaceBetween: 5,
-            },
-          }}
-        >
-          {dVT.displayedVariantValues.map((dVV) => {
-            if (dVV.hasStock) {
-              return (
-                <SwiperSlide key={dVV.variantValue.id}>
-                  <Image
-                    image={dVV.variant.mainImage?.image!}
-                    width={80}
-                    height={120}
-                    useBlur={true}
-                    alt={dVV.variantValue.name}
-                    objectFit="cover"
-                    onClick={() => onVariantValueChange(dVV)}
-                  />
-                </SwiperSlide>
-              );
-            }
-          })}
-        </Swiper>
-      </div>
-    );
-  }
-);
-
 type VariantValueType = {
   product: IkasProduct;
   dVT: IkasDisplayedVariantType;
@@ -213,14 +125,7 @@ const VariantValues = observer(({ dVT, product }: VariantValueType) => {
     colorSection = true;
   }
 
-  const {
-    loading,
-    buttonText,
-    buttonState,
-    disabled,
-    isBackInStockReminderSaved,
-    onButtonClick,
-  } = useAddToCartButton({
+  const { onButtonClick } = useAddToCartButton({
     product,
     quantity: 1,
   });
@@ -408,9 +313,9 @@ const ProductImage = observer(({ product, isWidthVideo }: Props) => {
       {router.pathname !== "/account/favorite-products" && product.hasStock ? (
         <Swiper
           modules={[Pagination]}
-          className="mySwiper"
+          className={`mySwiper ${styles.product_list_swiper}`}
           loop={false}
-          pagination={isMobile ? false : true}
+          pagination={true}
           slidesPerView={1}
           spaceBetween={0}
         >
@@ -529,31 +434,5 @@ const ProductTitle = observer(({ product }: Props) => (
     </Link>
   </div>
 ));
-
-const DiscountBadge = observer(({ product }: Props) => {
-  const { t } = useTranslation();
-  if (
-    !product.selectedVariant.price.hasDiscount &&
-    product.selectedVariant.hasStock
-  )
-    return null;
-
-  return (
-    <S.DiscountBadge $hasStock={product.hasStock}>
-      {!product.hasStock && (
-        <S.DiscountBadgeSoldOut>
-          {t("common:product.discountBadgeSoldOut")}
-        </S.DiscountBadgeSoldOut>
-      )}
-      {product.hasStock && (
-        <>
-          <S.DiscountBadgeDiscountRatio>
-            -{product.selectedVariant.price.discountPercentage}%
-          </S.DiscountBadgeDiscountRatio>
-        </>
-      )}
-    </S.DiscountBadge>
-  );
-});
 
 export default observer(Product);

@@ -458,9 +458,61 @@
   }
 }
 
+/* Web için normal boyut pagination bullet'ları */
+.product_list_swiper :global(.swiper-pagination-bullet) {
+  width: 8px !important;
+  height: 8px !important;
+  margin: 0 4px !important;
+  background: rgba(0, 0, 0, 0.5) !important;
+}
+
+.product_list_swiper :global(.swiper-pagination-bullet-active) {
+  width: 8px !important;
+  height: 8px !important;
+  background: #000 !important;
+}
+
 /* Tablet*/
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .onHoverAddCart {
     width: 94%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* Mobil için pagination bullet'larını küçült */
+  .product-list-slider .swiper-pagination-bullet {
+    width: 6px !important;
+    height: 6px !important;
+    margin: 0 3px !important;
+  }
+
+  .product-list-slider .swiper-pagination-bullet-active {
+    width: 6px !important;
+    height: 6px !important;
+  }
+
+  /* Global Swiper pagination stilleri - mobil için */
+  .product_list_swiper :global(.swiper-pagination-bullet) {
+    width: 6px !important;
+    height: 6px !important;
+    margin: 0 3px !important;
+  }
+
+  .product_list_swiper :global(.swiper-pagination-bullet-active) {
+    width: 6px !important;
+    height: 6px !important;
+  }
+
+  /* Ek spesifik selector'lar */
+  .product_list_swiper .swiper-pagination .swiper-pagination-bullet {
+    width: 6px !important;
+    height: 6px !important;
+    margin: 0 3px !important;
+  }
+
+  .product_list_swiper .swiper-pagination .swiper-pagination-bullet-active {
+    width: 6px !important;
+    height: 6px !important;
   }
 }

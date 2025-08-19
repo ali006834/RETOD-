@@ -14,7 +14,7 @@ export const LanguageSelect = observer(() => {
   const { t } = useTranslation();
 
   const value = store.languageOptions?.find((lO) => lO.isSelected);
-  const defaultLanguage = "tr"; // From next.config.js defaultLocale
+  const defaultLanguage = "tr"; // next.config.js defaultLocale.. Şu an için Türkçe..
   const currentLanguage = value?.locale || defaultLanguage;
 
   const handleChangeLanguage = (item: any) => {
