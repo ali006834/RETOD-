@@ -2,7 +2,7 @@ import breakpoints from "src/styles/breakpoints";
 import styled from "styled-components";
 
 export const Container = styled.div`
-  max-width: 1380px;
+  max-width: 1440px;
   margin: auto;
   padding: 0 10px;
   box-sizing: border-box;
@@ -10,15 +10,19 @@ export const Container = styled.div`
     padding: 0 5px;
   }
 `;
+
 export const Cart = styled.div`
   margin-top: 24px;
   margin-bottom: 80px;
 `;
+
 export const Title = styled.h1`
   font-size: 22px;
   line-height: 48px;
   margin-bottom: 24px;
-  font-family: "Helvetica" !important";
+  font-family: "Helvetica";
+  text-align: left;
+  width: 100%;
   @media screen and (max-width: ${breakpoints.md}) {
     line-height: 0;
     padding-left: 10px;
@@ -29,6 +33,7 @@ export const Section = styled.section`
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 10px;
+  font-family: "Helvetica";
 
   @media screen and (max-width: ${breakpoints.lg}) {
     display: flex;
@@ -36,10 +41,13 @@ export const Section = styled.section`
     gap: 10px;
   }
 `;
+
 export const Main = styled.main`
   grid-column: span 2 / span 2;
 `;
+
 export const Items = styled.ul``;
+
 export const Summary = styled.aside`
   height: 100%;
 `;
@@ -52,7 +60,9 @@ export const ItemsHeader = styled.header`
   font-size: 14px;
   line-height: 24px;
   padding: 10px 0;
-  font-family: "Helvetica" !important";
+  font-family: "Helvetica";
+  text-align: left;
+  width: 100%;
 
   @media screen and (max-width: ${breakpoints.md}) {
     display: none;
@@ -67,6 +77,7 @@ export const ProductColumn = styled.div`
     margin-bottom: 20px;
   }
 `;
+
 export const QuantityColumn = styled.div`
   grid-column: span 3 / span 3;
   @media screen and (max-width: ${breakpoints.sm}) {
@@ -104,30 +115,38 @@ export const SummaryBox = styled.div`
 `;
 
 export const BoxTitle = styled.p`
-font-size: 20px;
-line-height: 32px;
-margin-bottom: 24px;
-font-weight: 400;
-font-family: "Helvetica";
+  font-size: 20px;
+  line-height: 32px;
+  margin-bottom: 24px;
+  font-weight: 400;
+  font-family: "Helvetica";
+  text-align: left;
+  width: 100%;
 `;
 
 export const SummaryBoxInner = styled.div``;
+
 export const SummaryBoxText = styled.div`
   display: flex;
   justify-content: space-between;
   font-size: 14px;
   margin-bottom: 8px;
   color: #000;
-font-weight: 400;
-font-family: "Helvetica";
+  font-weight: 400;
+  font-family: "Helvetica";
+  text-align: left;
+  width: 100%;
 `;
+
 export const TotalFinalPrice = styled(SummaryBoxText)`
   border-top: 1px solid #eeeeee;
   padding-top: 8px;
   color: #000;
   margin-top: 8px;
-font-weight: 400;
-font-family: "Helvetica";
+  font-weight: 400;
+  font-family: "Helvetica";
+  text-align: left;
+  width: 100%;
 `;
 
 export const SummaryButtonWrapper = styled.div`
@@ -139,8 +158,8 @@ export const SummaryButtonWrapper = styled.div`
     color: #333;
     font-size: 14px;
     display: block;
-   font-weight: 400;
-font-family: "Helvetica";
+    font-weight: 400;
+    font-family: "Helvetica";
     text-underline-offset: 6px;
     text-align: center;
     margin-top: 30px;
@@ -168,6 +187,7 @@ export const SummaryFreeShippingText = styled.div`
   margin-top: 18px;
   text-align: center;
   font-family: "Helvetica";
+  width: 100%;
 
   span {
     display: inline-block;
@@ -184,6 +204,7 @@ export const Coupon = styled.div`
 `;
 
 export const REMOVE_COUPON_BUTTON_WIDTH = 30;
+
 export const RemoveCouponButton = styled.button`
   position: absolute;
   top: 50%;

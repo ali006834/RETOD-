@@ -12,5 +12,7 @@ export const Text = styled.p`
   display: block;
   font-size: 36px;
   margin-bottom: 20px;
-  font-family: "Helvetica" !important";
+  font-family: "Helvetica";
+  text-align: center;
+  width: 100%;
 `;

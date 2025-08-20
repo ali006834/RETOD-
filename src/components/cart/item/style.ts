@@ -6,7 +6,9 @@ export const Item = styled.li`
   grid-template-columns: repeat(12, minmax(0, 1fr));
   padding: 24px 0%;
   border-bottom: 1px solid #eeeeee;
-  font-family: "HelveticaNeueMedium" !important;
+  font-family: "Helvetica";
+  text-align: left;
+  width: 100%;
 
   @media screen and (max-width: ${breakpoints.md}) {
     grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -14,6 +16,7 @@ export const Item = styled.li`
     margin: 20px 0;
   }
 `;
+
 
 export const ItemProductImageAndNameWrapper = styled.div`
   display: flex;
@@ -29,15 +32,20 @@ export const ItemProductImage = styled.picture`
 
 export const ItemProductName = styled.div`
   font-size: 14px;
-  font-family: "HelveticaNeueBold" !important;
+  font-family: "Helvetica";
   padding-right: 2px;
+  text-align: left;
+  width: 100%;
 `;
+
 export const ItemProductVariantValuesText = styled.div`
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
   color: #4b5563;
-  font-family: "HelveticaNeueMedium" !important;
+  font-family: "Helvetica";
+  text-align: left;
+  width: 100%;
 `;
 
 export const ItemRemove = styled.button`
