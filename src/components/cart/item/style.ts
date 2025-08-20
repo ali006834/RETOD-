@@ -17,7 +17,6 @@ export const Item = styled.li`
   }
 `;
 
-
 export const ItemProductImageAndNameWrapper = styled.div`
   display: flex;
   flex-direction: row;
@@ -82,7 +81,7 @@ export const ItemSellPrice = styled.div`
 `;
 
 export const ItemPrice = styled.div`
-  color: #d14600;
+  color: #cf152d;
   font-weight: 600;
 `;
 

@@ -32,7 +32,8 @@ export const Title = styled.h1`
   line-height: 48px;
   margin-bottom: 10px;
   padding: 0 10px;
-  font-family: "HelveticaNeueBold" !important;
+  font-family: "Helvetica" !important;
+  font-weight: 500;
   @media screen and (max-width: ${breakpoints.md}) {
     font-size: 18px;
   }
@@ -63,7 +64,8 @@ export const ItemsHeader = styled.header`
   font-size: 14px;
   line-height: 24px;
   padding: 10px 0;
-  font-family: "HelveticaNeueBold" !important;
+  font-family: "Helvetica" !important;
+  font-weight: 600;
 
   @media screen and (max-width: ${breakpoints.md}) {
     display: none;
@@ -119,7 +121,7 @@ export const BoxTitle = styled.p`
   font-size: 20px;
   line-height: 32px;
   margin-bottom: 24px;
-  font-family: "HelveticaNeueMedium" !important;
+  font-family: "Helvetica" !important;
 `;
 
 export const SummaryBoxInner = styled.div``;
@@ -130,7 +132,7 @@ export const SummaryBoxText = styled.div`
   font-weight: 300;
   margin-bottom: 8px;
   color: #000;
-  font-family: "HelveticaNeueMedium" !important;
+  font-family: "Helvetica" !important;
 `;
 export const TotalFinalPrice = styled(SummaryBoxText)`
   border-top: 1px solid #eeeeee;
@@ -138,7 +140,7 @@ export const TotalFinalPrice = styled(SummaryBoxText)`
   color: #000;
   font-weight: 500;
   margin-top: 8px;
-  font-family: "HelveticaNeueBold" !important;
+  font-family: "Helvetica" !important;
 `;
 
 export const SummaryButtonWrapper = styled.div`
@@ -150,7 +152,8 @@ export const SummaryButtonWrapper = styled.div`
     color: #333;
     font-size: 14px;
     display: block;
-    font-family: "HelveticaNeueMedium" !important;
+    font-weight: 500;
+    font-family: "Helvetica" !important;
     text-underline-offset: 6px;
   }
   a:first-child {
@@ -176,12 +179,12 @@ export const SummaryFreeShippingText = styled.div`
   line-height: 24px;
   margin-top: 18px;
   text-align: center;
-  font-family: "HelveticaNeueMedium" !important;
+  font-family: "Helvetica" !important;
 
   span {
     display: inline-block;
     vertical-align: middle;
-    font-family: "HelveticaNeueMedium" !important;
+    font-family: "Helvetica" !important;
   }
   span:first-child {
     margin-right: 8px;
@@ -198,7 +201,7 @@ export const RemoveCouponButton = styled.button`
   top: 50%;
   transform: translateY(-50%);
   color: red;
-  font-family: "HelveticaNeueMedium" !important;
+  font-family: "Helvetica" !important;
   width: ${REMOVE_COUPON_BUTTON_WIDTH}px;
   height: calc(100% - 2px);
   right: 1px;
@@ -222,7 +225,7 @@ export const PriceText = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 0 10px;
-  font-family: "HelveticaNeueMedium" !important;
+  font-family: "Helvetica" !important;
 `;
 export const ButtonPayment = styled.div`
   width: 100%;
@@ -230,7 +233,7 @@ export const ButtonPayment = styled.div`
   a {
     text-decoration: none;
     color: #fff;
-    font-family: "HelveticaNeueMedium" !important;
+    font-family: "Helvetica" !important;
     display: block;
     background-color: #000;
     text-align: center;
@@ -260,7 +263,7 @@ export const Tab = styled.button<TabProps>`
   cursor: pointer;
   position: relative;
   color: ${(props) => (props.active ? "#000" : "#999")};
-  font-family: "HelveticaNeueMedium" !important;
+  font-family: "Helvetica" !important;
 
   &.active {
     color: #000;
@@ -319,7 +322,7 @@ export const ApplyButton = styled.button`
   border-radius: 0 4px 4px 0;
   cursor: pointer;
   font-size: 14px;
-  font-family: "HelveticaNeueMedium" !important;
+  font-family: "Helvetica" !important;
   transition: background 0.3s;
 
   &:hover {
@@ -339,7 +342,7 @@ export const EmptyWishlistItem = styled.span`
   align-items: center;
   text-align: center;
   padding: 10px 0;
-  font-family: "HelveticaNeueLight" !important;
+  font-family: "Helvetica" !important;
 
   color: #999;
   font-size: 13px;
@@ -453,13 +456,13 @@ export const Products = styled.ul`
 export const NoProducts = styled.div`
   margin-top: 40px;
   text-align: center;
-  font-family: "HelveticaNeueLight" !important;
+  font-family: "Helvetica" !important;
   color: #6b7280;
   a {
     color: #000;
     text-decoration: underline;
     font-weight: 700;
-    font-family: "HelveticaNeueLight" !important;
+    font-family: "Helvetica" !important;
   }
 `;
 
