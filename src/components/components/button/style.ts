@@ -22,7 +22,7 @@ export const Button = styled.button<ButtonProps>`
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-family: "HelveticaNeueLight" !important;
+  font-family: "Helvetica" !important;
 
   ${({ $buttonType, theme }) => {
     if ($buttonType === "primary") {
@@ -119,7 +119,7 @@ export const Button = styled.button<ButtonProps>`
 
 export const AnchorButton = styled(Button).attrs({ as: "a" })`
   text-decoration: none;
-  font-family: "HelveticaNeueLight" !important;
+  font-family: "Helvetica" !important;
 `;
 
 type StyledLoadingProps = {

@@ -4,12 +4,12 @@ import { useRouter } from "next/router";
 import { useTranslation, Link, Image, IkasProduct } from "@ikas/storefront";
 import { HeaderProps } from "src/components/__generated__/types";
 import UIStore from "src/store/ui-store";
-import IOCloseSVG from "../../svg/close";
-import SearchSVG from "../../svg/search";
+import IOCloseSVG from "../../../svg/close";
+import SearchSVG from "../../../svg/search";
 import { toJS } from "mobx";
 import styles from "./style.module.css";
 
-import { NS } from "../";
+import { NS } from "../../";
 
 /* SearchInput */
 export const SearchInput = observer((props: HeaderProps) => {

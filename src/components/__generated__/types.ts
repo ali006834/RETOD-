@@ -190,6 +190,13 @@ export type Packages = {
 	packageBenefits?: PackageBenefits;
 };
 
+export type Localization = { 
+	text?: string;
+	buttonText?: string;
+	backgroundColor?: string;
+	color?: string;
+};
+
 export type HeaderProps = {
 	logo?: IkasImage;
 	logo_black?: IkasImage;
@@ -200,6 +207,8 @@ export type HeaderProps = {
 	scrollingTexts?: ScrollingTexts[];
 	title?: string;
 	cartProducts?: IkasProductList;
+	showLocalization?: boolean;
+	localization?: Localization;
 };
 
 export type FooterProps = {

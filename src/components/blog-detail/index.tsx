@@ -6,7 +6,7 @@ const BlogList: React.FC<BlogDetailProps> = (props: BlogDetailProps) => {
   const { t } = useTranslation();
 
   return (
-    <div>
+    <div className={styles.blogDetail}>
       {/* <img className={styles.mainImage} src={props.blog?.image?.src} /> */}
       <h1 className={styles.blogTitle}>{props.blog?.title}</h1>
       <div

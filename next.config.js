@@ -18,7 +18,7 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 const config = {
   i18n: {
     defaultLocale: "tr",
-    locales: ["tr"],
+    locales: ["tr", "en", "ru"],
     localeDetection: false,
   },
   basePath: process.env.NEXTJS_BASE_PATH || "",

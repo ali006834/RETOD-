@@ -1,0 +1,50 @@
+import React from "react";
+
+interface LocationProps {
+  width?: string;
+  height?: string;
+  color?: string;
+}
+
+const Location = ({ width, height, color = "#000" }: LocationProps) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={width}
+      height={height}
+      viewBox="0 0 24 24"
+      fill="none"
+    >
+      <path
+        d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10Z"
+        fill="transparent"
+        fill-opacity=".16"
+        stroke={color}
+        stroke-width="1"
+        stroke-miterlimit="10"
+      />
+      <path
+        d="M11.27 21.69A15.938 15.938 0 0 1 8 12c0-3.64 1.24-7.07 3.34-9.78M12.73 2.22C14.78 4.91 16 8.27 16 11.91c0 3.64-1.24 7.07-3.34 9.78"
+        stroke={color}
+        stroke-width="1"
+        stroke-miterlimit="10"
+        stroke-linecap="round"
+      />
+      <path
+        d="M19.14 19c-1.82-1.85-4.34-3-7.14-3s-5.33 1.15-7.14 3M19.14 5C17.33 6.85 14.8 8 12 8S6.68 6.85 4.86 5"
+        stroke={color}
+        stroke-width="1"
+        stroke-miterlimit="10"
+      />
+      <path
+        d="M2 12h20"
+        stroke={color}
+        stroke-width="1"
+        stroke-miterlimit="10"
+        stroke-linecap="round"
+      />
+    </svg>
+  );
+};
+
+export default Location;

@@ -13,8 +13,9 @@ import IOCloseSVG from "../../svg/close";
 import BellSVG from "../../svg/notification";
 import ArrowRight from "../../svg/arrow-right-white";
 import Close from "../../svg/close";
-import ScrollingText from "../scrolling-text";
-import { SearchInput } from "../search";
+import ScrollingText from "../components/scrolling-text";
+import { SearchInput } from "../components/search";
+import LocalizationBar from "../components/localization-bar";
 
 import { NS } from "../";
 
@@ -28,8 +29,12 @@ const DesktopHeader = (props: HeaderProps) => {
       <header className={styles.header}>
         <div className={styles.desktopContainer}>
           <div className={styles.innerContainer}>
-            {/* Dil Seçimi */}
-            <LanguageSelect />
+            <div className={styles.localizationBarWrapper}>
+              {/* Dil Seçimi */}
+              <LanguageSelect />
+              {/* Lokalizasyon Seçimi */}
+              <LocalizationBar {...props.localization} />
+            </div>
             {/* Logo */}
             <LeftSide {...props} />
             {/* İkonlar */}

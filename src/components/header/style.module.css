@@ -15,6 +15,12 @@
   border-bottom: 1px solid #e5e7eb;
 }
 
+.localizationBarWrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 .logo {
   display: flex;
   align-items: center;

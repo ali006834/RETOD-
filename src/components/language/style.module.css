@@ -95,7 +95,6 @@
   .select_langauge span svg {
     width: 16px;
     height: 12px;
-    border-radius: 50%;
     overflow: hidden;
   }
   .select_langauge svg {

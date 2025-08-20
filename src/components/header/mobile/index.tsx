@@ -7,24 +7,23 @@ import { HeaderProps } from "src/components/__generated__/types";
 import FavoriteSVG from "src/components/svg/favorite";
 import UserIcon from "src/components/svg/user";
 import CartIcon from "src/components/svg/cart";
-import { SearchInput } from "src/components/header/search";
+import { SearchInput } from "src/components/header/components/search";
 import MaxQuantityPerCartModal from "src/components/components/modal-max-quantity-per-cart";
 
 import IOMenuSVG from "./svg/io-menu";
 import IOCloseSVG from "src/components/svg/close";
 import styles from "./style.module.css";
-import ArrowRightBlack from "src/components/svg/arrow-right";
-import LeftArrow from "src/components/svg/left-arrow";
 import NextIcon from "src/components/svg/next";
 import PrevIcon from "src/components/svg/prev";
 
-import ScrollingText from "../scrolling-text";
+import ScrollingText from "../components/scrolling-text";
 
 import CartModal from "../desktop/cartModal";
 import { useRouter } from "next/router";
 import ArrowRight from "src/components/svg/arrow-right-white";
 import { LanguageSelect } from "src/components/language";
 import { Bell } from "src/components/header/desktop";
+import LocalizationBar from "../components/localization-bar";
 
 const MobileHeader = (props: HeaderProps) => {
   return (
@@ -139,6 +138,7 @@ const Sidenav = observer((props: HeaderProps) => {
             <div className={styles.locationRegisterSection}>
               <div className={styles.locationText}>
                 <LanguageSelect />
+                <LocalizationBar {...props.localization} />
               </div>
               <div className={styles.userSection}>
                 {userToken ? (
