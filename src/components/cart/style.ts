@@ -138,6 +138,19 @@ export const SummaryBoxText = styled.div`
   width: 100%;
 `;
 
+export const AdjustmentPrice = styled.div`
+  color: #cf152d;
+  // color: green;
+`;
+
+export const CargoPrice = styled.div`
+  color: #cf152d;
+
+  span {
+    color: #cf152d;
+  }
+`;
+
 export const TotalFinalPrice = styled(SummaryBoxText)`
   border-top: 1px solid #eeeeee;
   padding-top: 8px;
@@ -181,7 +194,7 @@ export const SummaryButtonWrapper = styled.div`
 `;
 
 export const SummaryFreeShippingText = styled.div`
-  font-weight: 500;
+  font-weight: 300;
   font-size: 14px;
   line-height: 24px;
   margin-top: 18px;
@@ -196,6 +209,7 @@ export const SummaryFreeShippingText = styled.div`
   }
   span:first-child {
     margin-right: 8px;
+    margin-top: 4px;
   }
 `;
 

@@ -326,7 +326,8 @@ export type LastSeenProductsProps = {
 };
 
 export type CartProps = {
-	summaryText?: string;
+	shpngDscrpText?: string;
+	shpngPrcRange?: string;
 };
 
 export type Page404Props = {

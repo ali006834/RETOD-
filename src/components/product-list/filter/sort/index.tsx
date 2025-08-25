@@ -63,7 +63,7 @@ const SortSelect = observer(({ productList }: Props) => {
         className={styles.featuredSelect_title}
         onClick={() => setShowFeatured(!ShowFeatured)}
       >
-        <span className={styles.sortLabel}>Sırala</span>
+        <span className={styles.sortLabel}>{t(`productList.sort.label`)}</span>
         <span
           className={`${styles.arrowContainer} ${
             ShowFeatured ? styles.arrowRotated : ""

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { observer } from "mobx-react-lite";
 import {
   formatCurrency,
@@ -84,9 +84,17 @@ const ItemsHeader = () => {
 };
 
 const Summary = observer((props: CartProps) => {
+  const [userToken, setUserToken] = useState<string | null>("");
+
   const { t } = useTranslation();
   const store = useStore();
   const cart = store.cartStore.cart;
+
+  useEffect(() => {
+    const token: string | null = localStorage.getItem("customerToken");
+
+    setUserToken(token);
+  }, []);
 
   const subTotal = (
     <S.SummaryBoxText>
@@ -113,12 +121,30 @@ const Summary = observer((props: CartProps) => {
     </S.SummaryButtonWrapper>
   );
 
-  const summaryText = !!props.summaryText ? (
+  const cargoPrice = (
+    <S.SummaryBoxText>
+      {cart?.formattedTotalFinalPrice &&
+      props.shpngPrcRange &&
+      parseFloat(cart.formattedTotalFinalPrice.replace(/[₺,\s]/g, "")) >
+        parseFloat(props.shpngPrcRange) ? (
+        <span>{t(`${NS}:summary.freeShipping`)}</span>
+      ) : (
+        <>
+          <span>{t(`${NS}:summary.cargoPriceText`)}</span>
+          <S.CargoPrice>
+            <span>₺ {cart?.availableShippingMethods?.[0]?.price}</span>
+          </S.CargoPrice>
+        </>
+      )}
+    </S.SummaryBoxText>
+  );
+
+  const summaryText = !!props.shpngDscrpText ? (
     <S.SummaryFreeShippingText>
       <span>
         <FreeShippingCarSVG />
       </span>
-      <span>{props.summaryText}</span>
+      <span>{props.shpngDscrpText}</span>
     </S.SummaryFreeShippingText>
   ) : null;
 
@@ -129,6 +155,7 @@ const Summary = observer((props: CartProps) => {
         <S.SummaryBoxInner>
           {subTotal}
           <Adjustments cart={cart} />
+          {userToken && cargoPrice}
           {totalFinalPrice}
           <Coupon />
           {summaryButtons}
@@ -152,10 +179,12 @@ const Adjustments = observer(
           return (
             <S.SummaryBoxText key={index}>
               <span>{adjustment.name}</span>
-              <span>
-                {adjustment.type === IkasAdjustmentType.DECREMENT ? "-" : "+"}
-                {price}
-              </span>
+              <S.AdjustmentPrice>
+                <span>
+                  {adjustment.type === IkasAdjustmentType.DECREMENT ? "-" : "+"}
+                  {price}
+                </span>
+              </S.AdjustmentPrice>
             </S.SummaryBoxText>
           );
         })}

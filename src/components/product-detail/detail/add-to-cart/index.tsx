@@ -58,8 +58,6 @@ export const AddToCart = observer((props: ProductDetailProps) => {
   const modalLoginText = (key: string) =>
     t(`common:favorite.loginModal.${key}`);
 
-  // console.log("Seçilen beden stoğu:", selectedVariantStock);
-
   return (
     <>
       <S.Wrapper>

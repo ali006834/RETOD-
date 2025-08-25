@@ -120,6 +120,8 @@ const LoginFormComponent = observer(
             onChange={(event) => form.onEmailChange(event.target.value)}
             placeholder="Lütfen e-posta hesabınızı yazınız"
             style={{
+              fontFamily: "Helvetica",
+              fontWeight: "300",
               border: "1px solid gray",
               outline: "none",
               padding: "0 0 0 10px",
@@ -139,6 +141,8 @@ const LoginFormComponent = observer(
               onChange={(event) => form.onPasswordChange(event.target.value)}
               placeholder="Lütfen şifrenizi yazınız"
               style={{
+                fontFamily: "Helvetica",
+                fontWeight: "300",
                 border: "1px solid gray",
                 outline: "none",
                 padding: "0 0 0 10px",

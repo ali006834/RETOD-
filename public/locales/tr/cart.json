@@ -10,6 +10,9 @@
     "subTotal": "Ara Toplam: ",
     "total": "Toplam: ",
     "info": "Kargo, vergi ve kupon kodları ödeme adımında hesaplanacaktır.",
+    "cargoPrice": "Teslimat / Kargo",
+    "freeShipping": "Ücretsiz Kargo",
+    "cargoPriceText": "Kargo Ücreti",
     "continueShopping": "ALIŞVERİŞE DEVAM ET",
     "checkout": "ŞİMDİ SATIN AL"
   },

@@ -84,7 +84,6 @@ export default function useModalBackInStock({ product }: Props) {
       setFormAlert({ status, title, text });
       if (status !== "error") model.email = "";
     } catch (error) {
-      console.log("error", error);
       setFormAlert({
         status: "error",
         title: i18nText("alert.errorTitle"),

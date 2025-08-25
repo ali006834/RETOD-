@@ -20,6 +20,8 @@
   height: 23px;
 }
 .featuredSelect_content {
+  font-family: "Helvetica";
+  font-weight: 300;
   position: absolute;
   top: 45px;
   background-color: #fff;
@@ -31,10 +33,10 @@
   width: 180px;
 }
 .selected {
-  background-color: #6b7280;
+  background-color: #f6f1eb;
   padding: 10px 20px;
   box-sizing: border-box;
-  color: #fff;
+  color: #000;
 }
 .not_selected {
   padding: 10px 20px;
@@ -42,14 +44,15 @@
 }
 .selected:hover,
 .not_selected:hover {
-  background-color: #6b7280;
-  color: #fff;
+  background-color: #f6f1eb;
+  color: #000;
 }
 
 .sortLabel {
+  font-family: "Helvetica";
+  font-weight: 300;
   font-size: 14px;
   color: #222;
-  font-weight: 500;
 }
 
 .arrowContainer {

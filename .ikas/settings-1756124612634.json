@@ -114,6 +114,31 @@
     "defaultLocale": "tr",
     "region": "TR",
     "storeName": "dev-dizaynella",
+    "billingAddress": {
+      "addressLine1": "test",
+      "country": {
+        "id": "da8c5f2a-8d37-48a8-beff-6ab3793a1861",
+        "name": "Türkiye",
+        "code": "TUR",
+        "iso2": "TR",
+        "iso3": "TUR"
+      },
+      "state": {
+        "id": "dcb9135c-4b84-4c06-9a42-f359317a9b78",
+        "name": "Default"
+      },
+      "city": {
+        "id": "177cff26-7c82-477c-b03e-b71546d04bec",
+        "name": "İstanbul"
+      },
+      "district": {
+        "id": "5dd9405f-143a-44d9-bfbd-bbe2eb7b5c15",
+        "name": "Adalar"
+      },
+      "firstName": "test",
+      "lastName": "test",
+      "type": 1
+    },
     "merchantId": "4ab3cdb9-fe6b-4c1a-8a05-65769a2aec14"
   },
   "custom": {

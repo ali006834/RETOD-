@@ -1,6 +1,7 @@
 {
   "filters": {
     "sort": {
+      "label": "Sort",
       "text": "Filters",
       "confirm": "Confirm"
     }

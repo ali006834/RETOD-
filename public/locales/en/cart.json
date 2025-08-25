@@ -10,6 +10,9 @@
     "subTotal": "Sub Total: ",
     "total": "Total: ",
     "info": "Shipping, tax and coupon codes will be calculated at the payment step.",
+    "cargoPrice": "Delivery / Shipping",
+    "freeShipping": "Free Shipping",
+    "cargoPriceText": "Shipping Fee",
     "continueShopping": "Continue Shopping",
     "checkout": "Checkout"
   },

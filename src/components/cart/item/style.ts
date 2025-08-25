@@ -67,7 +67,7 @@ export const ItemRemove = styled.button`
 
 export const ItemPriceWrapper = styled.div`
   margin-bottom: 24px;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 24px;
   @media screen and (max-width: ${breakpoints.sm}) {
     font-size: 14px;
@@ -77,12 +77,12 @@ export const ItemPriceWrapper = styled.div`
 export const ItemSellPrice = styled.div`
   font-weight: 400;
   text-decoration: line-through;
-  color: #6b7280;
+  color: #000;
 `;
 
 export const ItemPrice = styled.div`
   color: #cf152d;
-  font-weight: 600;
+  font-weight: 500;
 `;
 
 export const ItemOptions = styled.div`

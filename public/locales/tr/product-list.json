@@ -1,6 +1,7 @@
 {
   "filters": {
     "sort": {
+      "label": "Sırala",
       "text": "Filtreler",
       "confirm": "Onayla"
     }

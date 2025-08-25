@@ -39,19 +39,8 @@ const BlogList: React.FC<BlogListsProps> = (props: BlogListsProps) => {
         // 6 veya daha az blog varsa grid kullan
         <div className={styles.grid}>
           {props?.blogs?.data.map((item) => {
-            console.log("🚀 Blog render edildi - Grid:", item.href); // Debug: Blog render ediliyor mu?
             return (
-              <div
-                key={item.id}
-                onClick={() => {
-                  console.log("🚀 Blog tıklandı - Grid:", {
-                    title: item.title,
-                    href: item.href,
-                    id: item.id,
-                  });
-                }}
-                style={{ cursor: "pointer" }}
-              >
+              <div key={item.id} style={{ cursor: "pointer" }}>
                 <Link href={item.href}>{renderBlogItem(item)}</Link>
               </div>
             );
@@ -92,19 +81,9 @@ const BlogList: React.FC<BlogListsProps> = (props: BlogListsProps) => {
             }}
           >
             {props?.blogs?.data.map((item) => {
-              console.log("🚀 Blog render edildi - Swiper:", item.href); // Debug: Blog render ediliyor mu?
               return (
                 <SwiperSlide key={item.id}>
-                  <div
-                    onClick={() => {
-                      console.log("🚀 Blog tıklandı - Swiper:", {
-                        title: item.title,
-                        href: item.href,
-                        id: item.id,
-                      });
-                    }}
-                    style={{ cursor: "pointer" }}
-                  >
+                  <div style={{ cursor: "pointer" }}>
                     <Link href={item.href}>{renderBlogItem(item)}</Link>
                   </div>
                 </SwiperSlide>

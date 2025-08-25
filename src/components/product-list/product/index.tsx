@@ -410,15 +410,21 @@ const ProductTag = observer(({ product }: Props) => {
 const Price = observer(({ product }: Props) => {
   return (
     <div className={styles.price_content}>
-      <span className={styles.price}>
-        {product.selectedVariant.price.formattedFinalPrice}
-      </span>
       {product.selectedVariant.price.hasDiscount ? (
-        <span className={styles.discCount}>
-          <del> {product.selectedVariant.price.formattedSellPrice}</del>
-        </span>
+        <>
+          <span className={styles.discCount}>
+            <del> {product.selectedVariant.price.formattedSellPrice}</del>
+          </span>
+          <span className={styles.price}>
+            {product.selectedVariant.price.formattedFinalPrice}
+          </span>
+        </>
       ) : (
-        <span className={styles.no_discCount}></span>
+        <span className={styles.no_discCount}>
+          <span className={styles.no_discCount_price}>
+            {product.selectedVariant.price.formattedFinalPrice}
+          </span>
+        </span>
       )}
     </div>
   );
