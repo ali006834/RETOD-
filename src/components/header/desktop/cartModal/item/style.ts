@@ -8,6 +8,8 @@ export const ItemWrapper = styled.div<{ $isRemoving?: boolean }>`
   overflow: hidden;
 `;
 
+
+
 export const RemovedNotification = styled.div`
   display: flex;
   flex-direction: column;
@@ -19,6 +21,8 @@ export const RemovedNotification = styled.div`
   border-radius: 8px;
   margin: 8px 0;
   animation: fadeIn 0.3s ease;
+  font-family: "Helvetica";
+  font-weight: 300;
 
   svg {
     width: 24px;

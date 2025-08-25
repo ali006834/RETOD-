@@ -25,6 +25,9 @@
   "discover_now": "Discover Now",
   "title": "Shopping Bag",
   "piece": "Piece",
+  "clearCart": "Clear Cart",
+  "clearCartSuccess": "Cart has been cleared",
+  "clearCartItemSuccess": "Product has been removed",
 
   "loading": "Loading",
 
@@ -35,7 +38,7 @@
       "noFavoriteProduct": "No favorite products.",
       "browseProduct": "Browse products",
       "tip": "Add your favorite products to view them later.",
-      "instructions": "Click the heart icon on the product details page to add and view your favorite products here."
+      "instructions": "On the product page, you can add the items you like to your favorites by clicking the heart icon next to the 'Add to Cart' button, and view your selected products in this section."
     }
   },
 

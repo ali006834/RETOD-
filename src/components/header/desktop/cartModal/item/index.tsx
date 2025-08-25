@@ -73,7 +73,7 @@ const Item = ({
       {showRemovedMessage ? (
         <S.RemovedNotification>
           <DeleteSVG />
-          <span>Ürün silindi</span>
+          <span>{t(`common:clearCartItemSuccess`)}</span>
         </S.RemovedNotification>
       ) : (
         <S.ItemWrapper $isRemoving={isRemoving}>
@@ -120,7 +120,6 @@ const Item = ({
           </S.ItemActions>
         </S.ItemWrapper>
       )}
-
       <Modal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}

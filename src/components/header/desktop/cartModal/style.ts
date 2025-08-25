@@ -54,6 +54,56 @@ export const Main = styled.main`
   grid-column: span 2 / span 2;
 `;
 export const Items = styled.ul``;
+
+export const ClearCartButton = styled.button`
+  display: block;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  color: #666;
+  margin: 0 auto 10px auto;
+  text-decoration: underline;
+
+`;
+
+export const RemovedNotification = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  margin: 8px 0;
+  animation: fadeIn 0.3s ease;
+  font-family: "Helvetica";
+  font-weight: 300;
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  span {
+    font-size: 14px;
+    color: #666;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+`;
+
+
 export const Summary = styled.aside``;
 
 export const ItemsHeader = styled.header`

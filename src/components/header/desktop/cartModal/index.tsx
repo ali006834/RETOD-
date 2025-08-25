@@ -14,12 +14,13 @@ import EmptyCartModal from "./empty-cart";
 import { HeaderProps } from "src/components/__generated__/types";
 import * as S from "./style";
 import Item from "./item";
-export const NS = "common";
-
+import DeleteAllSVG from "./item/svg/delete-all";
 import Product from "src/components/product-list/product";
 import Loading from "src/components/account/components/loading";
 import useFavoriteProducts from "src/components/account/favorite-products/useFavoriteProducts";
 import HeartWithCursorIcon from "src/components/svg/heart-with-cursor";
+
+export const NS = "common";
 
 const CartModal = (props: HeaderProps) => {
   const { cartProducts, title } = props;
@@ -156,9 +157,35 @@ export const MainWishList = ({ item }: { item: IkasOrderLineItem }) => {
 //= Sepetteki ürünler
 const Items = observer(() => {
   const store = useStore();
+  const { t } = useTranslation();
+  // Silme efekti
+  const [isRemoving, setIsRemoving] = useState(false);
+  const [showRemovedMessage, setShowRemovedMessage] = useState(false);
+
+  const handleRemove = () => {
+    setIsRemoving(true);
+    setTimeout(() => {
+      setShowRemovedMessage(true);
+      setTimeout(() => {
+        store.cartStore.removeCart();
+      }, 1000); // "Ürün silindi" mesajının gösterilme süresi
+    }, 300); // Kayma animasyonu süresi
+  };
 
   return (
     <S.Items>
+      {showRemovedMessage ? (
+        <S.RemovedNotification>
+          <DeleteAllSVG />
+          <span>{t(`${NS}:clearCartSuccess`)}</span>
+        </S.RemovedNotification>
+      ) : (
+        <S.ClearCartButton onClick={handleRemove}>
+          {/* <DeleteAllSVG /> */}
+          {t(`${NS}:clearCart`)}
+        </S.ClearCartButton>
+      )}
+
       {store.cartStore.cart?.items.map((item) => (
         <Item key={item.id} item={item} />
       ))}

@@ -23,6 +23,9 @@
   "discover_now": "Hemen Keşfet",
   "title": "Sepetim",
   "piece": "Adet",
+  "clearCart": "Tüm Sepeti Temizle",
+  "clearCartSuccess": "Tüm Sepet Temizlendi",
+  "clearCartItemSuccess": "Ürün silindi",
 
   "loading": "Yükleniyor",
 
@@ -33,7 +36,7 @@
       "noFavoriteProduct": "Favori ürün bulunmuyor.",
       "browseProduct": "Ürünleri incele",
       "tip": "Sevdiğiniz ürünlere daha sonra ulaşmak için favorilerinize ekleyin.",
-      "talimatlar": "Ürün detay sayfasında beğendiğiniz ürünlerin üstündeki kalp ikonuna basın ve seçtiğiniz ürünleri burada görüntüleyin."
+      "instructions": "Ürün sayfasında beğendiğiniz ürünleri, 'Sepete Ekle' butonunun yanındaki kalp ikonuna tıklayarak favorilerinize ekleyebilir ve seçtiğiniz ürünleri bu alanda görüntüleyebilirsiniz."
     }
   },
 
