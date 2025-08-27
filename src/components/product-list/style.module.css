@@ -325,6 +325,11 @@
   border: none;
 }
 
+.selected {
+  background-color: #000;
+  color: wheat;
+}
+
 /*= Responsive  */
 @media only screen and (max-width: 1200px) {
   .product_list_products {
@@ -380,11 +385,6 @@
     font-size: 11px;
   }
 }
-.selected {
-  background-color: #000;
-  color: wheat;
-}
-
 @media only screen and (max-width: 400px) {
   .tittle_container {
     gap: 3px;
