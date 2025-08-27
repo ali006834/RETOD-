@@ -28,6 +28,18 @@ const ProductList = (props: ProductListProps) => {
   const { t } = useTranslation();
   const { isMobile, isTablet, isDesktop } = useScreen();
 
+  // Loading state ekle
+  const [isInitialLoading, setIsInitialLoading] = useState(true);
+
+  // Sayfa yüklendiğinde loading state'i false yap
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsInitialLoading(false);
+    }, 100); // 100ms sonra loading'i kapat
+
+    return () => clearTimeout(timer);
+  }, []);
+
   // Intersection Observer için ref
   const loadMoreRef = useRef<HTMLDivElement>(null);
 
@@ -70,7 +82,7 @@ const ProductList = (props: ProductListProps) => {
 
     return () => {
       if (loadMoreRef.current) {
-        observer.unobserve(loadMoreRef.current);
+        observer.observe(loadMoreRef.current);
       }
     };
   }, [loadMoreProducts, productList.hasNext, productList.isLoading]);
@@ -192,6 +204,19 @@ const ProductList = (props: ProductListProps) => {
 
         {/*//! Ana içerik alanı */}
         <div className={styles.product_list_content}>
+          {/* Loading overlay ekle */}
+          {isInitialLoading && (
+            <div className={styles.loading_overlay}>
+              <div className={styles.loading_logo}>
+                <img
+                  src="/image/logo/logo-dizaynella.png"
+                  alt="Dizaynella Logo"
+                  className={styles.logo_image}
+                />
+              </div>
+            </div>
+          )}
+
           <div className={styles.selectedFilters_container}>
             {productList?.filters?.map((item, index) => {
               return (
