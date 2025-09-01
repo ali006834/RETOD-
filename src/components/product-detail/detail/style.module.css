@@ -46,6 +46,13 @@
   line-height: 20px;
 }
 
+.price {
+  background-color: #9f0000;
+  padding: 2px 17px;
+  color: #fff;
+  font-size: 14px;
+}
+
 .discount_rate {
   font-family: "Helvetica" !important;
   display: inline-block;
