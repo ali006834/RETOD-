@@ -36,7 +36,7 @@ const BannerSingle = (props: FeaturedProductShowcaseProps) => {
           {/* Desktop button */}
           <div className={styles.desktopButton}>
             {btnText && btnLink && (
-              <Link href={btnLink}>
+              <Link href={btnLink.href}>
                 <a className={styles.btn}>{btnText}</a>
               </Link>
             )}

@@ -7,14 +7,14 @@
     "type": "STOREFRONT",
     "domains": [
       {
-        "_id": "b97f77a3-5dec-47fc-b985-752bcb3ea254",
-        "createdAt": "2025-07-30T06:43:06.609Z",
-        "updatedAt": "2025-07-30T06:43:06.609Z",
+        "_id": "725964cd-7736-4d90-b017-cbccb448b604",
         "deleted": false,
         "merchantDomainId": "",
         "name": "dev-dizaynella.ikas.shop",
         "isDefault": true,
-        "id": "b97f77a3-5dec-47fc-b985-752bcb3ea254"
+        "createdAt": "2025-09-01T10:50:29.662Z",
+        "updatedAt": "2025-09-01T10:50:29.662Z",
+        "id": "725964cd-7736-4d90-b017-cbccb448b604"
       }
     ],
     "status": "READY",
@@ -36,13 +36,10 @@
       {
         "_id": "43e03d10-eb59-4347-896a-176be577b61c",
         "createdAt": "2025-07-30T06:43:06.609Z",
-        "updatedAt": "2025-07-30T06:43:06.609Z",
+        "updatedAt": "2025-09-01T10:50:29.663Z",
         "deleted": false,
-        "countryCodes": null,
-        "priceListId": null,
         "locale": "tr",
         "path": null,
-        "domain": null,
         "id": "43e03d10-eb59-4347-896a-176be577b61c"
       }
     ],
@@ -77,8 +74,8 @@
     "socialLoginSettings": [],
     "metaTemplates": [],
     "createdAt": "2025-07-29T15:09:56.394Z",
-    "updatedAt": "2025-07-30T06:43:06.609Z",
-    "__v": 1,
+    "updatedAt": "2025-09-01T10:50:29.663Z",
+    "__v": 2,
     "id": "d04db4ef-4eed-42d3-80a8-2d4893ae7958"
   },
   "salesChannel": {

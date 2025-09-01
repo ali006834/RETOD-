@@ -9,7 +9,8 @@
     "build:analyze": "cross-env ANALYZE=true next build",
     "start": "next start",
     "generate": "ikas --generate",
-    "prettier:all": "npx prettier@^2.1 './**/src/**/*.(ts|tsx|css|scss)' --write"
+    "prettier:all": "npx prettier@^2.1 './**/src/**/*.(ts|tsx|css|scss)' --write",
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -27,7 +28,8 @@
     "@types/react-slick": "^0.23.13",
     "@types/styled-components": "^5.1.34",
     "@types/swiper": "^6.0.0",
-    "cross-env": "7.0.3"
+    "cross-env": "7.0.3",
+    "next-sitemap": "^4.2.3"
   },
   "resolutions": {
     "@types/react": "17.0.2",

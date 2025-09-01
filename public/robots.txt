@@ -1,0 +1,16 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/
+Disallow: /private/
+Disallow: /account/
+Disallow: /cart/
+Disallow: /checkout/
+
+# Host
+Host: https://dizaynella.com.tr
+
+# Sitemaps
+Sitemap: https://dizaynella.com.tr/sitemap.xml

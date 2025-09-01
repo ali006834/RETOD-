@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { observer } from "mobx-react-lite";
 import styles from "./style.module.css";
 import { BannerDuoProps } from "../__generated__/types";
@@ -11,6 +11,12 @@ const BannerDuo = (props: BannerDuoProps) => {
   const { banner_left, banner_left_link, banner_right, banner_right_link } =
     props;
   const { isMobile } = useScreen();
+  const [videoLoaded, setVideoLoaded] = useState(false);
+
+  // Video yükleme durumunu güncelle
+  const handleVideoLoaded = () => {
+    setVideoLoaded(true);
+  };
 
   // Sol fotoğraf ve sağ video kontrolü
   if (!banner_left || !banner_right) {
@@ -47,18 +53,59 @@ const BannerDuo = (props: BannerDuoProps) => {
             <div className={styles.slideSection}>
               <Link href={banner_right_link?.href || ""}>
                 <a>
-                  <video
-                    autoPlay={banner_right?.autoplay || true}
-                    muted={banner_right?.muted || true}
-                    loop={banner_right?.loop || true}
-                    playsInline
-                    className={styles.bannerVideo}
-                  >
-                    <source
-                      src={banner_right?.videoSrc || ""}
-                      type="video/mp4"
-                    />
-                  </video>
+                  <div className={styles.videoContainer}>
+                    {/* Thumbnail - İlk başta göster */}
+                    {!videoLoaded && banner_right?.thumbnailImage && (
+                      <div className={styles.thumbnailContainer}>
+                        <Image
+                          className={styles.thumbnailImage}
+                          image={banner_right.thumbnailImage}
+                          alt={
+                            banner_right.thumbnailImage?.altText ||
+                            "Video thumbnail"
+                          }
+                          useBlur={true}
+                          objectFit="contain"
+                          layout="fill"
+                        />
+                        {/* Play button overlay */}
+                        <div className={styles.playButton}>
+                          <svg
+                            width="60"
+                            height="60"
+                            viewBox="0 0 60 60"
+                            fill="none"
+                          >
+                            <circle
+                              cx="30"
+                              cy="30"
+                              r="30"
+                              fill="rgba(0,0,0,0.5)"
+                            />
+                            <path d="M25 20L40 30L25 40V20Z" fill="white" />
+                          </svg>
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Video - Yüklendikten sonra göster */}
+                    <video
+                      className={`${styles.bannerVideo} ${
+                        videoLoaded ? styles.videoVisible : styles.videoHidden
+                      }`}
+                      autoPlay={banner_right?.autoplay || true}
+                      muted={banner_right?.muted || true}
+                      loop={banner_right?.loop || true}
+                      playsInline
+                      onLoadedData={handleVideoLoaded}
+                      onCanPlay={handleVideoLoaded}
+                    >
+                      <source
+                        src={banner_right?.videoSrc || ""}
+                        type="video/mp4"
+                      />
+                    </video>
+                  </div>
                 </a>
               </Link>
             </div>
@@ -89,15 +136,45 @@ const BannerDuo = (props: BannerDuoProps) => {
       <div className={styles.rightSection}>
         <Link href={banner_right_link?.href || ""}>
           <a>
-            <video
-              autoPlay={banner_right?.autoplay || true}
-              muted={banner_right?.muted || true}
-              loop={banner_right?.loop || true}
-              playsInline
-              className={styles.bannerVideo}
-            >
-              <source src={banner_right?.videoSrc || ""} type="video/mp4" />
-            </video>
+            <div className={styles.videoContainer}>
+              {/* Thumbnail - İlk başta göster */}
+              {!videoLoaded && banner_right?.thumbnailImage && (
+                <div className={styles.thumbnailContainer}>
+                  <Image
+                    className={styles.thumbnailImage}
+                    image={banner_right.thumbnailImage}
+                    alt={
+                      banner_right.thumbnailImage?.altText || "Video thumbnail"
+                    }
+                    useBlur={true}
+                    objectFit="contain"
+                    layout="fill"
+                  />
+                  {/* Play button overlay */}
+                  <div className={styles.playButton}>
+                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                      <circle cx="30" cy="30" r="30" fill="rgba(0,0,0,0.5)" />
+                      <path d="M25 20L40 30L25 40V20Z" fill="white" />
+                    </svg>
+                  </div>
+                </div>
+              )}
+
+              {/* Video - Yüklendikten sonra göster */}
+              <video
+                className={`${styles.bannerVideo} ${
+                  videoLoaded ? styles.videoVisible : styles.videoHidden
+                }`}
+                autoPlay={banner_right?.autoplay || true}
+                muted={banner_right?.muted || true}
+                loop={banner_right?.loop || true}
+                playsInline
+                onLoadedData={handleVideoLoaded}
+                onCanPlay={handleVideoLoaded}
+              >
+                <source src={banner_right?.videoSrc || ""} type="video/mp4" />
+              </video>
+            </div>
           </a>
         </Link>
       </div>

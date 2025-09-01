@@ -142,7 +142,7 @@ const SlidingSlider = (props: BannerSlidingSliderProps) => {
               )}
               {lowerBtnText && lowerBtnLink && (
                 <div className={styles.lowerButton}>
-                  <Link href={lowerBtnLink}>{lowerBtnText}</Link>
+                  <Link href={lowerBtnLink?.href || ""}>{lowerBtnText}</Link>
                 </div>
               )}
             </div>

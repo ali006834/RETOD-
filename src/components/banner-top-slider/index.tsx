@@ -11,6 +11,7 @@ import NextIcon from "src/components/svg/next";
 import PrevIcon from "src/components/svg/prev";
 import "swiper/css";
 import "swiper/css/navigation";
+import sort from "../product-list/filter/sort";
 
 type MediaItem = {
   type: "image" | "video";
@@ -25,6 +26,22 @@ const BannerTop = (props: BannerTopSliderProps) => {
   const navigationNextRef = useRef(null);
   const { isMobile } = useScreen();
   const [progress, setProgress] = useState(0);
+  const [videoLoadingStates, setVideoLoadingStates] = useState<{
+    [key: string]: boolean;
+  }>({});
+
+  // Video yükleme durumunu güncelle
+  const setVideoLoaded = (videoKey: string) => {
+    setVideoLoadingStates((prev) => ({
+      ...prev,
+      [videoKey]: true,
+    }));
+  };
+
+  // Video yükleme durumunu kontrol et
+  const isVideoLoaded = (videoKey: string) => {
+    return videoLoadingStates[videoKey] || false;
+  };
 
   // Tüm medya öğelerini birleştir ve sıralama işlemi..
   const allMediaItems = useMemo(() => {
@@ -91,6 +108,11 @@ const BannerTop = (props: BannerTopSliderProps) => {
     return null;
   }
 
+  console.log(
+    "sortedMedia Video::::",
+    sortedMedia.map((item) => item?.data?.videoCDT)
+  );
+
   return (
     <div className={styles.bannerContainer}>
       <Swiper
@@ -116,18 +138,60 @@ const BannerTop = (props: BannerTopSliderProps) => {
       >
         {sortedMedia.map((item, index) => {
           if (item.type === "video") {
+            const videoKey = `video-${index}-${item.data?.videoCDT?.videoSrc}`;
+            const isLoaded = isVideoLoaded(videoKey);
+
             return (
               <SwiperSlide key={`video-${index}`} className={styles.slide}>
                 <Link href={item.data?.videoLink?.href || "/"}>
                   <div className={styles.videoContainer}>
+                    {/* Thumbnail - İlk başta göster */}
+                    {!isLoaded && item.data?.videoCDT?.thumbnailImage && (
+                      <div className={styles.thumbnailContainer}>
+                        <Image
+                          className={styles.thumbnailImage}
+                          image={item.data.videoCDT.thumbnailImage}
+                          alt={
+                            item.data.videoCDT.thumbnailImage?.altText ||
+                            "Video thumbnail"
+                          }
+                          useBlur={true}
+                          objectFit="contain"
+                          layout="fill"
+                        />
+                        {/* Play button overlay */}
+                        <div className={styles.playButton}>
+                          <svg
+                            width="60"
+                            height="60"
+                            viewBox="0 0 60 60"
+                            fill="none"
+                          >
+                            <circle
+                              cx="30"
+                              cy="30"
+                              r="30"
+                              fill="rgba(0,0,0,0.5)"
+                            />
+                            <path d="M25 20L40 30L25 40V20Z" fill="white" />
+                          </svg>
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Video - Yüklendikten sonra göster */}
                     <video
-                      className={styles.video}
+                      className={`${styles.video} ${
+                        isLoaded ? styles.videoVisible : styles.videoHidden
+                      }`}
                       src={item.data?.videoCDT?.videoSrc || ""}
                       autoPlay={item.data?.videoCDT?.autoplay || false}
                       loop={item.data?.videoCDT?.loop || false}
                       muted={item.data?.videoCDT?.muted || false}
                       controls={item.data?.videoCDT?.controls || false}
                       playsInline
+                      onLoadedData={() => setVideoLoaded(videoKey)}
+                      onCanPlay={() => setVideoLoaded(videoKey)}
                     ></video>
 
                     {/* Text overlay - sol alt */}
