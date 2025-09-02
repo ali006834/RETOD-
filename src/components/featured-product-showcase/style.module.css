@@ -113,7 +113,16 @@
   margin: 0;
 }
 
-/* Özel ok tasarımı  */
+@media (min-width: 993px) and (max-width: 1025px) {
+  .sliderContainer {
+    padding-top: 60px;
+  }
+
+  .wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+}
 
 /* Responsive styles */
 @media (max-width: 992px) {
