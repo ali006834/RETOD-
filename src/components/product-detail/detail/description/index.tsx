@@ -13,6 +13,16 @@ export const Description = (
   const { t } = useTranslation();
   if (!props?.product?.description) return null;
 
+  console.log("props?.product?.attributes", props?.product?.attributes);
+  console.log(
+    "props?.product?.attributes.map.name",
+    props?.product?.attributes?.map((attr) => attr?.productAttribute?.name)
+  );
+  console.log(
+    "props?.product?.attributes.map.value",
+    props?.product?.attributes?.map((attr) => attr?.value)
+  );
+
   return (
     <S.DescriptionWrapperTop>
       <FiltersSvgWrapper
@@ -30,6 +40,19 @@ export const Description = (
           <S.Description
             dangerouslySetInnerHTML={{ __html: props.product.description }}
           />
+          <S.ProductAttributesWrapper>
+            {props?.product?.attributes &&
+              props.product.attributes.length > 0 && (
+                <ul>
+                  {props.product.attributes.map((attr, index) => (
+                    <li key={index}>
+                      <strong>{attr?.productAttribute?.name}</strong>:{" "}
+                      {attr?.value}
+                    </li>
+                  ))}
+                </ul>
+              )}
+          </S.ProductAttributesWrapper>{" "}
         </S.DescriptionWrapper>
       </FiltersSvgWrapper>
     </S.DescriptionWrapperTop>

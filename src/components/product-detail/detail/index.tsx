@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import styles from "./style.module.css";
 import { ProductDetailProps } from "src/components/__generated__/types";
 import { observer } from "mobx-react-lite";
+
 import { Variants } from "./variants/index";
 import { Price } from "./price";
 import { Description } from "./description";
@@ -13,6 +13,8 @@ import Taksit from "./taksit";
 import { ProductShortExplanation } from "./product-short-explanation";
 import { ProductSku } from "./product-sku";
 import { CompleteTheLook } from "./complete-the-look";
+
+import styles from "./style.module.css";
 
 const Detail = (props: ProductDetailProps) => {
   // Kombin attribute'unu kontrol et

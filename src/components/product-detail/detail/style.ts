@@ -130,6 +130,39 @@ export const Description = styled.div`
   }
 `;
 
+export const ProductAttributesWrapper = styled.div`
+  margin-top: 16px;
+  padding: 14px 16px;
+  background-color: #f8f9fa;
+  
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  li {
+    margin-bottom: 8px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 24px;
+    font-family: "Helvetica" !important;
+    text-transform: capitalize !important;
+    color: #444;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+    
+    strong {
+      color: #222;
+      font-weight: 400;
+      margin-right: 8px;
+    }
+  }
+`;
+
 export const DescriptionWrapperTop = styled.div`
   padding: 0 0px;
 
