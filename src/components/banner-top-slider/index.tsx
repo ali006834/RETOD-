@@ -108,11 +108,6 @@ const BannerTop = (props: BannerTopSliderProps) => {
     return null;
   }
 
-  console.log(
-    "sortedMedia Video::::",
-    sortedMedia.map((item) => item?.data?.videoCDT)
-  );
-
   return (
     <div className={styles.bannerContainer}>
       <Swiper

@@ -13,16 +13,6 @@ export const Description = (
   const { t } = useTranslation();
   if (!props?.product?.description) return null;
 
-  console.log("props?.product?.attributes", props?.product?.attributes);
-  console.log(
-    "props?.product?.attributes.map.name",
-    props?.product?.attributes?.map((attr) => attr?.productAttribute?.name)
-  );
-  console.log(
-    "props?.product?.attributes.map.value",
-    props?.product?.attributes?.map((attr) => attr?.value)
-  );
-
   return (
     <S.DescriptionWrapperTop>
       <FiltersSvgWrapper
