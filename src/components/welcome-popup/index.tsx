@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 import styles from "./style.module.css";
 
 import { Image } from "@ikas/storefront";
@@ -10,30 +11,42 @@ import { useScreen } from "src/utils/hooks/useScreen";
 const WelcomePopup = (props: WelcomePopupProps) => {
   const { bgImageWeb, bgImageMobile, titleText, contentText, btnText } = props;
   const { isMobile } = useScreen();
+  const router = useRouter();
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     // Kullanıcının hoş geldin popup'ını daha önce gördüğünü kontrol et...
-    // const welcomePopup = localStorage.getItem("welcomePopup");
-    // if (!welcomePopup) {
-    // Sayfanın tam yüklenmesini bekle...
-    const timer = setTimeout(() => {
-      setIsVisible(true);
-    }, 1000);
+    const welcomePopup = localStorage.getItem("welcomePopup");
+    const lastShown = localStorage.getItem("welcomePopupLastShown");
 
-    return () => clearTimeout(timer);
-    // }
+    // 24 saat kontrolü
+    const now = new Date().getTime();
+    const oneDayInMs = 24 * 60 * 60 * 1000; // her 24 saatte bir sıfırla ve tekrar göster
+
+    if (!welcomePopup || !lastShown || now - parseInt(lastShown) > oneDayInMs) {
+      // Sayfanın tam yüklenmesini bekle...
+      const timer = setTimeout(() => {
+        setIsVisible(true);
+      }, 1000);
+
+      return () => clearTimeout(timer);
+    }
   }, []);
 
   const handleClose = () => {
+    const now = new Date().getTime();
     localStorage.setItem("welcomePopup", "seen");
+    localStorage.setItem("welcomePopupLastShown", now.toString());
     setIsVisible(false);
   };
 
   const handleSubscribe = () => {
-    // Abonelik mantığını burada...
+    // Login sayfasına yönlendir
+    const now = new Date().getTime();
     localStorage.setItem("welcomePopup", "seen");
+    localStorage.setItem("welcomePopupLastShown", now.toString());
     setIsVisible(false);
+    router.push("/account/login");
   };
 
   if (!isVisible) {
