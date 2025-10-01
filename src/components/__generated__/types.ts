@@ -514,3 +514,11 @@ export type FloatingButtonsProps = {
 	togglePoint?: string;
 };
 
+export type WelcomePopupProps = {
+	bgImageWeb?: IkasImage;
+	bgImageMobile?: IkasImage;
+	titleText?: string;
+	contentText?: string;
+	btnText?: string;
+};
+

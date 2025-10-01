@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./style.module.css";
+
 import { Image, Link, useTranslation } from "@ikas/storefront";
 import { observer } from "mobx-react-lite";
 import { Page404Props } from "../__generated__/types";
