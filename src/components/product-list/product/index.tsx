@@ -72,7 +72,7 @@ const Product = (props: Props) => {
           <a title={a11yTitle}>
             <S.ImageWrapper $hasStock={product.hasStock}>
               <ProductImage {...props} isWidthVideo={isWidthVideo} />
-              {/* <DiscountBadge {...props} /> */}
+              <DiscountBadge {...props} />
             </S.ImageWrapper>
           </a>
         </Link>
@@ -440,5 +440,31 @@ const ProductTitle = observer(({ product }: Props) => (
     </Link>
   </div>
 ));
+
+const DiscountBadge = observer(({ product }: Props) => {
+  const { t } = useTranslation();
+  if (
+    !product.selectedVariant.price.hasDiscount &&
+    product.selectedVariant.hasStock
+  )
+    return null;
+
+  return (
+    <S.DiscountBadge $hasStock={product.hasStock}>
+      {!product.hasStock && (
+        <S.DiscountBadgeSoldOut>
+          {t("common:product.discountBadgeSoldOut")}
+        </S.DiscountBadgeSoldOut>
+      )}
+      {product.hasStock && (
+        <>
+          <S.DiscountBadgeDiscountRatio>
+            -{product.selectedVariant.price.discountPercentage}%
+          </S.DiscountBadgeDiscountRatio>
+        </>
+      )}
+    </S.DiscountBadge>
+  );
+});
 
 export default observer(Product);
