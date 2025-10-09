@@ -4,17 +4,20 @@ import WhatsAppSvg from "../../svg/whatsapp";
 import styles from "./style.module.css";
 
 const WhatsAppButton = (props: FloatingButtonsProps) => {
-  const { phoneNumber, messageText } = props;
+  const phoneNumber = props.phoneNumber || "905548952220";
+  const messageText =
+    props.messageText || "Merhaba; {{KONU}} Hakkında Bilgi Almak İstiyorum.";
+
   const handleWhatsAppClick = () => {
-    if (phoneNumber) {
-      const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-        messageText || ""
-      )}`;
-      window.open(whatsappUrl, "_blank");
-    } else {
-      // Eğer numara belirtilmemişse, genel WhatsApp'ı aç
-      window.open("https://wa.me/", "_blank");
-    }
+    // Telefon numarasını temizle - sadece rakamları al
+    const cleanPhone = phoneNumber.replace(/\D/g, "");
+    // Mesaj metnini temizle - gereksiz boşlukları kaldır
+    const cleanMessage = messageText.trim();
+
+    const whatsappUrl = `https://wa.me/${cleanPhone}?text=${encodeURIComponent(
+      cleanMessage
+    )}`;
+    window.open(whatsappUrl, "_blank");
   };
 
   return (

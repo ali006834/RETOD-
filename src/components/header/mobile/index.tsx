@@ -168,7 +168,7 @@ const Sidenav = observer((props: HeaderProps) => {
           />
           <div className={styles.customerCategories}>
             <div className={styles.categoryItem}>
-              <Link href="/customer-service">
+              <Link href="/pages/iletisim">
                 <a>{t(`header:mobileHeader.customerService`)}</a>
               </Link>
             </div>
@@ -184,11 +184,8 @@ const Sidenav = observer((props: HeaderProps) => {
             </h3>
             <p className={styles.helpText}>
               {t(`header:mobileHeader.helpText`)}{" "}
-              <Link href="/customer-service">
-                <a
-                  href="/account/favorite-products"
-                  className={styles.helpLink}
-                >
+              <Link href="/pages/iletisim">
+                <a className={styles.helpLink}>
                   {t(`header:mobileHeader.visitLink`)}
                 </a>
               </Link>

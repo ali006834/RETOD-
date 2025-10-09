@@ -97,7 +97,7 @@ const BannerSingle = (props: FeaturedProductShowcaseProps) => {
         {/* Mobile button - shows only on mobile below slider */}
         <div className={styles.mobileButton}>
           {btnText && btnLink && (
-            <Link href={btnLink}>
+            <Link href={btnLink?.href}>
               <a className={styles.btn}>{btnText}</a>
             </Link>
           )}
