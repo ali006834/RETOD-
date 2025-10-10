@@ -320,6 +320,7 @@ export type BannerTextsProps = {
 };
 
 export type BlogListsProps = {
+	isSlider?: boolean;
 	bannerTitle?: string;
 	blogs?: IkasBlogList;
 };
@@ -544,5 +545,13 @@ export type BannerImageListProps = {
 	imageList?: ImageList[];
 	webGapValue?: IkasSlider;
 	mobilGapValue?: IkasSlider;
+};
+
+export type BannerInstagramPostsProps = {
+	access_token?: string;
+	title?: string;
+	image?: IkasImage;
+	posts?: string;
+	followers?: string;
 };
 

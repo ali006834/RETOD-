@@ -16,6 +16,8 @@ import "swiper/css/scrollbar";
 const BlogList: React.FC<BlogListsProps> = (props: BlogListsProps) => {
   const { t } = useTranslation();
 
+  const isSlider = props.isSlider; // Bu değeri daha sonra İKAS'tan dinamik olarak alacağız
+
   // Blog'a ait kategori adını al..
   const categoryArr = toJS(props.blogs?.data[0]?.category);
 
@@ -35,8 +37,8 @@ const BlogList: React.FC<BlogListsProps> = (props: BlogListsProps) => {
   return (
     <div className={styles.container}>
       <div className={styles.bannerTitle}>{props?.bannerTitle}</div>
-      {props?.blogs?.count && props?.blogs?.count <= 6 ? (
-        // 6 veya daha az blog varsa grid kullan
+      {!isSlider ? (
+        // isSlider false ise grid kullan (Web: 4, Tablet: 3, Mobil: 2)
         <div className={styles.grid}>
           {props?.blogs?.data.map((item) => {
             return (
@@ -47,7 +49,7 @@ const BlogList: React.FC<BlogListsProps> = (props: BlogListsProps) => {
           })}
         </div>
       ) : (
-        // 6'dan fazla blog varsa swiper kullan
+        // isSlider true ise swiper slider kullan
         <div className={styles.swiperWrapper}>
           <Swiper
             modules={[Navigation]}

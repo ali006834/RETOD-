@@ -16,9 +16,9 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr)); /* Web: 4 kolon */
   padding: 1.25rem;
-  gap: 0.5rem;
+  gap: 1.5rem;
 }
 
 .grid a,
@@ -112,15 +112,15 @@
 /* Tablet boyutu (768px - 1024px) */
 @media (max-width: 1024px) {
   .grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* Tablet: 3 kolon */
     gap: 1.5rem;
   }
 }
 
-/* Mobil boyutu (640px altı) */
+/* Mobil boyutu (768px altı) */
 @media (max-width: 768px) {
   .grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* Mobil: 2 kolon */
     gap: 1rem;
     padding: 1rem;
   }
