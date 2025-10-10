@@ -13,7 +13,7 @@ export const Title = styled.h1`
   font-size: 36px;
   line-height: 56px;
   margin-bottom: 24px;
-  font-family: "HelveticaNeueLight" !important;
+  font-family: "Helvetica" !important;
 `;
 
 export const Footer = styled.footer`
@@ -21,11 +21,11 @@ export const Footer = styled.footer`
   font-weight: 300;
   font-size: 16px;
   line-height: 28px;
-  font-family: "HelveticaNeueLight" !important;
+  font-family: "Helvetica" !important;
 
   a {
     color: #000;
-    font-family: "HelveticaNeueLight" !important;
+    font-family: "Helvetica" !important;
     padding-left: 10px;
   }
 `;

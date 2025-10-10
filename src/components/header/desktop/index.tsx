@@ -76,7 +76,12 @@ const LeftSide = (props: HeaderProps) => {
 
 /* Merkez */
 const Center = (props: HeaderProps) => {
-  const { categoryMenu, staticCategoryMenu } = props;
+  const {
+    categoryMenu,
+    staticCategoryMenu,
+    isShowCustomCategory,
+    customCategoryName,
+  } = props;
 
   const altCat = categoryMenu?.data.filter(
     (item: any) => item.parentId !== null
@@ -107,6 +112,28 @@ const Center = (props: HeaderProps) => {
 
   return (
     <div className={styles.header_menu_link_wrapper}>
+      {/* Statik Yeniler Menüsü */}
+      {isShowCustomCategory && (
+        <div
+          className={styles.header_menu_link_content}
+          onMouseEnter={() => handleMouseEnter("static-new")}
+          onMouseLeave={handleMouseLeave}
+        >
+          <div className={styles.top_category}>
+            <div>
+              <Link
+                href={`/pages/${customCategoryName?.toLocaleLowerCase(
+                  "tr-TR"
+                )}`}
+                passHref
+              >
+                <a>{customCategoryName?.toLocaleUpperCase("tr-TR")}</a>
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
+
       {categoryMenu?.data.map((item: any, index: number) => {
         const isHovered = hoveredCategory === item.id;
         return (

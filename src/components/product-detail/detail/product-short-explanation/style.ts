@@ -82,7 +82,7 @@ export const Description = styled.div`
   font-size: 14px !important;
   line-height: 1.375rem !important;
   font-weight: 300 !important;
-  font-family: "HelveticaNeueLight" !important;
+  font-family: "Helvetica" !important;
 
   span {
     color: #272727 !important;

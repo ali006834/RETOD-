@@ -7,6 +7,8 @@ import {
 	IkasProduct,
 	IkasBlogList,
 	IkasBlog,
+	IkasComponentRenderer,
+	IkasSlider,
 } from "@ikas/storefront"
 
 export type ScrollingTexts = { 
@@ -197,6 +199,12 @@ export type Localization = {
 	color?: string;
 };
 
+export type ImageList = { 
+	imageWeb?: IkasImage;
+	imageMobil?: IkasImage;
+	relatedProduct?: IkasProductList;
+};
+
 export type HeaderProps = {
 	logo?: IkasImage;
 	logo_black?: IkasImage;
@@ -209,6 +217,8 @@ export type HeaderProps = {
 	cartProducts?: IkasProductList;
 	showLocalization?: boolean;
 	localization?: Localization;
+	isShowCustomCategory?: boolean;
+	customCategoryName?: string;
 };
 
 export type FooterProps = {
@@ -300,6 +310,9 @@ export type BottomScrollingTextProps = {
 };
 
 export type BannerTextsProps = {
+	webMarginValue?: string;
+	mobilMarginValue?: string;
+	bgColor?: string;
 	headerText?: string;
 	contentText?: string;
 	btnText?: string;
@@ -520,5 +533,16 @@ export type WelcomePopupProps = {
 	titleText?: string;
 	contentText?: string;
 	btnText?: string;
+};
+
+export type BannerNewPageDynamicProps = {
+	showFullPage?: boolean;
+	bannerSelection?: IkasComponentRenderer[];
+};
+
+export type BannerImageListProps = {
+	imageList?: ImageList[];
+	webGapValue?: IkasSlider;
+	mobilGapValue?: IkasSlider;
 };
 

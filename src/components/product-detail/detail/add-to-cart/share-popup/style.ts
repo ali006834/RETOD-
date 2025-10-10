@@ -68,7 +68,7 @@ export const PopupTitle = styled.h3`
   font-weight: 600;
   color: #111827;
   margin: 0;
-  font-family: "HelveticaNeueMedium", sans-serif;
+  font-family: "Helvetica", sans-serif;
 `;
 
 export const CloseButton = styled.button`
@@ -104,7 +104,7 @@ export const CopyLinkButton = styled.button`
   color: #374151;
   cursor: pointer;
   transition: all 0.2s ease;
-  font-family: "HelveticaNeueMedium", sans-serif;
+  font-family: "Helvetica", sans-serif;
 
   &:hover {
     background-color: #f3f4f6;
@@ -125,7 +125,7 @@ export const SocialMediaTitle = styled.h4`
   font-weight: 500;
   color: #6b7280;
   margin: 0 0 10px 0;
-  font-family: "HelveticaNeueMedium", sans-serif;
+  font-family: "Helvetica", sans-serif;
 `;
 
 export const SocialMediaButtons = styled.div`

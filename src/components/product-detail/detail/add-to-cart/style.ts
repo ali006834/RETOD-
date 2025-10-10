@@ -16,7 +16,7 @@ export const QuantityButtonWrapper = styled.div`
   padding: 4px;
   color: #333;
   overflow: hidden;
-  font-family: "HelveticaNeueMedium" !important;
+  font-family: "Helvetica" !important;
 `;
 
 const QUANTITY_BUTTON_WIDTH = 40; //px

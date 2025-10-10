@@ -26,7 +26,7 @@ export const Box = styled.button<Props>`
   background: #ffffff;
   border: 1px solid #dfe2e6;
   cursor: pointer;
-  font-family: "HelveticaNeueLight" !important;
+  font-family: "Helvetica" !important;
 
   ${({ $selected }) =>
     $selected &&

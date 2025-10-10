@@ -1,12 +1,20 @@
 import React from "react";
 import { observer } from "mobx-react-lite";
 import styles from "./style.module.css";
-import { BannerSingleProps } from "../__generated__/types";
+import { BannerTextsProps } from "../__generated__/types";
 import { Image, Link } from "@ikas/storefront";
 import { useScreen } from "src/utils/hooks/useScreen";
 
-const BannerSingle = (props: BannerSingleProps) => {
-  const { headerText, contentText, btnText, navigationLink } = props;
+const BannerTexts = (props: BannerTextsProps) => {
+  const {
+    webMarginValue,
+    mobilMarginValue,
+    headerText,
+    contentText,
+    btnText,
+    navigationLink,
+    bgColor,
+  } = props;
 
   const { isMobile } = useScreen();
 
@@ -15,7 +23,13 @@ const BannerSingle = (props: BannerSingleProps) => {
   }
 
   return (
-    <div className={styles.mainWrapper}>
+    <div
+      className={styles.mainWrapper}
+      style={{
+        backgroundColor: bgColor || "#f6f1eb",
+        margin: isMobile ? mobilMarginValue || "0px" : webMarginValue || "0px",
+      }}
+    >
       <div className={styles.wrapper}>
         <div className={styles.container}>
           <div className={styles.contentWrapper}>
@@ -37,4 +51,4 @@ const BannerSingle = (props: BannerSingleProps) => {
   );
 };
 
-export default observer(BannerSingle);
+export default observer(BannerTexts);

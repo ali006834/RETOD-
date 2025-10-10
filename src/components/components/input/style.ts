@@ -16,7 +16,7 @@ export const Prefix = styled.span`
   height: 100%;
   display: flex;
   align-items: center;
-  font-family: "HelveticaNeueLight" !important;
+  font-family: "Helvetica" !important;
 `;
 
 type StyledInputProps = {
@@ -31,7 +31,7 @@ export const Input = styled.input<StyledInputProps>`
   width: 100%;
   height: 38px;
   box-sizing: border-box;
-  font-family: "HelveticaNeueLight" !important;
+  font-family: "Helvetica" !important;
   ${({ $hasPrefix }) => {
     if ($hasPrefix) {
       return `padding: 0 8px 0 60px;`;

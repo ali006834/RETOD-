@@ -25,13 +25,13 @@ export const LabelWrapper = styled.div`
   font-weight: 300;
   font-size: 15px;
   line-height: 28px;
-  font-family: "HelveticaNeueLight" !important;
+  font-family: "Helvetica" !important;
 `;
 export const Help = styled.div<StyledStatusProp>`
   margin-top: 8px;
   font-weight: 300;
   line-height: 28px;
-  font-family: "HelveticaNeueLight" !important;
+  font-family: "Helvetica" !important;
   font-size: ${({ theme }) => theme.fontSize.sm};
   color: ${({ theme, $status }) => {
     if ($status === "error") {
