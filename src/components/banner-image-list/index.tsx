@@ -4,8 +4,10 @@ import styles from "./style.module.css";
 import { BannerImageListProps } from "../__generated__/types";
 import { Image, Link, IkasDisplayedVariantType } from "@ikas/storefront";
 import { useScreen } from "src/utils/hooks/useScreen";
+
 import PlusSVG from "../svg/plus";
 import PlusXSVG from "../svg/plusX";
+
 import { SelectOnChangeParamType } from "../components/select";
 import useAddToCartButton from "../product-detail/detail/add-to-cart/hooks/useAddToCartButton";
 
@@ -25,18 +27,24 @@ const BannerImageList = (props: BannerImageListProps) => {
       case 1:
         return {
           className: styles.gridOne,
-          size: { width: 2400, height: 1577 },
+          size: isMobile
+            ? { width: 1200, height: 1440 }
+            : { width: 2400, height: 1577 },
         };
       case 2:
         return {
           className: styles.gridTwo,
-          size: { width: 1200, height: 1440 },
+          size: isMobile
+            ? { width: 1200, height: 1440 }
+            : { width: 1200, height: 1440 },
         };
       case 3:
       default:
         return {
           className: styles.gridThree,
-          size: { width: 1200, height: 1440 },
+          size: isMobile
+            ? { width: 1200, height: 1440 }
+            : { width: 1200, height: 1440 },
         };
     }
   };
@@ -44,10 +52,20 @@ const BannerImageList = (props: BannerImageListProps) => {
   const { className, size } = getGridConfig();
 
   const toggleOverlay = (index: number) => {
-    setOpenStates((prev) => ({
-      ...prev,
-      [index]: !prev[index],
-    }));
+    setOpenStates((prev) => {
+      const isCurrentlyOpen = prev[index];
+
+      // Mobilde: Eğer açılacaksa, önce diğerlerini kapat
+      if (isMobile && !isCurrentlyOpen) {
+        return { [index]: true };
+      }
+
+      // Normal toggle işlemi
+      return {
+        ...prev,
+        [index]: !prev[index],
+      };
+    });
   };
 
   return (
@@ -101,43 +119,92 @@ const BannerImageList = (props: BannerImageListProps) => {
                   </Link>
 
                   {/* Ürün Bölümü */}
-                  {product && (
-                    <div
-                      className={`${styles.productOverlay} ${
-                        isOpen ? styles.productOverlayExpanded : ""
-                      }`}
-                    >
-                      <div className={styles.overlayHeader}>
-                        <h3 className={styles.productName}>
-                          {product.name.toLocaleUpperCase("tr-TR")}
-                        </h3>
-                        <p className={styles.productPrice}>
-                          {product.selectedVariant.price.formattedFinalPrice}
-                        </p>
-                        <div
-                          className={styles.toggleIcon}
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            toggleOverlay(index);
-                          }}
-                        >
-                          {isOpen ? <PlusXSVG /> : <PlusSVG />}
-                        </div>
-                      </div>
+                  {isMobile
+                    ? product && (
+                        <>
+                          {/* Plus Button - Bottom 20px */}
+                          <div
+                            className={`${styles.plusButtonMobile} ${
+                              isOpen ? styles.plusButtonMobileOpen : ""
+                            }`}
+                            onClick={(e) => {
+                              e.preventDefault();
+                              e.stopPropagation();
+                              toggleOverlay(index);
+                            }}
+                          >
+                            {isOpen ? <PlusXSVG /> : <PlusSVG />}
+                          </div>
 
-                      {isOpen && (
-                        <div className={styles.variantsContainer}>
-                          {product.displayedVariantTypes.map((dVT) => (
-                            <VariantType
-                              key={dVT.variantType.id}
-                              product={product}
-                              dVT={dVT}
-                            />
-                          ))}
+                          {/* Mobile Overlay */}
+                          {isOpen && (
+                            <div className={styles.productOverlayMobile}>
+                              <div className={styles.overlayHeaderMobile}>
+                                <h3 className={styles.productNameMobile}>
+                                  {product.name.toLocaleUpperCase("tr-TR")}
+                                </h3>
+                                <p className={styles.productPriceMobile}>
+                                  {
+                                    product.selectedVariant.price
+                                      .formattedFinalPrice
+                                  }
+                                </p>
+                              </div>
+
+                              {/* Varyantlar direkt görünecek */}
+                              <div className={styles.variantsContainerMobile}>
+                                {product.displayedVariantTypes.map((dVT) => (
+                                  <VariantType
+                                    key={dVT.variantType.id}
+                                    product={product}
+                                    dVT={dVT}
+                                  />
+                                ))}
+                              </div>
+                            </div>
+                          )}
+                        </>
+                      )
+                    : product && (
+                        <div
+                          className={`${styles.productOverlay} ${
+                            isOpen ? styles.productOverlayExpanded : ""
+                          }`}
+                        >
+                          <div className={styles.overlayHeader}>
+                            <h3 className={styles.productName}>
+                              {product.name.toLocaleUpperCase("tr-TR")}
+                            </h3>
+                            <p className={styles.productPrice}>
+                              {
+                                product.selectedVariant.price
+                                  .formattedFinalPrice
+                              }
+                            </p>
+                            <div
+                              className={styles.toggleIcon}
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                toggleOverlay(index);
+                              }}
+                            >
+                              {isOpen ? <PlusXSVG /> : <PlusSVG />}
+                            </div>
+                          </div>
+
+                          {isOpen && (
+                            <div className={styles.variantsContainer}>
+                              {product.displayedVariantTypes.map((dVT) => (
+                                <VariantType
+                                  key={dVT.variantType.id}
+                                  product={product}
+                                  dVT={dVT}
+                                />
+                              ))}
+                            </div>
+                          )}
                         </div>
                       )}
-                    </div>
-                  )}
                 </div>
               </div>
             );

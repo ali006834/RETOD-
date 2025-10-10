@@ -211,6 +211,8 @@ const Navigation = (
     setExpandedCategories,
     categoryHistory,
     setCategoryHistory,
+    isShowCustomCategory,
+    customCategoryName,
   } = props;
   if (!categoryMenu) {
     return null;
@@ -404,7 +406,23 @@ const Navigation = (
 
   return (
     <div className={styles.mobile_category_container}>
-      <ul>{renderCategories(null)}</ul>
+      <ul>
+        {/* Custom Category */}
+        {isShowCustomCategory && (
+          <li className={styles.top_category_wrapper}>
+            <div className={styles.top_category_content}>
+              <Link
+                href={`/pages/${customCategoryName?.toLocaleLowerCase(
+                  "tr-TR"
+                )}`}
+              >
+                <a>{customCategoryName?.toLocaleUpperCase("tr-TR")}</a>
+              </Link>
+            </div>
+          </li>
+        )}
+        {renderCategories(null)}
+      </ul>
     </div>
   );
 };
