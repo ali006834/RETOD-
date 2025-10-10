@@ -35,23 +35,14 @@ type DiscountBadgeProps = {
 };
 
 export const DiscountBadge = styled.div<DiscountBadgeProps>`
-  position: absolute;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-
-  @media screen and (max-width: ${breakpoints.md}) {
-    left: 10px;
-    top: 10px;
-    padding: 2px 4px;
-  }
-  top: 10px;
-  left: 10px;
-  padding: 1px 6px;
+  padding: 0.9rem 0.5rem;
   text-wrap: nowrap;
   font-family: "Helvetica" !important;
-  font-weight: 400;
+  font-weight: 500;
   ${({ $hasStock }) => {
     if ($hasStock) {
       return css`
@@ -64,16 +55,21 @@ export const DiscountBadge = styled.div<DiscountBadgeProps>`
       color: #fff;
     `;
   }};
-
   text-align: center;
+  flex-shrink: 0;
+  min-width: 50px;
+
+  @media only screen and (max-width: 768px)  {
+    padding: 0.6rem 0.3rem;
+  }
 `;
 export const DiscountBadgeDiscountRatio = styled.span`
   display: flex;
   align-items: center;
   gap: 4px;
-  font-size: 15px;
-  font-weight: 500;
-  line-height: 24px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
 `;
 
 
@@ -147,7 +143,7 @@ export const ProductTag = styled.div`
   font-family: "Helvetica" !important;
   font-weight: 300;
   line-height: 16px;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.01em;
   line-height: 1.5;
   transition: color 0.2s ease;
 

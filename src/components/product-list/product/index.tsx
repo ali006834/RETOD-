@@ -72,7 +72,6 @@ const Product = (props: Props) => {
           <a title={a11yTitle}>
             <S.ImageWrapper $hasStock={product.hasStock}>
               <ProductImage {...props} isWidthVideo={isWidthVideo} />
-              <DiscountBadge {...props} />
             </S.ImageWrapper>
           </a>
         </Link>
@@ -412,19 +411,24 @@ const Price = observer(({ product }: Props) => {
     <div className={styles.price_content}>
       {product.selectedVariant.price.hasDiscount ? (
         <>
-          <span className={styles.discCount}>
-            <del> {product.selectedVariant.price.formattedSellPrice}</del>
-          </span>
-          <span className={styles.price}>
-            {product.selectedVariant.price.formattedFinalPrice}
-          </span>
+          <DiscountBadge product={product} />
+          <div className={styles.price_stack}>
+            <span className={styles.discCount}>
+              <del> {product.selectedVariant.price.formattedSellPrice}</del>
+            </span>
+            <span className={styles.price}>
+              {product.selectedVariant.price.formattedFinalPrice}
+            </span>
+          </div>
         </>
       ) : (
-        <span className={styles.no_discCount}>
-          <span className={styles.no_discCount_price}>
-            {product.selectedVariant.price.formattedFinalPrice}
+        <div className={styles.price_stack}>
+          <span className={styles.no_discCount}>
+            <span className={styles.no_discCount_price}>
+              {product.selectedVariant.price.formattedFinalPrice}
+            </span>
           </span>
-        </span>
+        </div>
       )}
     </div>
   );
@@ -434,7 +438,7 @@ const ProductTitle = observer(({ product }: Props) => (
   <div className={styles.product_title}>
     <span>{product?.brand?.name}</span>
     <Link href={product.href}>
-      <a>
+      <a title={product.name.toLocaleUpperCase("tr-TR")}>
         <h2>{product.name.toLocaleUpperCase("tr-TR")}</h2>
       </a>
     </Link>
