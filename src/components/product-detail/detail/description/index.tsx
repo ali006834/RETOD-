@@ -13,6 +13,16 @@ export const Description = (
   const { t } = useTranslation();
   if (!props?.product?.description) return null;
 
+  // Her kelimenin ilk harfini büyük yapan fonksiyon
+  const capitalizeText = (text: string | null | undefined) => {
+    if (!text) return "";
+    return text
+      .toLocaleLowerCase("tr-TR")
+      .split(" ")
+      .map((word) => word.charAt(0).toLocaleUpperCase("tr-TR") + word.slice(1))
+      .join(" ");
+  };
+
   return (
     <S.DescriptionWrapperTop>
       <FiltersSvgWrapper
@@ -36,8 +46,8 @@ export const Description = (
                 <ul>
                   {props.product.attributes.map((attr, index) => (
                     <li key={index}>
-                      <strong>{attr?.productAttribute?.name}</strong>:{" "}
-                      {attr?.value}
+                      {/* <strong>{attr?.productAttribute?.name}</strong>:{" "} */}
+                      {capitalizeText(attr?.value)}
                     </li>
                   ))}
                 </ul>
