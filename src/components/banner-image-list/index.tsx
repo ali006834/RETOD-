@@ -13,7 +13,7 @@ import useAddToCartButton from "../product-detail/detail/add-to-cart/hooks/useAd
 
 const BannerImageList = (props: BannerImageListProps) => {
   const { imageList, mobilGapValue, webGapValue } = props;
-  const { isMobile } = useScreen();
+  const { isMobile, isTablet } = useScreen();
   const [openStates, setOpenStates] = useState<{ [key: number]: boolean }>({});
 
   if (!imageList || imageList.length === 0) {
@@ -55,8 +55,8 @@ const BannerImageList = (props: BannerImageListProps) => {
     setOpenStates((prev) => {
       const isCurrentlyOpen = prev[index];
 
-      // Mobilde: Eğer açılacaksa, önce diğerlerini kapat
-      if (isMobile && !isCurrentlyOpen) {
+      // Mobil ve Tablet'te: Eğer açılacaksa, önce diğerlerini kapat
+      if ((isMobile || isTablet) && !isCurrentlyOpen) {
         return { [index]: true };
       }
 
@@ -82,13 +82,17 @@ const BannerImageList = (props: BannerImageListProps) => {
           }}
         >
           {imageList.map((item, index) => {
-            const currentImage = isMobile ? item?.imageMobil : item?.imageWeb;
+            const product = item?.relatedProduct?.data?.[0];
+            const fallbackImage = product?.variants?.[0]?.images?.[0]?.image;
+
+            const currentImage = isMobile
+              ? item?.imageMobil || fallbackImage
+              : item?.imageWeb || fallbackImage;
 
             if (!currentImage) {
               return null;
             }
 
-            const product = item?.relatedProduct?.data?.[0];
             const isOpen = openStates[index] || false;
 
             return (
@@ -96,30 +100,19 @@ const BannerImageList = (props: BannerImageListProps) => {
                 <div className={styles.bannerWrapper}>
                   <Link href={product?.href || ""}>
                     <a rel="noopener noreferrer">
-                      {isMobile && item?.imageMobil ? (
-                        <Image
-                          width={size.width}
-                          height={size.height}
-                          image={item?.imageMobil}
-                          alt={item?.imageMobil?.altText || ""}
-                          useBlur={true}
-                          className={styles.bannerImage}
-                        />
-                      ) : item.imageWeb ? (
-                        <Image
-                          width={size.width}
-                          height={size.height}
-                          alt={item?.imageWeb?.altText || ""}
-                          image={item?.imageWeb}
-                          useBlur={true}
-                          className={styles.bannerImage}
-                        />
-                      ) : null}
+                      <Image
+                        width={size.width}
+                        height={size.height}
+                        image={currentImage}
+                        alt={currentImage?.altText || product?.name || ""}
+                        useBlur={true}
+                        className={styles.bannerImage}
+                      />
                     </a>
                   </Link>
 
                   {/* Ürün Bölümü */}
-                  {isMobile
+                  {isMobile || isTablet
                     ? product && (
                         <>
                           {/* Plus Button - Bottom 20px */}
@@ -136,7 +129,7 @@ const BannerImageList = (props: BannerImageListProps) => {
                             {isOpen ? <PlusXSVG /> : <PlusSVG />}
                           </div>
 
-                          {/* Mobile Overlay */}
+                          {/* Mobile/Tablet Overlay */}
                           {isOpen && (
                             <div className={styles.productOverlayMobile}>
                               <div className={styles.overlayHeaderMobile}>

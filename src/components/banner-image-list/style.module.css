@@ -71,11 +71,14 @@
 }
 
 .productOverlayExpanded {
-  height: 30%;
+  height: 35%;
 }
 
-.bannerWrapper:hover .productOverlay {
-  transform: translateY(0);
+/* Sadece desktop'ta hover çalışsın (1024px üzeri) */
+@media (min-width: 1024px) {
+  .bannerWrapper:hover .productOverlay {
+    transform: translateY(0);
+  }
 }
 
 .overlayHeader {
@@ -90,11 +93,16 @@
 
 .productName {
   font-size: 24px;
-  font-weight: 300;
+  font-weight: 200;
   color: #000;
   margin: 0;
   line-height: 1.4;
   text-align: center;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
 }
 
 .productPrice {
@@ -132,7 +140,7 @@
 
 .variantTypeName {
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 200;
   color: #000;
   text-align: center;
 }
@@ -194,14 +202,28 @@
   text-decoration: line-through;
 }
 
-/* Tablet için responsive */
-@media (min-width: 768px) and (max-width: 1024px) {
+/* Tablet için responsive - Toggle mekanizması aktif */
+@media (min-width: 768px) and (max-width: 1023px) {
   .gridThree {
     grid-template-columns: repeat(2, 1fr);
   }
 
   .bannerGrid {
     gap: 15px;
+  }
+
+  /* Tablet'te de mobil gibi toggle kullan */
+  .plusButtonMobile {
+    width: 50px;
+    height: 50px;
+  }
+
+  .plusButtonMobileOpen {
+    bottom: 280px;
+  }
+
+  .productOverlayMobile {
+    max-height: 60%;
   }
 }
 
@@ -290,6 +312,18 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
+}
+
+@media (min-width: 1024px) and (max-width: 1600px) {
+  .productOverlay {
+    height: 20%;
+    padding: 20px;
+    gap: 8px;
+  }
+
+  .productOverlayExpanded {
+    height: 45%;
+  }
 }
 
 /* Mobile için responsive */
