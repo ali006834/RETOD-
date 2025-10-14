@@ -163,6 +163,15 @@ const BannerImageList = (props: BannerImageListProps) => {
                           className={`${styles.productOverlay} ${
                             isOpen ? styles.productOverlayExpanded : ""
                           }`}
+                          style={{
+                            height: isOpen
+                              ? imageList.length === 3
+                                ? "45%"
+                                : undefined
+                              : imageList.length === 3
+                              ? "20%"
+                              : undefined,
+                          }}
                         >
                           <div className={styles.overlayHeader}>
                             <h3 className={styles.productName}>

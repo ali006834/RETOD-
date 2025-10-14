@@ -17578,6 +17578,29 @@
                           "recommendedProductType": "CATEGORY"
                         }
                       }
+                    },
+                    {
+                      "imageWeb": null,
+                      "imageMobil": null,
+                      "relatedProduct": {
+                        "id": "e86ace66-9f27-41d3-82d3-2a2a43a450a6",
+                        "productListType": "STATIC",
+                        "initialSort": "LAST_ADDED",
+                        "initialLimit": 20,
+                        "productCount": null,
+                        "productIds": [
+                          {
+                            "productId": "5dab44c4-f7ba-4be1-8da7-2903cb7e57b5",
+                            "variantId": "7c8ad198-faa4-4c8a-a876-a995ba83f910"
+                          }
+                        ],
+                        "category": null,
+                        "usePageFilter": null,
+                        "relatedProductsType": null,
+                        "recommendedProductsType": {
+                          "recommendedProductType": "CATEGORY"
+                        }
+                      }
                     }
                   ],
                   "webGapValue": {
