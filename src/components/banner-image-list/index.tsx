@@ -136,12 +136,49 @@ const BannerImageList = (props: BannerImageListProps) => {
                                 <h3 className={styles.productNameMobile}>
                                   {product.name.toLocaleUpperCase("tr-TR")}
                                 </h3>
-                                <p className={styles.productPriceMobile}>
-                                  {
-                                    product.selectedVariant.price
-                                      .formattedFinalPrice
-                                  }
-                                </p>
+                                <div className={styles.priceContentMobile}>
+                                  {product.selectedVariant.price.hasDiscount ? (
+                                    <>
+                                      <div
+                                        className={styles.discountBadgeMobile}
+                                      >
+                                        -
+                                        {
+                                          product.selectedVariant.price
+                                            .discountPercentage
+                                        }
+                                        %
+                                      </div>
+                                      <div className={styles.priceStackMobile}>
+                                        <span
+                                          className={styles.discCountMobile}
+                                        >
+                                          <del>
+                                            {
+                                              product.selectedVariant.price
+                                                .formattedSellPrice
+                                            }
+                                          </del>
+                                        </span>
+                                        <span
+                                          className={styles.productPriceMobile}
+                                        >
+                                          {
+                                            product.selectedVariant.price
+                                              .formattedFinalPrice
+                                          }
+                                        </span>
+                                      </div>
+                                    </>
+                                  ) : (
+                                    <span className={styles.productPriceMobile}>
+                                      {
+                                        product.selectedVariant.price
+                                          .formattedFinalPrice
+                                      }
+                                    </span>
+                                  )}
+                                </div>
                               </div>
 
                               {/* Varyantlar direkt görünecek */}
@@ -177,12 +214,43 @@ const BannerImageList = (props: BannerImageListProps) => {
                             <h3 className={styles.productName}>
                               {product.name.toLocaleUpperCase("tr-TR")}
                             </h3>
-                            <p className={styles.productPrice}>
-                              {
-                                product.selectedVariant.price
-                                  .formattedFinalPrice
-                              }
-                            </p>
+                            <div className={styles.priceContent}>
+                              {product.selectedVariant.price.hasDiscount ? (
+                                <>
+                                  <div className={styles.discountBadge}>
+                                    -
+                                    {
+                                      product.selectedVariant.price
+                                        .discountPercentage
+                                    }
+                                    %
+                                  </div>
+                                  <div className={styles.priceStack}>
+                                    <span className={styles.discCount}>
+                                      <del>
+                                        {
+                                          product.selectedVariant.price
+                                            .formattedSellPrice
+                                        }
+                                      </del>
+                                    </span>
+                                    <span className={styles.productPrice}>
+                                      {
+                                        product.selectedVariant.price
+                                          .formattedFinalPrice
+                                      }
+                                    </span>
+                                  </div>
+                                </>
+                              ) : (
+                                <span className={styles.productPrice}>
+                                  {
+                                    product.selectedVariant.price
+                                      .formattedFinalPrice
+                                  }
+                                </span>
+                              )}
+                            </div>
                             <div
                               className={styles.toggleIcon}
                               onClick={(e) => {

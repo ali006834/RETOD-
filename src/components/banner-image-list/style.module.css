@@ -92,7 +92,7 @@
 }
 
 .productName {
-  font-size: 24px;
+  font-size: 1rem;
   font-weight: 200;
   color: #000;
   margin: 0;
@@ -105,11 +105,44 @@
   max-width: 100%;
 }
 
+.priceContent {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+}
+
+.priceStack {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.discCount del {
+  color: #333;
+  font-size: 12px;
+  line-height: 20px;
+}
+
 .productPrice {
-  font-size: 24px;
-  font-weight: 400;
+  font-size: 1rem;
+  font-weight: 300;
   color: #000;
   margin: 0;
+}
+
+.discountBadge {
+  background-color: #9f0000;
+  color: #fff;
+  padding: 0.7rem 0.3rem;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Helvetica" !important;
+  min-width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .toggleIcon {
@@ -293,19 +326,52 @@
 }
 
 .productNameMobile {
-  font-size: 18px;
-  font-weight: 300;
+  font-size: 13px;
+  font-weight: 200;
   color: #000;
   margin: 0;
   text-align: center;
   line-height: 1.4;
 }
 
+.priceContentMobile {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+}
+
+.priceStackMobile {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.discCountMobile del {
+  color: #333;
+  font-size: 11px;
+  line-height: 16px;
+}
+
 .productPriceMobile {
-  font-size: 20px;
-  font-weight: 400;
+  font-size: 0.9rem;
+  font-weight: 300;
   color: #000;
   margin: 0;
+}
+
+.discountBadgeMobile {
+  background-color: #9f0000;
+  color: #fff;
+  padding: 0.6rem 0.2rem;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Helvetica" !important;
+  min-width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .variantsContainerMobile {

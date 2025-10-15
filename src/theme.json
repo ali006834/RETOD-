@@ -14,7 +14,7 @@
       "componentJson": null,
       "props": [
         {
-          "id": "6a9b0917-e861-40bb-9b39-4e2febc317d0",
+          "id": "2be0158c-29d2-4a6d-9a20-6d55715708cc",
           "name": "logo",
           "displayName": "",
           "description": "",
@@ -28,7 +28,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "9f0853ed-e6aa-40af-8efa-9996fdf2cbf3",
+          "id": "81548af6-012e-4554-8e4d-0f3114383f59",
           "name": "showTax",
           "displayName": "",
           "description": "",
@@ -42,7 +42,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "fdef5002-06eb-4d20-8314-b5a628795722",
+          "id": "ac2699b5-1233-42da-98e8-f8f20930bb0c",
           "name": "showCampaignOffersDesign",
           "displayName": "",
           "description": "",
@@ -56,7 +56,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "0ae95b3c-f4fd-4b2d-986e-5d68c0b6dcfc",
+          "id": "ca2978f4-c5ff-4969-b96b-bad1dae2f355",
           "name": "campaignOfferIsSmallDesign",
           "displayName": "",
           "description": "",
@@ -70,7 +70,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "f2cdafab-3d82-4f48-abaf-c0123c39bd46",
+          "id": "6b3889ee-20d2-4682-8082-fdc661ed2132",
           "name": "showCampaignIsBiggerImage",
           "displayName": "",
           "description": "",
@@ -84,7 +84,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "74a6bfa8-7c9e-4888-93ca-5e942cbfa102",
+          "id": "8398aab7-5e6a-4d40-8a0b-4f67f68da871",
           "name": "campaignOffersTitleColor",
           "displayName": "",
           "description": "",
@@ -98,7 +98,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "76716183-e236-495b-b430-4e5d49b303f9",
+          "id": "2f4737b7-66d8-4f7e-b15b-361df3a6c35b",
           "name": "campaignOffersDescriptionColor",
           "displayName": "",
           "description": "",
@@ -112,7 +112,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "71db2a7a-7b52-4b2b-920d-ef0cdb98890d",
+          "id": "a07cab51-7c6d-40c2-9b0c-8be1d1cddbfe",
           "name": "campaignOffersContainerBgColor",
           "displayName": "",
           "description": "",
@@ -126,7 +126,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "e55bedca-5953-436b-8ad5-90e78188dc9f",
+          "id": "fdb2582a-bd1d-4a33-98b7-eea97c142ffb",
           "name": "showCampaignShowDiscountSettings",
           "displayName": "",
           "description": "",
@@ -140,7 +140,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "5595294c-7d69-4c4b-8441-99a13d47ea63",
+          "id": "b28ebaa8-4d19-44b6-85fd-7195718c1c52",
           "name": "showCampaignHideDiscountBadge",
           "displayName": "",
           "description": "",
@@ -154,7 +154,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "c2cd67bd-72e9-40fa-ab0a-d0c1c298059e",
+          "id": "250def6f-99d4-45d9-acfd-f1743f774b0a",
           "name": "campaignOffersDiscountPercentageColor",
           "displayName": "",
           "description": "",
@@ -168,7 +168,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "ccfb8fa4-f741-4d94-94d9-7a69dd9f3d01",
+          "id": "b90a7422-d6f2-432b-8c7f-c595a377969a",
           "name": "campaignOffersDiscountPercentageBgColor",
           "displayName": "",
           "description": "",
@@ -182,7 +182,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "ddd408f4-c918-4006-b8b0-3e5ce1ce5922",
+          "id": "43a4be50-eb37-43b3-950f-ca5e261f9e5e",
           "name": "showCampaignShowCountdownSettings",
           "displayName": "",
           "description": "",
@@ -196,7 +196,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "0307b57d-39a3-40d3-9987-7e893577269a",
+          "id": "3f4b5a4b-8146-4d2c-98a3-66122d51d71a",
           "name": "campaignOfferCountdownStyleIsLine",
           "displayName": "",
           "description": "",
@@ -210,7 +210,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "cc9d38f8-8515-479d-b5f3-1a941b15717f",
+          "id": "065ffb19-9bfc-457f-8df2-a26108983369",
           "name": "campaignOffersCountdownTextColor",
           "displayName": "",
           "description": "",
@@ -224,7 +224,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "c4ab664d-7cc2-48c4-9aeb-c9722dde143f",
+          "id": "db5bfae2-0c8d-450e-a5ac-fac14e939041",
           "name": "campaignOffersCountdownTimeColor",
           "displayName": "",
           "description": "",
@@ -238,7 +238,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "ca09e872-fa51-4cf0-94f5-4d36a542386e",
+          "id": "7cfe2362-dd12-49c7-bf90-11b6f77e5ceb",
           "name": "campaignOffersCountdownBgColor",
           "displayName": "",
           "description": "",
@@ -252,7 +252,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "60d3dce7-7bf4-407b-baec-15fc78638cf7",
+          "id": "ab45a389-8c24-42ef-ba5c-cb6f076a6477",
           "name": "campaignOffersEnableMiddlePhase",
           "displayName": "",
           "description": "",
@@ -266,7 +266,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "6cad56f0-25a1-4bb8-956d-d66f533851dc",
+          "id": "93977ce6-3e9b-4f08-b5dd-051b9d422562",
           "name": "campaignOffersMiddlePhaseOverlayColor",
           "displayName": "",
           "description": "",
@@ -280,7 +280,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "b2c47a57-b7ba-43dd-961f-a54e070129f8",
+          "id": "4500a419-80dd-4de7-852a-ab8d12e4a017",
           "name": "campaignOfferCountdownStyleIsLineSuccessPage",
           "displayName": "",
           "description": "",
@@ -294,7 +294,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "99370d6b-f7a3-408f-a7a2-f8a8820280cc",
+          "id": "fc4cfc58-ea55-4099-a846-f6df22fa0e41",
           "name": "buttonBgColor",
           "displayName": "",
           "description": "",
@@ -308,7 +308,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "78ce1993-1f94-4cb9-bbf9-eea9ef05060c",
+          "id": "649aad9e-f492-4e30-aa74-5e415c95ba3b",
           "name": "buttonTextColor",
           "displayName": "",
           "description": "",
@@ -322,7 +322,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "68d203d9-a819-4b86-8d4d-9851bdf72c6c",
+          "id": "9cd18176-569e-441f-8790-730fe5943c21",
           "name": "buttonDisabledBgColor",
           "displayName": "",
           "description": "",
@@ -336,7 +336,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "8f47049f-8272-4dc8-b9eb-93e86db33215",
+          "id": "6d05c394-5cbd-470e-a9e6-4ba338928916",
           "name": "buttonDisabledTextColor",
           "displayName": "",
           "description": "",
@@ -350,7 +350,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "d099f3e6-db3f-44ba-86f5-08fcb0fb8c87",
+          "id": "b398f69e-e643-4366-b36a-692b165c006d",
           "name": "primaryTextColor",
           "displayName": "",
           "description": "",
@@ -364,7 +364,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "b50a5761-6a74-4d5b-bfa3-8b19e0bd9bd3",
+          "id": "f03e2b45-18ae-48ab-bff4-ec34ee6784ee",
           "name": "secondaryTextColor",
           "displayName": "",
           "description": "",
@@ -378,7 +378,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "db4850ba-5c3d-40b4-b7bb-e8e7fa413bed",
+          "id": "2dc60f44-41a4-429d-b887-d1f18369a1f2",
           "name": "primaryBgColor",
           "displayName": "",
           "description": "",
@@ -392,7 +392,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "3faedfb1-ac3e-4a42-95c9-67e987054e4b",
+          "id": "be25d332-a596-45d9-addf-b3f659354cbe",
           "name": "secondaryBgColor",
           "displayName": "",
           "description": "",
@@ -406,7 +406,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "1ed5d8f2-5b8b-4bd8-afe3-a01f73d6efe7",
+          "id": "b24e7848-d88b-4257-aeef-a880c0987ece",
           "name": "borderColor",
           "displayName": "",
           "description": "",
@@ -420,7 +420,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "f5b6f999-aefe-49a9-882d-b42d39abfc68",
+          "id": "ece89bb1-2a4b-42ba-a4e5-41ad95492e78",
           "name": "cardBgColor",
           "displayName": "",
           "description": "",
@@ -434,7 +434,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "850f172d-2e78-4df9-8956-83efa1e4c552",
+          "id": "9019eb1f-c786-49f0-84be-48d7a1f7d0bc",
           "name": "errorColor",
           "displayName": "",
           "description": "",
@@ -448,7 +448,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "25a0f272-1e1c-42e8-a96c-81b9cb2df6c0",
+          "id": "76dd3717-9fbc-43df-8fdc-b4b17f4bbb7c",
           "name": "errorLightColor",
           "displayName": "",
           "description": "",
@@ -462,7 +462,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "6fd878c7-f291-4ac0-a29f-0b2b40c5621b",
+          "id": "9205892a-aa01-4a9b-b766-8e1cf9bae2bc",
           "name": "warningColor",
           "displayName": "",
           "description": "",
@@ -476,7 +476,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "6054a597-0cce-4828-9b65-94f2dce519a5",
+          "id": "3c562c36-73ca-47ac-800e-462d06ef8d26",
           "name": "warningLightColor",
           "displayName": "",
           "description": "",
@@ -490,7 +490,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "75b7063b-ab00-4aa9-a801-5faf41774671",
+          "id": "6b1cfd3d-16ee-48f3-bdd7-b774870cdd2d",
           "name": "successColor",
           "displayName": "",
           "description": "",
@@ -504,7 +504,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "94ac05ac-8089-4664-aff7-e523db8c5b51",
+          "id": "42573691-a757-4b47-bf5c-b511e44d2848",
           "name": "successLightColor",
           "displayName": "",
           "description": "",
@@ -518,7 +518,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "6e2871ec-b49d-4b1d-9040-ccff44ab4272",
+          "id": "e2e7ca08-bdce-450f-98a4-5ad8f0b33d09",
           "name": "secondaryButtonBgColor",
           "displayName": "",
           "description": "",
@@ -532,7 +532,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "c7b03513-4e28-4a78-9eab-0297e17a1c26",
+          "id": "647d6477-bf7d-4c66-9426-4cfe367c35dd",
           "name": "secondaryButtonTextColor",
           "displayName": "",
           "description": "",
@@ -546,7 +546,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "a22fa431-fdb5-4070-a3ec-cb6d59a3c23f",
+          "id": "683cf4a1-d18d-4296-b2bb-d054a9437c5c",
           "name": "secondaryButtonBorderColor",
           "displayName": "",
           "description": "",
@@ -17471,7 +17471,10 @@
                 "propValues": {
                   "imageList": [
                     {
-                      "imageWeb": null,
+                      "imageWeb": {
+                        "id": "theme-images/c675ba68-e4f1-4d2b-9bc1-ff634a415dec",
+                        "altText": null
+                      },
                       "imageMobil": null,
                       "relatedProduct": {
                         "id": "697be261-8e73-4ab0-addf-3e053e558b1e",
@@ -17481,8 +17484,8 @@
                         "productCount": null,
                         "productIds": [
                           {
-                            "productId": "077e2153-d431-4a13-b1ca-52b368944bdf",
-                            "variantId": "50606df7-3939-46b0-bff5-31ff62c02f65"
+                            "productId": "eb81ceef-cde5-43db-abef-e757b27b24f7",
+                            "variantId": "bde7629b-4e57-4fc6-b317-1165a003f428"
                           }
                         ],
                         "category": null,
