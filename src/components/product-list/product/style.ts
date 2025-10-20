@@ -24,7 +24,6 @@ export const ImageWrapper = styled.figure<ImageWrapperProps>`
         left: 0;
         bottom: 0;
         right: 0;
-        background: rgba(34, 37, 42, 0.4);
       }
     `;
   }};
@@ -59,7 +58,7 @@ export const DiscountBadge = styled.div<DiscountBadgeProps>`
   flex-shrink: 0;
   min-width: 50px;
 
-  @media only screen and (max-width: 768px)  {
+  @media only screen and (max-width: 768px) {
     padding: 0.6rem 0.3rem;
   }
 `;
@@ -72,13 +71,6 @@ export const DiscountBadgeDiscountRatio = styled.span`
   line-height: 20px;
 `;
 
-
-export const DiscountBadgeSoldOut = styled.span`
-  display: block;
-  font-size: 12px;
-  line-height: 16px;
-  color: #fff;
-`;
 export const DiscountBadgeDiscountText = styled.span`
   display: block;
   font-size: 12px;

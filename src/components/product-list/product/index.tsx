@@ -71,6 +71,11 @@ const Product = (props: Props) => {
         <Link href={product.href}>
           <a title={a11yTitle}>
             <S.ImageWrapper $hasStock={product.hasStock}>
+              {!product.hasStock && (
+                <span className={styles.sold_out_text}>
+                  {a11yTitle.toLocaleUpperCase("tr-TR")}
+                </span>
+              )}
               <ProductImage {...props} isWidthVideo={isWidthVideo} />
             </S.ImageWrapper>
           </a>
@@ -455,18 +460,11 @@ const DiscountBadge = observer(({ product }: Props) => {
 
   return (
     <S.DiscountBadge $hasStock={product.hasStock}>
-      {!product.hasStock && (
-        <S.DiscountBadgeSoldOut>
-          {t("common:product.discountBadgeSoldOut")}
-        </S.DiscountBadgeSoldOut>
-      )}
-      {product.hasStock && (
-        <>
-          <S.DiscountBadgeDiscountRatio>
-            -{product.selectedVariant.price.discountPercentage}%
-          </S.DiscountBadgeDiscountRatio>
-        </>
-      )}
+      <>
+        <S.DiscountBadgeDiscountRatio>
+          -{product.selectedVariant.price.discountPercentage}%
+        </S.DiscountBadgeDiscountRatio>
+      </>
     </S.DiscountBadge>
   );
 });
