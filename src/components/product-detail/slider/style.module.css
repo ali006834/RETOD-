@@ -44,7 +44,7 @@
 
 .thumbs_swiper {
   width: 100px;
-  height: 600px;
+  height: 1200px;
   overflow: hidden;
   position: sticky;
   top: 0;
@@ -60,7 +60,7 @@
 }
 
 .thumbs_swiper :global(.swiper-slide) {
-  height: 90px;
+  height: 140px;
   display: flex;
   align-items: center;
   flex-shrink: 0;

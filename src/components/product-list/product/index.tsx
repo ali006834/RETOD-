@@ -347,8 +347,8 @@ const ProductImage = observer(({ product, isWidthVideo }: Props) => {
             return (
               <SwiperSlide key={`image-${index}`}>
                 <Image
-                  width="540px"
-                  height="810px"
+                  width="1080px"
+                  height="1620px"
                   objectFit="cover"
                   useBlur={true}
                   image={item.image!}

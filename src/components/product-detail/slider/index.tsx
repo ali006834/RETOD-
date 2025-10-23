@@ -135,13 +135,13 @@ const Slider = (props: ProductDetailProps) => {
               })}
             </div>
 
-            {/* Thumbnail Swiper - Sağ tarafta */}
+            {/*//+ Thumbnail Swiper - Sağ tarafta */}
             <div className={styles.thumbs_swiper}>
               <Swiper
                 modules={[Thumbs]}
                 onSwiper={setThumbsSwiper}
                 direction={isSmallScreen ? "horizontal" : "vertical"}
-                slidesPerView={isSmallScreen ? "auto" : 4}
+                slidesPerView={isSmallScreen ? "auto" : "auto"}
                 spaceBetween={10}
                 watchSlidesProgress={true}
                 freeMode={false}

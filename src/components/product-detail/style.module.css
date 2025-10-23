@@ -9,8 +9,8 @@
 }
 .product_detail {
   display: grid;
-  grid-template-columns: 1.3fr 1.3fr 0.3rem;
-  gap: 8rem !important;
+  grid-template-columns: 1.5fr 1.3fr 0.3rem;
+  gap: 5rem !important;
 }
 .product_slider {
   width: 100%;
