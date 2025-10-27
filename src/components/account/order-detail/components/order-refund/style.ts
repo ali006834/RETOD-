@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Header = styled.header`
   font-weight: 500;
   margin-bottom: 40px;
+  font-family: "Helvetica" !important;
 `;
 
 export const ButtonWrapper = styled.div<{ $isSticky: boolean }>`
@@ -10,9 +11,12 @@ export const ButtonWrapper = styled.div<{ $isSticky: boolean }>`
   bottom: 10px;
   display: flex;
   justify-content: center;
+  font-family: "Helvetica" !important;
 `;
 
 export const RefundSuccess = styled.p`
+  font-family: "Helvetica" !important;
+
   margin-top: 50px;
   margin-bottom: 50px;
   font-size: 24px;

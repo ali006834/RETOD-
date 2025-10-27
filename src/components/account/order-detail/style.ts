@@ -5,6 +5,7 @@ export const Main = styled.main`
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
   row-gap: 64px;
+  font-family: "Helvetica" !important;
 
   @media screen and (min-width: ${breakpoints.lg}) {
     gap: 64px;

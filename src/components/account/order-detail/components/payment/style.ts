@@ -8,10 +8,12 @@ export const Payment = styled.div`
 export const Title = styled.div`
   font-weight: 500;
   margin-bottom: 8px;
+  font-family: "Helvetica" !important;
 `;
 
 export const Text = styled.div`
   font-size: ${({ theme }) => theme.fontSize.sm};
+  font-family: "Helvetica" !important;
 `;
 
 export const OrderTransaction = styled.div`

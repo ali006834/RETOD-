@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   display: flex;
-
+  font-family: "Helvetica" !important;
   @media screen and (max-width: ${breakpoints.sm}) {
     display: block;
   }

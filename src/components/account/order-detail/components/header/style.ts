@@ -7,6 +7,7 @@ export const Header = styled.header`
   border-bottom: 1px solid #000;
   padding-bottom: 16px;
   margin-bottom: 12px;
+  font-family: "Helvetica" !important;
 `;
 
 export const OrderNoDetail = styled.div`

@@ -7,6 +7,7 @@ export const InnerWrapper = styled.section`
   gap: 100px;
   margin-top: 40px;
   margin-bottom: 80px;
+  font-family: "Helvetica" !important;
 
   @media screen and (max-width: ${breakpoints.lg}) {
     grid-template-columns: repeat(1, minmax(0, 1fr));
