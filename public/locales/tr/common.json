@@ -219,6 +219,13 @@
     }
   },
 
+  "productDetail": {
+    "description": {
+      "showMore": "Daha Fazlasını Gör",
+      "showLess": "Daha Azını Gör"
+    }
+  },
+
   "login": "Giriş yap",
   "register": "Kayıt ol",
   "language_title": "Hangi dili kullanmak istiyorsun?",

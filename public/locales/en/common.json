@@ -222,6 +222,14 @@
       "noAccountText": "Not have an account?"
     }
   },
+
+  "productDetail": {
+    "description": {
+      "showMore": "Show More",
+      "showLess": "Show Less"
+    }
+  },
+
   "login": "Login",
   "register": "Register",
   "language_title": "Which language do you want to use?",

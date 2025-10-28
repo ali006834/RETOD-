@@ -106,13 +106,23 @@ export const DescriptionTitle = styled.p`
   margin-bottom: 20px;
   font-family: "Helvetica" !important;
 `;
-export const Description = styled.div`
+export const Description = styled.div<{ $isExpanded: boolean }>`
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 28px;
   font-family: "Helvetica" !important;
   text-align: justify !important;
+
+  ${({ $isExpanded }) =>
+    !$isExpanded &&
+    `
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  `}
+
   span {
     font-family: "Helvetica" !important;
     font-weight: 400;
@@ -131,14 +141,14 @@ export const Description = styled.div`
 `;
 
 export const ProductAttributesWrapper = styled.div`
-  margin-top: 16px;
-  padding: 8px 16px;  
-  
+  margin-top: 4px;
+  padding: 4px 8px;
+
   ul {
     margin: 0;
     padding: 0;
   }
-  
+
   li {
     margin-bottom: 8px;
     font-style: normal;
@@ -151,7 +161,7 @@ export const ProductAttributesWrapper = styled.div`
     &:last-child {
       margin-bottom: 0;
     }
-    
+
     strong {
       color: #222;
       font-weight: 400;
@@ -228,5 +238,26 @@ export const SocialMediaIcon = styled.a`
   svg {
     width: 14px;
     height: 14px;
+  }
+`;
+
+export const ShowMoreButton = styled.button`
+  background: none;
+  border: none;
+  color: #000;
+  font-family: "Helvetica" !important;
+  font-size: 12px;
+  font-weight: 300;
+  cursor: pointer;
+  // text-decoration: underline;
+  margin-top: 4px;
+  padding: 0;
+
+  background-color: #222;
+  color: #fff;
+  padding: 4px 8px;
+
+  &:hover {
+    opacity: 0.7;
   }
 `;

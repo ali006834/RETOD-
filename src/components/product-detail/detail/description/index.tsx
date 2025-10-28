@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { ProductDetailProps } from "src/components/__generated__/types";
 import { IkasProductFilterSortType, useTranslation } from "@ikas/storefront";
@@ -11,6 +11,8 @@ export const Description = (
   props: ProductDetailProps & { isOpen: boolean; onToggle: () => void }
 ) => {
   const { t } = useTranslation();
+  const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false);
+
   if (!props?.product?.description) return null;
 
   // Her kelimenin ilk harfini büyük yapan fonksiyon
@@ -38,6 +40,7 @@ export const Description = (
       >
         <S.DescriptionWrapper>
           <S.Description
+            $isExpanded={isDescriptionExpanded}
             dangerouslySetInnerHTML={{ __html: props.product.description }}
           />
           <S.ProductAttributesWrapper>
@@ -52,7 +55,14 @@ export const Description = (
                   ))}
                 </ul>
               )}
-          </S.ProductAttributesWrapper>{" "}
+          </S.ProductAttributesWrapper>
+          <S.ShowMoreButton
+            onClick={() => setIsDescriptionExpanded(!isDescriptionExpanded)}
+          >
+            {isDescriptionExpanded
+              ? t("common:productDetail.description.showLess")
+              : t("common:productDetail.description.showMore")}
+          </S.ShowMoreButton>
         </S.DescriptionWrapper>
       </FiltersSvgWrapper>
     </S.DescriptionWrapperTop>
