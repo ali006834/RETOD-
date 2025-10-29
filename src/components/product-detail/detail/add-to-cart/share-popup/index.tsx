@@ -4,6 +4,7 @@ import { IkasProduct, useTranslation } from "@ikas/storefront";
 import FacebookSVG from "src/components/svg/facebook";
 import WhatsAppSVG from "src/components/svg/whatsapp";
 import TwitterSVG from "src/components/svg/twitter";
+import InstagramSVG from "src/components/svg/instagram";
 import EmailSVG from "src/components/svg/email";
 
 import * as S from "./style";
@@ -51,6 +52,13 @@ export const SharePopup: React.FC<SharePopupProps> = ({
     window.open(url, "_blank");
   };
 
+  const handleInstagramShare = () => {
+    // Instagram doesn't have a direct web share URL, so we copy the link
+    handleCopyLink();
+    // Optionally open Instagram in a new tab
+    window.open("https://www.instagram.com/", "_blank");
+  };
+
   const handleTwitterShare = () => {
     const text = `${productTitle}`;
     const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
@@ -92,12 +100,19 @@ export const SharePopup: React.FC<SharePopupProps> = ({
               <S.SocialButton onClick={handleFacebookShare}>
                 <FacebookSVG />
               </S.SocialButton>
+
               <S.SocialButton onClick={handleWhatsAppShare}>
                 <WhatsAppSVG />
               </S.SocialButton>
+
+              <S.SocialButton onClick={handleInstagramShare}>
+                <InstagramSVG />
+              </S.SocialButton>
+
               <S.SocialButton onClick={handleTwitterShare}>
                 <TwitterSVG />
               </S.SocialButton>
+
               <S.SocialButton onClick={handleEmailShare}>
                 <EmailSVG />
               </S.SocialButton>

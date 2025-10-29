@@ -42,6 +42,7 @@ const Refund = (
         <div onClick={handleLinkClick} className={styles.contentHtml}>
           <S.DescriptionWrapper>
             <S.Description
+              $isExpanded={true}
               dangerouslySetInnerHTML={{
                 __html: deliveryDescription || "",
               }}

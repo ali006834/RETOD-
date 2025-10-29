@@ -26,7 +26,7 @@ const Taksit = (props: {
         onClickExpandButton={props.onToggle}
       >
         <S.DescriptionWrapper>
-          <S.Description>
+          <S.Description $isExpanded={true}>
             <BankTable product={product} />
           </S.Description>
         </S.DescriptionWrapper>

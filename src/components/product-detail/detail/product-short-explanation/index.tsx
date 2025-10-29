@@ -5,7 +5,8 @@ import { IkasProductFilterSortType, useTranslation } from "@ikas/storefront";
 import { FiltersSvgWrapper } from "src/components/product-list/filter/components/filters-svg-wrapper";
 import Shirt from "./svg/shirt.svg";
 
-import * as S from "./style";
+import * as S from "../style";
+import * as LocalS from "./style";
 
 export const ProductShortExplanation = (props: ProductDetailProps) => {
   const { t } = useTranslation();
@@ -20,13 +21,14 @@ export const ProductShortExplanation = (props: ProductDetailProps) => {
 
   return (
     <S.DescriptionWrapperTop>
-      <S.DescriptionWrapperShortExplanation>
+      <LocalS.DescriptionWrapperShortExplanation>
         <S.Description
+          $isExpanded={true}
           dangerouslySetInnerHTML={{
             __html: shortDescriptionHTML || "",
           }}
         />
-      </S.DescriptionWrapperShortExplanation>
+      </LocalS.DescriptionWrapperShortExplanation>
     </S.DescriptionWrapperTop>
   );
 };

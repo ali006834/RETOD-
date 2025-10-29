@@ -1,3 +1,5 @@
+import * as S from "./style";
+
 import React, { useState } from "react";
 import { IkasProduct } from "@ikas/storefront";
 import { observer } from "mobx-react-lite";
@@ -18,7 +20,6 @@ import { useTranslation } from "@ikas/storefront";
 import { Loading } from "src/components/components/button";
 import SharePopup from "./share-popup";
 
-import * as S from "./style";
 import product from "src/components/product-list/product";
 
 export const AddToCart = observer((props: ProductDetailProps) => {
