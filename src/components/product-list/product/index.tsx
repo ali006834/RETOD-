@@ -7,6 +7,7 @@ import {
   Image,
   Link,
   useTranslation,
+  formatCurrency,
 } from "@ikas/storefront";
 
 import * as S from "./style";
@@ -411,12 +412,72 @@ const ProductTag = observer(({ product }: Props) => {
   }
 });
 
+// Bu item'a uygulanan kampanyaları bul (sadece adları)
 const Price = observer(({ product }: Props) => {
+  // Kampanya kontrolü - "Sepette %20 İndirim" gibi kampanyaları bul
+  const activeCampaign = product?.campaigns?.find((campaignItem) => {
+    const campaign = campaignItem?.campaign;
+    if (!campaign) return false;
+
+    // Kampanya adında "Sepette" kelimesi geçiyor mu kontrol et
+    const campaignTitle = campaign.title || "";
+    if (!campaignTitle.toLowerCase().includes("sepette")) {
+      return false;
+    }
+
+    const variantIds = campaignItem?.variantIds || [];
+    const selectedVariantId = product.selectedVariant?.id;
+
+    // Eğer variantIds boşsa veya seçili variant ID'si içeriyorsa kampanya geçerli
+    // Proxy array için Array.from kullan veya direkt kontrol et
+    const variantIdsArray = Array.isArray(variantIds)
+      ? Array.from(variantIds)
+      : [];
+
+    return (
+      variantIdsArray.length === 0 ||
+      variantIdsArray.some((id: string) => id === selectedVariantId)
+    );
+  });
+
+  // Sepetteki fiyatı hesapla (kampanya varsa)
+  const getCartPrice = () => {
+    if (!activeCampaign?.campaign) {
+      return null;
+    }
+
+    const campaign = activeCampaign.campaign;
+    const fixedDiscount = campaign.fixedDiscount;
+
+    // Sabit indirim miktarı yoksa null döndür
+    if (!fixedDiscount?.amount) {
+      return null;
+    }
+
+    // formattedFinalPrice üzerinden yüzde indirim uygula
+    const currentPrice = parseFloat(
+      product.selectedVariant.price.formattedFinalPrice.replace(/[^\d.-]/g, "")
+    );
+
+    // fixedDiscount.amount yüzde olarak kullanılacak (örneğin 30 = %30)
+    const discountPercentage = fixedDiscount.amount;
+    const cartPrice = Math.max(
+      0,
+      currentPrice * (1 - discountPercentage / 100)
+    );
+
+    const currency = product.selectedVariant.price.currency || "";
+    const currencySymbol = product.selectedVariant.price.currencySymbol || "₺";
+
+    return formatCurrency(cartPrice, currency, currencySymbol);
+  };
+
+  const cartPrice = getCartPrice();
+
   return (
     <div className={styles.price_content}>
       {product.selectedVariant.price.hasDiscount ? (
         <>
-          <DiscountBadge product={product} />
           <div className={styles.price_stack}>
             <span className={styles.discCount}>
               <del> {product.selectedVariant.price.formattedSellPrice}</del>
@@ -424,6 +485,9 @@ const Price = observer(({ product }: Props) => {
             <span className={styles.price}>
               {product.selectedVariant.price.formattedFinalPrice}
             </span>
+            {cartPrice && activeCampaign?.campaign?.fixedDiscount?.amount && (
+              <span className={styles.cart_price}>Sepette {cartPrice}</span>
+            )}
           </div>
         </>
       ) : (
@@ -433,6 +497,9 @@ const Price = observer(({ product }: Props) => {
               {product.selectedVariant.price.formattedFinalPrice}
             </span>
           </span>
+          {cartPrice && activeCampaign?.campaign?.fixedDiscount?.amount && (
+            <span className={styles.cart_price}>Sepette {cartPrice}</span>
+          )}
         </div>
       )}
     </div>
@@ -449,24 +516,5 @@ const ProductTitle = observer(({ product }: Props) => (
     </Link>
   </div>
 ));
-
-const DiscountBadge = observer(({ product }: Props) => {
-  const { t } = useTranslation();
-  if (
-    !product.selectedVariant.price.hasDiscount &&
-    product.selectedVariant.hasStock
-  )
-    return null;
-
-  return (
-    <S.DiscountBadge $hasStock={product.hasStock}>
-      <>
-        <S.DiscountBadgeDiscountRatio>
-          -{product.selectedVariant.price.discountPercentage}%
-        </S.DiscountBadgeDiscountRatio>
-      </>
-    </S.DiscountBadge>
-  );
-});
 
 export default observer(Product);

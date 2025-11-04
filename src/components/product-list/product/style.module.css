@@ -201,6 +201,18 @@
   font-size: 14px;
 }
 
+.cart_price {
+  color: #333;
+  background: linear-gradient(to right, #e5e0da, #fff);
+  padding: 5px 10px;
+  /* border-radius: 5px; */
+  font-size: 16px;
+  line-height: 18px;
+  font-family: "Helvetica" !important;
+  font-weight: 500;
+  margin-top: 2px;
+}
+
 .product_detail_colors button {
   cursor: pointer;
   border-radius: 50%;

@@ -29,7 +29,7 @@
 .price_content {
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 5px;
   margin-top: 20px;
 }
 .price_content span {
@@ -47,25 +47,20 @@
 }
 
 .price {
-  background-color: #9f0000;
-  padding: 2px 17px;
-  color: #fff;
+  padding: 5px 10px;
+  color: #222;
   font-size: 14px;
 }
 
-.discount_rate {
-  font-family: "Helvetica" !important;
-  display: inline-block;
-  border: 1px solid #222;
+.cart_price {
   color: #222;
-  background: transparent;
-  padding: 1px 8px;
-  border-radius: 25px;
-  font-size: 0.7rem;
-  font-weight: 400;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.3s ease;
+  background: #ece8e4;
+  padding: 5px 10px;
+  font-size: 16px;
+  line-height: 18px;
+  font-family: "Helvetica" !important;
+  font-weight: 500 !important;
+  display: inline-block;
 }
 
 .product_size {
