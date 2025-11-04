@@ -39,14 +39,12 @@ export function useAddToCart() {
         item,
         item.quantity + quantity
       );
-      uiStore.openCartModal();
     } else {
       result = await store.cartStore.addItem(
         product.selectedVariant,
         product,
         quantity
       );
-      uiStore.openCartModal();
     }
     setLoading(false);
 
@@ -55,6 +53,28 @@ export function useAddToCart() {
         productName: product.name,
         errors: result.response?.graphQLErrors,
       });
+      return;
+    }
+
+    // İşlem başarılıysa, cart store'un güncellenmesini bekle
+    // MobX reactive update'inin ve server'dan cart'ın yenilenmesinin tamamlanması için bekle
+    await new Promise((resolve) => setTimeout(resolve, 150));
+
+    // Cart'ın güncellendiğinden emin ol (itemCount kontrolü)
+    // Eğer hala boşsa, bir kez daha dene (max 5 deneme, her 50ms'de bir)
+    let retries = 0;
+    const maxRetries = 5;
+    while (
+      retries < maxRetries &&
+      (!store.cartStore.cart || !store.cartStore.cart.itemCount)
+    ) {
+      await new Promise((resolve) => setTimeout(resolve, 50));
+      retries++;
+    }
+
+    // Sadece cart'ta ürün varsa modal'ı aç
+    if (store.cartStore.cart && store.cartStore.cart.itemCount > 0) {
+      uiStore.openCartModal();
     }
   };
 
