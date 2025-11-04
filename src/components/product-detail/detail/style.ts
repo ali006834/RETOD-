@@ -247,17 +247,27 @@ export const ShowMoreButton = styled.button`
   color: #000;
   font-family: "Helvetica" !important;
   font-size: 12px;
-  font-weight: 300;
+  font-weight: 400;
   cursor: pointer;
   // text-decoration: underline;
   margin-top: 4px;
   padding: 0;
 
-  background-color: #222;
-  color: #fff;
+  color: #222;
   padding: 4px 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 
   &:hover {
     opacity: 0.7;
   }
+`;
+
+export const ArrowIconWrapper = styled.span<{ $isExpanded: boolean }>`
+  display: inline-flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+  transform: ${({ $isExpanded }) =>
+    $isExpanded ? "rotate(180deg)" : "rotate(0deg)"};
 `;

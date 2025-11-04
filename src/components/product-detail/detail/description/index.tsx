@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { ProductDetailProps } from "src/components/__generated__/types";
 import { IkasProductFilterSortType, useTranslation } from "@ikas/storefront";
 import { FiltersSvgWrapper } from "src/components/product-list/filter/components/filters-svg-wrapper";
+import ArrowDown from "src/components/svg/arrow-down";
 import Shirt from "./svg/shirt.svg";
 
 import * as S from "../style";
@@ -59,9 +60,14 @@ export const Description = (
           <S.ShowMoreButton
             onClick={() => setIsDescriptionExpanded(!isDescriptionExpanded)}
           >
-            {isDescriptionExpanded
-              ? t("common:productDetail.description.showLess")
-              : t("common:productDetail.description.showMore")}
+            <span>
+              {isDescriptionExpanded
+                ? t("common:productDetail.description.showLess")
+                : t("common:productDetail.description.showMore")}
+            </span>
+            <S.ArrowIconWrapper $isExpanded={isDescriptionExpanded}>
+              <ArrowDown strokeColor="#222" width="16px" height="16px" />
+            </S.ArrowIconWrapper>
           </S.ShowMoreButton>
         </S.DescriptionWrapper>
       </FiltersSvgWrapper>
