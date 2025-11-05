@@ -1,16 +1,16 @@
 import React from "react";
 import { observer } from "mobx-react-lite";
 import styles from "./style.module.css";
-import { FeaturedProductShowcaseProps } from "../__generated__/types";
-import { IkasProduct, Image, Link } from "@ikas/storefront";
-import { useScreen } from "src/utils/hooks/useScreen";
+
+import { FeaturedFreeImageShowcaseProps } from "../__generated__/types";
+import { IkasProduct, Image, Link, IkasImage } from "@ikas/storefront";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
 
-const FeaturedProductShowcase = (props: FeaturedProductShowcaseProps) => {
+const FeaturedFreeImageShowcase = (props: FeaturedFreeImageShowcaseProps) => {
   const {
     products,
     headerText,
@@ -21,7 +21,7 @@ const FeaturedProductShowcase = (props: FeaturedProductShowcaseProps) => {
     isWidthVideo,
   } = props;
 
-  if (!products) {
+  if (!products || products.length === 0) {
     return null;
   }
 
@@ -68,18 +68,22 @@ const FeaturedProductShowcase = (props: FeaturedProductShowcaseProps) => {
               },
             }}
           >
-            {products?.data?.map((products, index) => {
+            {products?.map((item, index) => {
+              const product = item?.relatedProduct;
+              if (!product) return null;
+
               return (
                 <SwiperSlide key={index}>
                   <div className={styles.product_container}>
-                    <Link href={products.href}>
+                    <Link href={product.href}>
                       <a>
                         <ProductImage
-                          product={products}
+                          product={product}
+                          externalImage={item?.image}
                           isWidthVideo={isWidthVideo}
                         />
                         <div className={styles.product_Info}>
-                          <ProductTitle product={products} />
+                          <ProductTitle product={product} />
                         </div>
                       </a>
                     </Link>
@@ -113,54 +117,95 @@ type Props = {
   isWidthVideo?: boolean;
 };
 
-const ProductImage = observer(({ product, isWidthVideo }: Props) => {
-  const mainImage = product.selectedVariant.mainImage?.image;
+type ProductImageProps = {
+  product: IkasProduct;
+  externalImage?: IkasImage;
+  isWidthVideo?: boolean;
+};
 
-  if (isWidthVideo && mainImage?.isVideo) {
-    // isWidthVideo true ve ana görsel video ise video göster
+const ProductImage = observer(
+  ({ product, externalImage, isWidthVideo }: ProductImageProps) => {
+    // Eğer harici görsel video ise ve isWidthVideo true ise
+    if (isWidthVideo && externalImage?.isVideo) {
+      return (
+        <video
+          playsInline
+          autoPlay
+          loop
+          muted
+          controls={false}
+          src={externalImage.src}
+          style={{
+            width: "100%",
+            aspectRatio: "6 / 9",
+            objectFit: "cover",
+            maxHeight: "1620px",
+          }}
+        />
+      );
+    }
+
+    // Ürün görseli video ise ve isWidthVideo true ise
+    const mainImage = product.selectedVariant.mainImage?.image;
+    if (isWidthVideo && mainImage?.isVideo && !externalImage) {
+      return (
+        <video
+          playsInline
+          autoPlay
+          loop
+          muted
+          controls={false}
+          src={mainImage.src}
+          style={{
+            width: "100%",
+            aspectRatio: "6 / 9",
+            objectFit: "cover",
+            maxHeight: "1620px",
+          }}
+        />
+      );
+    }
+
+    // Harici görsel varsa direkt göster
+    if (externalImage?.id) {
+      return (
+        <Image
+          width="200px"
+          height="300px"
+          objectFit="contain"
+          useBlur={true}
+          image={externalImage}
+          alt={product.name || undefined}
+          className={styles.slider_product_items}
+        />
+      );
+    }
+
+    // Diğer durumlarda (isWidthVideo false veya ana görsel video değilse) resim göster
+    let image = mainImage;
+    if (mainImage?.isVideo) {
+      // Ana görsel video ise, ilk video olmayanı bul
+      const nonVideoImage = product.selectedVariant.images?.find(
+        (img) => !img.image?.isVideo
+      )?.image;
+      image = nonVideoImage || undefined;
+    }
+    if (!image?.id) {
+      return <img src="/product-dummy-image.jpeg" />;
+    }
     return (
-      <video
-        playsInline
-        autoPlay
-        loop
-        muted
-        controls={false}
-        src={mainImage.src}
-        style={{
-          width: "100%",
-          aspectRatio: "6 / 9",
-          objectFit: "cover",
-          maxHeight: "1620px",
-        }}
+      <Image
+        width="200px"
+        height="300px"
+        objectFit="contain"
+        useBlur={true}
+        image={image}
+        alt={product.name || undefined}
+        className={styles.slider_product_items}
       />
     );
   }
-
-  // Diğer durumlarda (isWidthVideo false veya ana görsel video değilse) resim göster
-  let image = mainImage;
-  if (mainImage?.isVideo) {
-    // Ana görsel video ise, ilk video olmayanı bul
-    const nonVideoImage = product.selectedVariant.images?.find(
-      (img) => !img.image?.isVideo
-    )?.image;
-    image = nonVideoImage || undefined;
-  }
-  if (!image?.id) {
-    return <img src="/product-dummy-image.jpeg" />;
-  }
-  return (
-    <Image
-      // layout="responsive"
-      width="200px"
-      height="300px"
-      objectFit="contain"
-      useBlur={true}
-      image={product.selectedVariant.mainImage?.image!}
-      alt={product.selectedVariant.product?.name || undefined}
-      className={styles.slider_product_items}
-    />
-  );
-});
+);
 
 const ProductTitle = observer(({ product }: Props) => (
   <div className={styles.product_title} data-tooltip={product.name}>
@@ -168,4 +213,4 @@ const ProductTitle = observer(({ product }: Props) => (
   </div>
 ));
 
-export default observer(FeaturedProductShowcase);
+export default observer(FeaturedFreeImageShowcase);

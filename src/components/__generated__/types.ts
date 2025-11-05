@@ -3,8 +3,8 @@ import {
 	IkasNavigationLink,
 	IkasVideo,
 	IkasProductList,
-	IkasCategoryList,
 	IkasProduct,
+	IkasCategoryList,
 	IkasBlogList,
 	IkasBlog,
 	IkasComponentRenderer,
@@ -203,6 +203,11 @@ export type ImageList = {
 	imageWeb?: IkasImage;
 	imageMobil?: IkasImage;
 	relatedProduct?: IkasProductList;
+};
+
+export type FreeImageShowcase = { 
+	image?: IkasImage;
+	relatedProduct?: IkasProduct;
 };
 
 export type HeaderProps = {
@@ -553,5 +558,15 @@ export type BannerInstagramPostsProps = {
 	image?: IkasImage;
 	posts?: string;
 	followers?: string;
+};
+
+export type FeaturedFreeImageShowcaseProps = {
+	products?: FreeImageShowcase[];
+	headerText?: string;
+	titleText?: string;
+	contentText?: string;
+	btnText?: string;
+	btnLink?: IkasNavigationLink;
+	isWidthVideo?: boolean;
 };
 
