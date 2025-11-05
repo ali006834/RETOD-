@@ -7,6 +7,8 @@ import "swiper/css/scrollbar";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import { Navigation, Thumbs } from "swiper/modules";
+// @ts-ignore
+import ReactImageMagnify from "react-image-magnify";
 import styles from "./style.module.css";
 import ImagePopUp from "./imagePopUp";
 import { Image } from "@ikas/storefront";
@@ -102,13 +104,7 @@ const Slider = (props: ProductDetailProps) => {
                     id={`main-image-${index}`}
                     className={styles.main_image_item}
                   >
-                    <div
-                      onClick={() => {
-                        setImageId(image.imageId);
-                        setShowImagePopUp(!showImagePopUp);
-                      }}
-                      className={styles.image_wrapper}
-                    >
+                    <div className={styles.image_wrapper}>
                       {image.image?.isVideo ? (
                         <video
                           playsInline
@@ -124,9 +120,23 @@ const Slider = (props: ProductDetailProps) => {
                           }}
                         />
                       ) : (
-                        <img
-                          src={image.image?.src}
-                          alt={image.image?.altText || ""}
+                        <ReactImageMagnify
+                          {...{
+                            smallImage: {
+                              alt: image.image?.altText || "",
+                              isFluidWidth: true,
+                              src: image.image?.src || "",
+                            },
+                            largeImage: {
+                              src: image.image?.src || "",
+                              width: 1200,
+                              height: 1800,
+                            },
+                            enlargedImagePosition: "over",
+                            isActivatedOnTouch: true,
+                            hoverDelayInMs: 250,
+                            hoverOffDelayInMs: 300,
+                          }}
                         />
                       )}
                     </div>
@@ -217,7 +227,7 @@ const Slider = (props: ProductDetailProps) => {
                   <div
                     onClick={() => {
                       setImageId(image.imageId);
-                      setShowImagePopUp(!showImagePopUp);
+                      setShowImagePopUp(true);
                     }}
                     className={styles.image_wrapper}
                   >

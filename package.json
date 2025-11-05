@@ -17,6 +17,7 @@
     "@ikas/storefront": "^4.0.0",
     "@ikas/storefront-peer-deps": "^4.0.0",
     "lucide-react": "^0.539.0",
+    "react-image-magnify": "^2.7.4",
     "react-phone-input-2": "^2.15.1",
     "react-slick": "^0.30.3",
     "slick-carousel": "^1.8.1",

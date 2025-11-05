@@ -4,6 +4,9 @@ export const Wrapper = styled.div`
   display: flex;
   gap: 12px;
   margin: 30px 0;
+
+  @media (max-width: 400px) {
+  gap: 4px;
 `;
 
 export const QuantityButtonWrapper = styled.div`
