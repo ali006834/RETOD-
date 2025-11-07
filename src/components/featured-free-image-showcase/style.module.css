@@ -80,6 +80,36 @@
 .product_container {
   overflow: hidden;
 }
+.productImageWrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.productImageLayer {
+  width: 100%;
+}
+.productImageSingle {
+  position: relative;
+}
+.productImagePrimary {
+  position: relative;
+  z-index: 1;
+  transition: opacity 0.35s ease;
+}
+.productImageHover {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+.productImageWrapper:hover .productImagePrimary {
+  opacity: 0;
+}
+.productImageWrapper:hover .productImageHover {
+  opacity: 1;
+}
 .slider_product_items {
   width: 100%;
   height: auto;

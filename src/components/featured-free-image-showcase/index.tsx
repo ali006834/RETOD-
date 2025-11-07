@@ -25,6 +25,8 @@ const FeaturedFreeImageShowcase = (props: FeaturedFreeImageShowcaseProps) => {
     return null;
   }
 
+  console.log("products >>>> ", products);
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
@@ -125,7 +127,14 @@ type ProductImageProps = {
 
 const ProductImage = observer(
   ({ product, externalImage, isWidthVideo }: ProductImageProps) => {
-    // Eğer harici görsel video ise ve isWidthVideo true ise
+    const mainImage = product.selectedVariant.mainImage?.image;
+    const variantImages =
+      product.selectedVariant.images
+        ?.map((item) => item.image)
+        .filter((img): img is IkasImage => Boolean(img)) || [];
+    const nonVideoVariantImages = variantImages.filter((img) => !img.isVideo);
+
+    // Eğer harici görsel video ise ve video gösterimi isteniyorsa
     if (isWidthVideo && externalImage?.isVideo) {
       return (
         <video
@@ -145,9 +154,8 @@ const ProductImage = observer(
       );
     }
 
-    // Ürün görseli video ise ve isWidthVideo true ise
-    const mainImage = product.selectedVariant.mainImage?.image;
-    if (isWidthVideo && mainImage?.isVideo && !externalImage) {
+    // Ürün ana görseli video ise ve video gösterimi isteniyorsa
+    if (isWidthVideo && !externalImage && mainImage?.isVideo) {
       return (
         <video
           playsInline
@@ -166,43 +174,78 @@ const ProductImage = observer(
       );
     }
 
-    // Harici görsel varsa direkt göster
-    if (externalImage?.id) {
+    const selectProductImage = () => {
+      if (!mainImage) {
+        return nonVideoVariantImages[0] || variantImages[0];
+      }
+
+      if (mainImage.isVideo) {
+        return nonVideoVariantImages[0];
+      }
+
+      return mainImage;
+    };
+
+    let primaryImage: IkasImage | undefined;
+    let hoverImage: IkasImage | undefined;
+
+    if (externalImage && !externalImage.isVideo) {
+      primaryImage = externalImage;
+      hoverImage = selectProductImage();
+    } else {
+      primaryImage = selectProductImage();
+      hoverImage = nonVideoVariantImages.find(
+        (img) => img.id && img.id !== primaryImage?.id
+      );
+    }
+
+    if (!hoverImage || hoverImage.id === primaryImage?.id) {
+      hoverImage = undefined;
+    }
+
+    if (!primaryImage?.id) {
       return (
-        <Image
-          width="200px"
-          height="300px"
-          objectFit="contain"
-          useBlur={true}
-          image={externalImage}
-          alt={product.name || undefined}
+        <img
+          src="/product-dummy-image.jpeg"
           className={styles.slider_product_items}
+          alt={product.name || "product-placeholder"}
         />
       );
     }
 
-    // Diğer durumlarda (isWidthVideo false veya ana görsel video değilse) resim göster
-    let image = mainImage;
-    if (mainImage?.isVideo) {
-      // Ana görsel video ise, ilk video olmayanı bul
-      const nonVideoImage = product.selectedVariant.images?.find(
-        (img) => !img.image?.isVideo
-      )?.image;
-      image = nonVideoImage || undefined;
-    }
-    if (!image?.id) {
-      return <img src="/product-dummy-image.jpeg" />;
-    }
     return (
-      <Image
-        width="200px"
-        height="300px"
-        objectFit="contain"
-        useBlur={true}
-        image={image}
-        alt={product.name || undefined}
-        className={styles.slider_product_items}
-      />
+      <div className={styles.productImageWrapper}>
+        <div
+          className={`${styles.productImageLayer} ${
+            hoverImage ? styles.productImagePrimary : styles.productImageSingle
+          }`}
+        >
+          <Image
+            width="200px"
+            height="300px"
+            objectFit="contain"
+            useBlur={true}
+            image={primaryImage}
+            alt={product.name || undefined}
+            className={styles.slider_product_items}
+          />
+        </div>
+        {hoverImage && (
+          <div
+            className={`${styles.productImageLayer} ${styles.productImageHover}`}
+          >
+            <Image
+              width="200px"
+              height="300px"
+              objectFit="contain"
+              useBlur={true}
+              image={hoverImage}
+              alt={product.name || undefined}
+              className={styles.slider_product_items}
+            />
+          </div>
+        )}
+      </div>
     );
   }
 );
