@@ -87,7 +87,10 @@ export const Price = observer((props: ProductDetailProps) => {
 
       {/* Sepetteki fiyat */}
       {cartPrice && (
-        <span className={styles.cart_price}>Sepette {cartPrice}</span>
+        <span className={styles.cart_price}>
+          {" "}
+          <span className={styles.cart_price_label}>Sepette</span> {cartPrice}
+        </span>
       )}
     </div>
   );

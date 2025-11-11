@@ -29,39 +29,6 @@
   border: none;
 }
 
-/*= Breadcrumb  */
-.tittle_container {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 8px;
-  padding: 25px 0 15px;
-  font-size: 14px;
-  font-weight: 300;
-  font-family: "Helvetica";
-}
-
-.tittle_container a {
-  color: #333;
-  text-decoration: none;
-}
-
-.tittle_container a:hover {
-  text-decoration: underline;
-}
-
-.product_name {
-  color: #333;
-  font-weight: 300;
-  font-family: "Helvetica";
-}
-
-.tittle_container svg {
-  width: 12px;
-  height: 12px;
-  margin: 0 5px;
-}
-
 /*= Responsive  */
 
 @media only screen and (max-width: 1024px) {
@@ -73,14 +40,5 @@
   .product_detail {
     grid-template-columns: repeat(1, minmax(0, 1fr));
     gap: 1rem !important;
-  }
-
-  .tittle_container {
-    font-size: 11px;
-  }
-
-  .tittle_container a {
-    color: #333;
-    text-decoration: none;
   }
 }

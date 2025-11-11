@@ -570,3 +570,8 @@ export type FeaturedFreeImageShowcaseProps = {
 	isWidthVideo?: boolean;
 };
 
+export type SideOpeningLastSeenProductsProps = {
+	productsYouVisited?: IkasProductList;
+	isWidthVideo?: boolean;
+};
+

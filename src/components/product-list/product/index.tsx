@@ -37,12 +37,6 @@ const Product = (props: Props) => {
   const { t } = useTranslation();
   const { isMobile } = useScreen();
 
-  const a11yTitle = product.selectedVariant.hasStock
-    ? ""
-    : t("common:product.discountBadgeSoldOut");
-
-  const router = useRouter();
-
   const [isOpen, setIsOpen] = useState(false);
 
   //+ View Selcetor işlemleri
@@ -70,13 +64,8 @@ const Product = (props: Props) => {
       </div>
       <div className={styles.imageContainer}>
         <Link href={product.href}>
-          <a title={a11yTitle}>
+          <a>
             <S.ImageWrapper $hasStock={product.hasStock}>
-              {!product.hasStock && (
-                <span className={styles.sold_out_text}>
-                  {a11yTitle.toLocaleUpperCase("tr-TR")}
-                </span>
-              )}
               <ProductImage {...props} isWidthVideo={isWidthVideo} />
             </S.ImageWrapper>
           </a>
@@ -486,7 +475,14 @@ const Price = observer(({ product }: Props) => {
               {product.selectedVariant.price.formattedFinalPrice}
             </span>
             {cartPrice && activeCampaign?.campaign?.fixedDiscount?.amount && (
-              <span className={styles.cart_price}>Sepette {cartPrice}</span>
+              <span className={styles.cart_price}>
+                {" "}
+                <span className={styles.cart_price_label}>
+                  {" "}
+                  <span className={styles.cart_price_label}>Sepette</span>{" "}
+                </span>{" "}
+                {cartPrice}
+              </span>
             )}
           </div>
         </>
@@ -498,7 +494,10 @@ const Price = observer(({ product }: Props) => {
             </span>
           </span>
           {cartPrice && activeCampaign?.campaign?.fixedDiscount?.amount && (
-            <span className={styles.cart_price}>Sepette {cartPrice}</span>
+            <span className={styles.cart_price}>
+              <span className={styles.cart_price_label}>Sepette</span>{" "}
+              {cartPrice}
+            </span>
           )}
         </div>
       )}
@@ -506,15 +505,29 @@ const Price = observer(({ product }: Props) => {
   );
 });
 
-const ProductTitle = observer(({ product }: Props) => (
-  <div className={styles.product_title}>
-    <span>{product?.brand?.name}</span>
-    <Link href={product.href}>
-      <a title={product.name.toLocaleUpperCase("tr-TR")}>
-        <h2>{product.name.toLocaleUpperCase("tr-TR")}</h2>
-      </a>
-    </Link>
-  </div>
-));
+const ProductTitle = observer(({ product }: Props) => {
+  const { t } = useTranslation();
+  return (
+    <div className={styles.product_title}>
+      <div className={styles.product_title_brand}>
+        <span>
+          {product?.brand?.name && <>{product.brand.name}</>}
+          {!product.hasStock && (
+            <>
+              {product?.brand?.name && " - "}
+              <span>{t("common:product.discountBadgeSoldOut")}</span>
+            </>
+          )}
+        </span>
+      </div>
+
+      <Link href={product.href}>
+        <a title={product.name.toLocaleUpperCase("tr-TR")}>
+          <h2>{product.name.toLocaleUpperCase("tr-TR")}</h2>
+        </a>
+      </Link>
+    </div>
+  );
+});
 
 export default observer(Product);

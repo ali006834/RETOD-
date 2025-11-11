@@ -11,7 +11,8 @@ import { ProductTag } from "./product-tag";
 import Refund from "./refund";
 import Taksit from "./taksit";
 import { ProductShortExplanation } from "./product-short-explanation";
-import { ProductSku } from "./product-sku";
+
+import { ProductShortSKU } from "./product-short-sku";
 import { CompleteTheLook } from "./complete-the-look";
 
 import styles from "./style.module.css";
@@ -40,11 +41,17 @@ const Detail = (props: ProductDetailProps) => {
   return (
     <div className={styles.detail_wrapper}>
       <div className={styles.detail_content}>
-        <div className={styles.productSku}>
-          <ProductSku {...props} />
+        <div className={styles.brand_name_wrapper}>
+          {props.product?.brand?.name && (
+            <span className={styles.brand_name}>
+              {props.product?.brand?.name}
+            </span>
+          )}
         </div>
+
         <div className={styles.title_wrapper}>
           <Title {...props} />
+          <ProductShortSKU {...props} />
         </div>
         <div>
           <ProductShortExplanation {...props} />
