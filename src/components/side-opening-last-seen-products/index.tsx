@@ -5,6 +5,7 @@ import styles from "./style.module.css";
 import { IkasProduct, Image, Link, useTranslation } from "@ikas/storefront";
 import CloseIcon from "../svg/close";
 import ArrowRightIcon from "../svg/arrow-right";
+import { useScreen } from "src/utils/hooks/useScreen";
 
 export const NS = "product-detail";
 
@@ -13,13 +14,19 @@ const SideOpeningLastSeenProducts = (
 ) => {
   const { productsYouVisited, isWidthVideo } = props;
   const { t } = useTranslation();
+  const { width } = useScreen();
 
   const [isVisible, setIsVisible] = React.useState(true);
   const [isExpanded, setIsExpanded] = React.useState(false);
 
+  const productCount = React.useMemo(() => {
+    // Mobilde (768px altı) 2 ürün, desktop'ta 3 ürün göster
+    return width > 0 && width < 768 ? 2 : 3;
+  }, [width]);
+
   const products = React.useMemo(
-    () => productsYouVisited?.data?.slice(0, 3) ?? [],
-    [productsYouVisited?.data]
+    () => productsYouVisited?.data?.slice(0, productCount) ?? [],
+    [productsYouVisited?.data, productCount]
   );
 
   if (!productsYouVisited || products.length === 0 || !isVisible) {

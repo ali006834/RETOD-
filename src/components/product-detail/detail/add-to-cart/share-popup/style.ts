@@ -16,14 +16,15 @@ export const PopupContainer = styled.div`
   right: 0;
   background: white;
   border-radius: 12px;
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
   width: 280px;
   z-index: 1001;
   animation: tooltipFadeIn 0.2s ease-out;
 
   /* Tooltip Arrow */
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 100%;
     right: 24px;
@@ -48,7 +49,7 @@ export const PopupContainer = styled.div`
   @media (max-width: 480px) {
     width: 260px;
     right: -0px;
-    
+
     &::after {
       right: 44px;
     }
@@ -68,7 +69,7 @@ export const PopupTitle = styled.h3`
   font-weight: 600;
   color: #111827;
   margin: 0;
-  font-family: "Helvetica", sans-serif;
+  font-family: "Helvetica";
 `;
 
 export const CloseButton = styled.button`
@@ -104,7 +105,7 @@ export const CopyLinkButton = styled.button`
   color: #374151;
   cursor: pointer;
   transition: all 0.2s ease;
-  font-family: "Helvetica", sans-serif;
+  font-family: "Helvetica";
 
   &:hover {
     background-color: #f3f4f6;
@@ -125,7 +126,7 @@ export const SocialMediaTitle = styled.h4`
   font-weight: 500;
   color: #6b7280;
   margin: 0 0 10px 0;
-  font-family: "Helvetica", sans-serif;
+  font-family: "Helvetica";
 `;
 
 export const SocialMediaButtons = styled.div`
