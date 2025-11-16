@@ -403,6 +403,7 @@ const ProductTag = observer(({ product }: Props) => {
 
 // Bu item'a uygulanan kampanyaları bul (sadece adları)
 const Price = observer(({ product }: Props) => {
+  console.log("product >>>>> ", product);
   // Kampanya kontrolü - "Sepette %20 İndirim" gibi kampanyaları bul
   const activeCampaign = product?.campaigns?.find((campaignItem) => {
     const campaign = campaignItem?.campaign;
@@ -454,11 +455,13 @@ const Price = observer(({ product }: Props) => {
       0,
       currentPrice * (1 - discountPercentage / 100)
     );
+    // Sepet fiyatını tam sayıya yuvarla (ör. 1.329,30 => 1.329,00)
+    const roundedCartPrice = Math.round(cartPrice);
 
     const currency = product.selectedVariant.price.currency || "";
     const currencySymbol = product.selectedVariant.price.currencySymbol || "₺";
 
-    return formatCurrency(cartPrice, currency, currencySymbol);
+    return formatCurrency(roundedCartPrice, currency, currencySymbol);
   };
 
   const cartPrice = getCartPrice();

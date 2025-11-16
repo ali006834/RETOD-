@@ -65,10 +65,13 @@ export const Price = observer((props: ProductDetailProps) => {
       currentPrice * (1 - discountPercentage / 100)
     );
 
+    // Sepet fiyatını tam sayıya yuvarla (ör. 1.329,30 => 1.329,00)
+    const roundedCartPrice = Math.round(cartPrice);
+
     const currency = price.currency || "";
     const currencySymbol = price.currencySymbol || "₺";
 
-    return formatCurrency(cartPrice, currency, currencySymbol);
+    return formatCurrency(roundedCartPrice, currency, currencySymbol);
   };
 
   const cartPrice = getCartPrice();
