@@ -31,6 +31,15 @@ import {
   RemoveColumn,
 } from "../style";
 
+const formatPriceWithZeroKurus = (value?: string | null) => {
+  if (!value) return "";
+  const str = value.toString();
+  // Sondaki iki basamaklı kuruşu "00" yap (ör. "₺ 1.329,30" => "₺ 1.329,00")
+  const match = str.match(/(.*[.,])(\d{2})(\s*)$/);
+  if (!match) return str;
+  return `${match[1]}00${match[3] ?? ""}`;
+};
+
 const ProductTitleComponent = ({ product }: { product: any }) => {
   return <div>{product.name}</div>;
 };
@@ -68,6 +77,8 @@ const Item = ({
     setTimeout(() => setShowStockAlert(false), 2500);
   };
 
+  console.log("item >>>>> ", item);
+
   return (
     <>
       {showRemovedMessage ? (
@@ -83,7 +94,9 @@ const Item = ({
               <S.ItemDetails>
                 <S.ItemProductName>{item.variant.name}</S.ItemProductName>
                 <S.ItemPrice>
-                  {item.formattedFinalPriceWithQuantity}
+                  {formatPriceWithZeroKurus(
+                    item.formattedFinalPriceWithQuantity
+                  )}
                 </S.ItemPrice>
 
                 <ItemProductColumn item={item} store={store} />
