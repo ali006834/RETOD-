@@ -307,6 +307,8 @@ export type ProductDetailProps = {
 	deliveryDescriptionLink?: IkasNavigationLink;
 	bankTable?: MainTable[];
 	isWidthVideo?: boolean;
+	showVariantStockWarning?: boolean;
+	showProductStats?: boolean;
 };
 
 export type BottomScrollingTextProps = {

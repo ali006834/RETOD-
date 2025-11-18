@@ -64,7 +64,9 @@ const Detail = (props: ProductDetailProps) => {
         <div className={styles.variantAndButton}>
           <Variants {...props} />
           <AddToCart {...props} />
-          {selectedVariantHasStock && <ProductStats {...props} />}
+          {props?.showProductStats && selectedVariantHasStock && (
+            <ProductStats {...props} />
+          )}
         </div>
         <div className={styles.infos}>
           <CompleteTheLook

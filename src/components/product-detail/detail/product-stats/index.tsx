@@ -3,9 +3,9 @@ import React, { useEffect, useState } from "react";
 import { ProductDetailProps } from "src/components/__generated__/types";
 import styles from "./style.module.css";
 
-import BasketIcon from "./svg/basket1";
+import BasketIcon from "./svg/basket";
 import FavoriteIcon from "./svg/favorite1";
-import PageViewIcon from "./svg/viewPage1";
+import PageViewIcon from "./svg/viewPage";
 
 // İkonlar https://www.svgrepo.com/collection/neuicons-oval-line-icons/6
 

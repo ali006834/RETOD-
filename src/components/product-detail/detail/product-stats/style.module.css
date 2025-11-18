@@ -4,29 +4,26 @@
   height: 52px;
   position: relative;
   overflow: hidden;
-  background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  background: linear-gradient(120deg, #f6f1eb, #f6f1eb, #fdfdfd);
+  background-size: 300% 300%;
+  animation: glideGradient 12s ease-in-out infinite;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
 }
 
 .wrapper::before {
   content: "";
   position: absolute;
   inset: 0;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: inherit;
+  background: radial-gradient(
+    circle at 15% 50%,
+    rgba(255, 255, 255, 0.8),
+    transparent 55%
+  );
   pointer-events: none;
-}
-
-.wrapper::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 64px;
-  height: 100%;
-  background: #e4ddd4;
-  z-index: 0;
-  pointer-events: none;
+  animation: driftGlow 8s ease-in-out infinite;
 }
 
 .sliderContainer {
@@ -40,6 +37,7 @@
   inset: 0;
   display: flex;
   align-items: center;
+  gap: 12px;
   opacity: 0;
   transform: translateY(30%);
   transition: opacity 0.5s ease, transform 0.5s ease;
@@ -51,34 +49,56 @@
 }
 
 .statIcon {
-  width: 64px;
-  height: 64px;
-  min-width: 64px;
+  width: 48px;
+  height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #33363f;
+  margin-left: 10px;
 }
 
 .statIcon svg {
   width: 24px;
   height: 24px;
-  fill: #222 !important;
+  fill: currentColor !important;
 }
 
 .statText {
   font-size: 16px;
-  font-weight: 600;
-  color: #000;
+  font-weight: 300;
+  color: #222;
   letter-spacing: 0.01em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  position: relative;
-  padding-left: 14px;
 }
 
-.slide.active .statText::after {
-  opacity: 1;
+@keyframes glideGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes driftGlow {
+  0% {
+    transform: translateX(-10%);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateX(10%);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateX(-10%);
+    opacity: 0.8;
+  }
 }
 
 @media (max-width: 768px) {
@@ -87,8 +107,8 @@
     margin: 12px 0;
   }
 
-  .wrapper::after {
-    width: 64px;
+  .sliderContainer {
+    padding: 0 14px;
   }
 
   .statText {
