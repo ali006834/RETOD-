@@ -77,6 +77,10 @@ export const VariantTypeName = styled.div`
 `;
 export const VariantType = styled.div`
   margin: 35px 0;
+
+  @media (max-width: 768px) {
+    margin: 25px 0;
+  }
 `;
 
 export const VariantValue = styled.div``;

@@ -198,7 +198,7 @@
 
   .thumb_wrapper {
     width: 80px;
-    height: 80px;
+    height: 150px;
     flex-shrink: 0;
   }
 }
