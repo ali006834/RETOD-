@@ -16,43 +16,46 @@ import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 import SizeTable from "../size-table";
 
-export const Variants = observer(({ product }: ProductDetailProps) => {
-  // useThumbnail değişkeni - backend'den gelecek, şimdilik false
-  const useThumbnail = false;
+export const Variants = observer(
+  ({ product, showVariantStockWarning }: ProductDetailProps) => {
+    // useThumbnail değişkeni - backend'den gelecek, şimdilik false
+    const useThumbnail = false;
 
-  // Renk varyantı var mı kontrol et
-  const hasColorVariant = product?.displayedVariantTypes.some(
-    (dVT) => dVT.variantType.isColorSelection
-  );
+    // Renk varyantı var mı kontrol et
+    const hasColorVariant = product?.displayedVariantTypes.some(
+      (dVT) => dVT.variantType.isColorSelection
+    );
 
-  // Varyantları sırala: önce beden (size), sonra renk (color)
-  const sortedVariantTypes = product?.displayedVariantTypes
-    .slice()
-    .sort((a, b) => {
-      if (a.variantType.isColorSelection && !b.variantType.isColorSelection) {
-        return 1; // Renk sonra gelsin
-      }
-      if (!a.variantType.isColorSelection && b.variantType.isColorSelection) {
-        return -1; // Beden önce gelsin
-      }
-      return 0; // Aynı tip ise sıra değişmesin
-    });
+    // Varyantları sırala: önce beden (size), sonra renk (color)
+    const sortedVariantTypes = product?.displayedVariantTypes
+      .slice()
+      .sort((a, b) => {
+        if (a.variantType.isColorSelection && !b.variantType.isColorSelection) {
+          return 1; // Renk sonra gelsin
+        }
+        if (!a.variantType.isColorSelection && b.variantType.isColorSelection) {
+          return -1; // Beden önce gelsin
+        }
+        return 0; // Aynı tip ise sıra değişmesin
+      });
 
-  return (
-    <S.VariantsWrapper>
-      {sortedVariantTypes?.map((dVT) => (
-        <VariantType
-          key={dVT.variantType.id}
-          product={product!}
-          dVT={dVT}
-          useThumbnail={useThumbnail}
-          showSizeTable={dVT.variantType.isColorSelection}
-        />
-      ))}
-      {!hasColorVariant && <SizeTable />}
-    </S.VariantsWrapper>
-  );
-});
+    return (
+      <S.VariantsWrapper>
+        {sortedVariantTypes?.map((dVT) => (
+          <VariantType
+            key={dVT.variantType.id}
+            product={product!}
+            dVT={dVT}
+            useThumbnail={useThumbnail}
+            showSizeTable={dVT.variantType.isColorSelection}
+            showVariantStockWarning={!!showVariantStockWarning}
+          />
+        ))}
+        {!hasColorVariant && <SizeTable />}
+      </S.VariantsWrapper>
+    );
+  }
+);
 
 Variants.displayName = "Variants";
 
@@ -61,10 +64,17 @@ type VariantTypeProps = {
   dVT: IkasDisplayedVariantType;
   useThumbnail: boolean;
   showSizeTable: boolean;
+  showVariantStockWarning: boolean;
 };
 
 const VariantType = observer(
-  ({ dVT, product, useThumbnail, showSizeTable }: VariantTypeProps) => {
+  ({
+    dVT,
+    product,
+    useThumbnail,
+    showSizeTable,
+    showVariantStockWarning,
+  }: VariantTypeProps) => {
     return (
       <S.VariantType>
         <VariantValues
@@ -72,6 +82,7 @@ const VariantType = observer(
           product={product}
           useThumbnail={useThumbnail}
           showSizeTable={showSizeTable}
+          showVariantStockWarning={showVariantStockWarning}
         />
       </S.VariantType>
     );
@@ -83,10 +94,17 @@ type VariantValueType = {
   dVT: IkasDisplayedVariantType;
   useThumbnail: boolean;
   showSizeTable: boolean;
+  showVariantStockWarning: boolean;
 };
 
 const VariantValues = observer(
-  ({ dVT, product, useThumbnail, showSizeTable }: VariantValueType) => {
+  ({
+    dVT,
+    product,
+    useThumbnail,
+    showSizeTable,
+    showVariantStockWarning,
+  }: VariantValueType) => {
     const onVariantValueChange = (dVV: IkasDisplayedVariantValue) => {
       product.selectVariantValue(dVV.variantValue);
     };
@@ -127,6 +145,7 @@ const VariantValues = observer(
           product={product}
           dVT={dVT}
           onVariantValueChange={onVariantValueChange}
+          showVariantStockWarning={showVariantStockWarning}
         />
       </>
     );
@@ -137,10 +156,16 @@ type SelectVariantValueProps = {
   product: IkasProduct;
   dVT: IkasDisplayedVariantType;
   onVariantValueChange: (dVV: IkasDisplayedVariantValue) => void;
+  showVariantStockWarning: boolean;
 };
 
 const SelectVariantValue = observer(
-  ({ dVT, product, onVariantValueChange }: SelectVariantValueProps) => {
+  ({
+    dVT,
+    product,
+    onVariantValueChange,
+    showVariantStockWarning,
+  }: SelectVariantValueProps) => {
     // Bedenleri Küçükten Büyüğe Sırala işlemi
     const selectOptions = dVT.displayedVariantValues
       .map((dVV) => ({
@@ -210,6 +235,7 @@ const SelectVariantValue = observer(
               : remainingStock === 2
               ? "SON 2"
               : "";
+          const shouldShowLowStock = showVariantStockWarning && isLowStock;
           return (
             <div key={index}>
               {item.hasStock ? (
@@ -227,7 +253,7 @@ const SelectVariantValue = observer(
                   >
                     {item.label.toLocaleUpperCase("tr-TR")}
                   </div>
-                  {isLowStock && (
+                  {shouldShowLowStock && (
                     <span className={styles.product_size_low_stock}>
                       {lowStockText}
                     </span>
