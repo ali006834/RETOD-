@@ -36,6 +36,19 @@
     padding: 0px 10px;
   }
 }
+
+/* .product_detail {
+  display: grid;
+  grid-template-columns: 1.5fr 1.3fr 0.3rem;
+  gap: 5rem !important;
+} */
+
+@media only screen and (max-width: 1025px) {
+  .product_detail {
+    grid-template-columns: 1fr 1fr 0.3rem;
+    gap: 5rem !important;
+  }
+}
 @media only screen and (max-width: 750px) {
   .product_detail {
     grid-template-columns: repeat(1, minmax(0, 1fr));

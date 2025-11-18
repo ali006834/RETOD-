@@ -93,13 +93,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid transparent;
+  border: 1px solid #eee;
   font-weight: 300;
   font-family: "Helvetica" !important;
   font-size: 13px;
   cursor: pointer;
   background: transparent;
   transition: all 0.3s ease;
+  position: relative;
 }
 
 .product_size_item:hover {
@@ -113,13 +114,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #ddd;
+  border: 1px solid #b5b5b5;
   background: transparent;
   color: #000;
   font-weight: 300;
   font-family: "Helvetica" !important;
   font-size: 13px;
   cursor: pointer;
+  position: relative;
 }
 .product_size_item_no_stock_selected {
   width: 45px;
@@ -136,6 +138,21 @@
   cursor: pointer;
   position: relative;
   color: #999;
+}
+
+.product_size_low_stock {
+  position: absolute;
+  bottom: -6px;
+  left: 52%;
+  transform: translateX(-50%);
+  background: #fff;
+  padding: 0 3px;
+  font-size: 9px;
+  font-weight: 600;
+  font-family: "Helvetica" !important;
+  color: #000;
+  white-space: nowrap;
+  pointer-events: none;
 }
 
 /* Variant ismi uzunsa ellipsis uygula  */

@@ -14,6 +14,7 @@ import { ProductShortExplanation } from "./product-short-explanation";
 
 import { ProductShortSKU } from "./product-short-sku";
 import { CompleteTheLook } from "./complete-the-look";
+import { ProductStats } from "./product-stats";
 
 import styles from "./style.module.css";
 
@@ -61,6 +62,7 @@ const Detail = (props: ProductDetailProps) => {
         <div className={styles.variantAndButton}>
           <Variants {...props} />
           <AddToCart {...props} />
+          <ProductStats {...props} />
         </div>
         <div className={styles.infos}>
           <CompleteTheLook

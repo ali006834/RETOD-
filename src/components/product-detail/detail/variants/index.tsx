@@ -147,6 +147,7 @@ const SelectVariantValue = observer(
         value: dVV.variantValue.id,
         label: dVV.variantValue.name,
         hasStock: dVV.hasStock,
+        stock: dVV.variant.stock,
       }))
       .sort((a, b) => {
         // Önce sayısal değer olup olmadığını kontrol et
@@ -200,6 +201,15 @@ const SelectVariantValue = observer(
     return (
       <div className={styles.product_size}>
         {selectOptions.map((item, index) => {
+          const remainingStock = item.stock ?? 0;
+          const isLowStock =
+            item.hasStock && remainingStock > 0 && remainingStock <= 2;
+          const lowStockText =
+            remainingStock === 1
+              ? "SON 1"
+              : remainingStock === 2
+              ? "SON 2"
+              : "";
           return (
             <div key={index}>
               {item.hasStock ? (
@@ -217,6 +227,11 @@ const SelectVariantValue = observer(
                   >
                     {item.label.toLocaleUpperCase("tr-TR")}
                   </div>
+                  {isLowStock && (
+                    <span className={styles.product_size_low_stock}>
+                      {lowStockText}
+                    </span>
+                  )}
                 </div>
               ) : (
                 <div
