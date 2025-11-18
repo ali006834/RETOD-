@@ -105,7 +105,7 @@
 
 .product_size_item:hover {
   border: 1px solid #ddd;
-  background: transparent;
+  background: #f4f4f3;
 }
 .product_size_selected_item {
   width: 45px;

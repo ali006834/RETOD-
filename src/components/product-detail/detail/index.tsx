@@ -38,6 +38,8 @@ const Detail = (props: ProductDetailProps) => {
   >(defaultOpenSection);
 
   const { deliveryDescription } = props;
+  const selectedVariantHasStock =
+    props.product?.selectedVariant?.hasStock ?? true;
 
   return (
     <div className={styles.detail_wrapper}>
@@ -62,7 +64,7 @@ const Detail = (props: ProductDetailProps) => {
         <div className={styles.variantAndButton}>
           <Variants {...props} />
           <AddToCart {...props} />
-          <ProductStats {...props} />
+          {selectedVariantHasStock && <ProductStats {...props} />}
         </div>
         <div className={styles.infos}>
           <CompleteTheLook
