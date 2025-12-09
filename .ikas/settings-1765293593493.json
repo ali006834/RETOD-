@@ -141,5 +141,6 @@
   "custom": {
     "hasStoreStockStatusSupport": false
   },
-  "storefrontPopups": []
+  "storefrontPopups": [],
+  "loyaltyPrograms": []
 }

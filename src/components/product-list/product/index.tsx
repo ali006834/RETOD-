@@ -403,7 +403,6 @@ const ProductTag = observer(({ product }: Props) => {
 
 // Bu item'a uygulanan kampanyaları bul (sadece adları)
 const Price = observer(({ product }: Props) => {
-  console.log("product >>>>> ", product);
   // Kampanya kontrolü - "Sepette %20 İndirim" gibi kampanyaları bul
   const activeCampaign = product?.campaigns?.find((campaignItem) => {
     const campaign = campaignItem?.campaign;
@@ -438,9 +437,30 @@ const Price = observer(({ product }: Props) => {
 
     const campaign = activeCampaign.campaign;
     const fixedDiscount = campaign.fixedDiscount;
+    const tieredDiscount = campaign.tieredDiscount;
 
-    // Sabit indirim miktarı yoksa null döndür
-    if (!fixedDiscount?.amount) {
+    // İndirim yüzdesini bul - önce fixedDiscount, sonra tieredDiscount, son olarak başlıktan çıkar
+    let discountPercentage: number | null = null;
+
+    if (fixedDiscount?.amount) {
+      discountPercentage = fixedDiscount.amount;
+    } else if (tieredDiscount?.rules && tieredDiscount.rules.length > 0) {
+      // Tiered discount varsa kampanya başlığından yüzde çıkar
+      // (rules içinde direkt discount yüzdesi yok)
+      const titleMatch = campaign.title?.match(/%(\d+)/);
+      if (titleMatch && titleMatch[1]) {
+        discountPercentage = parseFloat(titleMatch[1]);
+      }
+    } else {
+      // Kampanya başlığından yüzde çıkar (örn: "Sepette %40 İndirim" => 40)
+      const titleMatch = campaign.title?.match(/%(\d+)/);
+      if (titleMatch && titleMatch[1]) {
+        discountPercentage = parseFloat(titleMatch[1]);
+      }
+    }
+
+    // İndirim yüzdesi yoksa null döndür
+    if (!discountPercentage || discountPercentage <= 0) {
       return null;
     }
 
@@ -449,8 +469,6 @@ const Price = observer(({ product }: Props) => {
       product.selectedVariant.price.formattedFinalPrice.replace(/[^\d.-]/g, "")
     );
 
-    // fixedDiscount.amount yüzde olarak kullanılacak (örneğin 30 = %30)
-    const discountPercentage = fixedDiscount.amount;
     const cartPrice = Math.max(
       0,
       currentPrice * (1 - discountPercentage / 100)
@@ -477,13 +495,10 @@ const Price = observer(({ product }: Props) => {
             <span className={styles.price}>
               {product.selectedVariant.price.formattedFinalPrice}
             </span>
-            {cartPrice && activeCampaign?.campaign?.fixedDiscount?.amount && (
+            {cartPrice && (
               <span className={styles.cart_price}>
                 {" "}
-                <span className={styles.cart_price_label}>
-                  {" "}
-                  <span className={styles.cart_price_label}>Sepette</span>{" "}
-                </span>{" "}
+                <span className={styles.cart_price_label}>Sepette</span>{" "}
                 {cartPrice}
               </span>
             )}
@@ -496,7 +511,7 @@ const Price = observer(({ product }: Props) => {
               {product.selectedVariant.price.formattedFinalPrice}
             </span>
           </span>
-          {cartPrice && activeCampaign?.campaign?.fixedDiscount?.amount && (
+          {cartPrice && (
             <span className={styles.cart_price}>
               <span className={styles.cart_price_label}>Sepette</span>{" "}
               {cartPrice}

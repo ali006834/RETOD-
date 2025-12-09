@@ -47,9 +47,30 @@ export const Price = observer((props: ProductDetailProps) => {
 
     const campaign = activeCampaign.campaign;
     const fixedDiscount = campaign.fixedDiscount;
+    const tieredDiscount = campaign.tieredDiscount;
 
-    // Sabit indirim miktarı yoksa null döndür
-    if (!fixedDiscount?.amount) {
+    // İndirim yüzdesini bul - önce fixedDiscount, sonra tieredDiscount, son olarak başlıktan çıkar
+    let discountPercentage: number | null = null;
+
+    if (fixedDiscount?.amount) {
+      discountPercentage = fixedDiscount.amount;
+    } else if (tieredDiscount?.rules && tieredDiscount.rules.length > 0) {
+      // Tiered discount varsa kampanya başlığından yüzde çıkar
+      // (rules içinde direkt discount yüzdesi yok)
+      const titleMatch = campaign.title?.match(/%(\d+)/);
+      if (titleMatch && titleMatch[1]) {
+        discountPercentage = parseFloat(titleMatch[1]);
+      }
+    } else {
+      // Kampanya başlığından yüzde çıkar (örn: "Sepette %40 İndirim" => 40)
+      const titleMatch = campaign.title?.match(/%(\d+)/);
+      if (titleMatch && titleMatch[1]) {
+        discountPercentage = parseFloat(titleMatch[1]);
+      }
+    }
+
+    // İndirim yüzdesi yoksa null döndür
+    if (!discountPercentage || discountPercentage <= 0) {
       return null;
     }
 
@@ -58,8 +79,6 @@ export const Price = observer((props: ProductDetailProps) => {
       price.formattedFinalPrice.replace(/[^\d.-]/g, "")
     );
 
-    // fixedDiscount.amount yüzde olarak kullanılacak (örneğin 30 = %30)
-    const discountPercentage = fixedDiscount.amount;
     const cartPrice = Math.max(
       0,
       currentPrice * (1 - discountPercentage / 100)
