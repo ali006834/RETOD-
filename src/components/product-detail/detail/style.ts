@@ -28,7 +28,7 @@ export const FavoriteButton = styled.button`
   cursor: pointer;
 
   @media (max-width: 1200px) {
-    right: -20px;
+    right: 0px;
   }
 `;
 

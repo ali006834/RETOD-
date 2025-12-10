@@ -481,7 +481,6 @@ const Price = observer(({ product }: Props) => {
 
     return formatCurrency(roundedCartPrice, currency, currencySymbol);
   };
-
   const cartPrice = getCartPrice();
 
   return (
@@ -495,13 +494,13 @@ const Price = observer(({ product }: Props) => {
             <span className={styles.price}>
               {product.selectedVariant.price.formattedFinalPrice}
             </span>
-            {cartPrice && (
+            {/* {cartPrice && (
               <span className={styles.cart_price}>
                 {" "}
                 <span className={styles.cart_price_label}>Sepette</span>{" "}
                 {cartPrice}
               </span>
-            )}
+            )} */}
           </div>
         </>
       ) : (
@@ -511,12 +510,12 @@ const Price = observer(({ product }: Props) => {
               {product.selectedVariant.price.formattedFinalPrice}
             </span>
           </span>
-          {cartPrice && (
+          {/* {cartPrice && (
             <span className={styles.cart_price}>
               <span className={styles.cart_price_label}>Sepette</span>{" "}
               {cartPrice}
             </span>
-          )}
+          )} */}
         </div>
       )}
     </div>

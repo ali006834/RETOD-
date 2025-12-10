@@ -108,12 +108,12 @@ export const Price = observer((props: ProductDetailProps) => {
       <span className={styles.price}>{price.formattedFinalPrice}</span>
 
       {/* Sepetteki fiyat */}
-      {cartPrice && (
+      {/* {cartPrice && (
         <span className={styles.cart_price}>
           {" "}
           <span className={styles.cart_price_label}>Sepette</span> {cartPrice}
         </span>
-      )}
+      )} */}
     </div>
   );
 });

@@ -3376,10 +3376,10 @@ pvtsutils@^1.3.5, pvtsutils@^1.3.6:
   dependencies:
     tslib "^2.8.1"
 
-pvutils@^1.1.3:
-  version "1.1.3"
-  resolved "https://registry.yarnpkg.com/pvutils/-/pvutils-1.1.3.tgz#f35fc1d27e7cd3dfbd39c0826d173e806a03f5a3"
-  integrity sha512-pMpnA0qRdFp32b1sJl1wOJNxZLQ2cbQx+k6tjNtZ8CpvVhNqEPRgivZ2WOUev2YMajecdH7ctUPDvEe87nariQ==
+pvutils@1.1.0, pvutils@^1.1.3:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/pvutils/-/pvutils-1.1.0.tgz#cb0efd90b486cc0a7b662a8c5afcca20d94a96a0"
+  integrity sha512-QVQRHN15oHryI08YueD9CD/yTSeICu3oOwcDURUcROVaEI39NP4f3zx1N6sTAP3yMRRU9lyOpn4NxSqfnVlnDw==
 
 query-string@^6.13.8:
   version "6.14.1"
