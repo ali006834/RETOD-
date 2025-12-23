@@ -7,8 +7,8 @@ import "swiper/css/scrollbar";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import { Navigation, Thumbs } from "swiper/modules";
-// @ts-ignore
-import ReactImageMagnify from "react-image-magnify";
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
 import styles from "./style.module.css";
 import ImagePopUp from "./imagePopUp";
 import { Image } from "@ikas/storefront";
@@ -120,24 +120,17 @@ const Slider = (props: ProductDetailProps) => {
                           }}
                         />
                       ) : (
-                        <ReactImageMagnify
-                          {...{
-                            smallImage: {
-                              alt: image.image?.altText || "",
-                              isFluidWidth: true,
-                              src: image.image?.src || "",
-                            },
-                            largeImage: {
-                              src: image.image?.src || "",
-                              width: 1200,
-                              height: 1800,
-                            },
-                            enlargedImagePosition: "over",
-                            isActivatedOnTouch: true,
-                            hoverDelayInMs: 250,
-                            hoverOffDelayInMs: 300,
-                          }}
-                        />
+                        <Zoom>
+                          <img
+                            src={image.image?.src || ""}
+                            alt={image.image?.altText || ""}
+                            style={{
+                              width: "100%",
+                              height: "100%",
+                              objectFit: "cover",
+                            }}
+                          />
+                        </Zoom>
                       )}
                     </div>
                   </div>
