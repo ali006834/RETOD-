@@ -41,14 +41,16 @@ const SideOpeningLastSeenProducts = (
       aria-label={title}
     >
       <div className={styles.controls}>
-        <button
-          type="button"
-          className={styles.iconButton}
-          onClick={() => setIsVisible(false)}
-          aria-label={t?.("common:close") || "Kapat"}
-        >
-          <CloseIcon color="#ffffff" width="1.1em" height="1.1em" />
-        </button>
+        {isExpanded && (
+          <button
+            type="button"
+            className={styles.iconButton}
+            onClick={() => setIsExpanded(false)}
+            aria-label={t?.("common:close") || "Kapat"}
+          >
+            <CloseIcon color="#ffffff" width="1.1em" height="1.1em" />
+          </button>
+        )}
 
         <button
           type="button"
@@ -66,22 +68,24 @@ const SideOpeningLastSeenProducts = (
         </button>
       </div>
 
-      <div className={styles.panel}>
-        <header className={styles.header}>
-          <span className={styles.title}>{title}</span>
-        </header>
+      {isExpanded && (
+        <div className={styles.panel}>
+          <header className={styles.header}>
+            <span className={styles.title}>{title}</span>
+          </header>
 
-        <div className={styles.products}>
-          {products.map((product) => (
-            <LastSeenProduct
-              key={product.id}
-              product={product}
-              isWidthVideo={isWidthVideo}
-              isExpanded={isExpanded}
-            />
-          ))}
+          <div className={styles.products}>
+            {products.map((product) => (
+              <LastSeenProduct
+                key={product.id}
+                product={product}
+                isWidthVideo={isWidthVideo}
+                isExpanded={isExpanded}
+              />
+            ))}
+          </div>
         </div>
-      </div>
+      )}
     </aside>
   );
 };

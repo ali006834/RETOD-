@@ -5681,13 +5681,6 @@
               }
             }
           }
-        },
-        {
-          "id": "cee15641-79ff-47fc-ae93-b5d8542d433c",
-          "componentId": "5b938e49-4689-466e-beb7-67dae7a3a123",
-          "propValues": {
-            "effects": "isValentinesDayEffectActive"
-          }
         }
       ],
       "specifications": [],
