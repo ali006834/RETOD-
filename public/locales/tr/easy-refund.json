@@ -1,0 +1,40 @@
+{
+  "fastReturns": "Hızlı İade",
+  "formText": "Bu form aracılığıyla alınan kişisel verileriniz, iade talebinizi değerlendirmek ve sizinle iletişime geçebilmek amacıyla işlenmektedir. Kişisel verilerinizin işlenmesine ilişkin detaylı bilgiye",
+  "fromHere": "buradan",
+  "toReach": "ulaşabilirsiniz.",
+  "select": "Seçiniz",
+  "subject": "Konu*",
+  "subSubject": "Alt Konu",
+  "subSubSubject": "Alt Konu Detay",
+  "orderNumber": "Sipariş Numarası*",
+  "invoiceNumber": "Fatura Numarası*",
+  "productCode": "Ürün Kodu*",
+  "firstName": "Ad*",
+  "lastName": "Soyad*",
+  "phone": "Telefon*",
+  "email": "Email*",
+  "message": "Mesaj*",
+  "submit": "Gönder",
+  "formTitle": "İletişim",
+  "photos": "Fotoğraflar",
+  "uploadPhotos": "Fotoğraf Yükle",
+  "maxPhotoLimit": "Maksimum 4 fotoğraf yükleyebilirsiniz",
+
+  "contact-form": {
+    "methodNotAllowed": "Yöntem izin verilmedi"
+  },
+
+  "errors": {
+    "title": "Hata",
+    "error": "Hata:",
+    "sendingError": "Gönderim hatası:",
+    "errorOccurredMessage": "Mesaj gönderilirken bir hata oluştu. Lütfen tekrar deneyin.",
+    "invalidPhoneNumber": "Lütfen geçerli bir telefon numarası giriniz. Format: 0 (000) 000 00 00",
+    "sending": "Gönderiliyor..."
+  },
+  "success": {
+    "title": "Başarılı",
+    "messageSentSuccessfully": "Mesajınız başarıyla gönderildi! Sizinle en kısa sürede iletişime geçeceğiz."
+  }
+}

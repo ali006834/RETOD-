@@ -210,6 +210,12 @@ export type FreeImageShowcase = {
 	relatedProduct?: IkasProduct;
 };
 
+export enum SpecialDayEffects{ 
+	"isEidEffectActive" = "isEidEffectActive",
+	"isNewYearEffectActive" = "isNewYearEffectActive",
+	"isValentinesDayEffectActive" = "isValentinesDayEffectActive",
+};
+
 export type HeaderProps = {
 	logo?: IkasImage;
 	logo_black?: IkasImage;
@@ -575,5 +581,19 @@ export type FeaturedFreeImageShowcaseProps = {
 export type SideOpeningLastSeenProductsProps = {
 	productsYouVisited?: IkasProductList;
 	isWidthVideo?: boolean;
+};
+
+export type EasyRefundProps = {
+	web3FormsAccessKey?: string;
+	image?: IkasImage;
+	imageMobil?: IkasImage;
+	title?: string;
+	content?: string;
+	otherLinks?: IkasNavigationLink[];
+	refundForm?: ContactForm[];
+};
+
+export type SpecialDayEffectsProps = {
+	effects?: SpecialDayEffects;
 };
 

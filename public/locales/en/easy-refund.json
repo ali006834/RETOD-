@@ -1,0 +1,41 @@
+{
+  "fastReturns": "Fast Return",
+  "formText": "The personal data collected through this form is processed for the purpose of evaluating your return request and contacting you. For more information about the processing of your personal data,",
+  "fromHere": "click here",
+  "toReach": "",
+  "select": "Select",
+  "subject": "Subject*",
+  "subSubject": "Sub Subject",
+  "subSubSubject": "Sub Subject Detail",
+  "orderNumber": "Order Number*",
+  "invoiceNumber": "Invoice Number*",
+  "productCode": "Product Code*",
+  "firstName": "First Name*",
+  "lastName": "Last Name*",
+  "phone": "Phone*",
+  "email": "Email*",
+  "message": "Message*",
+  "submit": "Submit",
+  "formTitle": "Contact",
+  "photos": "Photos",
+  "uploadPhotos": "Upload Photo(s)",
+  "maxPhotoLimit": "You can upload up to 4 photos",
+
+  "contact-form": {
+    "methodNotAllowed": "Method not allowed"
+  },
+
+  "errors": {
+    "title": "Error",
+    "error": "Error:",
+    "sendingError": "Sending error",
+    "errorOccurredMessage": "An error occurred while sending the message. Please try again.",
+    "invalidPhoneNumber": "Please enter a valid phone number. Format: 0 (000) 000 00 00",
+    "sending": "Sending..."
+  },
+
+  "success": {
+    "title": "Success",
+    "messageSentSuccessfully": "Your message has been sent successfully! We will contact you as soon as possible."
+  }
+}

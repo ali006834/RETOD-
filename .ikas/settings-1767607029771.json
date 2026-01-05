@@ -40,7 +40,10 @@
         "deleted": false,
         "locale": "tr",
         "path": null,
-        "id": "43e03d10-eb59-4347-896a-176be577b61c"
+        "id": "43e03d10-eb59-4347-896a-176be577b61c",
+        "priceListId": null,
+        "currencyCode": "TRY",
+        "currencySymbol": "₺"
       }
     ],
     "themes": [
