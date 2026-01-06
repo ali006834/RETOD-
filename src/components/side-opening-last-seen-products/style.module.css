@@ -5,7 +5,7 @@
   transform: translateY(-50%);
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 6px;
   z-index: 1100;
 }
 
@@ -39,15 +39,61 @@
 }
 
 .toggleButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.toggleArrow {
+  width: 44px;
+  height: 44px;
   border-radius: 12px 0 0 12px;
+  background-color: #000;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
-.toggleButton svg {
+.toggleArrow svg {
+  display: block;
   transition: transform 0.3s ease;
+  transform: rotate(180deg);
 }
 
-.toggleButtonExpanded svg {
+.toggleButton:hover .toggleArrow {
+  opacity: 0.85;
+  transform: translateX(-1px);
+}
+
+.toggleButtonExpanded .toggleArrow svg {
   transform: rotate(0deg);
+}
+
+.toggleLabel {
+  background-color: #f6f1eb;
+  color: #222;
+  padding: 12px 10px;
+  border-radius: 0 12px 12px 0;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  font-family: "ChronicleDisplay";
+  line-height: 1.2;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggleButtonExpanded .toggleLabel {
+  display: none;
 }
 
 .panel {
@@ -200,9 +246,19 @@
 
 @media (max-width: 768px) {
   .wrapper {
-    right: 12px;
+    right: 5px;
     top: 50%;
     transform: translateY(-50%);
+  }
+
+  .iconButton {
+    width: 36px;
+    height: 36px;
+  }
+
+  .toggleArrow {
+    width: 36px;
+    height: 36px;
   }
 
   .panel {

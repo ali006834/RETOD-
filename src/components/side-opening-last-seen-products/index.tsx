@@ -54,7 +54,7 @@ const SideOpeningLastSeenProducts = (
 
         <button
           type="button"
-          className={`${styles.iconButton} ${styles.toggleButton} ${
+          className={`${styles.toggleButton} ${
             isExpanded ? styles.toggleButtonExpanded : ""
           }`}
           onClick={() => setIsExpanded((prev) => !prev)}
@@ -64,16 +64,15 @@ const SideOpeningLastSeenProducts = (
               : t?.("common:expand") || "Genişlet"
           }
         >
-          <ArrowRightIcon fill="#ffffff" width="1.1em" height="1.1em" />
+          <span className={styles.toggleArrow}>
+            <ArrowRightIcon fill="#ffffff" width="1.1em" height="1.1em" />
+          </span>
+          <span className={styles.toggleLabel}>{title}</span>
         </button>
       </div>
 
       {isExpanded && (
         <div className={styles.panel}>
-          <header className={styles.header}>
-            <span className={styles.title}>{title}</span>
-          </header>
-
           <div className={styles.products}>
             {products.map((product) => (
               <LastSeenProduct
