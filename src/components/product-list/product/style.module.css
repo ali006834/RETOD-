@@ -501,7 +501,7 @@
 }
 
 /*+ Product list görselleri için coverları daha da yakınlaştırma.. */
-.product_list_swiper :global(.swiper-slide) img {
+/* .product_list_swiper :global(.swiper-slide) img {
   object-fit: cover !important;
   object-position: center center !important;
   transform: scale(1.1) !important;
@@ -511,10 +511,10 @@
   object-fit: cover !important;
   object-position: center center !important;
   transform: scale(1.1) !important;
-}
+} */
 
 /* Tek görsel gösterilen durumlar için */
-.imageContainer img {
+/* .imageContainer img {
   object-fit: cover !important;
   object-position: center center !important;
   transform: scale(1.1) !important;
@@ -524,7 +524,7 @@
   object-fit: cover !important;
   object-position: center center !important;
   transform: scale(1.1) !important;
-}
+} */
 
 /* Web için normal boyut pagination bullet'ları */
 .product_list_swiper :global(.swiper-pagination-bullet) {
