@@ -9,6 +9,24 @@ import { useScreen } from "src/utils/hooks/useScreen";
 
 export const NS = "product-detail";
 
+const COOKIE_NAME = "lastSeenProductsClosed";
+
+// Cookie okuma fonksiyonu (Kullanıcı tarayıcı kapatana kadar cookie değeri true ise görünür, false ise gizli)
+const getCookie = (name: string): string | null => {
+  if (typeof document === "undefined") return null;
+  const value = `; ${document.cookie}`;
+  const parts = value.split(`; ${name}=`);
+  if (parts.length === 2) {
+    return parts.pop()?.split(";").shift() || null;
+  }
+  return null;
+};
+// Session cookie yazma fonksiyonu
+const setSessionCookie = (name: string, value: string): void => {
+  if (typeof document === "undefined") return;
+  document.cookie = `${name}=${value}; path=/`;
+};
+
 const SideOpeningLastSeenProducts = (
   props: SideOpeningLastSeenProductsProps
 ) => {
@@ -16,7 +34,11 @@ const SideOpeningLastSeenProducts = (
   const { t } = useTranslation();
   const { width } = useScreen();
 
-  const [isVisible, setIsVisible] = React.useState(true);
+  // Çerezden başlangıç görünürlüğünü oku
+  const [isVisible, setIsVisible] = React.useState(() => {
+    const cookieValue = getCookie(COOKIE_NAME);
+    return cookieValue !== "true";
+  });
   const [isExpanded, setIsExpanded] = React.useState(false);
 
   const productCount = React.useMemo(() => {
@@ -45,7 +67,10 @@ const SideOpeningLastSeenProducts = (
           <button
             type="button"
             className={styles.iconButton}
-            onClick={() => setIsExpanded(false)}
+            onClick={() => {
+              setSessionCookie(COOKIE_NAME, "true");
+              setIsVisible(false);
+            }}
             aria-label={t?.("common:close") || "Kapat"}
           >
             <CloseIcon color="#ffffff" width="1.1em" height="1.1em" />
