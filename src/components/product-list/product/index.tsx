@@ -26,14 +26,18 @@ import "swiper/css/scrollbar";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css";
+import { CustomProductTags } from "src/components/__generated__/types";
+import CustomTag from "./custom-tags";
 
 type Props = {
   product: IkasProduct;
   columns?: number;
   isWidthVideo?: boolean;
+  tags?: CustomProductTags[];
+  alignTagsRight?: boolean;
 };
 const Product = (props: Props) => {
-  const { product, columns, isWidthVideo } = props;
+  const { product, columns, isWidthVideo, tags, alignTagsRight } = props;
   const { t } = useTranslation();
   const { isMobile } = useScreen();
 
@@ -66,6 +70,11 @@ const Product = (props: Props) => {
         <Link href={product.href}>
           <a>
             <S.ImageWrapper $hasStock={product.hasStock}>
+              <CustomTag
+                product={product}
+                tags={tags}
+                alignTagsRight={alignTagsRight}
+              />
               <ProductImage {...props} isWidthVideo={isWidthVideo} />
             </S.ImageWrapper>
           </a>
@@ -481,6 +490,7 @@ const Price = observer(({ product }: Props) => {
 
     return formatCurrency(roundedCartPrice, currency, currencySymbol);
   };
+
   const cartPrice = getCartPrice();
 
   return (
@@ -546,5 +556,6 @@ const ProductTitle = observer(({ product }: Props) => {
     </div>
   );
 });
+
 
 export default observer(Product);

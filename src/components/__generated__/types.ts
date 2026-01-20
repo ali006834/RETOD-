@@ -4,11 +4,11 @@ import {
 	IkasVideo,
 	IkasProductList,
 	IkasProduct,
+	IkasSlider,
 	IkasCategoryList,
 	IkasBlogList,
 	IkasBlog,
 	IkasComponentRenderer,
-	IkasSlider,
 } from "@ikas/storefront"
 
 export type ScrollingTexts = { 
@@ -216,6 +216,14 @@ export enum SpecialDayEffects{
 	"isValentinesDayEffectActive" = "isValentinesDayEffectActive",
 };
 
+export type CustomProductTags = { 
+	iconWithTags?: string;
+	iconImage?: IkasImage;
+	iconTagName?: string;
+	width?: IkasSlider;
+	widthMobile?: IkasSlider;
+};
+
 export type HeaderProps = {
 	logo?: IkasImage;
 	logo_black?: IkasImage;
@@ -303,6 +311,8 @@ export type ProductListProps = {
 	productList?: IkasProductList;
 	categorNames?: DiscountBannerCategoryNames[];
 	isWidthVideo?: boolean;
+	tags?: CustomProductTags[];
+	alignTagsRight?: boolean;
 };
 
 export type ProductDetailProps = {
