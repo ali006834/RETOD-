@@ -1,0 +1,112 @@
+.container {
+  width: 100%;
+  position: relative;
+  display: flex;
+  margin-top: -1px; 
+  font-family: "Helvetica" !important;
+  font-weight: 300;
+}
+
+.containerLeft {
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.containerCenter {
+  justify-content: center;
+  align-items: center;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 8px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+  background: transparent; 
+}
+
+.alignLeft {
+  justify-content: flex-start;
+  left: 0;
+}
+
+.alignCenter {
+  justify-content: center;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.badgeIcon {
+  flex-shrink: 0;
+}
+
+.badgeIconImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Slide up/down animation */
+.slideUpDownActive {
+  opacity: 1;
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.slideUpDownInactive {
+  opacity: 0;
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Align left için transform */
+.alignLeft.slideUpDownActive {
+  transform: translateY(0);
+}
+
+.alignLeft.slideUpDownInactive {
+  transform: translateY(5px);
+}
+
+/* Align center için transform override */
+.alignCenter.slideUpDownActive {
+  transform: translate(-50%, 0);
+}
+
+.alignCenter.slideUpDownInactive {
+  transform: translate(-50%, 5px);
+}
+
+/* Fade Slow Effect animation */
+.fadeSlowActive {
+  opacity: 1;
+  transition: opacity 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.fadeSlowInactive {
+  opacity: 0;
+  transition: opacity 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Align left için transform */
+.alignLeft.fadeSlowActive {
+  transform: translateY(0);
+}
+
+.alignLeft.fadeSlowInactive {
+  transform: translateY(0);
+}
+
+/* Align center için transform override */
+.alignCenter.fadeSlowActive {
+  transform: translate(-50%, 0);
+}
+
+.alignCenter.fadeSlowInactive {
+  transform: translate(-50%, 0);
+}
+

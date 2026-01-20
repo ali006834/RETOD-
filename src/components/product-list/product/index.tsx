@@ -26,8 +26,9 @@ import "swiper/css/scrollbar";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css";
-import { CustomProductTags } from "src/components/__generated__/types";
+import { CustomProductTags, CampaignTagsMain } from "src/components/__generated__/types";
 import CustomTag from "./custom-tags";
+import CampaignTag from "./custom-campaign";
 
 type Props = {
   product: IkasProduct;
@@ -35,9 +36,11 @@ type Props = {
   isWidthVideo?: boolean;
   tags?: CustomProductTags[];
   alignTagsRight?: boolean;
+  campaignList?: CampaignTagsMain;
+  showTags?: boolean;
 };
 const Product = (props: Props) => {
-  const { product, columns, isWidthVideo, tags, alignTagsRight } = props;
+  const { product, columns, isWidthVideo, tags, alignTagsRight, campaignList, showTags } = props;
   const { t } = useTranslation();
   const { isMobile } = useScreen();
 
@@ -79,6 +82,10 @@ const Product = (props: Props) => {
             </S.ImageWrapper>
           </a>
         </Link>
+        <CampaignTag
+          product={product}
+          campaignList={campaignList}
+        />
       </div>
       <div className={styles.product_Info}>
         {ifColumnNotEqual6 && !ifColumnEqual5 && !ifColumnEqual4 && (
@@ -87,7 +94,7 @@ const Product = (props: Props) => {
             <Price {...props} />
           </>
         )}
-        {ifColumnNotEqual6 && !ifColumnEqual5 && <ProductTag {...props} />}
+        {ifColumnNotEqual6 && !ifColumnEqual5 && showTags && <ProductTag {...props} />}
       </div>
       {!isMobile && (
         <div className={styles.onHoverAddCart}>

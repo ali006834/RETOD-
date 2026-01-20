@@ -19,7 +19,7 @@ import SpecialDiscountBanner from "./special-discount-banner";
 import Pagination from "./pagination";
 
 const ProductList = (props: ProductListProps) => {
-  const { productList, categories, categorNames, isWidthVideo, tags, alignTagsRight } = props;
+  const { productList, categories, categorNames, isWidthVideo, tags, alignTagsRight, campaignList, showTags } = props;
 
   if (!productList) {
     return null;
@@ -265,6 +265,8 @@ const ProductList = (props: ProductListProps) => {
                     isWidthVideo={isWidthVideo}
                     tags={tags}
                     alignTagsRight={alignTagsRight}
+                    campaignList={campaignList}
+                    showTags={showTags}
                   />
                 );
               })}

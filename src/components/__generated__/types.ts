@@ -224,6 +224,38 @@ export type CustomProductTags = {
 	widthMobile?: IkasSlider;
 };
 
+export type CampaignTags = { 
+	badgeWithTagsName?: string;
+	badgeIcon?: IkasImage;
+	badgeName?: string;
+	iconWidthValue?: IkasSlider;
+};
+
+export type CampaignTagsMain = { 
+	badge?: CampaignTags;
+	badgeAlignment?: AlignmentSettings;
+	badgeLoopDuration?: IkasSlider;
+	badgeAnimation?: AnimationTypes;
+	badgeTextColor?: string;
+	badgeBgColor1?: string;
+	badgeBgColor2?: string;
+	badgeFontSize?: IkasSlider;
+	badgeMobileFontSize?: IkasSlider;
+	badgeHeight?: IkasSlider;
+	badgeMobileHeight?: IkasSlider;
+};
+
+export enum AnimationTypes{ 
+	"Slide up/down" = "Slide up/down",
+	"Fade Slow Effect" = "Fade Slow Effect",
+};
+
+export enum AlignmentSettings{ 
+	"start" = "start",
+	"center" = "center",
+	"left" = "left",
+};
+
 export type HeaderProps = {
 	logo?: IkasImage;
 	logo_black?: IkasImage;
@@ -313,6 +345,8 @@ export type ProductListProps = {
 	isWidthVideo?: boolean;
 	tags?: CustomProductTags[];
 	alignTagsRight?: boolean;
+	campaignList?: CampaignTagsMain;
+	showTags?: boolean;
 };
 
 export type ProductDetailProps = {
