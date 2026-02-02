@@ -53,17 +53,18 @@ const FeaturedProductShowcase = (props: FeaturedProductShowcaseProps) => {
               nextEl: ".swiper-button-next",
               prevEl: "", // Sol ok Olmayacak
             }}
-            loop={true} // Sonsuz döngü
+            loop={true} 
+            rewind={true}
             slidesPerView={2.5} // Varsayılan mobil
-            spaceBetween={15}
+            spaceBetween={5}
             breakpoints={{
               768: {
                 slidesPerView: 3, // Tablet
-                spaceBetween: 15,
+                spaceBetween: 5,
               },
               1024: {
-                slidesPerView: 4.5, // Web
-                spaceBetween: 15,
+                slidesPerView: 4, // Web
+                spaceBetween: 5,
                 slidesPerGroup: 4, // Kaydırma grup sayısı
               },
             }}

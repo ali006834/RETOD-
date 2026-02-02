@@ -3606,6 +3606,11 @@ react-medium-image-zoom@^5.4.0:
   resolved "https://registry.npmjs.org/react-medium-image-zoom/-/react-medium-image-zoom-5.4.0.tgz"
   integrity sha512-BsE+EnFVQzFIlyuuQrZ9iTwyKpKkqdFZV1ImEQN573QPqGrIUuNni7aF+sZwDcxlsuOMayCr6oO/PZR/yJnbRg==
 
+react-mouse-position@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/react-mouse-position/-/react-mouse-position-1.0.0.tgz"
+  integrity sha512-GgeruAToHQurG7a/TpxQOPvmULhRPwvCvqPnGLc0mA3wKwf/YUKNfc34IzBVq1M/Q28IVhln6pHDuyA3k9f8lw==
+
 react-phone-input-2@^2.15.1:
   version "2.15.1"
   resolved "https://registry.npmjs.org/react-phone-input-2/-/react-phone-input-2-2.15.1.tgz"

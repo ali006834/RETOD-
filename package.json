@@ -18,6 +18,7 @@
     "@ikas/storefront-peer-deps": "^4.0.0",
     "lucide-react": "^0.539.0",
     "react-medium-image-zoom": "^5.4.0",
+    "react-mouse-position": "^1.0.0",
     "react-phone-input-2": "^2.15.1",
     "react-slick": "^0.30.3",
     "react-snowfall": "^2.4.0",
