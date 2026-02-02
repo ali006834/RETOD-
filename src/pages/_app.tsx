@@ -27,7 +27,7 @@ const IkasThemeApp: React.FC<AppProps> = (props) => {
       <Component {...pageProps} />
       <FloatingButtons />
       <CookieConsent />
-      {/* <HeartTrails /> */}
+      <HeartTrails />
     </ThemeProvider>
   );
 };
