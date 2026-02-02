@@ -77,8 +77,6 @@ const Item = ({
     setTimeout(() => setShowStockAlert(false), 2500);
   };
 
-  console.log("item >>>>> ", item);
-
   return (
     <>
       {showRemovedMessage ? (

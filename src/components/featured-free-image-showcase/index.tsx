@@ -25,8 +25,6 @@ const FeaturedFreeImageShowcase = (props: FeaturedFreeImageShowcaseProps) => {
     return null;
   }
 
-  console.log("products >>>> ", products);
-
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>

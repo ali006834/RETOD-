@@ -641,3 +641,10 @@ export type SpecialDayEffectsProps = {
 	effects?: SpecialDayEffects;
 };
 
+export type InstagramPostsProps = {
+	title?: string;
+	instagramMediaLimit?: IkasSlider;
+	image?: IkasImage;
+	access_token?: string;
+};
+

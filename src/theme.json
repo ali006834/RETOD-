@@ -14,7 +14,7 @@
       "componentJson": null,
       "props": [
         {
-          "id": "f1cf6510-6286-45a2-97c5-9e470f7a6895",
+          "id": "143b4553-9c43-4643-a61f-b8334e8bd96b",
           "name": "logo",
           "displayName": "",
           "description": "",
@@ -28,7 +28,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "0fc84dbc-27ec-4e06-bc5d-ee12eb508b60",
+          "id": "09b66369-882b-448e-84c7-5cd03bb3aadc",
           "name": "showTax",
           "displayName": "",
           "description": "",
@@ -42,7 +42,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "b3b04261-430b-480d-a59e-225a42656aa0",
+          "id": "b51443a2-56a9-4482-a092-ff4ba051fcaf",
           "name": "showLoyaltyPoints",
           "displayName": "",
           "description": "",
@@ -56,7 +56,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "ab075e15-e43e-4b14-bbd2-831525a97eb7",
+          "id": "e56bb40e-8f5a-42c3-b819-795d13fa7fdf",
           "name": "showCampaignOffersDesign",
           "displayName": "",
           "description": "",
@@ -70,7 +70,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "a224cd17-7f11-4e15-8472-4a45329cd8d3",
+          "id": "1ac4073e-87c7-49ff-baf1-94b140a52c15",
           "name": "campaignOfferIsSmallDesign",
           "displayName": "",
           "description": "",
@@ -84,7 +84,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "1a651aa6-f4c7-4820-8b58-0080e041fd6e",
+          "id": "1f55382a-62f8-447a-8423-b7137fc1f8cc",
           "name": "showCampaignIsBiggerImage",
           "displayName": "",
           "description": "",
@@ -98,7 +98,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "eee2b16d-9e04-49a1-a671-ba2a66ae85bd",
+          "id": "c8448355-91c9-4541-90fc-a5a11a9670e4",
           "name": "campaignOffersTitleColor",
           "displayName": "",
           "description": "",
@@ -112,7 +112,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "dcb24766-6011-4b3d-9a04-a77af64d68a1",
+          "id": "fc8d6397-ea8b-42bd-960d-97d6fa71cd0e",
           "name": "campaignOffersDescriptionColor",
           "displayName": "",
           "description": "",
@@ -126,7 +126,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "130b85f6-5718-440d-96fc-0674983d19dc",
+          "id": "30fb8433-8ea8-4648-b957-0924a03dd944",
           "name": "campaignOffersContainerBgColor",
           "displayName": "",
           "description": "",
@@ -140,7 +140,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "529fbbbd-b4cb-4c88-89c2-419cf7d225c2",
+          "id": "a8df28fc-1792-4d3c-aa7b-e330d3f01a85",
           "name": "showCampaignShowDiscountSettings",
           "displayName": "",
           "description": "",
@@ -154,7 +154,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "fdb67cb7-1793-46f0-ac9f-37a2feaf788e",
+          "id": "51d8376d-f825-4ef1-ba0b-ff7fe283ec69",
           "name": "showCampaignHideDiscountBadge",
           "displayName": "",
           "description": "",
@@ -168,7 +168,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "dda66f4f-cbe3-42ea-b60c-7292c99b65fb",
+          "id": "044f7250-ecf9-40e1-b16e-b21bc9649bc6",
           "name": "campaignOffersDiscountPercentageColor",
           "displayName": "",
           "description": "",
@@ -182,7 +182,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "0b4e6dd1-e144-4dc3-a941-3c84282a7a9c",
+          "id": "ac68ef19-7387-46dd-818f-e22a247601e1",
           "name": "campaignOffersDiscountPercentageBgColor",
           "displayName": "",
           "description": "",
@@ -196,7 +196,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "2dec0d9d-43aa-49df-aa50-c2127e375fe3",
+          "id": "7817af0a-faca-4fd6-bf3f-f132a60395ad",
           "name": "showCampaignShowCountdownSettings",
           "displayName": "",
           "description": "",
@@ -210,7 +210,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "185bfe6a-1150-412e-b0ec-87f371138c6a",
+          "id": "321ad0e6-91fb-457d-925c-1ae79c2f1ec9",
           "name": "campaignOfferCountdownStyleIsLine",
           "displayName": "",
           "description": "",
@@ -224,7 +224,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "4700065e-5946-4eb5-ba96-e4b0d3943df8",
+          "id": "81e04ca8-2bc8-48d9-8e9e-0a968b57e089",
           "name": "campaignOffersCountdownTextColor",
           "displayName": "",
           "description": "",
@@ -238,7 +238,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "cd0e5815-df71-4b70-95e7-78ed4711de3c",
+          "id": "c7a9978e-3f68-4bba-a7c7-31650646d005",
           "name": "campaignOffersCountdownTimeColor",
           "displayName": "",
           "description": "",
@@ -252,7 +252,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "041bb10d-5d0f-49ec-8e54-158db5e6583d",
+          "id": "4a1fc29b-3d56-4344-aa00-93dd113c7e0d",
           "name": "campaignOffersCountdownBgColor",
           "displayName": "",
           "description": "",
@@ -266,7 +266,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "a6d16802-4335-4547-9234-8e43961e65d1",
+          "id": "ef09868b-54c2-4b17-98bd-422ba6d12f67",
           "name": "campaignOffersEnableMiddlePhase",
           "displayName": "",
           "description": "",
@@ -280,7 +280,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "bf29b77e-10e6-4437-a9b2-7bdc0c078ec0",
+          "id": "80005f0b-a184-46d5-8963-f459a5a0d245",
           "name": "campaignOffersMiddlePhaseOverlayColor",
           "displayName": "",
           "description": "",
@@ -294,7 +294,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "c7e52b7e-4fbd-442f-bd14-ebc5a8cd814f",
+          "id": "d0252104-856d-4764-a3fa-9d42cea56934",
           "name": "campaignOfferCountdownStyleIsLineSuccessPage",
           "displayName": "",
           "description": "",
@@ -308,7 +308,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "62e29fcc-2ccf-4a39-80aa-59c06b7e457b",
+          "id": "76a582aa-d909-4f9e-af19-0bc1cf5c7b22",
           "name": "buttonBgColor",
           "displayName": "",
           "description": "",
@@ -322,7 +322,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "0f2229a2-712d-450a-afc1-5fd17e33e083",
+          "id": "ccfc84c4-475b-4600-b63d-3bd8f7dd0426",
           "name": "buttonTextColor",
           "displayName": "",
           "description": "",
@@ -336,7 +336,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "6c8d6bf8-a9ec-4533-91b5-b5b29b2bbc07",
+          "id": "a5f7f6a5-d82b-472e-b49a-86a7811fb8cc",
           "name": "buttonDisabledBgColor",
           "displayName": "",
           "description": "",
@@ -350,7 +350,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "9988a5be-65c0-450a-86f9-5a6ba081f8e3",
+          "id": "60b14473-a213-49c4-8987-e0c8baeeae7d",
           "name": "buttonDisabledTextColor",
           "displayName": "",
           "description": "",
@@ -364,7 +364,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "8778d2d7-5d8d-42d5-83af-18b518d1f5e6",
+          "id": "ce6daa00-4c1a-44be-8663-c4883f3e2c81",
           "name": "primaryTextColor",
           "displayName": "",
           "description": "",
@@ -378,7 +378,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "77ff9cb3-d44d-4e6b-8c0c-0a6a72cd199e",
+          "id": "823e3aa0-4fbb-4174-b9bd-6847b05cbf75",
           "name": "secondaryTextColor",
           "displayName": "",
           "description": "",
@@ -392,7 +392,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "93386386-d550-4b2b-a682-14b8a840dcc8",
+          "id": "6c09c874-2cb3-47e1-a24a-9bba6a87b7ac",
           "name": "primaryBgColor",
           "displayName": "",
           "description": "",
@@ -406,7 +406,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "b24343fb-0948-47b2-88c9-a2cbcc528b1b",
+          "id": "7e2ad35c-df12-4cad-9fe1-199478aee2c2",
           "name": "secondaryBgColor",
           "displayName": "",
           "description": "",
@@ -420,7 +420,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "32e9aa7b-2d6b-4bf7-94aa-4cf9fb4569eb",
+          "id": "0dd81a55-bf08-4192-9fd3-7bb3ce513a36",
           "name": "borderColor",
           "displayName": "",
           "description": "",
@@ -434,7 +434,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "1f236191-5429-416c-ab3d-31341ca74a6a",
+          "id": "81e1c3f5-6f18-4914-a52f-f5c52469c2cb",
           "name": "cardBgColor",
           "displayName": "",
           "description": "",
@@ -448,7 +448,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "363173f6-23e4-4d8e-82c6-2cfd20ac614c",
+          "id": "affce870-9e44-4233-9e3b-066b19b7777b",
           "name": "errorColor",
           "displayName": "",
           "description": "",
@@ -462,7 +462,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "be52679d-a385-4ed2-9f8f-304518024258",
+          "id": "af24fd56-b2c0-48a3-bc6c-41de07df45e0",
           "name": "errorLightColor",
           "displayName": "",
           "description": "",
@@ -476,7 +476,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "4bfbbaf1-ef97-4396-827b-e9f264d7873b",
+          "id": "b7c4cb3d-6c4e-4940-b181-72217a941784",
           "name": "warningColor",
           "displayName": "",
           "description": "",
@@ -490,7 +490,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "a8eccb14-4928-4bb9-ac07-e0aff4667b9e",
+          "id": "ce80f2bc-c5c3-4777-83d5-3581ba3532ee",
           "name": "warningLightColor",
           "displayName": "",
           "description": "",
@@ -504,7 +504,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "b8a7cae4-a5e7-4155-beb2-967a45c756c1",
+          "id": "99e06f05-4e34-4fba-ac74-00f1c88f00e6",
           "name": "successColor",
           "displayName": "",
           "description": "",
@@ -518,7 +518,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "65aa8b2d-5dba-4ca7-b059-f58ce83a911e",
+          "id": "fbe1df39-6bd0-47df-b3f6-2651a8581f0a",
           "name": "successLightColor",
           "displayName": "",
           "description": "",
@@ -532,7 +532,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "a7553d43-a40c-47ca-b30c-acdf0e123b34",
+          "id": "7391497c-e8c9-45d1-83d3-3d1a2a65dfc5",
           "name": "secondaryButtonBgColor",
           "displayName": "",
           "description": "",
@@ -546,7 +546,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "be1260de-3f32-4847-8ad1-413222ce89d4",
+          "id": "d9d70270-94f3-455a-afa1-62f24f02cf00",
           "name": "secondaryButtonTextColor",
           "displayName": "",
           "description": "",
@@ -560,7 +560,7 @@
           "isFacetListNotSent": false
         },
         {
-          "id": "38657484-9417-41c9-8196-1204c3e121c1",
+          "id": "d0e0bec3-ae84-497d-98c7-f4eecd404cdf",
           "name": "secondaryButtonBorderColor",
           "displayName": "",
           "description": "",
@@ -4894,6 +4894,83 @@
       "defaultPropValuesTranslations": {},
       "defaultPropValues": {},
       "commonPropValues": null
+    },
+    {
+      "id": "7003acbd-9f18-4001-8337-9a6f6e6b4ecb",
+      "dir": "instagram-posts",
+      "displayName": "İnstagram Akış Alanı (Instagram Posts)",
+      "description": "",
+      "type": "COMPONENT",
+      "componentJson": null,
+      "props": [
+        {
+          "id": "e788e46f-c324-49e0-8b43-8da9bc55346b",
+          "name": "title",
+          "displayName": "Başlık Metni",
+          "description": "",
+          "type": "TEXT",
+          "isRequired": false,
+          "sliderData": {},
+          "translations": {},
+          "groupId": "cb50ade4-c184-4f8e-b0c6-862d6d3392ac",
+          "excludedFields": [],
+          "excludedFieldsCategory": [],
+          "isFacetListNotSent": false
+        },
+        {
+          "id": "ea0b2f28-5c69-460a-933e-224c9631f440",
+          "name": "instagramMediaLimit",
+          "displayName": "Instagram Gönderi Limiti",
+          "description": "Instagram hesabınızdan çekilecek maksimum gönderi sayısını belirler.",
+          "type": "SLIDER",
+          "isRequired": false,
+          "sliderData": {
+            "min": 10,
+            "max": 50,
+            "interval": 1,
+            "unit": "Post"
+          },
+          "translations": {},
+          "groupId": "cb50ade4-c184-4f8e-b0c6-862d6d3392ac",
+          "excludedFields": [],
+          "excludedFieldsCategory": [],
+          "isFacetListNotSent": false
+        },
+        {
+          "id": "2d2d5664-0cde-4568-927f-08b8a1ee677c",
+          "name": "image",
+          "displayName": "Logo",
+          "description": "",
+          "type": "IMAGE",
+          "isRequired": false,
+          "sliderData": {},
+          "translations": {},
+          "groupId": "704db35a-803a-497e-9712-69c1fb554120",
+          "excludedFields": [],
+          "excludedFieldsCategory": [],
+          "isFacetListNotSent": false
+        },
+        {
+          "id": "22126d4b-f1d3-4ccc-899e-e645bb6532e4",
+          "name": "access_token",
+          "displayName": "Instagram Erişim Anahtarı",
+          "description": "",
+          "type": "TEXT",
+          "isRequired": false,
+          "sliderData": {},
+          "translations": {},
+          "groupId": "6fd2d602-27ba-4c51-af8c-adfdc4f73160",
+          "excludedFields": [],
+          "excludedFieldsCategory": [],
+          "isFacetListNotSent": false
+        }
+      ],
+      "isHeader": false,
+      "isFooter": false,
+      "translations": {},
+      "defaultPropValuesTranslations": {},
+      "defaultPropValues": {},
+      "commonPropValues": null
     }
   ],
   "pages": [
@@ -5450,19 +5527,6 @@
           }
         },
         {
-          "id": "8b151713-eb1a-48c8-ad94-6af9251f5d99",
-          "componentId": "b6358ec8-31e9-49ac-a40c-eadddc12f25d",
-          "propValues": {
-            "title": "",
-            "image": {
-              "id": "theme-images/ec6c56f3-18a5-4e44-81c9-5196d28f7677",
-              "altText": null
-            },
-            "posts": "213",
-            "followers": "134.675"
-          }
-        },
-        {
           "id": "9bda7c59-d2e8-4478-87f1-e44eb5ddea01",
           "componentId": "b6119c6a-04ef-4f91-932a-0bfcc99efc43",
           "propValues": {
@@ -5796,6 +5860,22 @@
               "recommendedProductsType": {
                 "recommendedProductType": "CATEGORY"
               }
+            }
+          }
+        },
+        {
+          "id": "a27f3bce-f09f-4ad9-8bae-c5fc836e2871",
+          "componentId": "7003acbd-9f18-4001-8337-9a6f6e6b4ecb",
+          "propValues": {
+            "title": "İnstagram'dan Bizi Takip Edin",
+            "image": {
+              "id": "theme-images/b76939ba-f578-40df-90dc-f8b1f456a618",
+              "altText": null
+            },
+            "access_token": "IGAARX0oUvinlBZAGJfZAjlBZA19DQUxVNHhpdFJkY0N3ZAWF0eC1GR09uZA054YzVYNlJrV29KaU9wdjBxNzU5d3Jxc3p6b3ZA0R3hURTNIckJzODJ0bmNRbUpuUnk4ZAXdRN0lLQlZA6VHpnNkRvQTlhZAGNra2dNYWhneWZA5emxHRFV1TQZDZD",
+            "instagramMediaLimit": {
+              "value": 27,
+              "unit": "Post"
             }
           }
         }
@@ -18518,6 +18598,80 @@
                           "recommendedProductType": "CATEGORY"
                         }
                       }
+                    }
+                  ],
+                  "webGapValue": {
+                    "value": 0,
+                    "unit": "px"
+                  },
+                  "mobilGapValue": {
+                    "value": 0,
+                    "unit": "px"
+                  }
+                }
+              },
+              {
+                "id": "8ff618e1-5be2-412c-879c-dec864298554",
+                "componentId": "4611b348-95d3-4a13-bb30-5ea975c5fb28",
+                "propValues": {
+                  "imageList": [
+                    {
+                      "imageWeb": {
+                        "id": "theme-images/32600ee2-b185-4960-8eaf-b0a364cc2c6f",
+                        "altText": null
+                      },
+                      "imageMobil": {
+                        "id": "theme-images/29ecfda7-1d52-40d4-b915-96852122abe1",
+                        "altText": null
+                      },
+                      "relatedProduct": {
+                        "id": "7275f6a8-a091-4546-a08f-75747984fc43",
+                        "productListType": "STATIC",
+                        "initialSort": "LAST_ADDED",
+                        "initialLimit": 20,
+                        "productCount": null,
+                        "productIds": [
+                          {
+                            "productId": "eb81ceef-cde5-43db-abef-e757b27b24f7",
+                            "variantId": "bde7629b-4e57-4fc6-b317-1165a003f428"
+                          }
+                        ],
+                        "category": null,
+                        "usePageFilter": null,
+                        "relatedProductsType": null,
+                        "recommendedProductsType": {
+                          "recommendedProductType": "CATEGORY"
+                        }
+                      }
+                    },
+                    {
+                      "imageWeb": {
+                        "id": "theme-images/83bc8895-e055-4131-8eef-9e8fe914f3b8",
+                        "altText": null
+                      },
+                      "imageMobil": {
+                        "id": "theme-images/e9282f92-1b75-4035-86ef-7e429bd36fdc",
+                        "altText": null
+                      },
+                      "relatedProduct": {
+                        "id": "ec737f93-36dd-45bb-a195-462d63552f5e",
+                        "productListType": "STATIC",
+                        "initialSort": "LAST_ADDED",
+                        "initialLimit": 20,
+                        "productCount": null,
+                        "productIds": [
+                          {
+                            "productId": "5dab44c4-f7ba-4be1-8da7-2903cb7e57b5",
+                            "variantId": "7c8ad198-faa4-4c8a-a876-a995ba83f910"
+                          }
+                        ],
+                        "category": null,
+                        "usePageFilter": null,
+                        "relatedProductsType": null,
+                        "recommendedProductsType": {
+                          "recommendedProductType": "CATEGORY"
+                        }
+                      }
                     },
                     {
                       "relatedProduct": {
@@ -18552,102 +18706,119 @@
                 }
               },
               {
-                "id": "93fd11c2-62ff-46ea-b25a-c951e6a644cc",
+                "id": "440436e6-5a7b-4812-90ce-b0e02754b89e",
                 "componentId": "4611b348-95d3-4a13-bb30-5ea975c5fb28",
                 "propValues": {
                   "imageList": [
                     {
                       "imageWeb": {
-                        "id": "theme-images/963c1c54-a0b8-4dc6-8fc0-210357659a1e",
+                        "id": "theme-images/32600ee2-b185-4960-8eaf-b0a364cc2c6f",
                         "altText": null
                       },
                       "imageMobil": {
-                        "id": "theme-images/5e255d94-3115-46d0-88d5-35d80c47c183",
+                        "id": "theme-images/29ecfda7-1d52-40d4-b915-96852122abe1",
                         "altText": null
+                      },
+                      "relatedProduct": {
+                        "id": "7275f6a8-a091-4546-a08f-75747984fc43",
+                        "productListType": "STATIC",
+                        "initialSort": "LAST_ADDED",
+                        "initialLimit": 20,
+                        "productCount": null,
+                        "productIds": [
+                          {
+                            "productId": "eb81ceef-cde5-43db-abef-e757b27b24f7",
+                            "variantId": "bde7629b-4e57-4fc6-b317-1165a003f428"
+                          }
+                        ],
+                        "category": null,
+                        "usePageFilter": null,
+                        "relatedProductsType": null,
+                        "recommendedProductsType": {
+                          "recommendedProductType": "CATEGORY"
+                        }
+                      }
+                    },
+                    {
+                      "imageWeb": {
+                        "id": "theme-images/83bc8895-e055-4131-8eef-9e8fe914f3b8",
+                        "altText": null
+                      },
+                      "imageMobil": {
+                        "id": "theme-images/e9282f92-1b75-4035-86ef-7e429bd36fdc",
+                        "altText": null
+                      },
+                      "relatedProduct": {
+                        "id": "ec737f93-36dd-45bb-a195-462d63552f5e",
+                        "productListType": "STATIC",
+                        "initialSort": "LAST_ADDED",
+                        "initialLimit": 20,
+                        "productCount": null,
+                        "productIds": [
+                          {
+                            "productId": "5dab44c4-f7ba-4be1-8da7-2903cb7e57b5",
+                            "variantId": "7c8ad198-faa4-4c8a-a876-a995ba83f910"
+                          }
+                        ],
+                        "category": null,
+                        "usePageFilter": null,
+                        "relatedProductsType": null,
+                        "recommendedProductsType": {
+                          "recommendedProductType": "CATEGORY"
+                        }
+                      }
+                    },
+                    {
+                      "relatedProduct": {
+                        "id": "e86ace66-9f27-41d3-82d3-2a2a43a450a6",
+                        "productListType": "STATIC",
+                        "initialSort": "LAST_ADDED",
+                        "initialLimit": 20,
+                        "productCount": null,
+                        "productIds": [
+                          {
+                            "productId": "5dab44c4-f7ba-4be1-8da7-2903cb7e57b5",
+                            "variantId": "7c8ad198-faa4-4c8a-a876-a995ba83f910"
+                          }
+                        ],
+                        "category": null,
+                        "usePageFilter": null,
+                        "relatedProductsType": null,
+                        "recommendedProductsType": {
+                          "recommendedProductType": "CATEGORY"
+                        }
+                      }
+                    },
+                    {
+                      "relatedProduct": {
+                        "id": "e86ace66-9f27-41d3-82d3-2a2a43a450a6",
+                        "productListType": "STATIC",
+                        "initialSort": "LAST_ADDED",
+                        "initialLimit": 20,
+                        "productCount": null,
+                        "productIds": [
+                          {
+                            "productId": "5dab44c4-f7ba-4be1-8da7-2903cb7e57b5",
+                            "variantId": "7c8ad198-faa4-4c8a-a876-a995ba83f910"
+                          }
+                        ],
+                        "category": null,
+                        "usePageFilter": null,
+                        "relatedProductsType": null,
+                        "recommendedProductsType": {
+                          "recommendedProductType": "CATEGORY"
+                        }
                       }
                     }
-                  ]
-                }
-              },
-              {
-                "id": "aac94810-deff-4674-8d1a-c2e1e31d53e6",
-                "componentId": "7943b990-9262-4aa7-ac0e-3f89189de3b9",
-                "propValues": {
-                  "headerText": "ıyuıyuıyı",
-                  "contentText": "yıuıtyıutyı",
-                  "btnText": "tyuıtyuıty",
-                  "navigationLink": {
-                    "id": "729c125e-9ed3-40cb-8b4a-18c769f088a5",
-                    "linkType": "PAGE",
-                    "label": "Anasayfa",
-                    "pageId": "4257a355-ef05-4387-9cd1-3c4a0ac53f89",
-                    "pageType": "INDEX",
-                    "pageComponentId": null,
-                    "subLinks": []
+                  ],
+                  "webGapValue": {
+                    "value": 0,
+                    "unit": "px"
+                  },
+                  "mobilGapValue": {
+                    "value": 0,
+                    "unit": "px"
                   }
-                }
-              },
-              {
-                "id": "839f384a-9da3-48cd-a07e-a59d44d284a9",
-                "componentId": "4611b348-95d3-4a13-bb30-5ea975c5fb28",
-                "propValues": {
-                  "imageList": [
-                    {
-                      "imageWeb": {
-                        "id": "theme-images/32aa66d0-5847-4cf5-950b-b75a7f8baaa3",
-                        "altText": null
-                      },
-                      "imageMobil": {
-                        "id": "theme-images/aa7daa98-7e12-493f-9ba0-4f762051d734",
-                        "altText": null
-                      }
-                    },
-                    {
-                      "imageWeb": {
-                        "id": "theme-images/105c3470-a21e-4613-a07a-43c1061e7a88",
-                        "altText": null
-                      },
-                      "imageMobil": {
-                        "id": "theme-images/b0b8549f-1749-40e7-b2bf-45f8dd525449",
-                        "altText": null
-                      }
-                    }
-                  ]
-                }
-              },
-              {
-                "id": "36c84102-4431-4bff-83db-81f189b2ddef",
-                "componentId": "7943b990-9262-4aa7-ac0e-3f89189de3b9",
-                "propValues": {
-                  "headerText": "dwaddwadaw",
-                  "contentText": "dwad",
-                  "btnText": "dwad"
-                }
-              },
-              {
-                "id": "8b2798fd-204e-4bdf-85d0-5cb6a8df354f",
-                "componentId": "4611b348-95d3-4a13-bb30-5ea975c5fb28",
-                "propValues": {
-                  "imageList": [
-                    {
-                      "imageWeb": {
-                        "id": "theme-images/e89fdb2a-0d38-40c0-a989-f2433084c7bb",
-                        "altText": null
-                      }
-                    },
-                    {
-                      "imageWeb": {
-                        "id": "theme-images/7b95f545-fac7-49d0-a2b3-4295f12a5f72",
-                        "altText": null
-                      }
-                    },
-                    {
-                      "imageWeb": {
-                        "id": "theme-images/e4563501-393b-4e50-a461-6623c872e1c4",
-                        "altText": null
-                      }
-                    }
-                  ]
                 }
               }
             ]
@@ -22890,6 +23061,11 @@
     {
       "id": "cb50ade4-c184-4f8e-b0c6-862d6d3392ac",
       "name": "İçerik Alanı",
+      "translations": {}
+    },
+    {
+      "id": "6fd2d602-27ba-4c51-af8c-adfdc4f73160",
+      "name": "Instagram Erişim Anahtarı",
       "translations": {}
     }
   ],

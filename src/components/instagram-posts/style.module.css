@@ -1,72 +1,171 @@
 .wrapper {
   width: 100%;
   margin-top: 60px;
-  padding: 0 10px;
+  padding: 0 20px;
   box-sizing: border-box;
+  font-family: "Helvetica", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
-.container {
-  max-width: 1440px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 5px;
-}
-.wrapper a {
-  text-decoration: none;
-}
-.container a {
-  font-size: 14px;
-  color: #000000;
-}
-.title_wrapper h4 {
-  font-size: 24px;
-  padding-bottom: 15px;
-}
+
 .title_wrapper {
   max-width: 1440px;
-  margin: auto;
-  padding: 40px 0 20px 0;
-}
-.title_container {
-  display: flex;
-  gap: 20px;
-}
-.title_container .title {
-  color: #000000;
-  font-weight: bolder;
-}
-.post_numbers {
-  padding: 5px 0 10px 0;
-  display: flex;
-  gap: 10px;
-  font-size: 14px;
+  margin: 0 auto;
 }
 
-.button a {
-  font-size: 16px;
-  color: #fff;
-  background-color: #000000;
-  padding: 10px;
-  display: block;
+.section_title {
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0 0 25px 0;
+  color: #383838;
   text-align: center;
-  transition: all 0.1s ease-in;
-}
-.button a:hover {
-  background-color: #434343;
-}
-.instagramPost img,
-.instagramPost video {
-  width: 100%;
-}
-.post_content {
-  padding: 10px 10px 20px 10px;
-}
-.timeStamp {
-  display: block;
-  color: #a9a9a9;
-  margin-top: 10px;
+  letter-spacing: -0.5px;
 }
 
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.swiper {
+  padding-bottom: 40px;
+}
+
+.swiper :global(.swiper-button-next),
+.swiper :global(.swiper-button-prev) {
+  color: #383838;
+  background: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(56, 56, 56, 0.12);
+  margin-top: -24px;
+}
+
+.swiper :global(.swiper-button-next:after),
+.swiper :global(.swiper-button-prev:after) {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.swiper :global(.swiper-button-next:hover),
+.swiper :global(.swiper-button-prev:hover) {
+  background: none;
+  color: #ffffff;
+  box-shadow: 0 6px 16px rgba(56, 56, 56, 0.2);
+  border-color: #F6F1EB;
+  border: 1px solid rgba(56, 56, 56, 0.2);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.swiper :global(.swiper-button-disabled) {
+  opacity: 0.35;
+  cursor: not-allowed;
+  pointer-events: auto;
+}
+
+.slide {
+  height: auto;
+}
+
+.post_wrapper {
+  background-color: #ffffff;
+  position: relative;
+}
+
+.instagramPost {
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease;
+}
+
+.post_link {
+  text-decoration: none;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  background-color: #000000;
+}
+
+.image_container {
+  position: relative;
+  width: 100%;
+  padding-top: 150%; /* 1200x1800 aspect ratio (2:3) */
+  overflow: hidden;
+}
+
+.post_image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  opacity: 0;
+}
+
+.post_link:hover .overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 1;
+}
+
+.post_link:hover .post_image {
+  transform: scale(1.1);
+}
+
+.instagram_icon {
+  width: 32px;
+  height: 32px;
+  color: #ffffff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.post_link:hover .instagram_icon {
+  opacity: 1;
+}
+
+
+.loading,
+.error {
+  text-align: center;
+  padding: 60px 20px;
+  font-size: 16px;
+  color: #666666;
+}
+
+.error {
+  color: #ed2727;
+}
+
+.empty_state {
+  text-align: center;
+  padding: 60px 20px;
+  color: #666666;
+  font-size: 16px;
+}
+
+.empty_state p {
+  margin: 0;
+}
+
+/* Responsive Design */
 @media (min-width: 1025px) {
   .container {
     max-width: 90%;
@@ -77,12 +176,29 @@
   }
 }
 
+@media (max-width: 768px) {
+  .wrapper {
+    margin-top: 40px;
+    padding: 0 15px;
+  }
+
+
+  .section_title {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .wrapper {
     margin-top: 30px;
+    padding: 0 10px;
   }
   .container {
-    max-width: 100%;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 0 10px;
   }
 }
