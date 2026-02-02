@@ -219,8 +219,8 @@ const ProductImage = observer(
           }`}
         >
           <Image
-            width="200px"
-            height="300px"
+              width="1080px"
+              height="1619px"
             objectFit="contain"
             useBlur={true}
             image={primaryImage}
