@@ -30,6 +30,11 @@
   grid-template-columns: repeat(3, 1fr);
 }
 
+/* 4 fotoğraf için */
+.gridFour {
+  grid-template-columns: repeat(4, 1fr);
+}
+
 .bannerItem {
   display: flex;
   flex-direction: column;
@@ -241,6 +246,10 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .gridFour {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .bannerGrid {
     gap: 15px;
   }
@@ -401,7 +410,8 @@
   /* Mobile'da hepsi tek kolon */
   .gridOne,
   .gridTwo,
-  .gridThree {
+  .gridThree,
+  .gridFour {
     grid-template-columns: 1fr;
   }
 

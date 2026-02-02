@@ -57,15 +57,15 @@ const FeaturedFreeImageShowcase = (props: FeaturedFreeImageShowcaseProps) => {
             }}
             loop={true} // Sonsuz döngü
             slidesPerView={2.5} // Varsayılan mobil
-            spaceBetween={15}
+            spaceBetween={5}
             breakpoints={{
               768: {
                 slidesPerView: 3, // Tablet
-                spaceBetween: 15,
+                spaceBetween: 5,
               },
               1024: {
-                slidesPerView: 4.5, // Web
-                spaceBetween: 15,
+                slidesPerView: 4, // Web
+                spaceBetween: 5,
                 slidesPerGroup: 4, // Kaydırma grup sayısı
               },
             }}
@@ -235,8 +235,8 @@ const ProductImage = observer(
             className={`${styles.productImageLayer} ${styles.productImageHover}`}
           >
             <Image
-              width="200px"
-              height="300px"
+              width="1080px"
+              height="1619px"
               objectFit="contain"
               useBlur={true}
               image={hoverImage}

@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import { observer } from "mobx-react-lite";
 import styles from "./style.module.css";
-import { BannerImageListProps } from "../__generated__/types";
 import { Image, Link, IkasDisplayedVariantType } from "@ikas/storefront";
 import { useScreen } from "src/utils/hooks/useScreen";
+import {
+  ExtendedBannerImageListProps,
+  getOverlayHeight,
+} from "./height-settings";
 
 import PlusSVG from "../svg/plus";
 import PlusXSVG from "../svg/plusX";
@@ -11,8 +14,32 @@ import PlusXSVG from "../svg/plusX";
 import { SelectOnChangeParamType } from "../components/select";
 import useAddToCartButton from "../product-detail/detail/add-to-cart/hooks/useAddToCartButton";
 
-const BannerImageList = (props: BannerImageListProps) => {
-  const { imageList, mobilGapValue, webGapValue } = props;
+const BannerImageList = (props: ExtendedBannerImageListProps) => {
+  const {
+    imageList,
+    mobilGapValue,
+    webGapValue,
+    // Grid 1 overlay heights
+    gridOneProductOverlayHeight,
+    gridOneProductOverlayHeightMobile,
+    gridOneProductOverlayExpandedHeight,
+    gridOneProductOverlayExpandedHeightMobile,
+    // Grid 2 overlay heights
+    gridTwoProductOverlayHeight,
+    gridTwoProductOverlayHeightMobile,
+    gridTwoProductOverlayExpandedHeight,
+    gridTwoProductOverlayExpandedHeightMobile,
+    // Grid 3 overlay heights
+    gridThreeProductOverlayHeight,
+    gridThreeProductOverlayHeightMobile,
+    gridThreeProductOverlayExpandedHeight,
+    gridThreeProductOverlayExpandedHeightMobile,
+    // Grid 4 overlay heights
+    gridFourProductOverlayHeight,
+    gridFourProductOverlayHeightMobile,
+    gridFourProductOverlayExpandedHeight,
+    gridFourProductOverlayExpandedHeightMobile,
+  } = props;
   const { isMobile, isTablet } = useScreen();
   const [openStates, setOpenStates] = useState<{ [key: number]: boolean }>({});
 
@@ -39,6 +66,19 @@ const BannerImageList = (props: BannerImageListProps) => {
             : { width: 1200, height: 1440 },
         };
       case 3:
+        return {
+          className: styles.gridThree,
+          size: isMobile
+            ? { width: 1200, height: 1440 }
+            : { width: 1200, height: 1440 },
+        };
+      case 4:
+        return {
+          className: styles.gridFour,
+          size: isMobile
+            ? { width: 1200, height: 1440 }
+            : { width: 1200, height: 1440 },
+        };
       default:
         return {
           className: styles.gridThree,
@@ -50,6 +90,26 @@ const BannerImageList = (props: BannerImageListProps) => {
   };
 
   const { className, size } = getGridConfig();
+
+  // Overlay height settings from props
+  const overlayHeightSettings = {
+    gridOneProductOverlayHeight,
+    gridOneProductOverlayHeightMobile,
+    gridOneProductOverlayExpandedHeight,
+    gridOneProductOverlayExpandedHeightMobile,
+    gridTwoProductOverlayHeight,
+    gridTwoProductOverlayHeightMobile,
+    gridTwoProductOverlayExpandedHeight,
+    gridTwoProductOverlayExpandedHeightMobile,
+    gridThreeProductOverlayHeight,
+    gridThreeProductOverlayHeightMobile,
+    gridThreeProductOverlayExpandedHeight,
+    gridThreeProductOverlayExpandedHeightMobile,
+    gridFourProductOverlayHeight,
+    gridFourProductOverlayHeightMobile,
+    gridFourProductOverlayExpandedHeight,
+    gridFourProductOverlayExpandedHeightMobile,
+  };
 
   const toggleOverlay = (index: number) => {
     setOpenStates((prev) => {
@@ -201,13 +261,12 @@ const BannerImageList = (props: BannerImageListProps) => {
                             isOpen ? styles.productOverlayExpanded : ""
                           }`}
                           style={{
-                            height: isOpen
-                              ? imageList.length === 3
-                                ? "45%"
-                                : undefined
-                              : imageList.length === 3
-                              ? "20%"
-                              : undefined,
+                            height: getOverlayHeight(
+                              imageList.length,
+                              isMobile || isTablet,
+                              isOpen,
+                              overlayHeightSettings
+                            ),
                           }}
                         >
                           <div className={styles.overlayHeader}>

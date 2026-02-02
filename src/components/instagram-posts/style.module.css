@@ -1,0 +1,88 @@
+.wrapper {
+  width: 100%;
+  margin-top: 60px;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+.container {
+  max-width: 1440px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 5px;
+}
+.wrapper a {
+  text-decoration: none;
+}
+.container a {
+  font-size: 14px;
+  color: #000000;
+}
+.title_wrapper h4 {
+  font-size: 24px;
+  padding-bottom: 15px;
+}
+.title_wrapper {
+  max-width: 1440px;
+  margin: auto;
+  padding: 40px 0 20px 0;
+}
+.title_container {
+  display: flex;
+  gap: 20px;
+}
+.title_container .title {
+  color: #000000;
+  font-weight: bolder;
+}
+.post_numbers {
+  padding: 5px 0 10px 0;
+  display: flex;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.button a {
+  font-size: 16px;
+  color: #fff;
+  background-color: #000000;
+  padding: 10px;
+  display: block;
+  text-align: center;
+  transition: all 0.1s ease-in;
+}
+.button a:hover {
+  background-color: #434343;
+}
+.instagramPost img,
+.instagramPost video {
+  width: 100%;
+}
+.post_content {
+  padding: 10px 10px 20px 10px;
+}
+.timeStamp {
+  display: block;
+  color: #a9a9a9;
+  margin-top: 10px;
+}
+
+@media (min-width: 1025px) {
+  .container {
+    max-width: 90%;
+  }
+
+  .title_wrapper {
+    max-width: 90%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .wrapper {
+    margin-top: 30px;
+  }
+  .container {
+    max-width: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

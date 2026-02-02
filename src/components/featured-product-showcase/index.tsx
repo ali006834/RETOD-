@@ -152,8 +152,8 @@ const ProductImage = observer(({ product, isWidthVideo }: Props) => {
   return (
     <Image
       // layout="responsive"
-      width="200px"
-      height="300px"
+      width="1080px"
+      height="1619px"
       objectFit="contain"
       useBlur={true}
       image={product.selectedVariant.mainImage?.image!}
