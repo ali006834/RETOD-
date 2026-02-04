@@ -203,6 +203,10 @@ export type ImageList = {
 	imageWeb?: IkasImage;
 	imageMobil?: IkasImage;
 	relatedProduct?: IkasProductList;
+	customTagText?: string;
+	customTagTextColor?: string;
+	customTagBgColor?: string;
+	isCustomTagLeft?: boolean;
 };
 
 export type FreeImageShowcase = { 

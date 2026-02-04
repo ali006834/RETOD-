@@ -401,6 +401,32 @@
   }
 }
 
+/* Custom Tag Styles */
+.customTag {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 15;
+  padding: 12px 16px;
+  font-size: 12px;
+  font-weight: 400;
+  font-family: "Helvetica" !important;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+}
+
+.customTag:hover {
+  transform: scale(1.05);
+}
+
+.customTagLeft {
+  left: 20px;
+  right: auto;
+}
+
 /* Mobile için responsive */
 @media (max-width: 767px) {
   .wrapper {
@@ -417,5 +443,17 @@
 
   .bannerGrid {
     gap: 20px;
+  }
+
+  .customTag {
+    top: 15px;
+    right: 15px;
+    padding: 6px 12px;
+    font-size: 11px;
+  }
+
+  .customTagLeft {
+    left: 15px;
+    right: auto;
   }
 }
