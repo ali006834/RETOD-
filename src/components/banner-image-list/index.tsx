@@ -128,11 +128,6 @@ const BannerImageList = (props: ExtendedBannerImageListProps) => {
     });
   };
 
-  console.log("customTagText >>>", imageList?.map((item) => item?.customTagText));
-  console.log("customTagTextColor >>>", imageList?.map((item) => item?.customTagTextColor));
-  console.log("customTagBgColor >>> ", imageList?.map((item) => item?.customTagBgColor));
-  console.log("isCustomTagLeft >>>", imageList?.map((item) => item?.isCustomTagLeft));
-
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>

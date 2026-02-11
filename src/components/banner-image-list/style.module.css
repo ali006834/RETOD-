@@ -278,8 +278,8 @@
   cursor: pointer;
   z-index: 10;
   background-color: rgba(255, 255, 255, 0.9);
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -295,7 +295,7 @@
 .plusButtonMobileOpen {
   background-color: rgba(214, 17, 17, 0.4);
   z-index: 999;
-  bottom: 260px;
+  bottom: 180px;
 }
 
 .productOverlayMobile {
@@ -305,10 +305,10 @@
   right: 0;
   background-color: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(5px);
-  padding: 20px;
+  padding: 12px;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 10px;
   max-height: 70%;
   overflow-y: auto;
   animation: slideUp 0.3s ease-out;
@@ -329,41 +329,41 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
-  padding-bottom: 10px;
+  gap: 6px;
+  padding-bottom: 8px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .productNameMobile {
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 200;
   color: #000;
   margin: 0;
   text-align: center;
-  line-height: 1.4;
+  line-height: 1.3;
 }
 
 .priceContentMobile {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   margin: 0;
 }
 
 .priceStackMobile {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 1px;
 }
 
 .discCountMobile del {
   color: #333;
-  font-size: 11px;
-  line-height: 16px;
+  font-size: 10px;
+  line-height: 14px;
 }
 
 .productPriceMobile {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 300;
   color: #000;
   margin: 0;
@@ -372,12 +372,12 @@
 .discountBadgeMobile {
   background-color: #9f0000;
   color: #fff;
-  padding: 0.6rem 0.2rem;
+  padding: 0.4rem 0.15rem;
   text-align: center;
-  font-size: 14px;
+  font-size: 11px;
   font-weight: 400;
   font-family: "Helvetica" !important;
-  min-width: 50px;
+  min-width: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -386,7 +386,7 @@
 .variantsContainerMobile {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 10px;
 }
 
 @media (min-width: 1024px) and (max-width: 1600px) {
@@ -433,12 +433,28 @@
     margin: 20px 0;
   }
 
-  /* Mobile'da hepsi tek kolon */
-  .gridOne,
-  .gridTwo,
-  .gridThree,
-  .gridFour {
+  /* 1 görsel - tekli */
+  .gridOne {
     grid-template-columns: 1fr;
+  }
+
+  /* 2 görsel - 2'li yan yana */
+  .gridTwo {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* 3 görsel - tekli, altında 2'li */
+  .gridThree {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gridThree .bannerItem:first-child {
+    grid-column: 1 / -1;
+  }
+
+  /* 4 görsel - 2'li 2'li alt alta */
+  .gridFour {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .bannerGrid {
@@ -455,5 +471,37 @@
   .customTagLeft {
     left: 15px;
     right: auto;
+  }
+
+  /* Mobil varyant overlay stilleri */
+  .variantType {
+    gap: 6px;
+  }
+
+  .variantTypeName {
+    font-size: 11px;
+  }
+
+  .variantOptions {
+    gap: 6px;
+  }
+
+  .colorOption,
+  .colorOptionSelected {
+    width: 20px;
+    height: 20px;
+    border-width: 1.5px;
+  }
+
+  .colorOptionSelected {
+    box-shadow: 0 0 0 1.5px #fff;
+  }
+
+  .sizeOption,
+  .sizeOptionSelected,
+  .sizeOptionNoStock {
+    padding: 6px 12px;
+    font-size: 10px;
+    min-width: 35px;
   }
 }
