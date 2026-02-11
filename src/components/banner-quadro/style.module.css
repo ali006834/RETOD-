@@ -1,0 +1,150 @@
+.wrapper {
+  width: 100%;
+  font-family: "Helvetica" !important;
+  letter-spacing: 1px;
+  max-width: 1440px;
+  margin: 40px auto 0px;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: "Helvetica" !important;
+  letter-spacing: 0.05em;
+}
+
+/* Desktop Container - Grid 4 */
+.desktopContainer {
+  display: block;
+}
+
+.mobileContainer {
+  display: none;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.bannerItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.desktopSwiper,
+.mobileSwiper {
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.slide {
+  height: auto;
+}
+
+.bannerLink {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.bannerWrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  aspect-ratio: 1080/1350;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+.bannerImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.bannerWrapper:hover .bannerImage {
+  transform: scale(1.05);
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  padding: 0;
+}
+
+.bannerTitle {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0 0 8px 0;
+  color: #000;
+  font-family: "Helvetica" !important;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.bannerContent {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  font-weight: 300;
+  color: #000;
+  margin: 0;
+  font-family: "Helvetica" !important;
+}
+
+/* Swiper Navigation Styles */
+.mobileSwiper :global(.swiper-button-next),
+.mobileSwiper :global(.swiper-button-prev) {
+  color: #000;
+  width: 40px;
+  height: 40px;
+}
+
+.mobileSwiper :global(.swiper-button-next::after),
+.mobileSwiper :global(.swiper-button-prev::after) {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Responsive - Tablet & Mobile */
+@media (max-width: 1024px) {
+  .desktopContainer {
+    display: none;
+  }
+
+  .mobileContainer {
+    display: block;
+  }
+
+  .wrapper {
+    margin: 20px auto 0px;
+    padding: 0 15px;
+  }
+
+  .title {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+  }
+
+  .bannerWrapper {
+    aspect-ratio: 1080/1350;
+    margin-bottom: 10px;
+  }
+
+  .bannerTitle {
+    font-size: 0.9rem;
+  }
+
+  .bannerContent {
+    font-size: 0.8rem;
+  }
+}

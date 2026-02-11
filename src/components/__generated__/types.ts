@@ -260,6 +260,18 @@ export enum AlignmentSettings{
 	"left" = "left",
 };
 
+export type BannerQuadro = { 
+	image?: IkasImage;
+	title?: string;
+	content?: string;
+	link?: IkasNavigationLink;
+};
+
+export type ImageSize = { 
+	width?: string;
+	height?: string;
+};
+
 export type HeaderProps = {
 	logo?: IkasImage;
 	logo_black?: IkasImage;
@@ -559,10 +571,16 @@ export type BannerSingleVideoProps = {
 };
 
 export type BannerDuoProps = {
-	banner_left?: IkasImage;
-	banner_left_link?: IkasNavigationLink;
-	banner_right?: IkasVideo;
-	banner_right_link?: IkasNavigationLink;
+	leftMediaImage?: IkasImage;
+	titleLeft?: string;
+	contentLeft?: string;
+	leftMediaLink?: IkasNavigationLink;
+	rightMediaVideo?: IkasVideo;
+	titleRight?: string;
+	contentRight?: string;
+	rightMediaLink?: IkasNavigationLink;
+	mediaGapValue?: IkasSlider;
+	mediaGapValueMobile?: IkasSlider;
 };
 
 export type RewardsProps = {
@@ -650,5 +668,14 @@ export type InstagramPostsProps = {
 	instagramMediaLimit?: IkasSlider;
 	image?: IkasImage;
 	access_token?: string;
+};
+
+export type BannerQuadroProps = {
+	titleBanner?: string;
+	imageSizeSettings?: ImageSize;
+	content1?: BannerQuadro;
+	content2?: BannerQuadro;
+	content3?: BannerQuadro;
+	content4?: BannerQuadro;
 };
 

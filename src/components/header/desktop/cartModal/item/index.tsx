@@ -77,6 +77,12 @@ const Item = ({
     setTimeout(() => setShowStockAlert(false), 2500);
   };
 
+  console.log(" -------------------------------- ");
+  console.log("deneme >>> ", item);
+
+  console.log(" -------------------------------- ");
+  console.log("deneme >>> ", item?.formattedPriceWithQuantity);
+  console.log("deneme >>> ", item?.formattedFinalPriceWithQuantity);
   return (
     <>
       {showRemovedMessage ? (
@@ -92,6 +98,13 @@ const Item = ({
               <S.ItemDetails>
                 <S.ItemProductName>{item.variant.name}</S.ItemProductName>
                 <S.ItemPrice>
+                  {item.formattedPriceWithQuantity !== null && (
+                  <S.ItemSellPrice>
+                    {formatPriceWithZeroKurus(
+                      item.formattedPriceWithQuantity
+                    )}
+                  </S.ItemSellPrice>
+                  )}
                   {formatPriceWithZeroKurus(
                     item.formattedFinalPriceWithQuantity
                   )}

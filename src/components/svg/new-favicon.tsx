@@ -1,17 +1,35 @@
-const svg = () => (
+interface Props {
+  width?: string;
+  height?: string;
+  color?: string;
+  strokeWidth?: string;
+}
+
+const svg = ({ width = "24px", height = "24px", color = "#000", strokeWidth = "1.032" }: Props) => (
   <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="27px"
-    height="27px"
-    viewBox="0 0 24 24"
+    width={width}
+    height={height}
+    viewBox="0 0 24.00 24.00"
     fill="none"
+    xmlns="http://www.w3.org/2000/svg"
   >
-    <path
-      d="M21 8.99998C21 12.7539 15.7156 17.9757 12.5857 20.5327C12.2416 20.8137 11.7516 20.8225 11.399 20.5523C8.26723 18.1523 3 13.1225 3 8.99998C3 2.00001 12 2.00002 12 8C12 2.00001 21 1.99999 21 8.99998Z"
-      stroke="#000000"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    />
+    <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+    <g
+      id="SVGRepo_tracerCarrier"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    ></g>
+    <g id="SVGRepo_iconCarrier">
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M12 6.00019C10.2006 3.90317 7.19377 3.2551 4.93923 5.17534C2.68468 7.09558 2.36727 10.3061 4.13778 12.5772C5.60984 14.4654 10.0648 18.4479 11.5249 19.7369C11.6882 19.8811 11.7699 19.9532 11.8652 19.9815C11.9483 20.0062 12.0393 20.0062 12.1225 19.9815C12.2178 19.9532 12.2994 19.8811 12.4628 19.7369C13.9229 18.4479 18.3778 14.4654 19.8499 12.5772C21.6204 10.3061 21.3417 7.07538 19.0484 5.17534C16.7551 3.2753 13.7994 3.90317 12 6.00019Z"
+        stroke={color}
+        strokeWidth={strokeWidth}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      ></path>
+    </g>
   </svg>
 );
 

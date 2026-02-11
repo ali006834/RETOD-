@@ -151,15 +151,19 @@ export const ItemPriceWrapper = styled.div`
 `;
 
 export const ItemSellPrice = styled.div`
-  font-weight: 400;
+  font-weight: 300;
+  font-size: 13px;
   text-decoration: line-through;
   color: #6b7280;
 `;
 
 export const ItemPrice = styled.div`
+  display: flex;
+  flex-direction: column;
   color: #cf152d;
   font-size: 16px;
   font-weight: 600;
+  gap: 4px;
   margin-bottom: 12px;
 `;
 

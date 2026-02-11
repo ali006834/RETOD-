@@ -23,6 +23,7 @@ import { useRouter } from "next/router";
 import ArrowRight from "src/components/svg/arrow-right-white";
 import { LanguageSelect } from "src/components/language";
 import { Bell } from "src/components/header/desktop";
+import NewFaviconSVG from "src/components/svg/new-favicon";
 import LocalizationBar from "../components/localization-bar";
 
 const MobileHeader = (props: HeaderProps) => {
@@ -455,6 +456,11 @@ const RightSide = observer((props: HeaderProps) => {
 
   return (
     <div className={styles.rightSide}>
+      <Link href="/account/favorite-products">
+        <a>
+          <NewFaviconSVG height="24px" width="24px" color="#000" strokeWidth="1.4" />
+        </a>
+      </Link>
       <Bell {...props} />
 
       {userToken && (

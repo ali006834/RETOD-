@@ -10,7 +10,8 @@ import UserIcon from "../../svg/user";
 import FavoriteSVG from "src/components/svg/favorite";
 import CartIcon from "../../svg/cart";
 import IOCloseSVG from "../../svg/close";
-import BellSVG from "../../svg/notification";
+import NotificationSVG from "../../svg/notification";
+import NewFaviconSVG from "../../svg/new-favicon";
 import ArrowRight from "../../svg/arrow-right-white";
 import Close from "../../svg/close";
 import ScrollingText from "../components/scrolling-text";
@@ -291,7 +292,7 @@ export const Bell = observer((props: HeaderProps) => {
     <div className={styles.bell}>
       {/* Bell */}
       <span onClick={() => onOpenMyModal()}>
-        <BellSVG height="20px" width="20px" color="#000" />
+        <NotificationSVG height="20px" width="20px" color="#000" />
       </span>
 
       {openBellModal && (
@@ -305,7 +306,7 @@ export const Bell = observer((props: HeaderProps) => {
             </div>
             <div className={styles.modal_bell_icon}>
               <span>
-                <BellSVG height="24px" width="24px" color="#000" />
+                <NotificationSVG height="24px" width="24px" color="#000" />
               </span>
             </div>
             <div className={styles.modal_content}>
@@ -362,6 +363,11 @@ const RightSide = observer((props: HeaderProps) => {
       <SearchInput {...props} />
 
       {/* Zill */}
+      <Link href="/account/favorite-products">
+        <a>
+          <NewFaviconSVG height="24px" width="24px" color="#000" strokeWidth="1.4" />
+        </a>
+      </Link>
       <Bell {...props} />
 
       {userToken && (
