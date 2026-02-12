@@ -19613,6 +19613,102 @@
                     }
                   ]
                 }
+              },
+              {
+                "id": "72cbe040-de89-45ff-871c-a0aa839ea216",
+                "componentId": "4611b348-95d3-4a13-bb30-5ea975c5fb28",
+                "propValues": {
+                  "imageList": [
+                    {
+                      "imageWeb": {
+                        "id": "theme-images/4a89e0dd-b167-4dca-bc2f-7575bfc0e173",
+                        "altText": null
+                      },
+                      "relatedProduct": {
+                        "id": "697be261-8e73-4ab0-addf-3e053e558b1e",
+                        "productListType": "STATIC",
+                        "initialSort": "LAST_ADDED",
+                        "initialLimit": 20,
+                        "productCount": null,
+                        "productIds": [
+                          {
+                            "productId": "eb81ceef-cde5-43db-abef-e757b27b24f7",
+                            "variantId": "bde7629b-4e57-4fc6-b317-1165a003f428"
+                          }
+                        ],
+                        "category": null,
+                        "usePageFilter": null,
+                        "relatedProductsType": null,
+                        "recommendedProductsType": {
+                          "recommendedProductType": "CATEGORY"
+                        }
+                      },
+                      "customTagText": "YAKINDA!",
+                      "customTagTextColor": "#fefefeff",
+                      "customTagBgColor": "#080808ff",
+                      "isCustomTagLeft": false,
+                      "imageMobil": {
+                        "id": "theme-images/9e26c0c2-510e-4632-bbe8-c96c38aa9675",
+                        "altText": null
+                      }
+                    }
+                  ],
+                  "mediaList": [
+                    {
+                      "imageWeb": {
+                        "id": "theme-images/4dc75b98-0c4a-41d7-bc83-71756ade23b2",
+                        "altText": null
+                      },
+                      "imageMobil": {
+                        "id": "theme-images/3d87a9a4-4652-4cf3-a22e-84db8b63f943",
+                        "altText": null
+                      },
+                      "relatedProduct": {
+                        "id": "712cd55f-50c3-4fd6-809d-9fb99856c660",
+                        "productListType": "STATIC",
+                        "initialSort": "LAST_ADDED",
+                        "initialLimit": 20,
+                        "productCount": null,
+                        "productIds": [
+                          {
+                            "productId": "fb65a49c-9c6a-460c-9c07-62de06546bd6",
+                            "variantId": "b532acfb-a9c0-4acb-aeda-48d55c1f1a2f"
+                          }
+                        ],
+                        "category": null,
+                        "usePageFilter": null,
+                        "relatedProductsType": null,
+                        "recommendedProductsType": {
+                          "recommendedProductType": "CATEGORY"
+                        }
+                      },
+                      "videoWeb": {
+                        "video": {
+                          "id": "00cf20c9-7029-4597-a59d-02b85175f21a",
+                          "isVideo": true,
+                          "altText": null,
+                          "_fileUrl": "",
+                          "merchantId": null
+                        },
+                        "autoplay": true,
+                        "loop": true,
+                        "muted": true
+                      },
+                      "videoMobile": {
+                        "video": {
+                          "id": "ed74b030-e54f-4389-8855-8614e14e3042",
+                          "isVideo": true,
+                          "altText": null,
+                          "_fileUrl": "",
+                          "merchantId": null
+                        },
+                        "loop": true,
+                        "muted": true,
+                        "autoplay": true
+                      }
+                    }
+                  ]
+                }
               }
             ]
           }
@@ -22896,7 +22992,7 @@
             },
             {
               "id": "6197ffdf-3c76-42df-a2bf-b296d26188fc",
-              "name": "Video Web",
+              "name": "Video Web (Tekli Video İçin: 2890x1140, İkili, Üçlü ve Dörtlü Video İçin: 920x 1150)",
               "translations": {},
               "type": "VIDEO",
               "isRequired": false,
@@ -22911,7 +23007,7 @@
             },
             {
               "id": "9f650880-3464-4686-90a4-ca5e7e626d7f",
-              "name": "Video Mobil ",
+              "name": "Video Mobil (920x 1150)",
               "translations": {},
               "type": "VIDEO",
               "isRequired": false,
