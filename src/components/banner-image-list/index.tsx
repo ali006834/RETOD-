@@ -16,9 +16,10 @@ import useAddToCartButton from "../product-detail/detail/add-to-cart/hooks/useAd
 
 const BannerImageList = (props: ExtendedBannerImageListProps) => {
   const {
-    imageList,
+    mediaList,
     mobilGapValue,
     webGapValue,
+
     // Grid 1 overlay heights
     gridOneProductOverlayHeight,
     gridOneProductOverlayHeightMobile,
@@ -43,14 +44,16 @@ const BannerImageList = (props: ExtendedBannerImageListProps) => {
   const { isMobile, isTablet } = useScreen();
   const [openStates, setOpenStates] = useState<{ [key: number]: boolean }>({});
 
-  if (!imageList || imageList.length === 0) {
+  if (!mediaList || mediaList.length === 0) {
     return null;
   }
+
+  console.log("mediaList >>>", mediaList);
 
   // İmage sayısına göre class belirleme
   // Görsel sayısına göre class ve boyut belirleme
   const getGridConfig = () => {
-    switch (imageList.length) {
+    switch (mediaList.length) {
       case 1:
         return {
           className: styles.gridOne,
@@ -141,7 +144,7 @@ const BannerImageList = (props: ExtendedBannerImageListProps) => {
             }`,
           }}
         >
-          {imageList.map((item, index) => {
+          {mediaList.map((item, index) => {
             const product = item?.relatedProduct?.data?.[0];
             const fallbackImage = product?.variants?.[0]?.images?.[0]?.image;
 
@@ -278,7 +281,7 @@ const BannerImageList = (props: ExtendedBannerImageListProps) => {
                           }`}
                           style={{
                             height: getOverlayHeight(
-                              imageList.length,
+                              mediaList.length,
                               isMobile || isTablet,
                               isOpen,
                               overlayHeightSettings

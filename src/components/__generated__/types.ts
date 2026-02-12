@@ -202,6 +202,8 @@ export type Localization = {
 export type ImageList = { 
 	imageWeb?: IkasImage;
 	imageMobil?: IkasImage;
+	videoWeb?: IkasVideo;
+	videoMobile?: IkasVideo;
 	relatedProduct?: IkasProductList;
 	customTagText?: string;
 	customTagTextColor?: string;
@@ -621,7 +623,7 @@ export type BannerNewPageDynamicProps = {
 };
 
 export type BannerImageListProps = {
-	imageList?: ImageList[];
+	mediaList?: ImageList[];
 	webGapValue?: IkasSlider;
 	mobilGapValue?: IkasSlider;
 };
