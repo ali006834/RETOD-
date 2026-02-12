@@ -63,6 +63,14 @@
   display: block;
 }
 
+.bannerVideo {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  cursor: pointer;
+}
+
 .productOverlay {
   position: absolute;
   bottom: 0;

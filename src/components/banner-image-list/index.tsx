@@ -48,7 +48,24 @@ const BannerImageList = (props: ExtendedBannerImageListProps) => {
     return null;
   }
 
-  console.log("mediaList >>>", mediaList);
+  // Video varsa görselden öncelikli
+  const getMediaForItem = (item: (typeof mediaList)[0]) => {
+    const currentVideo = isMobile
+      ? item?.videoMobile || item?.videoWeb
+      : item?.videoWeb || item?.videoMobile;
+    const currentImage = isMobile
+      ? item?.imageMobil || item?.imageWeb
+      : item?.imageWeb || item?.imageMobil;
+    const fallbackImage = item?.relatedProduct?.data?.[0]?.variants?.[0]?.images?.[0]?.image;
+
+    if (currentVideo?.videoSrc) {
+      return { type: "video" as const, video: currentVideo };
+    }
+    if (currentImage || fallbackImage) {
+      return { type: "image" as const, image: currentImage || fallbackImage };
+    }
+    return null;
+  };
 
   // İmage sayısına göre class belirleme
   // Görsel sayısına göre class ve boyut belirleme
@@ -146,13 +163,9 @@ const BannerImageList = (props: ExtendedBannerImageListProps) => {
         >
           {mediaList.map((item, index) => {
             const product = item?.relatedProduct?.data?.[0];
-            const fallbackImage = product?.variants?.[0]?.images?.[0]?.image;
+            const media = getMediaForItem(item);
 
-            const currentImage = isMobile
-              ? item?.imageMobil || fallbackImage
-              : item?.imageWeb || fallbackImage;
-
-            if (!currentImage) {
+            if (!media) {
               return null;
             }
 
@@ -163,14 +176,36 @@ const BannerImageList = (props: ExtendedBannerImageListProps) => {
                 <div className={styles.bannerWrapper}>
                   <Link href={product?.href || ""}>
                     <a rel="noopener noreferrer">
-                      <Image
-                        width={size.width}
-                        height={size.height}
-                        image={currentImage}
-                        alt={currentImage?.altText || product?.name || ""}
-                        useBlur={true}
-                        className={styles.bannerImage}
-                      />
+                      {media.type === "video" ? (
+                        <video
+                          className={styles.bannerVideo}
+                          autoPlay={media.video?.autoplay ?? true}
+                          muted={media.video?.muted ?? true}
+                          loop={media.video?.loop ?? true}
+                          playsInline
+                          width={size.width}
+                          height={size.height}
+                          poster={
+                            media.video?.thumbnailImage?.src
+                              ? media.video.thumbnailImage.src
+                              : undefined
+                          }
+                        >
+                          <source
+                            src={media.video?.videoSrc || ""}
+                            type="video/mp4"
+                          />
+                        </video>
+                      ) : media.image ? (
+                        <Image
+                          width={size.width}
+                          height={size.height}
+                          image={media.image}
+                          alt={media.image.altText || product?.name || ""}
+                          useBlur={true}
+                          className={styles.bannerImage}
+                        />
+                      ) : null}
                     </a>
                   </Link>
 
