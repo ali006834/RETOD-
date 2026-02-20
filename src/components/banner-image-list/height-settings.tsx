@@ -55,8 +55,8 @@ export const getOverlayHeight = (
   if (gridCount === 1) {
     if (isExpanded) {
       return isMobileDevice
-        ? settings.gridOneProductOverlayExpandedHeightMobile ?? "35%"
-        : settings.gridOneProductOverlayExpandedHeight ?? "35%";
+        ? settings.gridOneProductOverlayExpandedHeightMobile ?? "22%"
+        : settings.gridOneProductOverlayExpandedHeight ?? "22%";
     } else {
       return isMobileDevice
         ? settings.gridOneProductOverlayHeightMobile ?? "15%"
@@ -68,8 +68,8 @@ export const getOverlayHeight = (
   if (gridCount === 2) {
     if (isExpanded) {
       return isMobileDevice
-        ? settings.gridTwoProductOverlayExpandedHeightMobile ?? "35%"
-        : settings.gridTwoProductOverlayExpandedHeight ?? "35%";
+        ? settings.gridTwoProductOverlayExpandedHeightMobile ?? "22%"
+        : settings.gridTwoProductOverlayExpandedHeight ?? "22%";
     } else {
       return isMobileDevice
         ? settings.gridTwoProductOverlayHeightMobile ?? "15%"
@@ -81,8 +81,8 @@ export const getOverlayHeight = (
   if (gridCount === 3) {
     if (isExpanded) {
       return isMobileDevice
-        ? settings.gridThreeProductOverlayExpandedHeightMobile ?? "45%"
-        : settings.gridThreeProductOverlayExpandedHeight ?? "45%";
+        ? settings.gridThreeProductOverlayExpandedHeightMobile ?? "28%"
+        : settings.gridThreeProductOverlayExpandedHeight ?? "28%";
     } else {
       return isMobileDevice
         ? settings.gridThreeProductOverlayHeightMobile ?? "25%"
@@ -94,8 +94,8 @@ export const getOverlayHeight = (
   if (gridCount === 4) {
     if (isExpanded) {
       return isMobileDevice
-        ? settings.gridFourProductOverlayExpandedHeightMobile ?? "45%"
-        : settings.gridFourProductOverlayExpandedHeight ?? "55%";
+        ? settings.gridFourProductOverlayExpandedHeightMobile ?? "35%"
+        : settings.gridFourProductOverlayExpandedHeight ?? "35%";
     } else {
       return isMobileDevice
         ? settings.gridFourProductOverlayHeightMobile ?? "20%"
@@ -104,6 +104,6 @@ export const getOverlayHeight = (
   }
 
   // Varsayılan değerler
-  return isExpanded ? "35%" : "15%";
+  return isExpanded ? "22%" : "15%";
 };
 

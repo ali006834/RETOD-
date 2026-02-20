@@ -16,7 +16,7 @@ type ViewMode = {
 const VIEW_MODES: ViewMode = {
   mobile: [1, 2, 4], // Örneğin.. ==> Range ayarı: %0 => 1 ürün, %50 => 2 ürün, %100 => 4 ürün
   tablet: [2, 5],
-  desktop: [2, 3, 6],
+  desktop: [2, 4, 6],
 };
 
 const ViewSelector: React.FC<ViewSelectorProps> = ({ columns, onChange }) => {

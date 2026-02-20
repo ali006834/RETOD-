@@ -17,6 +17,7 @@ import { useScreen } from "src/utils/hooks/useScreen";
 import ViewSelector from "./view-selector";
 import SpecialDiscountBanner from "./special-discount-banner";
 import Pagination from "./pagination";
+import FilterSvg from "src/components/svg/pyramide";
 
 const ProductList = (props: ProductListProps) => {
   const { productList, categories, categorNames, isWidthVideo, tags, alignTagsRight, campaignList, showTags } = props;
@@ -91,10 +92,11 @@ const ProductList = (props: ProductListProps) => {
   const getDefaultColumns = () => {
     if (isMobile) return 2; // Mobile için varsayılan 2 sütun (%50)
     if (isTablet) return 2; // Tablet için varsayılan 2 sütun
-    return 3; // Desktop için varsayılan 4 sütun ...
+    return 4; // Desktop için varsayılan 4 sütun ...
   };
 
   const [columns, setColumns] = useState(getDefaultColumns());
+  const [isFilterOpen, setIsFilterOpen] = useState(false);
 
   // Ekran boyutu değiştiğinde varsayılan değeri güncelle
   useEffect(() => {
@@ -181,8 +183,23 @@ const ProductList = (props: ProductListProps) => {
           <div className={styles.product_list_breadcrumb}>
             <Header productList={productList} />
           </div>
+          {(productList as any).pageSpecificData?.description && (
+            <div className={styles.category_description}>
+              {(productList as any).pageSpecificData.description}
+            </div>
+          )}
           <div className={styles.product_list_top_container}>
             <div className={styles.left}>
+              <button
+                className={styles.filter_toggle_btn}
+                onClick={() => setIsFilterOpen(!isFilterOpen)}
+              >
+                <FilterSvg />
+                Filtre
+                {productList.data.length > 0 && (
+                  <span className={styles.filter_count}>| {productList.data.length} Sonuçlar</span>
+                )}
+              </button>
               <ChildCategories {...props} />
             </div>
             <div className={styles.right}>
@@ -197,7 +214,7 @@ const ProductList = (props: ProductListProps) => {
       <div className={styles.product_list_container}>
         {/* Sol sidebar için yeni div */}
         {isDesktop && (
-          <div className={styles.filter_sidebar}>
+          <div className={`${styles.filter_sidebar} ${isFilterOpen ? styles.filter_sidebar_open : ""}`}>
             <SidebarFilter {...props} />
           </div>
         )}

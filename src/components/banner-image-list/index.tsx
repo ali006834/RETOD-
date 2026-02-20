@@ -295,33 +295,14 @@ const BannerImageList = (props: ExtendedBannerImageListProps) => {
                                 </div>
                               </div>
 
-                              {/* Varyantlar direkt görünecek */}
-                              <div className={styles.variantsContainerMobile}>
-                                {product.displayedVariantTypes.map((dVT) => (
-                                  <VariantType
-                                    key={dVT.variantType.id}
-                                    product={product}
-                                    dVT={dVT}
-                                  />
-                                ))}
-                              </div>
                             </div>
                           )}
                         </>
                       )
                     : product && (
                         <div
-                          className={`${styles.productOverlay} ${
-                            isOpen ? styles.productOverlayExpanded : ""
-                          }`}
-                          style={{
-                            height: getOverlayHeight(
-                              mediaList.length,
-                              isMobile || isTablet,
-                              isOpen,
-                              overlayHeightSettings
-                            ),
-                          }}
+                          className={styles.productOverlay}
+                          style={{ height: "auto" }}
                         >
                           <div className={styles.overlayHeader}>
                             <h3 className={styles.productName}>
@@ -364,28 +345,7 @@ const BannerImageList = (props: ExtendedBannerImageListProps) => {
                                 </span>
                               )}
                             </div>
-                            <div
-                              className={styles.toggleIcon}
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                toggleOverlay(index);
-                              }}
-                            >
-                              {isOpen ? <PlusXSVG /> : <PlusSVG />}
-                            </div>
                           </div>
-
-                          {isOpen && (
-                            <div className={styles.variantsContainer}>
-                              {product.displayedVariantTypes.map((dVT) => (
-                                <VariantType
-                                  key={dVT.variantType.id}
-                                  product={product}
-                                  dVT={dVT}
-                                />
-                              ))}
-                            </div>
-                          )}
                         </div>
                       )}
                 </div>

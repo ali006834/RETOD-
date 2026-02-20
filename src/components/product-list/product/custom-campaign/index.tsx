@@ -22,40 +22,26 @@ const CampaignTag = observer(
     const { isMobile } = useScreen();
     const [activeIndex, setActiveIndex] = useState(0);
 
-    if (!campaignList || !campaignList.badge) return null;
-
-    // badge string olarak geliyor, parse etmemiz gerekebilir
-    // Eğer badge bir array ise direkt kullan, değilse parse et
+    // Badge hesaplama — hook'lardan önce, null-safe
     let badges: CampaignTags[] = [];
-
-    try {
-      if (typeof campaignList.badge === "string") {
-        badges = JSON.parse(campaignList.badge) as CampaignTags[];
-      } else if (Array.isArray(campaignList.badge)) {
-        badges = toJS(campaignList.badge) as CampaignTags[];
-      } else {
-        badges = [toJS(campaignList.badge) as CampaignTags];
+    if (campaignList?.badge) {
+      try {
+        if (typeof campaignList.badge === "string") {
+          badges = JSON.parse(campaignList.badge) as CampaignTags[];
+        } else if (Array.isArray(campaignList.badge)) {
+          badges = toJS(campaignList.badge) as CampaignTags[];
+        } else {
+          badges = [toJS(campaignList.badge) as CampaignTags];
+        }
+      } catch (e) {
+        badges = [];
       }
-    } catch (e) {
-      // Parse edilemezse boş array döndür
-      return null;
     }
-
-    const badgeAnimation =
-      (campaignList.badgeAnimation as AnimationTypes) || AnimationTypes["Slide up/down"];
-    const loopDuration = campaignList.badgeLoopDuration?.value || 5;
-    const badgeAlignment =
-      campaignList.badgeAlignment || AlignmentSettings.center;
 
     // Filter badges based on product tags
     const filteredBadges = badges.filter((badge) => {
-      // If badgeWithTagsName is not set, show the badge
       if (!badge?.badgeWithTagsName) return true;
-
-      // If no product or no product tags, don't show the badge
       if (!product?.tags || product.tags.length === 0) return false;
-
-      // Check if any product tag matches the badgeWithTagsName
       return product.tags.some(
         (productTag) =>
           productTag.name.toLocaleLowerCase("tr-TR") ===
@@ -63,10 +49,10 @@ const CampaignTag = observer(
       );
     });
 
-    if (filteredBadges.length === 0) return null;
+    const loopDuration = campaignList?.badgeLoopDuration?.value || 5;
 
+    // useEffect erken return'lerden ÖNCE — React hooks kuralı
     useEffect(() => {
-      // If only one badge, no need to cycle
       if (filteredBadges.length <= 1) return;
 
       const interval = setInterval(() => {
@@ -75,6 +61,15 @@ const CampaignTag = observer(
 
       return () => clearInterval(interval);
     }, [filteredBadges.length, loopDuration]);
+
+    // Erken çıkışlar hook'lardan SONRA
+    if (!campaignList || !campaignList.badge) return null;
+    if (filteredBadges.length === 0) return null;
+
+    const badgeAnimation =
+      (campaignList.badgeAnimation as AnimationTypes) || AnimationTypes["Slide up/down"];
+    const badgeAlignment =
+      campaignList.badgeAlignment || AlignmentSettings.center;
 
     // Helper function to create gradient background
     const getGradientBackground = () => {
