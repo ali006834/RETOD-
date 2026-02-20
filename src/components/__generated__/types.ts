@@ -628,14 +628,6 @@ export type BannerImageListProps = {
 	mobilGapValue?: IkasSlider;
 };
 
-export type BannerInstagramPostsProps = {
-	access_token?: string;
-	title?: string;
-	image?: IkasImage;
-	posts?: string;
-	followers?: string;
-};
-
 export type FeaturedFreeImageShowcaseProps = {
 	products?: FreeImageShowcase[];
 	headerText?: string;

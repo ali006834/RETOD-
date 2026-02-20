@@ -11,7 +11,7 @@ import { ThemeProvider } from "styled-components";
 import { theme } from "src/styles/styled";
 import FloatingButtons from "src/components/floating-buttons";
 import CookieConsent from "src/components/cookie-consent";
-import HeartTrails from "src/components/heart-trails";
+// import HeartTrails from "src/components/heart-trails";
 
 IkasStorefrontConfig.init({
   ...Config,
@@ -27,7 +27,7 @@ const IkasThemeApp: React.FC<AppProps> = (props) => {
       <Component {...pageProps} />
       <FloatingButtons />
       <CookieConsent />
-      <HeartTrails />
+      {/* <HeartTrails /> */}
     </ThemeProvider>
   );
 };

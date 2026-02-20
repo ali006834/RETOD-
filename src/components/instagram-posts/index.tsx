@@ -52,80 +52,49 @@ const InstagramPosts: React.FC<InstagramPostsProps> = (props: any) => {
         return;
       }
 
+      const proxyUrl = process.env.NEXT_PUBLIC_INSTAGRAM_PROXY_URL;
+      if (!proxyUrl) {
+        setError(
+          "Instagram proxy yapılandırılmamış. Lütfen NEXT_PUBLIC_INSTAGRAM_PROXY_URL ortam değişkenini ayarlayın."
+        );
+        setLoading(false);
+        return;
+      }
+
       try {
         setLoading(true);
         setError(null);
 
-        // Instagram kullanıcı bilgilerini çek
-        const userInfoUrl = `https://graph.instagram.com/me?fields=id,username,account_type&access_token=${access_token}`;
-        const userInfoResponse = await axios.get<InstagramUser>(userInfoUrl);
-        setUserInfo(userInfoResponse.data);
+        const limit = String(instagramMediaLimit?.value || 15);
+        const apiUrl = `${proxyUrl.replace(/\/$/, "")}/api/instagram?access_token=${encodeURIComponent(access_token)}&limit=${limit}`;
+        const response = await axios.get<{
+          userInfo: InstagramUser;
+          posts: InstagramPost[];
+        }>(apiUrl);
 
-        // Instagram profil resmini çek (username ile)
-        if (userInfoResponse.data.username) {
-          try {
-            // Instagram Basic Display API'de profil resmi direkt yok, 
-            // ama media'dan ilk post'un resmini veya fallback olarak props'tan gelen image'ı kullanabiliriz
-            setProfileImageUrl(null);
-          } catch (err) {
-            // Profil resmi alınamazsa props'tan gelen image kullanılacak
-          }
-        }
-
-        // Instagram post'larını çek (beğeni ve yorum sayısı dahil, carousel için children dahil)
-        const generalInfoUrl = `https://graph.instagram.com/me/media?fields=id,media_type,media_url,permalink,timestamp,caption,like_count,comments_count,children{media_type,media_url}&access_token=${access_token}&limit=${instagramMediaLimit?.value || 15}`;
-        const generalInfoResponse = await axios.get(generalInfoUrl);
-        const postsData = generalInfoResponse.data.data || [];
-
-        // Her bir post için detayları al (eğer caption, like_count veya comments_count eksikse)
-        const detailedData: InstagramPost[] = await Promise.all(
-          postsData.map(async (post: any) => {
-            // Carousel postlar için ilk child'ın media_url'ini kullan
-            if (post.media_type === "CAROUSEL_ALBUM" && post.children?.data?.length > 0) {
-              const firstImageChild = post.children.data.find((child: any) => child.media_type === "IMAGE");
-              if (firstImageChild) {
-                post.media_url = firstImageChild.media_url;
-              }
-            }
-            
-            // Eğer tüm bilgiler varsa direkt kullan
-            if (post.caption !== undefined && post.like_count !== undefined && post.comments_count !== undefined) {
-              return post;
-            }
-            
-            // Eksik bilgiler varsa detay isteği yap
-            try {
-              const postDetailUrl = `https://graph.instagram.com/${post.id}?fields=id,timestamp,caption,like_count,comments_count&access_token=${access_token}`;
-              const detailResponse = await axios.get(postDetailUrl);
-              return { 
-                ...post, 
-                ...detailResponse.data,
-                // Eğer API'den gelmediyse mevcut değerleri koru
-                like_count: detailResponse.data.like_count ?? post.like_count ?? 0,
-                comments_count: detailResponse.data.comments_count ?? post.comments_count ?? 0
-              };
-            } catch (err) {
-              // Detay alınamazsa mevcut post'u döndür
-              return {
-                ...post,
-                like_count: post.like_count ?? 0,
-                comments_count: post.comments_count ?? 0
-              };
-            }
-          })
-        );
-
-        setDetailedPosts(detailedData);
+        setUserInfo(response.data.userInfo);
+        setDetailedPosts(response.data.posts);
       } catch (error: any) {
-        console.error("Error fetching Instagram data:", error);
-        setError(error?.response?.data?.error?.message || "Veri çekilirken bir hata oluştu");
+        const errData = error?.response?.data;
+        const errorMessage =
+          (typeof errData?.error === "string"
+            ? errData.error
+            : errData?.error?.message) ||
+          (error?.response?.status === 401 &&
+            "Access token geçersiz veya süresi dolmuş") ||
+          error?.message ||
+          "Veri çekilirken bir hata oluştu";
+
+        setError(
+          typeof errorMessage === "string" ? errorMessage : "Veri çekilirken bir hata oluştu"
+        );
       } finally {
         setLoading(false);
       }
     };
 
     fetchData();
-  }, [access_token]);
+  }, [access_token, instagramMediaLimit?.value]);
 
 
 
