@@ -17,17 +17,17 @@ const svg = ({ width, height, color = "#000" }: SearchProps) => (
     <path
       d="M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z"
       fill="transparent"
-      fill-opacity=".16"
+      fillOpacity=".16"
       stroke={color}
-      stroke-width="1.5"
+      strokeWidth="1.5"
       stroke-miterlimit="10"
     />
     <path
       d="m21 21-4-4"
       stroke={color}
-      stroke-width="1.5"
+      strokeWidth="1.5"
       stroke-miterlimit="10"
-      stroke-linecap="round"
+      strokeLinecap="round"
     />
   </svg>
 );

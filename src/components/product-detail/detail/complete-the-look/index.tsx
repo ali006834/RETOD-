@@ -45,7 +45,7 @@ export const CompleteTheLook = (
     <div className={styles.DescriptionWrapperTop}>
       <FiltersSvgWrapper
         title={completeTheLookTitle || ""}
-        svg={Shirt?.src}
+        svg={typeof Shirt === "string" ? Shirt : Shirt?.src}
         settings={{
           showCollapsedOnDesktop: props.isOpen,
           showCollapsedOnMobile: props.isOpen,

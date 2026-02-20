@@ -91,17 +91,17 @@ const FixedMenuToggleButton = ({
           <g
             id="Free-Icons"
             stroke="none"
-            stroke-width="1"
+            strokeWidth="1"
             fill="none"
-            fill-rule="evenodd"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            fillRule="evenodd"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           >
             <g
               transform="translate(-821.000000, -156.000000)"
               id="Group"
               stroke="#fff"
-              stroke-width="1"
+              strokeWidth="1"
             >
               <g transform="translate(819.000000, 154.000000)" id="Shape">
                 <path d="M12,13 C9.23857625,13 7,10.7614237 7,8 C7,5.23857625 9.23857625,3 12,3 C14.7614237,3 17,5.23857625 17,8 C17,10.7614237 14.7614237,13 12,13 Z M11.0150512,21 C9.04777237,21 6.37608863,21 3,21 C3.79921286,17.89195 6.4614209,16.2328962 10.9866241,16.0228387"></path>
@@ -122,11 +122,11 @@ const FixedMenuToggleButton = ({
           <g
             id="Free-Icons"
             stroke="#fff"
-            stroke-width="1"
+            strokeWidth="1"
             fill="none"
-            fill-rule="evenodd"
-            stroke-linecap="round"
-            stroke-linejoin="round"
+            fillRule="evenodd"
+            strokeLinecap="round"
+            strokeLinejoin="round"
           >
             <g transform="translate(-821.000000, -156.000000)" id="Group">
               <g transform="translate(819.000000, 154.000000)" id="Shape">

@@ -30,7 +30,7 @@ export const Description = (
     <S.DescriptionWrapperTop>
       <FiltersSvgWrapper
         title={t("product-detail:description")}
-        svg={Shirt?.src}
+        svg={typeof Shirt === "string" ? Shirt : Shirt?.src}
         settings={{
           showCollapsedOnDesktop: props.isOpen, // Açık/kapalı durumu buradan kontrol ediliyor
           showCollapsedOnMobile: props.isOpen,

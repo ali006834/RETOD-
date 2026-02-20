@@ -15,15 +15,15 @@ const svg = ({ width, height, color = "#000" }: SearchProps) => (
     fill="none"
   >
     <g
-      clip-path="url(#a)"
+      clipPath="url(#a)"
       stroke={color}
-      stroke-width="1.5"
+      strokeWidth="1.5"
       stroke-miterlimit="10"
     >
       <path
         d="m3.798 8.889-1.98 1.98a1.6 1.6 0 0 0 0 2.262l1.98 1.98a1.6 1.6 0 0 0 2.262 0l1.98-1.98a1.6 1.6 0 0 0 0-2.262l-1.98-1.98a1.6 1.6 0 0 0-2.262 0Z"
         fill="transparent"
-        fill-opacity=".16"
+        fillOpacity=".16"
       />
 
       <path
@@ -34,7 +34,7 @@ const svg = ({ width, height, color = "#000" }: SearchProps) => (
       <path
         d="m17.94 8.889-1.98 1.98a1.6 1.6 0 0 0 0 2.262l1.98 1.98a1.6 1.6 0 0 0 2.262 0l1.98-1.98a1.6 1.6 0 0 0 0-2.262l-1.98-1.98a1.6 1.6 0 0 0-2.262 0Z"
         fill="transparent"
-        fill-opacity=".16"
+        fillOpacity=".16"
       />
     </g>
 

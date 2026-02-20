@@ -24,45 +24,45 @@ const SvgIcon = ({
       d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"
       fill="transparent"
       stroke={color}
-      stroke-width={strokeWidth}
+      strokeWidth={strokeWidth}
       stroke-miterlimit="10"
     />
     <path
       d="M5 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"
       fill="transparent"
-      fill-opacity=".16"
+      fillOpacity=".16"
       stroke={color}
-      stroke-width={strokeWidth}
+      strokeWidth={strokeWidth}
       stroke-miterlimit="10"
     />
     <path
       d="M19 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"
       fill="transparent"
       stroke={color}
-      stroke-width={strokeWidth}
+      strokeWidth={strokeWidth}
       stroke-miterlimit="10"
     />
     <path
       d="M12 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"
       fill="transparent"
-      fill-opacity=".16"
+      fillOpacity=".16"
       stroke={color}
-      stroke-width={strokeWidth}
+      strokeWidth={strokeWidth}
       stroke-miterlimit="10"
     />
     <path
       d="M5 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM19 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM12 21a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM5 21a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"
       fill="transparent"
       stroke={color}
-      stroke-width={strokeWidth}
+      strokeWidth={strokeWidth}
       stroke-miterlimit="10"
     />
     <path
       d="M19 21a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"
       fill="transparent"
-      fill-opacity=".16"
+      fillOpacity=".16"
       stroke={color}
-      stroke-width={strokeWidth}
+      strokeWidth={strokeWidth}
       stroke-miterlimit="10"
     />
   </svg>
