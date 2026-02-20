@@ -34,7 +34,7 @@ interface InstagramPost {
 }
 
 const InstagramPosts: React.FC<InstagramPostsProps> = (props: any) => {
-  const { title, image, instagramMediaLimit, access_token } = props;
+  const { title, image, instagramMediaLimit, access_token, showPostCaption } = props;
 
   const { t } = useTranslation();
 
@@ -133,11 +133,11 @@ const InstagramPosts: React.FC<InstagramPostsProps> = (props: any) => {
             spaceBetween={8}
             breakpoints={{
               768: {
-                slidesPerView: 4.2,
+                slidesPerView: 4,
                 spaceBetween: 12,
               },
               1024: {
-                slidesPerView: 6.2,
+                slidesPerView: 6,
                 spaceBetween: 16,
               },
             }}
@@ -176,6 +176,9 @@ const InstagramPosts: React.FC<InstagramPostsProps> = (props: any) => {
                         </div>
                       </a>
                     </Link>
+                    {showPostCaption && item.caption && (
+                      <p className={styles.post_caption}>{item.caption}</p>
+                    )}
                   </div>
                 </div>
               </SwiperSlide>

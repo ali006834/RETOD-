@@ -660,6 +660,7 @@ export type SpecialDayEffectsProps = {
 export type InstagramPostsProps = {
 	title?: string;
 	instagramMediaLimit?: IkasSlider;
+	showPostCaption?: boolean;
 	image?: IkasImage;
 	access_token?: string;
 };

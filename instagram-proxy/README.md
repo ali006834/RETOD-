@@ -1,24 +1,13 @@
-# Instagram API Proxy
+İkas Cors'u sunucu da deploy ettiğimde sildiği için bu proxy yazdım.
 
-Bu proxy, CORS nedeniyle tarayıcıdan erişilemeyen Instagram Graph API'ye sunucu tarafından istek yapar.
+Bu proxy sayesinde CORS hatası almadan Instagram Graph API’ye sunucu üzerinden istek atıcam.
+Mantıksa şu:
+Frontend → Proxy → Instagram
+Vercel’e Deploy Etme
+vercel.com’ da bu klasörü deploy edicem.
 
-## Vercel'de Deploy Adımları
 
-1. **Vercel hesabı:** [vercel.com](https://vercel.com) → Sign up (GitHub ile giriş yapabilirsiniz)
+Projede .env.local oluşturup bunu eklicem;
+NEXT_PUBLIC_INSTAGRAM_PROXY_URL=https://instagram-proxy-xxxxx.vercel.app
 
-2. **Yeni proje:**
-   - Dashboard → "Add New" → "Project"
-   - "Import Git Repository" yerine "Deploy" sekmesinde "Browse" ile `instagram-proxy` klasörünü seçin
-   - Veya: Bu klasörü ayrı bir GitHub repo'ya yükleyip "Import" ile bağlayın
-
-3. **Deploy:**
-   - Root Directory: `instagram-proxy` (eğer ana proje içindeyse)
-   - Framework Preset: Other
-   - Deploy'a tıklayın
-
-4. **URL'yi kopyalayın:** Örn: `https://instagram-proxy-xxxxx.vercel.app`
-
-5. **Ana projede .env.local oluşturun:**
-   ```
-   NEXT_PUBLIC_INSTAGRAM_PROXY_URL=https://instagram-proxy-xxxxx.vercel.app
-   ```
+Instagram isteklerini direkt Instagram’a değil, bu proxy adresine göndericem.
